@@ -345,7 +345,6 @@
     "requirements": [
       "Existing NIN",
       "Digitised NPC birth certificate for applicants born after 1992, or digitised NPC attestation certificate for applicants born before 1992",
-      "Access to the NIMC self-service modification account or an official NIMC enrolment/modification centre",
       "Payment through the official NIMC modification route",
       "The exact existing date on the NIN record and correct date supported by an NPC digital birth certificate or an eligible NPC attestation.",
       "A working NIMC self-service account or access to an authorised modification centre; keep payment and transaction references."
@@ -417,7 +416,6 @@
     "requirements": [
       "Applicant must be at least 18 years old",
       "Completed training at an accredited driving school",
-      "Driving-school certificate number used to initiate the fresh application",
       "Personal/contact details plus the processing centre, validity period and licence class selected in the FRSC application form",
       "Proof of completing accredited driving-school training and the certificate number that FRSC asks for at fresh-application entry.",
       "Ability to attend the VIO test and FRSC Driver's Licence Centre for photograph/fingerprint capture; a third party cannot do the biometric stage."
@@ -746,7 +744,6 @@
       "Review the application carefully and pay the filing fee and statutory stamp duty through CAC's integrated payment gateway; keep the transaction evidence in case CAC raises a query.",
       "Gather directors', shareholders' and other company particulars and verify consistency across identity and statutory fields before submission; do not substitute a business-name form for incorporation.",
       "Where the application asks for share structure or beneficial ownership, use the actual company's control information. Review the filing fee and stamp-duty components individually before authorising payment.",
-      "Monitor the CRP dashboard for approval or a query. Correct and resubmit anything CAC queries; after approval, download the electronic Certificate and Certified Extract from the portal.",
       "If CAC raises a query, use the application's original iCRP dashboard to answer it; only after manual approval download the electronic certificate and certified extract and compare details with the original submission."
     ],
     "notes": [
@@ -1441,9 +1438,8 @@
     "steps": [
       "Start by confirming whether the candidate sat the examination as a school candidate or a private candidate because WAEC uses different collection points for the two routes.",
       "For school candidates, first ask the school whether the actual certificate for that exam year has been delivered; a principal's statement of result is not the same as the original certificate.",
-      "For private candidates, find the Zonal or Branch office responsible for the state of examination rather than travelling to an unrelated WAEC office.",
-      "If it was a school examination, contact the school where the candidate sat WASSCE and ask for the school's certificate-collection requirements before travelling there.",
       "If it was a private-candidate examination, identify the WAEC Zonal or Branch office responsible for the state where the examination was taken and use that office for collection.",
+      "Before travelling, contact that exact school or WAEC office with the candidate's examination year and number. Confirm that the original certificate is physically ready for collection, and ask which identity documents or authorised-representative arrangements it accepts; an online result alone does not prove the certificate has arrived.",
       "Take the candidate and examination information plus any identification requested by the school or WAEC office, then present them at the correct collection point.",
       "Ask the responsible school or WAEC office in advance whether a representative may collect on behalf of the candidate and what identity/authorization documents they will actually accept.",
       "Before leaving, check the spelling of the candidate's name and examination details; use WAEC's correction or support route if an error is found."
@@ -1451,7 +1447,6 @@
     "notes": [
       "WAEC says school candidates collect certificates from their schools and private candidates collect directly from WAEC.",
       "WAEC's Zonal and Branch offices serve the state where the private candidate sat for the exam.",
-      "WAEC certificates do not expire.",
       "Do not make a cross-state journey until the correct school or WAEC office confirms the record and collection arrangement.",
       "WAEC's FAQ states original certificates have no expiry date; collection logistics and potential late charges are separate questions."
     ],
@@ -2197,20 +2192,17 @@
     ],
     "steps": [
       "Confirm that your case is remobilization: NYSC defines this route for a corps member who was mobilized in a previous batch but absconded from service; someone who was deployed but never reported to camp should use revalidation instead.",
-      "Choose NYSC's Remobilization option only if you previously commenced the service process and absconded; select Revalidation instead if you were deployed but never reported to camp.",
-      "On the official Apply for Remobilisation form, match previous call-up number, previous state code, batch, deployment state and contact details to the old service record.",
       "Open the NYSC Remobilization application during an active remobilization window.",
-      "Enter the personal details, previous call-up number, previous state code, previous batch, previous deployment state and phone number requested by the remobilization form.",
+      "On the official Apply for Remobilisation form, match previous call-up number, previous state code, batch, deployment state and contact details to the old service record.",
+      "If a previous call-up number, state code or deployment record is missing or disputed, pause the remobilisation form and use NYSC's own mobilisation help channel to establish the correct old service record. A newly created identity cannot substitute for the original record.",
       "If applying as a married female corps member for the relevant concession, upload the marital/residence documents listed by NYSC.",
-      "After submitting interest, track approval through the legitimate NYSC route. The portal says only approved remobilisation requests become eligible for new registration.",
       "Married female applicants requesting the concession should use the portal's specific marital-document workflow (marriage proof, husband's identity and residence documents) rather than assuming the form checkbox alone grants approval.",
-      "Submit the remobilization application and wait for NYSC's approval; the portal states that only approved applications are eligible to proceed to remobilization registration."
+      "After submitting interest, track approval through the legitimate NYSC route. The portal says only approved remobilisation requests become eligible for new registration."
     ],
     "notes": [
       "Do not confuse remobilization with revalidation for someone who was deployed but never reported to camp.",
       "NYSC's remobilization form is an approval request first; approval is required before remobilization registration can continue.",
       "Use NYSC's official mobilisation support lines if the previous service record or application cannot be resolved through the portal.",
-      "The NYSC form spells the service 'Remobilisation' and states it is subject to approval; completing the interest form alone does not restart service.",
       "Do not use this route to evade a previous disciplinary status; NYSC decides how the old service record is resolved."
     ],
     "sources": [
@@ -2490,7 +2482,6 @@
     "officialPortal": "https://www.nationalpopulation.gov.ng",
     "requirements": [
       "Child aged 0 to 17",
-      "Valid parent/guardian NIN for the adult self-service account and identity verification",
       "Child's NIN if one has already been issued; NPC says the child may still be registered without one when the parent/guardian has a valid NIN",
       "Parent's attestation number or other information requested by NPC for the relevant case",
       "Adult parent's or guardian's working email and valid NIN for NPC's account and identity matching.",
@@ -2910,7 +2901,6 @@
     ],
     "notes": [
       "Timelines assume a complete application and resolution of any CAC query.",
-      "CAC's 12-working-hour target for company certificate CTCs is conditional on a complete application or resolved query, not a universal guarantee for every entity.",
       "The 12-working-hour target for company certificate CTCs begins after a complete submission or resolved query; do not present it as a guaranteed delivery appointment.",
       "The original incorporation E-Status Report and a later certified copy of a filing serve different administrative purposes."
     ],
@@ -3554,7 +3544,6 @@
     "requirements": [
       "Registered NRS taxpayer account",
       "The taxpayer's TIN/Tax ID, assessment or liability reference, tax type/period and amount shown in the NRS account before payment",
-      "The exact taxpayer profile and Tax ID/TIN, tax type, payment period, assessment or invoice reference and payable amount.",
       "A secure payment option supported in NRS self-service and a way to retain the transaction/receipt reference."
     ],
     "steps": [
@@ -3880,7 +3869,6 @@
     "officialPortal": "https://taxporta.fctirs.gov.ng/login",
     "requirements": [
       "FCT-IRS self-service account with TIN and password",
-      "Assessment date and assessment year for the return",
       "Accurate information needed to complete Parts A, B, C and D of the electronic assessment/return form",
       "The correct FCT-IRS taxpayer TIN and active portal password, or the official registration/recovery route.",
       "Assessment date and year, and accurate data for assessment parts A, B, C and D."
@@ -4425,9 +4413,7 @@
     "status": "verified",
     "officialPortal": "https://nimc.gov.ng/self-service-modifications/",
     "requirements": [
-      "Police report for the lost/damaged-phone-number modification case",
       "Existing NIN and access to the NIMC self-service modification account",
-      "The new Nigerian phone number entered in +234 format without the leading zero",
       "Evidence explaining loss or damage of the previous number, including the police report specified for that case.",
       "A replacement line the applicant controls, entered in +234 international format without the leading domestic zero."
     ],
@@ -4499,9 +4485,7 @@
       "Existing NIN and access to the official NIMC self-service modification account or an authorised NIMC centre.",
       "The complete new address as it should appear on the identity record.",
       "Supporting proof of address accepted by NIMC: utility bill, tenancy agreement, bank statement or community-leader attestation.",
-      "An official invoice or application acknowledgement for the selected address field.",
-      "Evidence issued for or capable of verifying the actual new address, as accepted by NIMC.",
-      "The existing NIN-linked self-service account or access to a genuine NIMC assisted centre when self-service is blocked."
+      "An official invoice or application acknowledgement for the selected address field."
     ],
     "steps": [
       "Open https://nimc.gov.ng/self-service-modifications/ and sign in through the linked NIMC account for the already-issued NIN.",
@@ -4998,12 +4982,10 @@
     "requirements": [
       "A BVN that has already been enrolled",
       "The same phone number registered to that BVN",
-      "Enough airtime for the ₦20 NIBSS USSD service charge",
-      "Access to the BVN's registered line; unrelated SIMs are not valid for this lookup."
+      "Enough airtime for the ₦20 NIBSS USSD service charge"
     ],
     "steps": [
       "Find the SIM originally registered to your BVN, insert it in a working phone and confirm it can make ordinary USSD calls before dialling *565*0#.",
-      "Use the mobile phone number that was registered during BVN enrolment; the retrieval service will not return the BVN from an unrelated number.",
       "Allow the ₦20 service charge and read the BVN returned on screen carefully, then store it somewhere private rather than sharing it publicly.",
       "If the registered number is no longer available or the lookup cannot resolve the record, contact your bank or the institution that manages the BVN record rather than repeatedly paying the USSD charge.",
       "Read the returned eleven-digit number privately and compare it with any BVN confirmation previously issued by the enrolling bank; do not post it on a group chat or supply it to a reversal agent.",
@@ -5013,7 +4995,6 @@
     ],
     "notes": [
       "A BVN is not a bank account number or a payment credential, but it is sensitive identity information and should still be protected.",
-      "NIBSS requires the phone number registered to the BVN for *565*0# retrieval.",
       "NIBSS currently lists *565*0# for BVN retrieval from the phone number registered to the BVN and publishes a ₦20 service fee.",
       "NIBSS expressly refuses *565*0# disclosure where a single phone number is tied to more than one BVN.",
       "Do not mistake BVN retrieval for validation: *565*1# separately checks a BVN/name and may expose personal information on screen."
@@ -9244,9 +9225,6 @@
     "status": "verified",
     "officialPortal": "https://www.deathnotification.nationalpopulation.gov.ng/",
     "requirements": [
-      "NIN of the person acting as informant",
-      "Details of the deceased and death requested by the NPC portal",
-      "A working email address for confirmation/communication",
       "Supporting information or documents requested for the death record",
       "The informant's own valid NIN and working email address for the NPC confirmation.",
       "Accurate details of the deceased, date/place of death and supporting records requested by the NPC death-notification form."
@@ -9308,11 +9286,9 @@
     ],
     "steps": [
       "Search for confusingly similar marks and define the goods/services class before commissioning logos or paying the official filing invoice; CAC name registration is not a trademark search.",
-      "Check the proposed mark through NIPO's preliminary search route and identify the correct trademark class before filing.",
+      "Verify the filing agent against NIPO's published accredited agents directory and retain the pre-generated invoice and official acknowledgement/application ID.",
       "File the trademark application through a NIPO-accredited agent and keep the official acknowledgement number and filing date.",
       "Track examination and respond to any refusal, query or correction raised by the Registry before acceptance.",
-      "After acceptance, confirm publication in the Nigerian Trademark Journal and allow the statutory two-month opposition period to run.",
-      "Verify the filing agent against NIPO's published accredited agents directory and retain the pre-generated invoice and official acknowledgement/application ID.",
       "After acceptance, monitor the Journal's two-month opposition period; a trademark that faces a valid opposition or outstanding Registry query is not yet finally registered.",
       "If no opposition succeeds, pay the certificate-stage fee through the official NIPO route and retain the issued registration certificate.",
       "After receiving the certificate, note that NIPO states initial registration lasts seven years and subsequent renewals are for 14-year periods; retain the filing class and any registered colour restrictions."
@@ -9321,7 +9297,6 @@
       "NIPO states that online trademark, patent and design filings are handled through certified agents.",
       "Trademark registration is different from CAC business-name or company registration; CAC registration does not itself create a trademark right.",
       "A colour-specific filing can limit protection to the registered colours, according to NIPO's trademark guidance.",
-      "NIPO says ordinary trademark applications can be filed electronically through its accredited agents; an acceptance letter is not the final certificate.",
       "Trademark registration lasts an initial seven years and may be renewed for 14-year periods, according to NIPO's current guidance."
     ],
     "sources": [
@@ -9463,15 +9438,13 @@
       "Keep the application reference and respond to any Registry query until the design certificate is issued.",
       "NIPO differentiates forms 1/2 for textile design and 3/4 for non-textile design. Prepare the correct route and novelty statement before payment.",
       "Upload or submit clear photographs/drawings or specimens that match the novelty statement, and ensure the NIPO agent holds appropriate authority.",
-      "Calendar the five-year renewal points because NIPO states that industrial-design protection can continue up to 15 years subject to renewal.",
       "Retain the issued certificate and calendar the five-year renewal intervals to maintain protection for the maximum stated 15-year period."
     ],
     "notes": [
       "Industrial design protects visual appearance rather than the technical function of an invention.",
       "NIPO states that the Nigerian design registration can last up to 15 years, subject to renewal after each five-year period.",
       "Copyright and industrial-design protection can involve different legal questions; choose the route that matches the asset.",
-      "A decorative design and a technical patent may protect different aspects of the same product; using the wrong application will not protect both.",
-      "NIPO says design registration can last up to 15 years subject to each five-year renewal."
+      "A decorative design and a technical patent may protect different aspects of the same product; using the wrong application will not protect both."
     ],
     "sources": [
       {
@@ -9649,7 +9622,6 @@
     "lastVerified": "2026-10-16",
     "officialPortal": "https://nepc.gov.ng/ereg/exporter/",
     "requirements": [
-      "The existing exporter account and certificate registration information",
       "Current entity records if NEPC requires an update during renewal",
       "An official renewal payment generated through the NEPC platform",
       "The old exporter certificate registration number and active original NEPC account credentials.",
@@ -9668,7 +9640,6 @@
     ],
     "notes": [
       "NEPC says the first certificate is valid for 24 months and later renewals are annual.",
-      "A certificate can be checked independently through NEPC's public verification portal.",
       "Renewing NEPC registration does not by itself satisfy all export documentation or product-regulatory requirements.",
       "NEPC's verification portal accepts company name or certificate registration number; a PDF supplied by a salesperson should still be checked independently.",
       "Public verification confirms the NEPC record, not every separate product export permit or Customs clearance."
@@ -10527,7 +10498,6 @@
       "An RSA holder who is below the retirement age threshold applicable to the temporary job-loss benefit",
       "Evidence that employment ended and that another job has not been secured after the required four-month period",
       "The RSA/PFA identity and employment-separation records needed by the Pension Fund Administrator",
-      "Evidence that the person has not secured another job for at least four months after documented employment exit.",
       "Confirmation from the chosen PFA that the holder meets the temporary job-loss category and is not already following a normal retirement route."
     ],
     "steps": [
@@ -11142,7 +11112,6 @@
       "Correct DNFBP sector and legal form, together with all sector-specific CAC, tax and professional evidence listed on SCUML's current guideline."
     ],
     "steps": [
-      "Confirm that the business activity is within SCUML's DNFBP categories and select the correct entity/sector before filling the form; financial institutions may have different supervisory authorities.",
       "Check SCUML's registration guideline and confirm that the business or profession falls within a Designated Non-Financial Business or Profession category before filing.",
       "Open the official SCUML registration form and select the business category, CAC registration type and sector that match the registered entity.",
       "Enter the CAC/NEPZA number, registered name, incorporation date, TIN, head-office address, bank details and organisation contact information exactly as shown in the supporting records.",
@@ -11155,7 +11124,6 @@
       "For reporting obligations, SCUML announced that relevant CTR/CBTR reports from 1 January 2026 use the portal rather than email. A certificate is not automatic proof that later reports are compliant."
     ],
     "notes": [
-      "SCUML warns that third parties advertising paid registration or certification are not its authorised agents.",
       "The exact document list depends on the business sector; professional firms can require an additional professional licence or certificate.",
       "From 1 January 2026, SCUML says relevant transaction reports such as CTR/CBTR submissions are handled through the SCUML portal rather than email.",
       "SCUML expressly says its registration and certification are free and warns that social-media 'agents' are unauthorised.",
@@ -11627,7 +11595,6 @@
     "officialPortal": "https://etax.lirs.net/",
     "requirements": [
       "The Lagos Tax Clearance Certificate number in the format recognised by LIRS eTax",
-      "The taxpayer name or other certificate details needed to compare the returned record with the document being checked",
       "The full LIRS certificate number in the requested format (for example, the eTax sample begins LA/TCC/).",
       "The taxpayer or organisation name and relevant certificate period to compare with the returned official record."
     ],
@@ -11936,7 +11903,6 @@
     "officialPortal": "https://rivtamis.riversbirs.gov.ng/home.html?url=individual",
     "requirements": [
       "Individual or corporate identity information used to search for an existing taxpayer record before creating a new one",
-      "A valid email address and phone number for account access and activation",
       "For organisations, the registered organisation name and corporate information required by RIVTAMIS",
       "Individual or organisation identification and contact information; corporate users must follow the organisation registration class.",
       "A valid email/phone to receive any required activation or account-recovery instructions."
@@ -12022,7 +11988,6 @@
     ],
     "notes": [
       "Rivers State IRS says Direct Assessment is the route used by an individual taxpayer to declare income and process personal tax obligations directly.",
-      "Corporate TCC requests depend on the organisation's annual returns, profile and employee records being complete.",
       "RIVTAMIS provides a separate public verification function, so a third party can check a TCC instead of relying only on a paper copy.",
       "For a company or PAYE employer, sign in with the corporate RIVTAMIS account and use the TCC Requests menu after the organisation's annual returns and employee records are complete."
     ],
