@@ -26,7 +26,7 @@ const reviewed = [
   "nigeria-transit-visa",
 ];
 
-test("exactly the eleven source-reviewed guides have new verification dates", () => {
+test("original eleven official-source reviews retain audited dates", () => {
   for (const slug of reviewed) {
     const row = rows.find(item => item.slug === slug);
     assert.ok(row, slug);
@@ -34,11 +34,41 @@ test("exactly the eleven source-reviewed guides have new verification dates", ()
     assert.ok(row.sources.length > 0, slug);
     assert.ok(row.sources.every(source => source.lastChecked === "2026-10-17" && source.url.startsWith("https://")), slug);
   }
-  for (const slug of ["nelfund-student-loan-application", "inec-pvc-status", "nysc-senate-list", "france-schengen-short-stay-visa"]) {
+  // These records have not been revisited in any of the documented October 17 review batches.
+  for (const slug of ["australia-visitor-visa-600", "uae-tourist-visa", "south-africa-holiday-visa", "ireland-short-stay-visit-visa"]) {
     const row = rows.find(item => item.slug === slug);
     assert.ok(row, slug);
     assert.ok(row.lastVerified < "2026-10-17", "No unverified source-date bump: " + slug);
   }
+});
+
+test("seven additional guides have source-backed date updates and corrected action routes", () => {
+  const slugs = [
+    "nelfund-student-loan-application",
+    "nysc-senate-list",
+    "nysc-correct-date-of-birth",
+    "inec-pvc-status",
+    "france-schengen-short-stay-visa",
+    "italy-schengen-tourist-visa",
+    "spain-schengen-tourist-visa",
+  ];
+  for (const slug of slugs) {
+    const row = rows.find(item => item.slug === slug);
+    assert.ok(row, slug);
+    assert.equal(row.lastVerified, "2026-10-17", slug);
+    assert.ok(row.sources.length > 0, slug);
+    assert.ok(row.sources.every(source => source.lastChecked === "2026-10-17" && source.url.startsWith("https://")), slug);
+  }
+  const france = rows.find(item => item.slug === "france-schengen-short-stay-visa")!;
+  assert.match(france.steps.join(" "), /demande-de-visa/);
+  assert.ok(france.sources.some(source => source.url === "https://france-visas.gouv.fr/demande-de-visa"));
+  assert.doesNotMatch(france.sources.map(source => source.url).join(" "), /\/online-application/);
+  const senate = rows.find(item => item.slug === "nysc-senate-list")!;
+  assert.match(senate.steps[0], /verifysenatelists/);
+  const nelfund = rows.find(item => item.slug === "nelfund-student-loan-application")!;
+  assert.match(nelfund.timeline ?? "", /not a guaranteed approval/);
+  const inec = rows.find(item => item.slug === "inec-pvc-status")!;
+  assert.ok(inec.sources.some(source => source.url === "https://cvr.inecnigeria.org/vvs"));
 });
 
 test("JAMB corrections match the official fee menu but avoid invented universal uploads", () => {

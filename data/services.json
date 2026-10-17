@@ -3242,18 +3242,18 @@
     "slug": "nysc-senate-list",
     "title": "How to check the NYSC senate list",
     "shortTitle": "NYSC senate list",
-    "summary": "The official NYSC portal provides a Senate List check for prospective corps members.",
+    "summary": "Use the official NYSC Verify Senate Lists form to check institution, matriculation number, surname and date of birth before local-graduate registration; a missing record must be corrected by the school.",
     "category": "Youth service",
     "agencySlug": "nysc",
     "feeLabel": "No separate fee stated for the list check",
     "status": "verified",
-    "officialPortal": "https://portal.nysc.org.ng/nysc/",
+    "officialPortal": "https://portal.nysc.org.ng/nysc1/verifysenatelists",
     "requirements": [
       "Locally trained graduate details, including the institution or matriculation information requested by NYSC",
       "The institution must have submitted the graduate on the Senate or Academic Board Approved Result list"
     ],
     "steps": [
-      "Open the official NYSC portal before registration and choose the Senate List checking service for locally trained prospective corps members.",
+      "Open the official NYSC Verify Senate Lists form (portal.nysc.org.ng/nysc1/verifysenatelists), rather than registering a fresh profile merely to search the list.",
       "Select the institution, then enter the matriculation number, surname and date of birth exactly as NYSC's Senate List checker asks for them.",
       "Submit the check and read the returned status carefully to confirm whether the graduate appears on the Senate or Academic Board Approved Result list.",
       "If the record appears, continue with NYSC registration during the active mobilisation window using the same correct details.",
@@ -3261,29 +3261,30 @@
     ],
     "notes": [
       "NYSC states locally trained graduates must appear on the Senate or Academic Board Approved Result list to access registration.",
-      "NYSC's FAQ directs candidates with a missing Senate-list name to their institution."
+      "NYSC's FAQ directs candidates with a missing Senate-list name to their institution.",
+      "The public Senate List form asks for institution, matriculation number, surname and date of birth. The institution submits approved lists; the public checker does not upload or edit school records."
     ],
     "sources": [
       {
-        "label": "Official NYSC Portal",
+        "label": "NYSC public Verify Senate Lists form",
         "agency": "National Youth Service Corps",
-        "url": "https://portal.nysc.org.ng/nysc/",
-        "lastChecked": "2026-09-28"
+        "url": "https://portal.nysc.org.ng/nysc1/verifysenatelists",
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "NYSC Registration Requirements",
         "agency": "National Youth Service Corps",
         "url": "https://platforms.nysc.gov.ng/mobreg.html",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "NYSC FAQ",
         "agency": "National Youth Service Corps",
-        "url": "https://www.nysc.gov.ng/faq.html",
-        "lastChecked": "2026-09-28"
+        "url": "https://platforms.nysc.gov.ng/faq.html",
+        "lastChecked": "2026-10-17"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-17",
     "searchTerms": [
       "NYSC senate list",
       "How to check the NYSC senate list",
@@ -4728,7 +4729,7 @@
     "slug": "nysc-correct-date-of-birth",
     "title": "How NYSC date-of-birth correction works",
     "shortTitle": "NYSC DOB correction",
-    "summary": "NYSC publishes a WAEC-verification-based date-of-birth correction process for prospective corps members and warns that corrections close once service has commenced.",
+    "summary": "NYSC's ordinary date-of-birth correction uses a WAEC verification PIN on the prospective corps member dashboard before service begins; wrongly issued exemption certificates require a separate school-led process.",
     "category": "Youth service",
     "agencySlug": "nysc",
     "feeLabel": "WAEC verification PIN required",
@@ -4744,26 +4745,27 @@
       "Obtain the WAEC verification PIN required by NYSC and have the correct WAEC examination type, year and examination number ready.",
       "Enter the WAEC verification PIN and examination details exactly as they appear on the candidate's WAEC record, then use the dashboard to verify the record.",
       "Review the date of birth returned through WAEC verification and submit the correction request only if it is the record NYSC should use.",
-      "Monitor the dashboard for the correction outcome before mobilisation progresses; NYSC warns that date-of-birth corrections are not entertained after service has commenced."
+      "Review the corrected date/status in the NYSC dashboard. If an incorrect exemption certificate has already been issued, ask the institution's Student Affairs Officer to follow NYSC's separate exemption-correction procedure instead of repeating an ordinary DOB change."
     ],
     "notes": [
-      "NYSC warns that date-of-birth correction is not entertained after deployment/service has commenced and cannot be made on a Certificate of National Service after completion."
+      "NYSC warns that date-of-birth correction is not entertained after deployment/service has commenced and cannot be made on a Certificate of National Service after completion.",
+      "If NYSC has already issued an exemption certificate in error, its FAQ describes a distinct route through your institution's Student Affairs Officer, with the original exemption certificate and WAEC/GCE evidence; do not try to correct that case by opening another NYSC account."
     ],
     "sources": [
       {
         "label": "NYSC date-of-birth correction",
         "agency": "National Youth Service Corps",
         "url": "https://platforms.nysc.gov.ng/correctdob.html",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "NYSC FAQ",
         "agency": "National Youth Service Corps",
-        "url": "https://www.nysc.gov.ng/faq.html",
-        "lastChecked": "2026-09-28"
+        "url": "https://platforms.nysc.gov.ng/faq.html",
+        "lastChecked": "2026-10-17"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-17",
     "searchTerms": [
       "NYSC DOB correction",
       "How NYSC date-of-birth correction works",
@@ -5436,7 +5438,7 @@
     "slug": "inec-pvc-status",
     "title": "How to check your INEC PVC status and collection centre",
     "shortTitle": "Check PVC status",
-    "summary": "The current INEC CVR portal still lets registered voters check PVC status and find the collection centre even though the 2025–2026 Continuous Voter Registration exercise has ended.",
+    "summary": "Existing Nigerian voters can check their PVC collection details on INEC's CVR portal or verify their voter registration using INEC's separate Voter Verification Service. The nationwide new-registration exercise is currently closed.",
     "category": "Civic services",
     "agencySlug": "inec",
     "feeLabel": "PVC status check is FREE",
@@ -5449,22 +5451,30 @@
       "Access to the current INEC Continuous Voter Registration portal"
     ],
     "steps": [
-      "Open the official INEC CVR portal and read the current service notice; as of 28 September 2026, INEC states that the Continuous Voter Registration exercise has ended.",
+      "Open the official INEC CVR portal and read its current status notice: the CVR exercise is marked ended, but it still offers a Find My PVC route for existing voters.",
       "If you are already registered, choose Yes when the portal asks whether you are a registered voter, then select Find My PVC to continue with the existing-voter lookup.",
       "Enter the voter information shown by the INEC lookup using the same information attached to the existing registration record, then submit the search once the entries have been checked.",
+      "If you need to confirm the registration record rather than find a collection centre, use INEC's separate Voter Verification Service at cvr.inecnigeria.org/vvs. Choose the name/date-of-birth lookup or the VIN lookup (full VIN or last 10 digits) and supply the State and LGA of registration.",
       "Read the PVC status and collection-centre information returned by INEC before travelling to collect a card; use INEC's official office or contact route if the record cannot be found."
     ],
     "notes": [
       "The current INEC portal says the CVR process is not active and offers notification for future registration updates.",
       "Do not register twice when a future CVR window opens; use the existing-voter lookup or correction/transfer service appropriate to the record.",
-      "MyNigeriaGuide does not advise how to vote or support any candidate or party; this page only explains the administrative voter-record service."
+      "MyNigeriaGuide does not advise how to vote or support any candidate or party; this page only explains the administrative voter-record service.",
+      "Voter verification and PVC collection-centre lookup are different services: a positive record search does not mean an uncollected card is ready for pickup. Check INEC collection notices before travelling."
     ],
     "sources": [
       {
         "label": "INEC Continuous Voter Registration portal",
         "agency": "Independent National Electoral Commission",
         "url": "https://cvr.inecnigeria.org/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
+      },
+      {
+        "label": "INEC official Voter Verification Service",
+        "agency": "Independent National Electoral Commission",
+        "url": "https://cvr.inecnigeria.org/vvs",
+        "lastChecked": "2026-10-17"
       }
     ],
     "searchTerms": [
@@ -5476,7 +5486,7 @@
       "PVC collection centre",
       "voter registration status"
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-17",
     "related": [
       "inec-find-pvc-pickup-location",
       "inec-replace-lost-damaged-pvc",
@@ -6091,10 +6101,10 @@
     "category": "Foreign visas",
     "agencySlug": "france-visas",
     "feeLabel": "€90 adult Schengen visa fee; €45 for children aged 6–12",
-    "feeNote": "The European Commission lists €90 for adults and €45 for children aged 6–12. An authorised visa-centre service charge can be additional.",
+    "feeNote": "The normal Schengen fee is €90 per adult and €45 for children aged 6–12. France-Visas Nigeria also lists a €28 TLScontact service charge, prepaid online in local currency; check current exchange rates and additional optional costs before booking.",
     "timeline": "The normal Schengen decision period is 15 days and can extend to 45 days. France-Visas Nigeria advises short-stay applicants to allow more than 1 month between lodging the file and the planned departure.",
     "status": "verified",
-    "officialPortal": "https://france-visas.gouv.fr/en/web/france-visas/online-application",
+    "officialPortal": "https://france-visas.gouv.fr/demande-de-visa",
     "requirements": [
       "A valid passport issued within the previous 10 years, with at least two blank pages and normally valid for at least 3 months after the planned departure from the Schengen area",
       "Completed France-Visas/Schengen application form and the printed application receipt required for the appointment",
@@ -6105,44 +6115,44 @@
     ],
     "steps": [
       "Use the France-Visas visa wizard to confirm that France is the correct Schengen state to handle the application and generate the document list for the applicant's purpose, nationality and residence.",
-      "Create the France-Visas application, complete the online form accurately, upload documents where the system offers that option, then print the final application form and receipt.",
-      "Book the submission appointment through the official Nigeria route shown by France-Visas and prepare the passport, photos, insurance, financial/accommodation evidence and original/copy supporting documents.",
+      "Start from the official France-Visas visa application page (france-visas.gouv.fr/demande-de-visa), complete the online form and print the final application form and receipt to bring to your TLS appointment.",
+      "Follow the France-Visas Nigeria page to the authorised TLScontact centre: since 17 November 2025, the Abuja centre accepts only the published family-of-French-national, family-reunification and diplomatic categories; an ordinary tourism applicant should use the Lagos submission route unless France-Visas explicitly directs otherwise.",
       "Attend the authorised visa-centre appointment to lodge the application; the centre will take fingerprints from applicants who are subject to Schengen biometric collection. Pay the visa and authorised service charges using the payment method stated for that centre.",
       "Track the application through the official route and collect the passport when notified; if the visa is issued, verify the validity dates, number of entries and permitted stay before travelling."
     ],
     "notes": [
       "For a multi-country Schengen trip, apply to the country that is the main destination by length/purpose; if stays are equal, apply to the country of first entry.",
       "France-Visas states that, from 17 November 2025 until further notice, its Abuja TLS centre accepts only specified categories such as family of French nationals, family reunification and diplomatic travel; other applicants should follow the current Nigeria page when choosing a submission centre.",
-      "A short-stay Schengen visa normally covers up to 90 days in any 180-day period; long-stay visas follow national rules."
+      "A short-stay Schengen visa normally covers up to 90 days in any 180-day period; long-stay visas follow national rules.",
+      "France-Visas Nigeria specifies online TLScontact appointment booking with prepayment of the €28 service fee. Its visa fee and service fee are separate; payment never guarantees issuance."
     ],
     "sources": [
       {
         "label": "France-Visas tourist stay under 3 months",
         "agency": "France-Visas",
-        "url": "https://france-visas.gouv.fr/en/sejour-touristique-de-moins-de-3-mois",
+        "url": "https://www.france-visas.gouv.fr/en/web/france-visas/sejour-touristique-de-moins-de-3-mois",
         "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "France-Visas Nigeria submission guidance",
         "agency": "France-Visas",
         "url": "https://www.france-visas.gouv.fr/web/france-visas/nigeria",
         "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       },
       {
-        "label": "France-Visas online application",
+        "label": "France-Visas official current application entry point",
         "agency": "France-Visas",
-        "url": "https://france-visas.gouv.fr/en/web/france-visas/online-application",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "url": "https://france-visas.gouv.fr/demande-de-visa",
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "European Commission Schengen visa application rules",
         "agency": "European Commission",
         "url": "https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en",
         "published": "2025-12-02",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       }
     ],
     "searchTerms": [
@@ -6157,7 +6167,7 @@
       "us-b1-b2-visitor-visa",
       "canada-visitor-visa"
     ],
-    "lastVerified": "2026-09-28"
+    "lastVerified": "2026-10-17"
   },
   {
     "slug": "australia-visitor-visa-600",
@@ -6498,7 +6508,7 @@
     "category": "Foreign visas",
     "agencySlug": "italy-maeci",
     "feeLabel": "€90 adult Schengen visa fee",
-    "feeNote": "The Italian Consulate General in Lagos lists €90 for adults and €45 for children aged 6–12; TLScontact service charges are additional.",
+    "feeNote": "Italy's Lagos consulate quotes €90 for adult Type C Schengen visas and €45 for children aged 6–12. Consular payments are made in Nigerian naira at the quarterly consular exchange rate; TLScontact charges are separate.",
     "timeline": "Schengen rules generally provide a 15-calendar-day decision period that can be extended in individual cases; applicants should apply well before the intended trip.",
     "status": "verified",
     "officialPortal": "https://visas-it.tlscontact.com/en-us/country/ng",
@@ -6515,13 +6525,14 @@
       "Open the Italian Consulate General in Lagos visa guidance and the authorised TLScontact Nigeria route to confirm the correct short-stay visa type, current document checklist and submission instructions for the applicant's purpose.",
       "Prepare the Schengen application form, passport, photo, insurance, travel/accommodation reservations, financial evidence and Nigeria-ties documents in the original-plus-copy format required for Nigeria.",
       "Register with Italy's authorised TLScontact system in Nigeria and book an appointment at the current Abuja or Lagos Italy Visa Application Centre.",
-      "Attend the TLScontact appointment in person with the complete file, pay the consular visa fee and TLS service charge using the authorised payment route, and complete Schengen biometric collection unless the applicant qualifies for an applicable exemption or reusable-fingerprint rule.",
+      "Attend the authorised Italy TLScontact appointment in Abuja or Lagos, pay the consular Type C visa fee in naira using the payment route accepted by the Italian mission and any separate TLScontact service charge, and complete the biometric stage unless exempt.",
       "Track the passport/application through the authorised channel and, on return, inspect the Schengen visa sticker for validity dates, entries and permitted duration before travel."
     ],
     "notes": [
       "Italy must be the main destination for an Italian Schengen application.",
       "The Italian Embassy states that Nigerian visa applications are handled through the Consulate General in Lagos and submitted via authorised TLScontact centres in Abuja and Lagos.",
-      "Submission of the required documents does not itself guarantee visa issuance; border authorities can still ask for travel-purpose and means evidence on entry."
+      "Submission of the required documents does not itself guarantee visa issuance; border authorities can still ask for travel-purpose and means evidence on entry.",
+      "The Italian Consulate General in Lagos says visa fees are converted at a quarterly consular exchange rate that changes on 1 January, 1 April, 1 July and 1 October; do not assume a naira conversion from an old article remains payable."
     ],
     "sources": [
       {
@@ -6529,28 +6540,27 @@
         "agency": "Italian Consulate General in Lagos",
         "url": "https://conslagos.esteri.it/en/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/",
         "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       },
       {
-        "label": "Where to apply for an Italy visa in Nigeria",
+        "label": "Italian Consulate in Lagos: authorised visa submission centres",
         "agency": "Italian Embassy Abuja",
-        "url": "https://ambabuja.esteri.it/en/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/dove-chiedere-un-visto/",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "url": "https://conslagos.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/dove-chiedere-un-visto/",
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "Italy visa fees in Nigeria",
         "agency": "Italian Consulate General Lagos",
         "url": "https://conslagos.esteri.it/en/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/quanto-costa-un-visto-e-come-pagare/",
         "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "Italy visa application centres in Nigeria",
         "agency": "TLScontact / Italian Consulate General",
         "url": "https://visas-it.tlscontact.com/en-us/country/ng",
         "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       }
     ],
     "searchTerms": [
@@ -6565,7 +6575,7 @@
       "spain-schengen-tourist-visa",
       "france-schengen-short-stay-visa"
     ],
-    "lastVerified": "2026-09-28"
+    "lastVerified": "2026-10-17"
   },
   {
     "slug": "spain-schengen-tourist-visa",
@@ -6575,7 +6585,7 @@
     "category": "Foreign visas",
     "agencySlug": "spain-maec",
     "feeLabel": "€90 adult / €45 child aged 6–12",
-    "feeNote": "The Spanish Consulate's current Schengen guidance lists €90 for applicants aged 12 and above, €45 for children aged 6–12, and no visa fee for children under 6; BLS service charges are additional.",
+    "feeNote": "The Spanish Consulate in Lagos publishes the legal Schengen fees as €90 for applicants aged 12+ and €45 for children aged 6–11, with under-6s exempt. Its English Nigeria page also displays naira fee amounts; check current local payable figures and any separate BLS charge at booking rather than converting euros yourself.",
     "timeline": "Spain lists a legal decision period of 15 calendar days from submission, extendable to 45 calendar days when additional documents or an interview are required.",
     "status": "verified",
     "officialPortal": "https://www.exteriores.gob.es/Consulados/lagos/en/ServiciosConsulares/Paginas/Consular/Visados-Schengen.aspx",
@@ -6598,7 +6608,8 @@
     "notes": [
       "Spain says a Schengen application should normally be submitted between 6 months and 15 days before the planned journey.",
       "Nigerian citizens require a Schengen visa for short stays in Spain.",
-      "A visa does not create an automatic right of entry; border authorities can ask for proof of the trip's purpose and conditions."
+      "A visa does not create an automatic right of entry; border authorities can ask for proof of the trip's purpose and conditions.",
+      "Spain's Lagos consulate publishes local-currency fee figures alongside the euro-denominated Schengen tariff. Because exchange-rate schedules may change, confirm the actual naira amount and BLS service charges before submitting or paying."
     ],
     "sources": [
       {
@@ -6606,14 +6617,14 @@
         "agency": "Consulate General of Spain in Lagos",
         "url": "https://www.exteriores.gob.es/Consulados/lagos/en/ServiciosConsulares/Paginas/Consular/Visados-Schengen.aspx",
         "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "Spain Schengen visa submission in Nigeria",
         "agency": "Consulate General of Spain in Lagos",
         "url": "https://www.exteriores.gob.es/Consulados/lagos/es/ServiciosConsulares/Paginas/index.aspx?scca=Visados&scco=Nigeria&scd=170&scs=Lugar+de+presentaci%C3%B3n+de+solicitudes+de+visado",
         "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       }
     ],
     "searchTerms": [
@@ -6628,7 +6639,7 @@
       "italy-schengen-tourist-visa",
       "netherlands-schengen-visa"
     ],
-    "lastVerified": "2026-09-28"
+    "lastVerified": "2026-10-17"
   },
   {
     "slug": "netherlands-schengen-visa",
@@ -7253,12 +7264,12 @@
     "slug": "nelfund-student-loan-application",
     "title": "How to apply for a NELFUND student loan",
     "shortTitle": "NELFUND student loan",
-    "summary": "Eligibility checks, account setup, school verification and the official application flow for Nigeria's interest-free student loan.",
+    "summary": "Apply for NELFUND's interest-free student loan through the official portal, verify your school record and track separate tuition and upkeep disbursements. Creating an account is not loan approval.",
     "category": "Student finance",
     "agencySlug": "nelfund",
     "feeLabel": "Interest-free loan",
     "feeNote": "NELFUND describes the student loan as interest-free. Apply only through the official NELFUND portal.",
-    "timeline": "NELFUND says an application can be completed in about 15–30 minutes; verification and disbursement take additional time.",
+    "timeline": "NELFUND advertises around 15–30 minutes to complete the online form; this is not a guaranteed approval or payout time. School verification, assessment and disbursement follow separately.",
     "status": "verified",
     "officialPortal": "https://portal.nelf.gov.ng/auth/register",
     "requirements": [
@@ -7269,37 +7280,38 @@
       "Personal bank details for upkeep payments when requested"
     ],
     "steps": [
-      "Open the official NELFUND portal and create a student account.",
+      "Open portal.nelf.gov.ng from NELFUND's official website and create or sign in to your own student account; do not use a paid agent's lookalike portal.",
       "Complete the citizenship and identity checks and provide the education information requested by the portal.",
       "Verify your institution/student record and correct any mismatch before submitting a loan request.",
       "Choose Request for Student Loan and complete the application details and declarations.",
-      "Submit the application and use your dashboard to follow verification and disbursement progress.",
+      "Submit the request, save the application reference and check the existing account dashboard for the actual review and approval status; an application submission does not guarantee funding.",
       "When approved, institutional charges are paid to the institution while approved upkeep is paid to the student's bank account."
     ],
     "notes": [
       "Do not pay an agent to submit a NELFUND application.",
       "A school-record or identity mismatch can delay verification; correct the underlying record instead of creating duplicate applications.",
       "Institutional charges and upkeep are handled separately, so one may appear before the other.",
-      "Keep your portal login and bank details current throughout the application."
+      "Keep your portal login and bank details current throughout the application.",
+      "NELFUND's advertised 15–30 minute period describes form completion, not a guaranteed loan decision, school fee transfer or upkeep credit."
     ],
     "sources": [
       {
         "label": "NELFUND official website",
         "agency": "Nigerian Education Loan Fund",
         "url": "https://nelf.gov.ng/",
-        "lastChecked": "2026-10-01"
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "NELFUND application portal",
         "agency": "Nigerian Education Loan Fund",
         "url": "https://portal.nelf.gov.ng/auth/register",
-        "lastChecked": "2026-10-01"
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "NELFUND portal introduction",
         "agency": "Nigerian Education Loan Fund",
         "url": "https://portal.nelf.gov.ng/auth/welcome",
-        "lastChecked": "2026-10-01"
+        "lastChecked": "2026-10-17"
       }
     ],
     "related": [
@@ -7307,7 +7319,7 @@
       "nelfund-loan-repayment",
       "jamb-profile-code"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-17",
     "searchTerms": [
       "NELFUND",
       "NELFUND portal",
