@@ -1,8 +1,10 @@
 import Link from "next/link";
 import type { Service } from "@/lib/types";
-import { getDetailedServiceGuidance } from "@/lib/service-guidance";
+import { getDetailedServiceGuidance, hasExplicitServiceGuidance } from "@/lib/service-guidance";
 
 export function ServiceAftercare({ service }: { service: Service }) {
+  // Do not render generic aftercare cards in hundreds of unrelated guides.
+  if (!hasExplicitServiceGuidance(service.slug)) return null;
   const guidance = getDetailedServiceGuidance(service);
 
   return (

@@ -355,6 +355,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
                 : "No separate address, ticket price or opening-hours record is independently verified for this guide. These details are not invented."}</p>
             </div>
           </div>
+          <p className="source-intro">This is a desk-researched planning reference, not a claim that MyNigeriaGuide inspected the destination, roads, facilities or opening hours in person. Confirm conditions and authorised access directly before travelling.</p>
           {hasDoNotTravelAdvisory ? (
             <div className="info-box" role="note" aria-label="Travel safety warning">
               <h3>Travel advisory: do not treat these references as a visit recommendation</h3>
