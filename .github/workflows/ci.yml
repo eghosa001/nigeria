@@ -327,6 +327,9 @@ jobs:
         run: |
           python3 scripts/fast_path_guard.py
           npm run check:explore
+      - name: Verify source-linked service task comparisons and truthful hub schema
+        if: steps.scope.outputs.mode == 'full' || steps.scope.outputs.mode == 'quality'
+        run: npx tsx --test tests/service-task-comparison.test.ts
       - name: Verify WAEC, NECO, NIMC, NRS and SEO monitor regression
         if: steps.scope.outputs.mode == 'full' || steps.scope.outputs.mode == 'quality'
         run: node --test tests/service-education-identity-tax-11-review-20261016.test.mjs
