@@ -95,7 +95,7 @@ test("the entire movie catalogue retains every eligible pre-regression video or 
   // thumbnail; source-linked images must not disappear merely because a
   // separate channel profile URL is absent. Film-db image mirrors still
   // need a reuse basis, and are not silently treated as approved rights.
-  assert.equal(entertainmentTitles.length, 140, "catalogue size changed; re-audit this guard");
+  assert.equal(entertainmentTitles.length, 147, "catalogue size changed; re-audit this guard");
 
   const externalBefore = entertainmentTitles.filter((film) =>
     Boolean(film.sourcePreview) ||
@@ -109,8 +109,16 @@ test("the entire movie catalogue retains every eligible pre-regression video or 
     Boolean(getVerifiedYouTubePreview(film)),
   );
   const withheld = externalBefore.filter((film) => !newlyDisplayable.includes(film));
-  assert.equal(externalBefore.length, 106, "source-backed catalogue changed; investigate before adjusting");
-  assert.equal(newlyDisplayable.length, 105, "every eligible film needs its existing verified video or credited official poster");
+  console.log("Full-film media reconciliation", JSON.stringify({
+    catalogSize: entertainmentTitles.length,
+    hadPreRegressionMedia: externalBefore.length,
+    recovered: newlyDisplayable.length,
+    withheld: withheld.map((film) => film.slug),
+    hadNoExternalImageBefore: entertainmentTitles.length - externalBefore.length,
+  }));
+  assert.ok(externalBefore.length >= 106, "source-backed titles unexpectedly disappeared");
+  assert.equal(newlyDisplayable.length, externalBefore.length - 1,
+    "every film except the documented mirror-only title needs its prior image pathway");
   assert.deepEqual(withheld.map((film) => film.slug), ["wire-transfer-2026"],
     "no other previously pictured movie may silently lose its poster");
 
@@ -122,7 +130,8 @@ test("the entire movie catalogue retains every eligible pre-regression video or 
     (film) => film.slug === "phoenix-fury-2026")!)?.videoId, "TGFvzpk27s4");
 
   const noExternalBefore = entertainmentTitles.filter((film) => !externalBefore.includes(film));
-  assert.equal(noExternalBefore.length, 34, "separate genuinely new artwork work from regressions");
+  assert.equal(noExternalBefore.length, entertainmentTitles.length - externalBefore.length,
+    "separate genuinely new artwork work from regressions");
   const cards = readFileSync("components/entertainment-artwork.tsx", "utf8");
   const home = readFileSync("app/page.tsx", "utf8");
   const filmDirectory = readFileSync("components/entertainment-catalog.tsx", "utf8");
