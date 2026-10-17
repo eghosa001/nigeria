@@ -2,6 +2,7 @@ import type { EntertainmentTitle, EntertainmentReferenceLink } from "@/lib/enter
 import type { MovieEditorialProfile } from "@/lib/movie-editorial-profiles";
 import { movieEditorialProfilesRemainingB } from "@/lib/movie-editorial-profiles-remaining-b";
 import { featuredEditorialProfiles } from "@/lib/movie-editorial-profiles-featured";
+import { sevenFilmReleaseReviews20261017 } from "@/lib/entertainment-release-verification-2026-10-17";
 import { filmCreditAndAvailabilityReviews20261017 } from "@/lib/entertainment-director-and-territory-evidence-2026-10-17";
 
 // Eight individually researched corrections to existing, canonical movie pages.
@@ -145,6 +146,22 @@ for (const [slug, review] of Object.entries(filmCreditAndAvailabilityReviews2026
     references: [
       ...(prior?.references ?? []).filter(ref => !review.references.some(next => next.href === ref.href)),
       ...review.references,
+    ],
+  };
+}
+
+// Preserve the established catalogue mapper. All seven visitor-facing film
+// corrections enter through the same reviewed source-data layer, so the PR
+// freshness checker and original film URLs remain unchanged.
+for (const [slug, review] of Object.entries(sevenFilmReleaseReviews20261017)) {
+  const prior = reviewedMovieRecords20261016[slug];
+  reviewedMovieRecords20261016[slug] = {
+    ...(prior ?? {}),
+    ...(review.synopsis ? { synopsis: review.synopsis } : {}),
+    references: [
+      ...(prior?.references ?? []).filter(source =>
+        !review.sources.some(next => next.href === source.href)),
+      ...review.sources,
     ],
   };
 }

@@ -1,3 +1,4 @@
+import { sevenFilmReleaseReviews20261017 } from "@/lib/entertainment-release-verification-2026-10-17";
 import { filmCreditAndAvailabilityReviews20261017 } from "@/lib/entertainment-director-and-territory-evidence-2026-10-17";
 import { fourVerifiedFilmDossiers20261017 } from "@/lib/movie-editorial-dossiers-2026-10-17";
 import { distinctLongEnoughEditorialProfiles } from "@/lib/movie-editorial-profiles-long-enough-2026-10-15";
@@ -73,6 +74,21 @@ export const allMovieEditorialProfiles: Record<string, MovieEditorialProfile> = 
   })
 );
 
+// The follow-up notes are appended to canonical film dossiers, not published
+// as duplicate film profiles or fact-free summaries. Keep older author work.
+const accuratelyReleasedMovieEditorialProfiles: Record<string, MovieEditorialProfile> =
+  Object.fromEntries(Object.entries(allMovieEditorialProfiles).map(([slug, base]) => {
+    const review = sevenFilmReleaseReviews20261017[slug];
+    if (!review) return [slug, base];
+    return [slug, {
+      ...base,
+      sections: base.sections.some(section => section.heading === review.heading)
+        ? base.sections : [...base.sections, { heading: review.heading, paragraphs: review.paragraphs }],
+      questions: base.questions.some(item => item.question === review.question.question)
+        ? base.questions : [...base.questions, review.question],
+    }];
+  }));
+
 export function getMovieEditorialProfile(slug: string): MovieEditorialProfile | undefined {
-  return allMovieEditorialProfiles[slug];
+  return accuratelyReleasedMovieEditorialProfiles[slug];
 }
