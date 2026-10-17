@@ -26,6 +26,6 @@ test("Spotify Nigeria SERP title conveys geographic intent without freezing chan
 });
 
 test("WAEC certificate collection targets school and private collection without an invented universal fee", () => {
-  assert.match(serviceSeo, /"waec-collect-certificate": "WAEC Certificate Collection \\{year\\}: School vs Private"/);
+  assert.match(serviceSeo, /"waec-collect-certificate": "WAEC Certificate Collection \{year\}: School vs Private"/);
   assert.match(serviceSeo, /private candidates contact the WAEC office for their exam state/);
 });
