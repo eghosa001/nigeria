@@ -208,7 +208,8 @@ export function applyRemainingDirectoryReviews20261017(item: CareerOpportunity):
     applicationSteps:[...review.decisions,...followUp],
     nextMilestone:review.risk,
     sourceNotes:[review.risk,
-      "Individual employer-specific application instructions checked 17 October 2026. This does not authenticate a successful application, a future company-wide intake, or a vacancy form."],
+      "Individual employer-specific application instructions checked 17 October 2026. This does not authenticate a successful application, a future company-wide intake, or a vacancy form.",
+      "Original issuer career source verified: "+review.url+"; the individual candidate must still verify that the selected job accepts applications."],
     sources
   };
 }
@@ -223,6 +224,6 @@ export function hasCompletedRemainingDirectoryReview(item:CareerOpportunity, now
     item.nextMilestone!==x.risk||!item.sourceNotes.includes(x.risk)||
     item.applicationSteps.length!==steps.length||!steps.every(s=>item.applicationSteps.includes(s))||
     new Set(item.applicationSteps).size!==steps.length||
-    item.requirements.length<3||item.qualifications.length<2) return false;
+    item.requirements.length<4||item.qualifications.length<2||item.sourceNotes.length<3) return false;
   return item.sources.some(s=>s.url===x.url&&s.lastChecked===item.verifiedAt);
 }
