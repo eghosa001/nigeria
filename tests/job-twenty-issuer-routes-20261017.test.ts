@@ -16,7 +16,7 @@ test("twenty existing employer portals give distinct verified source-first appli
     assert.equal(record.officialUrl, expected.source, slug);
     assert.equal(record.summary, expected.answer, slug);
     assert.equal(record.verifiedAt, "2026-10-17", slug);
-    assert.equal(record.applicationSteps.length, 4, slug);
+    assert.equal(record.applicationSteps.length, 5, slug);
     assert.deepEqual(record.applicationSteps.slice(0, 3), expected.steps, slug);
     assert.ok(record.sourceNotes.includes(expected.caveat), slug);
     assert.ok(record.sources.some(source => source.url === expected.source && source.lastChecked === "2026-10-17"), slug);
