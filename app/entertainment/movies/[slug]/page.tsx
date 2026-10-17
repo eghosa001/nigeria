@@ -24,15 +24,6 @@ export function generateStaticParams() {
   return entertainmentTitles.map((title) => ({ slug: title.slug }));
 }
 
-function videoIdFromUrl(href: string) {
-  try {
-    const url = new URL(href);
-    if (url.hostname === "youtu.be") return url.pathname.slice(1);
-    if (url.hostname.endsWith("youtube.com")) return url.searchParams.get("v");
-  } catch {}
-  return null;
-}
-
 const movieSeoOverrides: Record<string, { title: string; description?: string }> = {
   "forever-isnt-long-enough-2025": { title: "Forever Isn\u2019t Long Enough (2025): Cast & Film", description: "Forever Isn\u2019t Long Enough (2025): Grace\u2019s story, confirmed Michael Dappa and Inem King cast, Uche Alexmoore director, and official Royal Arts TV film." },
   "long-enough-2026": { title: "Long Enough (2026) Cast, Plot & Film Details", description: "Long Enough (2026) cast includes Victory Michael, Prisma James and Jennifer Obodo. Story, director Austin Onyema and verified release sources." },
