@@ -126,7 +126,7 @@ export function EntertainmentArtwork({
         </div>
         <figcaption>
           <span>Preview: {officialSourcePreview.credit}</span>
-          {showSourceLink ? <a href={officialSourcePreview.sourceUrl} target="_blank" rel="noreferrer">Official source ↗</a> : null}
+          {showSourceLink ? <a href={officialSourcePreview.sourceUrl} target="_blank" rel="noreferrer">View credited source ↗</a> : null}
         </figcaption>
       </figure>
     );
