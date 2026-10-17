@@ -13874,7 +13874,7 @@ const districtReviewedExploreGuides: ExploreGuide[] = previousPublishedExploreGu
   };
 });
 
-// Seven individually targeted visitor fixes: add useful, qualified access and
+// Eleven individually targeted visitor fixes: add useful, qualified access and
 // fee decisions to the authored guide body instead of changing audit thresholds.
 export const exploreGuides: ExploreGuide[] = districtReviewedExploreGuides.map((guide) => {
   const amendment = practicalVisitorAmendments20261017[guide.slug];
