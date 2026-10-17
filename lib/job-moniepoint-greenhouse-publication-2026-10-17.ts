@@ -86,8 +86,8 @@ export function hasCompletedMoniepointAtsReview20261017(item: CareerOpportunity,
   if (!proof || item.kind !== "vacancy" || item.status !== "open" ||
       item.deadline || item.jobPostingAuthorization ||
       item.officialUrl !== ats(proof.id) || item.statusLabel !== statusLabel ||
-      item.posting?.datePosted !== proof.firstPublished ||
-      item.posting?.jobTitle !== proof.title ||
+      !item.posting || item.posting.datePosted !== proof.firstPublished ||
+      item.posting.jobTitle !== proof.title ||
       JSON.stringify(item.posting.locations) !== JSON.stringify(proof.locations) ||
       item.nextMilestone !== "Original Greenhouse form visible 17 October 2026; no stated employer closing date. Confirm that it still accepts applications before submitting." ||
       !item.applicationSteps.includes(applicantCaution) ||
