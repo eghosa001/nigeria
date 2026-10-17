@@ -1,5 +1,7 @@
 import type { EntertainmentTitle } from "@/lib/entertainment";
 import { canDisplayEntertainmentArtwork } from "@/lib/entertainment";
+import { getSourceLinkedFilmPreview, getVerifiedYouTubePreview } from "@/lib/movie-media-previews";
+import { RemoteMoviePreviewImage } from "@/components/remote-movie-preview-image";
 
 // Generate visible editorial artwork in the HTML itself. A remote SVG image route
 // must not be a single point of failure for the whole non-YouTube movie grid.
@@ -100,7 +102,63 @@ export function EntertainmentArtwork({
     );
   }
 
-  // An external source URL or video preview is not a licence to reproduce its imagery.
-  // Show an original poster until a documented permission passes canDisplayEntertainmentArtwork().
+  // Film-owner/exhibitor/press-supplied previews remain credited editorial previews,
+  // not licensed artwork. A random film database image is never treated as approved.
+  const officialSourcePreview = getSourceLinkedFilmPreview(title);
+  const youtube = getVerifiedYouTubePreview(title);
+  if (officialSourcePreview) {
+    return (
+      <figure
+        className={"entertainment-artwork entertainment-artwork-source entertainment-artwork-" + variant}
+        data-artwork-source={officialSourcePreview.sourceKind}
+        data-rights-status="source-linked-editorial-preview"
+        data-poster-guaranteed="true"
+      >
+        <div className="entertainment-source-preview-frame">
+          <RemoteMoviePreviewImage
+            src={officialSourcePreview.url}
+            fallbackSrc={youtube ? "https://i.ytimg.com/vi/" + youtube.videoId + "/hqdefault.jpg" : undefined}
+            title={title.title}
+            alt={title.title + " promotional preview credited to " + officialSourcePreview.credit}
+            loading={variant === "card" ? "lazy" : "eager"}
+            priority={variant === "hero"}
+          />
+        </div>
+        <figcaption>
+          <span>Preview: {officialSourcePreview.credit}</span>
+          {showSourceLink ? <a href={officialSourcePreview.sourceUrl} target="_blank" rel="noreferrer">Official source ↗</a> : null}
+        </figcaption>
+      </figure>
+    );
+  }
+
+  // Unmodified thumbnails belong to their original, linked YouTube videos.
+  // They must never be labelled as licensed standalone photographic posters.
+  if (youtube) {
+    return (
+      <figure
+        className={"entertainment-artwork entertainment-artwork-youtube entertainment-artwork-" + variant}
+        data-artwork-source="youtube"
+        data-rights-status="linked-video-preview"
+        data-poster-guaranteed="true"
+      >
+        <div className="entertainment-youtube-preview-frame">
+          <RemoteMoviePreviewImage
+            src={"https://i.ytimg.com/vi/" + youtube.videoId + "/hqdefault.jpg"}
+            fallbackSrc={"https://img.youtube.com/vi/" + youtube.videoId + "/mqdefault.jpg"}
+            title={title.title}
+            alt={title.title + " " + (youtube.kind === "trailer" ? "trailer thumbnail" : "publisher YouTube full-movie thumbnail")}
+            loading={variant === "card" ? "lazy" : "eager"}
+            priority={variant === "hero"}
+          />
+        </div>
+        <figcaption>
+          <span>{youtube.kind === "trailer" ? "Trailer" : "Video"} on YouTube{youtube.publisher ? " · " + youtube.publisher : ""}</span>
+          {showSourceLink ? <a href={youtube.href} target="_blank" rel="noreferrer">Open video ↗</a> : null}
+        </figcaption>
+      </figure>
+    );
+  }
+
   return <GeneratedArtwork title={title} variant={variant} showSourceLink={showSourceLink} />;
 }
