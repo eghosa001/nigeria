@@ -4,7 +4,8 @@ import test from "node:test";
 
 const servicesPage = readFileSync("app/services/page.tsx", "utf8");
 const moviesPage = readFileSync("app/entertainment/movies/page.tsx", "utf8");
-const services = JSON.parse(readFileSync("data/services.json", "utf8"));
+const services = ["data/services.json", "data/services-scale-verified.json", "data/services-private-extended.json"]
+  .flatMap((path) => JSON.parse(readFileSync(path, "utf8")));
 const movieCatalog = readFileSync("lib/entertainment.ts", "utf8");
 
 test("Search Console-priority service links point at published catalog records", () => {
