@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RemoteMoviePreviewImage } from "@/components/remote-movie-preview-image";
 import type { YouTubeMovieRecord } from "@/lib/youtube-library";
 
 function runtimeLabel(minutes: number) {
@@ -24,14 +25,13 @@ export function YouTubeMovieCard({
         prefetch={false}
         aria-label={"View details for " + movie.title}
       >
-        <img
+        <RemoteMoviePreviewImage
           src={"https://i.ytimg.com/vi/" + movie.videoId + "/mqdefault.jpg"}
-          alt={movie.title + " YouTube thumbnail"}
-          width={320}
-          height={180}
+          fallbackSrc={"https://img.youtube.com/vi/" + movie.videoId + "/hqdefault.jpg"}
+          title={movie.title}
+          alt={movie.title + " official YouTube video thumbnail"}
           loading={priority ? "eager" : "lazy"}
-          decoding="async"
-          referrerPolicy="no-referrer"
+          priority={priority}
         />
       </Link>
       <div className="youtube-movie-body">

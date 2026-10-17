@@ -5,6 +5,7 @@ import { getPublicService } from "../lib/data";
 import { getStepDetails } from "../lib/step-details";
 import { getRightsSafeEntertainmentImageUrl, entertainmentTitles, canDisplayEntertainmentArtwork } from "../lib/entertainment";
 import { hasExplicitServiceGuidance } from "../lib/service-guidance";
+import { getVerifiedYouTubePreview, getSourceLinkedFilmPreview } from "../lib/movie-media-previews";
 
 test("movie images require licensed rights records or first-party original posters", () => {
   const base = "https://mynigeriaguide.com";
@@ -16,14 +17,52 @@ test("movie images require licensed rights records or first-party original poste
   }
 });
 
-test("movie cards do not embed external thumbnails without rights evidence", () => {
-  const src = readFileSync("components/entertainment-artwork.tsx", "utf8");
-  assert.doesNotMatch(src, /i\.ytimg\.com|src=\{preview\.url\}|src=\{thumbnail\}/);
-  assert.match(src, /canDisplayEntertainmentArtwork/);
-  assert.match(src, /data-poster-rendered="inline"/);
-  assert.match(src, /className="generated-movie-art"/);
-  assert.match(src, /role="img"/);
-  assert.doesNotMatch(src, /src=\\{generatedPosterHref/);
+test("licensed art, credited official-source previews and video thumbnails are different rights categories", () => {
+  const component = readFileSync("components/entertainment-artwork.tsx", "utf8");
+  assert.match(component, /canDisplayEntertainmentArtwork/);
+  assert.match(component, /data-rights-status="source-linked-editorial-preview"/);
+  assert.match(component, /data-rights-status="linked-video-preview"/);
+  assert.match(component, /getSourceLinkedFilmPreview/);
+  assert.match(component, /getVerifiedYouTubePreview/);
+  assert.match(component, /RemoteMoviePreviewImage/);
+  assert.match(component, /data-poster-rendered="inline"/);
+  assert.doesNotMatch(component, /src=\\{preview\\.url\\}/);
+});
+
+test("verified producer video thumbnails and official exhibitor posters are displayed again", () => {
+  const myWedding = entertainmentTitles.find(film => film.slug === "my-30th-wedding");
+  assert.ok(myWedding);
+  const video = getVerifiedYouTubePreview(myWedding);
+  assert.equal(video?.videoId, "0_JzNVzFukE");
+  assert.equal(video?.publisher, "Bimbo Ademoye TV");
+  assert.equal(video?.kind, "full-movie");
+  const blackMarket = entertainmentTitles.find(film => film.slug === "black-market-2026");
+  assert.ok(blackMarket);
+  assert.equal(getSourceLinkedFilmPreview(blackMarket)?.credit, "Grand Cinemas");
+
+  const unverified = {
+    ...myWedding,
+    trailer: undefined,
+    watchLinks: [{ ...myWedding.watchLinks[0], href: "https://malicious.example/watch?v=0_JzNVzFukE" }],
+    sourcePreview: {
+      url: "https://example.com/image.jpg", sourceUrl: "https://example.com",
+      credit: "A movie database", sourceKind: "editorial-database" as const,
+      note: "Not licensed", lastChecked: "2026-10-17",
+    },
+  };
+  assert.equal(getVerifiedYouTubePreview(unverified), null);
+  assert.equal(getSourceLinkedFilmPreview(unverified), null);
+});
+
+test("YouTube movie cards and all remote previews fail visibly, not with blank boxes", () => {
+  const preview = readFileSync("components/remote-movie-preview-image.tsx", "utf8");
+  const movieCards = readFileSync("components/youtube-movie-card.tsx", "utf8");
+  const styles = readFileSync("app/globals.css", "utf8");
+  assert.match(movieCards, /RemoteMoviePreviewImage/);
+  assert.ok(movieCards.includes("i.ytimg.com"));
+  assert.ok(preview.includes("onError={() => setAttempt"));
+  assert.match(preview, /remote-movie-preview-fallback/);
+  assert.match(styles, /remote-movie-preview-picture/);
 });
 
 test("generated artwork is embedded per title without depending on a poster HTTP request", () => {
