@@ -14,6 +14,7 @@ import { exploreGuides } from "../lib/explore";
 import { explorePlaces, getExplorePlacesForGuide } from "../lib/explore-places";
 import { entertainmentTitles } from "../lib/entertainment";
 import { getMovieEditorialProfile } from "../lib/movie-editorial-profile-registry";
+import { documentedMovieAvailabilityVerdict } from "../lib/movie-availability-evidence-2026-10-17";
 import { seriesTitles } from "../lib/series";
 import { entertainmentPeople, getPersonEditorialProfile, hasIndexablePersonEditorial } from "../lib/entertainment-extras";
 import { youtubeMovieLibrary, indexableYouTubeMovies } from "../lib/youtube-library";
@@ -106,8 +107,9 @@ for (const movie of entertainmentTitles) {
     issues.push(blocker("unreliable-watch-source", "Watch URL or source check date invalid."));
   if (!editorial || editorial.sections.length < 2 || !editorial.questions.length)
     issues.push(review("no-substantive-curated-dossier", "Need specific authored story/credits/release analysis; not just repeated film metadata."));
-  if (!movie.watchLinks.length)
-    issues.push(review("availability-unverified", "Show unknown availability clearly; seek exact authorized source, not an inferred watch link."));
+  if (!movie.watchLinks.length && !documentedMovieAvailabilityVerdict(movie, now))
+    issues.push(review("availability-unverified",
+      "No authorised watch link or independently sourced current restriction/pre-release disposition: continue verifying."));
   if (!movie.directors?.length) issues.push(review("director-not-confirmed", "Verify director/crew if publisher makes credits available; do not guess."));
   if (movie.artwork && (!movie.artwork.sourceUrl || movie.artwork.status !== "approved"))
     issues.push(blocker("image-rights-incomplete", "Artwork needs approved documented usage."));

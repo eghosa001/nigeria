@@ -470,7 +470,16 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
       href: "https://www.imdb.com/title/tt28575620/",
       lastChecked: "2026-10-05",
       note: "Independent catalog reference used to verify the title, year, director and credited cast while no current official viewing platform is listed."
-    }],
+    },
+      { label: "What Kept Me Up — Nigeria 23 October 2026 theatrical premiere",
+        href: "https://whatkeptmeup.com/preview/new-in-nigeria-movies-and-tv-shows-to-watch-this-october-2026/",
+        lastChecked: "2026-10-17",
+        note: "The 23 October 2026 FilmOne cinema opening is future as of this evidence review, not an existing showtime." },
+      { label: "Nollywood.com — exact No Fury cinema identity",
+        href: "https://www.nollywood.com/movies/no-fury",
+        lastChecked: "2026-10-17",
+        note: "Exact film record and scheduled Nigerian theatrical release, not a playable full film or confirmed ticket transaction." }
+    ],
     watchLinks: []
   },
   {
@@ -2700,9 +2709,14 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     references: [{
       label: "Netflix Nigeria — Colours of Fire territorial availability",
       href: "https://www.netflix.com/ng/title/82752912",
-      lastChecked: "2026-10-15",
+      lastChecked: "2026-10-17",
       note: "On 15 October 2026, Netflix's Nigerian title page showed this title as unavailable to watch in the country. A public catalogue page is not proof that playback is enabled."
-    }],
+    },
+      { label: "Kava TV — Colours of Fire unavailable within Africa",
+        href: "https://watch.kava.tv/colours-of-fire",
+        lastChecked: "2026-10-17",
+        note: "The film's original Kava distributor listing explicitly excludes African territories; this is not a playable Nigerian Watch link." }
+    ],
     watchLinks: []
   },
   {
