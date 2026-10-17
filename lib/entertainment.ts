@@ -1,5 +1,4 @@
 import { verifiedPsychologicalThrillerOctober20261013 } from "@/lib/entertainment-thriller-2026-10-13";
-import { applyFilmReleaseReviews20261017 } from "@/lib/entertainment-release-verification-2026-10-17";
 import { reviewedMovieRecords20261016 } from "@/lib/movie-editorial-source-repairs-2026-10-16";
 import { verifiedFilmDirectorCredits20261015 } from "@/lib/entertainment-verified-credits-2026-10-15";
 import { verifiedOctoberMovieReleases20261013 } from "@/lib/entertainment-october-releases-2026-10-13";
@@ -2837,7 +2836,7 @@ export const entertainmentTitles: EntertainmentTitle[] = uncorrectedEntertainmen
     (ref) => !repair.references.some((source) => source.href === ref.href),
   );
   return { ...credited, ...repair, references: [...prior, ...repair.references] };
-}).map(applyFilmReleaseReviews20261017);
+});
 
 export const entertainmentPlatforms = ["Netflix", "YouTube", "Prime Video", "Kava", "Cinema", "Africa Magic"] as const;
 
