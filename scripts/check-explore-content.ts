@@ -407,7 +407,6 @@ for (const [slug, expected] of [
 for (const [slug, primarySource, detail, decision] of [
   ["akwa-ibom-heritage-route", "akwaibomstate.gov.ng/about-akwa-ibom/", "burial at Duke Town cemetery in Calabar", "Choose the right Mary Slessor destination"],
   ["becheve-nature-reserve-guide", "ncfnigeria.org/forest-green-recovery-nigeria/", "canopy walkway here in 2006", "Do not assume the canopy walkway is open"],
-  ["african-traditional-food-fair-abuja-2026", "afritraditionalfoodfair.org/", "16–17 October", "Resolve Friday versus Saturday"],
 ] as const) {
   const guide = exploreGuides.find(item => item.slug === slug);
   if (!guide ||
@@ -425,9 +424,14 @@ if (!akka?.sources?.some(source => source.href.includes("guardian.ng/sunday-maga
   errors.push("Akwa Ibom: historically incorrect Mary Slessor tomb must not return");
 }
 const fair = exploreGuides.find(item => item.slug === "african-traditional-food-fair-abuja-2026");
-if (!fair?.sources?.some(source => source.href.includes("/register/")) ||
-    !fair?.sources?.some(source => source.href.includes("visitabuja.org/events/"))) {
-  errors.push("Abuja food fair: official attendee registration and conflicting calendar sources missing");
+if (!fair?.source?.href.includes("afritraditionalfoodfair.org/") ||
+    !fair.intro.some(paragraph => paragraph.includes("16–17 October") && paragraph.includes("News Agency of Nigeria")) ||
+    !fair.planning.some(item => item.label.includes("Distinguish Friday policy activities") && item.detail.includes("9 AM")) ||
+    fair.lastReviewed !== "2026-10-17" ||
+    !fair.sources?.some(source => source.href.includes("/register/")) ||
+    !fair.sources?.some(source => source.href.includes("visitabuja.org/events/")) ||
+    !fair.sources?.some(source => source.href.includes("nannews.ng/african-food-fair-to-celebrate-nigerian-culinary-heritage/"))) {
+  errors.push("Abuja food fair: 16–17 October organiser programme, original registration, independent 8 October NAN confirmation or review date missing");
 }
 for (const [slug, expectedSource] of [
   ["becheve-nature-reserve", "https://ncfnigeria.org/forest-green-recovery-nigeria/"],

@@ -200,6 +200,12 @@ unique(careerGuides.map((guide) => guide.slug), "Career guide slugs");
 assert(careerGuides.length >= 10, "Jobs pillar should keep at least 10 substantial evergreen career guides.");
 unique(jobEmployers.map((employer) => employer.slug), "Employer slugs");
 assert(retiredJobRedirects.size >= 100, "Retired thin vacancy URLs must keep redirects instead of becoming 404s.");
+// These two alias URLs are duplicates of the SAME employer requisition. Unlike
+// retired distinct vacancies, their precise canonical role is the safest target.
+const sameRequisitionAliases = new Map([
+  ["moniepoint-financial-planning-analyst-nigeria-2026", { canonical: "moniepoint-financial-planning-analyst", requisition: "4355709101" }],
+  ["moniepoint-early-careers-talent-acquisition-specialist-2026", { canonical: "moniepoint-early-careers-talent-acquisition-specialist", requisition: "4981411101" }],
+]);
 const opportunityBySlug = new Map(jobOpportunities.map((item) => [item.slug, item]));
 for (const [retiredSlug, target] of retiredJobRedirects) {
   assert(!opportunityBySlug.has(retiredSlug), retiredSlug + " is retired and must not remain an indexable opportunity.");
@@ -211,7 +217,14 @@ for (const [retiredSlug, target] of retiredJobRedirects) {
     const replacementSlug = target.slice("/jobs/".length);
     const replacement = opportunityBySlug.get(replacementSlug);
     assert(Boolean(replacement), retiredSlug + " redirects to a missing replacement opportunity.");
-    assert(replacement?.kind === "career-page", retiredSlug + " must redirect to an employer career page.");
+    const sameRequisition = sameRequisitionAliases.get(retiredSlug);
+    if (sameRequisition) {
+      assert(replacementSlug === sameRequisition.canonical, retiredSlug + " must redirect to its exact canonical issuer role.");
+      assert(replacement?.kind === "vacancy" && replacement.officialUrl.endsWith("/" + sameRequisition.requisition),
+        retiredSlug + " must retain the matching employer requisition.");
+    } else {
+      assert(replacement?.kind === "career-page", retiredSlug + " must redirect to an employer career page.");
+    }
   }
 }
 
