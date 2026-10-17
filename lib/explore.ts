@@ -1,3 +1,4 @@
+import { tourSourceSafetyDecisions20261017 } from "@/lib/explore-tour-evidence-safety-2026-10-17";
 import { furtherVisitorDecisions20261016 } from "@/lib/explore-additional-editorial-2026-10-16";
 import { museumAndVisitorReviews20261016 } from "@/lib/explore-museums-and-waterfalls-2026-10-16";
 import { regionalAccessDecisions20261016 } from "@/lib/explore-regional-access-decisions-2026-10-16";
@@ -13940,7 +13941,7 @@ const priorBatch3ExploreGuides: ExploreGuide[] = priorIndependentHeritageReviewG
 
 // Independently checked route-specific visitor decisions for the next twenty-eight
 // existing pages. Keep earlier corrections and canonical slugs unchanged.
-export const exploreGuides: ExploreGuide[] = priorBatch3ExploreGuides.map(guide => {
+const afterIndependentBatch3ExploreGuides: ExploreGuide[] = priorBatch3ExploreGuides.map(guide => {
   const reviewed = furtherIndependentVisitorEvidence20261017[guide.slug];
   if (!reviewed) return guide;
   const sources = [...(guide.sources ?? [])];
@@ -13954,6 +13955,28 @@ export const exploreGuides: ExploreGuide[] = priorBatch3ExploreGuides.map(guide 
       ? guide.planning : [...guide.planning, reviewed.decision],
     sources,
     lastReviewed: "2026-10-17",
+  };
+});
+
+// Add independently checked, answer-first visitor warnings without undoing
+// the prior 28-guide source-specific corrections by the concurrent Tour agent.
+export const exploreGuides: ExploreGuide[] = afterIndependentBatch3ExploreGuides.map((guide) => {
+  const review = tourSourceSafetyDecisions20261017[guide.slug];
+  if (!review) return guide;
+  const sources = [...(guide.sources ?? [])];
+  for (const source of [review.source, ...(review.additionalSources ?? [])]) {
+    if (source.href !== guide.source?.href && !sources.some(item => item.href === source.href)) {
+      sources.push(source);
+    }
+  }
+  return {
+    ...guide,
+    summary: review.summary ?? guide.summary,
+    intro: guide.intro.includes(review.context) ? guide.intro : [review.context, ...guide.intro],
+    planning: guide.planning.some(item => item.label === review.planning.label)
+      ? guide.planning : [...guide.planning, review.planning],
+    sources,
+    lastReviewed: review.reviewedAt ?? "2026-10-17",
   };
 });
 
