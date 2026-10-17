@@ -98,6 +98,13 @@ export function completeVisitsCsv(report: InsightsReport): string {
       average_position: day.position, page_views: day.pageViews, sessions: day.sessions,
     });
   }
+  for (const day of report.posthogDaily?.rows ?? []) {
+    records.push({
+      section: "daily_trend", source: "PostHog", period: "all_returned_days",
+      date_or_hour: day.date, page_views: day.views,
+      note: "Production non-bot PostHog events, independent of GA4.",
+    });
+  }
   for (const page of report.searchPages) {
     records.push({
       section: "search_page", source: "GSC", period: report.selectedRange,

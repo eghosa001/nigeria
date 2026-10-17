@@ -33,8 +33,8 @@ function Delta({ current, previous }: { current: number | null; previous: number
 type Granularity = "day" | "week" | "month";
 type SearchQueryRow = { query: string; impressions: number; clicks: number; ctr: number; position: number };
 type SearchQueryBreakdown = { page: string; startDate: string; endDate: string; queries: SearchQueryRow[]; note: string };
-function groupDays(rows: TrafficDay[], granularity: Granularity) {
-  const groups = new Map<string, { label: string; views: number | null; impressions: number | null; clicks: number | null }>();
+function groupDays(rows: Array<TrafficDay & { posthogViews?: number }>, granularity: Granularity) {
+  const groups = new Map<string, { label: string; views: number | null; posthogViews: number | null; impressions: number | null; clicks: number | null }>();
   for (const row of rows) {
     let key = row.date;
     if (granularity === "month") key = row.date.slice(0, 7);
@@ -43,7 +43,8 @@ function groupDays(rows: TrafficDay[], granularity: Granularity) {
       date.setUTCDate(date.getUTCDate() - ((date.getUTCDay() + 6) % 7));
       key = date.toISOString().slice(0, 10);
     }
-    const existing = groups.get(key) ?? { label: key, views: null, impressions: null, clicks: null };
+    const existing = groups.get(key) ?? { label: key, views: null, posthogViews: null, impressions: null, clicks: null };
+    if (row.posthogViews != null) existing.posthogViews = (existing.posthogViews ?? 0) + row.posthogViews;
     for (const [source, target] of [
       ["pageViews", "views"], ["impressions", "impressions"], ["clicks", "clicks"],
     ] as const) {
@@ -199,7 +200,23 @@ export function AdminVisitsInsights() {
       clicks: gscIncluded ? row.clicks : undefined,
     }];
   }) ?? [];
-  const trends = useMemo(() => groupDays(selectedDays, granularity), [selectedDays, granularity]);
+  // Each provider is preserved separately; never add PostHog views to GA4.
+  const combinedDays = useMemo(() => {
+    const days = new Map<string, TrafficDay & { posthogViews?: number }>(
+      selectedDays.map((day) => [day.date, { ...day }]),
+    );
+    for (const row of report?.posthogDaily?.rows ?? []) {
+      if (range !== "all" && current &&
+          (row.date < current.startDate || row.date > current.endDate)) continue;
+      days.set(row.date, { ...(days.get(row.date) ?? { date: row.date }), posthogViews: row.views });
+    }
+    return [...days.values()].sort((a, b) => a.date.localeCompare(b.date));
+  }, [selectedDays, report?.posthogDaily, range, current]);
+  const trends = useMemo(() => groupDays(combinedDays, granularity), [combinedDays, granularity]);
+  const ga4UndercountDays = combinedDays.filter((day) =>
+    day.date >= (report?.ga4StartDate ?? "9999") && (day.posthogViews ?? 0) >= 10 &&
+    (day.pageViews == null || day.pageViews < day.posthogViews! * 0.25)
+  );
   const opportunities = useMemo(() => findSearchOpportunities(report?.searchPages ?? []), [report]);
   const missingGa4Dates = useMemo(() => (report?.daily ?? []).filter((day) => day.impressions != null && day.pageViews == null && day.date >= report!.ga4StartDate && day.date <= (report!.latestGSCDate ?? "") && day.date >= (report!.latestGSCDate ? new Date(Date.parse(report!.latestGSCDate + "T12:00:00Z") - 13 * 86400000).toISOString().slice(0, 10) : "9999")).map((day) => day.date), [report]);
   const searchRows = useMemo(() => {
@@ -230,7 +247,7 @@ export function AdminVisitsInsights() {
         hoursReported: report.hourly.hoursReported24h,
       },
       posthogFastTraffic: report.posthog,
-      dailyTrend: selectedDays,
+      dailyTrend: combinedDays,
       topSearchPagesByImpressions: [...report.searchPages].sort((a, b) => b.impressions - a.impressions).slice(0, 100),
       topSearchPagesByClicks: [...report.searchPages].sort((a, b) => b.clicks - a.clicks).slice(0, 50),
       topViewedPages: report.pageViewsByPage.slice(0, 100),
@@ -417,7 +434,8 @@ export function AdminVisitsInsights() {
           <div className="visits-mini-stats">
             <span><small>Impressions</small><strong>{count(row.impressions)}</strong></span>
             <span><small>Clicks</small><strong>{count(row.clicks)}</strong></span>
-            <span><small>Page views</small><strong>{count(row.views)}</strong></span>
+            <span><small>GA4 views</small><strong>{count(row.views)}</strong></span>
+            <span><small>PostHog views</small><strong>{count(row.posthogViews)}</strong></span>
             <span><small>CTR</small><strong>{row.impressions && row.clicks != null ? percent(row.clicks / row.impressions) : "—"}</strong></span>
           </div>
         </article>)}
@@ -427,9 +445,15 @@ export function AdminVisitsInsights() {
         </button> : null}
       </div>
       <div className="visits-table-scroll visits-desktop-only"><table className="visits-data-table">
-        <thead><tr><th>Reporting {granularity}</th><th>Google impressions</th><th>Google clicks</th><th>Search CTR</th><th>Website page views</th></tr></thead>
-        <tbody>{trends.slice(0, showTrend).map((row) => <tr key={row.label}><th>{row.label}</th><td>{count(row.impressions)}</td><td>{count(row.clicks)}</td><td>{row.impressions && row.clicks != null ? percent(row.clicks / row.impressions) : "—"}</td><td>{count(row.views)}</td></tr>)}</tbody>
+        <thead><tr><th>Reporting {granularity}</th><th>Google impressions</th><th>Google clicks</th><th>Search CTR</th><th>GA4 page views</th><th>PostHog page views</th></tr></thead>
+        <tbody>{trends.slice(0, showTrend).map((row) => <tr key={row.label}><th>{row.label}</th><td>{count(row.impressions)}</td><td>{count(row.clicks)}</td><td>{row.impressions && row.clicks != null ? percent(row.clicks / row.impressions) : "—"}</td><td>{count(row.views)}</td><td><strong>{count(row.posthogViews)}</strong></td></tr>)}</tbody>
       </table></div>
+      {ga4UndercountDays.length ? <p className="visits-source-warning" role="alert">
+        GA4 is missing or undercounting on {ga4UndercountDays.length} day(s) compared with independent PostHog records:
+        {" "}{ga4UndercountDays.slice(-8).map((row) => row.date).join(", ")}.
+      </p> : null}
+      {report.posthogDaily?.error ? <p className="visits-source-warning" role="status">PostHog daily data: {report.posthogDaily.error}</p> : null}
+      <p className="visits-footnote">GA4 and PostHog independently record website page views in Africa/Lagos time. Do not add the two columns. A dash means unavailable, not zero. Search Console uses Pacific reporting dates.</p>
       {!trends.length ? <p>No processed trend dates are available in this period.</p> : null}
       {showTrend < trends.length ? <button type="button" className="visits-show-more visits-desktop-only" onClick={() => setShowTrend((v) => v + 28)}>Show more reporting periods ({trends.length - showTrend} remaining)</button> : null}
       {range === "all" ? <p className="visits-footnote">The trend lists all returned reporting dates; cumulative totals above use independently retrieved lifetime totals.</p> : null}

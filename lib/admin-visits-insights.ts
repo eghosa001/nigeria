@@ -2,6 +2,7 @@ import { ANALYTICS_CLEAN_START, ANALYTICS_PRODUCTION_HOSTS } from "@/lib/analyti
 import { runReport, searchConsoleQuery, getHourlySearchPerformance, runRealtime, dateInTimeZone, analyticsReadConfigured, verifyAnalyticsConnection, type AnalyticsConnectionStatus } from "@/lib/analytics-data";
 import { buildPeriodRows, shiftIsoDay, type PeriodRow, type TrafficDay } from "@/lib/analytics-period-rollups";
 import { getPostHogOverview, type PostHogOverview } from "@/lib/posthog-data";
+import { getPostHogDailyViews, type PostHogDailyViews } from "@/lib/posthog-daily-views";
 import { POSTHOG_COLLECTION_START } from "@/lib/posthog-config";
 import type { SearchConsoleHourlyReport } from "@/lib/search-console-hourly";
 
@@ -29,6 +30,7 @@ export type InsightsReport = {
   realtime: { activeUsers: number; pageViews: number } | null;
   hourly: SearchConsoleHourlyReport;
   posthog: PostHogOverview;
+  posthogDaily: PostHogDailyViews;
 };
 
 const dayCounts: Record<Exclude<InsightRange, "all">, number> = { "1d": 1, "7d": 7, "30d": 30, "90d": 90 };
@@ -168,7 +170,7 @@ export async function getVisitsInsights(range: InsightRange, forceFresh = false)
   const gscDay = dateInTimeZone("America/Los_Angeles");
   const detailStartDate = range === "all" ? ANALYTICS_CLEAN_START : shiftIsoDay(lagosDay, 1 - dayCounts[range]);
   const detailGscStartDate = range === "all" ? earliestSearchDay(gscDay) : shiftIsoDay(gscDay, 1 - dayCounts[range]);
-  const [overview, ga4Pages, gscPages, realtime, hourly, posthog, ga4Connection] = await Promise.all([
+  const [overview, ga4Pages, gscPages, realtime, hourly, posthog, ga4Connection, posthogDaily] = await Promise.all([
     getOverview(forceFresh),
     analyticsReadConfigured() ? runReport({
       dateRanges: [{ startDate: detailStartDate, endDate: "today" }],
@@ -190,6 +192,7 @@ export async function getVisitsInsights(range: InsightRange, forceFresh = false)
     getHourlySearchPerformance(),
     getPostHogOverview(detailStartDate > POSTHOG_COLLECTION_START ? detailStartDate : POSTHOG_COLLECTION_START, lagosDay, forceFresh),
     analyticsReadConfigured() ? verifyAnalyticsConnection().catch(() => null) : Promise.resolve(null),
+    getPostHogDailyViews(detailStartDate, lagosDay, forceFresh),
   ]);
   const report: InsightsReport = {
     generatedAt: new Date().toISOString(), selectedRange: range,
@@ -211,7 +214,7 @@ export async function getVisitsInsights(range: InsightRange, forceFresh = false)
       gsc: (gscPages.data?.rows?.length ?? 0) >= 25000,
     },
     errors: { ga4: overview.ga4Error, gsc: overview.gscError, ga4Pages: ga4Pages.error, gscPages: gscPages.error },
-    realtime, hourly, posthog,
+    realtime, hourly, posthog, posthogDaily,
   };
   cache.set(range, { expiresAt: Date.now() + 5 * 60_000, value: report });
   return report;
