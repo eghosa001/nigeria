@@ -54,6 +54,42 @@ test("verified producer video thumbnails and official exhibitor posters are disp
   assert.equal(getSourceLinkedFilmPreview(unverified), null);
 });
 
+test("previously linked producer thumbnails are not hidden by missing optional publisher profiles", () => {
+  // All 20 titles were displayed before the Oct 17 #563 artwork regression.
+  // They still have source-checked direct YouTube full-film links, but the
+  // initial #578 restoration accidentally required publisherUrl as well.
+  const restored = [
+    "irreplaceable", "plus-one", "love-and-legacy-2026",
+    "sister-agatha", "forever-found", "all-things-equal",
+    "love-on-credit-2026", "onte-final-chapter-2026", "love-and-ruin-2026",
+    "celebrity-crush-2024", "a-hold-on-me-2024", "a-ride-forever-2026",
+    "stuck-with-you-2025", "for-richer-for-poorer-2026", "lost-connection-2026",
+    "the-kings-matchmaker-2026", "oil-and-water-2025", "unusual-love-2024",
+    "forever-isnt-long-enough-2025", "terms-of-attraction-2026",
+  ];
+  for (const slug of restored) {
+    const film = entertainmentTitles.find((item) => item.slug === slug);
+    assert.ok(film, "missing title " + slug);
+    const source = getVerifiedYouTubePreview(film);
+    assert.equal(source?.kind, "full-movie", slug);
+    assert.match(source?.videoId ?? "", /^[a-zA-Z0-9_-]{11}$/, slug);
+    assert.equal(source?.href, film.watchLinks.find((link) =>
+      link.platform === "YouTube" && link.access === "full-movie")?.href, slug);
+    assert.ok(film.watchLinks.some((link) => Boolean(link.lastChecked?.trim())), slug);
+  }
+
+  // The optional profile must not be replaced with guesswork, and removing
+  // genuine source evidence must still disable the thumbnail.
+  const sample = entertainmentTitles.find((item) => item.slug === "love-on-credit-2026");
+  assert.ok(sample);
+  const missingSourceCheck = { ...sample,
+    watchLinks: sample.watchLinks.map((link) => ({ ...link, lastChecked: "" })) };
+  assert.equal(getVerifiedYouTubePreview(missingSourceCheck), null);
+  const wrongAccess = { ...sample,
+    watchLinks: sample.watchLinks.map((link) => ({ ...link, access: "subscription" as const })) };
+  assert.equal(getVerifiedYouTubePreview(wrongAccess), null);
+});
+
 test("YouTube movie cards and all remote previews fail visibly, not with blank boxes", () => {
   const preview = readFileSync("components/remote-movie-preview-image.tsx", "utf8");
   const movieCards = readFileSync("components/youtube-movie-card.tsx", "utf8");
