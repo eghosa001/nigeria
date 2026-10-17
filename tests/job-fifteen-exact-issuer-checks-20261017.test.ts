@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { getJobOpportunity } from "../lib/jobs";
+import { verifiedJobSlugs20261016 } from "../lib/job-verified-pathways-2026-10-16";
 import { fifteenExactRoleReviews20261017, reviewedExactRoleSlugs20261017 } from "../lib/job-fifteen-exact-issuer-checks-2026-10-17";
 
 test("fifteen original real-role guides explain exact employer evidence without fabricated closing dates", () => {
@@ -14,13 +15,14 @@ test("fifteen original real-role guides explain exact employer evidence without 
     assert.equal(job.status, "open", slug);
     assert.equal(job.deadline, undefined, slug);
     assert.equal(job.officialUrl, checked.issuerUrl, slug);
-    assert.equal(job.verifiedAt, "2026-10-17", slug);
+    const prior = verifiedJobSlugs20261016.includes(slug);
+    assert.equal(job.verifiedAt, prior ? "2026-10-16" : "2026-10-17", slug);
     assert.ok(job.statusLabel.includes("deadline"), slug);
     assert.equal(job.nextMilestone, checked.statusDetail, slug);
     assert.ok(job.sourceNotes.includes(checked.primaryDetail), slug);
     assert.ok(job.applicationSteps.includes(checked.applicantCheck), slug);
     assert.ok(job.applicationSteps.some(step => /immediately before applying/i.test(step)), slug);
-    assert.ok(job.sources.some(source => source.url === checked.issuerUrl && source.lastChecked === "2026-10-17"), slug);
+    assert.ok(job.sources.some(source => source.url === checked.issuerUrl && source.lastChecked === (prior ? "2026-10-16" : "2026-10-17")), slug);
     assert.ok(!/rolling hiring/i.test(job.statusLabel), slug);
   }
 });
