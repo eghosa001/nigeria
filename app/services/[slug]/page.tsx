@@ -25,6 +25,7 @@ import { getOfficialServiceLinks } from "@/lib/official-links";
 import { getGrowthHubsForService } from "@/lib/growth-hubs";
 import { getRelatedServices, getRelatedServiceReason } from "@/lib/internal-links";
 import { getServiceSearchAnswers } from "@/lib/search-answers";
+import { hasExplicitServiceGuidance } from "@/lib/service-guidance";
 import { getSiteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -243,7 +244,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="section guide-main-section">
         <div className="container guide-layout">
           <article className="guide-content">
-            <GuideQuickNav showQuickAnswers={searchAnswers.length > 0} />
+            <GuideQuickNav showQuickAnswers={searchAnswers.length > 0} showAftercare={hasExplicitServiceGuidance(service.slug)} />
 
             <ServiceJourney service={service} />
 
