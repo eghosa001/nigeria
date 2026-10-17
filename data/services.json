@@ -5451,7 +5451,7 @@
       "Access to the current INEC Continuous Voter Registration portal"
     ],
     "steps": [
-      "Open the official INEC CVR portal and read its current status notice: the 2025–2026 CVR exercise is marked ended, but it still offers a Find My PVC route for existing voters.",
+      "Open the official INEC CVR portal and read its current status notice: the CVR exercise is marked ended, but it still offers a Find My PVC route for existing voters.",
       "If you are already registered, choose Yes when the portal asks whether you are a registered voter, then select Find My PVC to continue with the existing-voter lookup.",
       "Enter the voter information shown by the INEC lookup using the same information attached to the existing registration record, then submit the search once the entries have been checked.",
       "If you need to confirm the registration record rather than find a collection centre, use INEC's separate Voter Verification Service at cvr.inecnigeria.org/vvs. Choose the name/date-of-birth lookup or the VIN lookup (full VIN or last 10 digits) and supply the State and LGA of registration.",
@@ -6115,7 +6115,7 @@
     ],
     "steps": [
       "Use the France-Visas visa wizard to confirm that France is the correct Schengen state to handle the application and generate the document list for the applicant's purpose, nationality and residence.",
-      "Start from France-Visas' current official visa-application page (france-visas.gouv.fr/demande-de-visa), complete the online application, then print the final form and receipt before the TLS appointment. The previous /online-application entry may return 404.",
+      "Start from the official France-Visas visa application page (france-visas.gouv.fr/demande-de-visa), complete the online form and print the final application form and receipt to bring to your TLS appointment.",
       "Follow the France-Visas Nigeria page to the authorised TLScontact centre: since 17 November 2025, the Abuja centre accepts only the published family-of-French-national, family-reunification and diplomatic categories; an ordinary tourism applicant should use the Lagos submission route unless France-Visas explicitly directs otherwise.",
       "Attend the authorised visa-centre appointment to lodge the application; the centre will take fingerprints from applicants who are subject to Schengen biometric collection. Pay the visa and authorised service charges using the payment method stated for that centre.",
       "Track the application through the official route and collect the passport when notified; if the visa is issued, verify the validity dates, number of entries and permitted stay before travelling."
@@ -6124,8 +6124,7 @@
       "For a multi-country Schengen trip, apply to the country that is the main destination by length/purpose; if stays are equal, apply to the country of first entry.",
       "France-Visas states that, from 17 November 2025 until further notice, its Abuja TLS centre accepts only specified categories such as family of French nationals, family reunification and diplomatic travel; other applicants should follow the current Nigeria page when choosing a submission centre.",
       "A short-stay Schengen visa normally covers up to 90 days in any 180-day period; long-stay visas follow national rules.",
-      "France-Visas Nigeria specifies online TLScontact appointment booking with prepayment of the €28 service fee. Its visa fee and service fee are separate; payment never guarantees issuance.",
-      "Evidence checked on 17 October 2026: the old France-Visas /en/web/france-visas/online-application link returned 404, while the homepage's Apply for a visa button led to /demande-de-visa. Use the current issuer route if the site changes again."
+      "France-Visas Nigeria specifies online TLScontact appointment booking with prepayment of the €28 service fee. Its visa fee and service fee are separate; payment never guarantees issuance."
     ],
     "sources": [
       {
