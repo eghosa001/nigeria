@@ -119,4 +119,44 @@ export const furtherIndependentVisitorEvidence20261017: Record<string, Independe
     context: "UNESCO records Nigeria's inscribed heritage properties and tentative candidates; NCMM separately lists the Sukur Interpretation Centre on the Mubi–Maiduguri Road. The agency listing provides an institution to contact, not a guaranteed public tour of the hilltop landscape.",
     decision: { label: "Use World Heritage status correctly in a trip plan", detail: "Nigeria has two inscribed sites: Sukur Cultural Landscape and Osun-Osogbo Sacred Grove. Tentative nominations such as Oke Idanre and the 2025 Gashaka Gumti submission are not additional inscribed sites. Check the precise site authority and current security and visitor rules before treating an interpretation office or nomination as an open attraction." },
   },
+  "rivers-state-coast-nature-guide": {
+    source: { label: "Finima Nature Park — Bonny visitor and conservation information", href: "https://finimanaturepark.com/" },
+    context: "Finima Nature Park's operator gives a specific visitor location behind NLNG RA3 at the NLNG Roundabout on Bonny Island, not on a Port Harcourt city beach. The park describes conservation education and guided nature activities; that does not establish a ferry ticket or access to other Bonny beaches.",
+    decision: { label: "Separate Bonny Island logistics from Finima park admission", detail: "Confirm the park's current opening, guide requirements and available activities with Finima directly. Plan authorised transport to Bonny Island and a return independently; do not assume Finima's nature-walk programme includes ferries, swimming, accommodation or access to every coastal site." },
+  },
+  "ekiti-nature-circuit": {
+    source: { label: "Federal Ministry of Information — Ekiti tourism field survey (2019)", href: "https://fmino.gov.ng/report-on-tourism-field-survey-of-ekiti-state-carried-out-on-13th-to-15th-may-2019/" },
+    context: "A 2019 federal tourism field survey locates Arinta Waterfalls in Ipole-Iloro, Ekiti West LGA, and discusses Ikogosi separately. It reported that Arinta's facilities were not fully developed at that time; the historic observation is not evidence of its facility status in October 2026.",
+    decision: { label: "Plan the warm spring and waterfall as separate operator enquiries", detail: "For Ikogosi, verify admission or resort-day-visit access with its operator; for Arinta, ask the Ipole-Iloro local authority or site guide which approach, parking and safety arrangements currently exist. The federal survey is a useful historical comparison, not a 2026 price list or a guarantee that planned visitor facilities were completed." },
+  },
+  "ekiti-nature-weekend-itinerary": {
+    source: { label: "Ikogosi Warm Springs Resort — official contact and booking pages", href: "https://www.ikogosiresort.com/" },
+    context: "Ikogosi Warm Springs Resort independently advertises accommodation with a dedicated room-availability search and lists its location on Ipole–Erijiyan Road. That reservation interface is not a verified room quote or permission to enter the spring area without a booking.",
+    decision: { label: "Choose Ikogosi as an overnight only after checking the exact terms", detail: "Verify actual room inventory, check-in conditions, whether a day visit or spring visit is allowed and the total resort charge directly. Arinta at Ipole-Iloro is a different destination with separate guide and route enquiries; leave daylight and rain margin for the waterfall rather than assuming the resort books both stops." },
+  },
+  "arinta-waterfalls-guide": {
+    source: { label: "Independent Nigeria — Arinta site infrastructure discussed at World Tourism Day, 28 September 2026", href: "https://independent.ng/world-tourism-day-virtual-tours-ai-will-sell-arinta-waterfall-to-the-world-ekiti-monarch-others/" },
+    context: "At Arinta on World Tourism Day in September 2026, the traditional ruler of Ipole-Iloro publicly called for stronger infrastructure, professional management and digital booking. The report does not announce a live official online ticket system or establish a fixed 2026 entry charge.",
+    decision: { label: "Do not mistake proposed online ticketing for a working system", detail: "Arinta still warrants direct local confirmation of current entry, guide support, road conditions and safe viewing areas. The September 2026 proposals for digital maps and booking are plans, not a verified checkout; avoid payment links offered by unverified third parties and do not enter slippery waterfall edges after heavy rain." },
+  },
+  "lekki-conservation-centre-guide": {
+    source: { label: "Radio Nigeria Lagos — Lagos inspection after LCC canopy-walk safety report, February 2024", href: "https://radionigerialagos.gov.ng/lagos-govt-commends-ncf-for-high-maintenance-cultureswift-response-to-safety-issues/" },
+    context: "Radio Nigeria reported Lagos State safety inspections at Lekki Conservation Centre after a January 2024 video showing a damaged canopy-walk brace. The report described the centre's maintenance response at that time; it is not a current engineering certificate for the canopy on your visit date.",
+    decision: { label: "Confirm canopy-walk availability, not only the gate", detail: "Ask NCF whether the canopy walkway itself is running on your chosen day, whether age and weather restrictions apply and what the present admission covers. A historically successful inspection is not a substitute for same-day operator safety notices, particularly after storms or maintenance closures." },
+  },
+  "becheve-nature-reserve-guide": {
+    source: { label: "Radio Nigeria Lagos — Becheve named in NCF conservation revitalisation outlook, July 2025", href: "https://radionigerialagos.gov.ng/where-the-wild-breathes-how-lekki-conservation-centre-became-nigerias-model-for-climate-action-and-green-prosperity/" },
+    context: "Radio Nigeria's July 2025 conservation report named Becheve Nature Reserve in Cross River among Nigerian Conservation Foundation projects considered for revitalisation. A proposed conservation improvement is not proof of an open visitor trail, completed repairs or a current Obudu tour product.",
+    decision: { label: "Check Becheve's present conservation and visitor status", detail: "Request confirmation from the NCF or local community managers about lawful trail access, guide availability and any restoration restrictions. Becheve is a conservation reserve, not automatically an entry included in Obudu Mountain Resort; weather, transport and return-to-base safety require a separate plan." },
+  },
+  "wikki-warm-spring-guide": {
+    source: { label: "Nigeria National Park Service — Yankari's transfer from federal park status in 2006", href: "https://nigeriaparkservice.gov.ng/about-us/" },
+    context: "Nigeria's National Park Service explains that Yankari was removed from the federal national-park system in June 2006 at Bauchi State's request. Wikki Warm Spring sits within Yankari Game Reserve; an old source calling it a federal national park should not be used to locate the present entrance authority or pricing.",
+    decision: { label: "Use the current Yankari Game Reserve operator for Wikki", detail: "Contact Bauchi State's reserve authority or current Yankari management about gate admission, Wikki pool rules and guide or vehicle requirements. The federal Park Service's historical page establishes administrative status, not a live spring opening, water-quality report or ticket price." },
+  },
+  "marshall-caves-yankari-guide": {
+    source: { label: "Nigeria National Park Service — Yankari federal park delisting history", href: "https://nigeriaparkservice.gov.ng/about-us/" },
+    context: "The Nigerian National Park Service records Yankari's 2006 removal from the federal national-park roster. Marshall Caves are a reserve archaeological excursion, not a freely accessible urban cave; the official park-history page does not issue visitor permission to enter them.",
+    decision: { label: "Arrange Marshall Caves through Yankari's present reserve management", detail: "Ask the reserve's current operators about guide escort, wildlife and cave restrictions, safe transport and whether Marshall Caves visits are actually being conducted. A historic federal park designation should not be substituted for current Bauchi State reserve admission or archaeological-site authorisation." },
+  },
 };
