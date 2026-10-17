@@ -17,6 +17,7 @@ import { getMovieEditorialProfile } from "../lib/movie-editorial-profile-registr
 import { documentedMovieAvailabilityVerdict } from "../lib/movie-availability-evidence-2026-10-17";
 import { seriesTitles } from "../lib/series";
 import { entertainmentPeople, getPersonEditorialProfile, hasIndexablePersonEditorial } from "../lib/entertainment-extras";
+import { hasCompletedAttributableBiographyReview } from "../lib/entertainment-biography-evidence-2026-10-17";
 import { youtubeMovieLibrary, indexableYouTubeMovies } from "../lib/youtube-library";
 import { youtubeEditorialDossiers } from "../lib/youtube-editorial-dossiers";
 import { jobOpportunities, isIndexableJobOpportunity } from "../lib/jobs";
@@ -136,7 +137,8 @@ for (const person of entertainmentPeople) {
   }
   if (!eligible) issues.push(review("person-discovery-only",
     "Internal catalog profile is deliberately noindex until independently sourced authored biography is verified."));
-  else issues.push(review("person-career-fact-review", "Manually compare each career claim and credit to the cited original institution/interview."));
+  else if (!hasCompletedAttributableBiographyReview(person, editorial, now))
+    issues.push(review("person-career-fact-review", "Each person-specific career claim still needs attributable, source-matched evidence; do not infer credits from unrelated films."));
   issues.push(paragraphsManual);
   adds("Movies & Entertainment", "actor", person.slug, "/entertainment/people/" + person.slug, person.name, eligible, issues);
 }
