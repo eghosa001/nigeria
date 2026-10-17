@@ -3,7 +3,7 @@ import type { CareerOpportunity } from "@/lib/jobs";
 // Actual issuer-owned career destinations reviewed on 16 October 2026.
 // An accessible portal is NOT proof of an open role, valid authenticated
 // application, human review, future intake, or employer affiliation.
-const issuerPortalEvidence20261016: Record<string, {
+export const issuerPortalEvidence20261016: Record<string, {
   sourceUrl: string; fact: string; actions: [string, string, string];
 }> = {
   "access-bank-early-careers": {
@@ -211,7 +211,7 @@ const issuerPortalTitles20261016: Record<string, string> = {
   "seplat-energy-careers": "Seplat Energy Careers: Check Whether an Actual Vacancy Is Open"
 };
 
-const issuerPortalFollowUp20261016: Record<string, [string, string]> = {
+export const issuerPortalFollowUp20261016: Record<string, [string, string]> = {
   "access-bank-early-careers": [
     "If the Access board shows no early-career intake, bookmark that specific category and check the employer again instead of completing an unofficial graduate form.",
     "Record the exact Access Bank requisition title and application confirmation when the employer opens a specific vacancy; this is what distinguishes a submitted role from a saved search."

@@ -12,7 +12,7 @@ type SourceCheck = {
   safety: string;
   notes: [string,string];
 };
-const careerEvidence: Record<string, SourceCheck> = {
+export const careerEvidence: Record<string, SourceCheck> = {
   "arm-careers": {
     url: "https://careers.arm.com.ng/",
     corroboratingUrl: "https://careers.arm.com.ng/job-opportunities/",
