@@ -13,6 +13,7 @@ import { applyThirdAgentIssuerReviews20261017 } from "@/lib/job-issuer-third-age
 import { applyNineCareerIssuerDecisions20261017 } from "@/lib/job-nine-issuer-application-decisions-2026-10-17";
 import { applyConcludedIssuerWindows20261017 } from "@/lib/job-concluded-windows-2026-10-17";
 import { applyRemainingDirectoryReviews20261017 } from "@/lib/job-final-directory-reviews-2026-10-17";
+import { applyTwoRemainingDirectoryReviews20261017 } from "@/lib/job-last-two-directories-2026-10-17";
 import { verifiedFmnFinalBoardJobs20261012 } from "@/lib/job-growth-wave-13";
 import { verifiedFmnOperationsJobs20261012 } from "@/lib/job-growth-wave-12";
 import { verifiedFmnRoles20261012 } from "@/lib/job-growth-wave-11";
@@ -3869,6 +3870,7 @@ export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities
   .map(applyIndividualMoniepointRoleResearch20261016)
   .map(applyFifteenExactRoleChecks20261017)
   .map(applyRemainingDirectoryReviews20261017)
+  .map(applyTwoRemainingDirectoryReviews20261017)
   .map((item) => {
     const evidence = officialJobPostingEvidence20261015[item.slug];
     if (!evidence || item.posting || item.kind !== "vacancy" ||
