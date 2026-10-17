@@ -236,7 +236,8 @@ export function applyTwentyIssuerCareerRoutes20261017(item: CareerOpportunity): 
     nextMilestone: review.caveat,
     applicationSteps: [
       ...review.steps,
-      "Use only the specific employer-issued vacancy or programme for any actual application; preserve its confirmation, and do not pay for a shortlist or interview.",
+      "Before any submission, recheck the named employer advert's current deadline, duty station, role requirements and actual Apply destination; stop if no matching notice exists.",
+      "If the issuer is accepting that exact role, submit only through its authorised channel and retain the acknowledgement. Do not pay for a shortlist or interview.",
     ],
     sourceNotes: [
       ...item.sourceNotes,
