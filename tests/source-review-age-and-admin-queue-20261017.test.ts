@@ -27,7 +27,7 @@ test("public service pages show real recorded dates and dynamically updated rech
   assert.match(page, /ServiceReviewNotice lastVerified=\{service\.lastVerified\}/);
   assert.match(notice, /<time dateTime=\{lastVerified\}>\{lastVerified\}<\/time>/);
   assert.match(notice, /useEffect\(\(\) => setReview\(getServiceReviewStatus\(lastVerified\)\)/);
-  assert.match(notice, /recorded source-review date/);
+  assert.match(notice, /last reviewed against its cited sources/);
   assert.doesNotMatch(notice, /lastVerified:\s*new Date\(|lastVerified:\s*"2026-10-17"/);
 });
 
