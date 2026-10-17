@@ -160,7 +160,7 @@ export function hasVerifiedUndatedRoleApplicationReview20261017(item: CareerOppo
       item.nextMilestone !== proof.statusDetail) return false;
 
   const recent = (date: string): boolean => {
-    if (!/^\\d{4}-\\d{2}-\\d{2}$/.test(date) || !/^\\d{4}-\\d{2}-\\d{2}$/.test(now) ||
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !/^\d{4}-\d{2}-\d{2}$/.test(now) ||
         date > now) return false;
     const checked = Date.parse(date + "T00:00:00Z");
     const today = Date.parse(now + "T00:00:00Z");
