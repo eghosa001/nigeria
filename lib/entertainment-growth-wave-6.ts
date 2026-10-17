@@ -19,7 +19,7 @@ export const entertainmentGrowthWave6: EntertainmentTitle[] = [
         label: "Uche Nancy Update TV — publisher channel",
         href: "https://www.youtube.com/channel/UCllyxqlpQNkJpXf3PHb4aWQ",
         lastChecked: "2026-10-15",
-        note: "Verified publisher channel for the separate 2026 Long Enough film. The exact full-film video URL has not yet been independently validated."
+        note: "Uche Nancy Update TV publisher channel for the separate 2026 Long Enough film. The full-film link below matches the film title, cast and channel in an independent YouTube index, but actual playback has not been tested."
       },
       {
         label: "Nollywood Times — Long Enough YouTube debut",
@@ -28,9 +28,19 @@ export const entertainmentGrowthWave6: EntertainmentTitle[] = [
         note: "Independent release coverage used to verify the digital release and principal cast."
       }
     ],
-    // Do not point viewers at the unrelated Royal Arts TV film from 2025.
-    // The correct 2026 Uche Nancy upload must be individually verified before linking.
-    watchLinks: []
+    // Keep distinct from Royal Arts TV's unrelated 2025 Forever Isn't Long Enough.
+    // Film-specific YouTube URL identified by independent channel/title/runtime index;
+    // playback and future regional restrictions require a direct viewer check.
+    watchLinks: [{
+      platform: "YouTube",
+      label: "Watch Long Enough (2026) on Uche Nancy Update TV",
+      href: "https://www.youtube.com/watch?v=gVJYi6KzbiQ",
+      access: "full-movie",
+      lastChecked: "2026-10-17",
+      note: "Publisher's identified 2-hour-55-minute full-film upload with Victory Michael, Prisma James and Jennifer Obodo. Independently indexed by title and channel; playback has not been tested and may change.",
+      publisher: "Uche Nancy Update Tv",
+      publisherUrl: "https://www.youtube.com/channel/UCllyxqlpQNkJpXf3PHb4aWQ"
+    }]
   },
   {
     slug: "forever-isnt-long-enough-2025",
