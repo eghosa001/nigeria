@@ -1,3 +1,4 @@
+import { fourVerifiedFilmDossiers20261017 } from "@/lib/movie-editorial-dossiers-2026-10-17";
 import { distinctLongEnoughEditorialProfiles } from "@/lib/movie-editorial-profiles-long-enough-2026-10-15";
 import { reviewedMovieDossiers20261016 } from "@/lib/movie-editorial-source-repairs-2026-10-16";
 import { filmSpecificEditorial20261016 } from "@/lib/movie-editorial-profiles-reviewed-2026-10-16";
@@ -47,6 +48,7 @@ export const movieEditorialCollections: Record<string, MovieEditorialProfile>[] 
 export const allMovieEditorialProfiles: Record<string, MovieEditorialProfile> = {
   ...Object.assign({}, ...movieEditorialCollections),
   ...reviewedMovieDossiers20261016,
+  ...fourVerifiedFilmDossiers20261017,
 };
 
 export function getMovieEditorialProfile(slug: string): MovieEditorialProfile | undefined {
