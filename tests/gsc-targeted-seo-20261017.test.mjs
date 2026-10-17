@@ -3,11 +3,15 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 
 const homepage = readFileSync("app/page.tsx", "utf8");
+const jobs = readFileSync("app/jobs/page.tsx", "utf8");
+const entertainment = readFileSync("app/entertainment/page.tsx", "utf8");
 const movies = readFileSync("app/entertainment/movies/[slug]/page.tsx", "utf8");
 const serviceSeo = readFileSync("data/service-seo-overrides.ts", "utf8");
 
 test("homepage H1 identifies its four actual search-intent pillars", () => {
   assert.match(homepage, /<h1>Nigerian movies, services, travel and jobs — made easier\.<\/h1>/);
+  assert.match(jobs, /<h1>Jobs in Nigeria: know what is open and where to apply\.<\/h1>/);
+  assert.match(entertainment, /<h1>Nigerian movies, casts and where to watch\.<\/h1>/);
 });
 
 test("Oversabi Aunty snippet names only verified actor-character pairs and avoids promising playback", () => {
