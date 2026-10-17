@@ -120,6 +120,24 @@ export const fifteenExactRoleReviews20261017: Record<string, ExactRoleReview> = 
   },
 };
 
+// The first twelve employer requisitions already have a distinct 16 October
+// verification contract. Add today's source observations without rewriting the
+// historical check dates that other validations explicitly rely on.
+const priorVerifiedIssuerSlugs20261016 = new Set([
+  "dangote-ibese-mechanical-technician-l12-2026",
+  "dangote-ibese-power-plant-mechanical-engineer-2026",
+  "dangote-lagos-audit-analyst-2026",
+  "olam-caraway-planning-manager-nigeria-2026",
+  "fmn-golden-penny-power-electrical-maintenance-manager-apapa-2026",
+  "fmn-logistics-b2b-despatch-manager-lagos-2026",
+  "fmn-logistics-b2b-assistant-despatch-manager-lagos-2026",
+  "fmn-honeywell-assistant-maintenance-planning-manager-apapa-2026",
+  "fmn-golden-penny-power-diesel-mechanic-apapa-2026",
+  "fmn-technical-auto-electrician-apapa-2026",
+  "fmn-golden-penny-power-mechanical-maintenance-manager-apapa-2026",
+  "fmn-desktop-support-officer-sunti-oct-2026",
+]);
+
 export const reviewedExactRoleSlugs20261017 = Object.keys(fifteenExactRoleReviews20261017);
 
 export function applyFifteenExactRoleChecks20261017(job: CareerOpportunity): CareerOpportunity {
@@ -130,7 +148,7 @@ export function applyFifteenExactRoleChecks20261017(job: CareerOpportunity): Car
   // employer promised rolling hiring merely because a page is still online.
   return {
     ...job,
-    verifiedAt: "2026-10-17",
+    verifiedAt: priorVerifiedIssuerSlugs20261016.has(job.slug) ? job.verifiedAt : "2026-10-17",
     statusLabel: review.observedRoute === "apply-control"
       ? "Exact employer application route checked 17 Oct; no deadline published"
       : "Issuer vacancy details checked 17 Oct; application deadline unverified",
@@ -147,6 +165,7 @@ export function applyFifteenExactRoleChecks20261017(job: CareerOpportunity): Car
       "Evidence dated 17 October 2026 is a desk check of the exact original employer page, not a test of user sign-in, form submission or appointment. No public closing date or rolling-intake promise was established.",
     ],
     sources: job.sources.map(source =>
-      source.url === review.issuerUrl ? { ...source, lastChecked: "2026-10-17" } : source),
+      source.url === review.issuerUrl && !priorVerifiedIssuerSlugs20261016.has(job.slug)
+        ? { ...source, lastChecked: "2026-10-17" } : source),
   };
 }
