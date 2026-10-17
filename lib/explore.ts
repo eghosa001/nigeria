@@ -1,3 +1,4 @@
+import { independentlyCheckedEvents20261017 } from "@/lib/explore-independent-event-verification-2026-10-17";
 import { thirdAgentTourEvidence20261017 } from "@/lib/explore-third-agent-evidence-2026-10-17";
 import { secondSourceTourDecisions20261017 } from "@/lib/explore-second-source-decisions-2026-10-17";
 import { tourSourceSafetyDecisions20261017 } from "@/lib/explore-tour-evidence-safety-2026-10-17";
@@ -14025,7 +14026,7 @@ const beforeSecondSourceTourGuides: ExploreGuide[] = beforeThirdAgentTourReview.
 
 // Eleven visitor decisions still absent from the other agents' published Tour
 // source corrections, applied last to retain earlier source and access evidence.
-export const exploreGuides: ExploreGuide[] = beforeSecondSourceTourGuides.map(guide => {
+const previousEventReviewGuides: ExploreGuide[] = beforeSecondSourceTourGuides.map(guide => {
   const review = secondSourceTourDecisions20261017[guide.slug];
   if (!review) return guide;
   const sources = [...(guide.sources ?? [])];
@@ -14036,6 +14037,25 @@ export const exploreGuides: ExploreGuide[] = beforeSecondSourceTourGuides.map(gu
     summary: review.summary ?? guide.summary,
     intro: guide.intro.includes(review.context) ? guide.intro : [review.context, ...guide.intro],
     planning: guide.planning.some(item => item.label === review.planning.label)
+      ? guide.planning : [...guide.planning, review.planning],
+    sources,
+    lastReviewed: "2026-10-17",
+  };
+});
+
+// Independent dated event reporting, original organiser ticket paths and
+// visitor decisions across thirteen existing festival and conference URLs.
+export const exploreGuides: ExploreGuide[] = previousEventReviewGuides.map(guide => {
+  const review = independentlyCheckedEvents20261017[guide.slug];
+  if (!review) return guide;
+  const sources = [...(guide.sources ?? [])];
+  if (guide.source?.href !== review.source.href &&
+    !sources.some(source => source.href === review.source.href)) sources.push(review.source);
+  return {
+    ...guide,
+    summary: review.summary ?? guide.summary,
+    intro: guide.intro.includes(review.context) ? guide.intro : [review.context, ...guide.intro],
+    planning: guide.planning.some(p => p.label === review.planning.label)
       ? guide.planning : [...guide.planning, review.planning],
     sources,
     lastReviewed: "2026-10-17",
