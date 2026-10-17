@@ -262,6 +262,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
           <h1>{guide.title}</h1>
           <p className="page-intro">{guide.summary}</p>
           <div className="guide-save-action"><SavePageButton href={"/explore/" + guide.slug} title={guide.shortTitle} kind="travel" /></div>
+          {!hasDoNotTravelAdvisory ? <p className="minimal-inline-links"><Link href="/explore/trip-planner">Build your own Nigeria trip plan →</Link></p> : null}
           {destinationPhoto ? (
             <figure className="tour-guide-photo">
               <img
