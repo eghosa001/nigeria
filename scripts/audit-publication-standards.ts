@@ -29,6 +29,7 @@ import { hasCompletedRemainingDirectoryReview } from "../lib/job-final-directory
 import { hasCompletedTwoRemainingDirectoryReviews20261017 } from "../lib/job-last-two-directories-2026-10-17";
 import { careerGuides } from "../lib/career-guides";
 import { hasVerifiedUndatedRoleApplicationReview20261017 } from "../lib/job-fifteen-exact-issuer-checks-2026-10-17";
+import { hasSourceMatchedMoniepointNoDeadlineReview } from "../lib/job-moniepoint-first-published-evidence-2026-10-17";
 import { getEffectiveJobStatus, todayIsoNigeria } from "../lib/job-runtime";
 import { MIN_INDEXABLE_AGENCY_GUIDES, shouldIndexAgencyHub } from "../lib/agency-indexing";
 
@@ -219,7 +220,8 @@ for (const job of jobOpportunities) {
   if (job.kind === "vacancy" && status === "open" && ageDays(job.verifiedAt) > 14)
     issues.push(blocker("open-vacancy-check-expired", "Current open status needs a recent issuer-level source check."));
   if (job.kind === "vacancy" && status === "open" && !job.deadline &&
-      !hasVerifiedUndatedRoleApplicationReview20261017(job, now))
+      !hasVerifiedUndatedRoleApplicationReview20261017(job, now) &&
+      !hasSourceMatchedMoniepointNoDeadlineReview(job, now))
     issues.push(review("open-no-deadline-verification",
       "No employer closing date was published. Require recent, exact role and Apply-route evidence with an honest no-rolling-intake caution."));
   if (job.kind === "vacancy" && status === "open" && !job.posting)
