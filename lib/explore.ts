@@ -1,6 +1,7 @@
 import { furtherVisitorDecisions20261016 } from "@/lib/explore-additional-editorial-2026-10-16";
 import { museumAndVisitorReviews20261016 } from "@/lib/explore-museums-and-waterfalls-2026-10-16";
 import { regionalAccessDecisions20261016 } from "@/lib/explore-regional-access-decisions-2026-10-16";
+import { practicalVisitorAmendments20261017 } from "@/lib/explore-practical-visitor-amendments-2026-10-17";
 import { districtAndEventCorrections20261017 } from "@/lib/explore-district-and-event-corrections-2026-10-17";
 import { remainingTourResearch20261016 } from "@/lib/explore-priority-review-decisions-2026-10-16";
 import { efcfBeninFestivalGuide20261013 } from "@/lib/explore-efcf-benin-festival-2026-10-13";
@@ -13831,7 +13832,7 @@ const previousPublishedExploreGuides: ExploreGuide[] = museumReviewedExploreGuid
 
 // Sixth editorial pass: preserve the canonical URLs and every previously
 // researched decision. Each dated evidence link is attached only to its guide.
-export const exploreGuides: ExploreGuide[] = previousPublishedExploreGuides.map((guide) => {
+const districtReviewedExploreGuides: ExploreGuide[] = previousPublishedExploreGuides.map((guide) => {
   const review = districtAndEventCorrections20261017[guide.slug];
   if (!review) return guide;
   const sources = [...(guide.sources ?? [])];
@@ -13870,6 +13871,50 @@ export const exploreGuides: ExploreGuide[] = previousPublishedExploreGuides.map(
         ? guide.planning : [...guide.planning, review.planning],
     sources,
     lastReviewed: "2026-10-17",
+  };
+});
+
+// Seven individually targeted visitor fixes: add useful, qualified access and
+// fee decisions to the authored guide body instead of changing audit thresholds.
+export const exploreGuides: ExploreGuide[] = districtReviewedExploreGuides.map((guide) => {
+  const amendment = practicalVisitorAmendments20261017[guide.slug];
+  if (!amendment) return guide;
+  const sources = [...(guide.sources ?? [])];
+  for (const source of amendment.sources ?? []) {
+    if (source.href !== guide.source?.href && !sources.some(item => item.href === source.href)) sources.push(source);
+  }
+  const foodFair = guide.slug === "african-traditional-food-fair-abuja-2026";
+  return {
+    ...guide,
+    summary: foodFair
+      ? "The 2026 Abuja African Traditional Food Fair has programmes on 16–17 October: organisers describe a Friday policy and exhibition schedule and Saturday's main food-and-culture fiesta. Confirm attendee entry and arrival arrangements at the FCT Exhibition Pavilion."
+      : guide.summary,
+    intro: foodFair
+      ? [
+          "The organiser lists the 8th African Traditional Food Fair at FCT Exhibition Pavilion, Herbert Macaulay Way, Central Area, Abuja, beside the International Conference Centre. Its homepage advertises Saturday 17 October 2026, while its attendee form does not establish a public entry charge.",
+          "An 8 October News Agency of Nigeria report quotes the organisers on a two-day 16–17 October programme: a Friday morning press briefing, food-systems policy dialogue and stakeholder exhibitions precede Saturday's main indigenous-food and cultural fiesta. Visit Abuja's calendar also lists both days, but its single-event page highlights Saturday 10 AM–6 PM. The organiser's statement does not prove that Friday's activities were open to all visitors.",
+        ]
+      : guide.intro,
+    highlights: foodFair
+      ? guide.highlights.map(item => item.name === "Registration and date check"
+          ? { ...item, detail: "The event organiser has an attendee form. News Agency of Nigeria confirms separate Friday policy activities and Saturday festival programming; check which sessions accept public visitors and whether any charge applies." }
+          : item)
+      : guide.highlights,
+    planning: [
+      ...(foodFair
+        ? guide.planning.filter(item => ![
+            "Register using the organiser’s attendee form",
+            "Resolve Friday versus Saturday before travelling",
+          ].includes(item.label))
+        : guide.planning),
+      ...(foodFair ? [{
+        label: "Confirm attendance and fees with the organiser",
+        detail: "The organiser's attendee form at https://afritraditionalfoodfair.org/register/ asks for contact details and consent. A visible form is not evidence of accepted registration or free admission; ask which Friday and Saturday activities accept attendees before travelling.",
+      }] : []),
+      ...amendment.planning.filter(item => !guide.planning.some(existing => existing.label === item.label)),
+    ],
+    sources,
+    lastReviewed: amendment.reviewedAt ?? guide.lastReviewed,
   };
 });
 
