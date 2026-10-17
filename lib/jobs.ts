@@ -3837,7 +3837,17 @@ function closeExpiredJob(item: CareerOpportunity): CareerOpportunity {
   };
 }
 
+// These legacy aliases duplicate the same two issuer requisitions represented
+// by stronger reviewed canonical pages. Leave their historical research in the
+// source wave, but exclude them from all public catalogs and XML sitemaps.
+// Permanent compatibility redirects are maintained in job-retired-redirects.json.
+const duplicateMoniepointJobAliases = new Set([
+  "moniepoint-financial-planning-analyst-nigeria-2026",
+  "moniepoint-early-careers-talent-acquisition-specialist-2026",
+]);
+
 export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities
+  .filter(item => !duplicateMoniepointJobAliases.has(item.slug))
   .map(normalizeCareerPortal)
   .map(applyIssuerPortalResearch20261016)
   .map(applyIssuerCareerReview20261016B)
