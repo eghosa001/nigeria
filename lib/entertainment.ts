@@ -559,6 +559,18 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     synopsis: "A revenge drama about two women from different worlds whose lives collide after trauma, pushing them through grief, power and the consequences of choosing retaliation.",
     cast: ["Uzoamaka Power", "Onyinye Odokoro", "Ama K. Abebrese", "Ijeoma Grace Agu", "Adjetey Anang", "Tina Mba", "Richard Mofe-Damijo"],
     directors: ["Ifeoma Nkiruka Chukwuogo"],
+    trailer: {
+      label: "Watch the Phoenix Fury original film teaser",
+      href: "https://www.youtube.com/watch?v=TGFvzpk27s4",
+      platform: "YouTube",
+      lastChecked: "2026-10-17",
+    },
+    references: [{
+      label: "What Kept Me Up — Nile Entertainment October 2026 trailer roundup",
+      href: "https://whatkeptmeup.com/nigerian-film-news/nile-entertainment-october-2026-releases/",
+      lastChecked: "2026-10-17",
+      note: "The September 2026 film-distribution coverage embeds this original Phoenix Fury teaser. This is the linked teaser, not an assertion that the 2026 theatrical trailer has the same video ID; poster reuse rights remain unproven."
+    }],
     sourcePreview: {
       url: "https://africanmoviedb.com/image/title/ikc4xyBxDZwVlgMg5QgZK.webp",
       sourceUrl: "https://africanmoviedb.com/title/phoenix-fury-2026",
@@ -589,6 +601,18 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     cast: ["Richard Mofe-Damijo", "Princess Mufeedah", "Daniel Etim Effiong", "Adam Garba", "Sam Dede", "Onyeka Onwenu"],
     directors: ["Pever Bem"],
     runtimeMinutes: 118,
+    trailer: {
+      label: "Watch the A Land Apart official film trailer",
+      href: "https://www.youtube.com/watch?v=qMoZdjkCAb4",
+      platform: "YouTube",
+      lastChecked: "2026-10-17",
+    },
+    references: [{
+      label: "What Kept Me Up — Nile Entertainment October 2026 trailer roundup",
+      href: "https://whatkeptmeup.com/nigerian-film-news/nile-entertainment-october-2026-releases/",
+      lastChecked: "2026-10-17",
+      note: "The September 2026 distributor coverage embeds the video titled A LAND APART_OFFICIAL TRAILER [2026]. The publisher's original YouTube thumbnail is shown as a linked video preview; no standalone poster-reuse rights are claimed."
+    }],
     sourcePreview: {
       url: "https://africanmoviedb.com/image/title/O-1HQ9d2zjTmvm-pPdgUZ.webp",
       sourceUrl: "https://africanmoviedb.com/title/a-land-apart-2026",
