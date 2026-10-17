@@ -450,7 +450,6 @@ function defaultGuidance(service: Service): DetailedServiceGuidance {
   const agency = getAgency(service.agencySlug);
   const agencyName = agency?.shortName ?? agency?.name ?? "the responsible agency";
   const first = service.steps[0] ?? "Open the responsible agency's official service route.";
-  const second = service.steps[1];
   const physical = findPhysicalStep(service);
   const followUp = service.slug === "nin-enrolment"
     ? "For enrolment or slip problems, contact an official NIMC centre with your enrolment acknowledgement. Basic NIN enrolment is free."
@@ -459,7 +458,7 @@ function defaultGuidance(service: Service): DetailedServiceGuidance {
   return {
     route: {
       startTitle: journey.startLabel,
-      startDetail: second ? first + " Then " + second.charAt(0).toLowerCase() + second.slice(1) : first,
+      startDetail: first,
       physicalTitle: journey.physicalLabel,
       physicalDetail: physical
         ? "The guide describes this in-person stage: " + physical
