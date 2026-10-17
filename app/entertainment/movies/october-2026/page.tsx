@@ -3,7 +3,7 @@ import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 
 export const metadata: Metadata = {
-  title: "Nigerian Movies October 2026: Cinema, Netflix & YouTube Releases",
+  title: "October 2026 Nigerian Movie Releases",
   description: "Nigerian movie releases for October 2026: My 30th Wedding, Love On Credit, Oversabi Aunty and new cinema titles. Release dates, cast and official viewing links.",
   alternates: { canonical: "/entertainment/movies/october-2026" },
 };

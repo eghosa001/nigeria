@@ -1396,6 +1396,21 @@ const verifiedFinancialAndPassportJourneys: Record<string, ServiceJourney> = {
   },
 };
 
+/** Only manually researched route records qualify for a second-case decision.
+ * Generated default journeys are deliberately excluded: they do not verify
+ * that a special alternative or fully online route really exists. */
+export function hasReviewedServiceJourney(slug: string): boolean {
+  return Boolean(
+    verifiedRegulatedJourneys[slug] || verifiedConsumerJourneys[slug] ||
+    verifiedCivicJourneys[slug] || verifiedBusinessJourneys[slug] ||
+    verifiedEducationJourneys[slug] || verifiedFinancialAndPassportJourneys[slug] ||
+    verifiedSecurityJourney[slug] || verifiedPublicRecordJourneys[slug] ||
+    verifiedEditorialJourneys[slug] ||
+    ["glo-esim-activation", "glo-port-number-to-glo", "glo-sim-replacement",
+      "bvn-validation", "bvn-data-update"].includes(slug)
+  );
+}
+
 export function getServiceJourney(service: Service): ServiceJourney {
   if (verifiedRegulatedJourneys[service.slug]) return verifiedRegulatedJourneys[service.slug];
   if (verifiedConsumerJourneys[service.slug]) return verifiedConsumerJourneys[service.slug];

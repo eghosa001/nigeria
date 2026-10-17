@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Service } from "@/lib/types";
-import { getServiceJourney } from "@/lib/journey";
+import { getServiceJourney, hasReviewedServiceJourney } from "@/lib/journey";
 import { getDetailedServiceGuidance } from "@/lib/service-guidance";
 import { getOfficialServiceLinks } from "@/lib/official-links";
 
@@ -14,7 +14,7 @@ export function ServiceJourney({ service }: { service: Service }) {
       <div className="section-heading journey-heading">
         <div>
           <span className="eyebrow">How to get this service</span>
-          <h2>{journey.mode === "ussd" ? "USSD or another support channel?" : "Online, physical or both?"}</h2>
+          <h2>{journey.mode === "ussd" ? "Choose the correct USSD or support route" : "Choose the correct application route"}</h2>
         </div>
         <span className={"journey-mode journey-mode-" + journey.mode}>{journey.modeLabel}</span>
       </div>
@@ -49,14 +49,29 @@ export function ServiceJourney({ service }: { service: Service }) {
           ) : null}
         </article>
 
-        <article className="journey-card">
+        <article className="journey-card" data-journey-basis={hasReviewedServiceJourney(service.slug) ? "individually-reviewed" : "general-guidance"}>
           <span className="journey-number" aria-hidden="true">03</span>
-          <span className="journey-label">If something blocks you</span>
-          <h3>{guidance.route.fallbackTitle}</h3>
-          <p>{guidance.route.fallbackDetail}</p>
-          <Link className="text-link" href={"/agencies/" + service.agencySlug}>View agency guidance →</Link>
+          {hasReviewedServiceJourney(service.slug) ? (
+            <>
+              <span className="journey-label">If your situation is different</span>
+              <h3>{journey.alternativeLabel}</h3>
+              <p>{journey.alternativeDetail}</p>
+              <a className="text-link" href="#official-sources">Check the cited official sources ↓</a>
+            </>
+          ) : (
+            <>
+              <span className="journey-label">If something blocks you</span>
+              <h3>{guidance.route.fallbackTitle}</h3>
+              <p>{guidance.route.fallbackDetail}</p>
+              <Link className="text-link" href={"/agencies/" + service.agencySlug}>View agency guidance →</Link>
+            </>
+          )}
         </article>
       </div>
+
+      {hasReviewedServiceJourney(service.slug) ? (
+        <p className="journey-evidence-note">This alternative is based on the reviewed process for this specific service, not an assumed shortcut. Check the linked issuer before paying or submitting information.</p>
+      ) : null}
 
       <div className="journey-trust-note">
         <span aria-hidden="true">✓</span>
