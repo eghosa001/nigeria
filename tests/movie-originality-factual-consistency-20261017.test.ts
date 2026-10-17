@@ -9,7 +9,7 @@ const reviewed = [
   { slug: "just-before-forever", directors: ["Omoruyi Efosa Emmanuel"], words: ["11 August", "FilmFlux", "Maurice Sam TV"] },
   { slug: "monica", directors: ["Omoruyi Efosa Emmanuel"], roles: [["Uche Montana", "Monica"], ["John Tyler Ekanem", "Pascal"]], words: ["IMDb", "Monica 2", "Karyn Udeh"] },
   { slug: "forever-found", directors: ["Uche Alexmoore"], roles: [["Chinenye Nnebe", "Lilian"], ["John Ekanem", "Adewale"]], words: ["Lilian", "Adewale", "Nollywood.com"] },
-  { slug: "all-things-equal", directors: ["Omoruyi Efosa Emmanuel"], roles: [["Sarian Martin", "Christy"], ["Daniel Etim Effiong", "Jude"]], words: ["salary", "marriage", "Nollywood.com"] },
+  { slug: "all-things-equal", directors: ["Omoruyi Efosa Emmanuel"], roles: [["Sarian Martin", "Christy"], ["Daniel Etim Effiong", "Jude"]], words: ["financial", "marriage", "Nollywood.com"] },
 ] as const;
 
 test("six original movie guides reconcile current sourced credit records with the visible prose", () => {
