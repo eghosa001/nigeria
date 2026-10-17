@@ -19,6 +19,7 @@ export const serviceSeoTitleTemplates: Record<string, string> = {
   "jamb-print-result": "JAMB Result {year}: Check & Print Result Slip",
   "jamb-examination-slip-2026": "JAMB Reprint {year}: Print Examination Slip & Venue",
   "waec-check-result": "WAEC Result Checker {year}: Check Result Online",
+  "waec-collect-certificate": "WAEC Certificate Collection {year}: School vs Private",
   "neco-check-result": "NECO Result Checker {year}: Check Result Online",
   "jamb-caps": "JAMB CAPS {year}: Check Admission Status & Accept Admission",
   "cac-company-registration": "CAC Company Registration: Company Portal, Fees & Steps",
@@ -84,6 +85,7 @@ export function getServiceSeoTitleOverride(slug: string, year: string) {
 
 
 export const serviceSeoDescriptionTemplates: Record<string, string> = {
+  "waec-collect-certificate": "Collect your WAEC certificate: school candidates use their schools; private candidates contact the WAEC office for their exam state. Check ID and readiness first.",
   "check-nin-number": "Forgot your NIN? Dial *346# to use NIMC’s phone retrieval service, or visit a NIMC office. Check network charges and keep your NIN private.",
   "neco-2026-ssce-external-registration": "NECO 2026 SSCE External registration: normal deadline 26 October, late registration until 3 November, official portal, steps and exam timetable.",
   "nin-enrolment": "NIN registration in Nigeria {year}: free NIMC enrolment, eligibility, biometric capture, official route and how to collect the NIN slip.",
