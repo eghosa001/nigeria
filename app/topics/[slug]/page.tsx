@@ -5,6 +5,7 @@ import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { ServiceCard } from "@/components/service-card";
+import { ServiceTaskComparison } from "@/components/service-task-comparison";
 import { getPublicService } from "@/lib/data";
 import { getGrowthHub, growthHubs } from "@/lib/growth-hubs";
 import { getSiteUrl } from "@/lib/site";
@@ -112,6 +113,8 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
           <div className="topic-copy">
             {hub.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
+
+          <ServiceTaskComparison services={services} heading={"Compare " + hub.shortTitle + " tasks"} limit={8} />
 
           <section className="topic-search-section" aria-labelledby="common-searches">
             <span className="eyebrow">Common searches</span>
