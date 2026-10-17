@@ -132,6 +132,62 @@ export const independentHeritageDecisions20261017: Record<string, HeritageReview
     },
     detail: "NCMM's separately located museums illustrate why an Abeokuta or Ibadan weekend needs a distinct city route rather than a generic Lagos departure plan.",
   },
+  "umuahia-history-weekend-itinerary": {
+    source: { label: "National Commission for Museums and Monuments — National War Museum Umuahia", href: ncmm },
+    planning: {
+      label: "Confirm War Museum and bunker visits individually",
+      detail: "NCMM places the National War Museum on the Isingwu/Amafor side of Umuahia, near Ugunchara, while the Ojukwu Bunker is a separately operated heritage stop. Do not assume one ticket or one guide covers both. Check each site's current access, photography restrictions and the restoration status before committing an afternoon.",
+    },
+    detail: "NCMM's national directory independently confirms the War Museum Umuahia institution, but not any current entry fee, reopening after refurbishment or operation of the separate Ojukwu Bunker.",
+  },
+  "jos-museum-zoo-guide": {
+    source: { label: "National Commission for Museums and Monuments — Jos museum and zoological garden", href: ncmmList },
+    planning: {
+      label: "Check the museum and zoo as two separate admissions",
+      detail: "NCMM lists National Museum Jos and its Zoological Garden as separate entries, with the zoo opposite the museum. A museum visit does not guarantee a zoo session, animal encounters or a bundled ticket. Call ahead about each site's current opening, welfare conditions, admission and any closures before planning a family afternoon.",
+    },
+    detail: "The national museum authority identifies the Jos Zoological Garden opposite the museum rather than describing both as one attraction with a guaranteed shared ticket.",
+  },
+  "marina-resort-calabar-guide": {
+    source: { label: "National Commission for Museums and Monuments — Slave History Museum, Marina Resort", href: ncmmList },
+    planning: {
+      label: "Check the history museum separately from resort recreation",
+      detail: "NCMM places the Slave History Museum inside Calabar's Marina Resort, but its institutional listing does not mean boats, cinemas, restaurants or every waterfront amenity inside the complex are currently operating. Contact the museum about visitor entry and opening; verify leisure activities with their actual operators before paying.",
+    },
+    detail: "NCMM independently identifies the Slave History Museum at Marina Resort. Treat the historical exhibition and commercial waterfront facilities as separate visitor decisions.",
+  },
+  "nana-palace-koko-guide": {
+    source: { label: "National Commission for Museums and Monuments — Nana Living Spring Museum, Koko", href: ncmm },
+    planning: {
+      label: "Verify the Koko heritage institution before travelling",
+      detail: "NCMM's museum list names the Nana Living Spring Museum in Koko, Delta State. A directory listing is not evidence that all rooms in the historic Nana Olomu residence are open, or that museum visits run daily. Ask the institution about the exact entrance, exhibitions, permission to photograph and local access before arranging transport to Koko.",
+    },
+    detail: "The national museum authority lists the Nana Living Spring Museum at Koko, providing an independently named heritage institution without promising unrestricted access to the entire palace site.",
+  },
+  "lokoja-colonial-heritage-guide": {
+    source: { label: "National Commission for Museums and Monuments — National Museum of Colonial History, Lokoja", href: ncmm },
+    planning: {
+      label: "Use the exact colonial-history museum name",
+      detail: "NCMM identifies a National Museum of Colonial History in Lokoja. That official institution should be checked directly for current exhibitions and admission; an old Lugard-era landmark or general 'colonial quarter' pin does not establish entry to the museum. Arrange the waterfront and monument stops separately after confirming today's road and site conditions.",
+    },
+    detail: "NCMM independently lists Lokoja's National Museum of Colonial History, but does not verify museum operating hours or access to unrelated historic buildings.",
+  },
+  "kwara-highlights": {
+    source: { label: "National Commission for Museums and Monuments — National Museum Esie and National Museum Ilorin", href: ncmmList },
+    planning: {
+      label: "Distinguish the Esie collection from central Ilorin",
+      detail: "NCMM lists National Museum Esie in Esie and National Museum Ilorin at 14 Abdulkadri Road in Ilorin's GRA. They are not two names for one attraction. For an Esie heritage excursion, check admission and road time separately and avoid promising an easy downtown Ilorin walk or a combined museum ticket.",
+    },
+    detail: "The national museum directory independently confirms two distinct Kwara museum locations, helping travellers decide whether to stay in Ilorin or devote time to Esie.",
+  },
+  "ibom-unity-museum-guide": {
+    source: { label: "National Commission for Museums and Monuments — National Museum Uyo location", href: ncmm },
+    planning: {
+      label: "Do not substitute National Museum Uyo for Ibom Unity Museum",
+      detail: "The NCMM registry lists National Museum Uyo behind Ibom Hall on Ring Road II; that does not establish the opening, management or address of the separately named Ibom Unity Museum. Contact the institution you actually intend to visit and ask for the exact gate, current collection and admission before making the trip.",
+    },
+    detail: "NCMM's federal museum entry is a useful identity cross-check, not proof that National Museum Uyo and Ibom Unity Museum are interchangeable institutions.",
+  },
   "ondo-state-highlights": {
     source: { label: "UNESCO World Heritage Centre — Oke Idanre Tentative List (2007)", href: "https://whc.unesco.org/en/tentativelists/5169/" },
     planning: {
