@@ -22,6 +22,7 @@ import { youtubeEditorialDossiers } from "../lib/youtube-editorial-dossiers";
 import { jobOpportunities, isIndexableJobOpportunity } from "../lib/jobs";
 import { inspectEmployerDirectoryEvidence } from "../lib/job-directory-audit-evidence";
 import { hasCompletedIssuerDirectoryReview } from "../lib/job-reviewed-directory-evidence-2026-10-17";
+import { hasDocumentedCrossAgentIssuerReview } from "../lib/job-cross-agent-reviewed-directory-2026-10-17";
 import { careerGuides } from "../lib/career-guides";
 import { getEffectiveJobStatus, todayIsoNigeria } from "../lib/job-runtime";
 import { MIN_INDEXABLE_AGENCY_GUIDES, shouldIndexAgencyHub } from "../lib/agency-indexing";
@@ -217,7 +218,7 @@ for (const job of jobOpportunities) {
     issues.push(review("job-posting-provenance", "Verify original post date, actual role detail and application source."));
   if (status === "closed" && job.statusLabel.toLowerCase().includes("open"))
     issues.push(review("stale-status-label", "Even archived copy must not promise currently open applications."));
-  if (job.kind === "career-page" && !hasCompletedIssuerDirectoryReview(job, now))
+  if (job.kind === "career-page" && !hasCompletedIssuerDirectoryReview(job, now) && !hasDocumentedCrossAgentIssuerReview(job, now))
     issues.push(review("employer-directory-depth",
       "This career directory still lacks a current source-matched, issuer-specific completed review; generic how-to text is not enough."));
   issues.push(sourceManual, paragraphsManual);
