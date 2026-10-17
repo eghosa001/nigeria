@@ -7,6 +7,9 @@ import type { CareerOpportunity, JobPostingLocation } from "@/lib/jobs";
 // application_deadline was null, meaning *not published*, not rolling hiring.
 type AtsProof = {
   id: string;
+  issuerUrl: string;
+  atsUrl: string;
+  apiUrl: string;
   title: string;
   firstPublished: string;
   updatedAt: string;
@@ -14,27 +17,42 @@ type AtsProof = {
 };
 export const originalMoniepointAtsProof20261017: Record<string, AtsProof> = {
   "moniepoint-early-careers-talent-acquisition-specialist": {
-    id: "4981411101", title: "Early Careers Talent Acquisition Specialist",
+    id: "4981411101",
+    issuerUrl: "https://moniepoint.com/careers/roles/4981411101",
+    atsUrl: "https://job-boards.eu.greenhouse.io/moniepoint/jobs/4981411101",
+    apiUrl: "https://boards-api.greenhouse.io/v1/boards/moniepoint/jobs/4981411101?content=true", title: "Early Careers Talent Acquisition Specialist",
     firstPublished: "2026-09-22", updatedAt: "2026-09-22",
     locations: [{ locality: "Lagos", country: "NG" }],
   },
   "moniepoint-business-relationship-manager-anambra": {
-    id: "4105673101", title: "Business Relationship Manager (Anambra)",
+    id: "4105673101",
+    issuerUrl: "https://moniepoint.com/careers/roles/4105673101",
+    atsUrl: "https://job-boards.eu.greenhouse.io/moniepoint/jobs/4105673101",
+    apiUrl: "https://boards-api.greenhouse.io/v1/boards/moniepoint/jobs/4105673101?content=true", title: "Business Relationship Manager (Anambra)",
     firstPublished: "2022-12-16", updatedAt: "2026-09-10",
     locations: [{ region: "Anambra", country: "NG" }],
   },
   "moniepoint-talent-acquisition-specialist": {
-    id: "4056914101", title: "Talent Acquisition Specialist",
+    id: "4056914101",
+    issuerUrl: "https://moniepoint.com/careers/roles/4056914101",
+    atsUrl: "https://job-boards.eu.greenhouse.io/moniepoint/jobs/4056914101",
+    apiUrl: "https://boards-api.greenhouse.io/v1/boards/moniepoint/jobs/4056914101?content=true", title: "Talent Acquisition Specialist",
     firstPublished: "2022-07-01", updatedAt: "2026-08-31",
     locations: [{ locality: "Lagos", country: "NG" }],
   },
   "moniepoint-financial-planning-analyst": {
-    id: "4355709101", title: "Financial Planning Analyst",
+    id: "4355709101",
+    issuerUrl: "https://moniepoint.com/careers/roles/4355709101",
+    atsUrl: "https://job-boards.eu.greenhouse.io/moniepoint/jobs/4355709101",
+    apiUrl: "https://boards-api.greenhouse.io/v1/boards/moniepoint/jobs/4355709101?content=true", title: "Financial Planning Analyst",
     firstPublished: "2024-06-21", updatedAt: "2026-08-13",
     locations: [{ country: "NG" }],
   },
   "moniepoint-team-lead-site-reliability-engineering": {
-    id: "4369828101", title: "Team Lead, Site Reliability Engineering",
+    id: "4369828101",
+    issuerUrl: "https://moniepoint.com/careers/roles/4369828101",
+    atsUrl: "https://job-boards.eu.greenhouse.io/moniepoint/jobs/4369828101",
+    apiUrl: "https://boards-api.greenhouse.io/v1/boards/moniepoint/jobs/4369828101?content=true", title: "Team Lead, Site Reliability Engineering",
     firstPublished: "2025-01-03", updatedAt: "2026-07-24",
     locations: [{ locality: "Lagos", country: "NG" }],
   },
@@ -45,9 +63,6 @@ const statusLabel = "Named Greenhouse application form checked 17 Oct; closing d
 const applicantCaution =
   "Open the exact Moniepoint Greenhouse application form again before applying; the form was visible on 17 October but submission was not tested and no fixed or rolling deadline was published.";
 
-const issuer = (id: string) => "https://moniepoint.com/careers/roles/" + id;
-const ats = (id: string) => "https://job-boards.eu.greenhouse.io/moniepoint/jobs/" + id;
-const api = (id: string) => "https://boards-api.greenhouse.io/v1/boards/moniepoint/jobs/" + id + "?content=true";
 const provenance = (proof: AtsProof) =>
   "Moniepoint's official Greenhouse API for requisition " + proof.id +
   " records first_published " + proof.firstPublished + ", updated_at " + proof.updatedAt +
@@ -58,9 +73,9 @@ export const sourceReviewedMoniepointVacancySlugs20261017 = Object.keys(original
 export function applyOriginalMoniepointAtsProof20261017(item: CareerOpportunity): CareerOpportunity {
   const proof = originalMoniepointAtsProof20261017[item.slug];
   if (!proof || item.kind !== "vacancy" || item.status !== "open" ||
-      item.deadline || item.posting || item.officialUrl !== issuer(proof.id)) return item;
+      item.deadline || item.posting || item.officialUrl !== proof.issuerUrl) return item;
 
-  const application = ats(proof.id);
+  const application = proof.atsUrl;
   return {
     ...item,
     posting: { jobTitle: proof.title, datePosted: proof.firstPublished, locations: proof.locations },
@@ -75,7 +90,7 @@ export function applyOriginalMoniepointAtsProof20261017(item: CareerOpportunity)
     sources: [
       ...item.sources,
       { label: "Moniepoint — exact employer Greenhouse application", url: application, lastChecked: checkDate },
-      { label: "Moniepoint employer-linked Greenhouse API — original publication/update/deadline", url: api(proof.id), lastChecked: checkDate },
+      { label: "Moniepoint employer-linked Greenhouse API — original publication/update/deadline", url: proof.apiUrl, lastChecked: checkDate },
     ],
   };
 }
@@ -85,7 +100,7 @@ export function hasCompletedMoniepointAtsReview20261017(item: CareerOpportunity,
   const proof = originalMoniepointAtsProof20261017[item.slug];
   if (!proof || item.kind !== "vacancy" || item.status !== "open" ||
       item.deadline || item.jobPostingAuthorization ||
-      item.officialUrl !== ats(proof.id) || item.statusLabel !== statusLabel ||
+      item.officialUrl !== proof.atsUrl || item.statusLabel !== statusLabel ||
       !item.posting || item.posting.datePosted !== proof.firstPublished ||
       item.posting.jobTitle !== proof.title ||
       JSON.stringify(item.posting.locations) !== JSON.stringify(proof.locations) ||
@@ -99,7 +114,7 @@ export function hasCompletedMoniepointAtsReview20261017(item: CareerOpportunity,
     return Number.isFinite(delta) && delta >= 0 && delta / 86400000 <= 14;
   };
   return recent(item.verifiedAt) &&
-    item.sources.some(s => s.url === ats(proof.id) && recent(s.lastChecked)) &&
-    item.sources.some(s => s.url === api(proof.id) && recent(s.lastChecked)) &&
-    item.sources.some(s => s.url === issuer(proof.id) && recent(s.lastChecked));
+    item.sources.some(s => s.url === proof.atsUrl && recent(s.lastChecked)) &&
+    item.sources.some(s => s.url === proof.apiUrl && recent(s.lastChecked)) &&
+    item.sources.some(s => s.url === proof.issuerUrl && recent(s.lastChecked));
 }
