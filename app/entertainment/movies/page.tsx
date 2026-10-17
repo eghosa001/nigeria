@@ -108,7 +108,7 @@ export default async function MoviesPage({
           <div className="movie-browse-heading">
             <div>
               <span className="eyebrow">Movies</span>
-              <h1>Find something worth watching.</h1>
+              <h1>Nollywood movies: casts, genres and where to watch.</h1>
               <p className="page-intro">Browse Nigerian movies and open the platform when you are ready to watch.</p>
               <form className="section-quick-search" action="/entertainment/movies#curated-movies" method="get" role="search">
                 <label>
@@ -150,6 +150,7 @@ export default async function MoviesPage({
               <div className="movie-discovery-links">
                 <Link href="/entertainment/movies/chief-daddy">Chief Daddy <span aria-hidden="true">↗</span></Link>
                 <Link href="/entertainment/movies/a-tribe-called-judah">A Tribe Called Judah <span aria-hidden="true">↗</span></Link>
+                <Link href="/entertainment/movies/oversabi-aunty">Oversabi Aunty cast &amp; viewing guide <span aria-hidden="true">↗</span></Link>
               </div>
             </article>
             <article className="movie-discovery-card">
