@@ -18,13 +18,15 @@ const placeSlugs = new Set<string>();
  
 // At least 21 existing visitor decisions, with actual source links, must
 // survive all prior Tour overlay layers and appear in the exported catalog.
+// Preserve each earlier evidence/source assertion. ISO review dates may advance
+// when the same canonical guide receives a newer, separately protected review.
 const newChecks = Object.entries(furtherVisitorDecisions20261016);
 if (newChecks.length < 21) errors.push("Expected at least 21 independently researched Tour guide updates.");
 for (const [slug, evidence] of newChecks) {
   const guide = exploreGuides.find(item => item.slug === slug);
   const hrefs = new Set([guide?.source?.href, ...(guide?.sources ?? []).map(x => x.href)]);
   const expected = [evidence.source, ...(evidence.additionalSources ?? [])];
-  if (!guide || guide.lastReviewed !== "2026-10-16" ||
+  if (!guide || guide.lastReviewed < "2026-10-16" ||
       !guide.intro.includes(evidence.intro ?? "") ||
       !guide.planning.some(x => x.label === evidence.planning.label && x.detail === evidence.planning.detail) ||
       expected.some(x => !hrefs.has(x.href)) ||
@@ -113,7 +115,7 @@ for (const slug of checkedGuideSlugs) {
   const update = tourPracticalDecisions20261016[slug];
   if (!guide || !guide.intro.includes(update.intro ?? "") ||
       !guide.planning.some(step => step.label === update.planning.label && step.detail === update.planning.detail) ||
-      guide.lastReviewed !== "2026-10-16" ||
+      guide.lastReviewed < "2026-10-16" ||
       ![guide.source?.href, ...(guide.sources ?? []).map(source => source.href)].includes(update.source.href)) {
     errors.push(slug + ": missing dated institution-backed visitor decision, planning or reference.");
   }
@@ -130,7 +132,7 @@ for (const slug of highPriorityChecked) {
   if (!record || !record.intro.includes(evidence.intro ?? "") ||
       !record.planning.some(part => part.label === evidence.planning.label && part.detail === evidence.planning.detail) ||
       ![record.source?.href, ...(record.sources ?? []).map(source => source.href)].includes(evidence.source.href) ||
-      record.lastReviewed !== "2026-10-16")
+      record.lastReviewed < "2026-10-16")
     errors.push(slug + ": missing source-linked and dated, actionable visitor access guidance.");
 }
 for (const slug of ["imo-state-travel-guide","kaltungo-hills-guide","katsina-heritage-weekend-itinerary","katsina-state-travel-guide"]) {
@@ -413,7 +415,7 @@ for (const [slug, primarySource, detail, decision] of [
       !guide.source?.href.includes(primarySource) ||
       !guide.intro.some(paragraph => paragraph.includes(detail)) ||
       !guide.planning.some(item => item.label.includes(decision)) ||
-      guide.lastReviewed !== "2026-10-16") {
+      guide.lastReviewed < "2026-10-16") {
     errors.push(`${slug}: the independently checked 16 October correction has regressed`);
   }
 }
@@ -472,7 +474,7 @@ for (const [slug, sourcePart, historicalOrAccessFact, decision] of [
 ] as const) {
   const guide = exploreGuides.find(item => item.slug === slug);
   if (!guide ||
-      guide.lastReviewed !== "2026-10-16" ||
+      guide.lastReviewed < "2026-10-16" ||
       ![guide.source, ...(guide.sources ?? [])].some(item => item?.href.includes(sourcePart)) ||
       !guide.intro.some(paragraph => paragraph.includes(historicalOrAccessFact)) ||
       !guide.planning.some(item => item.label.includes(decision)) ||
