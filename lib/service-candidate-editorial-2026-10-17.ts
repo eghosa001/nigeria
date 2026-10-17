@@ -132,7 +132,7 @@ const amendments: Record<string, ServiceAmendment> = {
       "The NYSC mobilisation department distinguishes deployment, relocation and remobilisation. A corps member who never reported to a camp needs a different process from one seeking transfer after posting; check the case before opening the wrong form.",
       "For health and marital grounds, check that the supplied evidence actually satisfies NYSC's published category requirements. Do not send private medical records to purported NYSC agents on messaging platforms or travel on a pending, unofficial approval screenshot."
     ],
-    "step": "Keep the existing posting obligation until a final authorised relocation decision appears on the NYSC dashboard; only then follow the official new-state reporting instructions.",
+    "step": "If the dashboard still shows relocation as submitted or recommended, do not travel to the requested state on the strength of that status. Check with the serving State Coordinator about current posting duties; only an NYSC-approved relocation notice with the new state and reporting particulars changes where to report.",
     "sources": [
       "https://platforms.nysc.gov.ng/corpmob.html",
       "https://platforms.nysc.gov.ng/mobreg.html"
