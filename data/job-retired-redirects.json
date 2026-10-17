@@ -160,6 +160,14 @@
     "destinationPath": "/jobs/jumia-nigeria-careers"
   },
   {
+    "sourceSlug": "moniepoint-early-careers-talent-acquisition-specialist-2026",
+    "destinationPath": "/jobs/moniepoint-early-careers-talent-acquisition-specialist"
+  },
+  {
+    "sourceSlug": "moniepoint-financial-planning-analyst-nigeria-2026",
+    "destinationPath": "/jobs/moniepoint-financial-planning-analyst"
+  },
+  {
     "sourceSlug": "palmpay-business-developer-multi-state-2026",
     "destinationPath": "/jobs/palmpay-nigeria-careers"
   },
