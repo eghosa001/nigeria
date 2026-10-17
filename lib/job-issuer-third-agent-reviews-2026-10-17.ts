@@ -22,7 +22,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Read NPA's own FAQ answer under recruitment before sharing any documents or paying anyone.",
       "Look for a later dated official NPA announcement naming the role, qualification and submission method; no such opportunity follows from the general FAQ.",
       "Do not treat WhatsApp vacancy forms or port-agent fee requests as authorised recruitment; NPA warns against unofficial intermediaries.",
-      "If NPA issues a subsequent vacancy, follow its specific official advert rather than the FAQ as an application form."
+      "If NPA issues a subsequent vacancy, follow its specific official advert rather than the FAQ as an application form.",
+      "When comparing NPA with private terminal operators, check which organisation is the actual employer: an operator's hiring notice is not recruitment by the Authority."
     ],
     "guard": "The NPA FAQ presently says recruitment is not underway. No vacancy, closing date, application portal or recruitment payment is authenticated by this directory."
   },
@@ -35,7 +36,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Open the FAAN Career notice and read the current management recruitment disclaimer.",
       "Do not submit a CV, passport image or fee to a third-party FAAN job advertisement while the agency says there is no recruitment.",
       "Check future FAAN announcements for a specifically dated reversal and official application channel before preparing any application.",
-      "Use an advertised official authority source, not a copied 'FAAN application form' circulating on social media."
+      "Use an advertised official authority source, not a copied 'FAAN application form' circulating on social media.",
+      "Treat any future new announcement as a separate dated exercise: a current management disclaimer must not be silently converted into a 'coming soon' application date."
     ],
     "guard": "No open FAAN vacancy is established by the 17 October 2026 issuer-page check. The Career page itself says it is not recruiting."
   },
@@ -47,7 +49,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Read the NUPRC notice dated 11 August 2026; do not mistake a sample employment letter for a genuine offer.",
       "Reject requests for payment, 'processing' or shortlisting from anyone claiming to represent NUPRC.",
       "For any later recruitment, require a new named announcement on NUPRC's official channels showing role, rules and route.",
-      "If a claimed employment letter cannot be reconciled with the Commission's own channel, do not share banking or identity details."
+      "If a claimed employment letter cannot be reconciled with the Commission's own channel, do not share banking or identity details.",
+      "If you received a purported offer, preserve the communication for reporting and verify authenticity through the Commission's own official contact channel before replying."
     ],
     "guard": "The cited source is an official dated disclaimer, not a guarantee about all future hiring; no currently authorised recruitment form is identified in it."
   },
@@ -59,7 +62,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Check the official NITDA Careers page, which currently says there are no advertised openings.",
       "Do not fill a purported NITDA recruitment portal linked by strangers or pay for registration.",
       "When a new vacancy is announced, compare it with NITDA's own notice and the advertised newspaper publication.",
-      "Prepare only the qualifications and documents required by an actual NITDA-issued vacancy rather than a generic future-job checklist."
+      "Prepare only the qualifications and documents required by an actual NITDA-issued vacancy rather than a generic future-job checklist.",
+      "Distinguish NITDA recruitment from third-party digital-skills training, grants or internships advertised with the agency's name; those are not permanent staff vacancies."
     ],
     "guard": "A recruitment-themed page on nitda.gov.ng is currently a no-vacancy notice, not a registration form. Older scam warnings should not be restyled as a new 2026 intake."
   },
@@ -71,7 +75,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Open CBN's FAQ and navigate to Human Resources to separate general recruitment rules from a specific vacancy.",
       "Identify which of CBN's published core disciplines matches your qualifications, then review any actual named role for its own eligibility.",
       "Do not copy a general age cut-off from unrelated civil-service adverts; CBN says its age requirements vary by entry route.",
-      "Wait for a dated official CBN notice with an application method before uploading academic or identification documents."
+      "Wait for a dated official CBN notice with an application method before uploading academic or identification documents.",
+      "Use each future advert to check whether it accepts new graduates, specialist hires or experienced professionals instead of guessing from the FAQ's disciplines."
     ],
     "guard": "The FAQ describes policy, not current vacancies; no recruitment deadline, application payment or public sign-up route is established by it."
   },
@@ -84,7 +89,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Use the SEC Careers Openings route to find a specifically advertised role rather than assuming the careers homepage is a live vacancy.",
       "If you have a question, use SEC's separate Talk to Us form and specify your area of interest, such as compliance, economics, law or market regulation.",
       "Do not treat a submitted enquiry as a job application; follow the role's own instructions if a vacancy is published.",
-      "For any claim of an SEC application fee, verify it on SEC's original official pages before acting."
+      "For any claim of an SEC application fee, verify it on SEC's original official pages before acting.",
+      "Use the enquiry form only for questions and avoid submitting highly sensitive identity documents there unless SEC specifically requests them through an authorised process."
     ],
     "guard": "The enquiry form and general department catalogue do not prove that SEC has accepted a candidate's application or has a current advertised role."
   },
@@ -97,7 +103,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Read the Nigeria heading of Microsoft's internship eligibility page rather than applying requirements from the US or Europe sections.",
       "Verify that you still have at least one quarter or semester of study after the planned internship and have the right to work in Nigeria.",
       "Search Microsoft Careers for an actual internship listing specifying the country, team and opening date.",
-      "Apply only through that listing and verify the exact additional skill, transcript and screening requirements there."
+      "Apply only through that listing and verify the exact additional skill, transcript and screening requirements there.",
+      "If a suitable role is found, check the published Microsoft location and school-return dates before planning around a semester or assuming remote eligibility."
     ],
     "guard": "Nigeria eligibility does not mean any named internship is open. The popular US Explore and Discovery programme descriptions are not automatically Nigerian recruitment routes."
   },
@@ -109,7 +116,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Open Seven-Up's careers page and allow Current Openings to load; an empty or loading panel is not a published job.",
       "If a role appears, open it and check plant or office location, function, qualifications, date and actual Apply destination.",
       "Choose your sector carefully: FMCG manufacturing, commercial sales and corporate jobs have different prerequisites.",
-      "If no named opening can be loaded, do not invent a '2026 graduate trainee' intake or use a social-media form."
+      "If no named opening can be loaded, do not invent a '2026 graduate trainee' intake or use a social-media form.",
+      "A 'Loading open positions...' label is a page-state message, not an error you can remedy with an unofficial application link; return to the employer site when postings become visible."
     ],
     "guard": "The employer-page career description does not substantiate any currently accepting role without opening its exact advert."
   },
@@ -121,7 +129,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Enter through the WAMCO Nigeria careers page, then choose the discipline relevant to your skills.",
       "Use View all jobs or View jobs and filter by location in Nigeria, rather than assuming the global job list is local.",
       "Read the exact role's manufacturing, logistics, engineering or commercial qualifications and closing instructions.",
-      "If a discipline page shows no suitable Nigerian vacancy, treat it as career background rather than applying to a similarly named role abroad."
+      "If a discipline page shows no suitable Nigerian vacancy, treat it as career background rather than applying to a similarly named role abroad.",
+      "When reading WAMCO's history of brands such as Peak and Three Crowns, keep that corporate context separate from the exact job duties and location on a vacancy."
     ],
     "guard": "Brands and company history on the WAMCO page establish employer identity, not the number or status of today's Nigeria vacancies."
   },
@@ -133,7 +142,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Open the specific Sales Officer card on AIICO's vacancies page and confirm Ibadan as the advertised job location.",
       "Read the sales responsibilities and the exact Apply route, rather than preparing for an unrelated actuarial or technology role.",
       "Because the listing's Closing date field has no clear published value, verify acceptance through AIICO's own application channel before relying on it.",
-      "If exploring other functions, use AIICO's main Careers and talent-pool information separately from this Ibadan advert."
+      "If exploring other functions, use AIICO's main Careers and talent-pool information separately from this Ibadan advert.",
+      "Check whether an application is for an employed Sales Officer post or an agency/distributor arrangement; ask AIICO to clarify the contract and target structure from the actual listing."
     ],
     "guard": "An AIICO listing can appear without a closing date; blank date does not mean rolling recruitment, and this page is not a blanket current-hiring claim."
   },
@@ -146,7 +156,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Use AXA Mansard's job board and open a named role to check the actual business line and Lagos-based duty station.",
       "Compare required experience for the selected analyst, reporting, health or distribution post; do not assume a universal insurance graduate application.",
       "Follow the role-specific Apply route and keep its acknowledgement; a generic careers page does not submit the application.",
-      "If shortlisted, expect position-dependent testing, interviews or presentations rather than an identical company-wide selection sequence."
+      "If shortlisted, expect position-dependent testing, interviews or presentations rather than an identical company-wide selection sequence.",
+      "For multi-function applicants, check that each AXA application is separately submitted to a suitable listed role; the corporate recruitment-process page is only preparation guidance."
     ],
     "guard": "Relative labels such as 'Posted 1 day ago' change; this guide never converts them into a permanent deadline or promise of an interview."
   },
@@ -158,7 +169,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Start at EDSIEC's official Careers page and select Current Openings; a general state employment FAQ does not list today's commission vacancies.",
       "For a named role, verify whether it is an EDSIEC appointment or a different Edo State/local-government service exercise.",
       "Use the advert's date, position, eligibility and employer-linked route; do not carry over the historic FAQ's 2024 age and document rules to every 2026 role.",
-      "If no named role is current, do not upload credentials to a forwarded Edo recruitment form."
+      "If no named role is current, do not upload credentials to a forwarded Edo recruitment form.",
+      "If the Current Openings link routes to a general Edo State portal, verify the listed recruiting body and whether the commission is named before proceeding."
     ],
     "guard": "EDSIEC's retained 2024 recruitment FAQ is historical context; it does not authorise an active October 2026 application."
   },
@@ -170,7 +182,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Choose academic, administrative or technical recruitment in UNILORIN's original portal; the requirements differ by cadre.",
       "Open a dated Available Positions listing and confirm the role remains accepting submissions before creating an account.",
       "Complete personal and academic history, then upload the CV and certificates specified for the selected role.",
-      "For a technical position, note the portal's stated computer-proficiency test and check the advert for subsequent screening instructions."
+      "For a technical position, note the portal's stated computer-proficiency test and check the advert for subsequent screening instructions.",
+      "Retain the university recruitment portal's applicant-account confirmation separately from a specific vacancy-submission acknowledgement."
     ],
     "guard": "The portal's static 'currently accepting' wording may outlast a vacancy's deadline; only the specific dated posting proves its present status."
   },
@@ -182,7 +195,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Open the Lagos State Services area and choose Job Opportunities, then identify the particular ministry, agency or commission issuing the notice.",
       "Read the advertised role's appointing body, cadre, eligibility and closing date; other Lagos employment programmes have different rules.",
       "Check that the application domain is reachable from Lagos State's official service route before sharing ID or qualification documents.",
-      "Do not treat all state-sponsored job or entrepreneurship resources as permanent pensionable civil-service openings."
+      "Do not treat all state-sponsored job or entrepreneurship resources as permanent pensionable civil-service openings.",
+      "Keep records of the issuing Lagos MDA and application reference separately so you can verify a later interview invitation against that specific exercise."
     ],
     "guard": "A Job Opportunities category does not establish that a new Civil Service Commission recruitment is open today."
   },
@@ -194,7 +208,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Enter DHL's official global careers portal and select Nigeria as the location before reading positions.",
       "Distinguish Frontline courier/warehouse work, Office functions and Student or Graduate internships; they use different employment criteria.",
       "Open the exact role's city, business unit, contract type and Apply destination, not a global job-category explainer.",
-      "If the filtered search has no results, joining DHL Talent Community is an expression of interest, not a vacancy application."
+      "If the filtered search has no results, joining DHL Talent Community is an expression of interest, not a vacancy application.",
+      "Review DHL's Security Advice before responding to a recruiter, particularly if a message requests money or directs you to a copied careers login."
     ],
     "guard": "A global DHL jobs total or category name is not evidence of a position accepting applications in Nigeria."
   },
@@ -207,7 +222,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Search Plan International's authorised job board for Nigeria-based posts separately from 'Global Hub – Location Flexible' opportunities.",
       "For a flexible hub role, verify the advert permits employment in Nigeria and requires you already to have the legal right to work and live there.",
       "Check the role's safeguarding requirements, travel, contract and application closing date on its exact listing.",
-      "Avoid interpreting 'global' or 'remote' as a universal work-from-anywhere guarantee; submit only on the employer's job portal."
+      "Avoid interpreting 'global' or 'remote' as a universal work-from-anywhere guarantee; submit only on the employer's job portal.",
+      "Distinguish a 'Roster Recruitment' posting from a funded immediate placement: check assignment location, deployment requirements and selection stages on that specific advert."
     ],
     "guard": "An authorised Global Hub page establishes possible employment locations, not guaranteed Nigerian eligibility for any particular advertised role."
   },
@@ -219,7 +235,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Read Wema Bank's 'Why Join Wema' career description to identify the team that matches your background.",
       "Follow the bank's own Explore Opportunities link to a named vacancy or talent route, not the benefits section.",
       "Check the exact selected programme or job for location, experience, assessment and date before submitting a CV.",
-      "Do not treat Wema's general workplace benefits or ALAT banking product description as an open recruitment announcement."
+      "Do not treat Wema's general workplace benefits or ALAT banking product description as an open recruitment announcement.",
+      "Use Wema's current official recruitment link, not a page about staff benefits, to decide whether there is an application form for your particular target team."
     ],
     "guard": "A bank careers information page provides employer context but does not validate a named 2026 graduate or experienced-hire vacancy."
   },
@@ -231,7 +248,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Read the Sterling Bank job board and choose a named notice; Salesforce and institutional or commercial Relationship Manager jobs are different roles.",
       "Verify region, eligibility and duties on the selected vacancy, because some notices cover multiple Nigerian zones.",
       "Use that notice's Learn more and actual application instructions rather than submitting information to a copied vacancy summary.",
-      "Join the separate Talent Community only if you want employer updates; it is not an automatic application to each listed job."
+      "Join the separate Talent Community only if you want employer updates; it is not an automatic application to each listed job.",
+      "For relationship-management listings covering several states, check the duty station and travel expectations inside the named job before selecting your preferred zone."
     ],
     "guard": "The job-board listing can persist after a post closes; no universal salary, guaranteed opening date or bank-wide deadline is inferred from it."
   },
@@ -243,7 +261,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Open BUA's official Vacancies page and note its no-openings statement before spending time preparing an application.",
       "Use BUA's Careers information to understand the different group businesses without treating every subsidiary as a live recruiting unit.",
       "Check for a future BUA-issued role notice with a company, location, exact criteria and authorised application path.",
-      "Do not send certificates or payment to 'BUA job registration' portals not linked from official group announcements."
+      "Do not send certificates or payment to 'BUA job registration' portals not linked from official group announcements.",
+      "Do not apply a supposed BUA factory supervisor or '2026 management trainee' deadline unless a fresh group-issued vacancy replaces the site's no-openings notice."
     ],
     "guard": "No current vacancy is shown on the referenced employer page; do not represent its general careers section as a live group-wide hiring exercise."
   },
@@ -256,7 +275,8 @@ export const thirdAgentIssuerReviews20261017: Record<string, PortalReview> = {
       "Use Emzor's current official Job Vacancies page and open the exact role, such as Production, Quality Control, R&D or Engineering.",
       "Confirm the role's actual education, discipline, worksite and submission process on the recent advert rather than copying an old dated vacancy.",
       "Treat the employer's official no-fee recruitment notice as controlling; ignore anyone charging for forms or interviews.",
-      "Avoid sending CVs to the Gmail address present in an older vacancies archive; obtain the current application instruction through Emzor's official verified channels."
+      "Avoid sending CVs to the Gmail address present in an older vacancies archive; obtain the current application instruction through Emzor's official verified channels.",
+      "If an archived listing asks for application by personal Gmail, do not send personal data there; use the current Emzor job notice or the company's published recruitment verification contact instead."
     ],
     "guard": "Official job-vacancies and archive pages differ. The latter contains an old personal-email instruction, which is not independently verified for October 2026 recruitment."
   }
