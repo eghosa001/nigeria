@@ -10,6 +10,10 @@ export default function AdminSourcesPage() {
   for (const service of services) {
     for (const source of service.sources) {
       const row = sourceMap.get(source.url) ?? { label: source.label, agency: source.agency, lastChecked: source.lastChecked, usedBy: [] };
+      // A reused source URL may have been checked for different guides at
+      // different times. Surface the oldest recorded check as the recheck
+      // priority instead of accidentally using whichever record loaded first.
+      if (source.lastChecked < row.lastChecked) row.lastChecked = source.lastChecked;
       row.usedBy.push(service.shortTitle);
       sourceMap.set(source.url, row);
     }
@@ -31,7 +35,7 @@ export default function AdminSourcesPage() {
               <span className={monitored.has(url) ? "source-monitor-badge monitored" : "source-monitor-badge"}>{monitored.has(url) ? "Monitored" : "Source"}</span>
               <strong>{source.label}</strong>
               <span>{source.agency}</span>
-              <small>{source.usedBy.length} guide{source.usedBy.length === 1 ? "" : "s"} · checked {source.lastChecked}</small>
+              <small>{source.usedBy.length} guide{source.usedBy.length === 1 ? "" : "s"} · oldest recorded check {source.lastChecked}</small>
               <i>Open official source ↗</i>
             </a>
           ))}

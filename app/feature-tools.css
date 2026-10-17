@@ -79,3 +79,12 @@
 .job-readiness-actions button { border: 1px solid var(--line); background: transparent; border-radius: 9px; padding: 10px 14px; cursor: pointer; }
 .job-readiness :is(a,button,input):focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
 @media (max-width: 600px) { .job-readiness-actions { align-items: stretch; flex-direction: column; } .job-readiness-actions :is(a,button) { min-height: 44px; display: flex; align-items: center; } }
+
+/* The displayed verification date is a record of a source review, not a deploy timestamp. */
+.service-review-notice { margin: 12px 0 20px; border: 1px solid var(--line); background: var(--surface); padding: 13px 16px; border-radius: 12px; max-width: 75ch; }
+.service-review-notice strong { display: block; font-size: .95rem; }
+.service-review-notice p { margin: 5px 0; color: var(--muted); line-height: 1.55; }
+.service-review-notice small { display: block; color: var(--muted); }
+.service-review-notice a { display: inline-block; margin-top: 8px; text-decoration: underline; text-underline-offset: 3px; }
+.service-review-notice-due { border-inline-start: 4px solid var(--green); }
+.service-review-notice a:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }

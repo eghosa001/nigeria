@@ -77,6 +77,8 @@ jobs:
         run: ./node_modules/.bin/tsx --test tests/adsense-media-rights-and-service-specificity-20261017.test.ts
       - name: Verify reader journeys and source-specific publishing
         run: ./node_modules/.bin/tsx --test tests/benchmark-reader-journeys-20261017.test.ts
+      - name: Verify honest source-review dates and freshness workflow
+        run: ./node_modules/.bin/tsx --test tests/source-review-age-and-admin-queue-20261017.test.ts
       - name: Summarize all four-pillar publication checks
         run: |
           node -e 'const a=require("./publication-standards.json"); for (const p of a.byPillar) console.log(p.pillar + ": " + p.records + " records / " + p.blockers + " indexable with automatic blockers / " + p.editorialReview + " needing review"); console.log("Full catalog records checked:",a.coverage.sourceCatalogRecords); if(a.byPillar.length!==4 || a.coverage.sourceCatalogRecords<1000) process.exit(1);'

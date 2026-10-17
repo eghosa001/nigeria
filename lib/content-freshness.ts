@@ -1,7 +1,7 @@
 export type FreshnessState = "fresh" | "due" | "stale" | "future" | "unknown";
 
 export const freshnessPolicy = {
-  services: { warnAfterDays: 14, staleAfterDays: 30 },
+  services: { warnAfterDays: 10, staleAfterDays: 30 },
   jobs: { warnAfterDays: 7, staleAfterDays: 14 },
   tour: { warnAfterDays: 10, staleAfterDays: 21 },
   movies: { warnAfterDays: 10, staleAfterDays: 21 },

@@ -14,6 +14,7 @@ import { ServiceRequirements } from "@/components/service-requirements";
 import { ServiceSteps } from "@/components/service-steps";
 import { ProcessTracker } from "@/components/process-tracker";
 import { ServiceStatusStrip } from "@/components/service-status-strip";
+import { ServiceReviewNotice } from "@/components/service-review-notice";
 import { ServiceSearchAnswers } from "@/components/service-search-answers";
 import { ForeignVisaFaqs } from "@/components/foreign-visa-faqs";
 import { ServiceAftercare } from "@/components/service-aftercare";
@@ -208,6 +209,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </aside>
           </div>
           <ServiceStatusStrip service={service} />
+          <ServiceReviewNotice lastVerified={service.lastVerified} />
           {(service.slug === "cac-business-name-registration" || service.slug === "cac-company-registration") ? (
             <section className="service-topic-links" aria-label="Choose the correct CAC registration">
               <h2>Business name or limited company?</h2>

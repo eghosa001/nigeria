@@ -11,6 +11,7 @@ export default function AdminServicesPage() {
         <span className="eyebrow">Content library</span>
         <h1>All service guides</h1>
         <p className="page-intro">Search the full public and review library. Open any row to inspect its documents, steps, notes and official sources.</p>
+        <p><a href="/admin/health?pillar=Services">Review guides with older source checks →</a></p>
         <AdminServiceDirectory services={services.map((service) => ({
           slug: service.slug,
           title: service.title,
