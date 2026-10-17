@@ -8,7 +8,7 @@ import { JsonLd } from "@/components/json-ld";
 import { LazyYouTubePlayer } from "@/components/lazy-youtube-player";
 import { AdSlot } from "@/components/ad-slot";
 import { AD_SLOTS } from "@/lib/adsense-config";
-import { canDisplayEntertainmentArtwork, entertainmentTitles, getEntertainmentTitle, getFeaturedCast, type EntertainmentTitle, type WatchLink } from "@/lib/entertainment";
+import { entertainmentTitles, getRightsSafeEntertainmentImageUrl, getEntertainmentTitle, getFeaturedCast, type EntertainmentTitle, type WatchLink } from "@/lib/entertainment";
 import { entertainmentPeople, getPlatformGuide } from "@/lib/entertainment-extras";
 import { getYouTubeMovieById, getYouTubeVideoId } from "@/lib/youtube-library";
 import { getSiteUrl } from "@/lib/site";
@@ -174,15 +174,7 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
 };
 
 function movieImageUrl(title: EntertainmentTitle, base: string) {
-  if (canDisplayEntertainmentArtwork(title) && title.artwork) return title.artwork.url;
-  if (title.sourcePreview?.url) return title.sourcePreview.url;
-
-  const fullMovie = title.watchLinks.find((link) => link.platform === "YouTube" && link.access === "full-movie");
-  const source = title.trailer ?? fullMovie;
-  const videoId = source ? videoIdFromUrl(source.href) : null;
-  if (videoId) return "https://i.ytimg.com/vi/" + videoId + "/hqdefault.jpg";
-
-  return base + "/entertainment/poster/" + encodeURIComponent(title.slug);
+  return getRightsSafeEntertainmentImageUrl(title, base);
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -330,13 +322,14 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
     countryOfOrigin: { "@type": "Country", name: "Nigeria" },
     dateModified: lastChecked || undefined,
     datePublished: editorial?.releaseDate,
-    sameAs: [
-      ...availabilityLinks.map((link) => link.href),
-      ...(title.references ?? []).map((link) => link.href),
-    ],
+    // Source reporting documents provenance, not an alternative identity for the film.
+    citation: title.references?.map((source) => source.href),
+    sameAs: availabilityLinks.filter((link) => link.access === "full-movie").map((link) => link.href),
     duration: title.runtimeMinutes ? "PT" + title.runtimeMinutes + "M" : undefined,
-    potentialAction: availabilityLinks.length
-      ? availabilityLinks.map((link) => ({ "@type": "WatchAction", target: link.href }))
+    // A cinema announcement, article or region-restricted listing is not a WatchAction.
+    potentialAction: availabilityLinks.some((link) => link.platform === "YouTube" && link.access === "full-movie")
+      ? availabilityLinks.filter((link) => link.platform === "YouTube" && link.access === "full-movie")
+          .map((link) => ({ "@type": "WatchAction", target: link.href }))
       : undefined,
   };
 
@@ -521,8 +514,9 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
 
             {editorial ? (
               <section id="movie-questions" aria-labelledby="movie-questions-heading">
-                <span className="eyebrow">Verified film guide</span>
+                <span className="eyebrow">Source-checked film information</span>
                 <h2 id="movie-questions-heading">Characters, credits and story of {title.title}</h2>
+                <p className="movie-freshness-note">These notes are based on cited sources, not a claim that we attended a screening or watched the entire film. Unconfirmed scenes and production credits are deliberately omitted.</p>
                 {editorial.roles.length ? (
                   <div className="movie-credit-group">
                     <h3>Which actor plays which character?</h3>
