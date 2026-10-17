@@ -119,3 +119,20 @@ test("complete AI exports contain every returned page, all five periods, hourly 
   assert.ok(csv.includes("'+SUM(1,1)"));
   assert.ok(!csv.includes('"=IMPORTXML'));
 });
+
+test("a missing GA4 count uses labelled PostHog measurements without inventing a GA4 zero", async () => {
+  const { decideTrafficSource } = await import("../lib/visits-traffic-health");
+  const posthog = { available: true, views: 88, sessions: 45, visitors: 38,
+    startDate: "2026-10-05", endDate: "2026-10-17",
+    averageSessionDurationSeconds: null, bounceRate: null };
+  const missing = decideTrafficSource(null, null, "2026-10-11", "2026-10-17", posthog);
+  assert.equal(missing.source, "PostHog");
+  assert.equal(missing.views, 88);
+  const suspicious = decideTrafficSource(1, 1, "2026-10-11", "2026-10-17", posthog);
+  assert.equal(suspicious.source, "PostHog");
+  assert.match(suspicious.warning!, /GA4 reports 1/);
+  const reliable = decideTrafficSource(90, 50, "2026-10-11", "2026-10-17", posthog);
+  assert.equal(reliable.source, "GA4");
+  const noData = decideTrafficSource(null, null, "2026-10-11", "2026-10-17", { ...posthog, available: false });
+  assert.equal(noData.views, null);
+});
