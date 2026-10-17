@@ -67,22 +67,3 @@ export function documentedMovieAvailabilityVerdict(
   return proof;
 }
 
-export function attachDocumentedMovieEvidence(item: EntertainmentTitle): EntertainmentTitle {
-  const proof = documentedMovieAvailability20261017[item.slug];
-  if (!proof) return item;
-  const references = [...(item.references ?? [])];
-  for (const link of proof.evidence) {
-    if (!references.some(s => s.href === link.href)) {
-      references.push({
-        label: link.label,
-        href: link.href,
-        lastChecked: proof.checkedAt,
-        note: "Exact distributor/title evidence used only to establish access restrictions or a scheduled premiere, not a playable full film."
-      });
-    } else {
-      const idx=references.findIndex(s=>s.href===link.href);
-      references[idx] = { ...references[idx], lastChecked: proof.checkedAt };
-    }
-  }
-  return { ...item, references };
-}
