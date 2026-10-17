@@ -1,3 +1,4 @@
+import { getVisibleMovieEditorial } from "@/lib/movie-editorial-presentation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -306,6 +307,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
   const netflixSource = availabilityLinks.find((link) => link.platform === "Netflix");
   const featuredCast = getFeaturedCast(title);
   const editorial = getMovieEditorialProfile(title.slug);
+  const visibleEditorial = editorial ? getVisibleMovieEditorial(title.slug, editorial) : null;
   const image = movieImageUrl(title, base);
   const movieLd = {
     "@context": "https://schema.org",
@@ -542,7 +544,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                     </div>
                   </div>
                 ) : null}
-                {editorial.sections.map((section) => (
+                {visibleEditorial?.sections.map((section) => (
                   <div className="movie-credit-group" key={section.heading}>
                     <h3>{section.heading}</h3>
                     {section.paragraphs.map((paragraph) => (
@@ -550,7 +552,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                     ))}
                   </div>
                 ))}
-                {editorial.questions.map(({ question, answer }) => (
+                {visibleEditorial?.questions.map(({ question, answer }) => (
                   <div className="movie-credit-group" key={question}>
                     <h3>{question}</h3>
                     <p className="movie-long-summary">{answer}</p>

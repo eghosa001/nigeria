@@ -8,30 +8,9 @@ export type StepDetail = {
   keep?: string;
 };
 
-const stopWords = new Set([
-  "this","that","with","from","your","into","through","official","service","application",
-  "process","using","used","required","where","when","then","before","after","complete",
-]);
-
-function tokens(value: string) {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, " ").split(/\s+/)
-    .filter((token) => token.length > 3 && !stopWords.has(token));
-}
-
-function relevantRequirements(service: Service, step: string) {
-  const words = tokens(step);
-  return service.requirements
-    .map((item) => {
-      const lower = item.toLowerCase();
-      const score = words.reduce((sum, word) => sum + (lower.includes(word) ? 1 : 0), 0);
-      return { item, score };
-    })
-    .filter((row) => row.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 3)
-    .map((row) => row.item);
-}
-
+// Requirements already have a dedicated, source-backed checklist.
+// Do not derive "have ready" claims from keyword similarity: several
+// unrelated steps share words such as identity, record and application.
 // Mentioning an office or booking biometrics online is not itself a physical visit.
 function isPhysicalAction(step: string) {
   return /\b(?:attend|visit|report to|appear at|go to|present at)\b.{0,90}\b(?:office|centre|center|branch|embassy|consulate|camp|school|institution)\b/i.test(step)
@@ -79,7 +58,7 @@ export function getStepDetails(service: Service): StepDetail[] {
     return {
       stage: stageFor(instruction, index),
       instruction,
-      prepare: relevantRequirements(service, instruction),
+      prepare: [],
       checkpoint: uniqueCheckpoint,
       keep: uniqueKeep,
     };

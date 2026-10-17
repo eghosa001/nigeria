@@ -33,6 +33,23 @@ export default function EditorialPolicyPage() {
           or planning a visit. We avoid misleading claims, copied material and unnecessary repetition.
         </p>
 
+        <h2>What happens when evidence is missing</h2>
+        <p>
+          An unidentified film director stays unconfirmed; a publisher channel is not treated as
+          an individual authorised movie link. A job advert without a published closing date is
+          not presented as permanently open. A fee, procedure, visitor route or streaming option
+          that cannot be independently supported is clearly qualified or withheld, rather than guessed.
+          Corrections must be supported by evidence for the exact film, employer or service.
+        </p>
+
+        <h2>Why we avoid repeated filler</h2>
+        <p>
+          Requirements belong in a single practical checklist, procedures in their ordered steps,
+          and original commentary in the relevant guide. We do not invent associations between
+          documents and steps by matching general keywords, or repeat the same uncertain fact to
+          make an article appear longer. Missing information is not a reason to fabricate a detail.
+        </p>
+
         <h2>Images, videos and external links</h2>
         <p>
           We use appropriately sourced images and videos and link to legitimate viewing and
