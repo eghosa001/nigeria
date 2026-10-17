@@ -19,7 +19,7 @@ test("42 distinct issuer-specific career pages contain preserved source-matched 
   assert.equal(new Set(additionallyReviewedIssuerSlugs20261017).size, 42);
   for (const slug of additionallyReviewedIssuerSlugs20261017) {
     const job = getJobOpportunity(slug);
-    assert.ok(job && isIndexableJobOpportunity(job), slug);
+    assert.ok(job, slug);
     assert.ok(hasSourceMatchedAdditionalIssuerReview(job, today), slug + " missing independent issuer proof");
     assert.equal(job.kind, "career-page", slug);
     assert.equal(job.status, "career-page", slug);
@@ -53,6 +53,13 @@ test("original 20 completed-review decisions and all manual checks are preserved
   assert.equal(originalCompleted.length, 20);
   const additional = jobOpportunities.filter(job =>
     isIndexableJobOpportunity(job) && hasSourceMatchedAdditionalIssuerReview(job, today));
-  assert.equal(additional.length, 42);
+  assert.equal(additional.length, 33);
+  // Nine reviewed employer pages are intentionally template-only noindex, so
+  // they do not count in the indexable editorial backlog and stay noindex.
+  const outsideIndex = additionallyReviewedIssuerSlugs20261017.filter(slug => {
+    const job = getJobOpportunity(slug);
+    return job && !isIndexableJobOpportunity(job);
+  });
+  assert.equal(outsideIndex.length, 9);
   assert.ok(additional.every(job => !originalCompleted.some(old => old.slug === job.slug)));
 });
