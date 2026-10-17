@@ -30,17 +30,17 @@ function stageFor(step: string, index: number) {
   return index === 0 ? "Start" : "Continue";
 }
 
+// Safety hints require an explicit process action, not a passing mention
+// of fees, documents or SIMs that creates inferred requirements.
 function checkpointFor(step: string) {
-  if (/pay|payment|fee|checkout|remita|rrr/i.test(step)) return "Confirm the service, applicant/entity details and amount on the official payment screen before paying. Do not continue from an unsolicited payment link.";
-  if (/upload|attach|document|evidence|certificate|affidavit|photo/i.test(step)) return "Check that every file belongs to the correct applicant/record, is readable and matches the portal prompt before upload.";
-  if (isPhysicalAction(step)) return "Confirm the correct office/centre, date or appointment instruction before travelling, and take the originals where the guide or agency explicitly requires them.";
+  if (/\b(?:pay|paying|checkout|complete (?:a |the )?payment|make (?:a |the )?payment)\b/i.test(step)) return "Confirm the applicant, service and amount on the responsible provider's payment screen before paying. Avoid unsolicited payment links.";
+  if (/\b(?:upload|attach)\b/i.test(step)) return "Check the portal's accepted file type and ensure each selected document belongs to this application.";
+  if (isPhysicalAction(step)) return "Check the office and appointment before travelling; take an original only where explicitly required.";
   return undefined;
 }
-
 function keepFor(step: string) {
-  if (/pay|payment|fee|checkout|remita|rrr/i.test(step)) return "Keep the official receipt, payment reference or transaction ID.";
-  if (/appointment|attend|visit|centre|center|office|biometric|capture/i.test(step)) return "Keep the appointment, acknowledgement or reference you may need at the physical stage.";
-  if (/sms|phone|sim|code|pin/i.test(step)) return "Keep the linked phone/SIM and any official code or confirmation message private and accessible.";
+  if (/\b(?:receipt|acknowledgement|transaction reference|application reference)\b/i.test(step)) return "Keep the official record identified in this step, if one is issued. Do not buy a receipt from an intermediary.";
+  if (/\b(?:one-time password|otp|verification code)\b/i.test(step)) return "Do not disclose authentication codes to third parties.";
   return undefined;
 }
 
