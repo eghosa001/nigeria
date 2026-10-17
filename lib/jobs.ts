@@ -7,6 +7,7 @@ import { applyIssuerCareerReview20261016B } from "@/lib/job-issuer-career-resear
 import { applyMoreIssuerCareerReviews20261016 } from "@/lib/job-issuer-more-reviewed-2026-10-16";
 import { applyIndividualMoniepointRoleResearch20261016 } from "@/lib/job-moniepoint-exact-roles-2026-10-16";
 import { applyTwentyIssuerCareerRoutes20261017 } from "@/lib/job-issuer-twenty-reviews-2026-10-17";
+import { applyRemainingIssuerResearch20261017 } from "@/lib/job-remaining-issuer-research-2026-10-17";
 import { applyThirdAgentIssuerReviews20261017 } from "@/lib/job-issuer-third-agent-reviews-2026-10-17";
 import { applyConcludedIssuerWindows20261017 } from "@/lib/job-concluded-windows-2026-10-17";
 import { verifiedFmnFinalBoardJobs20261012 } from "@/lib/job-growth-wave-13";
@@ -3856,6 +3857,7 @@ export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities
   .map(applyMoreIssuerCareerReviews20261016)
   .map(applyTwentyIssuerCareerRoutes20261017)
   .map(applyThirdAgentIssuerReviews20261017)
+  .map(applyRemainingIssuerResearch20261017)
   .map(applyConcludedIssuerWindows20261017)
   .map(applyCurrentJobCorrections)
   .map(closeExpiredJob)
