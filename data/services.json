@@ -5587,7 +5587,7 @@
       "Recent passport-size photograph",
       "Return ticket",
       "Hotel reservation or host address in Nigeria",
-      "Evidence of sufficient funds, including the bank-statement period required by NIS",
+      "Evidence of sufficient funds, including the 180-day bank statement specified by NIS for the F5A tourism visa.",
       "For a minor, birth certificate and parental consent letter"
     ],
     "steps": [
@@ -5607,14 +5607,14 @@
         "label": "NIS Tourism Visa F5A",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/info-center/tourism-visa-f5a/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "NIS Service Level Agreement 2026",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/wp-content/uploads/2026/04/SERVICE-LEVEL-AGREEMENT-2026_.pdf",
         "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       }
     ],
     "searchTerms": [
@@ -5629,7 +5629,7 @@
       "nigeria-visiting-visa",
       "yellow-card"
     ],
-    "lastVerified": "2026-09-28"
+    "lastVerified": "2026-10-17"
   },
   {
     "slug": "nigeria-business-visa",
@@ -5668,14 +5668,14 @@
         "label": "NIS Business Single Entry Visa F4A",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/info-center/business-single-entry-visa-f4a/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "NIS Service Level Agreement 2026",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/wp-content/uploads/2026/04/SERVICE-LEVEL-AGREEMENT-2026_.pdf",
         "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       }
     ],
     "searchTerms": [
@@ -5690,7 +5690,7 @@
       "nigeria-tourism-visa",
       "nigeria-temporary-work-permit"
     ],
-    "lastVerified": "2026-09-28"
+    "lastVerified": "2026-10-17"
   },
   {
     "slug": "nigeria-visiting-visa",
@@ -5709,7 +5709,7 @@
       "Copy of the Nigerian host's passport or the non-Nigerian host's residence permit",
       "Valid passport with at least 6 months validity and a recent passport-size photograph",
       "Return ticket and hotel reservation or host address in Nigeria",
-      "Evidence of sufficient funds using the bank-statement period required by NIS",
+      "Evidence of sufficient funds, including the 180-day bank statement NIS specifies for the F6A visit visa.",
       "For a minor, birth certificate and parental consent letter"
     ],
     "steps": [
@@ -5729,14 +5729,14 @@
         "label": "NIS Visiting Single Entry Visa F6A",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/info-center/visiting-single-entry-visa-f6a/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "NIS Service Level Agreement 2026",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/wp-content/uploads/2026/04/SERVICE-LEVEL-AGREEMENT-2026_.pdf",
         "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       }
     ],
     "searchTerms": [
@@ -5750,7 +5750,7 @@
       "nigeria-evisa-application",
       "nigeria-tourism-visa"
     ],
-    "lastVerified": "2026-09-28"
+    "lastVerified": "2026-10-17"
   },
   {
     "slug": "nigeria-transit-visa",
@@ -5768,7 +5768,7 @@
       "Valid passport with at least 6 months validity",
       "Recent passport-size photograph",
       "Confirmed onward ticket",
-      "Evidence of sufficient funds using the period required by NIS",
+      "Evidence of sufficient funds, including the 30-day bank statement NIS specifies for the F3B transit visa.",
       "Visa or entry permission for the final destination where applicable",
       "Hotel reservation or host address if staying overnight in Nigeria",
       "For a minor, birth certificate and parental consent letter"
@@ -5790,14 +5790,14 @@
         "label": "NIS Transit Visa F3B",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/info-center/transit-visa-f3b/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "NIS Service Level Agreement 2026",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/wp-content/uploads/2026/04/SERVICE-LEVEL-AGREEMENT-2026_.pdf",
         "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       }
     ],
     "searchTerms": [
@@ -5811,7 +5811,7 @@
       "nigeria-evisa-application",
       "nigeria-tourism-visa"
     ],
-    "lastVerified": "2026-09-28"
+    "lastVerified": "2026-10-17"
   },
   {
     "slug": "nigeria-temporary-work-permit",
@@ -5908,21 +5908,21 @@
         "agency": "UK Visas and Immigration",
         "url": "https://www.gov.uk/standard-visitor/apply-standard-visitor-visa",
         "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "GOV.UK visa application centres",
         "agency": "UK Visas and Immigration",
         "url": "https://www.gov.uk/find-a-visa-application-centre",
         "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "UK visa requirements for international carriers",
         "agency": "UK Visas and Immigration",
         "url": "https://www.gov.uk/government/publications/uk-visa-requirements-list-for-carriers/uk-visa-requirements-for-international-carriers",
         "published": "2026-08-03",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       }
     ],
     "searchTerms": [
@@ -5937,7 +5937,7 @@
       "us-b1-b2-visitor-visa",
       "france-schengen-short-stay-visa"
     ],
-    "lastVerified": "2026-09-28"
+    "lastVerified": "2026-10-17"
   },
   {
     "slug": "us-b1-b2-visitor-visa",
@@ -6061,21 +6061,21 @@
         "agency": "Immigration, Refugees and Citizenship Canada",
         "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/apply-visitor-visa.html",
         "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "IRCC Portal visitor visa application process",
         "agency": "Immigration, Refugees and Citizenship Canada",
         "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/portal-application-process.html",
         "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       },
       {
         "label": "Canada visa application centres",
         "agency": "Immigration, Refugees and Citizenship Canada",
         "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/contact-ircc/offices/find-visa-application-centre.html",
         "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-17"
       }
     ],
     "searchTerms": [
@@ -6090,7 +6090,7 @@
       "us-b1-b2-visitor-visa",
       "australia-visitor-visa-600"
     ],
-    "lastVerified": "2026-09-28"
+    "lastVerified": "2026-10-17"
   },
   {
     "slug": "france-schengen-short-stay-visa",
@@ -10650,9 +10650,9 @@
     "agencySlug": "jamb",
     "feeLabel": "₦2,500 JAMB service fee",
     "feeNote": "JAMB's post-registration e-Facility currently lists ₦2,500 for Change of Course/Institution, with payment processed through the official JAMB route.",
-    "timeline": "JAMB says the service opens after release of official UTME results and remains available until the final institution admission cut-off date.",
+    "timeline": "JAMB states that Change of Course/Institution has a time-limited application window. Check the live e-Facility service and institution admission requirements; no universal closing date is confirmed here.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-17",
     "officialPortal": "https://portal.jamb.gov.ng/changeOfCourse_Inst.htm",
     "requirements": [
       "JAMB profile login and registration number for the candidate",
@@ -10667,7 +10667,7 @@
       "Check the JAMB profile after processing and confirm that the new choice is reflected before relying on it for a school's screening or admission process."
     ],
     "notes": [
-      "JAMB says candidates can change first through fourth choice institutions during the service window.",
+      "The JAMB e-Facility confirms that this is a time-limited correction service. Available choices depend on the live system and institution rules; do not assume all options remain open.",
       "A JAMB change can take time to appear on a university's separate portal; if JAMB is correct but the school is not, contact the institution or JAMB support rather than paying another unofficial agent.",
       "Course and institution changes remain subject to admission requirements and available programmes."
     ],
@@ -10676,13 +10676,13 @@
         "label": "JAMB Change of Course/Institution",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://portal.jamb.gov.ng/changeOfCourse_Inst.htm",
-        "lastChecked": "2026-10-01"
+        "lastChecked": "2026-10-17"
       },
       {
-        "label": "JAMB Support FAQs",
+        "label": "JAMB official correction-of-data services and fees",
         "agency": "Joint Admissions and Matriculation Board",
-        "url": "https://support.jamb.gov.ng/faqs",
-        "lastChecked": "2026-10-01"
+        "url": "https://portal.jamb.gov.ng/correction.htm",
+        "lastChecked": "2026-10-17"
       }
     ],
     "searchTerms": [
@@ -10708,18 +10708,18 @@
     "feeNote": "JAMB's post-registration e-Facility currently lists ₦2,500 for Change of Name. Supporting identity evidence may still be required.",
     "timeline": "Timing depends on payment clearance, supporting evidence and JAMB processing.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-17",
     "officialPortal": "https://portal.jamb.gov.ng/correction.htm",
     "requirements": [
       "JAMB profile and registration information",
-      "Correct identity/name evidence that supports the requested spelling or arrangement",
+      "Identity or name evidence if required by the live JAMB correction transaction; the public Change of Name menu does not prescribe one universal document set.",
       "Official payment for the JAMB Change of Name service"
     ],
     "steps": [
       "Sign in to the JAMB e-Facility profile and open Correction of Data, then select the name-correction option.",
       "Compare the JAMB record with the authoritative identity document and decide the exact spelling or name order that must be corrected.",
       "Generate the JAMB transaction, pay through the official route and keep the payment confirmation.",
-      "Upload or present the corrected name and supporting identity evidence using JAMB's Correction of Data service.",
+      "Complete the official Change of Name transaction and supply supporting documents only where the live JAMB process requests them; the public menu does not establish a compulsory upload for every correction.",
       "Check the JAMB record after processing and make sure the corrected name is consistent with the identity and admission records you will use later."
     ],
     "notes": [
@@ -10732,7 +10732,7 @@
         "label": "JAMB Correction of Data",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://portal.jamb.gov.ng/correction.htm",
-        "lastChecked": "2026-10-01"
+        "lastChecked": "2026-10-17"
       }
     ],
     "searchTerms": [
@@ -10757,7 +10757,7 @@
     "feeNote": "JAMB's post-registration e-Facility currently lists ₦2,500 for Date of Birth correction.",
     "timeline": "Processing depends on payment, supporting civil/identity evidence and completion of the indemnity approval stage.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-17",
     "officialPortal": "https://portal.jamb.gov.ng/correction.htm",
     "requirements": [
       "JAMB profile and candidate registration information",
@@ -10781,7 +10781,7 @@
         "label": "JAMB Correction of Data",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://portal.jamb.gov.ng/correction.htm",
-        "lastChecked": "2026-10-01"
+        "lastChecked": "2026-10-17"
       }
     ],
     "searchTerms": [
@@ -10807,7 +10807,7 @@
     "feeNote": "JAMB's post-registration e-Facility currently lists ₦2,500 for Change of Gender.",
     "timeline": "Processing depends on payment, supporting evidence and the indemnity approval stage.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-17",
     "officialPortal": "https://portal.jamb.gov.ng/correction.htm",
     "requirements": [
       "JAMB profile and registration information",
@@ -10831,7 +10831,7 @@
         "label": "JAMB Correction of Data",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://portal.jamb.gov.ng/correction.htm",
-        "lastChecked": "2026-10-01"
+        "lastChecked": "2026-10-17"
       }
     ],
     "searchTerms": [
@@ -10855,7 +10855,7 @@
     "feeNote": "JAMB's post-registration e-Facility currently lists ₦2,500 for Change of State/L.G.A.",
     "timeline": "Processing depends on payment, supporting origin evidence and completion of the institution-approved indemnity step.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-17",
     "officialPortal": "https://portal.jamb.gov.ng/correction.htm",
     "requirements": [
       "JAMB profile and registration information",
@@ -10879,7 +10879,7 @@
         "label": "JAMB Correction of Data",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://portal.jamb.gov.ng/correction.htm",
-        "lastChecked": "2026-10-01"
+        "lastChecked": "2026-10-17"
       }
     ],
     "searchTerms": [
