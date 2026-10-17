@@ -63,3 +63,19 @@
   .feature-guide-card { scroll-margin-top: 98px; }
 }
 @media (max-width: 360px) { .trip-budget-pair { grid-template-columns: minmax(0,1fr); } }
+
+/* Reader-first service decision support and private application checklist. */
+.journey-evidence-note { margin: 12px 0 0; color: var(--muted); font-size: .9rem; line-height: 1.55; }
+.job-readiness { margin: 24px 0; padding: clamp(16px, 3vw, 26px); border: 1px solid var(--line); border-radius: 18px; background: var(--surface); }
+.job-readiness h2 { margin: 5px 0 12px; }
+.job-readiness p { color: var(--muted); line-height: 1.6; }
+.job-readiness-list { display: grid; gap: 10px; margin: 18px 0; }
+.job-readiness-check { display: flex; align-items: flex-start; gap: 12px; padding: 13px; border: 1px solid var(--line); border-radius: 11px; cursor: pointer; line-height: 1.5; }
+.job-readiness-check input { margin-top: 4px; width: 19px; height: 19px; flex: 0 0 19px; accent-color: var(--green); }
+.job-readiness-footer { display: flex; flex-wrap: wrap; gap: 8px 16px; padding: 12px 0; border-top: 1px solid var(--line); }
+.job-readiness-footer span { color: var(--muted); }
+.job-readiness-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
+.job-readiness-actions a { text-decoration: underline; text-underline-offset: 3px; }
+.job-readiness-actions button { border: 1px solid var(--line); background: transparent; border-radius: 9px; padding: 10px 14px; cursor: pointer; }
+.job-readiness :is(a,button,input):focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+@media (max-width: 600px) { .job-readiness-actions { align-items: stretch; flex-direction: column; } .job-readiness-actions :is(a,button) { min-height: 44px; display: flex; align-items: center; } }
