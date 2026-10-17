@@ -2881,6 +2881,12 @@ export function canDisplayEntertainmentArtwork(title: EntertainmentTitle) {
   );
 }
 
+/** External publisher art cannot be reused merely because the source is credited. */
+export function getRightsSafeEntertainmentImageUrl(title: EntertainmentTitle, base: string) {
+  if (canDisplayEntertainmentArtwork(title) && title.artwork) return title.artwork.url;
+  return base + "/entertainment/poster/" + encodeURIComponent(title.slug);
+}
+
 export function getFeaturedCast(title: EntertainmentTitle) {
   return (title.featuredCast?.length ? title.featuredCast : title.cast).slice(0, 3);
 }
