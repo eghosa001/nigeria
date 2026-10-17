@@ -15,36 +15,6 @@ export type RequirementDetail = {
   format?: string;
 };
 
-const stopWords = new Set([
-  "with", "from", "that", "this", "your", "valid", "current", "official", "required",
-  "where", "applicant", "candidate", "details", "document", "documents", "service",
-]);
-
-function tokens(value: string) {
-  return value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, " ")
-    .split(/\s+/)
-    .filter((token) => token.length > 3 && !stopWords.has(token));
-}
-
-function matchingStep(service: Service, item: string) {
-  const words = tokens(item);
-  let bestIndex = -1;
-  let bestScore = 0;
-
-  service.steps.forEach((step, index) => {
-    const text = step.toLowerCase();
-    const score = words.reduce((total, word) => total + (text.includes(word) ? 1 : 0), 0);
-    if (score > bestScore) {
-      bestScore = score;
-      bestIndex = index;
-    }
-  });
-
-  return bestScore > 0 ? { index: bestIndex, step: service.steps[bestIndex] } : undefined;
-}
-
 function kindFor(item: string): RequirementKind {
   if (/payment|receipt|transaction|remita|rrr|fee evidence/i.test(item)) return "Payment / transaction evidence";
   if (/passport|certificate|slip|letter|affidavit|publication|photograph|photo|report|statement|extract|form|card|licen[cs]e|transcript|result|birth record|declaration|proof|identification|\bID\b/i.test(item)) return "Document";
@@ -108,29 +78,24 @@ function purposeFor(item: string, service: Service) {
   return undefined;
 }
 
-function formatFor(item: string, step?: string, stepNumber?: number) {
-  const combined = (item + " " + (step ?? "")).toLowerCase();
-  if (/original/.test(combined)) return "Original is explicitly referenced in the guide. Take the original to the relevant verification or physical stage.";
-  if (/photocopy|copy of|copies/.test(combined)) return "A copy/photocopy is explicitly referenced in the guide. Keep the source document available as well.";
-  if (/upload/.test(combined) && stepNumber) return "A digital upload is explicitly part of step " + stepNumber + ". Prepare a clear file that follows the portal's size/format rules.";
-  if (/print|printed/.test(combined) && stepNumber) return "A printed item is explicitly referenced in step " + stepNumber + ". Keep the printout legible and complete.";
-  if (/bring|take|present|attend|visit/.test(step ?? "") && stepNumber) return "This is used during the physical stage described in step " + stepNumber + ".";
+// File format is only specified when the requirement itself states it.
+// Reading an unrelated "upload" or "bring" verb in a nearby step is not
+// evidence that this particular document must be copied or uploaded.
+function formatFor(item: string) {
+  if (/\boriginal\b/i.test(item)) return "The requirement explicitly calls for an original.";
+  if (/\b(?:photocopy|copies|copy of)\b/i.test(item)) return "The requirement explicitly calls for a copy.";
+  if (/\bupload\b/i.test(item)) return "The requirement explicitly calls for an upload; follow the official file-format instructions.";
+  if (/\bprint(?:ed|out)?\b/i.test(item)) return "The requirement explicitly calls for a printed item.";
   return undefined;
 }
 
 export function getRequirementDetails(service: Service): RequirementDetail[] {
-  return service.requirements.map((item) => {
-    const match = matchingStep(service, item);
-    const whenUsed = match
-      ? "Most directly connected to step " + (match.index + 1) + ": " + match.step
-      : undefined;
-
-    return {
-      item,
-      kind: kindFor(item),
-      why: purposeFor(item, service),
-      whenUsed,
-      format: formatFor(item, match?.step, match ? match.index + 1 : undefined),
-    };
-  });
+  // Keep the original verified requirement text. Do not infer a step number
+  // from loose keyword overlap: that previously repeated unrelated entire steps.
+  return service.requirements.map((item) => ({
+    item,
+    kind: kindFor(item),
+    why: purposeFor(item, service),
+    format: formatFor(item),
+  }));
 }
