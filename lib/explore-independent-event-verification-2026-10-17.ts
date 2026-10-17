@@ -155,4 +155,61 @@ export const independentlyCheckedEvents20261017: Record<string, EventCorrection>
       detail: "For technical sessions, plan around 9–10 November at Sheraton Ikeja; 8 November is largely arrivals and 11 November departures. The organiser lists early-bird registration only through 15 October and a later registration period through 5 November. Confirm the actual delegate invoice and conference-secretariat address rather than paying an unofficial representative.",
     },
   },
+  "hallelujah-festival-lagos-october-2026": {
+    source: {
+      label: "K24 Digital — independent 6 October coverage of Hallelujah Challenge and festival",
+      href: "https://k24.digital/entertainment/celebrity/hallelujah-challenge-all-you-need-to-know-about-nathaniel-basseys-midnight-worship",
+    },
+    context: "K24 Digital independently reported the October 2026 Hallelujah Challenge as an online worship series running 5–30 October, with the physical all-night Hallelujah Festival advertised for Friday 30 October in Ikeja. Joining an 11:59pm online Challenge broadcast is a different activity from entering the Lagos festival venue, whose exact gate and opening time are still organiser-controlled.",
+    planning: {
+      label: "Do not mistake international registration for a festival ticket or visa",
+      detail: "The organiser's online international-attendee form is for people travelling to Nigeria and does not provide visas, paid tickets, free accommodation or guaranteed entry. Admission is advertised as free; confirm the actual event gate address, start time and public safety rules before travelling to Ikeja, and use the official streaming channels if you are not attending in person.",
+    },
+  },
+  "cocoa-xp-dotti-abuja-2026": {
+    source: {
+      label: "Bandsintown — independent DOTTi The Deity Café One concert schedule",
+      href: "https://www.bandsintown.com/e/108939068",
+    },
+    summary: "COCOA XP with DOTTi The Deity was advertised for Café One Abuja in October 2026, but the dates conflict: an Abuja event calendar says Friday 16 October while Bandsintown and music platforms list Saturday 17 October. Confirm the actual date with the organiser; do not buy an assumed second-night ticket.",
+    context: "The Visit Abuja listing names a COCOA XP performance at Café One in the CBD for Friday 16 October, but the independent artist-concert directory Bandsintown and the music-service event feed both show Saturday 17 October, 6pm. As of 17 October, these competing listings do not prove two performances or confirm whether Friday's concert actually took place.",
+    planning: {
+      label: "Resolve the 16-versus-17 October discrepancy before leaving",
+      detail: "Ask the artist or concert promoter which October night the Café One performance belongs to and whether an original ticket covers that date. Bandsintown's 17 October listing is independent corroboration of the named location, not authority to override the organiser's 16 October listing or sell tickets for an unconfirmed extra show.",
+    },
+  },
+  "abuja-study-abroad-expo-2026": {
+    source: {
+      label: "Lekkside Education Fair — new Abuja international education fair date",
+      href: "https://educationfair.com.ng/events/abuja-international-education-fair/",
+    },
+    summary: "The former 12 October 2026 Abuja Study Abroad Expo listing has been moved to a new Thursday 18 February 2027 fair at Transcorp Hilton Abuja. Do not travel or register against the superseded October date; check the organiser's current 2027 admissions and exhibitor information.",
+    context: "The Lekkside Education Fair's updated Abuja event page promotes a Thursday 18 February 2027 education fair at Transcorp Hilton, while an older 2026 Eventbrite listing and tourism calendar still show Monday 12 October 2026. The city calendar has subsequently labelled that October date rescheduled. An old free-registration link is not proof that the 2026 fair proceeded or that it grants entry in 2027.",
+    planning: {
+      label: "Use the 2027 registration, not the expired October 2026 fair",
+      detail: "Contact Lekkside through its current educationfair.com.ng or lekside.com page and check the 18 February 2027 time, institutions and accepted attendee registration. Do not pay an unknown agent for reserved visa approval or assume the old October 2026 registration has transferred to the new date without organiser confirmation.",
+    },
+  },
+  "cea-nigeria-abuja-2026": {
+    source: {
+      label: "CEMS Tradeshow — CEA Nigeria 2026 original Eventbrite ticket listing",
+      href: "https://www.eventbrite.com/e/controlled-environment-agriculture-expo-cea-nigeria-2026-tickets-1985049446330",
+    },
+    context: "The CEMS Tradeshow Eventbrite ticket page now lists the Controlled Environment Agriculture Expo from Tuesday 17 November at Abuja Trade & Convention Centre, matching CEA Nigeria's newer November brochure. Older visitor and exhibition manuals, as well as some third-party fairs calendars, still give 25–27 August. Those old August dates must not be used to plan an November visit, and the organisers' latest published exhibitor terms remain the authority.",
+    planning: {
+      label: "Check the 17–19 November exhibitor timetable before paying",
+      detail: "Use CEMS's named Eventbrite event or current CEA Nigeria brochure to confirm the November dates, stand/exhibitor conditions, and Lugbe venue. If your appointment was based on August 2026 marketing materials, ask whether the event was rescheduled rather than treating the two editions as separate public exhibitions.",
+    },
+  },
+  "nifafest-abuja-2026": {
+    source: {
+      label: "Simpson Global Media — independently reported NIFAFEST dates and venues, October 2026",
+      href: "https://www.simpsonglobalmedia.com.ng/2026/10/abuja-fashion-festival-to-spotlight.html",
+    },
+    context: "Independent October coverage of Nigeria International Fashion Festival describes a three-day plan spanning 15–17 October in Abuja, with opening exhibitions and the 16 October stakeholder empowerment seminar in Garki before a separate 17 October finale in Maitama. Those are different programme venues; the published agenda is not evidence that all events happened or that a three-day pass covers every session.",
+    planning: {
+      label: "On 17 October, check the final venue and admission specifically",
+      detail: "The organiser places the 17 October recognition finale at the National Universities Commission auditorium in Maitama, not the Cyprian Ekwensi Centre used for earlier activities. Verify today's programme, available attendee admission and last entry with NIFAFEST before travelling; the 15–16 October schedule has already passed.",
+    },
+  },
 };
