@@ -11,6 +11,7 @@ import { verifiedPortalSlugs20261016 } from "../lib/job-issuer-portals-reviewed-
 import { issuerCareerReviewSlugs20261016B } from "../lib/job-issuer-career-research-2026-10-16-b";
 import { checkedIssuerCareerSlugs20261016, checkedIssuerCareers20261016 } from "../lib/job-issuer-more-reviewed-2026-10-16";
 import { individuallyCheckedMoniepointRoles20261016, moniepointRoleFollowups20261017 } from "../lib/job-moniepoint-exact-roles-2026-10-16";
+import { moniepointFirstPublishedEvidence20261017, hasSourceMatchedMoniepointNoDeadlineReview } from "../lib/job-moniepoint-first-published-evidence-2026-10-17";
 
 function assert(condition: unknown, message: string): asserts condition {
   if (!condition) throw new Error(message);
@@ -62,9 +63,10 @@ for (const slug of individuallyCheckedMoniepointRoles20261016) {
     slug + ": link should point to the actual official job description.");
   const followup = moniepointRoleFollowups20261017[slug];
   const checkedDate = followup ? "2026-10-17" : "2026-10-16";
+  const originalAtsEvidence = moniepointFirstPublishedEvidence20261017[slug];
   assert(item.verifiedAt === checkedDate &&
       item.applicationSteps.length === (followup ? 5 : 4) &&
-      item.sourceNotes.length === (followup ? 5 : 3) &&
+      item.sourceNotes.length === (originalAtsEvidence ? 7 : followup ? 5 : 3) &&
       item.sources.some(source => source.url === item.officialUrl && source.lastChecked === checkedDate),
     slug + ": individual issuer source and role-specific next steps missing.");
   if (followup) {
@@ -74,6 +76,8 @@ for (const slug of individuallyCheckedMoniepointRoles20261016) {
         source.lastChecked === "2026-10-17"),
       slug + ": 17 October issuer-specific follow-up evidence must remain visible.");
   }
+  if (originalAtsEvidence) assert(hasSourceMatchedMoniepointNoDeadlineReview(item,"2026-10-17"),
+    slug + ": ATS original publication and null-deadline provenance must remain independently attributable.");
   assert(!item.deadline && !item.jobPostingAuthorization,
     slug + ": do not invent a closing date or structured job-publishing authorization.");
 }

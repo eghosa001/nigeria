@@ -14,6 +14,7 @@ import { applyNineCareerIssuerDecisions20261017 } from "@/lib/job-nine-issuer-ap
 import { applyConcludedIssuerWindows20261017 } from "@/lib/job-concluded-windows-2026-10-17";
 import { applyRemainingDirectoryReviews20261017 } from "@/lib/job-final-directory-reviews-2026-10-17";
 import { applyTwoRemainingDirectoryReviews20261017 } from "@/lib/job-last-two-directories-2026-10-17";
+import { applyMoniepointFirstPublishedEvidence20261017 } from "@/lib/job-moniepoint-first-published-evidence-2026-10-17";
 import { verifiedFmnFinalBoardJobs20261012 } from "@/lib/job-growth-wave-13";
 import { verifiedFmnOperationsJobs20261012 } from "@/lib/job-growth-wave-12";
 import { verifiedFmnRoles20261012 } from "@/lib/job-growth-wave-11";
@@ -3878,7 +3879,8 @@ export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities
     // Keep the original employer URL as the factual provenance and never
     // invent jobPostingAuthorization from a metadata-only confirmation.
     return { ...item, posting: evidence.posting };
-  });
+  })
+  .map(applyMoniepointFirstPublishedEvidence20261017);
 
 export const governmentOpportunities = jobOpportunities.filter((item) => item.sector === "Government");
 export const privateOpportunities = jobOpportunities.filter((item) => item.sector === "Private");
