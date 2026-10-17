@@ -29,6 +29,7 @@ import { hasCompletedRemainingDirectoryReview } from "../lib/job-final-directory
 import { hasCompletedTwoRemainingDirectoryReviews20261017 } from "../lib/job-last-two-directories-2026-10-17";
 import { careerGuides } from "../lib/career-guides";
 import { hasVerifiedUndatedRoleApplicationReview20261017 } from "../lib/job-fifteen-exact-issuer-checks-2026-10-17";
+import { hasCompletedMoniepointAtsReview20261017, originalMoniepointAtsProof20261017 } from "../lib/job-moniepoint-greenhouse-publication-2026-10-17";
 import { getEffectiveJobStatus, todayIsoNigeria } from "../lib/job-runtime";
 import { MIN_INDEXABLE_AGENCY_GUIDES, shouldIndexAgencyHub } from "../lib/agency-indexing";
 
@@ -218,12 +219,17 @@ for (const job of jobOpportunities) {
     issues.push(blocker("closed-vacancy-indexable", "Closed one-off opening must not remain in active search sitemaps."));
   if (job.kind === "vacancy" && status === "open" && ageDays(job.verifiedAt) > 14)
     issues.push(blocker("open-vacancy-check-expired", "Current open status needs a recent issuer-level source check."));
+  const moniepointAtsEvidenceMatched = hasCompletedMoniepointAtsReview20261017(job, now);
   if (job.kind === "vacancy" && status === "open" && !job.deadline &&
-      !hasVerifiedUndatedRoleApplicationReview20261017(job, now))
+      !hasVerifiedUndatedRoleApplicationReview20261017(job, now) &&
+      !moniepointAtsEvidenceMatched)
     issues.push(review("open-no-deadline-verification",
       "No employer closing date was published. Require recent, exact role and Apply-route evidence with an honest no-rolling-intake caution."));
-  if (job.kind === "vacancy" && status === "open" && !job.posting)
-    issues.push(review("job-posting-provenance", "Verify original post date, actual role detail and application source."));
+  if (job.kind === "vacancy" && status === "open" &&
+      (!job.posting ||
+       (Object.hasOwn(originalMoniepointAtsProof20261017, job.slug) && !moniepointAtsEvidenceMatched)))
+    issues.push(review("job-posting-provenance",
+      "Verify exact original issuer post date, distinct role identity and current application route; later edits are not original publication dates."));
   if (status === "closed" && job.statusLabel.toLowerCase().includes("open"))
     issues.push(review("stale-status-label", "Even archived copy must not promise currently open applications."));
   if (job.kind === "career-page" && !hasCompletedIssuerDirectoryReview(job, now) && !hasDocumentedCrossAgentIssuerReview(job, now) && !hasVerifiedEarlierIssuerDirectoryReview(job, now) && !hasCompletedRemainingDirectoryReview(job, now) && !hasCompletedTwoRemainingDirectoryReviews20261017(job, now))
