@@ -10,6 +10,8 @@ import { JsonLd } from "@/components/json-ld";
 import { ShareWatch } from "@/components/share-watch";
 import { ServiceJourney } from "@/components/service-journey";
 import { ServiceContext } from "@/components/service-context";
+import { ServiceScenarios } from "@/components/service-scenarios";
+import { getServiceScenarioDossier } from "@/lib/service-scenario-dossiers-2026-10-17";
 import { ServiceRequirements } from "@/components/service-requirements";
 import { ServiceSteps } from "@/components/service-steps";
 import { ProcessTracker } from "@/components/process-tracker";
@@ -246,9 +248,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="section guide-main-section">
         <div className="container guide-layout">
           <article className="guide-content">
-            <GuideQuickNav showQuickAnswers={searchAnswers.length > 0} showAftercare={hasExplicitServiceGuidance(service.slug)} />
+            <GuideQuickNav showQuickAnswers={searchAnswers.length > 0} showAftercare={hasExplicitServiceGuidance(service.slug)} showScenarios={getServiceScenarioDossier(service).length > 0} />
 
             <ServiceJourney service={service} />
+
+            <ServiceScenarios service={service} />
 
             <ServiceContext service={service} />
 
