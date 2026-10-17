@@ -101,13 +101,14 @@ export const individuallyCheckedMoniepointRoles20261016 = Object.keys(issuerRole
 export function applyIndividualMoniepointRoleResearch20261016(item: CareerOpportunity): CareerOpportunity {
   const reviewed = issuerRoleEvidence[item.slug];
   if (!reviewed || item.kind !== "vacancy" || !item.officialUrl.includes("/jobs/" + reviewed.greenhouseId)) return item;
+  const followup = moniepointRoleFollowups20261017[item.slug];
   const sourceUrl = "https://moniepoint.com/careers/roles/" + reviewed.greenhouseId;
-  const sources = item.sources.filter(source => source.url !== item.officialUrl);
+  const sources = item.sources.filter(source => source.url !== item.officialUrl)
+    .map(source => followup && source.url === sourceUrl ? {...source,lastChecked:"2026-10-17"} : source);
   if (!sources.some(source => source.url === sourceUrl)) {
-    sources.push({ label: "Moniepoint Inc. — employer-hosted individual role and qualification details", url: sourceUrl, lastChecked: "2026-10-16" });
+    sources.push({ label: "Moniepoint Inc. — employer-hosted individual role and qualification details", url: sourceUrl, lastChecked: followup ? "2026-10-17" : "2026-10-16" });
   }
   const remainsUnverified = item.status === "unverified" || item.status === "closed";
-  const followup = moniepointRoleFollowups20261017[item.slug];
   if (followup && !sources.some(source => source.url === "https://moniepoint.com/careers")) {
     sources.push({label:"Moniepoint original employer careers board — roles and location filters may change",url:"https://moniepoint.com/careers",lastChecked:"2026-10-17"});
   }
@@ -119,7 +120,9 @@ export function applyIndividualMoniepointRoleResearch20261016(item: CareerOpport
     summary: reviewed.answer,
     statusLabel: remainsUnverified
       ? "Individual employer role page found — application availability not independently verified"
-      : "Named employer role and Apply link checked 16 October 2026 — confirm form remains active",
+      : followup
+        ? "Named employer role checked 17 October 2026 — final application acceptance and deadline unverified"
+        : "Named employer role and Apply link checked 16 October 2026 — confirm form remains active",
     nextMilestone: "No employer closing date has been independently verified; check the exact listing and application form before submitting.",
     applicationSteps: [
       "Open Moniepoint's issuer-hosted " + reviewed.roleName + " page, not a general employer or job-board landing page.",
