@@ -13938,7 +13938,7 @@ const priorBatch3ExploreGuides: ExploreGuide[] = priorIndependentHeritageReviewG
   };
 });
 
-// Independently checked route-specific visitor decisions for the next twenty
+// Independently checked route-specific visitor decisions for the next twenty-eight
 // existing pages. Keep earlier corrections and canonical slugs unchanged.
 export const exploreGuides: ExploreGuide[] = priorBatch3ExploreGuides.map(guide => {
   const reviewed = furtherIndependentVisitorEvidence20261017[guide.slug];
