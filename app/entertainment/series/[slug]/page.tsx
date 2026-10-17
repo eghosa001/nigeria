@@ -28,12 +28,14 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   const {slug}=await params;
   const item=getSeriesTitle(slug);
   if(!item) return {};
-  const description=item.slug==="once-upon-a-village"
-    ? "Once Upon a Village cast, episode status and official RuthKadiri247 links. Follow the 2026 Nigerian series and open verified episodes."
-    : `${item.title} (${item.year}) Nigerian series: cast, story, release status and official where-to-watch information. ${item.synopsis}`;
-  const seoTitle=item.slug==="once-upon-a-village"
-    ? "Once Upon a Village Cast, Episodes & Where to Watch"
-    : item.title+" Nigerian Series: Cast, Episodes & Where to Watch";
+  // Short search snippets refer to the exact series; detailed context stays
+  // on the page, rather than duplicating a full synopsis in the meta tag.
+  const synopsis = item.synopsis.replace(/\\s+/g, " ").trim();
+  const prefix = item.title + " (" + item.year + "): cast, episodes and verified viewing sources. ";
+  const space = Math.max(0, 150 - prefix.length);
+  const summary = synopsis.length > space ? synopsis.slice(0, space).replace(/\\s+\\S*$/, "").trimEnd() + "…" : synopsis;
+  const description = prefix + summary;
+  const seoTitle = item.title + " (" + item.year + "): Cast & Episodes";
   return {
     title:seoTitle,
     description,
