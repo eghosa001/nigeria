@@ -1,0 +1,31 @@
+# Official-source verification batch — 17 October 2026
+
+## Method and limitations
+Reviewed the publicly retrievable source content for the exact issuer and service category on 2026-10-17. The pages and government PDF were retrieved through web search and document index tools; some snapshots were previously crawled (roughly 3 weeks to 2 months before this review). **This is a desk review of the published official information, not a fresh login to every transactional portal, not real-time fee checkout, and not proof that every office is open today.** Fee/payment instructions and live application windows still must be confirmed on the issuer's active form.
+
+The 11 selected records have primary agency evidence for their substantive requirements, application process, published fees where stated, and/or statutory validity windows. Source check timestamps were updated **only** for the 20 official links considered during this batch (replacing an inaccessible JAMB FAQ with the official JAMB Correction of Data price menu). Other records retain their older actual source-check dates; no site-wide mass update occurred.
+
+## Evidence and actions
+
+| Service slug(s) | Issuer evidence read on 2026-10-17 | Specific checks, corrections |
+| --- | --- | --- |
+| jamb-change-course-institution | [JAMB Change of Course/Institution instructions](https://portal.jamb.gov.ng/changeOfCourse_Inst.htm) and [JAMB Correction of Data menu](https://portal.jamb.gov.ng/correction.htm) | ₦2,500 official service price, unique profile, transaction ID and payment gateway; JAMB calls the service **time limited**, without proving any fixed final deadline. Changed timeline and dropped an unjustified all-four-choices guarantee; replaced an inaccessible general FAQ source with the official price menu. |
+| jamb-change-name | [JAMB Correction of Data menu](https://portal.jamb.gov.ng/correction.htm) | ₦2,500; correction of spelling or name arrangement. The public listing **does not prescribe the same upload/document package for all changes**. Corrected both requirements and transaction step to be explicitly conditional. |
+| jamb-correct-date-of-birth | Same official JAMB menu | ₦2,500 and required supporting documents / institution-approved indemnity form. |
+| jamb-correct-gender | Same official JAMB menu | ₦2,500; *supporting evidence may be required*, institution approval/indemnity as published. |
+| jamb-correct-state-lga | Same official JAMB menu | ₦2,500 and supporting documents/institution approval. |
+| uk-standard-visitor-visa | [GOV.UK main application guide](https://www.gov.uk/standard-visitor/apply-standard-visitor-visa), [VAC directory](https://www.gov.uk/find-a-visa-application-centre), [2026 UK visa-national list](https://www.gov.uk/government/publications/uk-visa-requirements-list-for-carriers/uk-visa-requirements-for-international-carriers) | £135 standard 6-month visit visa, earliest 3-month application, normally 3-week decision after biometrics, Nigerian visa-national status and linked authorised VAC directory. No appointment availability assumed. |
+| canada-visitor-visa | [IRCC application guide](https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/apply-visitor-visa.html), [IRCC Portal guidance](https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/portal-application-process.html), [IRCC VAC directory](https://www.canada.ca/en/immigration-refugees-citizenship/corporate/contact-ircc/offices/find-visa-application-centre.html) | CAD 100 visitor application, CAD 85 biometrics where required; electronic passport copy and personalised checklist; official Nigeria VAC listing includes Abuja and Lagos. IRCC offers portal account workflows; no current VAC appointment time asserted. |
+| nigeria-tourism-visa | [NIS F5A guide](https://immigration.gov.ng/info-center/tourism-visa-f5a/) and [NIS SLA 2026, PDF pp. 23–24](https://immigration.gov.ng/wp-content/uploads/2026/04/SERVICE-LEVEL-AGREEMENT-2026_.pdf) | Tourist-only, 90-day visa validity, single 30-day stay, 180-day bank statement, 48-hour service *target only in no-local-objection cases*; added exact statement period. |
+| nigeria-business-visa | [NIS F4A guide](https://immigration.gov.ng/info-center/business-single-entry-visa-f4a/) and [NIS SLA 2026, PDF pp. 21–22](https://immigration.gov.ng/wp-content/uploads/2026/04/SERVICE-LEVEL-AGREEMENT-2026_.pdf) | Host invitation and CAC evidence, permitted business visits not employment, 30-day stay, same conditional 48-hour SLA. |
+| nigeria-visiting-visa | [NIS F6A guide](https://immigration.gov.ng/info-center/visiting-single-entry-visa-f6a/) and [NIS SLA 2026, PDF pp. 24–25](https://immigration.gov.ng/wp-content/uploads/2026/04/SERVICE-LEVEL-AGREEMENT-2026_.pdf) | Host accepting immigration responsibility; host ID, 180-day bank statement, 30-day stay, conditional SLA; added exact statement period. |
+| nigeria-transit-visa | [NIS F3B guide](https://immigration.gov.ng/info-center/transit-visa-f3b/) and [NIS SLA 2026, PDF pp. 20–21](https://immigration.gov.ng/wp-content/uploads/2026/04/SERVICE-LEVEL-AGREEMENT-2026_.pdf) | Onward-ticket and final destination requirements, stays up to 7 days, 30-day bank statement, conditional SLA; added exact statement period. |
+
+## Explicitly not reverified
+- **NELFUND:** public landing page is highly client-side and returns loading placeholders; I did not verify the full student loan transaction / funding rules.
+- **INEC PVC portal:** retrieved page returned an internal error.
+- **France visa submission in Nigeria:** destination submission page was not retrievable, so site-specific appointment routing cannot be certified; generic EU fee page alone is insufficient for full Nigeria guide re-verification.
+- **NYSC and other older pages:** not exhaustively checked in this batch.
+- **Other PDFs and payment pages:** no live portal transactions attempted.
+
+**Do not set these unresolved records to 17 October unless separately rechecked.** Their entries remain on the editorial freshness queue. The source review date reflects review of available official published content; it is not a guarantee of current appointment availability, fee checkout or approval by Google AdSense.
