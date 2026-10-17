@@ -24,3 +24,8 @@ test("Spotify Nigeria SERP title conveys geographic intent without freezing chan
   assert.match(serviceSeo, /"spotify-premium-nigeria": "Spotify Premium Nigeria \{year\}: Prices, Plans & Payment"/);
   assert.match(serviceSeo, /"spotify-premium-nigeria": "Compare Spotify Premium Nigeria prices:/);
 });
+
+test("WAEC certificate collection targets school and private collection without an invented universal fee", () => {
+  assert.match(serviceSeo, /"waec-collect-certificate": "WAEC Certificate Collection \\{year\\}: School vs Private"/);
+  assert.match(serviceSeo, /private candidates contact the WAEC office for their exam state/);
+});
