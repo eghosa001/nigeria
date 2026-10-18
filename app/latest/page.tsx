@@ -6,6 +6,7 @@ import { exploreGuides } from "@/lib/explore";
 import { jobOpportunities } from "@/lib/jobs";
 import { seriesLastChecked, seriesTitles } from "@/lib/series";
 import { indexableYouTubeMovies } from "@/lib/youtube-library";
+import { NigeriaTrendsBackfill } from "@/components/nigeria-trends-backfill";
 
 export const metadata: Metadata = {
   title: "Latest Nigeria Movies, Services, Travel & Job Updates",
@@ -45,6 +46,8 @@ export default function LatestPage() {
         <span className="eyebrow">Latest across Nigeria</span>
         <h1>What is new and worth checking now.</h1>
         <p className="page-intro">Fresh releases, current service changes, seasonal travel plans and verified recruitment updates across all four MyNigeriaGuide pillars.</p>
+
+        <NigeriaTrendsBackfill />
 
         <div className="jobs-topic-links top-gap">
           <Link href="/entertainment/movies/october-2026">October 2026 Nigerian movies</Link>
