@@ -16,6 +16,8 @@ export type RequirementDetail = {
 };
 
 function kindFor(item: string): RequirementKind {
+  // Numeric fields in an online lookup are not physical passport documents.
+  if (/\b(?:Application|Reference) Number\b/i.test(item)) return "Identity / account detail";
   if (/payment|receipt|transaction|remita|rrr|fee evidence/i.test(item)) return "Payment / transaction evidence";
   if (/passport|certificate|slip|letter|affidavit|publication|photograph|photo|report|statement|extract|form|card|licen[cs]e|transcript|result|birth record|declaration|proof|identification|\bID\b/i.test(item)) return "Document";
   if (/\bNIN\b|\bBVN\b|email|phone|gsm|number|code|pin|e-pin|serial|matric|account|username|password|reference|date of birth|\bDOB\b|address/i.test(item)) return "Identity / account detail";
@@ -82,7 +84,9 @@ function purposeFor(item: string, service: Service) {
 // Reading an unrelated "upload" or "bring" verb in a nearby step is not
 // evidence that this particular document must be copied or uploaded.
 function formatFor(item: string) {
-  if (/\boriginal\b/i.test(item)) return "The requirement explicitly calls for an original.";
+  // "Original confirmation email" denotes the source message, not a
+  // physical original that must be presented to the agency.
+  if (/\boriginal\s+(?:valid\s+|current\s+|signed\s+)?(?:passport|certificate|document|identification|ID\s+card|licen[cs]e|transcript|diploma|birth\s+record|affidavit)\b/i.test(item)) return "The requirement explicitly calls for an original document.";
   if (/\b(?:photocopy|copies|copy of)\b/i.test(item)) return "The requirement explicitly calls for a copy.";
   if (/\bupload\b/i.test(item)) return "The requirement explicitly calls for an upload; follow the official file-format instructions.";
   if (/\bprint(?:ed|out)?\b/i.test(item)) return "The requirement explicitly calls for a printed item.";
@@ -92,10 +96,16 @@ function formatFor(item: string) {
 export function getRequirementDetails(service: Service): RequirementDetail[] {
   // Keep the original verified requirement text. Do not infer a step number
   // from loose keyword overlap: that previously repeated unrelated entire steps.
+  // Preserve every published requirement; source-backed amendments must
+  // be made to the actual service record, not silently hidden in presentation.
   return service.requirements.map((item) => ({
     item,
     kind: kindFor(item),
-    why: purposeFor(item, service),
+    why: service.slug === "passport-application-tracking" && /Application Number/i.test(item)
+      ? "Required by NIS to find the submitted passport application."
+      : service.slug === "passport-application-tracking" && /Reference Number/i.test(item)
+      ? "Required with the Application Number to retrieve the application status."
+      : purposeFor(item, service),
     format: formatFor(item),
   }));
 }
