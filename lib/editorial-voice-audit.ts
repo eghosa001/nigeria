@@ -13,6 +13,7 @@ const VOICE_RULES = [
   { id: "stock-inflation", label: "Generic promotional language", pattern: /\b(?:delve into|tapestry of|pivotal role|game[- ]changer|remarkable journey|captivating experience|unparalleled experience|hidden gem|bustling hub|vibrant tapestry)\b/gi },
   { id: "empty-contrast", label: "Formulaic contrast to check", pattern: /\b(?:not just|not merely|more than just)\b.{0,65}\b(?:but also|but (?:a|an|the)|it'?s)\b/gi },
   { id: "text-narration", label: "Article narration", pattern: /\b(?:this (?:article|guide|post) (?:will|aims to)|in this (?:article|guide) we(?:'ll| will))\b/gi },
+  { id: "self-referential-guide", label: "Guide narrates itself instead of answering", pattern: /\bthis guide (?:explains|will (?:explain|show)|shows you|provides a look at|covers everything)\b/gi },
   { id: "generic-importance", label: "Unsupported significance wording", pattern: /\b(?:stands as a testament|underscores the importance|serves as a reminder|a must[- ]visit|undoubtedly one of|needless to say)\b/gi },
 ] as const;
 
