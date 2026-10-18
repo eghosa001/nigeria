@@ -29,7 +29,7 @@ Use this skill whenever authoring or substantively editing public-facing prose i
 
 ## Automated assistance
 
-`npm run audit:voice` produces a small, **read-only** sampled shortlist for editors. A flagged expression is never, on its own, proof of AI authorship, low quality, or a factual error. Do not automatically rewrite on match. Include natural-language review in every substantive editorial PR; never claim automated copy has been human-reviewed.
+`npm run audit:voice` scans the **full public editorial catalogue and static landing-page text**, then displays a short review shortlist by default. Run `npm run audit:voice -- --json --all` to export **every flagged record** in machine-readable form. The scan is read-only; corrections need source-safe editorial judgment, and generic text is not enough reason to rewrite an otherwise useful page. A flagged expression is never, on its own, proof of AI authorship, low quality, or a factual error. Do not automatically rewrite on match. Include natural-language review in every substantive editorial PR; never claim automated copy has been human-reviewed.
 
 ## Attribution
 
