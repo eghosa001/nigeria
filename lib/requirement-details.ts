@@ -16,6 +16,8 @@ export type RequirementDetail = {
 };
 
 function kindFor(item: string): RequirementKind {
+  // Numeric fields in an online lookup are not physical passport documents.
+  if (/\b(?:Application|Reference) Number\b/i.test(item)) return "Identity / account detail";
   if (/payment|receipt|transaction|remita|rrr|fee evidence/i.test(item)) return "Payment / transaction evidence";
   if (/passport|certificate|slip|letter|affidavit|publication|photograph|photo|report|statement|extract|form|card|licen[cs]e|transcript|result|birth record|declaration|proof|identification|\bID\b/i.test(item)) return "Document";
   if (/\bNIN\b|\bBVN\b|email|phone|gsm|number|code|pin|e-pin|serial|matric|account|username|password|reference|date of birth|\bDOB\b|address/i.test(item)) return "Identity / account detail";
@@ -94,12 +96,19 @@ function formatFor(item: string) {
 export function getRequirementDetails(service: Service): RequirementDetail[] {
   // Keep the original verified requirement text. Do not infer a step number
   // from loose keyword overlap: that previously repeated unrelated entire steps.
-  return service.requirements.map((item) => ({
+  // NIS explicitly requires only two fields for a status lookup.
+  // Recovering a lost number from email/receipt is troubleshooting guidance,
+  // not a third requirement. The separate troubleshooting step preserves it.
+  const requirements = service.slug === "passport-application-tracking"
+    ? service.requirements.filter(item => !/confirmation email|saved receipt/i.test(item))
+    : service.requirements;
+  return requirements.map((item) => ({
     item,
-    kind: service.slug === "passport-application-tracking" && /confirmation email|saved receipt/i.test(item)
-      ? "Other requirement" : kindFor(item),
-    why: service.slug === "passport-application-tracking" && /confirmation email|saved receipt/i.test(item)
-      ? "Optional: use a saved confirmation to recover or check the two numbers if lookup fails. The NIS status form asks only for the Application Number and Reference Number."
+    kind: kindFor(item),
+    why: service.slug === "passport-application-tracking" && /Application Number/i.test(item)
+      ? "Required by NIS to find the submitted passport application."
+      : service.slug === "passport-application-tracking" && /Reference Number/i.test(item)
+      ? "Required with the Application Number to retrieve the application status."
       : purposeFor(item, service),
     format: formatFor(item),
   }));
