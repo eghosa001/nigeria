@@ -59,3 +59,15 @@ test("actor and character credits remain different kinds of evidence", () => {
   assert.match(curated, /Only character assignments independently confirmed/);
   assert.doesNotMatch(curated, /title\.subjects\?\.map\(\(name\) => \(\{ "@type": "Person", name \}\)\).*actor:/);
 });
+
+test("all film preview surfaces use the same actor source, including metadata on noindex pages", () => {
+  const youtube = src("app/entertainment/youtube/[videoId]/page.tsx");
+  const entertainment = src("app/entertainment/page.tsx");
+  assert.match(youtube, /const castSummary = cast\.length/);
+  assert.match(youtube, /Known cast: /);
+  assert.match(youtube, /Cast credits have not been independently confirmed/);
+  assert.doesNotMatch(youtube, /Cast details are not yet confirmed/);
+  assert.doesNotMatch(youtube, /indexable\s*\?\s*\`\$\{movie\.title\} is/);
+  assert.match(entertainment, /leadMovieCast\(title, 2\)/);
+  assert.doesNotMatch(entertainment, /getFeaturedCast\(title\)/);
+});

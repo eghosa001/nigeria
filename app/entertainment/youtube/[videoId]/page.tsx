@@ -47,11 +47,14 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
   const indexable = isIndexableYouTubeDetailMovie(movie);
   const aliasToCuratedMovie = movie.source === "curated";
   const override = indexable ? youtubeSeoOverrides[movie.videoId] : undefined;
+  // Actor-credit visibility depends on source evidence, not indexing eligibility.
+  // A page with confirmed actors but a thin synopsis may still be noindex.
+  const castSummary = cast.length
+    ? "Known cast: " + cast.join(", ") + "."
+    : "Cast credits have not been independently confirmed.";
   const description = compactMetadata(
     override?.description ??
-      (indexable
-        ? `${movie.title} is a ${movie.year} Nigerian movie. Cast includes ${cast.join(", ")}. ${movie.synopsis}`
-        : `${movie.title} is a ${movie.year} full Nigerian movie from ${movie.channelName}. Cast details are not yet confirmed. ${movie.synopsis}`)
+      `${movie.title} (${movie.year}) from ${movie.channelName}. ${castSummary} ${movie.synopsis}`
   );
   return {
     title: override?.title ?? compactMetadata(
