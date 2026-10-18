@@ -19,3 +19,10 @@ test("exam submission and exemption approval are distinct", () => {
   assert.match(exam.route.startDetail, /submit the entry/i);
   assert.match(exemption.route.fallbackDetail, /not refundable/i);
 });
+
+test("exam page reflects the current official entry form and correction risk", () => {
+  const exam = getReviewedIcanGuidance("ican-professional-exam-registration");
+  assert.match(exam.route.startDetail, /₦5,000 correction penalty/);
+  assert.match(exam.route.startDetail, /passport photo and signature/);
+  assert.match(exam.aftercare[1].detail, /registration number and payment reference\/PIN/);
+});
