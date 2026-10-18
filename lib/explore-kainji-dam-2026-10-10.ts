@@ -10,7 +10,7 @@ export const kainjiDamGuide: ExploreGuide = {
   shortTitle: "Kainji Dam",
   kind: "destination",
   region: "Niger State",
-  summary: "Kainji Dam generates electricity on the River Niger near New Bussa, in Borgu LGA, Niger State. The plant opened in 1968 and has a published installed capacity of 760 MW. This guide explains the power station, its differences from Jebba Dam and Kainji Lake National Park, and why you need permission before attempting to visit the industrial site.",
+  summary: "Kainji Dam generates electricity on the River Niger near New Bussa, in Borgu LGA, Niger State. The plant opened in 1968 and has a published installed capacity of 760 MW. Find out how the power station works, how it differs from Jebba Dam and Kainji Lake National Park, and why permission is required before entering the industrial site.",
   intro: [
     "Kainji Dam lies on the River Niger in Borgu Local Government Area of Niger State, near New Bussa. The dam and its power station should not be mistaken for a resort or an open-access waterfront. The Federal Government owns the infrastructure, while Mainstream Energy Solutions Limited (MESL) operates the Kainji hydro plant under a concession. The Bureau of Public Enterprises dates commissioning to 1968, an important milestone in the development of Nigeria's national electricity system.",
     "Kainji's main job is to generate electricity. Water from the reservoir flows through turbines connected to generators, which supply the national grid. The dam also affects how water moves along the Niger, including flood management, farming and the river's historical use for navigation. None of those roles makes it a public tourist facility, and water conditions or grid demand can affect its operations.",
