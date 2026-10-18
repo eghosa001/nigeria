@@ -26,6 +26,9 @@ function kindFor(item: string): RequirementKind {
 }
 
 function purposeFor(item: string, service: Service) {
+  if (service.agencySlug === "ican" && /(?:professional[- ]student|student) registration number/i.test(item)) {
+    return "Matches the student's existing ICAN professional account and examination or exemption application, not a company registration.";
+  }
   // A photo-bearing ID is identity evidence, not a request for a separate
   // passport photograph or a downloadable application photo.
   if (service.slug === "glo-port-number-to-glo" || service.slug === "glo-sim-replacement") {
