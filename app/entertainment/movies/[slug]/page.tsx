@@ -1,3 +1,4 @@
+import { documentedMovieCast, leadMovieCast } from "@/lib/movie-cast-credits";
 import { getVisibleMovieEditorial } from "@/lib/movie-editorial-presentation";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -8,7 +9,7 @@ import { JsonLd } from "@/components/json-ld";
 import { LazyYouTubePlayer } from "@/components/lazy-youtube-player";
 import { AdSlot } from "@/components/ad-slot";
 import { AD_SLOTS } from "@/lib/adsense-config";
-import { entertainmentTitles, getRightsSafeEntertainmentImageUrl, getEntertainmentTitle, getFeaturedCast, type EntertainmentTitle, type WatchLink } from "@/lib/entertainment";
+import { entertainmentTitles, getRightsSafeEntertainmentImageUrl, getEntertainmentTitle, type EntertainmentTitle, type WatchLink } from "@/lib/entertainment";
 import { entertainmentPeople, getPlatformGuide } from "@/lib/entertainment-extras";
 import { getYouTubeMovieById, getYouTubeVideoId } from "@/lib/youtube-library";
 import { getSiteUrl } from "@/lib/site";
@@ -178,7 +179,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!title) return {};
   const base = getSiteUrl();
   const image = movieImageUrl(title, base);
-  const featuredCast = getFeaturedCast(title).slice(0, 4);
+  const featuredCast = leadMovieCast(title, 4);
   const override = movieSeoOverrides[title.slug];
   const fullMovieLink = title.watchLinks.find((link) => link.platform === "YouTube" && link.access === "full-movie");
   const netflixLink = title.watchLinks.find((link) => link.platform === "Netflix");
@@ -292,7 +293,8 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
   const watchHereSource = availabilityLinks.find((link) => link.platform === "YouTube" && link.access === "full-movie");
   const watchHereVideoId = watchHereSource ? getYouTubeVideoId(watchHereSource.href) : null;
   const netflixSource = availabilityLinks.find((link) => link.platform === "Netflix");
-  const featuredCast = getFeaturedCast(title);
+  const featuredCast = leadMovieCast(title);
+  const documentedCast = documentedMovieCast(title);
   const editorial = getMovieEditorialProfile(title.slug);
   const visibleEditorial = editorial ? getVisibleMovieEditorial(title.slug, editorial) : null;
   const image = movieImageUrl(title, base);
@@ -304,7 +306,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
     url: pageUrl,
     genre: title.genres,
     inLanguage: title.languages,
-    actor: title.cast.length ? title.cast.map((name) => ({ "@type": "Person", name })) : undefined,
+    actor: documentedCast.length ? documentedCast.map((name) => ({ "@type": "Person", name })) : undefined,
     about: title.subjects?.map((name) => ({ "@type": "Person", name })),
     director: title.directors?.map((name) => ({ "@type": "Person", name })),
     author: editorial?.crew
@@ -387,7 +389,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                   </Link> instead.
                 </p>
               ) : null}
-              {featuredCast.length ? <p className="movie-hero-cast"><strong>Featuring:</strong> {featuredCast.join(" · ")}</p> : null}
+              {featuredCast.length ? <p className="movie-hero-cast"><strong>Cast:</strong> {featuredCast.join(" · ")}</p> : null}
               {title.subjects?.length ? <p className="movie-hero-cast"><strong>Historical subjects:</strong> {title.subjects.join(" · ")}</p> : null}
               {title.slug === "oversabi-aunty" ? (
                 <p className="movie-long-summary">
@@ -485,19 +487,19 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                 </div>
               ) : null}
 
-              {title.cast.length ? <div className="movie-credit-group">
+              {documentedCast.length ? <div className="movie-credit-group">
                 <h3>Documented cast</h3>
                 <div className="movie-person-list">
-                  {title.cast.slice(0, 8).map((name) => {
+                  {documentedCast.slice(0, 8).map((name) => {
                     const href = personHref(name);
                     return href ? <Link href={href} key={name}>{name}<span>View profile →</span></Link> : <span key={name}>{name}</span>;
                   })}
                 </div>
-                {title.cast.length > 8 ? (
+                {documentedCast.length > 8 ? (
                   <details className="compact-disclosure cast-disclosure">
-                    <summary>Show {title.cast.length - 8} more cast member{title.cast.length - 8 === 1 ? "" : "s"}</summary>
+                    <summary>Show {documentedCast.length - 8} more cast member{documentedCast.length - 8 === 1 ? "" : "s"}</summary>
                     <div className="movie-person-list">
-                      {title.cast.slice(8).map((name) => {
+                      {documentedCast.slice(8).map((name) => {
                         const href = personHref(name);
                         return href ? <Link href={href} key={name}>{name}<span>View profile →</span></Link> : <span key={name}>{name}</span>;
                       })}
@@ -676,7 +678,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                     <div className="movie-tile-meta"><span>{item.year}</span><span>{item.languages.slice(0, 1).join("")}</span></div>
                     <h3><Link href={"/entertainment/movies/" + item.slug}>{item.title}</Link></h3>
                     <p className="movie-tile-description">{item.synopsis}</p>
-                    <p className="movie-card-cast"><strong>Featuring:</strong> {getFeaturedCast(item).join(" · ")}</p>
+                    <p className="movie-card-cast"><strong>Cast:</strong> {leadMovieCast(item).join(" · ")}</p>
                     <div className="movie-tile-footer"><span>{item.genres.slice(0, 2).join(" · ")}</span><Link href={"/entertainment/movies/" + item.slug}>Details →</Link></div>
                   </article>
                 ))}
