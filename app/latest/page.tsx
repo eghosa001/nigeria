@@ -95,35 +95,35 @@ export default function LatestPage() {
           <section className="admin-panel">
             <div className="section-heading"><div><span className="eyebrow">Watch · source-checked</span><h2>Movies</h2></div><Link href="/entertainment/movies">All movies →</Link></div>
             <div className="admin-category-list">
-              {movies.map((movie) => <Link href={"/entertainment/movies/" + movie.slug} key={movie.slug}><span>{movie.title}</span><strong>{movieChecked(movie)}</strong></Link>)}
+              {movies.map((movie) => <Link href={"/entertainment/movies/" + movie.slug} key={movie.slug}><span>{movie.title}</span><strong>Checked {movieChecked(movie)}</strong></Link>)}
             </div>
           </section>
 
           <section className="admin-panel">
             <div className="section-heading"><div><span className="eyebrow">Follow</span><h2>Series</h2></div><Link href="/entertainment/series">All series →</Link></div>
             <div className="admin-category-list">
-              {series.map((item) => <Link href={"/entertainment/series/" + item.slug} key={item.slug}><span>{item.title}</span><strong>{seriesLastChecked(item)}</strong></Link>)}
+              {series.map((item) => <Link href={"/entertainment/series/" + item.slug} key={item.slug}><span>{item.title}</span><strong>Checked {seriesLastChecked(item)}</strong></Link>)}
             </div>
           </section>
 
           <section className="admin-panel">
             <div className="section-heading"><div><span className="eyebrow">Free · publication date</span><h2>YouTube movies</h2></div><Link href="/entertainment/youtube">All free movies →</Link></div>
             <div className="admin-category-list">
-              {youtube.map((movie) => <Link href={movie.internalHref} key={movie.videoId}><span>{movie.title}</span><strong>{movie.publishedAt.slice(0, 10)}</strong></Link>)}
+              {youtube.map((movie) => <Link href={movie.internalHref} key={movie.videoId}><span>{movie.title}</span><strong>Published {movie.publishedAt.slice(0, 10)}</strong></Link>)}
             </div>
           </section>
 
           <section className="admin-panel">
             <div className="section-heading"><div><span className="eyebrow">Do · recently verified agencies</span><h2>Services</h2></div><Link href="/services">All services →</Link></div>
             <div className="admin-category-list">
-              {services.map((service) => <Link href={"/services/" + service.slug} key={service.slug}><span>{service.shortTitle}</span><strong>{service.lastVerified}</strong></Link>)}
+              {services.map((service) => <Link href={"/services/" + service.slug} key={service.slug}><span>{service.shortTitle}</span><strong>Checked {service.lastVerified}</strong></Link>)}
             </div>
           </section>
 
           <section className="admin-panel">
             <div className="section-heading"><div><span className="eyebrow">Go · reviewed regions</span><h2>Tour Nigeria</h2></div><Link href="/explore">All travel guides →</Link></div>
             <div className="admin-category-list">
-              {travel.map((guide) => <Link href={"/explore/" + guide.slug} key={guide.slug}><span>{guide.shortTitle}</span><strong>{guide.lastReviewed}</strong></Link>)}
+              {travel.map((guide) => <Link href={"/explore/" + guide.slug} key={guide.slug}><span>{guide.shortTitle}</span><strong>Reviewed {guide.lastReviewed}</strong></Link>)}
             </div>
           </section>
 
