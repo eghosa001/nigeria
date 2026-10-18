@@ -4,7 +4,8 @@ import { PageOutline } from "@/components/page-outline";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { JsonLd } from "@/components/json-ld";
-import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
+import { entertainmentTitles } from "@/lib/entertainment";
+import { leadMovieCast } from "@/lib/movie-cast-credits";
 import { releaseItems } from "@/lib/entertainment-extras";
 import { selectRecentHomeMovies } from "@/lib/home-movie-highlights";
 import { getSiteUrl } from "@/lib/site";
@@ -104,7 +105,7 @@ export default function EntertainmentPage() {
                 </Link>
                 <div>
                   <h3><Link href={"/entertainment/movies/" + title.slug}>{title.title}</Link></h3>
-                  <p>{title.year} · {getFeaturedCast(title).slice(0, 2).join(" · ")}</p>
+                  <p>{title.year} · {leadMovieCast(title, 2).join(" · ")}</p>
                 </div>
               </article>
             ))}
