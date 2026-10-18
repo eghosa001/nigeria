@@ -192,12 +192,6 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
               </div>
             </section>
 
-            <section>
-              <span className="eyebrow">Artwork & rights</span>
-              <h2>How visuals for {item.title} are handled</h2>
-              <p className="movie-long-summary">{item.artworkNote}</p>
-            </section>
-
             {item.internalLinks?.length?(
               <section>
                 <span className="eyebrow">Episodes on MyNigeriaGuide</span>
