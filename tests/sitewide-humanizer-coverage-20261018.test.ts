@@ -54,6 +54,6 @@ test("shared landing pages and static site copy are included without reading adm
   const pages = collectPublicPageVoice();
   assert.ok(pages.length >= 8, "Sitewide inventory must include more than four content pillars");
   assert.ok(pages.some(row => row.url === "/"), "Homepage copy must be reviewed");
-  assert.ok(pages.every(row => !/^\\/(?:admin|api)(?:\\/|$)/.test(row.url)));
+  assert.ok(pages.every(row => !row.url.startsWith("/admin") && !row.url.startsWith("/api")));
   assert.ok(pages.every(row => row.kind === "public-page-static" && row.fields > 0));
 });
