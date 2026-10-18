@@ -214,7 +214,7 @@ export const movieEditorialProfilesOctober20261013: Record<string, MovieEditoria
         heading: "The film's identity: Abe Odale (Blade of Betrayal)",
         paragraphs: [
           "Abe Odale, also publicised as Blade of Betrayal, is a Yoruba-language film released through LibraTV on 11 October 2026. Mide Martins, Ayo Olaiya, Antar Laniyan and Omobolanle Salisu are named in the October 12 release report. The English title is a translation used for discovery; this is one Yoruba production, not two separately licensed features.",
-          "Some film listings describe a married woman reconnecting with someone from the past, but the checked release report explicitly does not publish a reliable detailed plot. Without source-backed character relationships, this guide will not identify an invented heroine, assert unverified infidelity scenes or turn the film's English subtitle into an imagined plot. Readers should use the exact publisher and film title to identify it.",
+          "Some film listings describe a married woman reconnecting with someone from the past, but the checked release report does not publish a reliable detailed plot. There is not enough evidence to name the heroine, describe supposed infidelity scenes or build a story from the English subtitle. Use the original publisher and film title to identify the release.",
         ],
       },
       {

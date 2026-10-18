@@ -210,7 +210,7 @@
     "notes": [
       "Reddington states that its Victoria Island, Lekki and Ikeja services include 24-hour general medical care.",
       "The online form is for appointment requests and is not a substitute for emergency care.",
-      "This guide explains booking only and does not recommend a diagnosis, doctor or treatment."
+      "These steps cover booking only. They do not recommend a diagnosis, doctor or treatment."
     ],
     "sources": [
       {
@@ -900,7 +900,7 @@
       "Receive the sample collection from the provider's trained phlebotomist and check the secure digital result when processing is complete."
     ],
     "notes": [
-      "This guide explains the provider's booking process and does not recommend which medical test a person should take.",
+      "These steps cover the provider's booking process. They do not recommend which medical test a person should take.",
       "Healthtracka says home sample collection is free in its covered service areas.",
       "Test-specific preparation and turnaround can differ, so follow the instructions attached to the selected test."
     ],
@@ -3693,7 +3693,7 @@
     ],
     "notes": [
       "Euracare publishes phone and email appointment routes in addition to the online enquiry form.",
-      "This guide explains booking only and does not recommend a doctor, specialty or treatment.",
+      "These steps cover booking only. They do not recommend a doctor, specialty or treatment.",
       "Urgent medical problems should use the hospital's urgent/emergency route rather than waiting for a routine web response."
     ],
     "sources": [
@@ -4101,7 +4101,7 @@
     ],
     "notes": [
       "HealthPlus states that online stock can occasionally differ from actual availability and may contact the customer if an item cannot be fulfilled.",
-      "This guide explains the ordering process only and does not recommend medicines or provide medical advice.",
+      "These steps cover the ordering process only. They do not recommend medicines or provide medical advice.",
       "Products that require professional or prescription verification remain subject to HealthPlus's pharmacy controls and applicable Nigerian rules."
     ],
     "sources": [
@@ -4210,7 +4210,7 @@
     "notes": [
       "Medbury Labs advertises diagnostic and screening services through multiple Nigerian locations.",
       "Test preparation differs by diagnostic service, so the patient should use the exact instruction supplied for the booked test.",
-      "This guide explains provider booking and does not advise which test a person medically needs."
+      "These steps cover provider booking. They do not advise which test a person medically needs."
     ],
     "sources": [
       {
@@ -4262,7 +4262,7 @@
     "notes": [
       "Custodian publishes separate third-party and comprehensive motor products.",
       "The purchase requirements include a completed proposal form and KYC form.",
-      "This guide explains the buying process and does not recommend one insurance product as suitable for a particular person."
+      "These steps cover the buying process. They do not recommend one insurance product as suitable for a particular person."
     ],
     "sources": [
       {
@@ -4381,7 +4381,7 @@
     "notes": [
       "NEM states that its e-insurance portal supports online purchase for motor, home, travel and SME insurance.",
       "Policy features and premiums differ by insurance type and risk.",
-      "This guide explains the provider's purchase process and does not recommend a specific policy for an individual's financial situation."
+      "These steps cover the provider's purchase process. They do not recommend a specific policy for an individual's financial situation."
     ],
     "sources": [
       {
@@ -5883,7 +5883,7 @@
     "notes": [
       "Duchess describes myDuchess as its patient community and portal for digitally managing consultations and hospital visits.",
       "The hospital separately publishes emergency contact information; routine online booking is not an emergency-care channel.",
-      "This guide explains booking mechanics and does not recommend a clinician or medical treatment."
+      "These steps cover booking mechanics. They do not recommend a clinician or medical treatment."
     ],
     "sources": [
       {
@@ -6064,7 +6064,7 @@
     "notes": [
       "Cedarcrest describes virtual consultations as non-emergency medical advice delivered by video.",
       "The provider's terms state that virtual consultations are subject to appointment availability and payment in advance.",
-      "This guide explains the booking process and does not recommend a medical specialty or treatment."
+      "These steps cover the booking process. They do not recommend a medical specialty or treatment."
     ],
     "sources": [
       {
@@ -6123,7 +6123,7 @@
     "notes": [
       "Cornerstone states that false vehicle/policy information can invalidate the online policy.",
       "Third-party and comprehensive policies provide different cover and document requirements.",
-      "This guide explains the transaction process and does not recommend a specific insurance product."
+      "These steps cover the transaction process. They do not recommend a specific insurance product."
     ],
     "sources": [
       {
@@ -6313,7 +6313,7 @@
     "notes": [
       "The provider's motor quote flow includes different motor variants and premium rates rather than one flat comprehensive price.",
       "The cover start date on the form must fall within the provider's allowed window.",
-      "This guide explains the purchase process and does not recommend a policy as suitable for a particular customer."
+      "These steps cover the purchase process. They do not recommend a policy as suitable for a particular customer."
     ],
     "sources": [
       {
@@ -6931,7 +6931,7 @@
     "notes": [
       "Clinix operates diagnostic services including pathology, imaging and other medical services.",
       "Different tests can require different preparation, so follow instructions for the exact test rather than a generic rule.",
-      "This guide explains booking mechanics and does not recommend a test or treatment."
+      "These steps cover booking mechanics. They do not recommend a test or treatment."
     ],
     "sources": [
       {
@@ -7395,7 +7395,7 @@
     "notes": [
       "MoMo PSB defines a merchant as an individual or business entity engaged in selling goods or services.",
       "The merchant wallet is subject to KYC and the provider's current terms.",
-      "This guide covers onboarding, not developer/API integration."
+      "The steps here cover onboarding, not developer/API integration."
     ],
     "sources": [
       {
@@ -7512,7 +7512,7 @@
     "notes": [
       "MeCure Hospital publishes specialist consultation booking and separate 24/7 emergency support.",
       "Consultation availability and pricing can differ by specialist/service.",
-      "This guide explains booking mechanics and does not recommend a clinician or treatment."
+      "These steps cover booking mechanics. They do not recommend a clinician or treatment."
     ],
     "sources": [
       {
@@ -7682,7 +7682,7 @@
     "notes": [
       "Cowrywise says bank transfer and direct bank debit are supported funding methods.",
       "Not every bank account can be linked for direct debit.",
-      "This guide explains the payment mechanics and does not recommend how much a user should save or invest."
+      "These steps cover the payment mechanics. They do not recommend how much a user should save or invest."
     ],
     "sources": [
       {
@@ -7797,7 +7797,7 @@
     "notes": [
       "PiggyVest explicitly asks that the signup name match the customer's bank name.",
       "BVN is used for identity validation and to unlock additional account features.",
-      "This guide explains account creation only and does not recommend a savings or investment product."
+      "These steps cover account creation only. They do not recommend a savings or investment product."
     ],
     "sources": [
       {
@@ -7908,7 +7908,7 @@
     "notes": [
       "Piggybank and Flex Naira have different withdrawal rules.",
       "PiggyVest says the customer's bank account used for withdrawal should match the PiggyVest account name.",
-      "This guide explains the process and does not advise whether a user should break a savings plan early."
+      "These steps cover the process. They do not advise whether a user should break a savings plan early."
     ],
     "sources": [
       {
@@ -8084,7 +8084,7 @@
     "notes": [
       "Bamboo says Nigerian users can fund with Naira bank transfer, Naira card and other supported options.",
       "Funds sent from an account that does not belong to the Bamboo customer can be rejected under the provider's funding rules.",
-      "This guide explains funding mechanics and does not recommend any investment."
+      "These steps cover funding mechanics. They do not recommend any investment."
     ],
     "sources": [
       {
@@ -8151,7 +8151,7 @@
     "notes": [
       "Bamboo does not honour third-party withdrawal destinations under its published withdrawal guidance.",
       "A newly added bank account can require compliance verification before it becomes usable for withdrawal.",
-      "This guide explains the withdrawal process and does not advise when a customer should sell or withdraw an investment."
+      "These steps cover the withdrawal process. They do not advise when a customer should sell or withdraw an investment."
     ],
     "sources": [
       {
@@ -8329,7 +8329,7 @@
     "notes": [
       "Prequalification is not the same as final credit approval.",
       "Autochek's FAQ says vehicle-finance documentation can include BVN, bank statements, national ID, employment records and business-registration evidence.",
-      "This guide explains the application process and does not recommend borrowing or a particular lender."
+      "These steps cover the application process. They do not recommend borrowing or a particular lender."
     ],
     "sources": [
       {
@@ -8438,7 +8438,7 @@
     "notes": [
       "Cars45 says its vehicles have professional inspection reports covering more than 200 parameters.",
       "A buyer can inspect the vehicle personally before completing the deal.",
-      "This guide explains the transaction process and does not recommend a particular car or financing product."
+      "These steps cover the transaction process. They do not recommend a particular car or financing product."
     ],
     "sources": [
       {
@@ -8548,7 +8548,7 @@
     "notes": [
       "Heirs publishes separate third-party, comprehensive and flexible motor products; one product's premium should not be copied to another.",
       "The provider also exposes digital insurance access through *1100#, web and its mobile applications.",
-      "This guide explains the purchase process and does not recommend a policy as suitable for a particular customer."
+      "These steps cover the purchase process. They do not recommend a policy as suitable for a particular customer."
     ],
     "sources": [
       {
@@ -8672,7 +8672,7 @@
     "notes": [
       "Tangerine also offers comprehensive and other motor products with different premiums and cover.",
       "The provider's current third-party plan page states a maximum 12-month term.",
-      "This guide explains the purchase process and does not recommend one insurance product over another."
+      "These steps cover the purchase process. They do not recommend one insurance product over another."
     ],
     "sources": [
       {
@@ -8790,7 +8790,7 @@
     "notes": [
       "Sovereign Trust offers third-party and broader motor cover options, so premiums and benefits differ.",
       "The insurer also provides online policy validation and mobile/digital service channels.",
-      "This guide explains the purchase process and does not recommend a particular policy."
+      "These steps cover the purchase process. They do not recommend a particular policy."
     ],
     "sources": [
       {
@@ -9984,7 +9984,7 @@
     "notes": [
       "Spleet currently advertises rental loans of up to ₦5,000,000 without collateral.",
       "The provider says the current published interest is 4% on a reducing-balance basis and the equity contribution is 15%.",
-      "This guide explains the application process only and does not recommend taking a loan or assess whether the credit is suitable for an individual."
+      "These steps cover the application process only. They do not recommend taking a loan or assess whether the credit is suitable for an individual."
     ],
     "sources": [
       {
@@ -11419,7 +11419,7 @@
     "notes": [
       "Risevest's current FAQ says some products have different liquidity/lockup rules, so the selected investment should be checked before redemption.",
       "The provider says identity verification is required before funds can be withdrawn.",
-      "This guide explains the withdrawal process and does not recommend whether an investment should be sold."
+      "These steps cover the withdrawal process. They do not recommend whether an investment should be sold."
     ],
     "sources": [
       {

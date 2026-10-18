@@ -2847,7 +2847,7 @@
       "Wait for the result notification and open the result in the customer's PathProvider account when processing is complete."
     ],
     "notes": [
-      "This guide explains the provider's booking process and does not recommend which laboratory test a person should take.",
+      "These steps cover the provider's booking process. They do not recommend which laboratory test a person should take.",
       "SYNLAB also allows walk-in testing at its laboratory locations for services that do not need home collection.",
       "Test-specific preparation can differ, so follow the preparation information attached to the exact test or panel rather than a generic rule."
     ],
@@ -2960,7 +2960,7 @@
       "Existing patients can use the Evercare patient portal to review appointment or payment history and manage information linked to the UHID."
     ],
     "notes": [
-      "This guide explains appointment booking only and does not recommend a specialty, doctor or treatment.",
+      "These steps cover appointment booking only. They do not recommend a specialty, doctor or treatment.",
       "Evercare's main site also offers teleconsultation and homecare booking links, which are separate service routes.",
       "For an emergency, use the hospital's emergency contact route rather than waiting for a routine online appointment."
     ],
@@ -3153,7 +3153,7 @@
     "notes": [
       "Third-party and comprehensive motor insurance cover different risks, so the policy type should be chosen from the actual coverage information rather than price alone.",
       "Leadway says online cover starts after payment; keep the certificate available for verification and future claims.",
-      "This guide explains the purchase process and does not recommend one insurance product as suitable for a particular person's financial circumstances."
+      "These steps cover the purchase process. They do not recommend one insurance product as suitable for a particular person's financial circumstances."
     ],
     "sources": [
       {
@@ -3926,7 +3926,7 @@
     "notes": [
       "Flutterwave offers different document sets for Starter businesses, sole proprietorships, limited-liability companies and other entities.",
       "The contact person's identity should match the BVN/NIN and the registered business information used during verification.",
-      "This guide covers merchant onboarding, not API integration or customer payment-code implementation."
+      "The steps here cover merchant onboarding, not API integration or customer payment-code implementation."
     ],
     "sources": [
       {
@@ -4627,7 +4627,7 @@
     "notes": [
       "AXA Mansard states that AutoGo is for private vehicle classes and is not valid for the listed commercial vehicle classes.",
       "The current product page provides third-party cover, while comprehensive motor cover is a separate AXA Mansard product.",
-      "This guide explains the purchase process and does not recommend a particular insurer or policy as suitable for an individual's financial circumstances."
+      "These steps cover the purchase process. They do not recommend a particular insurer or policy as suitable for an individual's financial circumstances."
     ],
     "sources": [
       {
@@ -6116,7 +6116,7 @@
       "Save the automated registration confirmation and monitor the registered email/phone for Hygeia's next enrolment and access information."
     ],
     "notes": [
-      "This guide explains the provider's purchase process and does not recommend which health plan is medically or financially suitable for a particular person.",
+      "These steps cover the provider's purchase process. They do not recommend which health plan is medically or financially suitable for a particular person.",
       "Hygeia plans differ in hospital categories, benefit limits, waiting periods and covered services; read the selected plan's visible benefits before paying.",
       "Current website promotional discounts can change and should not be treated as permanent annual prices."
     ],
@@ -7283,7 +7283,7 @@
     "notes": [
       "Leadway's third-party motor terms say accidents should be notified within 30 days and provide a claims-centre route.",
       "Leadway publishes different target timelines for general insurance and life assurance claims.",
-      "This guide explains claim submission only; whether a loss is covered depends on the specific policy wording and claim facts."
+      "These steps cover claim submission only. whether a loss is covered depends on the specific policy wording and claim facts."
     ],
     "sources": [
       {
@@ -8362,7 +8362,7 @@
     "notes": [
       "Avon says its business plans are intended for groups of 30 or more people.",
       "The provider can customise a plan when a standard business option does not match the organisation's needs.",
-      "This guide explains the quote/enrolment process and does not recommend a plan design for a specific employer."
+      "These steps cover the quote/enrolment process. They do not recommend a plan design for a specific employer."
     ],
     "sources": [
       {
@@ -13539,7 +13539,7 @@
     "notes": [
       "AIICO's e-Business portal lists both private motor third-party and private motor comprehensive products.",
       "AIICO says a motor certificate is generated immediately or within 24 hours after premium confirmation.",
-      "This guide explains the provider process and does not recommend a particular insurance policy for an individual's financial needs."
+      "These steps cover the provider process. They do not recommend a particular insurance policy for an individual's financial needs."
     ],
     "sources": [
       {

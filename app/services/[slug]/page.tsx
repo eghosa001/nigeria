@@ -78,11 +78,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     60,
   );
   const summary = normalizeMetadataText(service.summary);
+  // Describe the actual guide instead of adding formulaic "Verified 2026" text.
+  // A source-check date alone does not make a service or deadline current.
+  const firstStep = normalizeMetadataText(service.steps[0] ?? "");
+  const supportingStep = firstStep && !summary.toLocaleLowerCase("en").includes(firstStep.slice(0, 35).toLocaleLowerCase("en"))
+    ? " " + firstStep
+    : "";
   const description = truncateMetadataText(
     getServiceSeoDescriptionOverride(service.slug, year) ??
-      (summary.length >= 110
-        ? `${summary} Verified ${year}.`
-        : `${summary} Updated ${year}: current requirements, fees/status, steps and official application links.`),
+      (summary + (summary.length < 110 ? supportingStep : "")),
     155,
   );
 
