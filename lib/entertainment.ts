@@ -1,3 +1,4 @@
+import { leadMovieCast } from "@/lib/movie-cast-credits";
 import { verifiedPsychologicalThrillerOctober20261013 } from "@/lib/entertainment-thriller-2026-10-13";
 import { reviewedMovieRecords20261016 } from "@/lib/movie-editorial-source-repairs-2026-10-16";
 import { verifiedFilmDirectorCredits20261015 } from "@/lib/entertainment-verified-credits-2026-10-15";
@@ -2912,5 +2913,5 @@ export function getRightsSafeEntertainmentImageUrl(title: EntertainmentTitle, ba
 }
 
 export function getFeaturedCast(title: EntertainmentTitle) {
-  return (title.featuredCast?.length ? title.featuredCast : title.cast).slice(0, 3);
+  return leadMovieCast(title, 3);
 }
