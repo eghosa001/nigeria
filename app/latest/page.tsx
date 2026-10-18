@@ -3,18 +3,21 @@ import Link from "next/link";
 import { publicServices } from "@/lib/data";
 import { entertainmentTitles } from "@/lib/entertainment";
 import { exploreGuides } from "@/lib/explore";
-import { jobOpportunities } from "@/lib/jobs";
+import { isIndexableJobOpportunity, jobOpportunities } from "@/lib/jobs";
+import { getEffectiveJobStatus, todayIsoNigeria } from "@/lib/job-runtime";
+import { selectRecentAcrossGroups } from "@/lib/latest-editorial-selection";
 import { seriesLastChecked, seriesTitles } from "@/lib/series";
 import { indexableYouTubeMovies } from "@/lib/youtube-library";
 import { NigeriaTrendsBackfill } from "@/components/nigeria-trends-backfill";
 
 export const metadata: Metadata = {
   title: "Latest Nigeria Movies, Services, Travel & Job Updates",
-  description: "Fresh Nigerian movie releases, service changes, travel events and verified job/recruitment updates across MyNigeriaGuide.",
+  description: "Recently source-checked Nigerian movies, services, tourism guides and currently listed employer opportunities, plus a dated editorial trends archive.",
   alternates: { canonical: "/latest" },
 };
 
-export const dynamic = "force-static";
+// Job deadlines and source-freshness labels must update at Nigerian midnight.
+export const dynamic = "force-dynamic";
 
 function movieChecked(title: (typeof entertainmentTitles)[number]) {
   return [...title.watchLinks.map((link) => link.lastChecked), ...(title.trailer ? [title.trailer.lastChecked] : [])]
@@ -22,32 +25,47 @@ function movieChecked(title: (typeof entertainmentTitles)[number]) {
 }
 
 export default function LatestPage() {
+  const today = todayIsoNigeria();
   const movies = [...entertainmentTitles]
     .sort((a, b) => movieChecked(b).localeCompare(movieChecked(a)) || b.year - a.year)
     .slice(0, 8);
   const series = [...seriesTitles]
     .sort((a, b) => seriesLastChecked(b).localeCompare(seriesLastChecked(a)) || b.year - a.year)
     .slice(0, 6);
-  const services = [...publicServices]
-    .sort((a, b) => b.lastVerified.localeCompare(a.lastVerified) || a.shortTitle.localeCompare(b.shortTitle))
-    .slice(0, 8);
-  const travel = [...exploreGuides]
-    .sort((a, b) => b.lastReviewed.localeCompare(a.lastReviewed) || a.shortTitle.localeCompare(b.shortTitle))
-    .slice(0, 8);
-  // The crawl hub must not prominently surface YouTube detail pages intentionally marked noindex.
-  const youtube = indexableYouTubeMovies.slice(0, 8);
-  const jobs = [...jobOpportunities]
-    .sort((a, b) => b.verifiedAt.localeCompare(a.verifiedAt) || Number(b.status === "open") - Number(a.status === "open"))
-    .slice(0, 8);
+  const services = selectRecentAcrossGroups(publicServices, {
+    date: (item) => item.lastVerified, key: (item) => item.slug,
+    group: (item) => item.agencySlug, today,
+  });
+  const travel = selectRecentAcrossGroups(exploreGuides, {
+    date: (item) => item.lastReviewed, key: (item) => item.slug,
+    group: (item) => item.kind + ":" + item.region, today,
+  });
+  // Do not promote noindex videos, or let one publisher crowd out others.
+  const youtube = selectRecentAcrossGroups(indexableYouTubeMovies, {
+    date: (item) => item.publishedAt.slice(0, 10), key: (item) => item.videoId,
+    group: (item) => item.channelName, today,
+  });
+  // The latest shelf is for verifiably current, indexable opportunities.
+  // Screening, expired windows and unverified vacancies remain in the
+  // detailed career directory with their accurate lifecycle labels.
+  const jobs = selectRecentAcrossGroups(
+    jobOpportunities.filter((item) => isIndexableJobOpportunity(item) && getEffectiveJobStatus(item, today) === "open"),
+    {
+      date: (item) => item.verifiedAt, key: (item) => item.slug,
+      group: (item) => item.organization, today,
+    },
+  );
 
   return (
     <section className="section page-top">
       <div className="container">
         <span className="eyebrow">Latest across Nigeria</span>
-        <h1>What is new and worth checking now.</h1>
-        <p className="page-intro">Fresh releases, current service changes, seasonal travel plans and verified recruitment updates across all four MyNigeriaGuide pillars.</p>
-
-        <NigeriaTrendsBackfill />
+        <h1>Recently checked guides and opportunities in Nigeria.</h1>
+        <p className="page-intro">
+          Browse recent source checks from our four sections. A verification date means
+          we reviewed the guide or its source—not that the film, destination or service launched that day.
+          Employer openings may close; always confirm at the official application page.
+        </p>
 
         <div className="jobs-topic-links top-gap">
           <Link href="/entertainment/movies/october-2026">October 2026 Nigerian movies</Link>
@@ -56,6 +74,7 @@ export default function LatestPage() {
           <Link href="/explore/detty-december-lagos-2026">Detty December Lagos 2026</Link>
           <Link href="/explore/calabar-carnival-2026">Calabar Carnival 2026</Link>
           <Link href="/jobs/deadlines">Jobs open now & deadlines</Link>
+          <Link href="#nigeria-october-trends">11–18 October verified trends archive ↓</Link>
         </div>
 
         <details className="browse-disclosure top-gap">
@@ -74,7 +93,7 @@ export default function LatestPage() {
 
         <div className="admin-two-column top-gap">
           <section className="admin-panel">
-            <div className="section-heading"><div><span className="eyebrow">Watch</span><h2>Movies</h2></div><Link href="/entertainment/movies">All movies →</Link></div>
+            <div className="section-heading"><div><span className="eyebrow">Watch · source-checked</span><h2>Movies</h2></div><Link href="/entertainment/movies">All movies →</Link></div>
             <div className="admin-category-list">
               {movies.map((movie) => <Link href={"/entertainment/movies/" + movie.slug} key={movie.slug}><span>{movie.title}</span><strong>{movieChecked(movie)}</strong></Link>)}
             </div>
@@ -88,33 +107,34 @@ export default function LatestPage() {
           </section>
 
           <section className="admin-panel">
-            <div className="section-heading"><div><span className="eyebrow">Free</span><h2>YouTube movies</h2></div><Link href="/entertainment/youtube">All free movies →</Link></div>
+            <div className="section-heading"><div><span className="eyebrow">Free · publication date</span><h2>YouTube movies</h2></div><Link href="/entertainment/youtube">All free movies →</Link></div>
             <div className="admin-category-list">
               {youtube.map((movie) => <Link href={movie.internalHref} key={movie.videoId}><span>{movie.title}</span><strong>{movie.publishedAt.slice(0, 10)}</strong></Link>)}
             </div>
           </section>
 
           <section className="admin-panel">
-            <div className="section-heading"><div><span className="eyebrow">Do</span><h2>Services</h2></div><Link href="/services">All services →</Link></div>
+            <div className="section-heading"><div><span className="eyebrow">Do · recently verified agencies</span><h2>Services</h2></div><Link href="/services">All services →</Link></div>
             <div className="admin-category-list">
               {services.map((service) => <Link href={"/services/" + service.slug} key={service.slug}><span>{service.shortTitle}</span><strong>{service.lastVerified}</strong></Link>)}
             </div>
           </section>
 
           <section className="admin-panel">
-            <div className="section-heading"><div><span className="eyebrow">Go</span><h2>Tour Nigeria</h2></div><Link href="/explore">All travel guides →</Link></div>
+            <div className="section-heading"><div><span className="eyebrow">Go · reviewed regions</span><h2>Tour Nigeria</h2></div><Link href="/explore">All travel guides →</Link></div>
             <div className="admin-category-list">
               {travel.map((guide) => <Link href={"/explore/" + guide.slug} key={guide.slug}><span>{guide.shortTitle}</span><strong>{guide.lastReviewed}</strong></Link>)}
             </div>
           </section>
 
           <section className="admin-panel">
-            <div className="section-heading"><div><span className="eyebrow">Work</span><h2>Jobs & Careers</h2></div><Link href="/jobs">All careers →</Link></div>
+            <div className="section-heading"><div><span className="eyebrow">Work · one listing per employer</span><h2>Jobs & Careers</h2></div><Link href="/jobs">All careers →</Link></div>
             <div className="admin-category-list">
-              {jobs.map((job) => <Link href={"/jobs/" + job.slug} key={job.slug}><span>{job.organization}: {job.title}</span><strong>{job.statusLabel}</strong></Link>)}
+              {jobs.map((job) => <Link href={"/jobs/" + job.slug} key={job.slug}><span>{job.title}</span><strong>{job.organization} · Checked {job.verifiedAt}</strong></Link>)}
             </div>
           </section>
         </div>
+        <NigeriaTrendsBackfill />
       </div>
     </section>
   );
