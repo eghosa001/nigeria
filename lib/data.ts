@@ -630,7 +630,13 @@ agencies.push(...[
 ]);
 
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords, ...universityWave2, ...privateUniversityGuide, ...universityWave4, ...universityWave5, ...universityWave6, ...universityWave7, ...universityWave8]).map(applyCandidateServiceReviews20261017)
-  .map(applyTargetedServiceEvidence20261017);
+  .map(applyTargetedServiceEvidence20261017)
+  // The official NIS status form requires two identifiers, not a saved email
+  // or receipt. Its recovery advice remains in the verified troubleshooting step.
+  .map(service => service.slug === "passport-application-tracking" ? {
+    ...service,
+    requirements: service.requirements.filter(item => !/confirmation email|saved receipt/i.test(item)),
+  } : service);
 export const publicServices = services.filter((service) => service.status !== "review");
 
 export type PublicServiceListing = Pick<
