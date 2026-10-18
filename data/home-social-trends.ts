@@ -16,6 +16,34 @@ export type HomeSocialTrend = {
  */
 export const homeSocialTrends: HomeSocialTrend[] = [
   {
+    pillar: "Movies & Entertainment",
+    title: "18 October creator audio: Comfort and Loketo in Nigerian TikTok and Instagram coverage",
+    href: "/entertainment/social-trends",
+    checkedAt: "2026-10-18",
+    expiresAt: "2026-10-25",
+  },
+  {
+    pillar: "Services",
+    title: "NYSC welfare update: Senate announces inquiry into orientation camp healthcare",
+    href: "/services/nysc-registration-local",
+    checkedAt: "2026-10-18",
+    expiresAt: "2026-10-25",
+  },
+  {
+    pillar: "Tour Nigeria",
+    title: "Design Week Lagos runs 18–25 October; programme and venue details",
+    href: "/explore/design-week-lagos-2026",
+    checkedAt: "2026-10-18",
+    expiresAt: "2026-10-25",
+  },
+  {
+    pillar: "Jobs & Careers",
+    title: "Imo Founder Dojo: first consideration 19 October, final 2 November",
+    href: "/jobs/founder-dojo-imo-cohort-two-2026",
+    checkedAt: "2026-10-18",
+    expiresAt: "2026-10-19",
+  },
+  {
     "pillar": "Movies & Entertainment",
     "title": "Matters of the Heart (2026): Sarian Martin, Timini Egbuson, cast and official viewing",
     "href": "/entertainment/movies/matters-of-the-heart-2026",

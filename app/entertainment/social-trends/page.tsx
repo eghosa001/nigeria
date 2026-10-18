@@ -3,9 +3,10 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { getSiteUrl } from "@/lib/site";
+import { NigeriaTrendsBackfill } from "@/components/nigeria-trends-backfill";
 
 export const metadata: Metadata = {
-  title: "YouTube Trends in Nigeria: Music, Film & Social Media",
+  title: "Nigeria Social Trends: Verified Updates, 11–18 October 2026",
   description: "Nigeria's YouTube trending videos and music in October 2026, plus TikTok, Instagram, Facebook and X context. Dated chart snapshots, sources and verified guides.",
   alternates: { canonical: "/entertainment/social-trends" },
 };
@@ -181,7 +182,7 @@ export default function SocialTrendsPage() {
     name: "YouTube and social media trends in Nigeria — October 2026",
     description: "Source-checked Nigerian YouTube and social media discovery, with dated chart snapshots.",
     url,
-    dateModified: "2026-10-11",
+    dateModified: "2026-10-18",
     isPartOf: { "@type": "WebSite", name: "MyNigeriaGuide", url: base },
     mainEntity: {
       "@type": "ItemList",
@@ -209,10 +210,12 @@ export default function SocialTrendsPage() {
             without confusing popularity with verified facts.
           </p>
           <p className="job-muted">
-            This is a dated editorial snapshot, not a live social-media feed. Chart positions can
+            The earlier video rankings below are a dated 11 October snapshot, not a live social-media feed. Chart positions can
             change at any time. The audience figures below are advertising-reach estimates from
             late 2025, published in the Digital 2026 Nigeria report, not October 2026 active-user counts.
           </p>
+
+          <NigeriaTrendsBackfill compact />
 
           <section className="top-gap" aria-labelledby="direct-twitter-research">
             <span className="eyebrow">Free sources · X / Twitter first</span>
