@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { leadMovieCast } from "@/lib/movie-cast-credits";
 import { RemoteMoviePreviewImage } from "@/components/remote-movie-preview-image";
 import type { YouTubeMovieRecord } from "@/lib/youtube-library";
 
@@ -16,6 +17,7 @@ export function YouTubeMovieCard({
   movie: YouTubeMovieRecord;
   priority?: boolean;
 }) {
+  const cast = leadMovieCast(movie);
   return (
     <article className="youtube-movie-card movie-card-clickable">
       <Link className="movie-card-hitarea" href={movie.internalHref} prefetch={false} aria-label={"View details for " + movie.title} />
@@ -42,7 +44,7 @@ export function YouTubeMovieCard({
         <h3><Link href={movie.internalHref} prefetch={false}>{movie.title}</Link></h3>
         <p className="youtube-movie-description">{movie.synopsis}</p>
         <p className="youtube-movie-cast">
-          {movie.featuredCast.length ? movie.featuredCast.join(" · ") : "Cast details pending verification"}
+          {cast.length ? "Cast: " + cast.join(" · ") : "Cast credits not yet confirmed"}
         </p>
         <div className="youtube-movie-card-footer">
           <span className="youtube-movie-publisher">
