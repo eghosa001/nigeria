@@ -22,6 +22,17 @@ export type NigeriaBackfillItem = {
 
 export const nigeriaTrendsBackfill20261018: NigeriaBackfillItem[] = [
   {
+    id: "oct11-x-hallelujah",
+    pillar: "Movies & Entertainment", observedOn: "2026-10-11",
+    evidence: "reported social activity",
+    title: "Hallelujah Challenge hashtag appears in an archived Nigeria X-trends observation",
+    takeaway: "MyNigeriaGuide's 11 October source check recorded #HallelujahChallenge on a Nigeria X trend-history page during the early hours. This is a dated, limited observation; no all-day rank or nationwide engagement number is established.",
+    readerAction: "Use the organiser's programme to confirm October broadcast details instead of assuming every hashtag post is official.",
+    sourceName: "Trends24 Nigeria — historical observation originally checked 11 October",
+    sourceUrl: "https://trends24.in/nigeria/",
+    href: "/entertainment/hallelujah-challenge-october-2026", label: "See organiser-checked programme",
+  },
+  {
     id: "oct12-nollywood-horror",
     pillar: "Movies & Entertainment", observedOn: "2026-10-12",
     evidence: "independent editorial coverage",
@@ -40,7 +51,7 @@ export const nigeriaTrendsBackfill20261018: NigeriaBackfillItem[] = [
     takeaway: "YNaija re-ranked 50 Nigerian films by estimated dollar receipts. Currency-converted historical comparisons are not the same as an official current Nigerian admissions chart, so figures need methodological context.",
     readerAction: "Check each film's release information independently; do not confuse gross receipts, ticket admissions and streaming popularity.",
     sourceName: "YNaija — 12 October box-office comparison",
-    sourceUrl: "https://ynaija.com/blogs/film-blog/",
+    sourceUrl: "https://ynaija.com/nigerias-top-50-box-office-hits-re-ranked/",
     href: "/entertainment/movies", label: "Explore individual films",
   },
   {
