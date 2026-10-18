@@ -14,7 +14,7 @@ export const founderDojoImoCohortTwo: CareerOpportunity[] = [
     sector: "Government",
     status: "open",
     statusLabel: "First consideration 19 October; final deadline 2 November 2026",
-    summary: "Founder Dojo Imo Cohort 2 is a zero-fee, up-to-one-year founder-development programme for aspiring entrepreneurs across Nigeria. The organisers offer in-person intensives in Owerri and remote mentoring, with early consideration by 19 October and a final application deadline of 2 November 2026.",
+    summary: "Want to build a startup but unsure where to begin? Founder Dojo Imo Cohort 2 offers free founder training for up to one year, combining in-person sessions in Owerri with remote mentoring. Applicants from across Nigeria can apply. The organiser lists 19 October 2026 for first consideration and 2 November 2026 as the final deadline.",
     location: "Imo Digital City, Owerri, Imo State, with additional remote mentoring",
     employmentType: "Founder-development training and mentorship, not employment",
     audiences: ["Aspiring entrepreneurs in Nigeria", "Startup founders", "Innovators", "Tech professionals", "Professionals exploring entrepreneurship"],
@@ -38,8 +38,8 @@ export const founderDojoImoCohortTwo: CareerOpportunity[] = [
     applicationSteps: [
       "Open Imo Digital City's official Founder Dojo Imo Cohort 2 page.",
       "Read the programme's year-long commitment, locations and eligibility before continuing.",
-      "Use the operator's Register your interest / Apply now control to start the actual application.",
-      "Complete the longer form, including the personal video and specific experience/idea questions using your own authentic responses.",
+      "Select “Register your interest” or “Apply now” on the organiser's page to begin the application.",
+      "Complete the full form and record the requested personal video in your own voice. Answer the questions about your experience or idea yourself.",
       "Submit by 19 October for initial full consideration, or by the final 2 November 2026 deadline, and monitor the email address you supplied."
     ],
     officialUrl: "https://www.imodigitalcity.com/founder-dojo/cohort-2",
