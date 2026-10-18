@@ -6,10 +6,10 @@ import type { Service } from "@/lib/types";
 type ServiceAmendment = { lead: string; notes: string[]; step: string; sources: string[] };
 const amendments: Record<string, ServiceAmendment> = {
   "jamb-correct-gender": {
-    "lead": "Correct a gender entry using JAMB e-Facility's Correction of Data, paying through the JAMB transaction and completing any biometric or institution-endorsed indemnity stage the candidate's case requires. Payment alone is not approval.",
+    "lead": "To correct the gender on a JAMB record, start with Correction of Data in e-Facility. Pay through JAMB's transaction process, then follow any biometric checks or institution-endorsed indemnity instructions shown for your case. Keep checking the request: a payment receipt is not JAMB's approval.",
     "notes": [
       "JAMB's specific Change of Gender instructions say that a printed indemnity form goes to the candidate's institution for endorsement, then through a JAMB state office. Its current support FAQ also directs candidates seeking data changes to a CBT centre or JAMB state office for biometric verification: follow the stage displayed for the particular record rather than treating a generated receipt as completion.",
-      "Retain the JAMB transaction ID, institution-endorsed form and later profile notification separately. If the application stays pending, identify whether the institution has forwarded the form before starting another paid correction."
+      "Keep the transaction ID, endorsed indemnity form and final profile notification. If the request remains pending, ask whether your institution has forwarded its form before paying for another correction."
     ],
     "step": "After any payment, check the candidate dashboard for an indemnity form or office instruction; obtain the necessary institution endorsement and biometric verification at an accredited centre or JAMB State Office as directed, then monitor the JAMB decision.",
     "sources": [
