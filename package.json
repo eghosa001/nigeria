@@ -28,7 +28,7 @@
     "check:analytics-safety": "tsx scripts/check-analytics-safety.ts && node --test tests/search-discovery-contract.test.mjs",
     "audit:codebase": "node scripts/audit-codebase.mjs",
     "sync:youtube-entertainment": "node scripts/sync-youtube-entertainment.mjs",
-    "check:entertainment-scale": "node --check scripts/sync-youtube-entertainment.mjs && node scripts/check-entertainment-scale.mjs && tsx scripts/check-entertainment-content.ts",
+    "check:entertainment-scale": "node --check scripts/sync-youtube-entertainment.mjs && node scripts/check-entertainment-scale.mjs && tsx scripts/check-entertainment-content.ts && tsx --test tests/movie-featured-cast-consistency-20261018.test.ts",
     "check:explore": "tsx scripts/check-explore-content.ts",
     "check:crawl-resilience": "node scripts/check-crawl-resilience.mjs",
     "postbuild": "node scripts/write-wrangler-deploy-config.mjs",
