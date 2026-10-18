@@ -32,7 +32,7 @@ test("service JSON corrections are restricted to public notes; technical rules r
   for (const path of data) for (const row of JSON.parse(read(path))) {
     assert.ok(typeof row.slug === "string" && row.sources?.length > 0, row.slug);
     for (const note of row.notes ?? []) {
-      if (note.startsWith("These steps cover")) {
+      if (note.startsWith("These steps cover") || note.startsWith("The steps here cover")) {
         converted++;
         assert.ok(note.includes("."), row.slug);
         assert.doesNotMatch(note, /\bthis guide explains\b/i);
