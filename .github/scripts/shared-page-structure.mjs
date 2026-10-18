@@ -51,7 +51,7 @@ export const contracts = [
   {
     name: "YouTube movies", path: "app/entertainment/youtube/[videoId]/page.tsx",
     collection: "youtubeServerStore",
-    required: ["Breadcrumbs", "movie-detail-subnav", "movie.featuredCast", "movie.lastChecked", "movie.videoUrl"],
+    required: ["Breadcrumbs", "movie-detail-subnav", "documentedCast", "featuredCast", "movie.lastChecked", "movie.videoUrl"],
     targets: ["overview", "cast", "source"],
   },
 ];
