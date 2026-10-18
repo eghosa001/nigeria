@@ -66,10 +66,11 @@ if (args.includes("--json")) {
     console.log("  " + row.pillar + ": " + row.flagged + " / " + row.inspected + " flagged");
     for (const kind of row.kinds) console.log("    " + kind.kind + ": " + kind.flagged + " / " + kind.inspected);
   }
-  if (!args.includes("--summary")) {
-    for (const item of candidates.slice(0, limit)) {
-      console.log("  " + item.url + " [" + item.kind + "; " + item.signals.map(s => s.label + " ×" + s.occurrences).join("; ") + "]");
-    }
+  // Even the brief CI summary must identify actionable pages; counts alone
+  // cannot guide the editors working across several agents.
+  const displayed = args.includes("--summary") ? 10 : limit;
+  for (const item of candidates.slice(0, displayed)) {
+    console.log("  " + item.url + " [" + item.kind + "; " + item.signals.map(s => s.label + " ×" + s.occurrences).join("; ") + "]");
   }
   console.log("Next action: edit only confirmed weak prose with its sources beside you. This audit does not edit or publish articles.");
 }
