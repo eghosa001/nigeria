@@ -41,7 +41,7 @@ export const homeSocialTrends: HomeSocialTrend[] = [
     title: "Imo Founder Dojo: first consideration 19 October, final 2 November",
     href: "/jobs/founder-dojo-imo-cohort-two-2026",
     checkedAt: "2026-10-18",
-    expiresAt: "2026-11-02",
+    expiresAt: "2026-10-19",
   },
   {
     "pillar": "Movies & Entertainment",
