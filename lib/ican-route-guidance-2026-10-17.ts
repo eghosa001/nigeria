@@ -7,7 +7,7 @@ const reviewed: Record<string, DetailedServiceGuidance> = {
   "ican-professional-exam-registration": {
     route: {
       startTitle: "Check exam and subscription status before paying",
-      startDetail: "At icanportal.org/professional/newexams, choose eligible papers and the examination centre, confirm the current diet's instructions, pay online and submit the entry. The November 10–12 exam dates are not the registration cutoff; paying alone does not submit the exam form.",
+      startDetail: "At icanportal.org/professional/newexams, check the level, eligible papers, centre, contact details, passport photo and signature requested by ICAN's actual form before payment and submission. ICAN's form warns of a ₦5,000 correction penalty for inaccurate entries. The November 10–12 exam dates are not the registration cutoff; paying alone does not submit the exam form.",
       physicalTitle: "Selecting an exam centre is not a registration-office visit",
       physicalDetail: "ICAN's online entry form contains an Examination Centre selector. Attendance at that centre is for the actual exam, not an additional registration appointment.",
       fallbackTitle: "If subscription or payment blocks the form",
