@@ -44,6 +44,18 @@ function keepFor(step: string) {
   return undefined;
 }
 
+// NIS tracking is a free record lookup. Warnings about an unrelated payment
+// receipt and later passport enrolment must never become payment steps.
+// Use the documented action order, rather than matching individual nouns.
+const passportTrackingStages = [
+  "Start",
+  "Verify details",
+  "Verify details",
+  "Follow up",
+  "Troubleshoot",
+  "Follow up",
+] as const;
+
 export function getStepDetails(service: Service): StepDetail[] {
   const checkpoints = new Set<string>();
   const keeps = new Set<string>();
@@ -56,7 +68,9 @@ export function getStepDetails(service: Service): StepDetail[] {
     if (checkpoint) checkpoints.add(checkpoint);
     if (keep) keeps.add(keep);
     return {
-      stage: stageFor(instruction, index),
+      stage: service.slug === "passport-application-tracking"
+        ? (passportTrackingStages[index] ?? stageFor(instruction, index))
+        : stageFor(instruction, index),
       instruction,
       prepare: [],
       checkpoint: uniqueCheckpoint,
