@@ -10,6 +10,7 @@
  */
 import { auditEditorialVoice } from "../lib/editorial-voice-audit";
 import { collectVoiceCorpus, type VoicePillar } from "../lib/editorial-voice-corpus";
+import { collectPublicPageVoice } from "./public-page-voice-corpus";
 
 type Candidate = {
   pillar: VoicePillar;
@@ -19,12 +20,12 @@ type Candidate = {
   score: number;
   signals: ReturnType<typeof auditEditorialVoice>;
 };
-const corpus = collectVoiceCorpus();
+const corpus = [...collectVoiceCorpus(), ...collectPublicPageVoice()];
 const args = process.argv.slice(2);
 const option = (prefix: string) => args.find(arg => arg.startsWith(prefix))?.slice(prefix.length);
 const requestedPillar = option("--pillar=");
 const selected = corpus.filter(row => !requestedPillar || requestedPillar === row.pillar);
-const pillars: VoicePillar[] = ["Movies & Entertainment", "Services", "Tour Nigeria", "Jobs & Careers"];
+const pillars: VoicePillar[] = ["Movies & Entertainment", "Services", "Tour Nigeria", "Jobs & Careers", "Shared Pages"];
 const candidates: Candidate[] = selected.flatMap(row => {
   const signals = auditEditorialVoice(row.prose);
   const score = signals.reduce((total, signal) => total + signal.occurrences, 0);
@@ -47,7 +48,7 @@ const limit = args.includes("--all") ? Infinity
   : Number.isInteger(limitOption) && limitOption > 0 ? Math.min(5000, limitOption) : 40;
 const report = {
   method: "heuristic editorial voice signals, not AI detection or a claim of human review",
-  scope: "entire public editorial catalogue (not machine text, code or forms)",
+  scope: "public editorial catalogue and static App Router text, excluding admin, APIs, machine text and forms",
   totalRecords: selected.length,
   totalTextFields: selected.reduce((sum, row) => sum + row.fields, 0),
   totalFlagged: candidates.length,
