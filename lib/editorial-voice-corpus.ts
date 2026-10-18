@@ -18,7 +18,7 @@ import { jobOpportunities } from "./jobs";
 import { careerGuides } from "./career-guides";
 import { youtubeMovieLibrary } from "./youtube-library";
 
-export type VoicePillar = "Movies & Entertainment" | "Services" | "Tour Nigeria" | "Jobs & Careers";
+export type VoicePillar = "Movies & Entertainment" | "Services" | "Tour Nigeria" | "Jobs & Careers" | "Shared Pages";
 export type VoiceRecord = {
   pillar: VoicePillar;
   kind: string;
