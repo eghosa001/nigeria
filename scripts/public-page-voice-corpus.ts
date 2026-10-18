@@ -29,7 +29,8 @@ function pillar(url: string): VoiceRecord["pillar"] {
   if (url.startsWith("/jobs")) return "Jobs & Careers";
   if (url.startsWith("/explore")) return "Tour Nigeria";
   if (url.startsWith("/entertainment")) return "Movies & Entertainment";
-  return "Services"; // shared public utility and landing copy are reviewed alongside service-style prose
+  if (url.startsWith("/services") || url.startsWith("/agencies") || url.startsWith("/official-portals")) return "Services";
+  return "Shared Pages";
 }
 export function collectPublicPageVoice(): VoiceRecord[] {
   return walk("app").flatMap(path => {
