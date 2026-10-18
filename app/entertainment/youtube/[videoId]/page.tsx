@@ -1,3 +1,4 @@
+import { documentedMovieCast, leadMovieCast } from "@/lib/movie-cast-credits";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
   if (!movie) return {};
   const canonical = movie.source === "curated" ? movie.internalHref : "/entertainment/youtube/" + movie.videoId;
   const image = "https://i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg";
-  const cast = movie.featuredCast.slice(0, 4);
+  const cast = leadMovieCast(movie, 4);
   const indexable = isIndexableYouTubeDetailMovie(movie);
   const aliasToCuratedMovie = movie.source === "curated";
   const override = indexable ? youtubeSeoOverrides[movie.videoId] : undefined;
@@ -89,6 +90,9 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
   const movie = await youtubeServerStore.detail(videoId);
   if (!movie) notFound();
   const indexable = isIndexableYouTubeDetailMovie(movie);
+  // A missing long-form dossier can prevent indexing; it must not hide known cast.
+  const documentedCast = documentedMovieCast(movie);
+  const featuredCast = leadMovieCast(movie);
   const editorialDossier = youtubeEditorialDossiers[movie.videoId];
   const onceUponAVillageEpisode = movie.videoId === "X3HaWmJoSRU" || movie.videoId === "Yu-QxqPDmXM";
   // Reuse the individually reviewed Part 3 profile instead of generating role
@@ -131,7 +135,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
     "@type": "Movie",
     name: movie.title,
     description: movie.synopsis,
-    actor: indexable ? movie.cast.map((name) => ({ "@type": "Person", name })) : undefined,
+    actor: documentedCast.length ? documentedCast.map((name) => ({ "@type": "Person", name })) : undefined,
     duration: movie.durationMinutes ? "PT" + movie.durationMinutes + "M" : undefined,
     datePublished: movie.publishedAt,
     dateModified: movie.lastChecked,
@@ -183,10 +187,10 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                 <span>{movie.channelName}</span>
               </div>
               <p className="movie-detail-synopsis">{movie.synopsis}</p>
-               {movie.featuredCast.length ? (
-                <p className="movie-hero-cast"><strong>Featuring:</strong> {movie.featuredCast.join(" · ")}</p>
+               {featuredCast.length ? (
+                <p className="movie-hero-cast"><strong>Cast:</strong> {featuredCast.join(" · ")}</p>
               ) : (
-                <p className="movie-hero-cast"><strong>Cast:</strong> Not yet confirmed.</p>
+                <p className="movie-hero-cast"><strong>Cast:</strong> No credited performers independently confirmed yet.</p>
               )}
 
               {onceUponAVillageEpisode ? (
@@ -265,16 +269,16 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
             <section id="cast">
               <span className="eyebrow">Cast & crew</span>
               <h2>{movie.title} cast</h2>
-              {indexable ? (
+              {documentedCast.length ? (
                 <div className="movie-person-list">
-                  {movie.cast.map((name) => {
+                  {documentedCast.map((name) => {
                     const href = personHref(name);
                     return href ? <Link href={href} key={name}>{name}<span>View profile →</span></Link> : <span key={name}>{name}</span>;
                   })}
                 </div>
               ) : (
                 <p className="movie-long-summary">
-                  We have not confirmed the complete cast for this movie. Check the publisher’s video description for credits.
+                  No credited cast members have been independently confirmed for this film. Check the publisher’s video description for credits.
                 </p>
               )}
               {partThreeRoles.length ? (
