@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 import { documentedMovieCast, leadMovieCast } from "../lib/movie-cast-credits";
-import { entertainmentTitles, getFeaturedCast } from "../lib/entertainment";
+import { entertainmentTitles } from "../lib/entertainment";
 
 const src = (path: string) => readFileSync(new URL("../" + path, import.meta.url), "utf8");
 
@@ -26,7 +26,7 @@ test("alternate spelling does not create duplicate people", () => {
 test("all curated movie featured actors appear among displayed full cast credits", () => {
   for (const movie of entertainmentTitles) {
     const fullCast = documentedMovieCast(movie);
-    const highlighted = getFeaturedCast(movie);
+    const highlighted = leadMovieCast(movie);
     assert.ok(highlighted.length <= 3, movie.slug);
     for (const actor of highlighted) assert.ok(fullCast.includes(actor), movie.slug + " lost " + actor);
     assert.equal(new Set(fullCast.map(s => s.toLowerCase())).size, fullCast.length, movie.slug);
