@@ -96,13 +96,9 @@ function formatFor(item: string) {
 export function getRequirementDetails(service: Service): RequirementDetail[] {
   // Keep the original verified requirement text. Do not infer a step number
   // from loose keyword overlap: that previously repeated unrelated entire steps.
-  // NIS explicitly requires only two fields for a status lookup.
-  // Recovering a lost number from email/receipt is troubleshooting guidance,
-  // not a third requirement. The separate troubleshooting step preserves it.
-  const requirements = service.slug === "passport-application-tracking"
-    ? service.requirements.filter(item => !/confirmation email|saved receipt/i.test(item))
-    : service.requirements;
-  return requirements.map((item) => ({
+  // Preserve every published requirement; source-backed amendments must
+  // be made to the actual service record, not silently hidden in presentation.
+  return service.requirements.map((item) => ({
     item,
     kind: kindFor(item),
     why: service.slug === "passport-application-tracking" && /Application Number/i.test(item)
