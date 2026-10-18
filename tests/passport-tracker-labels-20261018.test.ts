@@ -13,7 +13,7 @@ test("NIS passport status lookup contains no fictitious payment or collection st
     stages.map(({ stage }) => stage),
     ["Start", "Verify details", "Verify details", "Follow up", "Troubleshoot", "Follow up"],
   );
-  assert.ok(stages.every(({ instruction }) => !/\bpay(?:ment)?\b/i.test(instruction) || !!instruction), "Original instructions remain intact");
+  assert.deepEqual(stages.map(({ instruction }) => instruction), service.steps, "Source-backed steps remain unchanged");
 });
 
 test("NIS tracker renders exactly its two required identifier fields", () => {
