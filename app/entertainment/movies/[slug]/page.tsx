@@ -1,4 +1,4 @@
-import { documentedMovieCast } from "@/lib/movie-cast-credits";
+import { documentedMovieCast, leadMovieCast } from "@/lib/movie-cast-credits";
 import { getVisibleMovieEditorial } from "@/lib/movie-editorial-presentation";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -9,7 +9,7 @@ import { JsonLd } from "@/components/json-ld";
 import { LazyYouTubePlayer } from "@/components/lazy-youtube-player";
 import { AdSlot } from "@/components/ad-slot";
 import { AD_SLOTS } from "@/lib/adsense-config";
-import { entertainmentTitles, getRightsSafeEntertainmentImageUrl, getEntertainmentTitle, getFeaturedCast, type EntertainmentTitle, type WatchLink } from "@/lib/entertainment";
+import { entertainmentTitles, getRightsSafeEntertainmentImageUrl, getEntertainmentTitle, type EntertainmentTitle, type WatchLink } from "@/lib/entertainment";
 import { entertainmentPeople, getPlatformGuide } from "@/lib/entertainment-extras";
 import { getYouTubeMovieById, getYouTubeVideoId } from "@/lib/youtube-library";
 import { getSiteUrl } from "@/lib/site";
@@ -179,7 +179,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!title) return {};
   const base = getSiteUrl();
   const image = movieImageUrl(title, base);
-  const featuredCast = getFeaturedCast(title).slice(0, 4);
+  const featuredCast = leadMovieCast(title, 4);
   const override = movieSeoOverrides[title.slug];
   const fullMovieLink = title.watchLinks.find((link) => link.platform === "YouTube" && link.access === "full-movie");
   const netflixLink = title.watchLinks.find((link) => link.platform === "Netflix");
@@ -293,7 +293,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
   const watchHereSource = availabilityLinks.find((link) => link.platform === "YouTube" && link.access === "full-movie");
   const watchHereVideoId = watchHereSource ? getYouTubeVideoId(watchHereSource.href) : null;
   const netflixSource = availabilityLinks.find((link) => link.platform === "Netflix");
-  const featuredCast = getFeaturedCast(title);
+  const featuredCast = leadMovieCast(title);
   const documentedCast = documentedMovieCast(title);
   const editorial = getMovieEditorialProfile(title.slug);
   const visibleEditorial = editorial ? getVisibleMovieEditorial(title.slug, editorial) : null;
@@ -678,7 +678,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                     <div className="movie-tile-meta"><span>{item.year}</span><span>{item.languages.slice(0, 1).join("")}</span></div>
                     <h3><Link href={"/entertainment/movies/" + item.slug}>{item.title}</Link></h3>
                     <p className="movie-tile-description">{item.synopsis}</p>
-                    <p className="movie-card-cast"><strong>Cast:</strong> {getFeaturedCast(item).join(" · ")}</p>
+                    <p className="movie-card-cast"><strong>Cast:</strong> {leadMovieCast(item).join(" · ")}</p>
                     <div className="movie-tile-footer"><span>{item.genres.slice(0, 2).join(" · ")}</span><Link href={"/entertainment/movies/" + item.slug}>Details →</Link></div>
                   </article>
                 ))}
