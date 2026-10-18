@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { collectVoiceCorpus } from "../lib/editorial-voice-corpus";
+import { collectPublicPageVoice } from "../scripts/public-page-voice-corpus";
 import { auditEditorialVoice } from "../lib/editorial-voice-audit";
 import { publicServices } from "../lib/data";
 
@@ -47,4 +48,12 @@ test("the full-coverage command supports untruncated JSON and advisory output", 
   assert.match(script, /collectVoiceCorpus\(\)/);
   assert.match(script, /report\.totalRecords/);
   assert.doesNotMatch(script, /writeFile|appendFile|process\.exit\(1\)/);
+});
+
+test("shared landing pages and static site copy are included without reading admin pages", () => {
+  const pages = collectPublicPageVoice();
+  assert.ok(pages.length >= 8, "Sitewide inventory must include more than four content pillars");
+  assert.ok(pages.some(row => row.url === "/"), "Homepage copy must be reviewed");
+  assert.ok(pages.every(row => !/^\\/(?:admin|api)(?:\\/|$)/.test(row.url)));
+  assert.ok(pages.every(row => row.kind === "public-page-static" && row.fields > 0));
 });
