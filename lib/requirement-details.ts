@@ -82,7 +82,9 @@ function purposeFor(item: string, service: Service) {
 // Reading an unrelated "upload" or "bring" verb in a nearby step is not
 // evidence that this particular document must be copied or uploaded.
 function formatFor(item: string) {
-  if (/\boriginal\b/i.test(item)) return "The requirement explicitly calls for an original.";
+  // "Original confirmation email" denotes the source message, not a
+  // physical original that must be presented to the agency.
+  if (/\boriginal\s+(?:valid\s+|current\s+|signed\s+)?(?:passport|certificate|document|identification|ID\s+card|licen[cs]e|transcript|diploma|birth\s+record|affidavit)\b/i.test(item)) return "The requirement explicitly calls for an original document.";
   if (/\b(?:photocopy|copies|copy of)\b/i.test(item)) return "The requirement explicitly calls for a copy.";
   if (/\bupload\b/i.test(item)) return "The requirement explicitly calls for an upload; follow the official file-format instructions.";
   if (/\bprint(?:ed|out)?\b/i.test(item)) return "The requirement explicitly calls for a printed item.";
@@ -94,8 +96,11 @@ export function getRequirementDetails(service: Service): RequirementDetail[] {
   // from loose keyword overlap: that previously repeated unrelated entire steps.
   return service.requirements.map((item) => ({
     item,
-    kind: kindFor(item),
-    why: purposeFor(item, service),
+    kind: service.slug === "passport-application-tracking" && /confirmation email|saved receipt/i.test(item)
+      ? "Other requirement" : kindFor(item),
+    why: service.slug === "passport-application-tracking" && /confirmation email|saved receipt/i.test(item)
+      ? "Optional: use a saved confirmation to recover or check the two numbers if lookup fails. The NIS status form asks only for the Application Number and Reference Number."
+      : purposeFor(item, service),
     format: formatFor(item),
   }));
 }
