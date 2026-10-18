@@ -47,20 +47,31 @@ function keepFor(step: string) {
 // NIS tracking is a free record lookup. Warnings about an unrelated payment
 // receipt and later passport enrolment must never become payment steps.
 // Use the documented action order, rather than matching individual nouns.
-const passportTrackingStages = [
-  "Start",
-  "Verify details",
-  "Verify details",
-  "Follow up",
-  "Troubleshoot",
-  "Follow up",
-] as const;
+const reviewedStageSequences: Record<string, readonly string[]> = {
+  "passport-application-tracking": [
+    "Start", "Verify details", "Verify details", "Follow up", "Troubleshoot", "Follow up",
+  ],
+  // ICAN payment, examination submission and docket retrieval are separate
+  // actions. Do not label "check arrears" or "retrieve docket" as paying.
+  "ican-professional-exam-registration": [
+    "Start", "Verify details", "Verify details", "Payment", "Submit / register", "Collect / finish",
+  ],
+  "ican-professional-exemption": [
+    "Start", "Verify details", "Verify details", "Payment", "Submit / register",
+  ],
+};
 
 export function getStepDetails(service: Service): StepDetail[] {
   const checkpoints = new Set<string>();
   const keeps = new Set<string>();
   return service.steps.map((instruction, index) => {
-    const checkpoint = checkpointFor(instruction);
+    const stage = reviewedStageSequences[service.slug]?.[index] ?? stageFor(instruction, index);
+    const warning = checkpointFor(instruction);
+    // Show the generic payment warning on an ICAN step only when the step
+    // actually initiates payment; other mentions refer to checks or dockets.
+    const checkpoint = /^ican-professional-(?:exam-registration|exemption)$/.test(service.slug)
+      && stage !== "Payment" && warning?.startsWith("Confirm the applicant, service")
+      ? undefined : warning;
     const keep = keepFor(instruction);
     // A generic reminder should not occupy a full paragraph at every step.
     const uniqueCheckpoint = checkpoint && !checkpoints.has(checkpoint) ? checkpoint : undefined;
@@ -68,9 +79,7 @@ export function getStepDetails(service: Service): StepDetail[] {
     if (checkpoint) checkpoints.add(checkpoint);
     if (keep) keeps.add(keep);
     return {
-      stage: service.slug === "passport-application-tracking"
-        ? (passportTrackingStages[index] ?? stageFor(instruction, index))
-        : stageFor(instruction, index),
+      stage,
       instruction,
       prepare: [],
       checkpoint: uniqueCheckpoint,
