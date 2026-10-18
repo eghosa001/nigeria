@@ -218,6 +218,27 @@ const verifiedEditorialJourneys: Record<string, ServiceJourney> = {
 // Source-reviewed education service paths: do not infer a transactional online
 // registration or certificate replacement merely from an agency information URL.
 const verifiedEducationJourneys: Record<string, ServiceJourney> = {
+  // ICAN's public 2026 professional exam and exemption portals take applications
+  // online. Choosing an examination centre is not an office-registration visit.
+  "ican-professional-exam-registration": {
+    mode: "online", modeLabel: "ICAN online examination entry",
+    startLabel: "Check financial status, then submit the diet's online entry",
+    startDetail: "Confirm student subscription, eligible papers and approved exemptions in the ICAN professional portal. At icanportal.org/professional/newexams select the papers and examination centre, check the current diet notice, pay through the authorised online route and submit the actual entry. Payment alone is not registration.",
+    onlineAvailable: true, physicalStatus: "not-stated",
+    physicalLabel: "No separate registration-office visit established",
+    alternativeLabel: "If subscription, exemption or payment blocks the form",
+    alternativeDetail: "Keep the transaction reference and use ICAN's official student support. Do not buy another exam entry or assume a pending exemption is approved. The selected centre is for the examination, not a registration counter.",
+  },
+  "ican-professional-exemption": {
+    mode: "online", modeLabel: "ICAN online exemption application",
+    startLabel: "Match your qualification to ICAN's exemption table first",
+    startDetail: "Check the exact qualification, institution accreditation and exempted papers in ICAN's official guide. Its online exemption form asks for student registration/PIN, referee membership number, school, discipline and qualification year. Pay only the correct officially confirmed exemption amount.",
+    onlineAvailable: true, physicalStatus: "not-stated",
+    physicalLabel: "The checked online exemption form does not mandate an office visit",
+    alternativeLabel: "If your qualification or payment amount is unclear",
+    alternativeDetail: "Ask ICAN to confirm the exemption category before paying; ICAN says a wrong exemption payment is not refundable. Wait for approved exemption status before omitting papers from a later examination entry.",
+  },
+
   "jamb-profile-code": {
     mode: "agency-guided", modeLabel: "Linked-SIM SMS, not a website form",
     startLabel: "Text NIN and your 11 digits from your own SIM",

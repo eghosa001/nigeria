@@ -2,11 +2,12 @@ import Link from "next/link";
 import type { Service } from "@/lib/types";
 import { getServiceJourney, hasReviewedServiceJourney } from "@/lib/journey";
 import { getDetailedServiceGuidance } from "@/lib/service-guidance";
+import { getReviewedIcanGuidance } from "@/lib/ican-route-guidance-2026-10-17";
 import { getOfficialServiceLinks } from "@/lib/official-links";
 
 export function ServiceJourney({ service }: { service: Service }) {
   const journey = getServiceJourney(service);
-  const guidance = getDetailedServiceGuidance(service);
+  const guidance = getReviewedIcanGuidance(service.slug) ?? getDetailedServiceGuidance(service);
   const officialLinks = getOfficialServiceLinks(service);
 
   return (
@@ -41,7 +42,7 @@ export function ServiceJourney({ service }: { service: Service }) {
 
         <article className="journey-card">
           <span className="journey-number" aria-hidden="true">02</span>
-          <span className="journey-label">Physical / assisted stage</span>
+          <span className="journey-label">{journey.physicalStatus === "not-stated" ? "Physical visit: evidence check" : "Physical / assisted stage"}</span>
           <h3>{guidance.route.physicalTitle}</h3>
           <p>{guidance.route.physicalDetail}</p>
 {journey.physicalStatus !== "not-stated" && service.slug !== "nigeria-landing-exit-card" ? (

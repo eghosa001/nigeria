@@ -1,11 +1,13 @@
 import Link from "next/link";
 import type { Service } from "@/lib/types";
 import { getDetailedServiceGuidance, hasExplicitServiceGuidance } from "@/lib/service-guidance";
+import { getReviewedIcanGuidance } from "@/lib/ican-route-guidance-2026-10-17";
 
 export function ServiceAftercare({ service }: { service: Service }) {
   // Do not render generic aftercare cards in hundreds of unrelated guides.
-  if (!hasExplicitServiceGuidance(service.slug)) return null;
-  const guidance = getDetailedServiceGuidance(service);
+  const reviewedIcan = getReviewedIcanGuidance(service.slug);
+  if (!reviewedIcan && !hasExplicitServiceGuidance(service.slug)) return null;
+  const guidance = reviewedIcan ?? getDetailedServiceGuidance(service);
 
   return (
     <section className="aftercare-section" id="after-submit">
