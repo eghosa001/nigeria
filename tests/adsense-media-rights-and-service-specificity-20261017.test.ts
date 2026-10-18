@@ -169,7 +169,7 @@ test("generic service aftercare is omitted, with no broken quick-navigation targ
   assert.ok(service);
   assert.equal(hasExplicitServiceGuidance(service.slug), false);
   const aftercare = readFileSync("components/service-aftercare.tsx", "utf8");
-  assert.match(aftercare, /if \(!hasExplicitServiceGuidance\(service\.slug\)\) return null/);
+  assert.match(aftercare, /if \(!reviewedIcan && !hasExplicitServiceGuidance\(service\.slug\)\) return null/);
   assert.match(readFileSync("components/guide-quick-nav.tsx", "utf8"), /showAftercare \?/);
 });
 
