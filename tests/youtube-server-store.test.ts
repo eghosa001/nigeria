@@ -56,7 +56,7 @@ test('native Next production-mode browser QA uses the explicit static-data adapt
   const beforeNode = process.env.NODE_ENV;
   try {
     process.env.MYNIGERIAGUIDE_E2E_STATIC_YOUTUBE = '1';
-    process.env.NODE_ENV = 'production';
+    Reflect.set(process.env, 'NODE_ENV', 'production');
     const movie = queryYouTubeDirectory().movies[0];
     const selected = await createYouTubeServerStore({ mode: 'runtime' }).detail(movie.videoId);
     const verified = await getYouTubeDetailMovieById(movie.videoId);
@@ -64,7 +64,7 @@ test('native Next production-mode browser QA uses the explicit static-data adapt
   } finally {
     if (beforeQa === undefined) delete process.env.MYNIGERIAGUIDE_E2E_STATIC_YOUTUBE;
     else process.env.MYNIGERIAGUIDE_E2E_STATIC_YOUTUBE = beforeQa;
-    if (beforeNode === undefined) delete process.env.NODE_ENV;
-    else process.env.NODE_ENV = beforeNode;
+    if (beforeNode === undefined) Reflect.deleteProperty(process.env, 'NODE_ENV');
+    else Reflect.set(process.env, 'NODE_ENV', beforeNode);
   }
 });
