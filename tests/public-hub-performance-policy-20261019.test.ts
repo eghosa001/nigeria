@@ -43,3 +43,14 @@ test("only the first two YouTube cards load eagerly; remaining images are browse
   assert.match(read("components/lazy-youtube-player.tsx"), /active \? \(/,
     "Embedded YouTube player should be interaction-gated, not auto-loaded");
 });
+
+test("offline worker never downloads the homepage, services or saved-page HTML during installation", () => {
+  const sw = read("public/sw.js");
+  assert.match(sw, /const CACHE = "mynigeriaguide-v3"/);
+  assert.match(sw, /const CORE = \["\/offline", "\/manifest\.webmanifest"\]/);
+  assert.doesNotMatch(sw, /const CORE = \[[^\]]*"\/services"/);
+  assert.doesNotMatch(sw, /const CORE = \[[^\]]*"\/saved"/);
+  assert.match(sw, /request\.mode === "navigate"/, "visited public pages should still get an offline backup");
+  const register = read("components/service-worker-register.tsx");
+  assert.match(register, /\}, 4000\);/, "register after initial page resource activity");
+});
