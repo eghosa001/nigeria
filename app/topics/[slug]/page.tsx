@@ -47,7 +47,13 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
   if (!hub) notFound();
 
   const services = hub.serviceSlugs.map(getPublicService).filter((service) => service !== undefined);
-  const taskLinks = getDistinctTopicTaskLinks(hub.searches, services);
+  // Search routes may intentionally point to a connected service outside the
+  // hub's featured cards. Keep every existing valid destination reachable,
+  // but show it only once, rather than dropping useful contextual guidance.
+  const searchServices = [...new Set(hub.searches.map((search) => search.serviceSlug))]
+    .map(getPublicService)
+    .filter((service) => service !== undefined);
+  const taskLinks = getDistinctTopicTaskLinks(hub.searches, searchServices);
   const base = getSiteUrl();
   const pageUrl = base + "/topics/" + hub.slug;
 
