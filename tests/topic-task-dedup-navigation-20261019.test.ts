@@ -54,4 +54,7 @@ test("topic pages show helpful options rather than a repeated keyword-count dash
   assert.doesNotMatch(topic, /Common searches", value: String\(hub\.searches\.length\)/);
   assert.match(topic, /taskLinks\.map\(\(task\)/);
   assert.match(answer, /visibleFacts\.length > 0/);
+  assert.match(answer, /answer-first-single/);
+  const styles = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");
+  assert.match(styles, /\.answer-first-single\s*\{[^}]*grid-template-columns:\s*minmax\(0, 1fr\)/s);
 });
