@@ -5975,6 +5975,10 @@ a.admin-guide-row:hover { background:#f8fcf9; }
     var(--surface);
   box-shadow: var(--shadow-sm);
 }
+.answer-first-single {
+  /* An answer with no fact panel must use the whole width, not leave an empty column. */
+  grid-template-columns: minmax(0, 1fr);
+}
 .answer-first-copy {
   min-width: 0;
 }
