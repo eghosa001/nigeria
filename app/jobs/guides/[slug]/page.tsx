@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { compactSearchText } from "@/lib/search-snippet";
 import Link from "next/link";
 import { PageOutline } from "@/components/page-outline";
 import { notFound } from "next/navigation";
@@ -20,8 +21,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const guide = getCareerGuide(slug);
   if (!guide) return {};
   return {
-    title: guide.metaTitle,
-    description: guide.description,
+    title: { absolute: compactSearchText(guide.metaTitle, 60) },
+    description: compactSearchText(guide.description, 155),
     alternates: { canonical: "/jobs/guides/" + guide.slug },
   };
 }
