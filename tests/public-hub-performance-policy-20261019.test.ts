@@ -41,9 +41,9 @@ test("only the first two YouTube cards load eagerly; remaining images are browse
   assert.match(entertainment, /export const revalidate = 300;/,
     "public film editorial landing should reuse short-lived cached HTML");
   assert.doesNotMatch(entertainment, /export const dynamic = "force-dynamic";/);
-  assert.doesNotMatch(entertainment, /\\bcookies\\(|\\bheaders\\(/,
+  assert.doesNotMatch(entertainment, /\bcookies\(|\bheaders\(/,
     "shared film editorial hub cannot depend on individual visitor data");
-  assert.match(entertainment, /<YouTubeMovieCard movie=\\{movie\\} key=\\{movie\\.videoId\\} \\/>/,
+  assert.match(entertainment, /<YouTubeMovieCard movie=\{movie\} key=\{movie\.videoId\} \/>/,
     "below-featured film thumbnails should also rely on lazy loading");
   assert.doesNotMatch(entertainment, /<YouTubeMovieCard[^>]*priority=/);
   const movieBrowse = read("app/entertainment/movies/page.tsx");
