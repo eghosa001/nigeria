@@ -23,9 +23,10 @@ export const metadata: Metadata = {
   },
 };
 
-// Deadline-sensitive status must be evaluated on every request, not frozen at build time.
-// Recruitment deadlines and trends must change at Nigerian midnight without a redeploy.
-export const dynamic = "force-dynamic";
+// Public-only homepage: cache rendered HTML/RSC for five minutes at the edge.
+// Recruitment statuses still refresh automatically without a redeploy; no
+// user/session data or admin records are rendered into this shared page.
+export const revalidate = 300;
 
 const quickServices = [
   { label: "JAMB profile code and recovery", href: "/services/jamb-profile-code" },
