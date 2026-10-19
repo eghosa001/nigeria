@@ -17,13 +17,13 @@ export const revalidate = 86400;
 
 const youtubeSeoOverrides: Record<string, { title: string; description: string }> = {
   "KWIpR47N9hc": { title: "Love Always Wins Cast & Full Movie (2026)", description: "Love Always Wins cast, story and official full movie on YouTube. See the verified publisher, runtime and where to watch the Nigerian movie." },
-  "X3HaWmJoSRU": { title: "Once Upon a Village 3 Cast, Roles & Full Movie (2026)", description: "Once Upon a Village 3 cast: Deza The Great (Chairman Jeffery), Prisma James (Lilian), Annabel Apara (Enoh). Original RuthKadiri247 movie." },
+  "X3HaWmJoSRU": { title: "Watch Once Upon a Village 3 — RuthKadiri247", description: "Watch the verified full Once Upon a Village 3 film from RuthKadiri247. See video runtime, publisher details and the documented cast and character credits." },
   "Yu-QxqPDmXM": { title: "Once Upon a Village Cast & Full Movie (2026)", description: "Once Upon a Village cast, 103-minute runtime and official full movie on YouTube, published by RuthKadiri247." },
   "_86CuSRi6E4": { title: "One More Night Nigerian Movie: Cast & Full Movie", description: "One More Night cast, 129-minute runtime and official full Nigerian movie on YouTube, starring Frederick Leonard and Cynthia Clarke." },
   "T1-buA-yAmo": { title: "Holy Matrimony Nigerian Movie: Cast & Full Movie", description: "Holy Matrimony cast, 143-minute runtime and official full Nigerian movie on YouTube, starring Frederick Leonard, Onyi Alex and Nini Mbonu." },
   "zKQoArfptqA": { title: "The Bride Switch Cast & Full Movie (2026)", description: "The Bride Switch cast, story and official full movie on YouTube. See the verified publisher, runtime and where to watch the Nigerian movie." },
   "2Ficn2BMlI8": { title: "What Tomorrow Holds Cast & Full Movie (2026)", description: "What Tomorrow Holds cast, story and official full movie on YouTube. See the verified publisher, runtime and where to watch the Nigerian movie." },
-  "y2RkBwUYSvo": { title: "Forever Isn't Long Enough (2025): Cast, Plot & Full Film", description: "Forever Isn't Long Enough follows Grace, a pastor's daughter challenged by judgment and a crisis of faith. Full 2025 film on Royal Arts TV, with credits." },
+  "y2RkBwUYSvo": { title: "Watch Forever Isn't Long Enough — Royal Arts TV", description: "Watch the official 2025 Forever Isn't Long Enough film on Royal Arts TV. Find the original full-video upload, runtime and documented film credits." },
   "TH8oDejHrEo": { title: "In Every Lifetime Cast & Full Movie", description: "In Every Lifetime cast, runtime and official full Nigerian movie on YouTube, with Daniel Etim Effiong, Ego Nwosu and Shaznay Okawa." },
   "11n6AU3EVUk": { title: "Just Like a Mirror Cast & Full Movie (2026)", description: "Just Like a Mirror cast, runtime and official full Nigerian movie on YouTube, with Ebube Nwagbo, Dera Osadebe and Enock Darko." },
   "zxvtMba4MYE": { title: "Third Party Risk Cast & Full Movie (2026)", description: "Third Party Risk cast, runtime and official full Nigerian movie on YouTube, with Omeche Oko, Ray Emodi and Symon Oko." }
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
   return {
     title: { absolute: override?.title ?? compactMetadata(
       indexable
-        ? `${movie.title} Cast & Full Movie (${movie.year})`
+        ? `Watch ${movie.title} — Official Full Movie (${movie.year})`
         : `${movie.title} Full Movie on YouTube (${movie.year})`,
       60,
     ) },
