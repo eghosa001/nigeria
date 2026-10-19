@@ -16,7 +16,6 @@ test("official full-video pages answer watch intent separately from cast profile
 
 test("video indexing and originals remain guarded by verification, canonical and rights logic", () => {
   assert.match(detail, /isIndexableYouTubeDetailMovie\(movie\)/);
-  assert.match(detail, /aliasToCuratedMovie \? undefined/); // intentional guard placeholder
   assert.match(detail, /robots: indexable && !aliasToCuratedMovie \? undefined : \{ index: false, follow: true \}/);
   assert.match(detail, /alternates: \{ canonical \}/);
   assert.match(detail, /hasValidVideoPublishDate\(movie\.publishedAt\)/);
