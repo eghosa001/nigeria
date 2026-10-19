@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
-import { getFeaturedCast, type EntertainmentPlatform } from "@/lib/entertainment";
+import type { EntertainmentPlatform } from "@/lib/entertainment";
+import { leadMovieCast } from "@/lib/movie-cast-credits";
 import type {
   EntertainmentDirectoryResult,
   EntertainmentDirectorySort,
@@ -183,7 +184,7 @@ export function EntertainmentCatalog({
                   {title.runtimeMinutes ? <span>{title.runtimeMinutes} min</span> : null}
                   <span>{title.languages.slice(0, 2).join(" / ")}</span>
                 </div>
-                <p className="movie-card-cast"><strong>Featuring:</strong> {getFeaturedCast(title).join(" · ")}</p>
+                <p className="movie-card-cast"><strong>Cast:</strong> {leadMovieCast(title).join(" · ") || "Credits not yet confirmed"}</p>
                 <div className="movie-tile-footer">
                   <span>{title.genres.slice(0, 2).join(" · ")}</span>
                   <Link href={"/entertainment/movies/" + title.slug} prefetch={false}>Details →</Link>
