@@ -197,8 +197,8 @@ export default async function MoviesPage({
             <Link href="/entertainment/youtube">Browse all free movies →</Link>
           </div>
           <div className="youtube-movie-grid movie-preview-grid">
-            {freePreview.map((movie, index) => (
-              <YouTubeMovieCard movie={movie} priority={index < 5} key={movie.videoId} />
+            {freePreview.map((movie) => (
+              <YouTubeMovieCard movie={movie} key={movie.videoId} />
             ))}
           </div>
         </div>
