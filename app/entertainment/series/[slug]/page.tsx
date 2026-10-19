@@ -29,17 +29,17 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   const {slug}=await params;
   const item=getSeriesTitle(slug);
   if(!item) return {};
-  // Short search snippets refer to the exact series; detailed context stays
-  // on the page, rather than duplicating a full synopsis in the meta tag.
+  // Show the documented series cast in search results rather than using
+  // generic "cast" filler. Do not invent roles, episode counts or access.
+  const castLead = item.cast.slice(0, 3).join(", ");
   const synopsis = item.synopsis.replace(/\s+/g, " ").trim();
-  const prefix = item.title + " (" + item.year + "): cast, episodes and verified viewing sources. ";
-  const space = Math.max(0, 150 - prefix.length);
-  const summary = synopsis.length > space ? synopsis.slice(0, space).replace(/\s+\S*$/, "").trimEnd() + "…" : synopsis;
-  const description = prefix + summary;
-  const seoTitle = compactSearchText(item.title + ": Episodes & Cast", 60);
+  const prefix = item.title + " (" + item.year + "): " +
+    (castLead ? "Cast: " + castLead + ". " : "Episode and viewing guide. ");
+  const description = compactSearchText(prefix + synopsis, 155);
+  const seoTitle = compactSearchText(item.title + ": Cast, Episodes & Where to Watch", 60);
   return {
     title:{ absolute: seoTitle },
-    description:compactSearchText(description, 155),
+    description,
     alternates:{canonical:"/entertainment/series/"+item.slug},
     openGraph:{title:item.title,description,type:"video.tv_show",url:"/entertainment/series/"+item.slug},
     twitter:{card:"summary",title:item.title,description}
