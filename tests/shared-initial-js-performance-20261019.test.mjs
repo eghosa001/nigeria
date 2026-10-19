@@ -22,6 +22,8 @@ test("root layout loads just the lightweight recent-page tracker, never the save
 test("PostHog stays dynamically imported and starts in an idle period with a bounded fallback", () => {
   const script = source("components/posthog-analytics.tsx");
   assert.match(script, /window\.requestIdleCallback\(capture, \{ timeout: 1250 \}\)/);
+  assert.match(script, /shouldEnableAnalytics\(pathname, navigator\.webdriver, navigator\.userAgent, window\.location\.hostname\)/,
+    "do not download analytics on admin, preview, or test routes");
   assert.match(script, /window\.setTimeout\(capture, 350\)/);
   assert.match(script, /window\.cancelIdleCallback\(idleId\)/);
   assert.match(script, /import\("@\/lib\/posthog-client"\)/);
