@@ -1,5 +1,5 @@
 import type { EntertainmentTitle } from "@/lib/entertainment";
-import { canDisplayEntertainmentArtwork } from "@/lib/entertainment";
+import { canDisplayClientEntertainmentArtwork } from "@/lib/entertainment-client-artwork";
 import { getSourceLinkedFilmPreview, getVerifiedYouTubePreview } from "@/lib/movie-media-previews";
 import { RemoteMoviePreviewImage } from "@/components/remote-movie-preview-image";
 
@@ -76,7 +76,7 @@ export function EntertainmentArtwork({
   variant?: "card" | "hero";
   showSourceLink?: boolean;
 }) {
-  if (canDisplayEntertainmentArtwork(title) && title.artwork) {
+  if (canDisplayClientEntertainmentArtwork(title) && title.artwork) {
     return (
       <figure
         className={"entertainment-artwork entertainment-artwork-approved entertainment-artwork-" + variant}
