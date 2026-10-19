@@ -37,6 +37,13 @@ test("only the first two YouTube cards load eagerly; remaining images are browse
     assert.match(read(path), /priority=\{index < 2\}/, path);
     assert.doesNotMatch(read(path), /priority=\{index < 5\}/, path);
   }
+  const movieBrowse = read("app/entertainment/movies/page.tsx");
+  assert.match(movieBrowse, /freePreview\.map\(\(movie\) =>/,
+    "movie browse previews are already below the hero and evergreen discovery content");
+  assert.match(movieBrowse, /<YouTubeMovieCard movie=\{movie\} key=\{movie\.videoId\} \/>/,
+    "below-the-fold movie previews use the card's lazy-loading default");
+  assert.doesNotMatch(movieBrowse, /<YouTubeMovieCard[^>]*priority=/,
+    "do not eagerly fetch the buried ten-image YouTube shelf");
   const image = read("components/remote-movie-preview-image.tsx");
   assert.match(image, /loading = "lazy"/);
   assert.match(image, /decoding="async"/);
