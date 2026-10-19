@@ -5,6 +5,7 @@ import { getPublicService } from "../lib/data";
 import { getServiceJourney, hasReviewedServiceJourney } from "../lib/journey";
 import { generateMetadata as seriesMetadata } from "../app/entertainment/series/[slug]/page";
 import { generateMetadata as filmMetadata } from "../app/entertainment/movies/[slug]/page";
+import { getSeriesTitle } from "../lib/series";
 
 test("reviewed service choices use only the authored service-specific route", () => {
   for (const slug of [
@@ -44,12 +45,19 @@ test("private job readiness is available only for verified open individual vacan
   assert.match(widget, /employer alone decides eligibility/);
 });
 
-test("series metadata stays concise while story details remain in on-page synopsis", async () => {
+test("series search metadata stays concise and identifies documented performers", async () => {
   for (const slug of ["afobaje-2026", "the-ten-2026", "once-upon-a-village"]) {
     const metadata = await seriesMetadata({ params: Promise.resolve({ slug }) });
-    assert.ok(String(metadata.title).length < 48, slug);
-    assert.ok(String(metadata.description).length <= 160, slug);
-    assert.match(String(metadata.description), /cast, episodes and verified viewing sources/i, slug);
+    const item = getSeriesTitle(slug);
+    assert.ok(item, slug);
+    const title = metadata.title && typeof metadata.title === "object" && "absolute" in metadata.title
+      ? metadata.title.absolute : metadata.title;
+    assert.ok(String(title).length <= 60, slug);
+    assert.ok(String(metadata.description).length <= 155, slug);
+    assert.ok(String(metadata.description).includes(item.title), "Series title missing: " + slug);
+    if (item.cast.length > 0) {
+      assert.ok(String(metadata.description).includes("Cast: " + item.cast[0]), "Missing documented lead: " + slug);
+    }
   }
 });
 

@@ -1,0 +1,64 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+import { getPublicService } from "../lib/data";
+import { getStepDetails, isPaymentAction } from "../lib/step-details";
+import { getServiceSeoTitleOverride, getServiceSeoDescriptionOverride } from "../data/service-seo-overrides";
+
+const serviceSlugs = [
+  "smartcash-wallet-upgrade", "airtel-esim-activation", "fcmb-business-account-online",
+  "uba-open-account", "smartcash-wallet-opening", "united-nigeria-online-check-in",
+  "dstv-streaming-subscription-nigeria", "palmpay-account-registration",
+  "united-nigeria-change-booking", "ican-professional-induction",
+  "synlab-pathprovider-results", "wakanow-book-flight-nigeria",
+  "soncap-import-certification", "air-peace-book-flight",
+  "dhl-track-shipment-nigeria", "ikeja-electric-prepaid-meter-application",
+  "glo-esim-activation", "stanbic-pension-rsa-statement",
+  "momo-psb-wallet-opening", "opay-account-opening-nigeria", "cfa-exam-deferral",
+];
+
+test("GSC-prioritised official-service snippets are canonical, source-backed and untruncated", () => {
+  for (const slug of serviceSlugs) {
+    const service = getPublicService(slug);
+    assert.ok(service, "Published guide missing: " + slug);
+    assert.ok(service.sources?.length, "Issuer sources missing: " + slug);
+    const year = service.lastVerified.slice(0, 4);
+    const title = getServiceSeoTitleOverride(slug, year);
+    const description = getServiceSeoDescriptionOverride(slug, year);
+    assert.ok(title && description, "Missing title or description: " + slug);
+    assert.ok(title.length <= 60, "Title too long: " + slug + " " + title.length);
+    assert.ok(description.length <= 155, "Description too long: " + slug + " " + description.length);
+    assert.doesNotMatch(title, /\{year\}/);
+    assert.doesNotMatch(description, /\{year\}/);
+  }
+});
+
+test("career and Tour canonical detail routes use factual, concise search snippets", () => {
+  const read = (path: string) => readFileSync(new URL("../" + path, import.meta.url), "utf8");
+  const tour = read("app/explore/[slug]/page.tsx");
+  const careers = read("app/jobs/guides/[slug]/page.tsx");
+  const series = read("app/entertainment/series/[slug]/page.tsx");
+  assert.match(series, /const castLead = item.cast.slice\(0, 3\).join/);
+  assert.match(series, /compactSearchText\(prefix \+ synopsis, 155\)/);
+  for (const slug of ["nigeria-rainforest-guide", "nigeria-hills-mountains-guide", "ilorin"]) {
+    assert.match(tour, new RegExp('guide.slug === "' + slug + '"'));
+    assert.match(tour, new RegExp('"' + slug + '":'));
+  }
+  assert.match(careers, /title: \{ absolute: compactSearchText\(guide.metaTitle, 60\) \}/);
+  assert.match(careers, /description: compactSearchText\(guide.description, 155\)/);
+  assert.match(careers, /canonical: "\/jobs\/guides\/" \+ guide.slug/);
+});
+
+test("anti-scam warnings do not become payment steps across service templates", () => {
+  const onlyWarning = "Do not pay an agent or unofficial seller for account activation.";
+  assert.equal(isPaymentAction(onlyWarning), false);
+  assert.equal(isPaymentAction("Never pay for a purported fast-track status update."), false);
+  assert.equal(isPaymentAction("Do not pay before the provider confirms your application."), false);
+  const actualPayment = "Pay the official application fee in the provider's portal; do not pay an agent.";
+  assert.equal(isPaymentAction(actualPayment), true);
+  const sample = getPublicService("nelfund-loan-status-and-upkeep");
+  assert.ok(sample);
+  const notes = getStepDetails(sample).filter(x => /never pay/i.test(x.instruction));
+  assert.ok(notes.length, "Expected source-backed scam warning in NELFUND guide");
+  assert.ok(notes.every(x => x.stage !== "Payment" && !x.checkpoint?.includes("payment screen")));
+});

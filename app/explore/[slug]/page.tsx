@@ -29,6 +29,9 @@ function truncateSeo(value: string, limit: number) {
 
 function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide>>) {
   const year = guide.lastReviewed.slice(0, 4);
+  if (guide.slug === "nigeria-rainforest-guide") return "Rainforests in Nigeria: Locations, Parks & Wildlife";
+  if (guide.slug === "nigeria-hills-mountains-guide") return "Hills and Mountains in Nigeria: Where to Visit";
+  if (guide.slug === "ilorin") return "Ilorin, Kwara State: Places to Visit & City Guide";
   if (guide.slug === "nigeria-landmarks-places-to-visit") return "Famous Nigerian Landmarks: Locations & Visitor Guide";
   if (guide.slug === "calabar-carnival-2026") return "Calabar Carnival 2026: Parade Dates & Trip Guide";
   if (guide.slug === "moonshot-techcabal-lagos-2026") return "Moonshot by TechCabal 2026: Dates & Venue";
@@ -48,6 +51,9 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
 // guides earned impressions on precise landmark queries but no recorded clicks.
 // Match search intent without suggesting unrestricted access or inventing fees.
 const exploreDescriptionOverrides: Record<string, string> = {
+  "nigeria-rainforest-guide": "Does Nigeria have rainforests? Learn where tropical forests occur, the places and wildlife they support, and what to check before visiting protected areas.",
+  "nigeria-hills-mountains-guide": "Find Nigerian hills, mountains and highland landscapes with locations, visitor-planning guidance and access checks. Compare destinations before travelling.",
+  "ilorin": "Explore Ilorin in Kwara State, Nigeria. Use its city guide to identify places to visit, plan journeys and check access before setting out.",
   "nigeria-landmarks-places-to-visit": "Explore famous landmarks in Nigeria, their locations and historical significance. Compare heritage sites, waterfalls and parks with practical access advice.",
   "moonshot-techcabal-lagos-2026": "Moonshot by TechCabal is 28–29 October 2026 at National Theatre, Lagos. Compare official tickets, the programme, transport and side-event access.",
   "dufuna-canoe-heritage-guide": "Dufuna Canoe, found in Yobe State, is more than 8,000 years old. Read its archaeological history and check exhibition access before planning a visit.",
