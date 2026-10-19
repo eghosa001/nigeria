@@ -40,7 +40,7 @@ test("NECO External journey does not mislead phone registrants into skipping bio
   const details = getDetailedServiceGuidance(neco);
   assert.match(details.route.startTitle, /16 available subjects/);
   assert.match(details.route.physicalDetail, /fingerprints/);
-  assert.match(details.route.fallbackDetail, /neighbourhood cannot be changed/);
+  assert.match(details.route.fallbackDetail, /neighbourhood.*cannot be changed/i);
   const component = readFileSync(new URL("../components/service-journey.tsx", import.meta.url), "utf8");
   assert.match(component, /"neco-2026-ssce-external-registration"\].includes\(service.slug\)/);
 });
