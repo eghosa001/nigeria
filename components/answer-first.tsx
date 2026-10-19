@@ -63,14 +63,16 @@ export function AnswerFirst({
         {note ? <small className="answer-first-note">{note}</small> : null}
       </div>
 
-      <dl className="answer-first-facts">
-        {visibleFacts.map((fact) => (
-          <div key={fact.label}>
-            <dt>{fact.label}</dt>
-            <dd>{fact.value}</dd>
-          </div>
-        ))}
-      </dl>
+      {visibleFacts.length > 0 ? (
+        <dl className="answer-first-facts">
+          {visibleFacts.map((fact) => (
+            <div key={fact.label}>
+              <dt>{fact.label}</dt>
+              <dd>{fact.value}</dd>
+            </div>
+          ))}
+        </dl>
+      ) : null}
     </section>
   );
 }
