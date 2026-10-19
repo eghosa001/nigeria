@@ -22,9 +22,15 @@ function isPhysicalAction(step: string) {
 // An RRR, receipt, payment status, fee schedule or reference number is not
 // itself a request to make a payment. Apply the same test to every service.
 export function isPaymentAction(step: string) {
-  return /\b(?:pay|paying)\b(?!\s+attention\b)/i.test(step)
-    || /\b(?:make|complete|proceed to|process|settle|submit|initiate)\s+(?:(?:the|an?|your|required|official|applicable|registration|application|remaining)\s+){0,4}(?:payment|fee|charge)\b(?!\s+(?:status|reference|number|receipt|evidence|proof|confirmation|details|record|history|code)\b)/i.test(step)
-    || /\bcheckout\b|\b(?:payment|fee)\s+(?:checkout|gateway|screen)\b.*\b(?:proceed|complete|pay)\b/i.test(step);
+  // Remove stand-alone warnings that prohibit payment before looking for an
+  // actual payment instruction. These are especially common on scam and
+  // refund guides; "never pay an agent" must not become a Payment step.
+  const action = step
+    .replace(/\b(?:do not|don't|never|avoid|without)\s+(?:ever\s+)?pay(?:ing)?\b[^.!?;]*/gi, "")
+    .replace(/\b(?:do not|don't|never|avoid)\s+(?:make|complete|process|submit|initiate)\s+(?:(?:a|the|any)\s+)?payment\b[^.!?;]*/gi, "");
+  return /\b(?:pay|paying)\b(?!\s+attention\b)/i.test(action)
+    || /\b(?:make|complete|proceed to|process|settle|submit|initiate)\s+(?:(?:the|an?|your|required|official|applicable|registration|application|remaining)\s+){0,4}(?:payment|fee|charge)\b(?!\s+(?:status|reference|number|receipt|evidence|proof|confirmation|details|record|history|code)\b)/i.test(action)
+    || /\bcheckout\b|\b(?:payment|fee)\s+(?:checkout|gateway|screen)\b.*\b(?:proceed|complete|pay)\b/i.test(action);
 }
 
 function isUploadAction(step: string) {
