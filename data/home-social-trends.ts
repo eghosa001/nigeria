@@ -15,6 +15,36 @@ export type HomeSocialTrend = {
  * - Every item must point to a real MyNigeriaGuide page that already meets the site's source, freshness, SEO and quality standards.
  */
 export const homeSocialTrends: HomeSocialTrend[] = [
+  // 19 Oct: original issuer evidence, corroborated with independent coverage.
+  // Each story strengthens one existing canonical guide; no new thin pages.
+  {
+    pillar: "Services",
+    title: "JAMB 2026 CAPS: a university offer is not the official JAMB admission letter",
+    href: "/services/jamb-caps",
+    checkedAt: "2026-10-19",
+    expiresAt: "2026-10-26",
+  },
+  {
+    pillar: "Tour Nigeria",
+    title: "Design Week Lagos: National Theatre programme 22–25 October, confirm each ticket",
+    href: "/explore/design-week-lagos-2026",
+    checkedAt: "2026-10-19",
+    expiresAt: "2026-10-25",
+  },
+  {
+    pillar: "Movies & Entertainment",
+    title: "Tele x Zikora: official teaser, cast and planned 23 October cinema opening",
+    href: "/entertainment/movies/tele-x-zikora-2026",
+    checkedAt: "2026-10-19",
+    expiresAt: "2026-10-23",
+  },
+  {
+    pillar: "Jobs & Careers",
+    title: "Army 92RRI: official application ongoing; print AND submit the online form",
+    href: "/jobs/nigerian-army-92rri-2026",
+    checkedAt: "2026-10-19",
+    expiresAt: "2026-10-21",
+  },
   {
     pillar: "Movies & Entertainment",
     title: "18 October creator audio: Comfort and Loketo in Nigerian TikTok and Instagram coverage",
