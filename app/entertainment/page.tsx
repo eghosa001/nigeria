@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "/entertainment" },
 };
 
+// Public editorial hub: cache identical HTML for up to five minutes at the edge.
+// No visitor-specific state or deadline-sensitive recruitment is rendered here.
+export const revalidate = 300;
+
 const popularMovieSearchLinks = [
   { label: "Lionheart", href: "/entertainment/movies/lionheart" },
   { label: "King of Boys", href: "/entertainment/movies/king-of-boys" },
@@ -124,8 +128,8 @@ export default function EntertainmentPage() {
             <Link href="/entertainment/youtube">Browse all free movies →</Link>
           </div>
           <div className="youtube-movie-grid movie-preview-grid">
-            {fresh.map((movie, index) => (
-              <YouTubeMovieCard movie={movie} priority={index < 3} key={movie.videoId} />
+            {fresh.map((movie) => (
+              <YouTubeMovieCard movie={movie} key={movie.videoId} />
             ))}
           </div>
         </div>
