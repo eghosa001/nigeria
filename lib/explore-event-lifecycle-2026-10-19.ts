@@ -1,0 +1,52 @@
+import type { ExploreGuide } from "@/lib/explore";
+
+// 19 October 2026: individually re-opened NIFAFEST's 15–17 October programme,
+// Design Week Lagos organiser's full-week calendar, and the National Theatre's
+// distinct 22–25 October Hall schedule. These are desk checks, NOT attendance.
+export const reviewedEventSlugs20261019 = [
+  "nifafest-abuja-2026",
+  "design-week-lagos-2026",
+] as const;
+
+export function applyCurrentEventVisitorDecisions20261019(guide: ExploreGuide): ExploreGuide {
+  if (guide.slug === "nifafest-abuja-2026") {
+    return {
+      ...guide,
+      summary: "NIFAFEST Abuja's published programme ran from 15 to 17 October 2026, so its advertised opening, seminar and finale dates have passed. This page preserves the official Garki-versus-Maitama venue record; it is not an invitation to attend a continuing festival or a claim that every scheduled event took place.",
+      intro: [
+        "The NIFAFEST organiser advertised a 15 October trade and fashion exhibition and a 16 October grant/empowerment seminar at the Cyprian Ekwensi Centre for Arts and Culture, Area 10, Garki. Its distinct 17 October awards finale was scheduled at the National Universities Commission auditorium in Maitama. These are the organiser's published plans, not independently verified attendance or post-event results.",
+        "As of 19 October, all three advertised dates are over. Do not pay for an old event-registration offer or travel to the Garki seminar address expecting the Maitama finale. If seeking the festival's award results, recordings or next edition, ask the organiser for an official post-event announcement; the published programme alone cannot verify winners, completed grants or the timing of another edition.",
+      ],
+      planning: [
+        { label: "Has the 2026 festival ended?", detail: "Yes, the organiser's advertised 15–17 October 2026 dates have elapsed. This is a historical schedule reference; no further 2026 attendance window was found in the official programme checked on 19 October." },
+        { label: "Which venue was scheduled for which day?", detail: "15–16 October: Cyprian Ekwensi Centre for Arts and Culture in Area 10, Garki. 17 October: National Universities Commission Event Auditorium in Maitama. Those locations are separate; the Wuse secretariat is an office address, not another festival session." },
+        { label: "Were the grants or awards actually delivered?", detail: "The organiser describes an empowerment seminar, a grand finale and awards. A schedule is not evidence that grants were awarded or every event occurred; verify any winner, benefit or award claim against a subsequent official result or an independently reported event." },
+        { label: "Where should a prospective participant go next?", detail: "For a future edition, follow an updated organiser schedule with a new date, venue and participant registration. Do not reuse a payment request, WhatsApp instruction or old ticket link from the concluded October 2026 programme." },
+      ],
+      sources: (guide.sources ?? []).some(s => s.href === "https://nifafest.com/")
+        ? guide.sources : [...(guide.sources ?? []), { label: "NIFAFEST — official 15–17 October 2026 schedule and Garki/Maitama venues", href: "https://nifafest.com/" }],
+      lastReviewed: "2026-10-19",
+    };
+  }
+  if (guide.slug === "design-week-lagos-2026") {
+    const newSource = { label: "Design Week Lagos — organiser 18–25 October calendar and National Theatre main hub", href: "https://designweeklagos.com/" };
+    const faq = { label: "Design Week Lagos — official venue and programme FAQ", href: "https://designweeklagos.com/faq/" };
+    const sources = [...(guide.sources ?? [])];
+    for (const s of [newSource, faq]) {
+      if (guide.source?.href !== s.href && !sources.some(existing => existing.href === s.href)) sources.push(s);
+    }
+    return {
+      ...guide,
+      planning: [
+        { label: "Which hall date should you book?", detail: "The National Theatre lists 22 October for industry/architecture sessions, 23 October for products/interiors/textiles, 24 October for African design networks and 25 October for the student competition. These are the main Hall events, not automatic entry to every citywide activation from 18 October." },
+        { label: "How do you confirm a valid ticket and venue?", detail: "Open the National Theatre's exact Design Week listing and follow its named organiser-linked registration partner. Match your receipt to the event date, session and Hall at Iganmu. The provisional 10:00–18:00 times vary by day and a ticket for one session is not a universal festival pass." },
+        { label: "What if your session or entry price is not shown?", detail: "Use designweeklagos.com for the specific organiser session and nationaltheatre.gov.ng for the relevant Hall listing. If the programme is absent or the ticket destination changes, ask the organisers to confirm before paying or arranging transport; neither site establishes one flat admission charge." },
+        { label: "Are all exhibitions at the National Theatre?", detail: "No. The organiser describes a citywide festival with partner galleries, studios and showrooms; the National Theatre is its central hub. Confirm the address for your individual booking instead of assuming an Iganmu entry covers partner sites." },
+        { label: "If you cannot attend the main Hall programme", detail: "The festival organiser's programme separates citywide showcases from the 22–25 October Hall sessions. Look only for a separately published, still-current partner activation that explicitly accepts visitors; otherwise use the festival site for future announcements." },
+      ],
+      sources,
+      lastReviewed: "2026-10-19",
+    };
+  }
+  return guide;
+}
