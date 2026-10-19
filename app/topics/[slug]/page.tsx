@@ -8,6 +8,7 @@ import { ServiceCard } from "@/components/service-card";
 import { ServiceTaskComparison } from "@/components/service-task-comparison";
 import { getPublicService } from "@/lib/data";
 import { getGrowthHub, growthHubs } from "@/lib/growth-hubs";
+import { getDistinctTopicTaskLinks } from "@/lib/topic-task-links";
 import { getSiteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -46,6 +47,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
   if (!hub) notFound();
 
   const services = hub.serviceSlugs.map(getPublicService).filter((service) => service !== undefined);
+  const taskLinks = getDistinctTopicTaskLinks(hub.searches, services);
   const base = getSiteUrl();
   const pageUrl = base + "/topics/" + hub.slug;
 
@@ -88,17 +90,12 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
           <p className="page-intro">{hub.description}</p>
 
           <AnswerFirst
-            title="Choose the exact task before reading the full hub"
-            summary={hub.description}
-            facts={[
-              { label: "Verified guides", value: String(services.length) },
-              { label: "Common searches", value: String(hub.searches.length) },
-              { label: "Start with", value: hub.searches[0]?.query ?? services[0]?.shortTitle ?? "Browse the guides below" },
-              { label: "Source policy", value: "Each guide keeps its own official sources and checked date" },
-            ]}
+            title="Choose the service that matches your situation"
+            summary={hub.intro[0] ?? hub.description}
+            facts={[]}
             links={[
-              ...(hub.searches[0] ? [{ href: "/services/" + hub.searches[0].serviceSlug, label: hub.searches[0].query }] : []),
-              { href: "#common-searches", label: "See common searches", primary: true },
+              ...(taskLinks[0] ? [{ href: "/services/" + taskLinks[0].slug, label: "Open " + taskLinks[0].label }] : []),
+              { href: "#task-choices", label: "Compare the available tasks", primary: true },
             ]}
           />
 
@@ -111,18 +108,20 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
           ) : null}
 
           <div className="topic-copy">
-            {hub.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            {hub.intro.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
 
           <ServiceTaskComparison services={services} heading={"Compare " + hub.shortTitle + " tasks"} limit={8} />
 
-          <section className="topic-search-section" aria-labelledby="common-searches">
-            <span className="eyebrow">Common searches</span>
-            <h2 id="common-searches">Find the exact task faster</h2>
-            <div className="related-links topic-searches">
-              {hub.searches.map((search) => <Link key={search.query} href={"/services/" + search.serviceSlug}>{search.query} <span aria-hidden="true">→</span></Link>)}
-            </div>
-          </section>
+          {taskLinks.length ? (
+            <section className="topic-search-section" id="task-choices" aria-labelledby="topic-task-heading">
+              <span className="eyebrow">Different services, different steps</span>
+              <h2 id="topic-task-heading">Choose what you need to do</h2>
+              <nav className="related-links topic-searches" aria-label="Distinct service tasks">
+                {taskLinks.map((task) => <Link key={task.slug} href={"/services/" + task.slug}>{task.label} <span aria-hidden="true">→</span></Link>)}
+              </nav>
+            </section>
+          ) : null}
 
           <div className="section-heading topic-services-heading">
             <div>
