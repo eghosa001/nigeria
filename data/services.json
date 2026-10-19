@@ -7562,7 +7562,6 @@
     ],
     "steps": [
       "Check the DisCo's meter order and bank receipt for the same customer account, address, meter type and successful MAP payment date before claiming a delayed installation.",
-      "Where your state's electricity market has transferred to a state regulator, use that regulator's complaint route; otherwise follow NERC's current escalation guidance.",
       "Count working days from completion of authorised MAP payment. NERC's FAQ says an uninstalled meter after 10 working days should be reported with payment evidence.",
       "Contact the DisCo's metering department by its official channel and request the installation status, proposed appointment and complaint/ticket number.",
       "Preserve a photo of the premises' meter location, receipt, MAP order and all appointment promises without publishing account details publicly.",
@@ -7574,7 +7573,7 @@
       "NERC specifically advises customers to report paid meters that are not installed within the stated period and to provide evidence of payment.",
       "Do not discard the receipt after installation because it may be needed for any credit/refund or complaint issue.",
       "Regulatory responsibility has transferred to state electricity regulators in a growing number of states, so the correct escalation body depends on location.",
-      "NERC's 4 May 2026 transition notice lists Abia, Anambra, Bayelsa, Edo, Ekiti, Enugu, Imo, Kogi, Lagos, Nasarawa, Niger, Ogun, Ondo, Oyo and Plateau as states whose intrastate electricity complaints belong to the respective State Electricity Regulators. For other states, check NERC's current federal complaint/Forum route.",
+      "For a meter paid under MAP, NERC's metering FAQ still gives a federal complaints email for delays beyond ten working days. Its later 4 May 2026 transition notice routes intrastate cases in transferred states to the relevant State Electricity Regulator. Start with a documented DisCo meter ticket, then use the regulator responsible for the property's location.",
       "NERC's meter FAQ states a 10-working-day MAP installation period and directs unpaid/late metering complaints to the competent regulator with payment evidence."
     ],
     "sources": [
@@ -7637,10 +7636,7 @@
     ],
     "steps": [
       "Open your latest DisCo electricity bill or prepaid vending receipt and place it beside the previous three months' records. Write down the disputed amount, billing month, kWh and account number before filing the complaint.",
-      "Check the disputed bill against your recent billing or vending history and identify the exact amount and billing period you are challenging.",
       "Check whether the account is metered, the meter is faulty/removed, or the bill is an estimate subject to NERC's capping rules.",
-      "Ask for an acknowledgment or complaint reference and keep it.",
-      "If the DisCo does not resolve the issue within the applicable complaint process, escalate to the regulator responsible for your state.",
       "Compare the billed kWh and tariff band with your previous usage. Check the monthly energy cap applicable to that DisCo and month rather than applying a nationwide naira amount.",
       "If the DisCo removed a defective meter, NERC's billing FAQ states it should not simply transfer the customer to unrestricted estimation; check whether it used the prior three-month average as specified.",
       "Send a written demand for bill breakdown/correction to the DisCo's official complaint channel with supporting receipts and the meter-removal record.",
@@ -7652,7 +7648,7 @@
       "NERC states that estimated billing is capped rather than unlimited.",
       "Where a faulty or obsolete meter is removed and not immediately replaced, NERC's billing guidance restricts how the customer should be billed.",
       "Keep paying undisputed current charges where appropriate while the disputed amount is being formally reviewed.",
-      "NERC's 4 May 2026 transition notice lists Abia, Anambra, Bayelsa, Edo, Ekiti, Enugu, Imo, Kogi, Lagos, Nasarawa, Niger, Ogun, Ondo, Oyo and Plateau as states whose intrastate electricity complaints belong to the respective State Electricity Regulators. For other states, check NERC's current federal complaint/Forum route.",
+      "When a disputed estimate covers several months, request a separate breakdown for each billing month and compare it with the corresponding meter records and energy-cap order. A single current tariff figure cannot establish whether each older bill was calculated correctly.",
       "NERC says an obsolete/faulty meter removed by a DisCo must be replaced; if not replaced within a billing period, its FAQ uses the average of the prior three months for energy-consumption calculations."
     ],
     "sources": [
@@ -7709,8 +7705,6 @@
     ],
     "steps": [
       "Open the official customer-support or Customer Complaints Unit page of the DisCo printed on your electricity bill, and lodge a dated complaint there first. Request the provider's reference before using any regulator form.",
-      "Allow the DisCo's complaint process to run and keep all replies and evidence.",
-      "Attach the original complaint, DisCo response or proof of non-resolution, and all relevant account evidence.",
       "If the regulator asks for additional information, respond using the same complaint reference so the record remains connected.",
       "Create a dated case file with meter/account ID, property state, bills, vending receipts, photos, previous complaint and the specific outcome requested.",
       "Verify the property state against NERC's published transfer list before submitting regulatory escalation; Lagos, Edo, Anambra, Ogun and 11 other named states have State Electricity Regulator jurisdiction.",
@@ -7723,7 +7717,7 @@
       "The correct escalation body is now location-dependent because some states regulate their intrastate electricity market.",
       "A verbal complaint without a reference is harder to escalate; submit it through a channel that leaves a record.",
       "Do not start a fresh unrelated complaint at every stage—carry the same evidence and chronology forward.",
-      "NERC's 4 May 2026 transition notice lists Abia, Anambra, Bayelsa, Edo, Ekiti, Enugu, Imo, Kogi, Lagos, Nasarawa, Niger, Ogun, Ondo, Oyo and Plateau as states whose intrastate electricity complaints belong to the respective State Electricity Regulators. For other states, check NERC's current federal complaint/Forum route.",
+      "NERC's detailed 4 May 2026 transition notice names 15 states: Abia, Anambra, Bayelsa, Edo, Ekiti, Enugu, Imo, Kogi, Lagos, Nasarawa, Niger, Ogun, Ondo, Oyo and Plateau. A shorter NERC complaint-channel post lists only 14 and omits Anambra; rely on the detailed state-by-state notice to choose jurisdiction, then check the applicable regulator's current contact details.",
       "The correct regulatory complaint destination is location-dependent; a generic 'always email NERC' instruction is now inaccurate for the transferred intrastate markets."
     ],
     "sources": [
@@ -7788,7 +7782,6 @@
       "Compare the stated band with NERC's service-level definitions: Band A is at least 20 hours/day, B at least 16, C at least 12, D at least 8 and E at least 4.",
       "If the tariff/band on your account appears inconsistent with the service level or DisCo information, submit a complaint to the DisCo with the bill or vending evidence.",
       "Check your DisCo's authorised feeder/tariff-band lookup using the property or feeder number. A neighbour on another feeder may legitimately show a different band.",
-      "Compare the bill's service band to NERC's published thresholds—A 20, B 16, C 12, D 8, E 4 minimum daily supply hours—rather than assuming any number of outages automatically reclassifies a band.",
       "Read the current DisCo tariff order to identify the applicable price per kWh for the billed month; don't use a social-media rate without an effective date.",
       "If hours of supply are consistently below the promised band, collect a dated daily outage log and the bill or vending evidence before approaching the DisCo.",
       "Raise a ticket for an incorrect band, energy rate or service-level violation with your DisCo, then escalate to your State Electricity Regulator where the 2026 jurisdiction transfer applies.",
@@ -7798,7 +7791,7 @@
       "The band is tied to the service level assigned to the feeder/customer class, not simply to the customer's preference.",
       "Tariff rates can be reviewed, so use the current DisCo/NERC information for the actual amount per kWh.",
       "Keep recent vending receipts because they show the tariff information applied when you bought energy.",
-      "NERC's 4 May 2026 transition notice lists Abia, Anambra, Bayelsa, Edo, Ekiti, Enugu, Imo, Kogi, Lagos, Nasarawa, Niger, Ogun, Ondo, Oyo and Plateau as states whose intrastate electricity complaints belong to the respective State Electricity Regulators. For other states, check NERC's current federal complaint/Forum route.",
+      "To challenge the price per kWh, compare the bill's band and month with the relevant authorised DisCo tariff schedule. To challenge hours of supply, keep a dated feeder or outage log instead. Those are different complaints and need different supporting evidence.",
       "Bands describe minimum service commitments and are not a guarantee that a consumer receives continuous supply every day.",
       "Your actual tariff is the applicable price on the bill/vending receipt or contemporaneous DisCo regulator order, not a fixed national amount."
     ],
