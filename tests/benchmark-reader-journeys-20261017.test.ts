@@ -54,14 +54,7 @@ test("series search metadata stays concise and identifies documented performers"
       ? metadata.title.absolute : metadata.title;
     assert.ok(String(title).length <= 60, slug);
     assert.ok(String(metadata.description).length <= 155, slug);
-    assert.match(String(metadata.description), new RegExp(item.title.replace(/[.*+?^${}()|[\]\\]/g, "\\test("series metadata stays concise while story details remain in on-page synopsis", async () => {
-  for (const slug of ["afobaje-2026", "the-ten-2026", "once-upon-a-village"]) {
-    const metadata = await seriesMetadata({ params: Promise.resolve({ slug }) });
-    assert.ok(String(metadata.title).length < 48, slug);
-    assert.ok(String(metadata.description).length <= 160, slug);
-    assert.match(String(metadata.description), /cast, episodes and verified viewing sources/i, slug);
-  }
-});"), "i"), slug);
+    assert.ok(String(metadata.description).includes(item.title), "Series title missing: " + slug);
     if (item.cast.length > 0) {
       assert.ok(String(metadata.description).includes("Cast: " + item.cast[0]), "Missing documented lead: " + slug);
     }
