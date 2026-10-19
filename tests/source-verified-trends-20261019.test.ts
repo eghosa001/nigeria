@@ -8,6 +8,8 @@ import { entertainmentTitles } from "../lib/entertainment";
 import { exploreGuides } from "../lib/explore";
 import { reviewedEventSlugs20261019 } from "../lib/explore-event-lifecycle-2026-10-19";
 import { refreshedAdmissionsSlugs20261019 } from "../lib/service-admission-decisions-2026-10-19";
+import { checkedClosedRecruitmentSlugs20261019 } from "../lib/jobs-closed-recruitment-2026-10-19";
+import { jobOpportunities } from "../lib/jobs";
 
 const service = (slug: string) => {
   const item = publicServices.find(s => s.slug === slug);
@@ -78,6 +80,20 @@ test("Kainji offers a useful fallback without suggesting unverified admission", 
   assert.ok(guide.planning.some(p => /operator cannot approve/i.test(p.label)));
   assert.ok(!guide.planning.some(p => /Are there verified tickets or public opening hours/.test(p.label)));
   assert.ok(guide.sources?.some(s => /mainstream\.com\.ng/.test(s.href)));
+});
+
+test("three stale government recruitments are issuer-confirmed closed with practical aftercare", () => {
+  assert.equal(checkedClosedRecruitmentSlugs20261019.length, 3);
+  for (const slug of checkedClosedRecruitmentSlugs20261019) {
+    const job = jobOpportunities.find(j => j.slug === slug);
+    assert.ok(job, slug);
+    assert.equal(job.verifiedAt, "2026-10-19");
+    assert.equal(job.status, "closed");
+    assert.match(job.summary, /closed|ended|not.*newly|not.*accepting/i);
+    assert.equal(job.applicationSteps.length, 5);
+    assert.ok(job.sources.some(source => source.lastChecked === "2026-10-19"), slug);
+    assert.ok(job.sourceNotes.some(note => note.includes("19 October 2026")), slug);
+  }
 });
 
 test("decorative Jobs counters are not spoken twice", () => {
