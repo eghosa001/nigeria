@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 type Guide = { slug: string; requirements: string[]; steps: string[]; notes: string[]; sources: Array<{url:string}> };
 const guides = JSON.parse(readFileSync("data/services.json", "utf8")) as Guide[];
 const ids = [
@@ -60,4 +60,53 @@ test("distinct process decisions survive consolidation and stay in actionable or
  const waiver = guideMap.get("waec-collect-certificate")!;
  assert.ok(waiver.steps.some(x=>/school candidates/i.test(x)));
  assert.ok(waiver.steps.some(x=>/private-candidate/i.test(x)));
+});
+
+
+test("all published service catalogue files avoid repeated long article passages", () => {
+  // Short shared field labels, legal names and requirements can recur;
+  // repeated paragraphs are a different editorial problem.
+  const catalogues = readdirSync("data").filter(file => /^services(?:-[a-z0-9-]+)?\.json$/.test(file));
+  const seen = new Map<string, string>();
+  let records = 0;
+  for (const filename of catalogues) {
+    const items = JSON.parse(readFileSync("data/" + filename, "utf8")) as Array<{
+      slug: string; summary: string; steps: string[]; notes: string[];
+    }>;
+    if (!Array.isArray(items)) continue;
+    records += items.length;
+    for (const entry of items) {
+      for (const field of ["summary", "steps", "notes"] as const) {
+        const values = field === "summary" ? [entry.summary] : entry[field] ?? [];
+        for (const value of values) {
+          if (typeof value !== "string" || value.length < 80) continue;
+          const normalized = value.toLocaleLowerCase("en").replace(/\s+/g, " ").trim().replace(/[.!]+$/g, "");
+          const owner = seen.get(normalized);
+          assert.ok(!owner, `Repeated ${field} paragraph on ${entry.slug} (${filename}); first on ${owner}`);
+          seen.set(normalized, entry.slug + " / " + field);
+        }
+      }
+    }
+  }
+  assert.ok(records >= 650, "The audit must cover the entire service catalogue, not a small curated subset");
+});
+
+test("NERC's full 2026 state-transfer notice and short announcement discrepancy are clearly distinguished", () => {
+  const meter = guideMap.get("electricity-meter-paid-not-installed")!;
+  const billing = guideMap.get("electricity-estimated-billing-dispute")!;
+  const escalation = guideMap.get("electricity-complaint-escalation")!;
+  const band = guideMap.get("electricity-tariff-band")!;
+  for (const guide of [meter, billing, escalation, band]) {
+    assert.ok(guide, "Each electricity user task keeps its own guide");
+    assert.ok(guide.steps.length >= 7, guide.slug + " lost required task steps");
+    assert.ok(guide.notes.length >= 3, guide.slug + " lost source-specific cautions");
+    assert.ok(guide.sources.some(x => x.url.includes("/update-on-electricity-regulation-transition-to-state-electricity-regulators/")));
+  }
+  const jurisdiction = escalation.notes.join(" ");
+  assert.match(jurisdiction, /15 states/);
+  assert.match(jurisdiction, /Anambra/);
+  assert.match(jurisdiction, /shorter NERC complaint-channel post lists only 14/);
+  assert.match(meter.notes.join(" "), /ten working days/i);
+  assert.match(billing.notes.join(" "), /billing month/i);
+  assert.match(band.notes.join(" "), /hours of supply/i);
 });

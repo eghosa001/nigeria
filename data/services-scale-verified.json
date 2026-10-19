@@ -9677,7 +9677,7 @@
       "Choose the data bundle and select the Buy for Others option.",
       "Enter the beneficiary's Airtel phone number and review the bundle volume, validity and current price.",
       "Confirm the purchase through the payment method shown by Airtel.",
-      "Keep the success message and ask the recipient to check the data balance if the bundle is not immediately visible."
+      "Keep Airtel's purchase confirmation. If the gifted bundle is not visible, have the beneficiary check the data balance on their Airtel line before following up through official self-service."
     ],
     "notes": [
       "Airtel says the gifted bundle keeps the volume and validity of the selected plan.",
@@ -10710,7 +10710,7 @@
       "Choose the data bundle to purchase for another T2 customer.",
       "Enter the recipient's T2 Mobile phone number and review the bundle and current price.",
       "Confirm the transaction through the prompts shown by T2.",
-      "Keep the success message and ask the recipient to check the data balance if the bundle is not immediately visible."
+      "Keep the T2 gifting confirmation and ask the recipient to verify their new bundle. Data gifting purchases a bundle; T2's separate Data Transfer option moves an existing data balance."
     ],
     "notes": [
       "T2 distinguishes Data Gifting from Data Transfer: gifting buys a new bundle while transfer moves an existing balance.",

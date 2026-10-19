@@ -39,5 +39,13 @@ test("service JSON corrections are restricted to public notes; technical rules r
       }
     }
   }
-  assert.ok(converted >= 35, "Broad source-safe Humanizer changes should persist");
+  // Two earlier generic insurer disclaimers were deliberately replaced by
+  // specific product-decision cautions during the sitewide originality pass.
+  // They count as improvements without forcing boilerplate to remain.
+  const insurance = JSON.parse(read("data/services-private-extended.json"));
+  const mutual = insurance.find((row: {slug: string}) => row.slug === "mutual-benefits-buy-motor-insurance-online");
+  const heirs = insurance.find((row: {slug: string}) => row.slug === "heirs-buy-motor-insurance-online");
+  assert.ok(mutual.notes.some((note: string) => /Mutual Benefits.*(?:excesses|exclusions)/i.test(note)));
+  assert.ok(heirs.notes.some((note: string) => /Heirs.*(?:vehicle|cover)/i.test(note)));
+  assert.ok(converted + 2 >= 35, "Broad source-safe Humanizer changes and two individual insurer corrections should persist");
 });
