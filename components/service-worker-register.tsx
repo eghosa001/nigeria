@@ -8,9 +8,11 @@ export function ServiceWorkerRegister() {
 
     let timer: number | undefined;
     const register = () => {
+      // Do not compete with first paint, ads or critical thumbnails on slow
+      // mobile connections. The offline worker can install in idle time.
       timer = window.setTimeout(() => {
         navigator.serviceWorker.register("/sw.js").catch(() => undefined);
-      }, 1200);
+      }, 4000);
     };
 
     if (document.readyState === "complete") register();
