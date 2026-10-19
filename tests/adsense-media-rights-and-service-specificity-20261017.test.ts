@@ -20,7 +20,7 @@ test("movie images require licensed rights records or first-party original poste
 test("licensed art, credited official-source previews and video thumbnails are different rights categories", () => {
   const component = readFileSync("components/entertainment-artwork.tsx", "utf8");
   assert.match(component, /canDisplayClientEntertainmentArtwork/);
-  assert.match(component, /from "@\\/lib\\/entertainment-client-artwork"/);
+  assert.ok(component.includes('from "@/lib/entertainment-client-artwork"'));
   assert.match(component, /data-rights-status="source-linked-editorial-preview"/);
   assert.match(component, /data-rights-status="linked-video-preview"/);
   assert.match(component, /getSourceLinkedFilmPreview/);
