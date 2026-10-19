@@ -57,12 +57,12 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
       `${movie.title} (${movie.year}) from ${movie.channelName}. ${castSummary} ${movie.synopsis}`
   );
   return {
-    title: override?.title ?? compactMetadata(
+    title: { absolute: override?.title ?? compactMetadata(
       indexable
         ? `${movie.title} Cast & Full Movie (${movie.year})`
         : `${movie.title} Full Movie on YouTube (${movie.year})`,
       60,
-    ),
+    ) },
     description,
     alternates: { canonical },
     robots: indexable && !aliasToCuratedMovie ? undefined : { index: false, follow: true },

@@ -1,6 +1,7 @@
 import { documentedMovieCast, leadMovieCast } from "@/lib/movie-cast-credits";
 import { getVisibleMovieEditorial } from "@/lib/movie-editorial-presentation";
 import type { Metadata } from "next";
+import { compactSearchText } from "@/lib/search-snippet";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -202,21 +203,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       : defaultDescription.slice(0, 165).replace(/\s+\S*$/, "").trimEnd() + "…"
   );
 
+  const seoTitle = compactSearchText(override?.title ?? defaultTitle, 60);
+  const seoDescription = compactSearchText(description, 155);
+
   return {
-    title: override?.title ?? defaultTitle,
-    description,
+    title: { absolute: seoTitle },
+    description: seoDescription,
     alternates: { canonical: "/entertainment/movies/" + title.slug },
     openGraph: {
       type: "video.movie",
       title: title.title,
-      description,
+      description: seoDescription,
       url: "/entertainment/movies/" + title.slug,
       images: image ? [{ url: image, alt: title.title + " artwork" }] : undefined,
     },
     twitter: {
       card: "summary_large_image",
       title: title.title,
-      description,
+      description: seoDescription,
       images: image ? [image] : undefined,
     },
   };

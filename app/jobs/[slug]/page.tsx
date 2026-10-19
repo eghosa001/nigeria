@@ -71,7 +71,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     : summary.replace(/[.!?]$/, "") + (summary ? ". " : "") + sourceContext;
 
   return {
-    title: seoOverride?.title ?? compactJobSnippet(label, 58),
+    title: { absolute: seoOverride?.title ?? compactJobSnippet(label, 58) },
     description: seoOverride?.description ?? compactJobSnippet(description, 155),
     alternates: { canonical: "/jobs/" + item.slug },
     robots: isIndexableJobOpportunity(item) ? undefined : { index: false, follow: true }

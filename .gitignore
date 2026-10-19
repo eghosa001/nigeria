@@ -13,3 +13,7 @@ dist
 public/sitemap.xml
 public/sitemap-index.xml
 public/sitemaps/
+
+# Private site search analytics. Keep complete GSC exports out of public GitHub.
+docs/research/gsc-sitewide-baseline-*.json
+private/gsc-*.json

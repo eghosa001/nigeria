@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { compactSearchText } from "@/lib/search-snippet";
 import Link from "next/link";
 import { PageOutline } from "@/components/page-outline";
 import { notFound } from "next/navigation";
@@ -35,10 +36,10 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   const space = Math.max(0, 150 - prefix.length);
   const summary = synopsis.length > space ? synopsis.slice(0, space).replace(/\s+\S*$/, "").trimEnd() + "…" : synopsis;
   const description = prefix + summary;
-  const seoTitle = item.title + ": Episodes & Cast";
+  const seoTitle = compactSearchText(item.title + ": Episodes & Cast", 60);
   return {
-    title:seoTitle,
-    description,
+    title:{ absolute: seoTitle },
+    description:compactSearchText(description, 155),
     alternates:{canonical:"/entertainment/series/"+item.slug},
     openGraph:{title:item.title,description,type:"video.tv_show",url:"/entertainment/series/"+item.slug},
     twitter:{card:"summary",title:item.title,description}

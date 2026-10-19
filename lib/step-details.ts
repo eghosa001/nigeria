@@ -18,27 +18,46 @@ function isPhysicalAction(step: string) {
     || /\b(?:collect|pick up|submit|deliver|present)\b.{0,80}\b(?:at|from|to)\s+(?:(?:the|an?|selected|designated|local|nearest)\s+){0,3}(?:office|centre|center|branch|embassy|consulate|school|institution)\b/i.test(step);
 }
 
+// A step's heading describes the action, not nouns it happens to mention.
+// An RRR, receipt, payment status, fee schedule or reference number is not
+// itself a request to make a payment. Apply the same test to every service.
+export function isPaymentAction(step: string) {
+  return /\b(?:pay|paying)\b(?!\s+attention\b)/i.test(step)
+    || /\b(?:make|complete|proceed to|process|settle|submit|initiate)\s+(?:(?:the|an?|your|required|official|applicable|registration|application|remaining)\s+){0,4}(?:payment|fee|charge)\b(?!\s+(?:status|reference|number|receipt|evidence|proof|confirmation|details|record|history|code)\b)/i.test(step)
+    || /\bcheckout\b|\b(?:payment|fee)\s+(?:checkout|gateway|screen)\b.*\b(?:proceed|complete|pay)\b/i.test(step);
+}
+
+function isUploadAction(step: string) {
+  return /\b(?:upload|attach|scan and upload|submit|provide)\b.{0,80}\b(?:document|file|photo|photograph|evidence|attachment|certificate|affidavit|scan)\b/i.test(step)
+    || /\b(?:upload|attach)\b/i.test(step);
+}
+
+function isTrackingAction(step: string) {
+  return /\b(?:track|monitor|follow[ -]?up|wait for|check (?:the |your |an? )?(?:application |payment |transaction |request |refund |transfer )?status|check progress|await (?:the |an? )?(?:approval|decision))\b/i.test(step);
+}
+
 function stageFor(step: string, index: number) {
   if (/\b(?:download|print|receive|issued)\b|\bcollect (?:the |your )?(?:slip|certificate|card|document|result)\b/i.test(step)) return "Collect / finish";
-  if (/track|status|monitor|follow up|follow-up|wait for|approval|decision/i.test(step)) return "Follow up";
   if (isPhysicalAction(step)) return "Physical / assisted stage";
-  if (/pay|payment|fee|checkout|remita|rrr/i.test(step)) return "Payment";
-  if (/upload|attach|document|evidence|certificate|affidavit|passport photograph|photo/i.test(step)) return "Documents / upload";
-  if (/verify|confirm|review|check|match/i.test(step)) return "Verify details";
-  if (/submit|send|apply|request|register|file|enrol/i.test(step)) return "Submit / register";
-  if (/sign in|login|log in|create account|open|start/i.test(step)) return "Start";
+  if (isPaymentAction(step)) return "Payment";
+  if (isUploadAction(step)) return "Documents / upload";
+  if (isTrackingAction(step)) return "Follow up";
+  if (/\b(?:verify|confirm|review|check|match|compare|enter|type|supply|locate|find|retrieve)\b/i.test(step)) return "Verify details";
+  if (/\b(?:submit|send|apply|request|register|file|enrol)\b/i.test(step)) return "Submit / register";
+  if (/\b(?:sign in|login|log in|create account|open|start)\b/i.test(step)) return "Start";
   return index === 0 ? "Start" : "Continue";
 }
 
 // Safety hints require an explicit process action, not a passing mention
 // of fees, documents or SIMs that creates inferred requirements.
-function checkpointFor(step: string) {
-  if (/\b(?:pay|paying|checkout|complete (?:a |the )?payment|make (?:a |the )?payment)\b/i.test(step)) return "Confirm the applicant, service and amount on the responsible provider's payment screen before paying. Avoid unsolicited payment links.";
-  if (/\b(?:upload|attach)\b/i.test(step)) return "Check the portal's accepted file type and ensure each selected document belongs to this application.";
-  if (isPhysicalAction(step)) return "Check the office and appointment before travelling; take an original only where explicitly required.";
+function checkpointFor(step: string, stage: string) {
+  if (stage === "Payment" && isPaymentAction(step)) return "Confirm the applicant, service and amount on the responsible provider's payment screen before paying. Avoid unsolicited payment links.";
+  if (stage === "Documents / upload" && /\b(?:upload|attach)\b/i.test(step)) return "Check the portal's accepted file type and ensure each selected document belongs to this application.";
+  if (stage === "Physical / assisted stage" && isPhysicalAction(step)) return "Check the office and appointment before travelling; take an original only where explicitly required.";
   return undefined;
 }
 function keepFor(step: string) {
+  if (/\b(?:submit|file)\b.{0,80}\b(?:supporting evidence|supporting documents|supporting records)\b/i.test(step)) return "Keep the official acknowledgement or tracking number if the portal issues one.";
   if (/\b(?:receipt|acknowledgement|transaction reference|application reference)\b/i.test(step)) return "Keep the official record identified in this step, if one is issued. Do not buy a receipt from an intermediary.";
   if (/\b(?:one-time password|otp|verification code)\b/i.test(step)) return "Do not disclose authentication codes to third parties.";
   return undefined;
@@ -66,12 +85,7 @@ export function getStepDetails(service: Service): StepDetail[] {
   const keeps = new Set<string>();
   return service.steps.map((instruction, index) => {
     const stage = reviewedStageSequences[service.slug]?.[index] ?? stageFor(instruction, index);
-    const warning = checkpointFor(instruction);
-    // Show the generic payment warning on an ICAN step only when the step
-    // actually initiates payment; other mentions refer to checks or dockets.
-    const checkpoint = /^ican-professional-(?:exam-registration|exemption)$/.test(service.slug)
-      && stage !== "Payment" && warning?.startsWith("Confirm the applicant, service")
-      ? undefined : warning;
+    const checkpoint = checkpointFor(instruction, stage);
     const keep = keepFor(instruction);
     // A generic reminder should not occupy a full paragraph at every step.
     const uniqueCheckpoint = checkpoint && !checkpoints.has(checkpoint) ? checkpoint : undefined;
