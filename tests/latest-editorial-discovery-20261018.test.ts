@@ -60,8 +60,9 @@ test("only still-open indexable roles appear, with one slot per employer", () =>
   assert.doesNotMatch(src, /job\.statusLabel/);
 });
 
-test("Latest renders request-time dates, correct check-date labels and archive below discovery", () => {
-  assert.match(src, /export const dynamic = "force-dynamic"/);
+test("Latest refreshes its public edge cache every five minutes, with correct source labels and archive order", () => {
+  assert.match(src, /export const revalidate = 300/);
+  assert.doesNotMatch(src, /export const dynamic = "force-dynamic"/);
   assert.match(src, /getEffectiveJobStatus\(item, today\) === "open"/);
   assert.match(src, /A verification date means/);
   assert.match(src, /source-checked/);

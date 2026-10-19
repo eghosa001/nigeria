@@ -274,3 +274,33 @@ test("fee pages distinguish official conflicts from verified amounts", async ({ 
     }
   });
 });
+
+
+test("live homepage and Latest response timing is measured without a flaky absolute performance gate", async () => {
+  test.skip(!process.env.LIVE_BASE_URL, "Production-only edge-latency sampling.");
+  const base = process.env.LIVE_BASE_URL!;
+  for (const route of ["/", "/latest"]) {
+    for (let visit = 1; visit <= 2; visit++) {
+      const started = performance.now();
+      const response = await fetch(base + route, {
+        headers: { "user-agent": "MyNigeriaGuide live edge latency QA" },
+        signal: AbortSignal.timeout(15000),
+      });
+      const firstByteMs = Math.round(performance.now() - started);
+      const html = await response.text();
+      const totalMs = Math.round(performance.now() - started);
+      expect(response.ok, route).toBeTruthy();
+      expect(html).toContain("MyNigeriaGuide");
+      const cacheState = response.headers.get("x-vinext-cache") ??
+        response.headers.get("cf-cache-status") ?? "not-exposed";
+      // Observational monitoring: network, region, deployment and cold starts
+      // influence results. Never hide occasional slow samples or pretend that
+      // a two-request measurement provides a statistically valid p95.
+      console.log(
+        "[edge-latency] " + route + " sample=" + visit +
+        " TTFB=" + firstByteMs + "ms total=" + totalMs +
+        "ms cache=" + cacheState + " bytes=" + html.length,
+      );
+    }
+  }
+});

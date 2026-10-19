@@ -1,5 +1,8 @@
-const CACHE = "mynigeriaguide-v2";
-const CORE = ["/", "/services", "/saved", "/offline", "/manifest.webmanifest"];
+const CACHE = "mynigeriaguide-v3";
+// Only cache the tiny offline shell during installation. Large HTML pages
+// are cached after a visitor actually opens them, avoiding competing network
+// downloads and extra Worker renders during the first mobile page load.
+const CORE = ["/offline", "/manifest.webmanifest"];
 const PRIVATE_PREFIXES = ["/admin", "/api/"];
 
 function isPrivatePath(pathname) {

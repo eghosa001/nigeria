@@ -609,16 +609,17 @@ const rawJobOpportunities: CareerOpportunity[] = [
     ],
     officialUrl: "https://joinnigeriannavy.navy.mil.ng/",
     officialUrlLabel: "Apply on the official Nigerian Navy portal",
-    verifiedAt: "2026-10-04",
+    verifiedAt: "2026-10-19",
     deadline: "2026-10-31",
     nextMilestone: "Batch 39 aptitude testing is scheduled for 21 November 2026; the portal lists basic training for the first quarter of 2027.",
     feeNote: "Use only the official Nigerian Navy recruitment domain. MyNigeriaGuide does not collect recruitment fees or credentials.",
     sourceNotes: [
+      "On 19 October 2026, the official Nigerian Navy Batch 39 portal still displayed applications and the deadline of 31 October 2026 at 23:59 WAT.",
       "The official portal says Batch 39 applications opened on 2 October 2026 and close on 31 October 2026 at 23:59 WAT.",
       "The Navy portal lists the aptitude test for 21 November 2026 and describes identity verification, application and status tracking stages."
     ],
     sources: [
-      { label: "Nigerian Navy Batch 39 Recruitment Portal", url: "https://joinnigeriannavy.navy.mil.ng/", lastChecked: "2026-10-04" }
+      { label: "Nigerian Navy Batch 39 Recruitment Portal", url: "https://joinnigeriannavy.navy.mil.ng/", lastChecked: "2026-10-19" }
     ]
   },
   {
@@ -1616,15 +1617,16 @@ const rawJobOpportunities: CareerOpportunity[] = [
     ],
     officialUrl: "https://careers.dangote.com/",
     officialUrlLabel: "Search live Dangote jobs",
-    verifiedAt: "2026-10-03",
+    verifiedAt: "2026-10-19",
     nextMilestone: "The official careers catalogue currently contains active Nigeria roles across multiple Dangote business units.",
     feeNote: "Apply through careers.dangote.com and verify the exact vacancy before sharing credentials.",
     sourceNotes: [
+      "On 19 October 2026, Dangote's official careers site linked to its current job-search catalogue, which showed Nigeria roles; each vacancy must be checked individually.",
       "Dangote's official careers site currently exposes a broad live job catalogue.",
       "The Group's careers FAQ confirms its Graduate Trainee Program and candidate-profile/job-alert system."
     ],
     sources: [
-      { label: "Dangote Careers", url: "https://careers.dangote.com/", lastChecked: "2026-10-03" },
+      { label: "Dangote Careers", url: "https://careers.dangote.com/", lastChecked: "2026-10-19" },
       { label: "Dangote Jobs Catalogue", url: "https://careers.dangote.com/go/Roles-At-Dangote/9056002/", lastChecked: "2026-10-03" },
       { label: "Dangote Careers FAQ", url: "https://careers.dangote.com/content/Careers-FAQ/", lastChecked: "2026-10-03" }
     ]
@@ -1703,15 +1705,16 @@ const rawJobOpportunities: CareerOpportunity[] = [
     ],
     officialUrl: "https://flutterwave.com/ng/careers/vacancies",
     officialUrlLabel: "View live Flutterwave Nigeria roles",
-    verifiedAt: "2026-10-03",
+    verifiedAt: "2026-10-19",
     nextMilestone: "The official vacancies page currently shows multiple active Nigeria roles.",
     feeNote: "Use Flutterwave's official careers domain and the exact vacancy page when applying.",
     sourceNotes: [
+      "On 19 October 2026, Flutterwave's official vacancies page listed Nigeria roles across engineering, product, and risk; listings can change.",
       "Flutterwave's official vacancies page currently lists a range of Nigeria-based roles.",
       "Its graduate page describes a 12-month programme currently piloted in Nigeria."
     ],
     sources: [
-      { label: "Flutterwave Vacancies", url: "https://flutterwave.com/ng/careers/vacancies", lastChecked: "2026-10-03" },
+      { label: "Flutterwave Vacancies", url: "https://flutterwave.com/ng/careers/vacancies", lastChecked: "2026-10-19" },
       { label: "Flutterwave Graduate Program", url: "https://www.flutterwave.com/ng/careers/graduates", lastChecked: "2026-10-03" }
     ]
   },
@@ -1742,15 +1745,16 @@ const rawJobOpportunities: CareerOpportunity[] = [
     ],
     officialUrl: "https://careers.paystack.com/jobs",
     officialUrlLabel: "View current Paystack jobs",
-    verifiedAt: "2026-10-03",
+    verifiedAt: "2026-10-19",
     nextMilestone: "Paystack's official job page currently marks multiple Nigeria-based roles as ongoing.",
     feeNote: "Apply from Paystack's official careers pages rather than copied vacancy forms.",
     sourceNotes: [
+      "On 19 October 2026, Paystack's official jobs board listed Nigeria openings, including finance, product and security roles; check each listing.",
       "The official Paystack careers page currently lists active Nigeria positions across product and engineering-related functions."
     ],
     sources: [
       { label: "Paystack Careers", url: "https://paystack.com/careers", lastChecked: "2026-10-03" },
-      { label: "Paystack Current Jobs", url: "https://careers.paystack.com/jobs", lastChecked: "2026-10-03" }
+      { label: "Paystack Current Jobs", url: "https://careers.paystack.com/jobs", lastChecked: "2026-10-19" }
     ]
   },
   {
@@ -1758,9 +1762,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
     title: "Moniepoint Nigeria Jobs",
     organization: "Moniepoint Inc.",
     sector: "Private",
-    status: "open",
-    statusLabel: "Live Nigeria vacancies",
-    summary: "Moniepoint's official careers site currently carries a wide range of Nigeria opportunities across states, including enterprise sales, field credit, customer support, product, engineering, data, finance and operations.",
+    status: "unverified",
+    statusLabel: "Careers portal active — vacancies need checking",
+    summary: "Moniepoint has an official careers search for Nigeria and other markets. On 19 October 2026, its public page still had search controls but did not expose individual role listings in the page text. Check a specific opening before applying.",
     location: "Nigeria / multiple states / remote",
     employmentType: "Live fintech, banking and operations vacancies",
     audiences: ["Graduates", "Technology professionals", "Field applicants", "Finance applicants", "Operations applicants"],
@@ -1782,10 +1786,10 @@ const rawJobOpportunities: CareerOpportunity[] = [
     officialUrl: "https://moniepoint.com/careers",
     officialUrlLabel: "Search Moniepoint Nigeria roles",
     verifiedAt: "2026-10-04",
-    nextMilestone: "The official careers catalogue currently contains numerous Nigeria roles across multiple states and remote teams.",
+    nextMilestone: "Use the official career search to confirm the availability of a specific opening; current role listings could not be independently reconfirmed in the public response on 19 October 2026.",
     feeNote: "Use Moniepoint's official careers page and exact role page when submitting application information.",
     sourceNotes: [
-      "Moniepoint's official careers catalogue currently exposes a large set of Nigeria roles across technical and non-technical functions.",
+      "On 19 October 2026, the official careers page showed its search interface, but individual role listings were not exposed in the page text; do not infer a particular vacancy is currently open.",
       "When checked on 4 October 2026, the official global careers page showed active Nigeria openings across enterprise sales, field credit, customer support, engineering, data, finance, operations and design."
     ],
     sources: [

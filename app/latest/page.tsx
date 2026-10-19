@@ -16,8 +16,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "/latest" },
 };
 
-// Job deadlines and source-freshness labels must update at Nigerian midnight.
-export const dynamic = "force-dynamic";
+// Fresh editorial shelves are public and identical across visitors. Allow
+// five-minute ISR instead of recomputing and rendering on every request;
+// jobs and verified updates still refresh automatically without a redeploy.
+export const revalidate = 300;
 
 function movieChecked(title: (typeof entertainmentTitles)[number]) {
   return [...title.watchLinks.map((link) => link.lastChecked), ...(title.trailer ? [title.trailer.lastChecked] : [])]

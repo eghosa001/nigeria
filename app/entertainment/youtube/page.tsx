@@ -89,7 +89,7 @@ export default async function YouTubeMoviesPage({
 
           <div className="youtube-movie-grid">
             {visible.map((movie, index) => (
-              <YouTubeMovieCard movie={movie} priority={index < 5} key={movie.videoId} />
+              <YouTubeMovieCard movie={movie} priority={index < 2} key={movie.videoId} />
             ))}
           </div>
 
