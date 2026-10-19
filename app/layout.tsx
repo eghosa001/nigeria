@@ -14,7 +14,7 @@ import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
 import { GA_MEASUREMENT_ID } from "@/lib/analytics-config";
 import { ANALYTICS_PRODUCTION_HOSTS, EXCLUDED_ANALYTICS_USER_AGENT_MARKERS } from "@/lib/analytics-safety";
 import { PostHogAnalytics } from "@/components/posthog-analytics";
-import { RecentPageTracker } from "@/components/personal-library";
+import { RecentPageTracker } from "@/components/recent-page-tracker";
 
 const siteUrl = getSiteUrl();
 
