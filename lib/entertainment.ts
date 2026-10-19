@@ -639,7 +639,7 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Drama", "Coming of age", "Campus", "Nollywood"],
     languages: ["English"],
-    synopsis: "At the fictional Lagos Metropolitan University, two young people from different worlds collide on campus, where identity, ambition, social expectations and an unexpected connection force them to reconsider the lives they imagined.",
+    synopsis: "A campus drama about two students from different backgrounds at the fictional Lagos Metropolitan University, whose competing ambitions and expectations reshape friendship and romance. The producers announced a Nigerian cinema opening for 23 October 2026; a trailer and advance release notice are not proof of an active showtime or a free full-film stream.",
     cast: ["Mike Afolarin", "Genoveva Umeh", "Angel Unigwe", "Eronini Osinachim", "Kanaga Eme Jnr."],
     directors: ["Adenike Adebayo-Esho"],
     trailer: {
@@ -655,6 +655,12 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
         href: "https://www.youtube.com/watch?v=KHytYLBb_Zk",
         lastChecked: "2026-10-08",
         note: "The production-studio teaser identifies the core cast, campus setting, writer/director, distributor and announced 23 October 2026 cinema release. A teaser is not a free full-film stream.",
+      },
+      {
+        label: "OYA Magazine — Tele x Zikora announcement and preview",
+        href: "https://www.oyamag.com/tele-x-zikora-teaser-first-look/",
+        lastChecked: "2026-10-19",
+        note: "Independent coverage of the planned cinema release; not evidence of public playback, ticket availability or artwork reuse rights.",
       }
     ],
     sourcePreview: {
@@ -668,11 +674,11 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     watchLinks: [
       {
         platform: "Cinema",
-        label: "Open the film's official updates",
+        label: "Check official updates for the planned 23 October cinema release",
         href: "https://x.com/telexzikora",
         access: "cinema",
         lastChecked: "2026-10-04",
-        note: "The film's official social account carries its current release campaign. Nigerian cinema release is listed for 23 October 2026."
+        note: "The producer announced a 23 October Nigerian cinema opening. This is an official-update link, NOT a verified seat, current showtime or full-film stream. Check cinema availability directly."
       }
     ]
   },
