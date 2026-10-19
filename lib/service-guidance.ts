@@ -22,6 +22,34 @@ export type DetailedServiceGuidance = {
 };
 
 const explicit: Record<string, DetailedServiceGuidance> = {
+  "jamb-caps": {
+    route: {
+      startTitle: "Check the candidate's admission inside JAMB e-Facility",
+      startDetail: "Sign in at efacility.jamb.gov.ng/account, open the 2026/2027 admission status/CAPS service and compare your course and institution before accepting any actual offer. The institutional staff CAPS login is not for candidates.",
+      physicalTitle: "No compulsory admission-status office visit",
+      physicalDetail: "Checking CAPS and responding to an available offer is an online candidate task. If an institution's provisional offer does not show in CAPS, its admissions office may need to complete a recommendation, but that does not turn the status check into a required physical application stage.",
+      fallbackTitle: "School offer present but CAPS still says Not Admitted?",
+      fallbackDetail: "JAMB's own support FAQ identifies three checks: uploaded O'level results, the institution's recommendation and any pending Transfer Approval. Contact the institution or JAMB support with your own registration details. A school's provisional letter does not replace the JAMB-issued letter.",
+    },
+    aftercare: [
+      { title: "Keep the actual JAMB CAPS outcome", detail: "Save the admission year, recognised course and institution and your accepted admission record. Do not share your e-Facility password or sell a screenshot as proof of admission." },
+      { title: "Print an admission letter only after recognised admission", detail: "A university shortlist or provisional notice is not the official JAMB admission letter. Use the separate paid Print Admission Letter option only when the corresponding JAMB admission is actually available." },
+    ],
+  },
+  "jamb-admission-letter": {
+    route: {
+      startTitle: "Confirm recognised CAPS admission before paying to print",
+      startDetail: "Use your own candidate e-Facility account to confirm the admitted institution, course and year, then select Print Admission Letter and review JAMB's displayed transaction amount. Printing does not regularise an unrecognised school offer.",
+      physicalTitle: "Standard admission-letter printing is an online service",
+      physicalDetail: "JAMB publishes an online e-Facility transaction and PDF-print process; no general office appointment is required simply to print a recognised letter. A disputed admission record or correction may require a separate official procedure.",
+      fallbackTitle: "If the letter is missing or payment appears unsuccessful",
+      fallbackDetail: "First check CAPS status and whether your school has completed its recommendation. For an interrupted transaction, use My Payment or the existing transaction ID instead of paying again. Check official JAMB support before changing admission details.",
+    },
+    aftercare: [
+      { title: "Compare the letter with your actual admission", detail: "Check the candidate name, admission year, registration number, course and institution. A wrong programme is a record issue, not a reason to keep buying printouts." },
+      { title: "Protect the download and transaction", detail: "Save the official PDF and receipt privately. If the underlying admission is not on JAMB's record, resolve that with the institution/JAMB rather than purchasing a purported instant admission letter." },
+    ],
+  },
   "aedc-map-refund": {
     route: {
       startTitle: "Check your MAP refund online with your AEDC meter number",

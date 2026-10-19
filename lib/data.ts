@@ -1,6 +1,7 @@
 import serviceRecords from "@/data/services.json" with { type: "json" };
 import { applyCandidateServiceReviews20261017 } from "@/lib/service-candidate-editorial-2026-10-17";
 import { applyTargetedServiceEvidence20261017 } from "@/lib/service-targeted-evidence-2026-10-17";
+import { applyAdmissionDecisionResearch20261019 } from "@/lib/service-admission-decisions-2026-10-19";
 import universityRecords from "@/data/services-universities.json" with { type: "json" };
 import universityWave2 from "@/data/services-universities-wave2.json" with { type: "json" };
 import privateUniversityGuide from "@/data/services-wellspring-2026.json" with { type: "json" };
@@ -631,6 +632,7 @@ agencies.push(...[
 
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords, ...universityWave2, ...privateUniversityGuide, ...universityWave4, ...universityWave5, ...universityWave6, ...universityWave7, ...universityWave8]).map(applyCandidateServiceReviews20261017)
   .map(applyTargetedServiceEvidence20261017)
+  .map(applyAdmissionDecisionResearch20261019)
   // The official NIS status form requires two identifiers, not a saved email
   // or receipt. Its recovery advice remains in the verified troubleshooting step.
   .map(service => service.slug === "passport-application-tracking" ? {

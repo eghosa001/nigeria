@@ -4,6 +4,7 @@ import { secondSourceTourDecisions20261017 } from "@/lib/explore-second-source-d
 import { tourSourceSafetyDecisions20261017 } from "@/lib/explore-tour-evidence-safety-2026-10-17";
 import { independentlyCheckedVisitorRoutesBatch4 } from "@/lib/explore-independent-heritage-water-batch4-2026-10-17";
 import { furtherVisitorDecisions20261016 } from "@/lib/explore-additional-editorial-2026-10-16";
+import { applyCurrentEventVisitorDecisions20261019 } from "@/lib/explore-event-lifecycle-2026-10-19";
 import { museumAndVisitorReviews20261016 } from "@/lib/explore-museums-and-waterfalls-2026-10-16";
 import { regionalAccessDecisions20261016 } from "@/lib/explore-regional-access-decisions-2026-10-16";
 import { furtherIndependentVisitorEvidence20261017 } from "@/lib/explore-independent-reviews-batch3-2026-10-17";
@@ -14045,7 +14046,7 @@ const previousEventReviewGuides: ExploreGuide[] = beforeSecondSourceTourGuides.m
 
 // Independent dated event reporting, original organiser ticket paths and
 // visitor decisions across thirteen existing festival and conference URLs.
-export const exploreGuides: ExploreGuide[] = previousEventReviewGuides.map(guide => {
+const preCurrentEventGuides: ExploreGuide[] = previousEventReviewGuides.map(guide => {
   const review = independentlyCheckedEvents20261017[guide.slug];
   if (!review) return guide;
   const sources = [...(guide.sources ?? [])];
@@ -14061,6 +14062,10 @@ export const exploreGuides: ExploreGuide[] = previousEventReviewGuides.map(guide
     lastReviewed: "2026-10-17",
   };
 });
+
+// Dated current-event decisions apply after all other contributor overlays.
+// Never overwrite earlier sourced visitor evidence outside these two pages.
+export const exploreGuides: ExploreGuide[] = preCurrentEventGuides.map(applyCurrentEventVisitorDecisions20261019);
 
 // The checked-in Tour catalog is immutable for the lifetime of this Worker
 // module. Index once instead of scanning every record for each guide request.

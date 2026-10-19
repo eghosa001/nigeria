@@ -1,4 +1,5 @@
 import { getEffectiveJobStatus } from "@/lib/job-runtime";
+import { applyIssuerClosedRecruitmentChecks20261019 } from "@/lib/jobs-closed-recruitment-2026-10-19";
 import { verifiedDangoteOlamJobs20261012 } from "@/lib/job-growth-wave-14";
 import { officialJobPostingEvidence20261015 } from "@/lib/job-official-posting-evidence-2026-10-15";
 import { applyVerifiedJobPaths20261016 } from "@/lib/job-verified-pathways-2026-10-16";
@@ -3884,7 +3885,8 @@ export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities
     // invent jobPostingAuthorization from a metadata-only confirmation.
     return { ...item, posting: evidence.posting };
   })
-  .map(applyMoniepointFirstPublishedEvidence20261017);
+  .map(applyMoniepointFirstPublishedEvidence20261017)
+  .map(applyIssuerClosedRecruitmentChecks20261019);
 
 export const governmentOpportunities = jobOpportunities.filter((item) => item.sector === "Government");
 export const privateOpportunities = jobOpportunities.filter((item) => item.sector === "Private");

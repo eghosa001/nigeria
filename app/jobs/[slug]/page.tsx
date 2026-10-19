@@ -225,7 +225,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
 
             <section id="apply">
               <h2>{isCareerPortal ? "How to use " + item.organization + "'s official careers portal" : "How to apply for " + item.title + " or check your status"}</h2>
-              <ol className="job-steps">{item.applicationSteps.map((text, index) => <li key={text}><span>{index + 1}</span><p>{text}</p></li>)}</ol>
+              <ol className="job-steps">{item.applicationSteps.map((text, index) => <li key={text}><span aria-hidden="true">{index + 1}</span><p>{text}</p></li>)}</ol>
             </section>
 
             {similarOpenJobs.length ? (
