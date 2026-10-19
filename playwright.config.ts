@@ -16,6 +16,9 @@ export default defineConfig({
     env: {
       MYNIGERIAGUIDE_ADMIN_ANALYTICS_KEY: "qa-only-passphrase",
       MYNIGERIAGUIDE_GITHUB_ADMIN_TOKEN: "qa-only-token",
+      // Native Next QA runs without Cloudflare Worker bindings. Use the
+      // existing published static catalogue only inside this test server.
+      MYNIGERIAGUIDE_E2E_STATIC_YOUTUBE: "1",
     },
     reuseExistingServer: false,
     timeout: 120_000,

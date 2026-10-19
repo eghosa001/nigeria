@@ -25,6 +25,9 @@ export function createYouTubeServerStore(options:
   async function database() {
     if (options.mode === 'd1') return options.db;
     if (options.mode !== 'runtime') return null;
+    // Explicitly selected by the native-Next browser QA server. Real Workers
+    // never set this marker: their D1 cutover stays strict and fail-closed.
+    if (process.env.MYNIGERIAGUIDE_E2E_STATIC_YOUTUBE === '1') return null;
     if (process.env.NODE_ENV !== 'production' || process.env.NEXT_PHASE === 'phase-production-build') return null;
     try {
       const workers = await import('cloudflare:workers');

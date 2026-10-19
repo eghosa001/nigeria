@@ -50,3 +50,21 @@ test('published D1 detail retains normalization and existing noindex decisions',
   assert.deepEqual(result, normalizeGenerated(raw));
   assert.equal(isIndexableYouTubeDetailMovie(result!), isIndexableYouTubeDetailMovie(normalizeGenerated(raw)));
 });
+
+test('native Next production-mode browser QA uses the explicit static-data adapter only', async () => {
+  const beforeQa = process.env.MYNIGERIAGUIDE_E2E_STATIC_YOUTUBE;
+  const beforeNode = process.env.NODE_ENV;
+  try {
+    process.env.MYNIGERIAGUIDE_E2E_STATIC_YOUTUBE = '1';
+    process.env.NODE_ENV = 'production';
+    const movie = queryYouTubeDirectory().movies[0];
+    const selected = await createYouTubeServerStore({ mode: 'runtime' }).detail(movie.videoId);
+    const verified = await getYouTubeDetailMovieById(movie.videoId);
+    assert.deepEqual(selected, verified);
+  } finally {
+    if (beforeQa === undefined) delete process.env.MYNIGERIAGUIDE_E2E_STATIC_YOUTUBE;
+    else process.env.MYNIGERIAGUIDE_E2E_STATIC_YOUTUBE = beforeQa;
+    if (beforeNode === undefined) delete process.env.NODE_ENV;
+    else process.env.NODE_ENV = beforeNode;
+  }
+});
