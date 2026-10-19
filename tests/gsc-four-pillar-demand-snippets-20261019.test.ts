@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 import { getPublicService } from "../lib/data";
+import { getStepDetails, isPaymentAction } from "../lib/step-details";
 import { getServiceSeoTitleOverride, getServiceSeoDescriptionOverride } from "../data/service-seo-overrides";
 
 const serviceSlugs = [
@@ -46,4 +47,18 @@ test("career and Tour canonical detail routes use factual, concise search snippe
   assert.match(careers, /title: \{ absolute: compactSearchText\(guide.metaTitle, 60\) \}/);
   assert.match(careers, /description: compactSearchText\(guide.description, 155\)/);
   assert.match(careers, /canonical: "\/jobs\/guides\/" \+ guide.slug/);
+});
+
+test("anti-scam warnings do not become payment steps across service templates", () => {
+  const onlyWarning = "Do not pay an agent or unofficial seller for account activation.";
+  assert.equal(isPaymentAction(onlyWarning), false);
+  assert.equal(isPaymentAction("Never pay for a purported fast-track status update."), false);
+  assert.equal(isPaymentAction("Do not pay before the provider confirms your application."), false);
+  const actualPayment = "Pay the official application fee in the provider's portal; do not pay an agent.";
+  assert.equal(isPaymentAction(actualPayment), true);
+  const sample = getPublicService("nelfund-loan-status-and-upkeep");
+  assert.ok(sample);
+  const notes = getStepDetails(sample).filter(x => /never pay/i.test(x.instruction));
+  assert.ok(notes.length, "Expected source-backed scam warning in NELFUND guide");
+  assert.ok(notes.every(x => x.stage !== "Payment" && !x.checkpoint?.includes("payment screen")));
 });
