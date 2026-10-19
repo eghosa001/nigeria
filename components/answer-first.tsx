@@ -30,7 +30,7 @@ export function AnswerFirst({
   const visibleFacts = facts.filter((item) => item.value.trim()).slice(0, 4);
 
   return (
-    <section className="answer-first" aria-label={title}>
+    <section className={"answer-first" + (visibleFacts.length === 0 ? " answer-first-single" : "")} aria-label={title}>
       <div className="answer-first-copy">
         <span className="eyebrow">{eyebrow}</span>
         <h2>{title}</h2>
