@@ -29,16 +29,19 @@ test("duplicate search phrases lead to one canonical service task, not repeated 
 
 test("every topic hub now lists existing unique canonical tasks in authored order", () => {
   for (const hub of growthHubs) {
-    const services = hub.serviceSlugs.map(getPublicService).filter((s) => s !== undefined);
+    const services = [...new Set(hub.searches.map((search) => search.serviceSlug))]
+      .map(getPublicService).filter((service) => service !== undefined);
     const result = getDistinctTopicTaskLinks(hub.searches, services);
     assert.equal(new Set(result.map((item) => item.slug)).size, result.length, hub.slug);
     assert.ok(result.every((item) => services.some((service) => service.slug === item.slug)), hub.slug);
     assert.ok(result.every((item) => item.label.trim().length > 0), hub.slug);
     assert.ok(result.length <= hub.searches.length, hub.slug);
+    assert.equal(result.length, services.length, "Every existing valid search target must remain reachable: " + hub.slug);
   }
   const pension = getGrowthHub("pension-services-nigeria");
   assert.ok(pension);
-  const services = pension.serviceSlugs.map(getPublicService).filter((s) => s !== undefined);
+  const services = [...new Set(pension.searches.map((search) => search.serviceSlug))]
+    .map(getPublicService).filter((service) => service !== undefined);
   const links = getDistinctTopicTaskLinks(pension.searches, services);
   assert.ok(pension.searches.length > links.length, "RSA keyword variants should merge into one reader route");
   assert.ok(links.some((item) => item.slug === "pencom-open-rsa"));
@@ -49,7 +52,7 @@ test("every topic hub now lists existing unique canonical tasks in authored orde
 test("topic pages show helpful options rather than a repeated keyword-count dashboard", () => {
   const topic = readFileSync(new URL("../app/topics/[slug]/page.tsx", import.meta.url), "utf8");
   const answer = readFileSync(new URL("../components/answer-first.tsx", import.meta.url), "utf8");
-  assert.match(topic, /getDistinctTopicTaskLinks\(hub\.searches, services\)/);
+  assert.match(topic, /getDistinctTopicTaskLinks\(hub\.searches, searchServices\)/);
   assert.match(topic, /hub\.intro\.slice\(1\)/);
   assert.doesNotMatch(topic, /Common searches", value: String\(hub\.searches\.length\)/);
   assert.match(topic, /taskLinks\.map\(\(task\)/);
