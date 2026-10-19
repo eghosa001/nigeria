@@ -1,70 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { trackEvent } from "@/lib/client-analytics";
-
-type Kind = "movie" | "travel" | "job";
-type Entry = { href: string; title: string; kind: Kind; visitedAt: number };
-const savedKey = "mynigeriaguide:saved-pages:v1";
-const recentKey = "mynigeriaguide:recent-pages:v1";
-const changed = "mynigeriaguide:personal-library-changed";
-
-function validHref(href: unknown): href is string {
-  return typeof href === "string" && /^\/(?:entertainment\/movies|explore|jobs)\/[a-z0-9][a-z0-9-]*$/.test(href);
-}
-
-function read(key: string): Entry[] {
-  try {
-    const value: unknown = JSON.parse(localStorage.getItem(key) ?? "[]");
-    if (!Array.isArray(value)) return [];
-    const seen = new Set<string>();
-    return value.filter((item): item is Entry => {
-      if (!item || typeof item !== "object") return false;
-      const record = item as Partial<Entry>;
-      if (!validHref(record.href) || typeof record.title !== "string" || !record.title.trim() ||
-        !["movie", "travel", "job"].includes(record.kind ?? "") || seen.has(record.href)) return false;
-      seen.add(record.href);
-      return true;
-    }).slice(0, 24);
-  } catch {
-    return [];
-  }
-}
-
-function write(key: string, values: Entry[]) {
-  try {
-    localStorage.setItem(key, JSON.stringify(values));
-    window.dispatchEvent(new Event(changed));
-  } catch {
-    // Browsing remains functional when local storage is unavailable.
-  }
-}
-
-function kindFor(path: string): Kind | null {
-  if (/^\/entertainment\/movies\/[a-z0-9-]+$/.test(path)) return "movie";
-  if (/^\/explore\/[a-z0-9-]+$/.test(path)) return "travel";
-  if (/^\/jobs\/[a-z0-9-]+$/.test(path)) return "job";
-  return null;
-}
-
-export function RecentPageTracker() {
-  const pathname = usePathname();
-  useEffect(() => {
-    const kind = kindFor(pathname);
-    if (!kind) return;
-    const id = window.setTimeout(() => {
-      const title = document.querySelector("main h1")?.textContent?.trim();
-      if (!title) return;
-      const entry: Entry = { href: pathname, title: title.slice(0, 140), kind, visitedAt: Date.now() };
-      const rest = read(recentKey).filter((item) => item.href !== pathname);
-      write(recentKey, [entry, ...rest].slice(0, 10));
-    }, 0);
-    return () => window.clearTimeout(id);
-  }, [pathname]);
-  return null;
-}
+import { changed, read, savedKey, recentKey, validHref, write, type Kind, type Entry } from "@/lib/personal-library-storage";
 
 export function SavePageButton({ href, title, kind }: { href: string; title: string; kind: Kind }) {
   const [ready, setReady] = useState(false);
