@@ -70,8 +70,9 @@ test("stale individual vacancies lose index eligibility when the current Nigeria
   assert.equal(isIndexableJobOpportunity({ ...old, status: "closed" }), false);
 });
 
-test("all directly time-sensitive entry routes are request-rendered", () => {
-  for (const path of ["app/page.tsx","app/jobs/page.tsx","app/jobs/open-now/page.tsx","app/jobs/deadlines/page.tsx","app/jobs/closing-this-week/page.tsx","app/jobs/[slug]/page.tsx","app/jobs/guides/[slug]/page.tsx","app/jobs/categories/[slug]/page.tsx","app/jobs/locations/[slug]/page.tsx","app/jobs/professions/[slug]/page.tsx","app/jobs/employers/[slug]/page.tsx","app/jobs/new-this-week/page.tsx","app/jobs/private/page.tsx","app/jobs/government/page.tsx","app/jobs/remote/page.tsx"]) {
+test("private and deadline-sensitive job routes render per request, while public homepage refreshes at most five minutes apart", () => {
+  assert.match(source("app/page.tsx"), /export const revalidate = 300/);
+  for (const path of ["app/jobs/page.tsx","app/jobs/open-now/page.tsx","app/jobs/deadlines/page.tsx","app/jobs/closing-this-week/page.tsx","app/jobs/[slug]/page.tsx","app/jobs/guides/[slug]/page.tsx","app/jobs/categories/[slug]/page.tsx","app/jobs/locations/[slug]/page.tsx","app/jobs/professions/[slug]/page.tsx","app/jobs/employers/[slug]/page.tsx","app/jobs/new-this-week/page.tsx","app/jobs/private/page.tsx","app/jobs/government/page.tsx","app/jobs/remote/page.tsx"]) {
     assert.match(source(path), /export const dynamic = "force-dynamic";/, path);
   }
   assert.match(source("app/api/jobs/route.ts"), /"Cache-Control": "no-store"/);
