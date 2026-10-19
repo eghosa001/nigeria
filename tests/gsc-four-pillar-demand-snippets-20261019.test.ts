@@ -36,6 +36,9 @@ test("career and Tour canonical detail routes use factual, concise search snippe
   const read = (path: string) => readFileSync(new URL("../" + path, import.meta.url), "utf8");
   const tour = read("app/explore/[slug]/page.tsx");
   const careers = read("app/jobs/guides/[slug]/page.tsx");
+  const series = read("app/entertainment/series/[slug]/page.tsx");
+  assert.match(series, /const castLead = item.cast.slice\(0, 3\).join/);
+  assert.match(series, /compactSearchText\(prefix \+ synopsis, 155\)/);
   for (const slug of ["nigeria-rainforest-guide", "nigeria-hills-mountains-guide", "ilorin"]) {
     assert.match(tour, new RegExp('guide.slug === "' + slug + '"'));
     assert.match(tour, new RegExp('"' + slug + '":'));
