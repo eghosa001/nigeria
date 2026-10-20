@@ -5227,7 +5227,7 @@
       "The official AEDC MAP refund checker requires your meter number; it does not ask for a banking password or fee.",
       "AEDC sends eligible MAP customers an SMS and email showing the meter number, credit amount and unique 20-digit token. Entering an accepted token adds electricity units to that meter; it does not deposit money into a bank account.",
       "Eligibility and refund timing depend on the customer's record; do not assume every purchased meter has a token available today.",
-      "A MAP refund is applied as electricity credit, not an instant cash deposit. NERC says eligible upfront MAP meter payments are reimbursed through energy credits over an approved period; the consumer should not assume that a missing token proves the refund is complete or cancelled."
+      "An AEDC MAP notification may give a 20-digit energy-credit token; an empty meter-number lookup is not a decision that a customer has been repaid. Keep the original AEDC payment evidence and correspondence when raising a complaint. NERC's MAP FAQ explains why an eligible upfront meter payment is repaid through electricity credits rather than a cash deposit."
     ],
     "sources": [
       {
@@ -5434,7 +5434,7 @@
       "IBEDC's general MAP and FAQ pages discuss a 36-month refund period, while individual eligibility, historical schemes and credit records may differ. Do not calculate a guaranteed personal repayment date or claim every MAP customer qualifies; rely on the meter-specific portal and written IBEDC confirmation.",
       "The published MAP refund checker does not require a bank PIN, OTP or separate agent processing fee. Use only the official IBEDC portal and customer care; avoid sharing payment credentials.",
       "The regular IBEDC meter application is for acquiring a meter; the MAP refund portal is for checking refunds on eligible existing meter purchases. These are different services.",
-      "A MAP refund is applied as electricity credit, not an instant cash deposit. NERC says eligible upfront MAP meter payments are reimbursed through energy credits over an approved period; the consumer should not assume that a missing token proves the refund is complete or cancelled."
+      "IBEDC may show several separate credit tokens for one eligible meter. Load them by issue date, oldest first, as IBEDC directs; a later token failing does not mean the refund was cancelled. NERC describes energy-credit reimbursement as the MAP framework, so a disputed instalment should be pursued with the meter payment receipt and IBEDC complaint reference."
     ],
     "sources": [
       {
