@@ -89,6 +89,23 @@ const accuratelyReleasedMovieEditorialProfiles: Record<string, MovieEditorialPro
     }];
   }));
 
+// Where the same unresolved credit was described twice, retain the one
+// source-specific investigation and avoid a second generic warning paragraph.
+// The unresolved director review stays active; this is a reader-facing
+// duplication correction, not a credit verification or audit bypass.
+const movieEditorialWithoutRepeatedCredits: Record<string, MovieEditorialProfile> = Object.fromEntries(
+  Object.entries(accuratelyReleasedMovieEditorialProfiles).map(([slug, profile]) => {
+    if (slug !== "the-man-i-never-knew") return [slug, profile];
+    return [slug, {
+      ...profile,
+      sections: profile.sections.filter(section =>
+        section.heading !== "An original publisher is not a director credit"),
+      questions: profile.questions.filter(item =>
+        item.question !== "Who directed The Man I Never Knew on Royal Arts TV?"),
+    }];
+  })
+);
+
 export function getMovieEditorialProfile(slug: string): MovieEditorialProfile | undefined {
-  return accuratelyReleasedMovieEditorialProfiles[slug];
+  return movieEditorialWithoutRepeatedCredits[slug];
 }
