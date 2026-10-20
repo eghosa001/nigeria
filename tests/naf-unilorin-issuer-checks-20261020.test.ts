@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { getJobOpportunity } from "../lib/jobs";
 import { getEffectiveJobStatus } from "../lib/job-runtime";
+import { hasSourceMatchedUnilorinReview20261020 } from "../lib/job-naf-unilorin-checks-2026-10-20";
 
 test("NAF closed 2026 BMTC and DSSC recruitment is never advertised as open", () => {
   const job = getJobOpportunity("nigerian-air-force-airmen-airwomen-recruitment-2026");
@@ -28,4 +29,16 @@ test("UNILORIN application categories and technical test come from the issuer", 
   assert.match(job.nextMilestone ?? "", /no.*universal closing date/i);
   assert.ok(job.sources.some(source => source.url === "https://careers.unilorin.edu.ng/" &&
     source.lastChecked === "2026-10-20"));
+});
+
+test("UNILORIN issuer review includes particular categories, form journey, test, and expiry", () => {
+  const item = getJobOpportunity("unilorin-careers");
+  assert.ok(item);
+  assert.equal(hasSourceMatchedUnilorinReview20261020(item,"2026-10-20"),true);
+  assert.equal(hasSourceMatchedUnilorinReview20261020(item,"2026-11-04"),false);
+  assert.equal(hasSourceMatchedUnilorinReview20261020({...item,sourceNotes:[]},"2026-10-20"),false);
+  assert.equal(hasSourceMatchedUnilorinReview20261020({...item,applicationSteps:[]},"2026-10-20"),false);
+  assert.equal(hasSourceMatchedUnilorinReview20261020({...item,sources:[]},"2026-10-20"),false);
+  assert.equal(item.applicationSteps.length,5);
+  assert.match(item.applicationSteps[4],/recruitment@unilorin.edu.ng/);
 });
