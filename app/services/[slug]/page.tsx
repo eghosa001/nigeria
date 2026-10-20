@@ -51,19 +51,23 @@ function truncateMetadataText(value: string, maxLength: number) {
   return (lastSpace > Math.floor(maxLength * 0.7) ? shortened.slice(0, lastSpace) : shortened).trimEnd() + "…";
 }
 
-function getServiceSeoTitle(shortTitle: string, fullTitle: string, lastVerified: string) {
-  const year = lastVerified.slice(0, 4);
-  const normalizedShort = normalizeMetadataText(shortTitle);
-  const shortHasYear = new RegExp("\\b" + year + "\\b").test(normalizedShort);
-  const compact = `${normalizedShort}${shortHasYear ? "" : " " + year}: Fees & Steps`;
-  if (compact.length >= 30) return truncateMetadataText(compact, 60);
-
-  const normalizedFull = normalizeMetadataText(fullTitle);
-  const fullHasYear = new RegExp("\\b" + year + "\\b").test(normalizedFull);
-  return truncateMetadataText(
-    `${normalizedFull}${fullHasYear ? "" : " " + year}: Official Guide`,
-    60,
-  );
+function getServiceSeoTitle(shortTitle: string, fullTitle: string) {
+  // An issuer-check date is not the edition year of an evergreen service.
+  // Choose an action-specific promise from the actual guide title. Do not
+  // advertise a fee, online-only process or deadline that may not exist.
+  const name = normalizeMetadataText(shortTitle) || normalizeMetadataText(fullTitle);
+  const action = (name + " " + normalizeMetadataText(fullTitle)).toLowerCase();
+  let context = "Requirements & Official Steps";
+  if (/\b(track|tracking|status|check|checking|verify|verification|validate|validation|lookup|retrieve|retrieval|find)\b/.test(action)) {
+    context = "What to Check & Next Steps";
+  } else if (/\b(replace|replacement|correct|correction|change|modify|modification|update|recover|recovery)\b/.test(action)) {
+    context = "Documents & Official Steps";
+  } else if (/\b(appointment|booking|book|reschedule)\b/.test(action)) {
+    context = "Booking & Requirements";
+  } else if (/\b(payment|pay|refund|withdraw|withdrawal|transfer)\b/.test(action)) {
+    context = "Eligibility & Official Process";
+  }
+  return truncateMetadataText(name + (name.endsWith(":") ? " " : ": ") + context, 60);
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -74,7 +78,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const year = service.lastVerified.slice(0, 4);
   const title = truncateMetadataText(
     getServiceSeoTitleOverride(service.slug, year) ??
-      getServiceSeoTitle(service.shortTitle, service.title, service.lastVerified),
+      getServiceSeoTitle(service.shortTitle, service.title),
     60,
   );
   const summary = normalizeMetadataText(service.summary);
