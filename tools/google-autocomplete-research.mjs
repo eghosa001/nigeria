@@ -7,24 +7,34 @@ const seeds = {
     "how to check nin", "jamb caps admission", "how to check waec result",
     "nysc registration", "nigerian police clearance certificate", "how to correct bvn",
     "how to replace lost pvc", "how to get ecowas travel certificate",
+    // October 2026 primary-source discovery: NRS Tax ID and NIS services.
+    "nigeria tax id retrieval nin cac", "nigerian passport tracking status",
+    "nigeria landing exit card online", "nigerian police character certificate diaspora",
   ],
   tour: [
     "places to visit in nigeria", "things to do in lagos", "things to do in abuja",
     "places to visit in benin city", "tourist attractions in calabar",
     "olumo rock", "obudu mountain resort", "waterfalls in nigeria",
     "best beaches in nigeria", "national parks in nigeria",
+    // Organiser-published October/December Lagos event searches, not volume estimates.
+    "detty december fest lagos tickets", "wizkid detty december 2026",
+    "design week lagos october 2026",
   ],
   jobs: [
     "how to write cv in nigeria", "how to write a cover letter for a job",
     "job interview questions and answers in nigeria", "graduate jobs in nigeria",
     "remote jobs in nigeria", "jobs for nysc corps members", "internships in nigeria",
     "how to apply for federal government jobs", "how to find legitimate jobs in nigeria",
+    "nysc ppa opportunities nigeria", "graduate trainee nigeria applications 2026",
+    "official civil service recruitment nigeria",
   ],
   entertainment: [
     "best nollywood movies of all time", "classic nollywood movies",
     "nigerian movies on netflix", "old nollywood movies", "best nigerian comedy movies",
     "family nollywood movies", "yoruba movies to watch", "best nigerian movies on youtube",
     "nigerian movie actors", "award winning nigerian movies",
+    "october 2026 nollywood cinema movies", "nollywood movie cast 2026",
+    "where to watch new nigerian movies legally",
   ],
 };
 const probes = Object.entries(seeds).flatMap(([pillar, list]) =>
