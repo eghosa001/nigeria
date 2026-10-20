@@ -9,6 +9,10 @@ export function ServiceJourney({ service }: { service: Service }) {
   const journey = getServiceJourney(service);
   const guidance = getReviewedIcanGuidance(service.slug) ?? getDetailedServiceGuidance(service);
   const officialLinks = getOfficialServiceLinks(service);
+  // Generic guidance often reused the first numbered instruction verbatim.
+  // Suppress only that exact repeated sentence; keep independently reviewed context.
+  const normalize = (value: string) => value.trim().replace(/\\s+/g, " ");
+  const repeatsFirstStep = normalize(guidance.route.startDetail) === normalize(service.steps[0] ?? "");
 
   return (
     <section className="journey-section" id="journey">
@@ -25,7 +29,7 @@ export function ServiceJourney({ service }: { service: Service }) {
           <span className="journey-number" aria-hidden="true">01</span>
           <span className="journey-label">Recommended start</span>
           <h3>{guidance.route.startTitle}</h3>
-          <p>{guidance.route.startDetail}</p>
+          {!repeatsFirstStep ? <p>{guidance.route.startDetail}</p> : null}
           <div className="official-link-stack">
             {officialLinks.guidanceUrl && officialLinks.guidanceLabel ? (
               <a className="text-link official-service-link" data-official-purpose="guidance" href={officialLinks.guidanceUrl} target="_blank" rel="noreferrer">
