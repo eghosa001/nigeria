@@ -13122,13 +13122,15 @@
       "Enter the Reference Number for that same application; do not substitute a payment receipt number or another person's application details.",
       "Choose View Application Status and read the status displayed by NIS. A valid number pair is needed; MyNigeriaGuide does not store your passport numbers.",
       "If no matching application appears, check both numbers against the original NIS confirmation email. If you still have the Reference Number, the domestic NIS passport portal's separate Payment Status/Print Receipt search accepts it plus your Application Number, date of birth or email to look up receipt details. That is not a substitute for the two-number tracking checker.",
-      "Follow any separate official NIS appointment, biometrics or collection instruction shown in your account or communication. Do not treat payment completion alone as proof that a passport has been printed."
+      "Follow any separate official NIS appointment, biometrics or collection instruction shown in your account or communication. Do not treat payment completion alone as proof that a passport has been printed.",
+      "If the result reads PRODUCED (PASSPORT PRODUCED, READY FOR COLLECTION), follow the tracking message and your selected passport office's verified collection or delivery instructions. Keep your acknowledgement and identification ready; do not pay an unofficial agent who claims collection can be accelerated."
     ],
     "notes": [
       "The passport status tracker asks for both an Application Number and a Reference Number; these are different fields and both are required.",
       "The domestic NIS portal's Payment Status/Print Receipt search accepts a Reference Number with an Application Number, date of birth or email. It checks application/payment records; the dedicated passport tracker still requires both Application and Reference Numbers. Payment confirmation, appointment booking, production and collection are different stages.",
       "If the online checker cannot find an application, first verify that both numbers belong to the same submission. Use NIS's published help/contact channels for unresolved cases.",
-      "Only follow an NIS confirmation to visit a passport office; do not rely on a WhatsApp agent promising immediate printing, collection or a guaranteed delivery day."
+      "Only follow an NIS confirmation to visit a passport office; do not rely on a WhatsApp agent promising immediate printing, collection or a guaranteed delivery day.",
+      "NIS introduced a distinct PRODUCED (PASSPORT PRODUCED, READY FOR COLLECTION) status in January 2026. It means the booklet has been produced; follow the NIS instruction for collection or delivery. It does not mean it has already been collected, delivered or issued to the holder."
     ],
     "sources": [
       {
@@ -13154,6 +13156,13 @@
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/passports/",
         "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "Channels Television — NIS January 2026 passport tracker update and produced status",
+        "agency": "Channels Television (reporting NIS announcement)",
+        "url": "https://www.channelstv.com/2026/01/15/nis-updates-passport-tracking-system-amid-public-outcry-over-delay/",
+        "published": "2026-01-15",
+        "lastChecked": "2026-10-20"
       }
     ],
     "searchTerms": [
