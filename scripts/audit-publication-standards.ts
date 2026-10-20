@@ -28,6 +28,8 @@ import { hasVerifiedEarlierIssuerDirectoryReview } from "../lib/job-earlier-revi
 import { hasCompletedRemainingDirectoryReview } from "../lib/job-final-directory-reviews-2026-10-17";
 import { hasCompletedTwoRemainingDirectoryReviews20261017 } from "../lib/job-last-two-directories-2026-10-17";
 import { hasSourceMatchedEmployerBoardReview20261020 } from "../lib/job-employer-board-rechecks-2026-10-20";
+import { hasSourceMatchedMayBakerMultiRoleReview20261020 } from "../lib/job-may-baker-october-2026";
+import { hasSourceMatchedUnilorinReview20261020 } from "../lib/job-naf-unilorin-checks-2026-10-20";
 import { careerGuides } from "../lib/career-guides";
 import { hasVerifiedUndatedRoleApplicationReview20261017 } from "../lib/job-fifteen-exact-issuer-checks-2026-10-17";
 import { hasSourceMatchedMoniepointNoDeadlineReview } from "../lib/job-moniepoint-first-published-evidence-2026-10-17";
@@ -230,7 +232,9 @@ for (const job of jobOpportunities) {
   if (status === "closed" && job.statusLabel.toLowerCase().includes("open"))
     issues.push(review("stale-status-label", "Even archived copy must not promise currently open applications."));
   if (job.kind === "career-page" && !hasCompletedIssuerDirectoryReview(job, now) && !hasDocumentedCrossAgentIssuerReview(job, now) && !hasVerifiedEarlierIssuerDirectoryReview(job, now) && !hasCompletedRemainingDirectoryReview(job, now) && !hasCompletedTwoRemainingDirectoryReviews20261017(job, now) &&
-      !hasSourceMatchedEmployerBoardReview20261020(job, now))
+      !hasSourceMatchedEmployerBoardReview20261020(job, now) &&
+      !hasSourceMatchedMayBakerMultiRoleReview20261020(job, now) &&
+      !hasSourceMatchedUnilorinReview20261020(job, now))
     issues.push(review("employer-directory-depth",
       "This career directory still lacks a current source-matched, issuer-specific completed review; generic how-to text is not enough."));
   issues.push(sourceManual, paragraphsManual);
