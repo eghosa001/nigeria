@@ -22,6 +22,21 @@ export type DetailedServiceGuidance = {
 };
 
 const explicit: Record<string, DetailedServiceGuidance> = {
+  "neco-2026-ssce-external-registration": {
+    route: {
+      startTitle: "Check the 16 available subjects before paying ₦30,000",
+      startDetail: "NECO's 2026 private-candidate examination offers 16 specified subjects, not the entire school SSCE list. Confirm yours in the dated External guideline, then use ssceexternal.neco.gov.ng to create/activate your own candidate account. Ordinary registration closes 26 October; late registration through 3 November adds ₦5,000.",
+      physicalTitle: "Personal fingerprint registration at a cybercafé",
+      physicalDetail: "After account setup and official payment, NECO's guideline requires the actual candidate's biometric fingerprints at a reputable cybercafé/registration point. This is not a visit to a NECO State Office for photocard stamping. Check your NIN, white-background photograph, subject selections and fixed examination neighbourhood before the operator uploads the final record.",
+      fallbackTitle: "If a subject, payment or assigned centre is wrong",
+      fallbackDetail: "Do not pay a new fee or submit a second candidate registration blindly. Confirm the 16-subject list before payment, check existing NECO receipts in the candidate portal, and ask support@neco.gov.ng about a recorded error. Neighbourhood selection cannot be changed after upload under the published guideline; reprint/check your photocard to see the final centre.",
+    },
+    aftercare: [
+      { title: "Attest the printed photocard", detail: "Collect at least one clear photocard and the External timetable, then obtain an authorised referee's signature and stamp under the 2026 guideline. It is not a separate general NECO State Office stamping exercise." },
+      { title: "Check your precise exam centre again", detail: "Exam neighbourhood and final building are different details. A centre may be assigned later; reprint/check the photocard close to 4–21 November and use the official subject-specific timetable. Your own fingerprints will be verified at the examination venue." },
+      { title: "Keep payment and biodata secure", detail: "Save the official NECO transaction reference, account access and registration evidence. Never share passwords or NIN details with a supposed result-upgrade agent. Fees are non-refundable and transaction charges apply." },
+    ],
+  },
   "passport-application-tracking": {
     route: {
       startTitle: "Check that you have both NIS tracking numbers",
