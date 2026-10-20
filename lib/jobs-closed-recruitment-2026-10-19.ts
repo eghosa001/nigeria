@@ -8,9 +8,22 @@ type IssuerCheck = {
   summary: string;
   followUp: string;
   steps: string[];
+  checkedAt?: string;
 };
 
 const closedRecruitments: Record<string, IssuerCheck> = {
+  "reckitt-nigeria-management-trainee-2026": {
+    source: "https://careers.reckitt.com/job/Lagos-Island-Reckitt-Nigeria-2026-Management-Trainee-Program-%28Trailblazers-5_0%29-Lago-NA/1439208533/",
+    checkedAt: "2026-10-20",
+    note: "The named Reckitt Trailblazers 5.0 vacancy page displayed 'Sorry, this position has been filled' on 20 October 2026. The earlier eligibility information is historical, not an invitation to apply.",
+    summary: "Reckitt's official Trailblazers 5.0 job page now says the position has been filled. The previously advertised Lagos Island programme is not accepting applications through this listing. The original graduate-year, degree-class and NYSC requirements remain here only as historical context.",
+    followUp: "The named Reckitt vacancy is filled as of the 20 October 2026 issuer check. Do not submit an application through a copied advert; check Reckitt's current careers listings for a separately published opportunity.",
+    steps: [
+      "Open the original Reckitt Trailblazers 5.0 vacancy and read its current filled-status message.",
+      "Do not upload personal documents or pay an intermediary claiming to reopen this filled listing.",
+      "For a future role, use Reckitt's own careers search and verify that the specific vacancy, location and application control are active before applying.",
+    ],
+  },
   "frsc-recruitment": {
     source: "https://recruitment.frsc.gov.ng/",
     note: "FRSC's official applicant portal says 'Applications Closed' and that existing applicants will be contacted for further steps. Checked 19 October 2026. This does not confirm a new recruitment round or its timetable.",
@@ -57,13 +70,14 @@ export const checkedClosedRecruitmentSlugs20261019 = Object.keys(closedRecruitme
 export function applyIssuerClosedRecruitmentChecks20261019(item: CareerOpportunity): CareerOpportunity {
   const review = closedRecruitments[item.slug];
   if (!review) return item;
+  const checkedAt = review.checkedAt ?? "2026-10-19";
   const sources = item.sources.map(source =>
-    source.url === review.source ? { ...source, lastChecked: "2026-10-19" } : source);
+    source.url === review.source ? { ...source, lastChecked: checkedAt } : source);
   return {
     ...item,
     status: "closed",
     statusLabel: "Official application window closed — historical guide",
-    verifiedAt: "2026-10-19",
+    verifiedAt: checkedAt,
     summary: review.summary,
     applicationSteps: review.steps,
     nextMilestone: review.followUp,
