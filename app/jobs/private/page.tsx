@@ -1,13 +1,14 @@
 import { isEffectivelyOpen, getEffectiveJobStatus, getEffectiveStatusLabel } from "@/lib/job-runtime";
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { privateOpportunities } from "@/lib/jobs";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Verified Private-Sector Jobs, Graduate Programmes & Internships in Nigeria",
   description: "Official career routes for reputable Nigerian employers, including graduate programmes, SIWES, internships and professional vacancies.",
   alternates: { canonical: "/jobs/private" }
-};
+});
 
 export default function PrivateJobsPage() {
   const live = privateOpportunities.filter((item) => isEffectivelyOpen(item));
