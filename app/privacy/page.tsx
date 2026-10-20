@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Privacy policy",
   description: "How MyNigeriaGuide uses local storage, Google Analytics, correction-report data and external service links.",
   alternates: { canonical: "/privacy" },
-};
+});
 
 export default function PrivacyPage() {
   return (
