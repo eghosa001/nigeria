@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JobCollection } from "@/components/job-collection";
@@ -10,11 +11,11 @@ import { getSiteUrl } from "@/lib/site";
 // Application deadlines follow the current Nigerian calendar day.
 export const dynamic = "force-dynamic";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Jobs Open Now in Nigeria: Verified Vacancies & Recruitment",
   description: "Check current Nigerian job vacancies and recruitment exercises separately from open training and entrepreneurship programmes.",
   alternates: { canonical: "/jobs/open-now" },
-};
+});
 
 export default function OpenJobsPage() {
   const open = jobOpportunities.filter((item) => isEffectivelyOpen(item) && item.kind !== "career-page");
