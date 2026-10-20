@@ -3,6 +3,7 @@ import test from "node:test";
 import { getJobOpportunity } from "../lib/jobs";
 import { getEffectiveJobStatus } from "../lib/job-runtime";
 import { issuerRecheckedRoles20261020 } from "../lib/job-october-issuer-rechecks-2026-10-20";
+import { verifiedEmployerBoards20261020 } from "../lib/job-employer-board-rechecks-2026-10-20";
 import { getEntertainmentTitle } from "../lib/entertainment";
 
 test("only individually checked employer records gain a new verification date", () => {
@@ -56,4 +57,30 @@ test("Oversabi Aunty routes viewers to evidenced Kava listing, not unavailable N
   assert.equal(movie.watchLinks[0].lastChecked, "2026-10-20");
   assert.ok(movie.references?.some(ref => ref.href === "https://www.netflix.com/ng/title/82741545" && /country-unavailable notice/i.test(ref.note ?? "")));
   assert.ok(movie.cast.length >= 3);
+});
+
+test("five current employer boards replace expired role observations, without altering unrelated jobs", () => {
+  assert.equal(verifiedEmployerBoards20261020.length, 5);
+  for (const slug of verifiedEmployerBoards20261020) {
+    const job = getJobOpportunity(slug);
+    assert.ok(job, slug);
+    assert.equal(job.verifiedAt, "2026-10-20", slug);
+    assert.ok(job.sources.some(source => source.url === job.officialUrl &&
+      source.lastChecked === "2026-10-20"), slug);
+    assert.ok(job.sourceNotes.every(note => !note.includes("5 October 2026")), slug);
+  }
+  const emzor = getJobOpportunity("emzor-careers");
+  assert.ok(emzor);
+  assert.equal(emzor.officialUrl, "https://www.emzorpharma.com/job-vacancies/");
+  assert.match(emzor.summary, /quality, production, engineering, HSE and laboratory/i);
+  assert.ok(emzor.sourceNotes.some(note => /no payment is requested/i.test(note)));
+
+  const aiico = getJobOpportunity("aiico-insurance-careers");
+  assert.ok(aiico);
+  assert.match(aiico.summary, /Data Analyst and Data & Analytics Engineer/i);
+  assert.doesNotMatch(aiico.summary, /Sales Officer/i);
+
+  const bat = getJobOpportunity("bat-nigeria-careers");
+  assert.ok(bat);
+  assert.match(bat.summary, /Sourcing Executive.*Lagos/i);
 });
