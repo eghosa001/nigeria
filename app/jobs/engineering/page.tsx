@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { JobCollection } from "@/components/job-collection";
 import { jobOpportunities } from "@/lib/jobs";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Engineering & Technical Jobs in Nigeria",
   description: "Verified engineering, technical, energy, manufacturing and technology career routes in Nigeria with qualifications and official application links.",
   alternates: { canonical: "/jobs/engineering" }
-};
+});
 
 export default function EngineeringJobsPage() {
   const items = jobOpportunities.filter((item) =>
