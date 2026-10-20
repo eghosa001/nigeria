@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { PageOutline } from "@/components/page-outline";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
@@ -11,11 +12,11 @@ import { selectRecentHomeMovies } from "@/lib/home-movie-highlights";
 import { getSiteUrl } from "@/lib/site";
 import { trendingYouTubeMovies } from "@/lib/youtube-library";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Nigerian Movies & Entertainment",
   description: "Discover Nigerian movies, cinemas, filmmakers and verified official links to watch on Netflix, YouTube, Prime Video and supported platforms.",
   alternates: { canonical: "/entertainment" },
-};
+});
 
 // Public editorial hub: cache identical HTML for up to five minutes at the edge.
 // No visitor-specific state or deadline-sensitive recruitment is rendered here.
