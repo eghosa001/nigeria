@@ -15,7 +15,7 @@ This pass follows `docs/PUBLISHING_STANDARD.md`, leaves the four pillar canonica
 | Tour | `/explore/detty-december-lagos-2026` | Avoid redundant year in search title and answer venue/date/entry-price search | [Organiser calendar](https://dettydecfest.com/events/), [DOT TIX opening ticket](https://tix.dot360.co/event/detty-december-festival-grand-opening-event) |
 | Entertainment | `/entertainment/movies/forever-isnt-long-enough-2025` | Put verified cast and original Royal Arts source before generic catalogue wording | Existing verified publisher credits and separate film profile; distinct from 2026 `Long Enough` |
 
-Publisher verification timestamps for unchanged prior material **were not advanced** merely because editorial copy was edited. New source references specify their own check date only.
+The AEDC, IBEDC and passport-tracking guide records were **substantively reverified on 20 October 2026** against newly cited regulator and issuer-reporting evidence, so their record-level `lastVerified` fields match the newly added source checks. Unrelated records and prose-only changes received no verification-date resets.
 
 ## Important measured search demands and deliberately held edits
 | Search, settled through 18 Oct | GSC impressions/clicks | Reason not to force another modification |
