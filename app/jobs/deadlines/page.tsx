@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { JobCollection } from "@/components/job-collection";
 import { jobOpportunities } from "@/lib/jobs";
@@ -7,11 +8,11 @@ import { isEffectivelyOpen } from "@/lib/job-runtime";
 // Deadline-sensitive status must be evaluated on every request, not frozen at build time.
 export const dynamic = "force-dynamic";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Nigeria Job & Recruitment Deadlines",
   description: "Track verified application deadlines for open Nigerian government recruitment and private-sector opportunities with official source links.",
   alternates: { canonical: "/jobs/deadlines" }
-};
+});
 
 export default function JobDeadlinesPage() {
   const open = jobOpportunities.filter((item) => isEffectivelyOpen(item));
