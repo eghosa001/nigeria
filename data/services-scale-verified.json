@@ -3790,8 +3790,8 @@
     "summary": "Stanbic IBTC's business-account route for registered Nigerian enterprises using CAC documents, signatory ID and BVN, recent utility evidence, TIN, photographs and the bank's account-opening form.",
     "category": "Banking",
     "agencySlug": "stanbic-ibtc-bank",
-    "feeLabel": "Official page currently shows conflicting opening-deposit figures",
-    "feeNote": "Stanbic IBTC's current Biz Smart page shows ₦20,000 in one account-opening section and ₦10,000 in another cost section. Confirm the actual opening deposit with the bank before funding the application.",
+    "feeLabel": "Two official opening-balance figures — confirm before paying",
+    "feeNote": "Stanbic IBTC's live Biz Smart product page lists ₦20,000 as the opening balance for a registered business. The Biz Smart Account Conditions PDF linked on that same page instead says ₦5,000, and says that ₦5,000 is locked. Both are issuer documents: ask the bank which amount actually applies to the account you are opening before funding it. The ₦5,000 daily balance for the CAM concession is a separate condition.",
     "timeline": "Stanbic IBTC does not publish one fixed completion time for Biz Smart account opening on the current product page.",
     "status": "conflict",
     "officialPortal": "https://www.stanbicibtcbank.com/nigeriabank/business/products-and-services/bank-with-us/business-bank-accounts/biz-smart-account",
@@ -3803,23 +3803,30 @@
       "The completed Stanbic IBTC business account-opening form"
     ],
     "steps": [
-      "Open Stanbic IBTC's official Biz Smart page and review the current business-account terms and the conflicting opening-deposit figures before proceeding.",
-      "Prepare the CAC documents that match the business structure and collect the signatories' identity documents and BVNs.",
-      "Prepare the recent utility bill, TIN and passport photograph for each signatory and complete the bank's account-opening form.",
-      "Download and complete the Biz Smart account-opening form from Stanbic IBTC's product page, then submit the form and supporting KYC documents to Stanbic IBTC using the bank's business-account application channel.",
-      "Confirm the actual opening deposit and account terms with Stanbic IBTC before funding the new business account."
+      "Open Stanbic IBTC's official Biz Smart product page and its linked Biz Smart Account Conditions PDF. They give different opening-balance amounts, so confirm the currently applicable deposit with the bank before paying.",
+      "Prepare the CAC documents that match your business structure: business-name certificate/status report, or company certificate/status report/MEMART; collect every signatory's valid photo ID and BVN.",
+      "Bring a utility bill no older than three months, the business TIN and one passport photograph per signatory.",
+      "Complete the business account-opening form linked by Stanbic IBTC and submit the form and verified KYC documents through the bank's own account-opening channel.",
+      "Confirm that the bank accepts the opening deposit and operating-balance terms for your chosen account, and retain its acknowledgement."
     ],
     "notes": [
-      "The current Stanbic IBTC Biz Smart page contains conflicting opening-deposit figures, so this guide deliberately does not pick one as authoritative.",
-      "Business-name and limited-liability-company applicants use different CAC document sets.",
-      "Account-maintenance concessions depend on the operating-balance and transaction conditions published for the product."
+      "The bank's Biz Smart product page and its linked terms PDF disagree on the account-opening amount. This is an unresolved first-party documentation conflict, not proof that the lower amount will be accepted.",
+      "The bank lists a ₦5,000 minimum daily balance for exemption from current account maintenance (CAM) fees and describes a ₦1-per-mille CAM rate plus VAT in the relevant circumstances; the PDF says ₦5,000 may be locked.",
+      "Unlike an ordinary clearing cheque, the Biz Smart cheque book is restricted to cashing at Stanbic IBTC branches or paying into accounts at the bank.",
+      "The product page advertises no SME online banking transaction fee for the first six months; the account terms do not promise interest on the account. Confirm current fees directly before transacting."
     ],
     "sources": [
       {
-        "label": "Stanbic IBTC Biz Smart Account",
+        "label": "Stanbic IBTC official Biz Smart account product and opening-balance details",
         "agency": "Stanbic IBTC Bank",
         "url": "https://www.stanbicibtcbank.com/nigeriabank/business/products-and-services/bank-with-us/business-bank-accounts/biz-smart-account",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-20"
+      },
+      {
+        "label": "Stanbic IBTC Biz Smart Account Conditions PDF — different opening balance and locked minimum",
+        "agency": "Stanbic IBTC Bank",
+        "url": "https://www.stanbicibtcbank.com/static_file/Nigeria/nigeriabank/Business/Products/Bank%20With%20Us/Business%20Bank%20Accounts/Biz%20Smart/Biz%20Smart%20Account%20Terms%20%26%20Conditions.pdf",
+        "lastChecked": "2026-10-20"
       }
     ],
     "related": [
@@ -3828,7 +3835,7 @@
       "cac-business-name-registration",
       "cac-company-registration"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-20",
     "searchTerms": [
       "Stanbic Biz Smart account",
       "Stanbic IBTC business account requirements",
