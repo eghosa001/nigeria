@@ -100,7 +100,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
             summary={hub.intro[0] ?? hub.description}
             facts={[]}
             links={[
-              ...(taskLinks[0] ? [{ href: "/services/" + taskLinks[0].slug, label: "Open " + taskLinks[0].label }] : []),
+              ...(taskLinks[0] ? [{ href: "/services/" + taskLinks[0].slug, label: taskLinks[0].label }] : []),
               { href: "#task-choices", label: "Compare the available tasks", primary: true },
             ]}
           />
