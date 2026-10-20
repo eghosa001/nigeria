@@ -2637,7 +2637,7 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
 
       label: "Kava — official Oversabi Aunty listing and synopsis",
       href: "https://watch.kava.tv/oversabi-aunty",
-      lastChecked: "2026-10-13",
+      lastChecked: "2026-10-20",
       note: "Primary distributor source for synopsis, cast and current subscription listing."
     }, {
       label: "IMDb — Oversabi Aunty full credits",
@@ -2650,25 +2650,18 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
       lastChecked: "2026-10-13",
       note: "Additional independent corroboration of film credits and character assignments."
     }, {
-      label: "Netflix Nigeria — Oversabi Aunty title listing",
+      label: "Netflix Nigeria — title information and availability caution",
       href: "https://www.netflix.com/ng/title/82741545",
-      lastChecked: "2026-10-09",
-      note: "An unauthenticated region's title-page notice on 9 October does not prove Nigerian unavailability. Netflix's country Top 10 ranked the film first for two consecutive weeks through 11 October 2026; verify current playback in your own account.",
+      lastChecked: "2026-10-20",
+      note: "Netflix’s public title page currently displays a country-unavailable notice. That public result does not establish the availability seen inside a subscriber’s own account. Its older Nigeria Top 10 ranking is historical, not a working watch link.",
     }],
     watchLinks: [{
-      platform: "Netflix",
-      label: "Check Oversabi Aunty on Netflix Nigeria",
-      href: "https://www.netflix.com/ng/title/82741545",
-      access: "subscription",
-      lastChecked: "2026-10-15",
-      note: "Nigeria's official weekly Netflix Top 10 ranked the film first through 11 October 2026. Current account playback is not guaranteed; confirm a working play button and your subscription conditions."
-    }, {
       platform: "Kava",
-      label: "Check Oversabi Aunty on Kava",
+      label: "Check the official Oversabi Aunty listing on Kava",
       href: "https://watch.kava.tv/oversabi-aunty",
       access: "subscription",
-      lastChecked: "2026-10-13",
-      note: "Kava's official film page lists Oversabi Aunty and offers a Subscribe option. Territorial playback, pricing and access must be confirmed with Kava; this is not a free YouTube upload."
+      lastChecked: "2026-10-20",
+      note: "Kava’s official title page names this exact film and offers a Subscribe option. Confirm current Nigerian playback and subscription terms inside Kava; this is not a free YouTube upload."
     }],
   },
   {
