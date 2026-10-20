@@ -49,7 +49,7 @@ export function applyVerifiedEmployerBoards20261020(job: CareerOpportunity): Car
     verifiedAt: "2026-10-20",
     summary: verified.summary,
     nextMilestone: "Open the exact employer-listed position and confirm its current acceptance, duties, locality and any closing date before applying.",
-    sourceNotes: [...job.sourceNotes, verified.note],
+    sourceNotes: [verified.note],
     sources: links.some(link => link.url === verified.url)
       ? links : [...links, {
         label: "Emzor — current official job vacancies and recruitment disclaimer",
