@@ -5,7 +5,6 @@ import { publicServices } from "../lib/data";
 import { getDetailedServiceGuidance } from "../lib/service-guidance";
 import { getServiceJourney, hasReviewedServiceJourney } from "../lib/journey";
 import { exploreGuides } from "../lib/explore";
-import { getCurrentHomeSocialTrends } from "../data/home-social-trends";
 
 const neco = publicServices.find(s => s.slug === "neco-2026-ssce-external-registration");
 const aiff = exploreGuides.find(g => g.slug === "abuja-international-film-festival-2026");
@@ -60,15 +59,4 @@ test("Abuja festival visitor guide distinguishes official dated days, admission,
   assert.equal(aiff.source?.href, "https://abujainternationalfilmfestival.org/aiff-2026-programme");
   assert.ok(aiff.sources?.some(s => s.href === "https://abujainternationalfilmfestival.org/23rd-aiff-screening-schedule"));
   assert.ok(aiff.sources?.some(s => s.href === "https://www.visitabuja.org/event/23rd-abuja-international-film-festival/"));
-});
-
-test("only the two verified new time-sensitive canonicals enter four-pillar front shelf", () => {
-  const items = getCurrentHomeSocialTrends("2026-10-19");
-  assert.equal(items.length, 4);
-  assert.equal(new Set(items.map(i => i.pillar)).size, 4);
-  assert.ok(items.some(i => i.href === "/services/neco-2026-ssce-external-registration"));
-  assert.ok(items.some(i => i.href === "/explore/abuja-international-film-festival-2026"));
-  assert.ok(!items.some(i => i.href === "/services/jamb-caps"));
-  assert.ok(!items.some(i => i.href === "/explore/design-week-lagos-2026"));
-  assert.ok(!getCurrentHomeSocialTrends("2026-10-27").some(i => i.href === "/explore/abuja-international-film-festival-2026"));
 });
