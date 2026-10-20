@@ -60,6 +60,8 @@ jobs:
           if echo "$changed" | grep -qx 'lib/job-topics.ts' && \
              ! echo "$changed" | grep -Eq '^(lib/(jobs|job-runtime|job-query|job-facets|job-employers|career-guides|job-scale-wave)[.]ts$|app/jobs/.*|app/api/jobs/.*|scripts/check-job.*|data/job-retired-redirects[.]json|next[.]config[.]ts|package[.]json)$'; then
             echo "mode=topics" >> "$GITHUB_OUTPUT"
+            echo "links=false" >> "$GITHUB_OUTPUT"
+            exit 0
           else
             echo "mode=full" >> "$GITHUB_OUTPUT"
           fi
