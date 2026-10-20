@@ -45,7 +45,7 @@ export function ServiceJourney({ service }: { service: Service }) {
           <span className="journey-label">{journey.physicalStatus === "not-stated" ? "Physical visit: evidence check" : "Physical / assisted stage"}</span>
           <h3>{guidance.route.physicalTitle}</h3>
           <p>{guidance.route.physicalDetail}</p>
-{journey.physicalStatus !== "not-stated" && service.slug !== "nigeria-landing-exit-card" ? (
+{journey.physicalStatus !== "not-stated" && !["nigeria-landing-exit-card", "neco-2026-ssce-external-registration"].includes(service.slug) ? (
             <Link className="text-link" href="/offices">Find official offices/centres →</Link>
           ) : null}
         </article>

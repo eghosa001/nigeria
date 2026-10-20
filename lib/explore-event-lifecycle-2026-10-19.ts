@@ -1,4 +1,5 @@
 import type { ExploreGuide } from "@/lib/explore";
+import { applyAiff2026ConfirmedSessionDecisions } from "@/lib/explore-aiff-programme-decisions-2026-10-19";
 
 // 19 October 2026: individually re-opened NIFAFEST's 15–17 October programme,
 // Design Week Lagos organiser's full-week calendar, and the National Theatre's
@@ -48,5 +49,5 @@ export function applyCurrentEventVisitorDecisions20261019(guide: ExploreGuide): 
       lastReviewed: "2026-10-19",
     };
   }
-  return guide;
+  return applyAiff2026ConfirmedSessionDecisions(guide);
 }

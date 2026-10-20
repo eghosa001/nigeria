@@ -218,6 +218,17 @@ const verifiedEditorialJourneys: Record<string, ServiceJourney> = {
 // Source-reviewed education service paths: do not infer a transactional online
 // registration or certificate replacement merely from an agency information URL.
 const verifiedEducationJourneys: Record<string, ServiceJourney> = {
+  "neco-2026-ssce-external-registration": {
+    mode: "hybrid",
+    modeLabel: "Portal + in-person fingerprints",
+    startLabel: "Confirm 16 subjects, then register on NECO External",
+    startDetail: "Check the selected 2026 External subject list before paying; create the candidate account on ssceexternal.neco.gov.ng. The ₦30,000 ordinary fee excludes payment charges, and the deadline is 26 October.",
+    onlineAvailable: true,
+    physicalStatus: "required",
+    physicalLabel: "Candidate's own fingerprints at a cybercafé, not a general NECO State Office visit",
+    alternativeLabel: "If the subject you need is unavailable or the centre is wrong",
+    alternativeDetail: "NECO External offers just 16 subjects and the selected examination neighbourhood cannot be changed after upload. Before payment, consider another recognised examination for an unavailable subject; for a record problem use NECO's support address, not an unofficial agent or duplicate payment.",
+  },
   // ICAN's public 2026 professional exam and exemption portals take applications
   // online. Choosing an examination centre is not an office-registration visit.
   "ican-professional-exam-registration": {
