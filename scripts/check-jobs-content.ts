@@ -222,6 +222,12 @@ const sameRequisitionAliases = new Map([
   ["moniepoint-financial-planning-analyst-nigeria-2026", { canonical: "moniepoint-financial-planning-analyst", requisition: "4355709101" }],
   ["moniepoint-early-careers-talent-acquisition-specialist-2026", { canonical: "moniepoint-early-careers-talent-acquisition-specialist", requisition: "4981411101" }],
 ]);
+// The earlier FULAFIA template and the substantive 2026 exercise describe the
+// same institutional recruitment. Preserve historical URLs but require an
+// exact, source-cautioned replacement rather than any generic job page.
+const sameExerciseAliases = new Map([
+  ["federal-university-lafia-staff-recruitment-2026", "federal-university-lafia-recruitment-2026"],
+]);
 const opportunityBySlug = new Map(jobOpportunities.map((item) => [item.slug, item]));
 for (const [retiredSlug, target] of retiredJobRedirects) {
   assert(!opportunityBySlug.has(retiredSlug), retiredSlug + " is retired and must not remain an indexable opportunity.");
@@ -238,6 +244,14 @@ for (const [retiredSlug, target] of retiredJobRedirects) {
       assert(replacementSlug === sameRequisition.canonical, retiredSlug + " must redirect to its exact canonical issuer role.");
       assert(replacement?.kind === "vacancy" && replacement.officialUrl.endsWith("/" + sameRequisition.requisition),
         retiredSlug + " must retain the matching employer requisition.");
+    } else if (sameExerciseAliases.has(retiredSlug)) {
+      assert(replacementSlug === sameExerciseAliases.get(retiredSlug) &&
+        replacement?.kind === "recruitment-exercise" &&
+        replacement.organization === "Federal University of Lafia" &&
+        replacement.status === "unverified" &&
+        replacement.deadline === "2026-10-28" &&
+        replacement.summary.includes("current acceptance needs direct confirmation"),
+        retiredSlug + " must resolve only to the source-cautioned FULAFIA exercise.");
     } else {
       assert(replacement?.kind === "career-page", retiredSlug + " must redirect to an employer career page.");
     }
