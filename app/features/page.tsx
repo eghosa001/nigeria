@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { FeatureShare } from "@/components/feature-share";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "What You Can Do on MyNigeriaGuide",
   description: "Discover Nigerian movie casts and viewing links, save service guides, follow career searches, plan trips, and share trusted information.",
   alternates: { canonical: "/features" },
-};
+});
 
 const pillars = [
   {
