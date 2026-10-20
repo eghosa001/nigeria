@@ -34,6 +34,7 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
   if (guide.slug === "ilorin") return "Ilorin, Kwara State: Places to Visit & City Guide";
   if (guide.slug === "nigeria-landmarks-places-to-visit") return "Famous Nigerian Landmarks: Locations & Visitor Guide";
   if (guide.slug === "calabar-carnival-2026") return "Calabar Carnival 2026: Parade Dates & Trip Guide";
+  if (guide.slug === "detty-december-lagos-2026") return "Detty December Village Lagos 2026: Dates & Tickets";
   if (guide.slug === "moonshot-techcabal-lagos-2026") return "Moonshot by TechCabal 2026: Dates & Venue";
   if (guide.slug === "kainji-dam-guide") return "Kainji Dam Nigeria: Location, History & Power Facts";
   if (guide.slug === "mambilla-plateau-guide") return "Mambilla Plateau Nigeria: Location, Gembu & Trip Tips";
@@ -51,6 +52,7 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
 // guides earned impressions on precise landmark queries but no recorded clicks.
 // Match search intent without suggesting unrestricted access or inventing fees.
 const exploreDescriptionOverrides: Record<string, string> = {
+  "detty-december-lagos-2026": "Detty December Village is at Livespot Entertarium, Lagos. Check 18–30 December 2026 dates, Wizkid’s 18 December opening and official tickets from ₦50,000.",
   "nigeria-rainforest-guide": "Does Nigeria have rainforests? Learn where tropical forests occur, the places and wildlife they support, and what to check before visiting protected areas.",
   "nigeria-hills-mountains-guide": "Find Nigerian hills, mountains and highland landscapes with locations, visitor-planning guidance and access checks. Compare destinations before travelling.",
   "ilorin": "Explore Ilorin in Kwara State, Nigeria. Use its city guide to identify places to visit, plan journeys and check access before setting out.",
