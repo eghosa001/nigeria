@@ -144,8 +144,8 @@ export const jobGrowthWave5: CareerOpportunity[] = [
     kind: "programme",
     topicSlugs: ["oil-gas-energy"],
     sector: "Private",
-    status: "open",
-    statusLabel: "2026 intake marked Now Open by Renaissance",
+    status: "unverified",
+    statusLabel: "Programme advertised; live graduate application route unconfirmed",
     summary: "Renaissance Africa Energy is advertising its 2026 Graduate Programme as open, offering two years of structured rotations, real responsibility and exposure to experienced engineers, geoscientists and commercial leaders.",
     location: "Nigeria",
     employmentType: "Two-year graduate development programme",
@@ -171,16 +171,16 @@ export const jobGrowthWave5: CareerOpportunity[] = [
     ],
     officialUrl: "https://renaissanceafrica.com/",
     officialUrlLabel: "Open the official Renaissance Graduate Programme route",
-    verifiedAt: "2026-10-06",
-    nextMilestone: "The 2026 intake is currently marked open; no universal closing date is shown in the homepage programme summary.",
+    verifiedAt: "2026-10-21",
+    nextMilestone: "Renaissance still advertises its 2026 intake on the homepage, but the destination careers board does not currently list the graduate programme; verify an application route directly.",
     feeNote: "No application fee is stated on the official programme summary. Use Renaissance's own careers route.",
     sourceNotes: [
-      "Renaissance's official homepage labels the Graduate Programme 'Now Open · 2026 Intake'.",
+      "As checked 21 October, the official homepage still labels the Graduate Programme 'Now Open · 2026 Intake', but the linked careers listing contains no separately identifiable graduate intake; accepting graduate applications was not independently verified.",
       "The same source describes the programme as two years of structured rotations with exposure to engineering, geoscience and commercial leaders."
     ],
     sources: [
-      { label: "Renaissance Africa Energy — 2026 Graduate Programme", url: "https://renaissanceafrica.com/", lastChecked: "2026-10-06" },
-      { label: "Renaissance Africa Energy Careers", url: "https://renaissanceafrica.com/careers", lastChecked: "2026-10-06" }
+      { label: "Renaissance Africa Energy — 2026 Graduate Programme", url: "https://renaissanceafrica.com/", lastChecked: "2026-10-21" },
+      { label: "Renaissance Africa Energy Careers", url: "https://renaissanceafrica.com/careers", lastChecked: "2026-10-21" }
     ]
   },
 {
