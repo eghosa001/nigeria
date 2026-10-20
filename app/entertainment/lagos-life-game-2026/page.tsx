@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
@@ -10,11 +11,11 @@ const officialTerms = "https://lagoslife.app/terms";
 const fundingReport = "https://www.thecable.ng/vatar-raises-500000-funding-for-lagos-life-game-nine-days-after-launch/";
 const additionalReport = "https://techpoint.africa/news/lagos-life-10m-valuation/";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Lagos Life Game (2026): Official Link, How to Play and Funding Facts",
   description: "What Lagos Life is, where to play the official Nigerian browser game, how its virtual naira works, age guidance and what its reported $500,000 funding means.",
   alternates: { canonical: "/entertainment/lagos-life-game-2026" },
-};
+});
 
 export default function LagosLifeGuide() {
   const base = getSiteUrl();
