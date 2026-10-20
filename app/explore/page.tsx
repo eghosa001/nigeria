@@ -110,6 +110,12 @@ export default function ExplorePage() {
           <div className="minimal-inline-links primary-shortcuts" aria-label="Tour Nigeria shortcuts">
             <a href="#featured-destinations">Featured destinations</a>
             <a href="#places">{explorePlaces.length} mapped places</a>
+            <Link href="/explore/kano">Kano travel guide</Link>
+            <Link href="/explore/benin-city">Benin City travel guide</Link>
+            <Link href="/explore/abuja">Abuja travel guide</Link>
+            <Link href="/explore/lagos">Lagos city guide</Link>
+            <Link href="/explore/things-to-do-lagos">Things to do in Lagos</Link>
+            <Link href="/explore/things-to-do-abuja">Things to do in Abuja</Link>
             <Link href="/explore/nigeria-landmarks-places-to-visit">Top places in Nigeria</Link>
             <Link href="/explore/nigerian-museum-collections-guide">Museum artefacts &amp; digital collections</Link>
             <a href="#browse-guides">Browse Nigeria</a>
