@@ -1,14 +1,15 @@
 import { getEffectiveJobStatus, getEffectiveStatusLabel } from "@/lib/job-runtime";
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { governmentOpportunities } from "@/lib/jobs";
 import { JobCollection } from "@/components/job-collection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Nigeria Government Jobs & Recruitment Tracker",
   description: "Track verified Nigerian federal government recruitment status, requirements, screening, CBT, shortlist and training stages with official application links.",
   alternates: { canonical: "/jobs/government" }
-};
+});
 
 export default function GovernmentJobsPage() {
   const recruitments = governmentOpportunities.filter((item) => item.kind !== "programme");
