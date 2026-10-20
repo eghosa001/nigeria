@@ -78,6 +78,7 @@ export default function EntertainmentPage() {
           <div className="minimal-inline-links primary-shortcuts">
             <Link href="/entertainment/movies">All movies</Link>
             <Link href="/entertainment/releases">Latest Nigerian releases</Link>
+            <Link href="/entertainment/cinemas">Cinema showtimes and guides</Link>
             <Link href="/entertainment/youtube">Free on YouTube</Link>
             <Link href="/entertainment/people">Actors &amp; filmmakers</Link>
             <Link href="/entertainment/platforms">Streaming platforms</Link>
