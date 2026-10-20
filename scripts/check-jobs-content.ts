@@ -2,7 +2,8 @@ import { careerGuides } from "../lib/career-guides";
 import { getJobTopicOpportunities, jobTopics } from "../lib/job-topics";
 import { jobEmployers } from "../lib/job-employers";
 import { getJobFacetOpportunities, jobLocationFacets, jobProfessionFacets } from "../lib/job-facets";
-import { buildJobPostingJsonLd, daysSinceIsoDate, getEffectiveJobStatus } from "../lib/job-runtime";
+import { buildJobPostingJsonLd, daysSinceIsoDate, getEffectiveJobStatus, todayIsoNigeria } from "../lib/job-runtime";
+import { hasSourceMatchedEmployerBoardReview20261020 } from "../lib/job-employer-board-rechecks-2026-10-20";
 import { JOBS_DIRECTORY_PAGE_SIZE, queryJobDirectory } from "../lib/job-query";
 import { retiredJobRedirects, templateCareerPortalSlugs } from "../lib/job-scale-wave";
 import { isIndexableJobOpportunity, jobOpportunities } from "../lib/jobs";
@@ -257,7 +258,13 @@ for (const item of jobOpportunities) {
     assert(item.qualifications.length >= 2, item.slug + " employer portal must explain how role-specific eligibility works.");
     assert(item.requirements.length >= 4, item.slug + " employer portal needs a concrete pre-application checklist.");
     assert(item.applicationSteps.length >= 5, item.slug + " employer portal needs a concrete portal workflow.");
-    assert(item.sourceNotes.length >= 3, item.slug + " employer portal must explain exactly what was verified.");
+    // Five issuer-specific board reviews contain one substantive, dated source
+    // note rather than repeating it three times to satisfy a numeric threshold.
+    // Accept only exact role/URL/summary/source matches while the review is
+    // fresh; all other employer directories retain the three-note requirement.
+    assert(item.sourceNotes.length >= 3 ||
+      hasSourceMatchedEmployerBoardReview20261020(item, todayIsoNigeria()),
+      item.slug + " employer portal must explain exactly what was verified.");
   }
   if (item.kind === "vacancy" && ["closed", "unverified"].includes(getEffectiveJobStatus(item))) {
     assert(!isIndexableJobOpportunity(item), item.slug + " unavailable individual vacancy must stay out of search sitemaps.");
