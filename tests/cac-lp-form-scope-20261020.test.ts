@@ -13,7 +13,7 @@ type Guide = {
 };
 const guides = JSON.parse(readFileSync(new URL("../data/services-cac-partnerships.json", import.meta.url), "utf8")) as Guide[];
 const find = (slug: string) => guides.find(g => g.slug === slug);
-const regulations = "https://cac.gov.ng/wp-content/uploads/2021/01/REGULATIONS-2021.pdf";
+const regulations = "https://news.cac.gov.ng/wp-content/uploads/2021/01/REGULATIONS-2021.pdf";
 
 test("CAC LP 05 cannot be presented as a form for adding or removing partners", () => {
   assert.equal(guides.length, 12);
