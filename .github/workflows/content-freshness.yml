@@ -45,42 +45,11 @@ jobs:
           fi
           git fetch origin "$BASE_SHA" --depth=1
           changed="$(git diff --name-only "$BASE_SHA" HEAD)"
-          if echo "$changed" | grep -Eq '^(data/youtube-channel-cache[.]json|lib/(content-freshness|content-health|explore|explore-places)[.]ts|scripts/check-freshness[.]ts)
-            echo "mode=releases" >> "$GITHUB_OUTPUT"
-          elif echo "$changed" | grep -qx 'lib/entertainment.ts'; then
-            echo "mode=movies" >> "$GITHUB_OUTPUT"
-          else
-            echo "mode=skip" >> "$GITHUB_OUTPUT"
-            echo "Unrelated changes have dedicated tests; the consolidated six-hour site task handles periodic freshness."
-          fi
-      - uses: actions/setup-node@v4
-        if: steps.scope.outputs.mode != 'skip'
-        with:
-          node-version: 22
-      - run: npm install --no-audit --no-fund
-        if: steps.scope.outputs.mode == 'full'
-      - run: npm run check:freshness
-        if: steps.scope.outputs.mode == 'full'
-      - name: Validate freshness of modified Services records
-        if: steps.scope.outputs.mode == 'services'
-        env:
-          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
-        run: node scripts/check-changed-service-freshness.mjs
-      - name: Check changed release-source records
-        if: steps.scope.outputs.mode == 'releases'
-        env:
-          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
-        run: node scripts/check-changed-release-freshness.mjs
-      - name: Check changed movie-source dates
-        if: steps.scope.outputs.mode == 'movies'
-        env:
-          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
-        run: node scripts/check-changed-movie-freshness.mjs
-; then
+          if echo "$changed" | grep -Eq '^(data/youtube-channel-cache[.]json|lib/(content-freshness|content-health|explore|explore-places)[.]ts|scripts/check-freshness[.]ts)$'; then
             echo "mode=full" >> "$GITHUB_OUTPUT"
           elif echo "$changed" | grep -qx 'data/services.json'; then
             echo "mode=services" >> "$GITHUB_OUTPUT"
-            echo "Checking only edited service records; the scheduled global freshness monitor retains the unrelated backlog."
+            echo "Check only edited Services records; the scheduled global freshness report retains unrelated content."
           elif echo "$changed" | grep -qx 'lib/entertainment-extras.ts'; then
             echo "mode=releases" >> "$GITHUB_OUTPUT"
           elif echo "$changed" | grep -qx 'lib/entertainment.ts'; then
@@ -97,6 +66,11 @@ jobs:
         if: steps.scope.outputs.mode == 'full'
       - run: npm run check:freshness
         if: steps.scope.outputs.mode == 'full'
+      - name: Check freshness of modified Services records
+        if: steps.scope.outputs.mode == 'services'
+        env:
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: node scripts/check-changed-service-freshness.mjs
       - name: Check changed release-source records
         if: steps.scope.outputs.mode == 'releases'
         env:
