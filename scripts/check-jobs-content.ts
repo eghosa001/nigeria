@@ -2,7 +2,9 @@ import { careerGuides } from "../lib/career-guides";
 import { getJobTopicOpportunities, jobTopics } from "../lib/job-topics";
 import { jobEmployers } from "../lib/job-employers";
 import { getJobFacetOpportunities, jobLocationFacets, jobProfessionFacets } from "../lib/job-facets";
-import { buildJobPostingJsonLd, daysSinceIsoDate, getEffectiveJobStatus } from "../lib/job-runtime";
+import { buildJobPostingJsonLd, daysSinceIsoDate, getEffectiveJobStatus, todayIsoNigeria } from "../lib/job-runtime";
+import { hasSourceMatchedEmployerBoardReview20261020 } from "../lib/job-employer-board-rechecks-2026-10-20";
+import { hasSourceMatchedUnilorinReview20261020 } from "../lib/job-naf-unilorin-checks-2026-10-20";
 import { JOBS_DIRECTORY_PAGE_SIZE, queryJobDirectory } from "../lib/job-query";
 import { retiredJobRedirects, templateCareerPortalSlugs } from "../lib/job-scale-wave";
 import { isIndexableJobOpportunity, jobOpportunities } from "../lib/jobs";
@@ -220,6 +222,12 @@ const sameRequisitionAliases = new Map([
   ["moniepoint-financial-planning-analyst-nigeria-2026", { canonical: "moniepoint-financial-planning-analyst", requisition: "4355709101" }],
   ["moniepoint-early-careers-talent-acquisition-specialist-2026", { canonical: "moniepoint-early-careers-talent-acquisition-specialist", requisition: "4981411101" }],
 ]);
+// The earlier FULAFIA template and the substantive 2026 exercise describe the
+// same institutional recruitment. Preserve historical URLs but require an
+// exact, source-cautioned replacement rather than any generic job page.
+const sameExerciseAliases = new Map([
+  ["federal-university-lafia-staff-recruitment-2026", "federal-university-lafia-recruitment-2026"],
+]);
 const opportunityBySlug = new Map(jobOpportunities.map((item) => [item.slug, item]));
 for (const [retiredSlug, target] of retiredJobRedirects) {
   assert(!opportunityBySlug.has(retiredSlug), retiredSlug + " is retired and must not remain an indexable opportunity.");
@@ -236,6 +244,14 @@ for (const [retiredSlug, target] of retiredJobRedirects) {
       assert(replacementSlug === sameRequisition.canonical, retiredSlug + " must redirect to its exact canonical issuer role.");
       assert(replacement?.kind === "vacancy" && replacement.officialUrl.endsWith("/" + sameRequisition.requisition),
         retiredSlug + " must retain the matching employer requisition.");
+    } else if (sameExerciseAliases.has(retiredSlug)) {
+      assert(replacementSlug === sameExerciseAliases.get(retiredSlug) &&
+        replacement?.kind === "recruitment-exercise" &&
+        replacement.organization === "Federal University of Lafia" &&
+        replacement.status === "unverified" &&
+        replacement.deadline === "2026-10-28" &&
+        replacement.summary.includes("current acceptance needs direct confirmation"),
+        retiredSlug + " must resolve only to the source-cautioned FULAFIA exercise.");
     } else {
       assert(replacement?.kind === "career-page", retiredSlug + " must redirect to an employer career page.");
     }
@@ -257,7 +273,14 @@ for (const item of jobOpportunities) {
     assert(item.qualifications.length >= 2, item.slug + " employer portal must explain how role-specific eligibility works.");
     assert(item.requirements.length >= 4, item.slug + " employer portal needs a concrete pre-application checklist.");
     assert(item.applicationSteps.length >= 5, item.slug + " employer portal needs a concrete portal workflow.");
-    assert(item.sourceNotes.length >= 3, item.slug + " employer portal must explain exactly what was verified.");
+    // Five issuer-specific board reviews contain one substantive, dated source
+    // note rather than repeating it three times to satisfy a numeric threshold.
+    // Accept only exact role/URL/summary/source matches while the review is
+    // fresh; all other employer directories retain the three-note requirement.
+    assert(item.sourceNotes.length >= 3 ||
+      hasSourceMatchedEmployerBoardReview20261020(item, todayIsoNigeria()) ||
+      hasSourceMatchedUnilorinReview20261020(item, todayIsoNigeria()),
+      item.slug + " employer portal must explain exactly what was verified.");
   }
   if (item.kind === "vacancy" && ["closed", "unverified"].includes(getEffectiveJobStatus(item))) {
     assert(!isIndexableJobOpportunity(item), item.slug + " unavailable individual vacancy must stay out of search sitemaps.");

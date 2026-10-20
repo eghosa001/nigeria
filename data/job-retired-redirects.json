@@ -100,6 +100,10 @@
     "destinationPath": "/jobs/categories/universities-research"
   },
   {
+    "sourceSlug": "federal-university-lafia-staff-recruitment-2026",
+    "destinationPath": "/jobs/federal-university-lafia-recruitment-2026"
+  },
+  {
     "sourceSlug": "gig-logistics-contact-centre-and-service-quality-assurance-manager-2026",
     "destinationPath": "/jobs/gig-logistics-careers"
   },

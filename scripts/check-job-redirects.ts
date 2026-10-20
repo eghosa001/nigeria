@@ -15,7 +15,7 @@ const redirects = await redirectFactory();
 const bySource = new Map(redirects.map((item) => [item.source, item]));
 
 assert(new Set(retiredJobRoutes.map((item) => item.sourceSlug)).size === retiredJobRoutes.length, "Retired Jobs redirect source slugs must be unique.");
-assert(retiredJobRoutes.length === 113, "Retired Jobs redirect table must preserve all 113 compatibility routes.");
+assert(retiredJobRoutes.length === 114, "Retired Jobs redirect table must preserve all 114 compatibility routes.");
 
 for (const item of retiredJobRoutes) {
   const source = "/jobs/" + item.sourceSlug;
@@ -34,6 +34,10 @@ for (const [alias, canonical] of moniepointAliases) {
   assert(configured?.destination === canonical && configured.permanent === true,
     "Moniepoint duplicate alias must permanently redirect to its matching issuer requisition: " + alias);
 }
+
+const lafia = bySource.get("/jobs/federal-university-lafia-staff-recruitment-2026");
+assert(lafia?.destination === "/jobs/federal-university-lafia-recruitment-2026" && lafia.permanent,
+  "Older FULAFIA same-exercise URL must permanently redirect to its source-verified guide.");
 
 const reliance = bySource.get("/jobs/reliance-health-associate-data-scientist-2026");
 assert(reliance?.destination === "/jobs/reliance-health-careers", "Reliance retired vacancy redirect regression.");

@@ -3081,7 +3081,7 @@
     "feeLabel": "Room price and payment terms vary by hotel",
     "feeNote": "Hotels.ng shows the room price and the accommodation provider's payment conditions for the selected property. Some hotels support payment on arrival while others require prepayment.",
     "timeline": "Hotels.ng sends confirmation and booking updates after a reservation is placed; final availability can depend on the accommodation provider and its payment/prepayment policy.",
-    "status": "verified",
+    "status": "review",
     "officialPortal": "https://hotels.ng/",
     "requirements": [
       "The destination city or specific hotel the traveller wants to book",
