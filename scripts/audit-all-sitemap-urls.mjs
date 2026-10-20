@@ -37,7 +37,7 @@ function plain(text) {
   return text.replace(/&(?:nbsp|amp|lt|gt|quot|#39);/gi, " ").replace(/\s+/g, " ").trim();
 }
 function schemas(html) {
-  const matches = [...html.matchAll(/<script\\b[^>]*type=["']application\\/ld\\+json["'][^>]*>([\\s\\S]*?)<\\/script>/gi)];
+  const matches = [...html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
   let valid = 0, invalid = 0;
   const types = new Set();
   function collect(node) {
@@ -65,7 +65,7 @@ function auditHtml(html, url, status, ms, finalUrl) {
   const twitterTitle = meta(head, "twitter:title") || "";
   const twitterDescription = meta(head, "twitter:description") || "";
   const twitterImage = meta(head, "twitter:image") || "";
-  const h1 = plain((html.match(/<h1\\b[^>]*>([\\s\\S]*?)<\\/h1>/i)?.[1] || "").replace(/<[^>]*>/g, " "));
+  const h1 = plain((html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || "").replace(/<[^>]*>/g, " "));
   const canonical = attribute(tags(head, "link").find((t) => /\bcanonical\b/i.test(attribute(t, "rel") || "")) || "", "href");
   const canonicalUrl = canonical ? cleanUrl(canonical) : null;
   const robots = (meta(head, "robots") || "").toLowerCase();
