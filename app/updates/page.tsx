@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { AnswerFirst } from "@/components/answer-first";
@@ -7,11 +8,11 @@ import { myNigeriaGuideUpdates, updateTypeLabel } from "@/data/updates";
 import { getPublicService } from "@/lib/data";
 import { getSiteUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Nigeria Government Service Updates 2026",
   description: "Dated, source-linked updates to Nigerian government service fees, registration processes and official guidance.",
   alternates: { canonical: "/updates" },
-};
+});
 
 function formatDate(date: string) {
   return new Intl.DateTimeFormat("en-NG", {
