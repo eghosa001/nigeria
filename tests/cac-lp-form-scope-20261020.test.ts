@@ -38,9 +38,20 @@ test("CAC LP 02 separates a principal-address change from branch notice and LLP 
   assert.ok(guide.sources.some(s => s.url === regulations && s.lastChecked === "2026-10-20"));
 });
 
-test("unresearched other LP and LLP filings retain their original issuer check dates", () => {
+test("nine unresearched other LP and LLP filings retain their original issuer check dates", () => {
   for (const guide of guides) {
-    if (["cac-lp-change-partners", "cac-lp-change-business-address"].includes(guide.slug)) continue;
+    if (["cac-lp-change-partners", "cac-lp-change-business-address", "cac-llp-change-partners"].includes(guide.slug)) continue;
     assert.notEqual(guide.lastVerified, "2026-10-20", guide.slug + " was not individually rechecked");
   }
+});
+
+test("CAC LLP 04, 05 and 06 are three different partner transactions, not one form", () => {
+  const guide = find("cac-llp-change-partners");
+  assert.ok(guide);
+  assert.match(guide.summary, /CAC\/LLP 04.*CAC\/LLP 05.*CAC\/LLP 06/);
+  assert.ok(guide.steps.some(x => /For admitting a new partner choose CAC\/LLP 05; for cessation choose CAC\/LLP 06/.test(x)));
+  assert.ok(guide.requirements.some(x => /bars people under 18 from being designated partners/.test(x)));
+  assert.ok(guide.notes.some(x => /written notice.*distinct from CAC's 30-day filing window/.test(x)));
+  assert.equal(guide.lastVerified, "2026-10-20");
+  assert.ok(guide.sources.some(x => x.url === regulations && x.lastChecked === "2026-10-20"));
 });
