@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { TripBudgetPlanner } from "@/components/trip-budget-planner";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Nigeria Trip Budget Planner",
   description: "Estimate travel, accommodation, meals, activities and local transport costs for your Nigeria trip using your own quotes, and share your budget.",
   alternates: { canonical: "/explore/trip-planner" },
-};
+});
 
 const startingPoints = [
   { label: "Lagos", href: "/explore/lagos" },
