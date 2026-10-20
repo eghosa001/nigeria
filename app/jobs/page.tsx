@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { PageOutline } from "@/components/page-outline";
 import { JsonLd } from "@/components/json-ld";
@@ -14,11 +15,11 @@ import { queryJobDirectory } from "@/lib/job-query";
 import { getSiteUrl } from "@/lib/site";
 import { jobMarketSources } from "@/data/job-market-sources";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Jobs in Nigeria: Open Roles & Recruitment",
   description: "Verified Nigerian government recruitment, graduate jobs, SIWES, internships and career portals with requirements, application steps, status and official links.",
   alternates: { canonical: "/jobs" }
-};
+});
 
 // Deadline-sensitive status must be evaluated on every request, not frozen at build time.
 export const dynamic = "force-dynamic";
