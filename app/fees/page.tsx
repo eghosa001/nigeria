@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { FeeDirectory } from "@/components/fee-directory";
 import { JsonLd } from "@/components/json-ld";
@@ -6,11 +7,11 @@ import { publicServices } from "@/lib/data";
 import { feeCategories, queryFeeDirectory } from "@/lib/fee-query";
 import { getSiteUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Nigeria government fees and service charges",
   description: "Browse source-linked Nigerian government service fees, charges and fee-status notes with last-checked dates and official portals.",
   alternates: { canonical: "/fees" },
-};
+});
 
 export default function FeesPage() {
   const base = getSiteUrl();
