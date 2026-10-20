@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { serviceLocationCities } from "@/data/service-locations";
 import { getSiteUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Government service offices by city in Nigeria",
   description: "Find source-linked JAMB, passport, NIN, driver's-licence and CAC office routes in major Nigerian cities.",
   alternates: { canonical: "/locations" },
-};
+});
 
 export default function LocationsPage() {
   const base = getSiteUrl();
