@@ -1,4 +1,5 @@
 import type { CareerOpportunity } from "@/lib/jobs";
+import { applyMayBakerOctoberLiveVacancy20261020 } from "@/lib/job-may-baker-october-2026";
 
 // Direct issuer checks 19 October 2026. A general careers website, even when
 // live, does NOT prove it accepts a named role's application.
@@ -69,7 +70,7 @@ export const checkedClosedRecruitmentSlugs20261019 = Object.keys(closedRecruitme
 
 export function applyIssuerClosedRecruitmentChecks20261019(item: CareerOpportunity): CareerOpportunity {
   const review = closedRecruitments[item.slug];
-  if (!review) return item;
+  if (!review) return applyMayBakerOctoberLiveVacancy20261020(item);
   const checkedAt = review.checkedAt ?? "2026-10-19";
   const sources = item.sources.map(source =>
     source.url === review.source ? { ...source, lastChecked: checkedAt } : source);
