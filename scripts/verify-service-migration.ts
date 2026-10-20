@@ -12,8 +12,9 @@ const publicServices = services.filter((service) => service.status !== "review")
 if (services.length !== 668) {
   throw new Error("Expected 668 total guides, found " + services.length + ".");
 }
-if (publicServices.length !== 668) {
-  throw new Error("Expected 668 public guides, found " + publicServices.length + ".");
+// 668 source records remain; one duplicate Hotels.ng URL now redirects to its canonical.
+if (publicServices.length !== 667) {
+  throw new Error("Expected 667 public guides after canonical consolidation, found " + publicServices.length + ".");
 }
 
 console.log("Validated", services.length, "service records with", publicServices.length, "public guides.");
