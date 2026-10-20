@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/json-ld";
 import { getEmployerOpportunities, getJobEmployerBySlug, indexableJobEmployers } from "@/lib/job-employers";
 import { getEffectiveJobStatus } from "@/lib/job-runtime";
 import { getSiteUrl } from "@/lib/site";
+import { pageSocialMetadata } from "@/lib/seo-social";
 
 export const dynamic = "force-dynamic";
 export const dynamicParams = false;
@@ -21,11 +22,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const employer = getJobEmployerBySlug(slug);
   if (!employer) return {};
 
+  const seoTitle = employer.name + " Jobs & Careers in Nigeria";
+  const seoDescription = "Verified " + employer.name + " jobs, recruitment exercises and official career routes in Nigeria, with current status, requirements, source dates and direct application links.";
+  const canonical = "/jobs/employers/" + employer.slug;
   return {
-    title: employer.name + " Jobs & Careers in Nigeria",
-    description:
-      "Verified " + employer.name + " jobs, recruitment exercises and official career routes in Nigeria, with current status, requirements, source dates and direct application links.",
-    alternates: { canonical: "/jobs/employers/" + employer.slug },
+    title: seoTitle,
+    description: seoDescription,
+    alternates: { canonical },
+    ...pageSocialMetadata(seoTitle, seoDescription, canonical),
   };
 }
 
