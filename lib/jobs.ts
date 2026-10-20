@@ -308,18 +308,19 @@ const rawJobOpportunities: CareerOpportunity[] = [
     ],
     officialUrl: "https://careers.fulafia.edu.ng/",
     officialUrlLabel: "Open Federal University of Lafia official employment portal",
-    verifiedAt: "2026-10-16",
+    verifiedAt: "2026-10-20",
     deadline: "2026-10-28",
-    nextMilestone: "FCC lists 28 October 2026 as the closing date. Its old job-detail link returned HTTP 404 on 16 October; the direct Federal University of Lafia careers portal is accessible, but an authenticated submission was not tested.",
+    nextMilestone: "The Federal Character Commission lists 28 October 2026 as the deadline and the university portal invites applicants to create an account. Check your role, submit before the deadline and arrange referee reports to registrar@fulafia.edu.ng. An authenticated submission was not tested.",
     feeNote: "No recruitment fee is stated in the official Federal Character Commission listing. Avoid unofficial payment requests.",
     sourceNotes: [
       "On 16 October the previous FCC job-specific path returned HTTP 404; its broader official recruitment directory still listed this 2026 exercise as ongoing with a 28 October deadline. The university careers portal displayed Create an Account to start applying.",
-      "The Federal Character Commission lists the recruitment as ongoing and gives 28 October 2026 as the deadline.",
+      "On 20 October, the Federal Character Commission item-specific advertisement lists 28 October 2026 as the application deadline, the university employment portal displays Create an Account, and the university notice requests referee reports to registrar@fulafia.edu.ng.",
       "The exercise covers academic staff across multiple faculties as well as non-teaching/professional positions."
     ],
     sources: [
-      { label: "Federal University of Lafia — official employment portal", url: "https://careers.fulafia.edu.ng/", lastChecked: "2026-10-16" },
-      { label: "Federal Character Commission — official current recruitment directory", url: "https://fcc.gov.ng/recruitment/", lastChecked: "2026-10-16" }
+      { label: "Federal University of Lafia — official employment portal", url: "https://careers.fulafia.edu.ng/", lastChecked: "2026-10-20" },
+      { label: "Federal Character Commission — university staff-position advertisement and deadline", url: "https://fcc.gov.ng/job-listings/federal-university-of-lafia-p-m-b-146-lafia-nasarawa-state-office-of-the-registrar-www-fulafia-edu-ng/", lastChecked: "2026-10-20" },
+      { label: "Federal Character Commission — current recruitment directory", url: "https://fcc.gov.ng/recruitment/", lastChecked: "2026-10-20" }
     ]
   },
   {
@@ -3854,13 +3855,14 @@ function closeExpiredJob(item: CareerOpportunity): CareerOpportunity {
 // by stronger reviewed canonical pages. Leave their historical research in the
 // source wave, but exclude them from all public catalogs and XML sitemaps.
 // Permanent compatibility redirects are maintained in job-retired-redirects.json.
-const duplicateMoniepointJobAliases = new Set([
+const duplicateIssuerJobAliases = new Set([
   "moniepoint-financial-planning-analyst-nigeria-2026",
   "moniepoint-early-careers-talent-acquisition-specialist-2026",
+  "federal-university-lafia-staff-recruitment-2026",
 ]);
 
 export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities
-  .filter(item => !duplicateMoniepointJobAliases.has(item.slug))
+  .filter(item => !duplicateIssuerJobAliases.has(item.slug))
   .map(normalizeCareerPortal)
   .map(applyIssuerPortalResearch20261016)
   .map(applyIssuerCareerReview20261016B)
