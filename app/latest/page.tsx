@@ -69,6 +69,22 @@ export default function LatestPage() {
           Employer openings may close; always confirm at the official application page.
         </p>
 
+        <section className="answer-first-panel top-gap" aria-labelledby="latest-search-intent-title">
+          <span className="eyebrow">Start with what you need</span>
+          <h2 id="latest-search-intent-title">Looking for Nigeria news today?</h2>
+          <p>
+            This page brings together dated, source-checked updates across services, jobs,
+            entertainment and travel. It is not a newspaper front page: each item links to
+            a guide or source that explains what changed and what you can do next.
+          </p>
+          <nav className="jobs-topic-links" aria-label="Popular Nigeria update searches">
+            <Link href="#nigeria-october-trends">Verified Nigeria trend archive (11–18 October)</Link>
+            <Link href="/jobs/new-this-week">New jobs this week</Link>
+            <Link href="/entertainment/social-trends">Nigerian entertainment trends</Link>
+            <Link href="/services">Recently checked government services</Link>
+          </nav>
+        </section>
+
         <div className="jobs-topic-links top-gap">
           <Link href="/entertainment/movies/october-2026">October 2026 Nigerian movies</Link>
           <Link href="/entertainment/hallelujah-challenge-october-2026">Hallelujah Challenge livestream (5–30 Oct)</Link>
