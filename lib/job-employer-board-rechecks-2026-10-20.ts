@@ -57,3 +57,22 @@ export function applyVerifiedEmployerBoards20261020(job: CareerOpportunity): Car
       }],
   };
 }
+
+/**
+ * A completed review is limited to this exact employer board and matched
+ * issuer observation. Do not clear any other employer-directory finding.
+ * After 14 days it expires again until a genuine fresh source check occurs.
+ */
+export function hasSourceMatchedEmployerBoardReview20261020(job: CareerOpportunity, today: string): boolean {
+  const review = reviewedBoards[job.slug];
+  if (!review || job.kind !== "career-page" || job.status !== "career-page" ||
+      job.officialUrl !== review.url || job.verifiedAt !== "2026-10-20" ||
+      job.summary !== review.summary || job.deadline !== undefined ||
+      !job.sourceNotes.includes(review.note) ||
+      !job.sources.some(source => source.url === review.url && source.lastChecked === "2026-10-20") ||
+      !job.applicationSteps.length || !job.requirements.length) return false;
+
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(today) || today < "2026-10-20") return false;
+  const elapsed = (Date.parse(today + "T00:00:00Z") - Date.parse("2026-10-20T00:00:00Z")) / 86_400_000;
+  return Number.isFinite(elapsed) && elapsed >= 0 && elapsed <= 14;
+}
