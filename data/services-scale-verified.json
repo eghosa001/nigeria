@@ -5220,12 +5220,14 @@
       "Submit your meter number to check for an eligible refund record or token. A lookup alone does not guarantee eligibility.",
       "If a refund is recorded, confirm the meter number and electricity-credit amount, then copy the 20-digit load token.",
       "Enter the load token on your prepaid meter as you would a normal electricity token. It represents credited units, not money sent to a bank.",
-      "If an eligible refund notification is missing, your meter number returns no record, or the token fails, email map.refund@abujaelectricity.com with proof of MAP meter payment. AEDC also lists 08039070070 and its Customer Experience Centres for support; you do not have to visit a centre just to check the online portal."
+      "If an eligible refund notification is missing, your meter number returns no record, or the token fails, email map.refund@abujaelectricity.com with proof of MAP meter payment. AEDC also lists 08039070070 and its Customer Experience Centres for support; you do not have to visit a centre just to check the online portal.",
+      "If AEDC has not resolved a missing refund, failed credit token or disputed MAP payment, lodge a formal complaint with its Customer Complaints Unit and keep the complaint reference, meter number and payment proof. NERC's published process permits escalation of unresolved complaints to the Consumer Forum and then the Commission. Check the competent state electricity regulator where jurisdiction has transferred."
     ],
     "notes": [
       "The official AEDC MAP refund checker requires your meter number; it does not ask for a banking password or fee.",
       "AEDC sends eligible MAP customers an SMS and email showing the meter number, credit amount and unique 20-digit token. Entering an accepted token adds electricity units to that meter; it does not deposit money into a bank account.",
-      "Eligibility and refund timing depend on the customer's record; do not assume every purchased meter has a token available today."
+      "Eligibility and refund timing depend on the customer's record; do not assume every purchased meter has a token available today.",
+      "A MAP refund is applied as electricity credit, not an instant cash deposit. NERC says eligible upfront MAP meter payments are reimbursed through energy credits over an approved period; the consumer should not assume that a missing token proves the refund is complete or cancelled."
     ],
     "sources": [
       {
@@ -5240,6 +5242,18 @@
         "url": "https://www.abujaelectricity.com/your-investment-returned-a-simple-guide-to-your-map-refund/",
         "lastChecked": "2026-10-14",
         "published": "2026-07-01"
+      },
+      {
+        "label": "NERC — official MAP refunds, meter installation and customer rights FAQ",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/faq/metering/",
+        "lastChecked": "2026-10-20"
+      },
+      {
+        "label": "NERC — formal DisCo complaint, Consumer Forum and escalation procedure",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/need-help/services/how-to-file-a-complaint/",
+        "lastChecked": "2026-10-20"
       }
     ],
     "related": [
@@ -5411,14 +5425,16 @@
       "Enter the correct meter number in the 'Check Your Refund' / 'Get Token' form. The portal checks eligibility and displays any refund-token record currently available for that meter; an unsuccessful lookup does not by itself settle a disputed payment.",
       "If the portal lists multiple credits, note the issue date on each token and load the oldest outstanding token first, working forward to the newest. IBEDC explicitly warns that refund tokens must be entered in ascending issue-date order.",
       "Load the issued energy-credit token on the correct prepaid meter. The credit provides electricity units; it is not a cash refund, a recharge service fee or confirmation that all future refund instalments have been issued.",
-      "If the number is unrecognised, the token does not load or an expected refund is missing, call IBEDC's published customer-care number 07001239999 and provide the meter number and original MAP payment evidence. Ask the company to confirm whether the meter is eligible, the current token record and any backlog rather than paying an unofficial agent."
+      "If the number is unrecognised, the token does not load or an expected refund is missing, call IBEDC's published customer-care number 07001239999 and provide the meter number and original MAP payment evidence. Ask the company to confirm whether the meter is eligible, the current token record and any backlog rather than paying an unofficial agent.",
+      "If IBEDC has not resolved a missing refund, failed credit token or disputed MAP payment, lodge a formal complaint with its Customer Complaints Unit and keep the complaint reference, meter number and payment proof. NERC's published process permits escalation of unresolved complaints to the Consumer Forum and then the Commission. Check the competent state electricity regulator where jurisdiction has transferred."
     ],
     "notes": [
       "IBEDC's own MAP Refund Portal says eligible prepaid-meter buyers may receive energy-credit refunds in monthly instalments. The company does not promise every customer's full refund will be visible in one lookup.",
       "IBEDC's live portal explicitly says tokens must be loaded in ascending order (earliest issue date first). A later token may fail until an earlier one is entered.",
       "IBEDC's general MAP and FAQ pages discuss a 36-month refund period, while individual eligibility, historical schemes and credit records may differ. Do not calculate a guaranteed personal repayment date or claim every MAP customer qualifies; rely on the meter-specific portal and written IBEDC confirmation.",
       "The published MAP refund checker does not require a bank PIN, OTP or separate agent processing fee. Use only the official IBEDC portal and customer care; avoid sharing payment credentials.",
-      "The regular IBEDC meter application is for acquiring a meter; the MAP refund portal is for checking refunds on eligible existing meter purchases. These are different services."
+      "The regular IBEDC meter application is for acquiring a meter; the MAP refund portal is for checking refunds on eligible existing meter purchases. These are different services.",
+      "A MAP refund is applied as electricity credit, not an instant cash deposit. NERC says eligible upfront MAP meter payments are reimbursed through energy credits over an approved period; the consumer should not assume that a missing token proves the refund is complete or cancelled."
     ],
     "sources": [
       {
@@ -5444,6 +5460,18 @@
         "agency": "Ibadan Electricity Distribution Company Plc",
         "url": "https://www.ibedc.com/faqs",
         "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "NERC — official MAP refunds, meter installation and customer rights FAQ",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/faq/metering/",
+        "lastChecked": "2026-10-20"
+      },
+      {
+        "label": "NERC — formal DisCo complaint, Consumer Forum and escalation procedure",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/need-help/services/how-to-file-a-complaint/",
+        "lastChecked": "2026-10-20"
       }
     ],
     "related": [
