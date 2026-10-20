@@ -61,3 +61,9 @@ test("topic pages show helpful options rather than a repeated keyword-count dash
   const styles = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");
   assert.match(styles, /\.answer-first-single\s*\{[^}]*grid-template-columns:\s*minmax\(0, 1fr\)/s);
 });
+
+test("topic hub primary link uses the authored task label without duplicated action verbs", () => {
+  const page = readFileSync(new URL("../app/topics/[slug]/page.tsx", import.meta.url), "utf8");
+  assert.match(page, /label: taskLinks\[0\]\.label/);
+  assert.doesNotMatch(page, /label: ["']Open ["'] \+ taskLinks\[0\]\.label/);
+});
