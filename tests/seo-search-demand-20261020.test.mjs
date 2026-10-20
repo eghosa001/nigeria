@@ -9,7 +9,7 @@ const collector = readFileSync("tools/google-autocomplete-research.mjs", "utf8")
 test("evergreen service metadata does not turn verification dates into edition years or promise universal fees", () => {
   const fn = service.split("function getServiceSeoTitle(")[1].split("export async function generateMetadata")[0];
   assert.doesNotMatch(fn, /lastVerified|Fees & Steps|\+ year/);
-  assert.match(fn, /Official Portal & Next Steps/);
+  assert.match(fn, /What to Check & Next Steps/);
   assert.match(fn, /Documents & Official Steps/);
   assert.match(fn, /Booking & Requirements/);
   assert.match(fn, /Eligibility & Official Process/);
