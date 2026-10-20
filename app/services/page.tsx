@@ -29,6 +29,9 @@ const popularServiceLinks = [
   { label: "Spotify Premium Nigeria plan prices", href: "/services/spotify-premium-nigeria" },
   { label: "Pension and RSA processes", href: "/topics/pension-services-nigeria" },
   { label: "Find official Nigerian portals", href: "/official-portals" },
+  { label: "Track a Nigerian passport application", href: "/services/passport-application-tracking" },
+  { label: "Nigeria immigration landing or exit card", href: "/services/nigeria-landing-exit-card" },
+  { label: "Apply for a Nigeria e-Visa", href: "/services/nigeria-evisa-application" },
 ];
 
 const featuredServiceCategories = ["Identity", "Education", "Immigration", "Business", "Foreign visas", "State services"];
