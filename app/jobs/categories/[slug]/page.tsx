@@ -8,6 +8,7 @@ import { JobCollection } from "@/components/job-collection";
 import { JsonLd } from "@/components/json-ld";
 import { getJobTopic, getJobTopicOpportunities, jobTopics } from "@/lib/job-topics";
 import { getSiteUrl } from "@/lib/site";
+import { pageSocialMetadata } from "@/lib/seo-social";
 
 export function generateStaticParams() {
   return jobTopics.map((topic) => ({ slug: topic.slug }));
@@ -17,10 +18,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const topic = getJobTopic(slug);
   if (!topic) return {};
+  const seoTitle = topic.title + ": Verified Career Routes";
+  const canonical = "/jobs/categories/" + topic.slug;
   return {
-    title: topic.title + ": Verified Career Routes",
+    title: seoTitle,
     description: topic.description,
-    alternates: { canonical: "/jobs/categories/" + topic.slug },
+    alternates: { canonical },
+    ...pageSocialMetadata(seoTitle, topic.description, canonical),
   };
 }
 
