@@ -6,6 +6,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { entertainmentTitles } from "@/lib/entertainment";
 import { entertainmentPeople, getEntertainmentPerson, getPersonEditorialProfile, hasIndexablePersonEditorial } from "@/lib/entertainment-extras";
 import { getSiteUrl } from "@/lib/site";
+import { pageSocialMetadata } from "@/lib/seo-social";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -18,10 +19,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const person = getEntertainmentPerson(slug);
   if (!person) return {};
+  const seoTitle = person.name + " Movies, Cast Credits & Nigerian Film Profile";
+  const seoDescription = person.summary + " See Nigerian movies featuring " + person.name + " and linked film credits.";
+  const canonical = "/entertainment/people/" + person.slug;
   return {
-    title: person.name + " Movies, Cast Credits & Nigerian Film Profile",
-    description: person.summary + " See Nigerian movies featuring " + person.name + " and linked film credits.",
-    alternates: { canonical: "/entertainment/people/" + person.slug },
+    title: seoTitle,
+    description: seoDescription,
+    alternates: { canonical },
+    ...pageSocialMetadata(seoTitle, seoDescription, canonical, "article"),
     // A title's film reference proves neither this person's biography nor
     // the identity of the performer credited. Research-backed authored
     // biographies only; unreviewed person cards remain internal discovery.
