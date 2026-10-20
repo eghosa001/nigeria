@@ -55,34 +55,10 @@ jobs:
           git fetch origin "$base_sha" --depth=1
           changed="$(git diff --name-only "$base_sha" HEAD)"
 
-          # Pure job-topic copy edits must be checked against the topic and
-          # linked content, not blocked by unrelated employers whose review
-          # dates have reached the scheduled freshness queue.
+          # Topic-copy-only PRs need their source-backed topic check, not the
+          # scheduled site-wide Job vacancy freshness queue.
           if echo "$changed" | grep -qx 'lib/job-topics.ts' && \
-             ! echo "$changed" | grep -Eq '^(lib/(jobs|job-runtime|job-query|job-facets|job-employers|career-guides|job-scale-wave)[.]ts$|app/jobs/.*|app/api/jobs/.*|scripts/check-job.*|data/job-retired-redirects[.]json|next[.]config[.]ts|package[.]json)"$(printf '%s\n' "$changed" | grep -E '^(lib/(jobs|job-runtime|job-query|job-topics|job-facets|job-employers|career-guides)\.ts$|app/api/jobs/|scripts/check-job-links\.mjs$|data/job-retired-redirects\.json$|next\.config\.ts$)' || true)"
-          url_diff="$(git diff "$base_sha" HEAD -- lib/job-scale-wave.ts app/jobs | grep -E '^[+-].*(https?://|officialUrl|sources:|url:|href=["'\'' ]https?://)' || true)"
-
-          if [ -n "$other_job_files" ] || [ -n "$url_diff" ]; then
-            echo "links=true" >> "$GITHUB_OUTPUT"
-            echo "Jobs link-bearing changes detected."
-          else
-            echo "links=false" >> "$GITHUB_OUTPUT"
-            echo "Jobs content changed without URL changes; skipping network-wide link audit."
-          fi
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - run: npm install --no-audit --no-fund
-      - name: Validate Jobs content and lifecycle
-        if: steps.scope.outputs.mode == 'full'
-        run: npm run check:jobs && npx tsx --test tests/jobs-deadline-trends.test.ts tests/job-moniepoint-first-published-20261017.test.ts
-      - name: Validate changed public-service topic against source-checked intent
-        if: steps.scope.outputs.mode == 'topics'
-        run: node --test tests/gsc-answer-public-20261020.test.mjs
-      - name: Audit Jobs official/source links
-        if: steps.scope.outputs.links == 'true'
-        run: npm run check:job-links
-; then
+             ! echo "$changed" | grep -Eq '^(lib/(jobs|job-runtime|job-query|job-facets|job-employers|career-guides|job-scale-wave)[.]ts$|app/jobs/.*|app/api/jobs/.*|scripts/check-job.*|data/job-retired-redirects[.]json|next[.]config[.]ts|package[.]json)$'; then
             echo "mode=topics" >> "$GITHUB_OUTPUT"
           else
             echo "mode=full" >> "$GITHUB_OUTPUT"
@@ -103,7 +79,11 @@ jobs:
           node-version: 22
       - run: npm install --no-audit --no-fund
       - name: Validate Jobs content and lifecycle
+        if: steps.scope.outputs.mode == 'full'
         run: npm run check:jobs && npx tsx --test tests/jobs-deadline-trends.test.ts tests/job-moniepoint-first-published-20261017.test.ts
+      - name: Validate changed public-service topic against cited search intent
+        if: steps.scope.outputs.mode == 'topics'
+        run: node --test tests/gsc-answer-public-20261020.test.mjs
       - name: Audit Jobs official/source links
         if: steps.scope.outputs.links == 'true'
         run: npm run check:job-links
