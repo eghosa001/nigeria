@@ -22,8 +22,8 @@ test("four current trends are source-specific, distinct canonicals, not new page
   assert.equal(current.length, 4);
   assert.equal(new Set(current.map(t => t.pillar)).size, 4);
   assert.equal(new Set(current.map(t => t.href)).size, 4);
-  assert.ok(current.some(t => t.href === "/services/neco-2026-ssce-external-registration"));
-  assert.ok(current.some(t => t.href === "/explore/abuja-international-film-festival-2026"));
+  assert.ok(current.some(t => t.href === "/services/jamb-caps"));
+  assert.ok(current.some(t => t.href === "/explore/design-week-lagos-2026"));
   assert.ok(current.some(t => t.href === "/entertainment/movies/tele-x-zikora-2026"));
   assert.ok(current.some(t => t.href === "/jobs/nigerian-army-92rri-2026"));
   assert.equal(getCurrentHomeSocialTrends("2026-10-27").some(t => t.href === "/jobs/nigerian-army-92rri-2026"), false);
