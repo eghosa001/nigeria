@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   alternates: { canonical: "/about" },
   title: "About MyNigeriaGuide",
   description: "Learn how MyNigeriaGuide helps readers explore Nigerian movies, services, travel and jobs, and how to report corrections.",
-};
+});
 
 export default function AboutPage() {
   return (
