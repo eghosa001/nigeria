@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { cinemaGuides } from "@/lib/entertainment-extras";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Cinemas in Nigeria",
   description: "Official booking, showtime and ticket-price routes for major Nigerian cinema chains including Filmhouse, Silverbird and Viva.",
   alternates: { canonical: "/entertainment/cinemas" },
-};
+});
 
 export default function CinemasPage() {
   return (
