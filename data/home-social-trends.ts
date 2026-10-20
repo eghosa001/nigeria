@@ -15,22 +15,6 @@ export type HomeSocialTrend = {
  * - Every item must point to a real MyNigeriaGuide page that already meets the site's source, freshness, SEO and quality standards.
  */
 export const homeSocialTrends: HomeSocialTrend[] = [
-  // 19 October 2026: newly verified time-sensitive reader questions.
-  // Promote only existing detailed canonicals. The homepage shows one per pillar.
-  {
-    pillar: "Services",
-    title: "NECO GCE 2026: 26 October deadline, ₦30,000 fee, 16 subjects and fingerprints",
-    href: "/services/neco-2026-ssce-external-registration",
-    checkedAt: "2026-10-19",
-    expiresAt: "2026-10-26",
-  },
-  {
-    pillar: "Tour Nigeria",
-    title: "Abuja Film Festival opens 20 October: see the daily programme and date conflict",
-    href: "/explore/abuja-international-film-festival-2026",
-    checkedAt: "2026-10-19",
-    expiresAt: "2026-10-24",
-  },
   // 19 Oct: original issuer evidence, corroborated with independent coverage.
   // Each story strengthens one existing canonical guide; no new thin pages.
   {
