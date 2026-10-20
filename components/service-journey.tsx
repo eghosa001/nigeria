@@ -11,7 +11,7 @@ export function ServiceJourney({ service }: { service: Service }) {
   const officialLinks = getOfficialServiceLinks(service);
   // Generic guidance often reused the first numbered instruction verbatim.
   // Suppress only that exact repeated sentence; keep independently reviewed context.
-  const normalize = (value: string) => value.trim().replace(/\\s+/g, " ");
+  const normalize = (value: string) => value.trim().replace(/\s+/g, " ");
   const repeatsFirstStep = normalize(guidance.route.startDetail) === normalize(service.steps[0] ?? "");
 
   return (
