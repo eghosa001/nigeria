@@ -134,8 +134,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   // Keep its search snippet useful without implying that entry is open.
   const description = exploreDescriptionOverrides[guide.slug] ?? (guide.slug === "kainji-dam-guide"
     ? "Kainji Dam is near New Bussa, Niger State. See its River Niger location, 1968 hydropower history, 760 MW installed capacity and visitor-access advice."
-    : guide.kind === "city"
-      ? truncateSeo("Discover " + cityPlaces.length + " places to visit in " + guide.shortTitle + ", including " + cityPlaces.slice(0, 3).map((place) => place.name).join(", ") + ". Maps, local tips and access guidance.", 155)
+    : guide.kind === "city" && cityPlaces.length > 0
+      ? truncateSeo("Find places to visit in " + guide.shortTitle + ", including " + cityPlaces.slice(0, 3).map((place) => place.name).join(", ") + ". See maps and practical access guidance.", 155)
       : truncateSeo(guide.summary + (guide.planning[0]?.detail ? " " + guide.planning[0].detail : ""), 155));
 
   return {
