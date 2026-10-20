@@ -22,6 +22,20 @@ export type DetailedServiceGuidance = {
 };
 
 const explicit: Record<string, DetailedServiceGuidance> = {
+  "passport-application-tracking": {
+    route: {
+      startTitle: "Check that you have both NIS tracking numbers",
+      startDetail: "The passport status form requires the Application Number and Reference Number from the same NIS application. Neither an unrelated payment reference nor a receipt confirmation substitutes for that number pair. The official tracker is a status check, not a new application or a passport collection booking.",
+      physicalTitle: "No office visit is needed solely to use the online tracker",
+      physicalDetail: "The status checker asks for the two application identifiers online. Any separate NIS biometrics, appointment or collection instruction belongs to the actual passport application, not to this status lookup.",
+      fallbackTitle: "Payment confirmed but the tracker shows no record?",
+      fallbackDetail: "Compare both identifiers against your original NIS acknowledgement. Use the domestic NIS portal's separate Payment Status/Print Receipt route only to investigate the receipt; it does not confirm booklet production or collection. For unresolved status questions, use the official NIS contact route.",
+    },
+    aftercare: [
+      { title: "Keep the original NIS acknowledgement", detail: "Preserve the Application Number and matching Reference Number privately. Avoid sending both to an intermediary or posting a tracking result with personal identifiers visible." },
+      { title: "Separate payment, processing and collection", detail: "A payment receipt is not a ready-for-collection message. Use the NIS tracking result and any genuine appointment or collection instruction for the next action." },
+    ],
+  },
   "jamb-caps": {
     route: {
       startTitle: "Check the candidate's admission inside JAMB e-Facility",
