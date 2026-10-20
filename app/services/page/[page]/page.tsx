@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ServiceCard } from "@/components/service-card";
 import { getServiceDirectoryPageCount, queryServiceDirectory } from "@/lib/service-query";
+import { pageSocialMetadata } from "@/lib/seo-social";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -21,10 +22,14 @@ export async function generateMetadata({ params }: { params: Promise<{ page: str
     return { robots: { index: false, follow: true } };
   }
 
+  const seoTitle = "Nigeria Service Guides — Page " + page;
+  const seoDescription = "Browse page " + page + " of verified Nigerian service guides with requirements, fees, steps and official sources.";
+  const canonical = "/services/page/" + page;
   return {
-    title: "Nigeria Service Guides — Page " + page,
-    description: "Browse page " + page + " of verified Nigerian service guides with requirements, fees, steps and official sources.",
-    alternates: { canonical: "/services/page/" + page },
+    title: seoTitle,
+    description: seoDescription,
+    alternates: { canonical },
+    ...pageSocialMetadata(seoTitle, seoDescription, canonical),
   };
 }
 

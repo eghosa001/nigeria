@@ -9,6 +9,7 @@ import {
   indexableYouTubeChannelHubs,
 } from "@/lib/youtube-channel-hubs";
 import { getSiteUrl } from "@/lib/site";
+import { pageSocialMetadata } from "@/lib/seo-social";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -22,12 +23,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const hub = getYouTubeChannelHub(slug);
   if (!hub) return {};
 
+  const seoTitle = hub.channel.name + " Movies on YouTube — Full Nigerian Movies";
+  const seoDescription = "Browse " + hub.movieCount + " full Nigerian movie guides from " + hub.channel.name +
+    ", with cast, runtime, release year and verified YouTube source links.";
+  const canonical = "/entertainment/youtube/channels/" + hub.channel.slug;
   return {
-    title: hub.channel.name + " Movies on YouTube — Full Nigerian Movies",
-    description:
-      "Browse " + hub.movieCount + " full Nigerian movie guides from " + hub.channel.name +
-      ", with cast, runtime, release year and verified YouTube source links.",
-    alternates: { canonical: "/entertainment/youtube/channels/" + hub.channel.slug },
+    title: seoTitle,
+    description: seoDescription,
+    alternates: { canonical },
+    ...pageSocialMetadata(seoTitle, seoDescription, canonical),
     robots: isIndexableYouTubeChannelHub(hub) ? undefined : { index: false, follow: true },
   };
 }

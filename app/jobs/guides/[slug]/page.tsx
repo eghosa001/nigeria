@@ -8,6 +8,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { careerGuides, getCareerGuide } from "@/lib/career-guides";
 import { todayIsoNigeria } from "@/lib/job-runtime";
+import { pageSocialMetadata } from "@/lib/seo-social";
 
 export const dynamic = "force-dynamic";
 import { getSiteUrl } from "@/lib/site";
@@ -20,10 +21,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const guide = getCareerGuide(slug);
   if (!guide) return {};
+  const seoTitle = compactSearchText(guide.metaTitle, 60);
+  const seoDescription = compactSearchText(guide.description, 155);
+  const canonical = "/jobs/guides/" + guide.slug;
   return {
-    title: { absolute: compactSearchText(guide.metaTitle, 60) },
-    description: compactSearchText(guide.description, 155),
-    alternates: { canonical: "/jobs/guides/" + guide.slug },
+    title: { absolute: seoTitle },
+    description: seoDescription,
+    alternates: { canonical },
+    ...pageSocialMetadata(seoTitle, seoDescription, canonical, "article"),
   };
 }
 

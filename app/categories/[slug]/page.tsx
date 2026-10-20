@@ -12,6 +12,7 @@ import { categorySlug } from "@/lib/category";
 import { categories, publicServices } from "@/lib/data";
 import { growthHubs } from "@/lib/growth-hubs";
 import { getSiteUrl } from "@/lib/site";
+import { pageSocialMetadata } from "@/lib/seo-social";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -29,10 +30,14 @@ export async function generateMetadata({
   const category = categories.find((item) => categorySlug(item.name) === slug);
   if (!category) return {};
 
+  const seoTitle = category.name + " services in Nigeria";
+  const seoDescription = category.description + " Browse source-linked fees, requirements, official portals and last-checked guidance.";
+  const canonical = "/categories/" + slug;
   return {
-    title: category.name + " services in Nigeria",
-    description: category.description + " Browse source-linked fees, requirements, official portals and last-checked guidance.",
-    alternates: { canonical: "/categories/" + slug },
+    title: seoTitle,
+    description: seoDescription,
+    alternates: { canonical },
+    ...pageSocialMetadata(seoTitle, seoDescription, canonical),
   };
 }
 

@@ -8,6 +8,7 @@ import { ServiceTaskComparison } from "@/components/service-task-comparison";
 import { agencies, getAgency, getServicesByAgency } from "@/lib/data";
 import { getSiteUrl } from "@/lib/site";
 import { shouldIndexAgencyHub } from "@/lib/agency-indexing";
+import { pageSocialMetadata } from "@/lib/seo-social";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -21,10 +22,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const agency = getAgency(slug);
   if (!agency) return {};
   const guideCount = getServicesByAgency(slug).length;
+  const seoTitle = agency.slug === "npc" ? "NPC Birth Registration & Attestation Services 2026" : agency.shortName + " services";
+  const seoDescription = agency.slug === "npc" ? "NPC Nigeria services for birth registration, birth attestation and status checks, with verified requirements, official links and current guidance." : agency.description;
+  const canonical = "/agencies/" + agency.slug;
   return {
-    title: agency.slug === "npc" ? "NPC Birth Registration & Attestation Services 2026" : agency.shortName + " services",
-    description: agency.slug === "npc" ? "NPC Nigeria services for birth registration, birth attestation and status checks, with verified requirements, official links and current guidance." : agency.description,
-    alternates: { canonical: "/agencies/" + agency.slug },
+    title: seoTitle,
+    description: seoDescription,
+    alternates: { canonical },
+    ...pageSocialMetadata(seoTitle, seoDescription, canonical),
     // Small agency hubs are navigation aids, not standalone editorial articles.
     robots: shouldIndexAgencyHub(guideCount) ? undefined : { index: false, follow: true },
   };

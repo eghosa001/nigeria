@@ -1,5 +1,6 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { setTimeout as sleep } from "node:timers/promises";
+import { mapSeoInventory, recordsToCsv } from "./seo-inventory-utils.mjs";
 
 const base = process.env.SEO_BASE_URL || "https://mynigeriaguide.com";
 const host = new URL(base).host;
@@ -28,16 +29,29 @@ function meta(head, name) {
   const tag = tags(head, "meta").find((t) => attribute(t, "name")?.toLowerCase() === name);
   return tag ? attribute(tag, "content") : null;
 }
+function propertyMeta(head, name) {
+  const tag = tags(head, "meta").find((t) => attribute(t, "property")?.toLowerCase() === name);
+  return tag ? attribute(tag, "content") : null;
+}
 function plain(text) {
   return text.replace(/&(?:nbsp|amp|lt|gt|quot|#39);/gi, " ").replace(/\s+/g, " ").trim();
 }
 function schemas(html) {
   const matches = [...html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
   let valid = 0, invalid = 0;
-  for (const match of matches) {
-    try { JSON.parse(match[1]); valid++; } catch { invalid++; }
+  const types = new Set();
+  function collect(node) {
+    if (!node || typeof node !== "object") return;
+    if (Array.isArray(node)) return node.forEach(collect);
+    const value = node["@type"];
+    if (Array.isArray(value)) value.forEach((type) => types.add(String(type)));
+    else if (typeof value === "string") types.add(value);
+    if (node["@graph"]) collect(node["@graph"]);
   }
-  return { valid, invalid };
+  for (const match of matches) {
+    try { collect(JSON.parse(match[1])); valid++; } catch { invalid++; }
+  }
+  return { valid, invalid, types: [...types].sort() };
 }
 function auditHtml(html, url, status, ms, finalUrl) {
   const issues = [];
@@ -45,6 +59,14 @@ function auditHtml(html, url, status, ms, finalUrl) {
   const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1] || "";
   const title = plain((head.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] || "").replace(/<[^>]*>/g, " "));
   const description = meta(head, "description") || "";
+  const ogTitle = propertyMeta(head, "og:title") || "";
+  const ogDescription = propertyMeta(head, "og:description") || "";
+  const ogImage = propertyMeta(head, "og:image") || "";
+  const ogUrl = propertyMeta(head, "og:url") || "";
+  const twitterTitle = meta(head, "twitter:title") || "";
+  const twitterDescription = meta(head, "twitter:description") || "";
+  const twitterImage = meta(head, "twitter:image") || "";
+  const h1 = plain((html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || "").replace(/<[^>]*>/g, " "));
   const canonical = attribute(tags(head, "link").find((t) => /\bcanonical\b/i.test(attribute(t, "rel") || "")) || "", "href");
   const canonicalUrl = canonical ? cleanUrl(canonical) : null;
   const robots = (meta(head, "robots") || "").toLowerCase();
@@ -69,6 +91,16 @@ function auditHtml(html, url, status, ms, finalUrl) {
   else if (!canonicalUrl) issue("invalid-canonical", "high", canonical);
   else if (canonicalUrl !== cleanUrl(url)) issue("canonical-differs", "high", canonicalUrl);
   if (noindex) issue("sitemap-noindex", "critical", robots);
+  // A root-level share preview is not accurate for an unrelated detail page.
+  if (cleanUrl(url) !== cleanUrl(base) && ogTitle === "MyNigeriaGuide") {
+    issue("generic-og-title", "medium", "Root brand title inherited by detail page");
+  }
+  if (cleanUrl(url) !== cleanUrl(base) && twitterTitle === "MyNigeriaGuide") {
+    issue("generic-twitter-title", "medium", "Root brand title inherited by detail page");
+  }
+  if (ogUrl && cleanUrl(ogUrl) && cleanUrl(ogUrl) !== cleanUrl(url)) {
+    issue("og-url-differs", "medium", ogUrl);
+  }
   if (h1Count !== 1) issue("h1-count", "medium", String(h1Count));
   if (schema.invalid) issue("invalid-jsonld", "high", String(schema.invalid));
   if (imageMissingAlt) issue("image-no-alt-attribute", "medium", String(imageMissingAlt));
@@ -77,7 +109,8 @@ function auditHtml(html, url, status, ms, finalUrl) {
   if (ms > 8000) issue("response-over-8s", "high", String(ms));
   else if (ms > 3000) issue("response-over-3s", "medium", String(ms));
   return { url, status, finalUrl, durationMs: ms, htmlBytes: Buffer.byteLength(html),
-    title, description, canonical: canonicalUrl, indexable: !noindex, robots,
+    title, description, h1, ogTitle, ogDescription, ogImage, ogUrl, twitterTitle, twitterDescription, twitterImage,
+    canonical: canonicalUrl, indexable: !noindex, robots,
     h1Count, wordCount, imageCount: img.length, imageMissingAlt, imageEmptyAlt,
     imageMissingDimensions, schema, internalLinks, issues };
 }
@@ -177,6 +210,10 @@ async function main() {
     sitemapErrors: errors
   };
   await writeFile(output + "/all-pages.json", JSON.stringify({ summary, pages: records }, null, 2));
+  // Every sitemap URL gets an audit row. No invented keywords or unattended
+  // mass rewrite: the proposed value remains blank for pages needing review.
+  const inventory = mapSeoInventory(records, summary, summary.scannedAt);
+  await writeFile(output + "/metadata-inventory.csv", recordsToCsv(inventory));
   const headline = [
     "# Full-sitemap SEO/HTTP crawl", "Generated: " + summary.scannedAt,
     "Scope: " + summary.audited + "/" + summary.discovered + " public sitemap URLs.",
@@ -192,7 +229,7 @@ async function main() {
     "## First 150 high/critical issues",
     ...problems.filter((x) => x.severity === "high" || x.severity === "critical")
       .slice(0, 150).map((x) => "- **" + x.code + "** " + x.url + " — " + x.detail),
-    "\nComplete per-URL findings (including clean pages) are in all-pages.json."
+    "\nComplete per-URL findings are in all-pages.json; metadata-inventory.csv includes one row per crawled URL. Editorial reviews are not automatically published."
   ].join("\n");
   await writeFile(output + "/summary.md", headline);
   if (process.env.GITHUB_STEP_SUMMARY) await writeFile(process.env.GITHUB_STEP_SUMMARY, headline + "\n", { flag: "a" });

@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { getFeaturedCast } from "@/lib/entertainment";
 import { getEntertainmentCatalogPage, getEntertainmentCatalogPageCount } from "@/lib/entertainment-pagination";
+import { pageSocialMetadata } from "@/lib/seo-social";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -20,10 +21,14 @@ export async function generateMetadata({ params }: { params: Promise<{ page: str
   const catalog = getEntertainmentCatalogPage(page);
   if (!catalog || page === 1) return { robots: { index: false, follow: true } };
 
+  const seoTitle = "Nigerian Movies — Page " + page;
+  const seoDescription = "Browse page " + page + " of Nigerian movies with cast details and viewing links.";
+  const canonical = "/entertainment/movies/page/" + page;
   return {
-    title: "Nigerian Movies — Page " + page,
-    description: "Browse page " + page + " of Nigerian movies with cast details and viewing links.",
-    alternates: { canonical: "/entertainment/movies/page/" + page },
+    title: seoTitle,
+    description: seoDescription,
+    alternates: { canonical },
+    ...pageSocialMetadata(seoTitle, seoDescription, canonical),
   };
 }
 
