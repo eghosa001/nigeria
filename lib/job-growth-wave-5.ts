@@ -8,8 +8,8 @@ export const jobGrowthWave5: CareerOpportunity[] = [
     kind: "programme",
     topicSlugs: ["ngo-development"],
     sector: "International",
-    status: "open",
-    statusLabel: "Applications are posted on an ongoing basis",
+    status: "unverified",
+    statusLabel: "Programme active; Nigeria or remote application route not confirmed",
     summary: "The Mastercard Foundation Associates Program connects young people across Africa with 12-month paid work placements, mentorship, employability and entrepreneurship development. The Foundation says roles are posted on an ongoing basis and applicants should apply only to roles in their country of residence or remote roles.",
     location: "Africa / Nigeria-eligible and remote roles as posted",
     employmentType: "12-month paid internship placement",
@@ -35,16 +35,16 @@ export const jobGrowthWave5: CareerOpportunity[] = [
     ],
     officialUrl: "https://mastercardfdn.org/en/mastercard-foundation-associates-program-for-associates",
     officialUrlLabel: "Open the official Associates Program application page",
-    verifiedAt: "2026-10-06",
+    verifiedAt: "2026-10-21",
     nextMilestone: "New Associate roles are posted on an ongoing basis.",
     feeNote: "No application fee is stated on the programme page. Use only official Foundation-linked application routes.",
     sourceNotes: [
       "The Mastercard Foundation describes the programme as active and ongoing, with 12-month paid placements, mentorship and career-transition support.",
-      "The current Associates page says applications are open to young people across Africa and roles are posted on an ongoing basis, subject to country or remote-role eligibility."
+      "The Foundation confirms the programme continues and roles are posted on an ongoing basis. Its public page does not itself verify an active Nigeria-specific or remote application route; check the linked partner listings before applying."
     ],
     sources: [
-      { label: "Mastercard Foundation Associates Program for Associates", url: "https://mastercardfdn.org/en/mastercard-foundation-associates-program-for-associates", lastChecked: "2026-10-06" },
-      { label: "Mastercard Foundation Associates Program overview", url: "https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-associates-program/", lastChecked: "2026-10-06" }
+      { label: "Mastercard Foundation Associates Program for Associates", url: "https://mastercardfdn.org/en/mastercard-foundation-associates-program-for-associates", lastChecked: "2026-10-21" },
+      { label: "Mastercard Foundation Associates Program overview", url: "https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-associates-program/", lastChecked: "2026-10-21" }
     ]
   },
   {
