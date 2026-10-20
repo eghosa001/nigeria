@@ -238,7 +238,7 @@
     "slug": "cac-llp-change-partners",
     "title": "How to change LLP partners or partner details with CAC",
     "shortTitle": "Change CAC LLP partners",
-    "summary": "Notify CAC when an LLP adds/removes a partner or changes partner particulars, including identity evidence and the 30-day filing window stated in CAC's checklist.",
+    "summary": "CAC uses separate forms for three LLP partner changes: CAC/LLP 04 for an existing partner's particulars, CAC/LLP 05 for admission, and CAC/LLP 06 for cessation. Its checklist calls for notice within 30 days of the change; do not confuse the forms.",
     "category": "Business",
     "agencySlug": "cac",
     "feeLabel": "See current CAC portal fee",
@@ -247,35 +247,43 @@
     "status": "verified",
     "officialPortal": "https://icrp.cac.gov.ng/",
     "requirements": [
-      "Completed online LLP partner-change filing",
-      "Recognised photo identification for the affected individual partner",
-      "NIMC identity card or residence permit where CAC requires it for a foreigner resident in Nigeria"
+      "Identify whether an existing LLP partner's details are changing, a new individual or corporate partner is joining, or a current partner is ceasing.",
+      "Use the matching CAC/LLP 04, CAC/LLP 05 or CAC/LLP 06 form, with the LLP registration details and effective date.",
+      "Provide the recognised photo ID and any NIMC identity or residence-permit evidence required for the affected individual; CAC bars people under 18 from being designated partners.",
+      "Arrange authentication by a designated partner of the LLP, as shown on the applicable form."
     ],
     "steps": [
-      "Open the LLP record in CAC's CRP and choose the filing for change in partners or partner particulars.",
-      "Enter the effective change and the full details of the incoming, outgoing or updated partner.",
-      "Upload the required recognised photo identification and any residence/identity evidence applicable to the affected partner.",
-      "Review the filing for consistency with the LLP's records, pay the portal-generated fee and submit it.",
-      "Monitor the CRP dashboard for approval/query and retain the updated LLP record."
+      "Open the registered LLP in CAC's official iCRP and identify the exact partner transaction before selecting a post-registration form.",
+      "For correcting an existing partner's name, contact or address particulars, choose CAC/LLP 04. For admitting a new partner choose CAC/LLP 05; for cessation choose CAC/LLP 06.",
+      "Complete the relevant partner or corporate-body details and effective date; supply a recognised photo ID or the additional NIMC/residence evidence where applicable.",
+      "Have a designated partner authenticate the notice, review the portal-generated fee and submit through the official filing route.",
+      "CAC's operations checklist says to notify the Commission within 30 days of the partner change. Check the status/queries in iCRP and retain the approved record."
     ],
     "notes": [
-      "CAC states a person under 18 cannot be a designated partner and gives a 30-day filing window for this notice."
+      "Three distinct forms: CAC/LLP 04 changes existing-partner particulars; CAC/LLP 05 admits a partner; CAC/LLP 06 records cessation. CAC's checklist groups these under 'Change in partners or their particulars', but that does not make the forms interchangeable.",
+      "CAC/LLP 06 notes that, absent an agreement on cessation, a departing partner must give other partners at least 30 days' written notice of intended resignation. That internal notice is distinct from CAC's 30-day filing window."
     ],
     "sources": [
       {
         "label": "CAC Operations Checklists — LLP partner changes",
         "agency": "Corporate Affairs Commission",
         "url": "https://news.cac.gov.ng/wp-content/uploads/2022/05/Corporate-Affairs-Commission-Operations-Checklists-2022.pdf",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-20"
       },
       {
         "label": "CAC official iCRP",
         "agency": "Corporate Affairs Commission",
         "url": "https://icrp.cac.gov.ng/",
         "lastChecked": "2026-10-06"
+      },
+      {
+        "label": "CAC Companies Regulations 2021 — LLP forms 04, 05 and 06",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://news.cac.gov.ng/wp-content/uploads/2021/01/REGULATIONS-2021.pdf",
+        "lastChecked": "2026-10-20"
       }
     ],
-    "lastVerified": "2026-10-06",
+    "lastVerified": "2026-10-20",
     "searchTerms": [
       "change LLP partner CAC",
       "add partner LLP Nigeria",
