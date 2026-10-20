@@ -2,8 +2,8 @@ import type { ExploreGuide } from "@/lib/explore";
 
 export const exploreGrowthWave8: ExploreGuide[] = [
 {
-slug:"ondo-nature-heritage",title:"Ondo State Nature & Heritage Guide",shortTitle:"Ondo nature & heritage",kind:"itinerary",region:"Ondo State",
-summary:"Explore Idanre Hills, Owo heritage and Akure nature assets with realistic road planning.",
+slug:"ondo-nature-heritage",title:"Idanre–Owo Heritage Road Trip from Akure",shortTitle:"Idanre–Owo road trip",kind:"itinerary",region:"Ondo State",
+summary:"Plan separate visits to Idanre Hills and Owo heritage sites using Akure as a base, with realistic road time and checks for site access.",
 intro:["Ondo State combines hill landscapes, royal heritage and forest attractions across separate corridors.","Use Akure as a base and treat Idanre and Owo as distinct day trips rather than one rushed loop."],
 bestFor:["Hiking","Royal heritage","Museums","Road trips"],
 highlights:[{name:"Idanre Hills",detail:"Flagship hill-and-heritage landscape with old settlement remains and panoramic views."},{name:"Owo Museum",detail:"Royal and archaeological heritage from the old Owo Kingdom."},{name:"Akure Forest Reserve",detail:"Forest and birding stop closer to the state capital."},{name:"Igbokoda Waterfront",detail:"A riverine contrast to Ondo’s inland hill and royal-heritage attractions."}],
