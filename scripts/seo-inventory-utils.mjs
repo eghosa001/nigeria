@@ -4,7 +4,7 @@ export const INVENTORY_COLUMNS = [
   "url", "pillar", "page_type", "indexing_eligibility", "http_status",
   "previous_title", "new_title", "previous_description", "new_description",
   "primary_keyword", "secondary_keyword_cluster", "search_intent",
-  "canonical", "robots", "h1", "og_title", "og_description", "og_image",
+  "canonical", "robots", "h1", "og_title", "og_description", "og_image", "og_url",
   "twitter_title", "twitter_description", "twitter_image", "schema_types",
   "source_evidence", "reason_for_modification", "validation_status", "deployment_status"
 ];
@@ -33,7 +33,8 @@ export function mapSeoInventory(pages, summary, crawledAt) {
     const reasons = (page.issues || [])
       .filter((issue) => ["http-status", "missing-title-in-head", "missing-description",
         "missing-canonical", "invalid-canonical", "canonical-differs", "sitemap-noindex",
-        "invalid-jsonld", "missing-head"].includes(issue.code))
+        "invalid-jsonld", "missing-head", "generic-og-title", "generic-twitter-title",
+        "og-url-differs"].includes(issue.code))
       .map((issue) => issue.code);
     if (titleDuplicates.has(page.url)) reasons.push("duplicate-title");
     if (descriptionDuplicates.has(page.url)) reasons.push("duplicate-description");
@@ -60,6 +61,7 @@ export function mapSeoInventory(pages, summary, crawledAt) {
       og_title: page.ogTitle || "",
       og_description: page.ogDescription || "",
       og_image: page.ogImage || "",
+      og_url: page.ogUrl || "",
       twitter_title: page.twitterTitle || "",
       twitter_description: page.twitterDescription || "",
       twitter_image: page.twitterImage || "",
