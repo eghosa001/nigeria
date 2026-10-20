@@ -57,6 +57,13 @@ const nextConfig: NextConfig = {
         permanent: true,
       })),
       {
+        // Legacy spelling published the same Hotels.ng booking workflow twice.
+        // Preserve old inbound links, but index a single detailed guide.
+        source: "/services/hotelsng-book-hotel",
+        destination: "/services/hotels-ng-book-hotel",
+        permanent: true,
+      },
+      {
         source: "/services/hotelsng-cancel-refund",
         destination: "/services/hotels-ng-cancel-refund-booking",
         permanent: true,
