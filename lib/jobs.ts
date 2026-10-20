@@ -1933,7 +1933,7 @@ const rawJobOpportunities: CareerOpportunity[] = [
     verifiedAt: "2026-10-05",
     nextMilestone: "The official jobs page showed live roles when checked, including relationship-management and growth positions. Confirm the current list before applying.",
     feeNote: "Verify applications from Sterling Bank's official careers domain; MyNigeriaGuide does not collect applications or fees.",
-    sourceNotes: ["Sterling Bank maintains an official careers hub and current-jobs page.", "The current-jobs page showed active roles on 5 October 2026."],
+    sourceNotes: ["Sterling Bank maintains an official careers hub and current-jobs page.", "The current-jobs page showed active roles on 5 October 2026.", "The general careers hub and individual job postings serve different purposes: open roles, closing dates and qualification rules must be read on the exact current advert, not inferred from the homepage."],
     sources: [
       { label: "Sterling Bank Careers", url: "https://sterling.ng/careers/", lastChecked: "2026-10-05" },
       { label: "Sterling Bank Current Jobs", url: "https://sterling.ng/about/careers/jobs/", lastChecked: "2026-10-05" }
