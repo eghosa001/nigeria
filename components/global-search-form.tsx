@@ -39,7 +39,10 @@ const destinations = [
 
   { label: "Change your NIN phone number", href: "/services/nin-phone-modification", pillar: "Services", aliases: "nin phone number change how can i update my nin phone number" },
   { label: "Nigeria landing and exit cards", href: "/services/nigeria-landing-exit-card", pillar: "Services", aliases: "nigeria landing card form nigeria landing card not working nigeria landing card portal nigeria landing card and exit card nigeria landing card validity nigeria landing card on arrival nigeria landing card when to apply nigeria exit card when to apply nigeria exit card immigration nigeria exit card not working nigeria exit card form nigeria exit card link nigeria exit card login" },
-  // Extra route aliases below come from 20 October Nigeria-localized Google Suggest\n  // research. These are navigation synonyms only, not new indexable pages,\n  // SEO keywords metadata, verified fees or evidence of search volume.\n  // Editorially selected from the Nigeria-localized Google Suggest archive (2026-10-09)
+  // Extra route aliases below come from 20 October Nigeria-localized Google Suggest
+  // research. These are navigation synonyms only, not new indexable pages,
+  // SEO keywords metadata, verified fees or evidence of search volume.
+  // Editorially selected from the Nigeria-localized Google Suggest archive (2026-10-09)
   // and existing canonical guides. Suggestions signal wording, not demand or volume.
   { label: "Renew Nigerian passport online", href: "/services/passport-renewal", pillar: "Services", aliases: "how to renew nigerian passport online in nigeria renewal requirements" },
   { label: "Check WAEC results", href: "/services/waec-check-result", pillar: "Services", aliases: "how to check waec result using phone result checker online" },
