@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { JobCollection } from "@/components/job-collection";
 import { jobOpportunities } from "@/lib/jobs";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Graduate Jobs in Nigeria 2026: Trainee & Entry-Level Programmes",
   description: "Verified graduate trainee programmes, entry-level careers and graduate job routes in Nigeria with qualifications, NYSC requirements and official links.",
   alternates: { canonical: "/jobs/graduate" }
-};
+});
 
 export default function GraduateJobsPage() {
   const items = jobOpportunities.filter((item) =>
