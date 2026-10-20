@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Corrections policy",
   description: "How to report an error in a MyNigeriaGuide guide and how we check updates against reliable sources.",
   alternates: { canonical: "/corrections" },
-};
+});
 
 export default function CorrectionsPage() {
   return (
