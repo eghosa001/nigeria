@@ -3422,7 +3422,7 @@ const rawJobOpportunities: CareerOpportunity[] = [
     sector: "Private",
     status: "open",
     statusLabel: "Applications open",
-    summary: "May & Baker Nigeria is recruiting Consumer Healthcare Executives across Lagos and several multi-state territories. The company published the vacancy on 23 September 2026 and set 7 October 2026 as the application deadline.",
+    summary: "May & Baker’s official careers page lists newer Consumer Healthcare Executive postings dated 15–16 October 2026 across Lagos and several multi-state territories. The listings still show an Apply Now route at the 20 October check. The page gives both a one-week instruction and later displayed Apply by dates, so confirm the applicable deadline for your territory before submitting.",
     location: "Lagos; Edo/Delta; Kogi/Benue; Sokoto/Zamfara/Katsina; Osun/Ekiti/Ondo; Calabar/Akwa Ibom/Abia",
     employmentType: "Full-time pharmaceutical / consumer healthcare sales",
     audiences: ["Consumer healthcare sales professionals", "Biological and applied science graduates", "Medical field sales professionals", "NYSC-completed applicants"],
@@ -3437,7 +3437,7 @@ const rawJobOpportunities: CareerOpportunity[] = [
       "Choose one of the territories listed in May & Baker's vacancy: Lagos; Edo/Delta; Kogi/Benue; Sokoto/Zamfara/Katsina; Osun/Ekiti/Ondo; or Calabar/Akwa Ibom/Abia.",
       "Be prepared to promote assigned consumer healthcare products in hospitals and key institutions and support prescription and supply growth.",
       "Complete May & Baker's online application form and upload the required CV.",
-      "Submit by 7 October 2026."
+      "May & Baker’s October 15–16 postings display conflicting closing-date instructions; verify the deadline for the specific territory on the official careers form."
     ],
     documents: [
       "CV/resume in an accepted upload format",
@@ -3449,21 +3449,20 @@ const rawJobOpportunities: CareerOpportunity[] = [
       "Review the listed territory, BSc requirement and minimum medical field sales experience.",
       "Select Apply Now for the vacancy so the application form identifies the correct role.",
       "Complete the online form and upload your CV; add an optional supporting document only if useful.",
-      "Submit before 7 October 2026 and retain the on-screen submission confirmation."
+      "Check the listed October vacancy and the deadline for the territory you select, submit through May & Baker’s own form, and retain the submission confirmation."
     ],
     officialUrl: "https://may-bakerng.com/career",
     officialUrlLabel: "Open May & Baker official careers page",
-    verifiedAt: "2026-10-05",
-    deadline: "2026-10-07",
-    nextMilestone: "Applications close 7 October 2026.",
+    verifiedAt: "2026-10-20",
+    nextMilestone: "Check the exact deadline on the live employer vacancy before submitting: the October postings show both a one-week instruction and a later Apply by date.",
     feeNote: "Apply through May & Baker Nigeria's official careers form; MyNigeriaGuide does not collect or forward applications.",
     sourceNotes: [
-      "May & Baker's official careers page lists Consumer Healthcare Executive as posted on 23 September 2026 and gives 7 October 2026 as the deadline.",
+      "May & Baker’s official careers page published new Consumer Healthcare Executive territorial vacancies dated 15–16 October 2026, rather than only the expired September batch.",
       "The employer lists a BSc in Biological or Applied Sciences and at least one year of medical field sales experience, with NYSC inclusive.",
-      "The same official page provides the online application form, CV upload field and the territories covered by the vacancy."
+      "The official page lists an Apply Now form, CV upload and the named territories. Its one-week instruction conflicts with later displayed Apply by dates, so no single unverified closing date is asserted here."
     ],
     sources: [
-      { label: "May & Baker Nigeria Careers", url: "https://may-bakerng.com/career", lastChecked: "2026-10-05" }
+      { label: "May & Baker Nigeria Careers", url: "https://may-bakerng.com/career", lastChecked: "2026-10-20" }
     ]
   },
   {
