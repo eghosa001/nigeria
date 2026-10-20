@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -52,12 +53,12 @@ export async function generateMetadata({
     Number(params.page ?? "1") > 1
   );
 
-  return {
+  return withStaticSocialMetadata({
     title: "Nollywood Movies: Genres & Where to Watch",
     description: "Explore Nollywood by comedy, family drama, Yoruba-language movies, established films and legal Netflix or YouTube links. Browse casts and verify playback.",
     alternates: { canonical: "/entertainment/movies" },
     robots: filtered ? { index: false, follow: true } : undefined,
-  };
+  });
 }
 
 export default async function MoviesPage({
