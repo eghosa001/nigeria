@@ -57,7 +57,7 @@ test("Abuja festival visitor guide distinguishes official dated days, admission,
   assert.ok(aiff.planning.some(p => /exact movie lineup/i.test(p.label)));
   assert.ok(aiff.planning.some(p => /buy a real ticket/i.test(p.label)));
   assert.ok(aiff.planning.some(p => /theme/i.test(p.label)));
-  assert.equal(aiff.source.href, "https://abujainternationalfilmfestival.org/aiff-2026-programme");
+  assert.equal(aiff.source?.href, "https://abujainternationalfilmfestival.org/aiff-2026-programme");
   assert.ok(aiff.sources?.some(s => s.href === "https://abujainternationalfilmfestival.org/23rd-aiff-screening-schedule"));
   assert.ok(aiff.sources?.some(s => s.href === "https://www.visitabuja.org/event/23rd-abuja-international-film-festival/"));
 });
