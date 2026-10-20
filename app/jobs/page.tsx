@@ -185,6 +185,9 @@ export default function JobsPage() {
           </div>
 
           <div className="jobs-topic-links" aria-label="Browse careers by applicant type">
+            <Link href="/jobs/nigerian-army-92rri-2026">Nigerian Army recruitment</Link>
+            <Link href="/jobs/nigeria-police-constable-recruitment-2026">Nigeria Police recruitment</Link>
+            <Link href="/jobs/nigeria-customs-service-recruitment">Nigeria Customs recruitment</Link>
             <Link href="/jobs/open-now">Jobs open now</Link>
             <Link href="/jobs/graduate">Graduate jobs & trainee programmes</Link>
             <Link href="/jobs/nysc">NYSC jobs & PPA opportunities</Link>
