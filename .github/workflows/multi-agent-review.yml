@@ -1,0 +1,68 @@
+name: MyNigeriaGuide Multi-Agent Review
+
+on:
+  workflow_dispatch:
+    inputs:
+      goal:
+        description: "Specific review objective (leave blank for default)"
+        required: false
+        type: string
+  schedule:
+    # 08:47 WAT daily. Schedules can be delayed by GitHub Actions.
+    - cron: "47 7 * * *"
+  pull_request:
+    paths:
+      - "scripts/agent-hub.mjs"
+      - "tests/agent-hub.test.mjs"
+      - "docs/MULTI_AGENT_REVIEW.md"
+      - ".github/workflows/multi-agent-review.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mng-multi-agent-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate coordinator without provider credentials
+        run: |
+          node --check scripts/agent-hub.mjs
+          node --test tests/agent-hub.test.mjs
+
+  read-only-review:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run multi-agent research, engineering, SEO and independent review
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          GROQ_MODEL: ${{ vars.GROQ_MODEL }}
+          AGENT_GOAL: ${{ inputs.goal }}
+        run: node scripts/agent-hub.mjs
+      - name: Archive auditable report (no publication or repo writes)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mynigeriaguide-agent-review
+          path: |
+            artifacts/agent-hub/review.json
+            artifacts/agent-hub/review.md
+          if-no-files-found: warn
+          retention-days: 7
