@@ -8,12 +8,12 @@ export const verifiedOctoberHeritageEvents20261013: ExploreGuide[] = [
     "shortTitle": "Ofala Onitsha 2026",
     "kind": "event",
     "region": "Anambra State",
-    "summary": "The Obi of Onitsha's 2026 Ofala runs 16–17 October at Ime Obi, Ezechima Square, with Oreze art, a youth carnival and an October 25 thanksgiving. Check the organiser for entry and media arrangements.",
+    "summary": "The 16–17 October Ofala royal ceremonies have passed. The remaining announced date is a separate thanksgiving service on 25 October at Bishop Crowther Memorial Anglican Church, Egerton Road, Onitsha. Confirm the time and visitor access before travelling.",
     "intro": [
-      "Ofala 2026 is the royal cultural festival of His Majesty Nnaemeka Alfred Achebe, the Obi of Onitsha. The main public ceremonies are Iru Ofala on Friday 16 October and Azu Ofala on Saturday 17 October at Ime Obi, Ezechima Square, Onitsha. The organising committee's theme, Igba Mbo, Iga N'Iru, invites the community to look beyond resilience toward progress. Its announcement distinguishes the two central days from the wider programme, which extends through a church thanksgiving on 25 October.",
-      "The festival is more than an outdoor concert or general tourism fair. Iru Ofala marks the monarch's appearance after ritual seclusion, while Azu Ofala features homage by age-grade societies and public cultural expressions. Visitors should respect the ceremonial nature of the event: some parts of the royal cycle are sacred or private, and public attendance is not permission to enter any palace room or filming area.",
-      "For art and community events, the organiser lists the Oreze Art Exhibition from 13 to 18 October, medical and wellbeing outreach from 12 to 15 October and a Youth Carnival on 14 October. The listed festival timetable does not provide one confirmed address, fee or universal entry policy for each side event. Ask the organisers for the precise exhibition or outreach location and entry conditions rather than assuming everything is staged at Ezechima Square.",
-      "Visitors travelling from another state should treat Onitsha as a busy commercial city. Confirm accommodation and transport in advance, choose a realistic arrival route, avoid walking into congested ceremonial approaches without local guidance, and check official updates on the morning of the event. This page does not claim a live crowd size, official ticket price or guaranteed unrestricted photography."
+      "As of 19 October, the main Ofala dates have passed: Iru Ofala was scheduled for Friday 16 October and Azu Ofala for Saturday 17 October at Ime Obi, Ezechima Square. The Steering Committee's programme lists a separate interdenominational thanksgiving on Sunday 25 October at Bishop Crowther Memorial Anglican Church, Egerton Road. That is not another day of the royal arena ceremonies. The 2026 theme was Igba Mbo, Iga N'Iru (Strive and Advance).",
+      "The organiser describes Iru Ofala as the Obi's ceremonial appearance after seclusion and Azu Ofala as a day of age-grade homage and cultural display. These explain the past 16–17 October programme, not a ceremony visitors can still attend. Sacred rites and restricted palace or media spaces are not general tourist attractions.",
+      "The advertised Oreze Art Exhibition (13–18 October), health outreach (12–15 October) and Youth Carnival (14 October) are also past dates. The official programme does not establish a later exhibition or carnival after 19 October. Do not travel on an expired flyer unless the organiser publishes a new session.",
+      "For the 25 October thanksgiving, ask the organiser or parish to confirm the service time, whether visitors may attend and any photography rules before booking transport. The official programme checked on 19 October does not state a service start time, universal admission price or walk-in guarantee. Do not go to Ezechima Square expecting a repeat of Iru or Azu Ofala."
     ],
     "bestFor": [
       "Igbo heritage",
@@ -25,11 +25,11 @@ export const verifiedOctoberHeritageEvents20261013: ExploreGuide[] = [
     "highlights": [
       {
         "name": "Iru Ofala — Friday, 16 October",
-        "detail": "First main public ceremony: the Obi appears after seclusion, receives homage and shares the annual festival theme at Ime Obi, Ezechima Square. Confirm attendee access and timings with the organiser."
+        "detail": "The organiser scheduled the Obi's main appearance at Ime Obi, Ezechima Square, for 16 October. That date has passed; this is a historical programme note, not a current entry offer."
       },
       {
         "name": "Azu Ofala — Saturday, 17 October",
-        "detail": "The second main day centres on age-grade processions, masquerades, cultural display and homage. It is not interchangeable with the private rites preceding Ofala."
+        "detail": "The 17 October programme described age-grade processions, cultural display and homage. That date has passed; it is not a second session during the 25 October thanksgiving."
       },
       {
         "name": "Oreze IX Art Exhibition — 13–18 October",
@@ -45,40 +45,40 @@ export const verifiedOctoberHeritageEvents20261013: ExploreGuide[] = [
       },
       {
         "name": "Thanksgiving — Sunday, 25 October",
-        "detail": "A separate service is scheduled at Bishop Crowther Memorial Anglican Church on Egerton Road, not at the main Ime Obi square."
+        "detail": "The organiser schedules a separate church thanksgiving on Egerton Road. Its release does not confirm a start time or public admission arrangements."
       }
     ],
     "planning": [
       {
         "label": "Start with the official festival schedule",
-        "detail": "Use ofala.org and the dated 5 October steering committee release for the Iru/Azu dates and supplementary sessions. An older social flyer may cover only one day."
+        "detail": "Use the Steering Committee's 5 October programme to separate the completed 16–17 October royal ceremonies from the 25 October church thanksgiving. An old festival pass is not proof of church access."
       },
       {
         "label": "Find the right Onitsha venue",
-        "detail": "For 16–17 October travel to Ime Obi at Ezechima Square. Do not confuse the main festival site with the 25 October church service or unconfirmed Oreze exhibition venue."
+        "detail": "For the remaining announced date, check Bishop Crowther Memorial Anglican Church on Egerton Road, not Ime Obi or Ezechima Square. Confirm the church service time before setting out."
       },
       {
         "label": "Ask before paying or recording",
-        "detail": "No verified one-price public entry tariff was published in the reviewed programme. Confirm ticketing, access tiers and ceremonial photography restrictions directly with organisers, not informal resellers."
+        "detail": "The organiser has not published a universal 25 October visitor price or a confirmed walk-in policy in the checked release. Ask the church or Steering Committee about access; do not pay an informal seller for a supposed festival pass."
       },
       {
         "label": "Avoid unverified media access claims",
-        "detail": "The steering committee said media accreditation ran 3–10 October. Public access does not grant press privileges or access to designated media areas."
+        "detail": "The published media accreditation window was 3–10 October and has closed. Neither visitors nor journalists should assume access to reserved media or palace spaces from an expired public festival date."
       },
       {
         "label": "Build a flexible travel plan",
-        "detail": "Check current road and safety guidance, accommodation, local transport and event-day congestion. If you add a visit to Onitsha Main Market, do so separately and allow for trading schedules; it is not an Ofala performance site."
+        "detail": "Check transport and local conditions for the church's Egerton Road address. Onitsha Main Market is a separate outing with its own trading hours and access conditions, not a festival performance site."
       },
       {
         "label": "Treat nearby stops as optional",
-        "detail": "Onitsha Main Market and the Niger Bridge are landmarks rather than ceremony stages. Keep the royal programme first and check whether crowds, traffic or local restrictions permit extra sightseeing."
+        "detail": "If the thanksgiving's time or visitor policy cannot be confirmed, avoid a non-refundable trip for that service. The Main Market and Niger Bridge are separate landmarks, not substitute Ofala performances."
       }
     ],
     "source": {
       "label": "Ofala Steering Committee — official 2026 programme",
       "href": "https://ofala.org/press-release/ofala-2026-onitsha-announces-programme-for-festival-igba-mbo-iga-niru-strive-and-advance/"
     },
-    "lastReviewed": "2026-10-13"
+    "lastReviewed": "2026-10-19"
   },
   {
     "slug": "benin-royal-coronation-anniversary-2026",
