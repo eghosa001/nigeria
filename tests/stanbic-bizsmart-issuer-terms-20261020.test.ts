@@ -27,5 +27,6 @@ test("Stanbic Biz Smart reveals true first-party ₦20k versus ₦5k opening-dep
 
 test("No other bank or public-service record gets an unearned recheck date", () => {
  assert.equal(records.filter(x=>x.slug==="stanbic-bizsmart-account").length,1);
- assert.equal(records.filter(x=>x.lastVerified==="2026-10-20").length,1);
+ assert.deepEqual(records.filter(x=>x.lastVerified==="2026-10-20").map(x=>x.slug).sort(),
+   ["stanbic-bizsmart-account", "aedc-map-refund", "ibedc-map-refund"].sort());
 });
