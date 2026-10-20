@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { indexableYouTubeChannelHubs } from "@/lib/youtube-channel-hubs";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Nollywood YouTube Movie Channels",
   description: "Browse Nigerian movie publishers on YouTube with substantial full-length catalogs, verified source links and direct movie guides.",
   alternates: { canonical: "/entertainment/youtube/channels" },
-};
+});
 
 export default function YouTubeChannelsPage() {
 
