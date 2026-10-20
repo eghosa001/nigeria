@@ -613,11 +613,15 @@ test("service guides expose verified search-intent quick answers", async ({ page
   expect(hasFaqSchema).toBeTruthy();
 });
 
-test("topic search phrases point to exact guides", async ({ page }) => {
+test("topic task links identify distinct canonical services without keyword repetition", async ({ page }) => {
   await page.goto("/topics/jamb-2026");
-  const searches = page.locator(".topic-searches");
-  await expect(searches.getByRole("link", { name: /JAMB Direct Entry 2026/ })).toHaveAttribute("href", "/services/jamb-direct-entry-2026");
-  await expect(searches.getByRole("link", { name: "JAMB CAPS", exact: true })).toHaveAttribute("href", "/services/jamb-caps");
+  const tasks = page.locator(".topic-searches");
+  const directEntry = tasks.getByRole("link", { name: "2026 JAMB Direct Entry", exact: true });
+  const caps = tasks.getByRole("link", { name: "JAMB CAPS", exact: true });
+  await expect(directEntry).toHaveAttribute("href", "/services/jamb-direct-entry-2026");
+  await expect(caps).toHaveAttribute("href", "/services/jamb-caps");
+  await expect(tasks.locator('a[href="/services/jamb-direct-entry-2026"]')).toHaveCount(1);
+  await expect(tasks.locator('a[href="/services/jamb-caps"]')).toHaveCount(1);
 });
 
 

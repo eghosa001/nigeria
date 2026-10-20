@@ -30,7 +30,7 @@ export function AnswerFirst({
   const visibleFacts = facts.filter((item) => item.value.trim()).slice(0, 4);
 
   return (
-    <section className="answer-first" aria-label={title}>
+    <section className={"answer-first" + (visibleFacts.length === 0 ? " answer-first-single" : "")} aria-label={title}>
       <div className="answer-first-copy">
         <span className="eyebrow">{eyebrow}</span>
         <h2>{title}</h2>
@@ -63,14 +63,16 @@ export function AnswerFirst({
         {note ? <small className="answer-first-note">{note}</small> : null}
       </div>
 
-      <dl className="answer-first-facts">
-        {visibleFacts.map((fact) => (
-          <div key={fact.label}>
-            <dt>{fact.label}</dt>
-            <dd>{fact.value}</dd>
-          </div>
-        ))}
-      </dl>
+      {visibleFacts.length > 0 ? (
+        <dl className="answer-first-facts">
+          {visibleFacts.map((fact) => (
+            <div key={fact.label}>
+              <dt>{fact.label}</dt>
+              <dd>{fact.value}</dd>
+            </div>
+          ))}
+        </dl>
+      ) : null}
     </section>
   );
 }
