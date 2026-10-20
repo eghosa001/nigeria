@@ -62,6 +62,7 @@ function auditHtml(html, url, status, ms, finalUrl) {
   const ogTitle = propertyMeta(head, "og:title") || "";
   const ogDescription = propertyMeta(head, "og:description") || "";
   const ogImage = propertyMeta(head, "og:image") || "";
+  const ogUrl = propertyMeta(head, "og:url") || "";
   const twitterTitle = meta(head, "twitter:title") || "";
   const twitterDescription = meta(head, "twitter:description") || "";
   const twitterImage = meta(head, "twitter:image") || "";
@@ -90,6 +91,16 @@ function auditHtml(html, url, status, ms, finalUrl) {
   else if (!canonicalUrl) issue("invalid-canonical", "high", canonical);
   else if (canonicalUrl !== cleanUrl(url)) issue("canonical-differs", "high", canonicalUrl);
   if (noindex) issue("sitemap-noindex", "critical", robots);
+  // A root-level share preview is not accurate for an unrelated detail page.
+  if (cleanUrl(url) !== cleanUrl(base) && ogTitle === "MyNigeriaGuide") {
+    issue("generic-og-title", "medium", "Root brand title inherited by detail page");
+  }
+  if (cleanUrl(url) !== cleanUrl(base) && twitterTitle === "MyNigeriaGuide") {
+    issue("generic-twitter-title", "medium", "Root brand title inherited by detail page");
+  }
+  if (ogUrl && cleanUrl(ogUrl) && cleanUrl(ogUrl) !== cleanUrl(url)) {
+    issue("og-url-differs", "medium", ogUrl);
+  }
   if (h1Count !== 1) issue("h1-count", "medium", String(h1Count));
   if (schema.invalid) issue("invalid-jsonld", "high", String(schema.invalid));
   if (imageMissingAlt) issue("image-no-alt-attribute", "medium", String(imageMissingAlt));
@@ -98,7 +109,7 @@ function auditHtml(html, url, status, ms, finalUrl) {
   if (ms > 8000) issue("response-over-8s", "high", String(ms));
   else if (ms > 3000) issue("response-over-3s", "medium", String(ms));
   return { url, status, finalUrl, durationMs: ms, htmlBytes: Buffer.byteLength(html),
-    title, description, h1, ogTitle, ogDescription, ogImage, twitterTitle, twitterDescription, twitterImage,
+    title, description, h1, ogTitle, ogDescription, ogImage, ogUrl, twitterTitle, twitterDescription, twitterImage,
     canonical: canonicalUrl, indexable: !noindex, robots,
     h1Count, wordCount, imageCount: img.length, imageMissingAlt, imageEmptyAlt,
     imageMissingDimensions, schema, internalLinks, issues };
