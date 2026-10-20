@@ -28,7 +28,6 @@ function truncateSeo(value: string, limit: number) {
 }
 
 function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide>>) {
-  const year = guide.lastReviewed.slice(0, 4);
   if (guide.slug === "nigeria-rainforest-guide") return "Rainforests in Nigeria: Locations, Parks & Wildlife";
   if (guide.slug === "nigeria-hills-mountains-guide") return "Hills and Mountains in Nigeria: Where to Visit";
   if (guide.slug === "ilorin") return "Ilorin, Kwara State: Places to Visit & City Guide";
@@ -42,10 +41,12 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
   if (guide.slug === "gashaka-gumti-national-park") return "Gashaka-Gumti National Park: Access & Trip Planning";
   if (guide.slug === "ojukwu-bunker-guide") return "Ojukwu Bunker Umuahia: History & Visitor Access";
   if (guide.slug === "sokoto-state-travel-guide") return "Sokoto State Nigeria: Caliphate, Culture & Places to Visit";
-  if (guide.kind === "city") return truncateSeo(guide.shortTitle + ": " + getExplorePlacesForGuide(guide.slug).length + " Places to Visit & Things to Do (" + year + ")", 60);
-  if (guide.kind === "itinerary") return truncateSeo(guide.title + " " + year + ": Itinerary & Things to Do", 60);
-  if (guide.kind === "event") return truncateSeo(guide.shortTitle + (guide.shortTitle.includes(year) ? "" : " " + year) + ": Festival Guide & Planning", 60);
-  return truncateSeo(guide.title + " " + year + ": Things to Do & Trip Planning", 60);
+  // Review dates do not establish the year of an evergreen destination,
+  // the number of visitor-ready stops, or an event's scheduled edition.
+  if (guide.kind === "city") return truncateSeo(guide.shortTitle + ": Things to Do & Places to Visit", 60);
+  if (guide.kind === "itinerary") return truncateSeo(guide.shortTitle + ": Route, Stops & Trip Planning", 60);
+  if (guide.kind === "event") return truncateSeo(guide.shortTitle + ": Dates, Venue & Visit Guide", 60);
+  return truncateSeo(guide.shortTitle + ": Location, Access & Visitor Guide", 60);
 }
 
 // Search Console, 14 September–10 October 2026: these existing canonical
