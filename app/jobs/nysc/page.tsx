@@ -1,15 +1,16 @@
 import { getEffectiveJobStatus, getEffectiveStatusLabel } from "@/lib/job-runtime";
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { jobOpportunities } from "@/lib/jobs";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "NYSC Jobs & PPA Opportunities in Nigeria 2026",
   description: "Find NYSC-friendly career routes, graduate jobs, engineering opportunities and verified employer pages for corps members in Abuja, Lagos and across Nigeria.",
   alternates: { canonical: "/jobs/nysc" },
-};
+});
 
 export default function NyscJobsPage() {
   const relevant = jobOpportunities.filter((item) => {
