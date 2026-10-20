@@ -31,7 +31,7 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     title: "Abe Odale (2026): Cast & Release",
     description: "Abe Odale cast, credited director and documented LibraTV premiere. The exact authorised full-film URL has not been independently confirmed.",
   },
-  "forever-isnt-long-enough-2025": { title: "Forever Isn\u2019t Long Enough (2025): Cast & Film", description: "Forever Isn\u2019t Long Enough (2025): Grace\u2019s story, confirmed Michael Dappa and Inem King cast, Uche Alexmoore director, and official Royal Arts TV film." },
+  "forever-isnt-long-enough-2025": { title: "Forever Isn’t Long Enough (2025): Cast & Watch", description: "Forever Isn’t Long Enough (2025) cast: Michael Dappa, Inem King, Chioma Nwosu and Oby Titus. Read Grace’s story and follow the official Royal Arts TV video." },
   "long-enough-2026": { title: "Long Enough (2026) Cast, Plot & Film Details", description: "Long Enough (2026) cast includes Victory Michael, Prisma James and Jennifer Obodo. Story, director Austin Onyema and verified release sources." },
   "holy-matrimony": {
     title: "Holy Matrimony Nigerian Movie: Cast & Full Movie",
