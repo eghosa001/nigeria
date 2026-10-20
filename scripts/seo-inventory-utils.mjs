@@ -41,6 +41,12 @@ export function mapSeoInventory(pages, summary, crawledAt) {
     if (!page.title) reasons.push("empty-title");
     if (!page.description) reasons.push("empty-description");
     const requiresReview = reasons.length > 0;
+    // A social-sharing defect does not justify rewriting a strong search
+    // title/description. Preserve each field unless that field is defective.
+    const titleNeedsReview = reasons.some((reason) =>
+      ["missing-title-in-head", "empty-title", "duplicate-title"].includes(reason));
+    const descriptionNeedsReview = reasons.some((reason) =>
+      ["missing-description", "empty-description", "duplicate-description"].includes(reason));
     return {
       url: page.url,
       pillar,
@@ -49,9 +55,9 @@ export function mapSeoInventory(pages, summary, crawledAt) {
       indexing_eligibility: page.status !== 200 ? "HTTP error" : page.indexable ? "eligible in sitemap; indexing unverified" : "noindex in sitemap",
       http_status: page.status,
       previous_title: page.title || "",
-      new_title: requiresReview ? "" : page.title || "",
+      new_title: titleNeedsReview ? "" : page.title || "",
       previous_description: page.description || "",
-      new_description: requiresReview ? "" : page.description || "",
+      new_description: descriptionNeedsReview ? "" : page.description || "",
       primary_keyword: "",
       secondary_keyword_cluster: "",
       search_intent: "",
