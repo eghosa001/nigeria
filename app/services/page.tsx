@@ -127,7 +127,7 @@ export default async function ServicesPage({
             { href: "#service-directory", label: "All guides" },
           ]} />
           <div id="popular-service-tasks" className="minimal-inline-links" aria-label="Guides for common service tasks">
-            {popularServiceLinks.slice(0, 6).map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
+            {popularServiceLinks.slice(0, 10).map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
           </div>
           {popularServiceLinks.length > 6 ? (
             <details className="compact-link-menu service-more-tasks">
