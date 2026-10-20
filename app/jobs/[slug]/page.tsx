@@ -70,11 +70,27 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     : summary.length >= 90 ? summary
     : summary.replace(/[.!?]$/, "") + (summary ? ". " : "") + sourceContext;
 
+  const seoTitle = seoOverride?.title ?? compactJobSnippet(label, 58);
+  const seoDescription = seoOverride?.description ?? compactJobSnippet(description, 155);
+  const canonical = "/jobs/" + item.slug;
   return {
-    title: { absolute: seoOverride?.title ?? compactJobSnippet(label, 58) },
-    description: seoOverride?.description ?? compactJobSnippet(description, 155),
-    alternates: { canonical: "/jobs/" + item.slug },
-    robots: isIndexableJobOpportunity(item) ? undefined : { index: false, follow: true }
+    title: { absolute: seoTitle },
+    description: seoDescription,
+    alternates: { canonical },
+    robots: isIndexableJobOpportunity(item) ? undefined : { index: false, follow: true },
+    // Without route-specific social tags, the root layout's homepage summary
+    // is inherited by unrelated vacancy and employer-careers pages.
+    openGraph: {
+      type: "article",
+      title: seoTitle,
+      description: seoDescription,
+      url: canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: seoTitle,
+      description: seoDescription,
+    },
   };
 }
 
