@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/json-ld";
 import { getJobFacetOpportunities, getJobProfessionFacet, jobProfessionFacets } from "@/lib/job-facets";
 import { isEffectivelyOpen } from "@/lib/job-runtime";
 import { getSiteUrl } from "@/lib/site";
+import { pageSocialMetadata } from "@/lib/seo-social";
 
 export const dynamic = "force-dynamic";
 
@@ -19,7 +20,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const facet = getJobProfessionFacet(slug);
   if (!facet) return {};
-  return { title: facet.title + ": Verified Opportunities", description: facet.description, alternates: { canonical: "/jobs/professions/" + facet.slug } };
+  const seoTitle = facet.title + ": Verified Opportunities";
+  const canonical = "/jobs/professions/" + facet.slug;
+  return { title: seoTitle, description: facet.description, alternates: { canonical },
+    ...pageSocialMetadata(seoTitle, facet.description, canonical) };
 }
 
 export default async function JobProfessionPage({ params }: { params: Promise<{ slug: string }> }) {
