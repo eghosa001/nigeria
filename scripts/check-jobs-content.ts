@@ -4,6 +4,7 @@ import { jobEmployers } from "../lib/job-employers";
 import { getJobFacetOpportunities, jobLocationFacets, jobProfessionFacets } from "../lib/job-facets";
 import { buildJobPostingJsonLd, daysSinceIsoDate, getEffectiveJobStatus, todayIsoNigeria } from "../lib/job-runtime";
 import { hasSourceMatchedEmployerBoardReview20261020 } from "../lib/job-employer-board-rechecks-2026-10-20";
+import { hasSourceMatchedUnilorinReview20261020 } from "../lib/job-naf-unilorin-checks-2026-10-20";
 import { JOBS_DIRECTORY_PAGE_SIZE, queryJobDirectory } from "../lib/job-query";
 import { retiredJobRedirects, templateCareerPortalSlugs } from "../lib/job-scale-wave";
 import { isIndexableJobOpportunity, jobOpportunities } from "../lib/jobs";
@@ -263,7 +264,8 @@ for (const item of jobOpportunities) {
     // Accept only exact role/URL/summary/source matches while the review is
     // fresh; all other employer directories retain the three-note requirement.
     assert(item.sourceNotes.length >= 3 ||
-      hasSourceMatchedEmployerBoardReview20261020(item, todayIsoNigeria()),
+      hasSourceMatchedEmployerBoardReview20261020(item, todayIsoNigeria()) ||
+      hasSourceMatchedUnilorinReview20261020(item, todayIsoNigeria()),
       item.slug + " employer portal must explain exactly what was verified.");
   }
   if (item.kind === "vacancy" && ["closed", "unverified"].includes(getEffectiveJobStatus(item))) {
