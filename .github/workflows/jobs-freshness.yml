@@ -59,7 +59,7 @@ jobs:
           # linked content, not blocked by unrelated employers whose review
           # dates have reached the scheduled freshness queue.
           if echo "$changed" | grep -qx 'lib/job-topics.ts' && \
-             ! echo "$changed" | grep -Eq '^(lib/(jobs|job-runtime|job-query|job-facets|job-employers|career-guides|job-scale-wave)[.]ts$|app/jobs/|app/api/jobs/|scripts/check-job|data/job-retired-redirects[.]json|next[.]config[.]ts|package[.]json)"$(printf '%s\n' "$changed" | grep -E '^(lib/(jobs|job-runtime|job-query|job-topics|job-facets|job-employers|career-guides)\.ts$|app/api/jobs/|scripts/check-job-links\.mjs$|data/job-retired-redirects\.json$|next\.config\.ts$)' || true)"
+             ! echo "$changed" | grep -Eq '^(lib/(jobs|job-runtime|job-query|job-facets|job-employers|career-guides|job-scale-wave)[.]ts$|app/jobs/.*|app/api/jobs/.*|scripts/check-job.*|data/job-retired-redirects[.]json|next[.]config[.]ts|package[.]json)"$(printf '%s\n' "$changed" | grep -E '^(lib/(jobs|job-runtime|job-query|job-topics|job-facets|job-employers|career-guides)\.ts$|app/api/jobs/|scripts/check-job-links\.mjs$|data/job-retired-redirects\.json$|next\.config\.ts$)' || true)"
           url_diff="$(git diff "$base_sha" HEAD -- lib/job-scale-wave.ts app/jobs | grep -E '^[+-].*(https?://|officialUrl|sources:|url:|href=["'\'' ]https?://)' || true)"
 
           if [ -n "$other_job_files" ] || [ -n "$url_diff" ]; then
