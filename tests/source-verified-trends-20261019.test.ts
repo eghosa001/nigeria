@@ -83,8 +83,9 @@ test("Kainji offers a useful fallback without suggesting unverified admission", 
 });
 
 test("three stale government recruitments are issuer-confirmed closed with practical aftercare", () => {
-  assert.equal(checkedClosedRecruitmentSlugs20261019.length, 3);
-  for (const slug of checkedClosedRecruitmentSlugs20261019) {
+  const governmentSlugs = checkedClosedRecruitmentSlugs20261019.filter(slug => slug !== "reckitt-nigeria-management-trainee-2026");
+  assert.equal(governmentSlugs.length, 3);
+  for (const slug of governmentSlugs) {
     const job = jobOpportunities.find(j => j.slug === slug);
     assert.ok(job, slug);
     assert.equal(job.verifiedAt, "2026-10-19");
@@ -94,6 +95,20 @@ test("three stale government recruitments are issuer-confirmed closed with pract
     assert.ok(job.sources.some(source => source.lastChecked === "2026-10-19"), slug);
     assert.ok(job.sourceNotes.some(note => note.includes("19 October 2026")), slug);
   }
+});
+
+test("Reckitt Trailblazers 5.0 is filled; historic requirements do not imply open applications", () => {
+  const slug = "reckitt-nigeria-management-trainee-2026";
+  assert.ok(checkedClosedRecruitmentSlugs20261019.includes(slug));
+  const job = jobOpportunities.find(item => item.slug === slug);
+  assert.ok(job);
+  assert.equal(job.status, "closed");
+  assert.equal(job.verifiedAt, "2026-10-20");
+  assert.match(job.summary, /position has been filled|not accepting applications/i);
+  assert.match(job.nextMilestone ?? "", /filled.*20 October 2026/i);
+  assert.ok(job.applicationSteps.some(step => /Do not upload|Do not pay|Do not.*personal/i.test(step)));
+  assert.ok(job.sources.some(source => source.url.includes("careers.reckitt.com/job/") && source.lastChecked === "2026-10-20"));
+  assert.ok(job.sourceNotes.some(note => /position has been filled/i.test(note)));
 });
 
 test("decorative Jobs counters are not spoken twice", () => {
