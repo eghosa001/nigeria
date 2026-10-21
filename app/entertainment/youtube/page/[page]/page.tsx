@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -21,11 +22,15 @@ export async function generateMetadata({ params }: { params: Promise<{ page: str
   const catalog = await youtubeServerStore.catalogPage(value);
   if (!catalog || value === 1) return { robots: { index: false, follow: true } };
 
+  const seoTitle = "Full Nigerian Movies on YouTube — Page " + value;
+  const seoDescription = "Browse page " + value + " of full Nigerian and Nollywood movies on YouTube.";
+  const canonical = "/entertainment/youtube/page/" + value;
   return {
-    title: "Full Nigerian Movies on YouTube — Page " + value,
-    description: "Browse page " + value + " of full Nigerian and Nollywood movies on YouTube.",
-    alternates: { canonical: "/entertainment/youtube/page/" + value },
+    title: seoTitle,
+    description: seoDescription,
+    alternates: { canonical },
     robots: { index: false, follow: true },
+    ...pageSocialMetadata(seoTitle, seoDescription, canonical),
   };
 }
 
