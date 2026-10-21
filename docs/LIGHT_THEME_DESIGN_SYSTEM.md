@@ -22,7 +22,7 @@ A Nigerian editorial guide should feel like a trusted, considered publication, n
 | Secondary editorial accent | `--editorial-rust` | `#a44c38` |
 | Subtle radius | `--editorial-radius` | `10px` |
 
-**Pillars:** Movies `#a44c38`, Services `#225d50`, Tour `#966a2f`, Jobs `#40617b`. Use these for a slim marker, eyebrow or navigation indication only. Do not cover entire hero backgrounds or all cards in a pillar tint.
+**Pillars:** Movies `#a44c38`, Services `#225d50`, Tour `#875d27`, Jobs `#40617b`. Use these for a slim marker, eyebrow or navigation indication only. Do not cover entire hero backgrounds or all cards in a pillar tint.
 
 ## Patterns to preserve
 
