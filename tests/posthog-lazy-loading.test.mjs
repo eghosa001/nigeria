@@ -10,9 +10,9 @@ test("PostHog is dynamically imported outside the shared initial analytics bundl
   const instrumentationEntry = new URL("../instrumentation-client.ts", import.meta.url);
   if (existsSync(instrumentationEntry)) {
     const entry = readFileSync(instrumentationEntry, "utf8");
-    assert.doesNotMatch(entry, /import\\s+[^;]*posthog|capturePostHogPageView/, "no eager PostHog in client instrumentation");
+    assert.doesNotMatch(entry, /import\s+[^;]*posthog|capturePostHogPageView/i, "no eager PostHog in client instrumentation");
   }
-  assert.match(read("app/layout.tsx"), /<PostHogAnalytics \\/>/, "retain idle PostHog page-view tracking");
+  assert.match(read("app/layout.tsx"), /<PostHogAnalytics \/>/, "retain idle PostHog page-view tracking");
   for (const path of ["lib/client-analytics.ts", "components/posthog-analytics.tsx"]) {
     const source = read(path);
     assert.doesNotMatch(source, /import\s*\{[^}]*\}\s*from\s*["']@\/lib\/posthog-client["']/);
