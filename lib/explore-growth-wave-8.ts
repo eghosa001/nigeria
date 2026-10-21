@@ -2,7 +2,7 @@ import type { ExploreGuide } from "@/lib/explore";
 
 export const exploreGrowthWave8: ExploreGuide[] = [
 {
-slug:"ondo-nature-heritage",title:"Ondo State Nature & Heritage Guide",shortTitle:"Ondo nature & heritage",kind:"itinerary",region:"Ondo State",
+slug:"ondo-nature-heritage",title:"Ondo Hills and Heritage Route: Idanre, Owo and Forests",shortTitle:"Ondo nature & heritage",kind:"itinerary",region:"Ondo State",
 summary:"Explore Idanre Hills, Owo heritage and Akure nature assets with realistic road planning.",
 intro:["Ondo State combines hill landscapes, royal heritage and forest attractions across separate corridors.","Use Akure as a base and treat Idanre and Owo as distinct day trips rather than one rushed loop."],
 bestFor:["Hiking","Royal heritage","Museums","Road trips"],

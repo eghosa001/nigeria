@@ -13126,10 +13126,8 @@
       "If the result reads PRODUCED (PASSPORT PRODUCED, READY FOR COLLECTION), follow the tracking message and your selected passport office's verified collection or delivery instructions. Keep your acknowledgement and identification ready; do not pay an unofficial agent who claims collection can be accelerated."
     ],
     "notes": [
-      "The passport status tracker asks for both an Application Number and a Reference Number; these are different fields and both are required.",
       "The domestic NIS portal's Payment Status/Print Receipt search accepts a Reference Number with an Application Number, date of birth or email. It checks application/payment records; the dedicated passport tracker still requires both Application and Reference Numbers. Payment confirmation, appointment booking, production and collection are different stages.",
       "If the online checker cannot find an application, first verify that both numbers belong to the same submission. Use NIS's published help/contact channels for unresolved cases.",
-      "Only follow an NIS confirmation to visit a passport office; do not rely on a WhatsApp agent promising immediate printing, collection or a guaranteed delivery day.",
       "NIS introduced a distinct PRODUCED (PASSPORT PRODUCED, READY FOR COLLECTION) status in January 2026. It means the booklet has been produced; follow the NIS instruction for collection or delivery. It does not mean it has already been collected, delivered or issued to the holder."
     ],
     "sources": [
