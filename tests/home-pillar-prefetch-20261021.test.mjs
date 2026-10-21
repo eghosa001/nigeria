@@ -16,5 +16,5 @@ test("homepage keeps all four pillar navigation links but avoids bulk auto-prefe
     const link = `<Link href="${path}" prefetch={false} className="home-path ${section}">`;
     assert.ok(homepage.includes(link), "Home must keep clickable " + path + " without speculative route fetches");
   }
-  assert.equal((homepage.match(/prefetch=\\{false\\} className="home-path /g) ?? []).length, 4);
+  assert.equal(homepage.split('prefetch={false} className="home-path ').length - 1, 4);
 });
