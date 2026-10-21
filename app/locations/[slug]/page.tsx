@@ -30,6 +30,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "website",
       url: "/locations/" + city.slug,
     },
+    twitter: {
+      card: "summary_large_image",
+      title: city.title,
+      description: city.description,
+    },
   };
 }
 
