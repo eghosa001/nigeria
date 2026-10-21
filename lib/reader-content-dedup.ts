@@ -40,3 +40,21 @@ export function uniqueIntroParagraphs(summary: string, paragraphs: readonly stri
     return !isCopy;
   });
 }
+
+/**
+ * Keep evidence and safety notes, but do not print the exact same sentence
+ * again when another visible section already carries it. Never merge two
+ * partially overlapping cautions: the difference may be legally important.
+ */
+export function uniqueSupportingStatements(
+  alreadyShown: readonly string[],
+  supplementary: readonly string[],
+): string[] {
+  const seen = new Set(alreadyShown.map(comparable).filter(Boolean));
+  return supplementary.filter((statement) => {
+    const key = comparable(statement);
+    if (!key || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
