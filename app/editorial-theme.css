@@ -749,7 +749,6 @@ html[data-theme="light"] :where(.jobs-trust-panel, .jobs-path-card-dark) {
   color: var(--editorial-ink) !important;
   box-shadow: none;
 }
-html[data-theme="light"] .jobs-trust-panel :where(> span, > strong, > b),
 html[data-theme="light"] .jobs-trust-panel > span {
   color: var(--editorial-slate);
 }
