@@ -65,3 +65,32 @@
   .row { align-items: flex-start; }
   .banner { padding: 0.85rem; }
 }
+
+/* Module-local UI must use the same appearance tokens as the site shell. */
+:global(html[data-theme="dark"]) .banner,
+:global(html[data-theme="dark"]) .source,
+:global(html[data-theme="dark"]) .lead {
+  background: var(--theme-raised);
+  color: var(--ink);
+  border-color: var(--line);
+}
+:global(html[data-theme="dark"]) .filters input,
+:global(html[data-theme="dark"]) .filters select,
+:global(html[data-theme="dark"]) .controls button {
+  background: var(--theme-input);
+  border-color: var(--line);
+  color: var(--ink);
+}
+:global(html[data-theme="dark"]) .ok,
+:global(html[data-theme="dark"]) .pillar {
+  background: #163a2a;
+  color: #9ce6bd;
+}
+:global(html[data-theme="dark"]) .down {
+  background: #452525;
+  color: #ffb7b7;
+}
+:global(html[data-theme="dark"]) .pending {
+  background: #25323d;
+  color: #c5dbed;
+}
