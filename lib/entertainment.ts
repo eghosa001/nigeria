@@ -2631,7 +2631,7 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     references: [{
       label: "Netflix — Nigeria Top 10 films (28 September–11 October 2026)",
       href: "https://www.netflix.com/tudum/top10/nigeria",
-      lastChecked: "2026-10-15",
+      lastChecked: "2026-10-20",
       note: "Netflix's official Nigeria weekly charts ranked Oversabi Aunty #1 during 28 September–4 October and 5–11 October 2026. This historical ranking is audience evidence, not a guarantee of current streaming access."
     }, {
 
