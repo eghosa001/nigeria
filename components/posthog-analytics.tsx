@@ -29,9 +29,9 @@ export function PostHogAnalytics() {
     };
 
     if (typeof window.requestIdleCallback === "function") {
-      idleId = window.requestIdleCallback(capture, { timeout: 1250 });
+      idleId = window.requestIdleCallback(capture, { timeout: 2500 });
     } else {
-      fallbackId = window.setTimeout(capture, 350);
+      fallbackId = window.setTimeout(capture, 750);
     }
 
     return () => {

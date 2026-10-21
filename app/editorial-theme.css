@@ -673,3 +673,19 @@ html[data-theme="dark"] :where(.mobile-admin-action) {
 @media (max-width: 760px) {
   html[data-theme="dark"] .home-paths { grid-template-columns: minmax(0,1fr) !important; }
 }
+
+
+/* The jobs verification panel and featured jobs CTA are intentionally dark.
+   Ivory & Ink's neutral card contract must not put pale copy on white cards. */
+html[data-theme="light"] .jobs-trust-panel,
+html[data-theme="dark"] .jobs-trust-panel {
+  background: #0d2d21 !important;
+  border-color: #29483a !important;
+  color: #ffffff !important;
+}
+html[data-theme="light"] .jobs-path-card-dark,
+html[data-theme="dark"] .jobs-path-card-dark {
+  background: #173329 !important;
+  border-color: #29483a !important;
+  color: #ffffff !important;
+}

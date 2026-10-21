@@ -124,11 +124,11 @@ export function SiteHeader() {
           </Link>
 
           <div className="mobile-header-actions" aria-label="Quick actions">
-            <Link className="mobile-header-action" href="/search" aria-label="Search MyNigeriaGuide">
+            <Link className="mobile-header-action" href="/search" prefetch={false} aria-label="Search MyNigeriaGuide">
               <NavIcon name="search" />
               <span>Search</span>
             </Link>
-            <Link className="mobile-header-action mobile-header-action-secondary" href="/saved" aria-label="Open saved items">
+            <Link className="mobile-header-action mobile-header-action-secondary" href="/saved" prefetch={false} aria-label="Open saved items">
               <NavIcon name="saved" />
               <span>Saved</span>
             </Link>
@@ -195,7 +195,7 @@ export function SiteHeader() {
           {mobileNavigation.map((item) => {
             const active = isMobileItemActive(pathname, item.href);
             return (
-              <Link key={item.href} href={item.href} className={active ? "is-current" : undefined} aria-current={active ? "page" : undefined}>
+              <Link key={item.href} href={item.href} prefetch={false} className={active ? "is-current" : undefined} aria-current={active ? "page" : undefined}>
                 <NavIcon name={item.icon} />
                 <span>{item.label}</span>
               </Link>
