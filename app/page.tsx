@@ -91,22 +91,22 @@ export default function HomePage() {
           </div>
 
           <nav className="home-paths" aria-label="Start with MyNigeriaGuide">
-            <Link href="/entertainment/movies" className="home-path home-path-movies">
+            <Link href="/entertainment/movies" prefetch={false} className="home-path home-path-movies">
               <span>Watch</span>
               <strong>Movies</strong>
               <small>Find Nigerian films and official places to watch.</small>
             </Link>
-            <Link href="/services" className="home-path home-path-services">
+            <Link href="/services" prefetch={false} className="home-path home-path-services">
               <span>Do</span>
               <strong>Services</strong>
               <small>Clear steps for documents, applications and everyday processes.</small>
             </Link>
-            <Link href="/explore" className="home-path home-path-tour">
+            <Link href="/explore" prefetch={false} className="home-path home-path-tour">
               <span>Go</span>
               <strong>Tour Nigeria</strong>
               <small>Discover cities, places, food, stays and practical trip details.</small>
             </Link>
-            <Link href="/jobs" className="home-path home-path-jobs">
+            <Link href="/jobs" prefetch={false} className="home-path home-path-jobs">
               <span>Work</span>
               <strong>Jobs & Careers</strong>
               <small>Track verified recruitment, deadlines, graduate programmes and employer career routes.</small>
