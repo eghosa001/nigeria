@@ -3,7 +3,7 @@
 .heading h2 { margin: 7px 0 12px; font-size: clamp(1.4rem, 2.25vw, 1.9rem); line-height: 1.25; }
 .heading p { color: var(--muted); line-height: 1.7; margin: 0 0 20px; }
 .cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
-.card { display: flex; flex-direction: column; gap: 10px; min-width: 0; padding: 21px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.card { display: flex; flex-direction: column; gap: 10px; min-width: 0; padding: 21px; border: 1px solid var(--line); border-radius: var(--editorial-radius, 14px); background: var(--surface); }
 .card h3 { margin: 0; font-size: 1.09rem; line-height: 1.35; }
 .card > p { margin: 0; line-height: 1.65; overflow-wrap: anywhere; }
 .checkpoint { padding: 13px 15px; border-left: 3px solid var(--green); background: var(--mint); border-radius: 6px; }
@@ -14,3 +14,5 @@
 .provenance { margin: 17px 0 0; color: var(--muted); font-size: .82rem; line-height: 1.65; }
 .provenance a { color: var(--green-dark); text-decoration: underline; }
 @media (max-width: 680px) { .section { padding-top: 18px; } .card { padding: 16px; } .checkpont { padding: 12px; } }
+
+:global(html[data-theme="light"]) .heading h2 { font-family: var(--editorial-display); letter-spacing: -.02em; }

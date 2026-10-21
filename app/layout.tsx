@@ -90,7 +90,7 @@ const themeBootstrap = `
     document.documentElement.dataset.themePreference = preference;
     document.documentElement.style.colorScheme = theme;
     document.querySelectorAll('meta[name="theme-color"]').forEach(function (themeColor) {
-      themeColor.setAttribute("content", theme === "dark" ? "#0b1410" : "#eee7d9");
+      themeColor.setAttribute("content", theme === "dark" ? "#0b1410" : "#f5f5f1");
     });
   } catch (_) {}
 })();
@@ -146,7 +146,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="color-scheme" content="light dark" />
-        <meta name="theme-color" content="#eee7d9" />
+        <meta name="theme-color" content="#f5f5f1" />
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
         <script dangerouslySetInnerHTML={{ __html: gaBootstrap }} />
         <script dangerouslySetInnerHTML={{ __html: adsenseBootstrap }} />

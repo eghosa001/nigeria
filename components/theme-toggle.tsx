@@ -37,7 +37,7 @@ function applyTheme(preference: ThemePreference) {
   document.documentElement.dataset.theme = theme;
   document.documentElement.dataset.themePreference = preference;
   document.documentElement.style.colorScheme = theme;
-  const browserColor = theme === "dark" ? "#0b1410" : "#eee7d9";
+  const browserColor = theme === "dark" ? "#0b1410" : "#f5f5f1";
   document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]').forEach((meta) => {
     if (meta.content !== browserColor) meta.content = browserColor;
   });
@@ -78,7 +78,7 @@ export function ThemeToggle() {
     // Next.js can append a second theme-color meta on client navigation.
     // Keep every published browser chrome colour aligned with the chosen mode.
     const headObserver = new MutationObserver(() => {
-      const expected = document.documentElement.dataset.theme === "dark" ? "#0b1410" : "#eee7d9";
+      const expected = document.documentElement.dataset.theme === "dark" ? "#0b1410" : "#f5f5f1";
       document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]').forEach((meta) => {
         if (meta.content !== expected) meta.content = expected;
       });
