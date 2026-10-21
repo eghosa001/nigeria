@@ -153,6 +153,12 @@ test.describe("live MyNigeriaGuide deployment", () => {
 
     await page.goto("/services/jamb-direct-entry-2026");
     await expect(page.getByRole("heading", { level: 1, name: /JAMB Direct Entry/i })).toBeVisible();
+    // Reviewed alternative routes are intentionally placed behind a disclosure
+    // to keep the service's step-by-step answer visible without duplication.
+    const alternateRoutes = page.locator(".service-extra-routes");
+    await expect(alternateRoutes.locator("summary")).toBeVisible();
+    await alternateRoutes.locator("summary").click();
+    await expect(alternateRoutes).toHaveAttribute("open", "");
     await expect(page.getByText("How to get this service", { exact: true })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Choose the correct application route" })).toBeVisible();
     await expect(page.locator('[data-journey-basis="individually-reviewed"]')).toBeVisible();
