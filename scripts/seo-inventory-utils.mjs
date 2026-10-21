@@ -34,7 +34,7 @@ export function mapSeoInventory(pages, summary, crawledAt, discovery = "sitemap"
       .filter((issue) => ["http-status", "missing-title-in-head", "missing-description",
         "missing-canonical", "invalid-canonical", "canonical-differs", "sitemap-noindex",
         "invalid-jsonld", "missing-head", "generic-og-title", "generic-twitter-title",
-        "og-url-differs"].includes(issue.code))
+        "og-url-differs", "indexable-url-absent-from-sitemap"].includes(issue.code))
       .map((issue) => issue.code);
     if (titleDuplicates.has(page.url)) reasons.push("duplicate-title");
     if (descriptionDuplicates.has(page.url)) reasons.push("duplicate-description");
