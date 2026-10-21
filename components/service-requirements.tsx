@@ -10,7 +10,7 @@ export function ServiceRequirements({ service }: { service: Service }) {
 
   return (
     <section id="requirements">
-      <span className="section-number" aria-hidden="true">01</span>
+      <span className="section-number" aria-hidden="true">02</span>
       <h2>Requirements for {service.shortTitle}</h2>
       <p className="guide-section-intro">
         Prepare the documents needed for the steps above. Formats are specified only where the official instructions support them.

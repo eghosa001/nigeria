@@ -6,7 +6,7 @@ export function ServiceSteps({ service }: { service: Service }) {
 
   return (
     <section id="steps">
-      <span className="section-number" aria-hidden="true">02</span>
+      <span className="section-number" aria-hidden="true">01</span>
       <h2>How to complete {service.shortTitle} step by step</h2>
       <p className="guide-section-intro">
         Follow these instructions in order. Use the requirements checklist below to prepare the documents, and check the official source before submitting.
@@ -14,7 +14,7 @@ export function ServiceSteps({ service }: { service: Service }) {
 
       <div className="detailed-steps">
         {steps.map((step, index) => (
-          <article className="detailed-step" key={step.instruction}>
+          <article id={"service-step-" + (index + 1)} className="detailed-step" key={step.instruction} style={{ scrollMarginTop: "148px" }}>
             <div className="detailed-step-heading">
               <span className="detailed-step-number">{String(index + 1).padStart(2, "0")}</span>
               <div>
