@@ -7,6 +7,9 @@ const host = new URL(base).host;
 const sitemapUrl = process.env.SEO_SITEMAP || base + "/sitemap-index.xml";
 const concurrency = Math.max(1, Math.min(8, Number(process.env.SEO_CONCURRENCY || 5)));
 const maxUrls = Math.max(0, Number(process.env.SEO_MAX_URLS || 0));
+// Zero means audit every discovered HTML destination. Operators may use a cap
+// for an explicit sampled run, which must be reported as incomplete.
+const maxLinkedUrls = Math.max(0, Number(process.env.SEO_LINKED_URL_LIMIT || 0));
 const output = process.env.SEO_REPORT_DIR || "seo-audit-results";
 const userAgent = "MyNigeriaGuide-SEOAuditBot/1.0 (+https://mynigeriaguide.com/about)";
 
@@ -196,6 +199,46 @@ async function main() {
   const missingSitemapLinks = new Map();
   for (const r of records) for (const link of r.internalLinks)
     if (!pages.has(link) && !missingSitemapLinks.has(link)) missingSitemapLinks.set(link, r.url);
+  // A sitemap is a publication signal, not a complete site inventory. Inspect
+  // every HTML destination linked from sitemap pages, including intentional
+  // noindex routes and inadvertently omitted canonical pages. Do not recurse
+  // beyond one hop or assume that linked URLs should automatically be indexed.
+  const htmlDestination = (url) => !/\\.(?:xml|json|txt|csv|pdf|png|jpe?g|gif|webp|svg|mp4|webm|ico|css|js)(?:$|\\?)/i.test(new URL(url).pathname);
+  const linkedUrls = [...missingSitemapLinks.keys()].filter(htmlDestination).sort();
+  const linkedTargets = maxLinkedUrls ? linkedUrls.slice(0, maxLinkedUrls) : linkedUrls;
+  const linkedRecords = new Array(linkedTargets.length);
+  let linkedCursor = 0, linkedFinished = 0;
+  await Promise.all(Array.from({ length: concurrency }, async () => {
+    while (linkedCursor < linkedTargets.length) {
+      const index = linkedCursor++, url = linkedTargets[index];
+      await sleep(180);
+      const response = await get(url);
+      const record = auditHtml(response.html, url, response.status, response.ms, response.finalUrl);
+      record.discovery = "internal-link";
+      record.foundFrom = missingSitemapLinks.get(url);
+      // A valid off-sitemap noindex is expected and must not be reported as
+      // the sitemap/noindex contradiction reserved for listed canonical pages.
+      record.issues = record.issues.filter((issue) =>
+        issue.code !== "sitemap-noindex" &&
+        !(issue.code === "canonical-differs" && !record.indexable));
+      if (response.error) record.issues.push({ code: "fetch-error", severity: "high", detail: response.error });
+      if (record.status === 200 && record.indexable && record.canonical === url) {
+        record.issues.push({
+          code: "indexable-url-absent-from-sitemap",
+          severity: "medium",
+          detail: "Public canonical linked from an audited sitemap page; review eligibility and sitemap inclusion."
+        });
+      }
+      linkedRecords[index] = record;
+      linkedFinished++;
+      if (linkedFinished % 100 === 0) console.log("Linked URL coverage " + linkedFinished + "/" + linkedTargets.length);
+    }
+  }));
+  const linkedProblems = linkedRecords.flatMap((record) =>
+    record.issues.map((issue) => ({ url: record.url, ...issue })));
+  const linkedIndexableCandidates = linkedRecords.filter((record) =>
+    record.status === 200 && record.indexable && record.canonical === record.url);
+
   const summary = {
     scannedAt: new Date().toISOString(), startSitemap: sitemapUrl, sitemaps: seen,
     discovered: all.length, audited: records.length, statusCodes: counts(records, "status"),
@@ -207,13 +250,29 @@ async function main() {
       p95: pctl(records.map((r) => r.durationMs), .95) },
     duplicateTitles: duplicates("title"), duplicateDescriptions: duplicates("description"),
     missingSitemapLinks: [...missingSitemapLinks.entries()].map(([url, from]) => ({ url, from })),
+    linkedDiscovery: {
+      discoveredHtmlUrls: linkedUrls.length, audited: linkedRecords.length,
+      truncated: linkedRecords.length < linkedUrls.length,
+      excludedNonHtml: missingSitemapLinks.size - linkedUrls.length,
+      statusCodes: counts(linkedRecords, "status"),
+      noindex: linkedRecords.filter((record) => !record.indexable).length,
+      indexableCanonicalCandidates: linkedIndexableCandidates.length,
+      reviewCandidates: linkedIndexableCandidates.map((record) => record.url),
+      issueInstances: linkedProblems.length, issuesByCode: counts(linkedProblems, "code"),
+    },
     sitemapErrors: errors
   };
   await writeFile(output + "/all-pages.json", JSON.stringify({ summary, pages: records }, null, 2));
+  await writeFile(output + "/linked-pages.json", JSON.stringify({
+    scannedAt: summary.scannedAt, discovery: summary.linkedDiscovery, pages: linkedRecords,
+  }, null, 2));
   // Every sitemap URL gets an audit row. No invented keywords or unattended
   // mass rewrite: the proposed value remains blank for pages needing review.
   const inventory = mapSeoInventory(records, summary, summary.scannedAt);
   await writeFile(output + "/metadata-inventory.csv", recordsToCsv(inventory));
+  await writeFile(output + "/linked-page-inventory.csv", recordsToCsv(
+    mapSeoInventory(linkedRecords, {}, summary.scannedAt, "internal-link")
+  ));
   const headline = [
     "# Full-sitemap SEO/HTTP crawl", "Generated: " + summary.scannedAt,
     "Scope: " + summary.audited + "/" + summary.discovered + " public sitemap URLs.",
@@ -225,6 +284,10 @@ async function main() {
     "Duplicate titles: " + summary.duplicateTitles.length + "; descriptions: " + summary.duplicateDescriptions.length,
     "Median / p95 response time (ms): " + JSON.stringify(summary.responseMs),
     "Out-of-sitemap link destinations (not necessarily broken): " + summary.missingSitemapLinks.length,
+    "Linked HTML destinations audited: " + summary.linkedDiscovery.audited + "/" + summary.linkedDiscovery.discoveredHtmlUrls,
+    "Linked noindex pages: " + summary.linkedDiscovery.noindex,
+    "Linked, indexable canonical pages absent from sitemap (review only): " + summary.linkedDiscovery.indexableCanonicalCandidates,
+    "Linked URL issue types: " + JSON.stringify(summary.linkedDiscovery.issuesByCode),
     "Sitemap errors: " + JSON.stringify(errors),
     "## First 150 high/critical issues",
     ...problems.filter((x) => x.severity === "high" || x.severity === "critical")
@@ -237,6 +300,7 @@ async function main() {
     discovered: summary.discovered, audited: summary.audited, statusCodes: summary.statusCodes,
     flaggedUrls: summary.flaggedUrls, issueInstances: summary.issueInstances,
     issuesByCode: summary.issuesByCode, responseMs: summary.responseMs,
+    linkedDiscovery: { ...summary.linkedDiscovery, reviewCandidates: summary.linkedDiscovery.reviewCandidates.slice(0, 25) },
     sitemapErrors: summary.sitemapErrors.length
   }));
   if (errors.length || records.some((r) => r.status === 0)) process.exitCode = 1;
