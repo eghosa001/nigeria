@@ -46,3 +46,43 @@ test("jobs expose route-specific OG and X tags; empty travel-place inventories d
   assert.match(explore, /guide\.kind === "city" && cityPlaces\.length > 0/);
   assert.match(crawler, /metadata-inventory\.csv/);
 });
+
+test("linked off-sitemap noindex pages remain distinguishable from missing canonical candidates", () => {
+  const linkedPages = [
+    {
+      url: "https://mynigeriaguide.com/agencies/aedc", status: 200, indexable: false,
+      title: "AEDC services", description: "Summary of AEDC services",
+      canonical: "https://mynigeriaguide.com/agencies/aedc", issues: [],
+    },
+    {
+      url: "https://mynigeriaguide.com/entertainment/special-film", status: 200, indexable: true,
+      title: "Special Film", description: "An original movie guide",
+      canonical: "https://mynigeriaguide.com/entertainment/special-film",
+      issues: [{ code: "indexable-url-absent-from-sitemap", severity: "medium" }],
+    },
+  ];
+  const rows = mapSeoInventory(linkedPages, {}, "2026-10-21", "internal-link");
+  assert.match(rows[0].indexing_eligibility, /off sitemap; noindex/);
+  assert.match(rows[1].indexing_eligibility, /off sitemap; indexing unverified/);
+  assert.doesNotMatch(rows[0].indexing_eligibility, /in sitemap/);
+  assert.equal(rows[1].new_title, "Special Film");
+});
+
+test("the crawler exports distinct linked-route evidence and retains the sitemap-only QA baseline", () => {
+  const source = readFileSync("scripts/audit-all-sitemap-urls.mjs", "utf8");
+  assert.match(source, /linked-page-inventory\.csv/);
+  assert.match(source, /linked-pages\.json/);
+  assert.match(source, /indexable-url-absent-from-sitemap/);
+  assert.match(source, /issue\.code !== "sitemap-noindex"/);
+  assert.match(source, /metadata-inventory\.csv/);
+});
+
+test("linked discovery audits HTML pages without misclassifying XML resources", () => {
+  const source = readFileSync("scripts/audit-all-sitemap-urls.mjs", "utf8");
+  const predicateLine = source.split("\n").find((line) => line.includes("const htmlDestination ="));
+  assert.ok(predicateLine);
+  const isHtml = new Function("URL", predicateLine + "\nreturn htmlDestination;")(URL);
+  assert.equal(isHtml("https://mynigeriaguide.com/agencies/aedc"), true);
+  assert.equal(isHtml("https://mynigeriaguide.com/updates.xml"), false);
+  assert.equal(isHtml("https://mynigeriaguide.com/site-icon.png"), false);
+});
