@@ -55,7 +55,7 @@ test("Oversabi Aunty routes viewers to evidenced Kava listing, not unavailable N
   assert.equal(movie.watchLinks[0].platform, "Kava");
   assert.equal(movie.watchLinks[0].href, "https://watch.kava.tv/oversabi-aunty");
   assert.equal(movie.watchLinks[0].lastChecked, "2026-10-20");
-  assert.ok(movie.references?.some(ref => ref.href === "https://www.netflix.com/ng/title/82741545" && /country-unavailable notice/i.test(ref.note ?? "")));
+  assert.ok(movie.references?.some(ref => ref.href === "https://www.netflix.com/tudum/top10/nigeria" && /historical ranking/i.test(ref.note ?? "")));
   assert.ok(movie.cast.length >= 3);
 });
 
