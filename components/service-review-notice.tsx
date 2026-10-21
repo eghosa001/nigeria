@@ -12,11 +12,11 @@ export function ServiceReviewNotice({ lastVerified }: { lastVerified: string }) 
   // visitors need a substantive stale-source warning.
   if (!review || review.state === "current") return null;
   return (
-    <aside className={"service-review-notice" + (review && review.state !== "current" ? " service-review-notice-due" : "")} aria-label="Source review information">
+    <aside className="service-review-notice service-review-notice-due" aria-label="Source review information">
       <strong>Source review: <time dateTime={lastVerified}>{lastVerified}</time></strong>
       <p>{review?.message ?? "This is when the guide's information was last reviewed against its cited sources, not the date of the latest website update."}</p>
       {review?.days != null && review.days >= 11 ? <small>{review.days} days since the recorded review. This does not mean the information has been proven incorrect.</small> : null}
-      {review && review.state !== "current" ? <a href="#official-sources">Check the cited official sources ↓</a> : null}
+      <a href="#official-sources">Check the cited official sources ↓</a>
     </aside>
   );
 }
