@@ -29,9 +29,9 @@ test("direct Jobs search and filter links still fetch their correct results on h
 
 test("component checks only the first hydrated query and retains interactive refresh", () => {
   const source = readFileSync(new URL("../components/jobs-directory.tsx", import.meta.url), "utf8");
-  assert.match(source, /const initialQueryChecked = useRef\\(false\\)/);
-  assert.match(source, /if \\(!initialQueryChecked\\.current\\)/);
-  assert.match(source, /needsInitialJobsQuery\\(\\{ query, sector, status, location, profession, page \\}, initialResult\\.page\\)/);
-  assert.match(source, /fetch\\("\\/api\\/jobs\\?" \\+ params\\.toString\\(\\)/);
-  assert.match(source, /setResult\\(next\\)/);
+  assert.ok(source.includes("const initialQueryChecked = useRef(false);"));
+  assert.ok(source.includes("if (!initialQueryChecked.current) {"));
+  assert.ok(source.includes("needsInitialJobsQuery({ query, sector, status, location, profession, page }, initialResult.page)"));
+  assert.ok(source.includes('fetch("/api/jobs?" + params.toString(), {'));
+  assert.ok(source.includes("setResult(next)"));
 });
