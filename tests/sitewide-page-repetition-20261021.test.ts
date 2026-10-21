@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { leadAlreadyStatesFee, uniqueIntroParagraphs } from "../lib/reader-content-dedup";
-import { findDuplicatePassages } from "../scripts/audit-reader-repetition";
+import { auditPublicCatalogues, findDuplicatePassages } from "../scripts/audit-reader-repetition";
 
 const read = (path: string) => readFileSync(path, "utf8");
 
@@ -60,4 +60,16 @@ test("all-pillar templates keep unique evidence while avoiding observed duplicat
   assert.ok(!jobs.includes('<div><small>Organisation</small><strong>{item.organization}</strong></div>'));
   assert.ok(nav.includes('disclosure.open = true'));
   assert.ok(nav.includes('["steps", "Steps"]'));
+});
+
+test("inventory all four content pillars and report remaining exact content repeats", () => {
+  const report = auditPublicCatalogues();
+  const expected = ["Services", "Tour Nigeria", "Movies & Entertainment", "Jobs & Careers"];
+  for (const pillar of expected) assert.ok(report.byPillar.some((row) => row.pillar === pillar && row.urls > 0), pillar);
+  assert.ok(report.uniqueCataloguedRoutes > 100);
+  console.log("REPETITION_SITEWIDE_INVENTORY " + JSON.stringify({
+    routes: report.uniqueCataloguedRoutes, sourceRecords: report.sourceRecordsInspected,
+    exactRepeatFindings: report.exactRepeatFindings, byPillar: report.byPillar,
+    topFindings: report.duplicates.slice(0, 8),
+  }));
 });
