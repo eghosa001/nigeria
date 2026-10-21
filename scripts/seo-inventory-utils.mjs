@@ -24,7 +24,7 @@ export function identifyPage(url) {
   return ["Sitewide", pathname === "/" ? "homepage" : "other"];
 }
 
-export function mapSeoInventory(pages, summary, crawledAt) {
+export function mapSeoInventory(pages, summary, crawledAt, discovery = "sitemap") {
   const duplicated = (key) => new Set((summary[key] || []).flatMap((group) => group.urls));
   const titleDuplicates = duplicated("duplicateTitles");
   const descriptionDuplicates = duplicated("duplicateDescriptions");
@@ -52,7 +52,10 @@ export function mapSeoInventory(pages, summary, crawledAt) {
       pillar,
       page_type: pageType,
       // This is a crawl eligibility assessment, not Google's actual indexed state.
-      indexing_eligibility: page.status !== 200 ? "HTTP error" : page.indexable ? "eligible in sitemap; indexing unverified" : "noindex in sitemap",
+      indexing_eligibility: page.status !== 200 ? "HTTP error" :
+        discovery === "sitemap"
+          ? (page.indexable ? "eligible in sitemap; indexing unverified" : "noindex in sitemap")
+          : (page.indexable ? "linked off sitemap; indexing unverified" : "linked off sitemap; noindex"),
       http_status: page.status,
       previous_title: page.title || "",
       new_title: titleNeedsReview ? "" : page.title || "",
@@ -72,7 +75,7 @@ export function mapSeoInventory(pages, summary, crawledAt) {
       twitter_description: page.twitterDescription || "",
       twitter_image: page.twitterImage || "",
       schema_types: (page.schema?.types || []).join("; "),
-      source_evidence: "HTTP crawl " + crawledAt,
+      source_evidence: (discovery === "sitemap" ? "Sitemap + HTTP crawl " : "Internal-link discovery + HTTP crawl ") + crawledAt,
       reason_for_modification: reasons.join("; ") || "No automated metadata defect; retain pending performance review",
       validation_status: requiresReview ? "review required" : "automated crawl passed",
       deployment_status: "unchanged (snapshot)"
