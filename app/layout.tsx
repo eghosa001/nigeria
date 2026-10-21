@@ -89,8 +89,9 @@ const themeBootstrap = `
     document.documentElement.dataset.theme = theme;
     document.documentElement.dataset.themePreference = preference;
     document.documentElement.style.colorScheme = theme;
-    var themeColor = document.querySelector('meta[name="theme-color"]');
-    if (themeColor) themeColor.setAttribute("content", theme === "dark" ? "#0b1410" : "#eee7d9");
+    document.querySelectorAll('meta[name="theme-color"]').forEach(function (themeColor) {
+      themeColor.setAttribute("content", theme === "dark" ? "#0b1410" : "#eee7d9");
+    });
   } catch (_) {}
 })();
 `;
