@@ -1,4 +1,4 @@
-test("phone shell fits and keeps admin out of public navigation without hydration errors", async ({ page }) => {
+test("phone shell fits and keeps admin out of public navigation without hydration errors", async ({ page }, testInfo) => {
   await page.setViewportSize({ width: 360, height: 800 });
   const hydrationErrors: string[] = [];
   const capture = (message: string) => {
@@ -24,6 +24,7 @@ test("phone shell fits and keeps admin out of public navigation without hydratio
   expect(hydrationErrors).toEqual([]);
 
   // Owner-requested visual audit; temporary capture, not production test logic.
+  if (testInfo.project.name === "desktop") {
   for (const viewport of [{ width: 390, height: 800 }, { width: 1280, height: 820 }]) {
     await page.setViewportSize(viewport);
     for (const [label, route] of [
@@ -38,7 +39,7 @@ test("phone shell fits and keeps admin out of public navigation without hydratio
       ["movie-detail", "/entertainment/movies/tele-x-zikora-2026"],
     ] as const) {
       try {
-        await page.goto("https://mynigeriaguide.com" + route, { waitUntil: "domcontentloaded", timeout: 45000 });
+        await page.goto("http://127.0.0.1:3000" + route, { waitUntil: "domcontentloaded", timeout: 45000 });
         await page.evaluate(() => {
           document.documentElement.dataset.theme = "light";
         });
@@ -49,6 +50,9 @@ test("phone shell fits and keeps admin out of public navigation without hydratio
           headline: document.querySelector("main h1")?.textContent?.slice(0, 60) ?? "",
           bg: getComputedStyle(document.body).backgroundColor,
           headingFont: document.querySelector("main h1") ? getComputedStyle(document.querySelector("main h1")!).fontFamily : "",
+          jobPanelBg: document.querySelector(".jobs-trust-panel") ? getComputedStyle(document.querySelector(".jobs-trust-panel")!).backgroundColor : null,
+          tourShortcutGrid: document.querySelector(".tour-compact-hero .primary-shortcuts") ? getComputedStyle(document.querySelector(".tour-compact-hero .primary-shortcuts")!).gridTemplateColumns : null,
+          movieTitleBeforeArt: document.querySelector(".movie-detail-copy") && document.querySelector(".movie-detail-artwork") ? document.querySelector(".movie-detail-copy")!.getBoundingClientRect().top < document.querySelector(".movie-detail-artwork")!.getBoundingClientRect().top : null,
         }));
         const screenshot = await page.screenshot({
           type: "jpeg", quality: 38, scale: "css", animations: "disabled", caret: "hide", fullPage: false,
@@ -58,6 +62,7 @@ test("phone shell fits and keeps admin out of public navigation without hydratio
         console.log("MNG_VISUAL_ERROR|" + viewport.width + "|" + label + "|" + String(error).slice(0, 200));
       }
     }
+  }
   }
 });
 
