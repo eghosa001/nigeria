@@ -71,3 +71,15 @@ test("all film preview surfaces use the same actor source, including metadata on
   assert.match(entertainment, /leadMovieCast\(title, 2\)/);
   assert.doesNotMatch(entertainment, /getFeaturedCast\(title\)/);
 });
+
+test("high-impression Royal Arts full-video guide leads to its matching sourced film credits", () => {
+  const video = src("app/entertainment/youtube/[videoId]/page.tsx");
+  const film = src("app/entertainment/movies/[slug]/page.tsx");
+  assert.ok(entertainmentTitles.some((title) => title.slug === "forever-isnt-long-enough-2025"));
+  assert.ok(video.includes('movie.videoId === "y2RkBwUYSvo"'));
+  assert.ok(video.includes('href="/entertainment/movies/forever-isnt-long-enough-2025#cast"'));
+  assert.ok(film.includes('<section id="cast">'), "linked cast section must exist");
+  assert.ok(video.includes('"y2RkBwUYSvo": { title: "Watch Forever Isn\'t Long Enough'));
+  assert.ok(!video.includes('canonical: "/entertainment/movies/forever-isnt-long-enough-2025"'),
+    "video/watch and editorial pages retain their distinct canonical purposes");
+});
