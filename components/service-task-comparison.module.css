@@ -24,3 +24,10 @@
   .card { padding: 16px; }
   .intro p { font-size: .92rem; }
 }
+
+/* Status remains legible on dark surfaces without the bright yellow chip. */
+:global(html[data-theme="dark"]) .caution {
+  background: var(--amber-bg);
+  color: #f0d9a7;
+  border: 1px solid #5a4726;
+}
