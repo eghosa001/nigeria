@@ -21,14 +21,29 @@ test("root layout loads just the lightweight recent-page tracker, never the save
 
 test("PostHog stays dynamically imported and starts in an idle period with a bounded fallback", () => {
   const script = source("components/posthog-analytics.tsx");
-  assert.match(script, /window\.requestIdleCallback\(capture, \{ timeout: 1250 \}\)/);
+  assert.match(script, /window\.requestIdleCallback\(capture, \{ timeout: 2500 \}\)/);
   assert.match(script, /shouldEnableAnalytics\(pathname, navigator\.webdriver, navigator\.userAgent, window\.location\.hostname\)/,
     "do not download analytics on admin, preview, or test routes");
-  assert.match(script, /window\.setTimeout\(capture, 350\)/);
+  assert.match(script, /window\.setTimeout\(capture, 750\)/);
   assert.match(script, /window\.cancelIdleCallback\(idleId\)/);
   assert.match(script, /import\("@\/lib\/posthog-client"\)/);
   assert.match(script, /capturePostHogPageView\(pathname\)/);
   assert.doesNotMatch(script, /^import .*from "posthog-js"/m);
   assert.match(source("app/layout.tsx"), /dangerouslySetInnerHTML=\{\{ __html: gaBootstrap \}\}/,
     "GA4 initialization must remain unchanged");
+});
+
+test("optional GA4 and AdSense remain non-blocking without losing queued initial pageviews", () => {
+  const layout = source("app/layout.tsx");
+  const ga = layout.split("const gaBootstrap =")[1]?.split("const adsenseBootstrap =")[0] || "";
+  const ads = layout.split("const adsenseBootstrap =")[1]?.split("const themeBootstrap =")[0] || "";
+  assert.match(ga, /window\.gtag\("config", id,/);
+  assert.ok(ga.indexOf('window.gtag("config", id,') < ga.indexOf("var loadAnalytics = function"), "queue the first pageview before deferred fetch");
+  assert.match(ga, /document\.addEventListener\("DOMContentLoaded", scheduleAnalytics, \{ once: true \}\)/);
+  assert.match(ga, /requestIdleCallback\(loadAnalytics, \{ timeout: 950 \}\)/);
+  assert.match(ga, /window\.setTimeout\(loadAnalytics, 350\)/);
+  assert.match(ga, /allowedHosts/);
+  assert.match(ads, /script\.src = "https:\/\/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=/);
+  assert.match(ads, /script\.fetchPriority = "low"/);
+  assert.match(ads, /script\.async = true/);
 });
