@@ -171,7 +171,7 @@ export default function HomePage() {
             {movieHighlights.map((title) => (
               <article className="minimal-movie-card movie-card-clickable" key={title.slug}>
                 <Link className="movie-card-hitarea" href={"/entertainment/movies/" + title.slug} aria-label={"View details for " + title.title} />
-                <Link href={"/entertainment/movies/" + title.slug} aria-label={"Open " + title.title}>
+                <Link href={"/entertainment/movies/" + title.slug}>
                   <EntertainmentArtwork title={title} showSourceLink={false} />
                 </Link>
                 <div className="minimal-movie-card-copy">
