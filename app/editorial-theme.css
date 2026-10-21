@@ -502,6 +502,77 @@ html[data-theme="light"] :where(input, select, textarea) { color-scheme: light; 
   html[data-theme="light"] .home-path:hover { transform: none; }
 }
 
+/* Cinema catalogue receives the same readable light information density.
+   Preserve artwork, thumbnails, dark-on-image credits and the dark film shelf. */
+html[data-theme="light"] .movie-catalog-section :where(
+  .movie-tile-meta, .youtube-movie-meta, .movie-tile-description,
+  .movie-tile-footer, .movie-tile-meta span:last-child,
+  .youtube-movie-cast, .youtube-movie-publisher, .movie-load-more small,
+  .movie-pagination
+) { color: var(--editorial-muted); }
+html[data-theme="light"] .movie-catalog-section .movie-card-cast {
+  color: var(--editorial-muted) !important;
+}
+html[data-theme="light"] .movie-catalog-section .movie-card-cast strong {
+  color: var(--editorial-ink);
+}
+html[data-theme="light"] .movie-catalog-section :where(
+  .movie-tile-footer a, .movie-pagination a
+) { color: var(--editorial-action); }
+html[data-theme="light"] .movie-catalog-section :where(
+  .youtube-movie-card, .movie-empty-state, .movie-review-note
+) {
+  background: var(--editorial-paper);
+  color: var(--editorial-ink);
+  border: 1px solid var(--editorial-rule);
+  border-radius: var(--editorial-radius);
+}
+html[data-theme="light"] .movie-catalog-section :where(
+  .movie-empty-state p, .movie-review-note p
+) { color: var(--editorial-muted); }
+html[data-theme="light"] .movie-catalog-section .movie-load-more button {
+  border: 1px solid var(--editorial-rule);
+  background: var(--editorial-paper);
+  color: var(--editorial-action);
+  border-radius: 7px;
+}
+html[data-theme="light"] .movie-catalog-section .movie-pagination a {
+  border: 1px solid var(--editorial-rule);
+  background: var(--editorial-paper);
+  border-radius: 7px;
+}
+html[data-theme="light"] .movie-catalog-section .youtube-movie-meta span:first-child {
+  color: var(--editorial-ochre);
+}
+html[data-theme="light"] .movie-browse-hero .section-quick-search label > span {
+  color: var(--editorial-muted);
+}
+html[data-theme="light"] .movie-browse-hero .section-quick-search input::placeholder {
+  color: #687a74;
+}
+html[data-theme="light"] .feature-quickstart {
+  background: var(--editorial-tint);
+  border-color: var(--editorial-rule);
+  color: var(--editorial-ink);
+}
+html[data-theme="light"] :where(
+  .feature-quickstart-links a, .feature-guide-jump a,
+  .feature-guide-actions a, .trip-budget-actions a, .job-watch-actions button
+) {
+  background: var(--editorial-paper);
+  color: var(--editorial-action);
+  border: 1px solid var(--editorial-rule);
+  border-radius: 7px;
+}
+html[data-theme="light"] :where(
+  .feature-quickstart-links a:hover, .feature-guide-jump a:hover,
+  .feature-guide-actions a:hover
+) { background: var(--editorial-tint); border-color: var(--editorial-action); }
+html[data-theme="light"] :where(
+  .movie-catalog-section .movie-tile h3 a,
+  .movie-catalog-section .youtube-movie-card h3 a
+):hover { color: var(--editorial-rust); }
+
 /* Keep the existing dark palette. Fix light-only components and native controls
    that were slipping past the old theme's list of surface overrides. */
 html[data-theme="dark"] :where(
