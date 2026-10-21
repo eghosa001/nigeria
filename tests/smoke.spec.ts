@@ -818,3 +818,47 @@ test("editorial light and dark themes fit representative routes on phones and de
     metas.length > 0 && metas.every((meta) => meta.getAttribute("content") === "#f5f5f1"),
   )).toBe(true);
 });
+
+/* Temporary production viewport screenshots for owner-requested visual review.
+ * This test will be removed once screenshots have been inspected.
+ */
+test("owner-requested visual audit of production light-mode templates", async ({ page }, testInfo) => {
+  const isMobile = testInfo.project.name.includes("mobile");
+  await page.setViewportSize(isMobile ? { width: 390, height: 800 } : { width: 1280, height: 820 });
+  await page.emulateMedia({ colorScheme: "light", reducedMotion: "reduce" });
+  for (const [label, route] of [
+    ["home", "/"],
+    ["services", "/services"],
+    ["movies", "/entertainment/movies"],
+    ["tour", "/explore"],
+    ["jobs", "/jobs"],
+    ["service-detail", "/services/jamb-direct-entry-2026"],
+    ["job-detail", "/jobs/nigerian-army-92rri-2026"],
+    ["tour-detail", "/explore/benin-city"],
+    ["movie-detail", "/entertainment/movies/tele-x-zikora-2026"],
+  ] as const) {
+    await page.goto("https://mynigeriaguide.com" + route, { waitUntil: "domcontentloaded", timeout: 45000 });
+    await page.evaluate(() => {
+      localStorage.setItem("mng-theme", "light");
+      document.documentElement.dataset.theme = "light";
+    });
+    await page.waitForTimeout(500);
+    const metadata = await page.evaluate(() => {
+      const root = document.documentElement;
+      const title = document.querySelector("main h1");
+      return {
+        mode: root.dataset.theme,
+        horizontalOverflow: root.scrollWidth - innerWidth,
+        heading: title?.textContent?.slice(0, 90) ?? "",
+        pageBackground: getComputedStyle(document.body).backgroundColor,
+        h1Font: title ? getComputedStyle(title).fontFamily : "",
+        h1Size: title ? getComputedStyle(title).fontSize : "",
+      };
+    });
+    const jpg = await page.screenshot({
+      type: "jpeg", quality: 39, scale: "css", animations: "disabled",
+      caret: "hide", fullPage: false,
+    });
+    console.log("MNG_VISUAL_AUDIT|" + (isMobile ? "mobile" : "desktop") + "|" + label + "|" + JSON.stringify(metadata) + "|" + jpg.toString("base64"));
+  }
+});
