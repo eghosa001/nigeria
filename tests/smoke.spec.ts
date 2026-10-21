@@ -1,4 +1,4 @@
-test("phone shell fits and keeps admin out of public navigation without hydration errors", async ({ page }, testInfo) => {
+test("phone shell fits and keeps admin out of public navigation without hydration errors", async ({ page }) => {
   await page.setViewportSize({ width: 360, height: 800 });
   const hydrationErrors: string[] = [];
   const capture = (message: string) => {
@@ -23,47 +23,6 @@ test("phone shell fits and keeps admin out of public navigation without hydratio
 
   expect(hydrationErrors).toEqual([]);
 
-  // Owner-requested visual audit; temporary capture, not production test logic.
-  if (testInfo.project.name === "desktop") {
-  for (const viewport of [{ width: 390, height: 800 }, { width: 1280, height: 820 }]) {
-    await page.setViewportSize(viewport);
-    for (const [label, route] of [
-      ["home", "/"],
-      ["services", "/services"],
-      ["movies", "/entertainment/movies"],
-      ["tour", "/explore"],
-      ["jobs", "/jobs"],
-      ["service-detail", "/services/jamb-direct-entry-2026"],
-      ["job-detail", "/jobs/nigerian-army-92rri-2026"],
-      ["tour-detail", "/explore/benin-city"],
-      ["movie-detail", "/entertainment/movies/tele-x-zikora-2026"],
-    ] as const) {
-      try {
-        await page.goto("http://127.0.0.1:3000" + route, { waitUntil: "domcontentloaded", timeout: 45000 });
-        await page.evaluate(() => {
-          document.documentElement.dataset.theme = "light";
-        });
-        await page.waitForTimeout(300);
-        const meta = await page.evaluate(() => ({
-          theme: document.documentElement.dataset.theme,
-          overflow: document.documentElement.scrollWidth - innerWidth,
-          headline: document.querySelector("main h1")?.textContent?.slice(0, 60) ?? "",
-          bg: getComputedStyle(document.body).backgroundColor,
-          headingFont: document.querySelector("main h1") ? getComputedStyle(document.querySelector("main h1")!).fontFamily : "",
-          jobPanelBg: document.querySelector(".jobs-trust-panel") ? getComputedStyle(document.querySelector(".jobs-trust-panel")!).backgroundColor : null,
-          tourShortcutGrid: document.querySelector(".tour-compact-hero .primary-shortcuts") ? getComputedStyle(document.querySelector(".tour-compact-hero .primary-shortcuts")!).gridTemplateColumns : null,
-          movieTitleBeforeArt: document.querySelector(".movie-detail-copy") && document.querySelector(".movie-detail-artwork") ? document.querySelector(".movie-detail-copy")!.getBoundingClientRect().top < document.querySelector(".movie-detail-artwork")!.getBoundingClientRect().top : null,
-        }));
-        const screenshot = await page.screenshot({
-          type: "jpeg", quality: 38, scale: "css", animations: "disabled", caret: "hide", fullPage: false,
-        });
-        console.log("MNG_VISUAL_AUDIT|" + viewport.width + "|" + label + "|" + JSON.stringify(meta) + "|" + screenshot.toString("base64"));
-      } catch (error) {
-        console.log("MNG_VISUAL_ERROR|" + viewport.width + "|" + label + "|" + String(error).slice(0, 200));
-      }
-    }
-  }
-  }
 });
 
 import { expect, test } from "@playwright/test";
@@ -792,6 +751,31 @@ test("editorial light and dark themes fit representative routes on phones and de
         .evaluate((node) => getComputedStyle(node).backgroundColor);
       expect(cinemaCatalogueBg, "movie catalogue must be light").toBe("rgb(255, 255, 255)");
     }
+    if (route === "/jobs") {
+      const trustPanel = await page.locator(".jobs-trust-panel").evaluate((node) => ({
+        background: getComputedStyle(node).backgroundColor,
+        ink: getComputedStyle(node).color,
+      }));
+      expect(trustPanel.background, "jobs verification panel is a light paper card").toBe("rgb(255, 255, 255)");
+      expect(trustPanel.ink, "jobs verification panel uses readable ink").toBe("rgb(28, 43, 43)");
+    }
+    if (route === "/explore") {
+      const shortcuts = page.locator(".tour-compact-hero .primary-shortcuts");
+      const layout = await shortcuts.evaluate((node) => ({
+        columns: getComputedStyle(node).gridTemplateColumns.split(" ").length,
+        firstLinkHeight: node.querySelector("a")?.getBoundingClientRect().height ?? 0,
+      }));
+      expect(layout.columns, "tour shortcuts have structured navigation").toBe(mobileProject ? 2 : 3);
+      expect(layout.firstLinkHeight, "tour navigation has accessible targets").toBeGreaterThanOrEqual(44);
+    }
+  }
+  await page.goto("/entertainment/movies/tele-x-zikora-2026", { waitUntil: "domcontentloaded" });
+  if (mobileProject) {
+    const positions = await page.evaluate(() => ({
+      title: document.querySelector(".movie-detail-copy h1")!.getBoundingClientRect().top,
+      poster: document.querySelector(".movie-detail-artwork")!.getBoundingClientRect().top,
+    }));
+    expect(positions.title, "mobile film title must be visible before the tall poster").toBeLessThan(positions.poster);
   }
   await page.goto("/", { waitUntil: "domcontentloaded" });
 
