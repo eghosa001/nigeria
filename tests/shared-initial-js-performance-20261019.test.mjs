@@ -47,3 +47,11 @@ test("optional GA4 and AdSense remain non-blocking without losing queued initial
   assert.match(ads, /script\.fetchPriority = "low"/);
   assert.match(ads, /script\.async = true/);
 });
+
+test("mobile navigation avoids unsolicited initial prefetch of unrelated sections", () => {
+  const header = source("components/site-header.tsx");
+  assert.match(header, /href="\/search" prefetch=\{false\}/);
+  assert.match(header, /href="\/saved" prefetch=\{false\}/);
+  assert.match(header, /href=\{item\.href\} prefetch=\{false\} className=\{active/);
+  assert.match(header, /mobileNavigation\.map/);
+});
