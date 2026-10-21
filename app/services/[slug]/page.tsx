@@ -15,7 +15,6 @@ import { getServiceScenarioDossier } from "@/lib/service-scenario-dossiers-2026-
 import { ServiceRequirements } from "@/components/service-requirements";
 import { ServiceSteps } from "@/components/service-steps";
 import { ProcessTracker } from "@/components/process-tracker";
-import { ServiceStatusStrip } from "@/components/service-status-strip";
 import { ServiceReviewNotice } from "@/components/service-review-notice";
 import { ServiceSearchAnswers } from "@/components/service-search-answers";
 import { ForeignVisaFaqs } from "@/components/foreign-visa-faqs";
@@ -30,6 +29,7 @@ import { getRelatedServices, getRelatedServiceReason } from "@/lib/internal-link
 import { getServiceSearchAnswers } from "@/lib/search-answers";
 import { hasExplicitServiceGuidance } from "@/lib/service-guidance";
 import { getSiteUrl } from "@/lib/site";
+import { leadAlreadyStatesFee } from "@/lib/reader-content-dedup";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -125,6 +125,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       : undefined;
 
   const agency = getAgency(service.agencySlug);
+  const feeInSummary = leadAlreadyStatesFee(service.summary, service.feeLabel);
   const related = getRelatedServices(service, 6);
   const topicHubs = getGrowthHubsForService(service.slug).slice(0, 2);
   const topicSearches = topicHubs
@@ -207,9 +208,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <ShareWatch slug={service.slug} title={service.title} feeLabel={service.feeLabel} lastVerified={service.lastVerified} />
             </div>
             <aside className="fee-card">
-              <span>Current fee / status · checked {service.lastVerified}</span>
-              <strong>{service.feeLabel}</strong>
-              {service.feeNote ? <p>{service.feeNote}</p> : null}
+              <span>{feeInSummary ? "Official service route" : "Current fee / status"}</span>
+              {!feeInSummary ? (
+                <>
+                  <strong>{service.feeLabel}</strong>
+                  {service.feeNote ? <p>{service.feeNote}</p> : null}
+                </>
+              ) : service.feeNote ? (
+                <details className="compact-disclosure">
+                  <summary>Fee exceptions and payment notes</summary>
+                  <p>{service.feeNote}</p>
+                </details>
+              ) : null}
               {primaryOfficialLink ? (
                 <a className="button official-service-link" href={primaryOfficialLink.url} target="_blank" rel="noreferrer">
                   {primaryOfficialLink.label}
@@ -218,7 +228,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <small>{service.feeLabel.trim().toUpperCase() === "FREE" ? "Basic application is free; do not pay unofficial agents." : "MyNigeriaGuide does not collect service fees."}</small>
             </aside>
           </div>
-          <ServiceStatusStrip service={service} />
           <ServiceReviewNotice lastVerified={service.lastVerified} />
           {(service.slug === "cac-business-name-registration" || service.slug === "cac-company-registration") ? (
             <section className="service-topic-links" aria-label="Choose the correct CAC registration">
@@ -258,17 +267,30 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <article className="guide-content">
             <GuideQuickNav showQuickAnswers={searchAnswers.length > 0} showAftercare={hasExplicitServiceGuidance(service.slug)} showScenarios={getServiceScenarioDossier(service).length > 0} />
 
-            <ServiceJourney service={service} />
-
-            <ServiceScenarios service={service} />
-
-            <ServiceContext service={service} />
+            <ServiceSteps service={service} />
 
             <ServiceRequirements service={service} />
 
-            <ServiceSteps service={service} />
+            <details className="compact-disclosure service-extra-routes">
+              <summary>Alternative application routes and troubleshooting</summary>
+              <ServiceJourney service={service} />
+            </details>
 
-            <ServiceAftercare service={service} />
+            <ServiceContext service={service} />
+
+            {getServiceScenarioDossier(service).length > 0 ? (
+              <details className="compact-disclosure service-extra-cases">
+                <summary>Special cases and other options</summary>
+                <ServiceScenarios service={service} />
+              </details>
+            ) : null}
+
+            {hasExplicitServiceGuidance(service.slug) ? (
+              <details className="compact-disclosure service-extra-aftercare">
+                <summary>What to do after applying</summary>
+                <ServiceAftercare service={service} />
+              </details>
+            ) : null}
 
             <ProcessTracker service={service} />
 
