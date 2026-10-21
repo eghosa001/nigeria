@@ -14,6 +14,7 @@ import { ServiceScenarios } from "@/components/service-scenarios";
 import { getServiceScenarioDossier } from "@/lib/service-scenario-dossiers-2026-10-17";
 import { ServiceRequirements } from "@/components/service-requirements";
 import { ServiceSteps } from "@/components/service-steps";
+import { ServiceIntentShortcuts } from "@/components/service-intent-shortcuts";
 import { ProcessTracker } from "@/components/process-tracker";
 import { ServiceReviewNotice } from "@/components/service-review-notice";
 import { ServiceSearchAnswers } from "@/components/service-search-answers";
@@ -268,6 +269,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div className="container guide-layout">
           <article className="guide-content">
             <GuideQuickNav showQuickAnswers={searchAnswers.length > 0} showAftercare={hasAftercare} showScenarios={getServiceScenarioDossier(service).length > 0} />
+
+            <ServiceIntentShortcuts service={service} />
 
             <ServiceSteps service={service} />
 
