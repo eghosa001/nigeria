@@ -41,7 +41,7 @@ html[data-theme="light"] {
   --editorial-action: #17493f;
   --editorial-rust: #a44c38;
   --editorial-slate: #40617b;
-  --editorial-ochre: #966a2f;
+  --editorial-ochre: #875d27;
   --editorial-display: "Iowan Old Style", "Baskerville", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --editorial-radius: 10px;
   --editorial-max-measure: 68ch;
@@ -179,7 +179,7 @@ html[data-theme="light"] .home-path {
 html[data-theme="light"] .home-path + .home-path { border-left: 1px solid var(--editorial-rule); }
 html[data-theme="light"] .home-path:nth-child(1) { --pillar-accent: #a44c38; }
 html[data-theme="light"] .home-path:nth-child(2) { --pillar-accent: #225d50; }
-html[data-theme="light"] .home-path:nth-child(3) { --pillar-accent: #966a2f; }
+html[data-theme="light"] .home-path:nth-child(3) { --pillar-accent: #875d27; }
 html[data-theme="light"] .home-path:nth-child(4) { --pillar-accent: #40617b; }
 html[data-theme="light"] .home-path::after {
   content: "↗"; position: absolute; top: 19px; right: 18px;
@@ -268,7 +268,7 @@ html[data-theme="light"] .services-directory-page {
   min-height: 0;
   padding-top: clamp(42px, 5vw, 70px);
 }
-html[data-theme="light"] .tour-compact-hero { border-top: 3px solid #966a2f; }
+html[data-theme="light"] .tour-compact-hero { border-top: 3px solid #875d27; }
 html[data-theme="light"] .jobs-hero { border-top: 3px solid #40617b; }
 html[data-theme="light"] .movie-browse-hero {
   border-top: 3px solid #a44c38;
@@ -279,7 +279,7 @@ html[data-theme="light"] .movie-browse-heading h1 {
   letter-spacing: -.045em; color: var(--editorial-ink);
 }
 html[data-theme="light"] .services-directory-page .eyebrow { color: #225d50; }
-html[data-theme="light"] .tour-compact-hero .eyebrow { color: #966a2f; }
+html[data-theme="light"] .tour-compact-hero .eyebrow { color: #875d27; }
 html[data-theme="light"] .jobs-hero .eyebrow { color: #40617b; }
 html[data-theme="light"] .movie-browse-hero .eyebrow { color: #a44c38; }
 html[data-theme="light"] .movie-browse-hero :where(.breadcrumbs ol, .breadcrumbs a) {
