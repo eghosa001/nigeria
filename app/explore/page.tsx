@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/json-ld";
 import { ExplorePlaceDirectory } from "@/components/explore-place-directory";
 import { exploreGuides } from "@/lib/explore";
 import { getUpcomingEventGuides } from "@/lib/explore-event-featured";
-import { explorePlaces } from "@/lib/explore-places";
+import { publicExplorePlaceDirectory } from "@/lib/explore-directory-payload";
 import { getSiteUrl } from "@/lib/site";
 import { destinationPhotos, destinationPhotoUrls } from "@/lib/destination-photos";
 
@@ -73,6 +73,15 @@ export default function ExplorePage() {
   const featuredDestinations = ["yankari-game-reserve","obudu-mountain-resort","erin-ijesha-waterfall","gashaka-gumti-national-park","anambra-heritage-circuit","zuma-rock-gurara-falls","ekiti-nature-circuit","delta-state-travel-guide"]
     .flatMap((slug) => destinations.filter((guide) => guide.slug === slug));
   const currentEvents = getUpcomingEventGuides(exploreGuides);
+  // Preserve the original destination-first ranking while sending only eight
+  // directory rows in initial HTML/RSC instead of hydrating the full catalogue.
+  const guidePriority = new Map(exploreGuides.map((guide) => [guide.slug, guide.kind]));
+  const priority = { destination: 0, city: 1, itinerary: 2, event: 3 } as const;
+  const initialDirectoryPlaces = [...publicExplorePlaceDirectory]
+    .sort((first, second) =>
+      priority[guidePriority.get(first.guideSlug) ?? "event"] -
+      priority[guidePriority.get(second.guideSlug) ?? "event"])
+    .slice(0, 8);
   const base = getSiteUrl();
 
   const collectionLd = {
@@ -82,10 +91,13 @@ export default function ExplorePage() {
     description: "Practical travel guides for Nigerian cities, destinations and short trips.",
     url: base + "/explore",
     isPartOf: { "@type": "WebSite", name: "MyNigeriaGuide", url: base },
+    // The complete set is already discoverable through the HTML guide links
+    // and sitemap. Keep the structured list specific to visible highlights.
     mainEntity: {
       "@type": "ItemList",
-      numberOfItems: exploreGuides.length,
-      itemListElement: exploreGuides.map((guide, index) => ({
+      name: "Featured Nigerian destinations",
+      numberOfItems: featuredDestinations.length,
+      itemListElement: featuredDestinations.map((guide, index) => ({
         "@type": "ListItem",
         position: index + 1,
         name: guide.title,
@@ -112,7 +124,7 @@ export default function ExplorePage() {
           </form>
           <div className="minimal-inline-links primary-shortcuts" aria-label="Tour Nigeria shortcuts">
             <a href="#featured-destinations">Featured destinations</a>
-            <a href="#places">{explorePlaces.length} mapped places</a>
+            <a href="#places">{publicExplorePlaceDirectory.length} mapped places</a>
             <Link href="/explore/nigeria-landmarks-places-to-visit">Top places in Nigeria</Link>
             <Link href="/explore/nigerian-museum-collections-guide">Museum artefacts &amp; digital collections</Link>
             <a href="#browse-guides">Browse Nigeria</a>
@@ -203,18 +215,8 @@ export default function ExplorePage() {
             </div>
           </div>
           <ExplorePlaceDirectory
-            places={explorePlaces.map((place) => ({
-              slug: place.slug,
-              guideSlug: place.guideSlug,
-              name: place.name,
-              kind: place.kind,
-              area: place.area,
-              address: place.address,
-              summary: place.summary,
-              cost: place.cost,
-              mapQuery: place.mapQuery,
-              tags: place.tags,
-            }))}
+            places={initialDirectoryPlaces}
+            totalCount={publicExplorePlaceDirectory.length}
             guides={exploreGuides.map((guide) => ({ slug: guide.slug, shortTitle: guide.shortTitle, kind: guide.kind }))}
           />
         </div>

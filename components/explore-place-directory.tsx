@@ -34,11 +34,51 @@ function googleMapsUrl(place: ExploreDirectoryPlace) {
 
 const PAGE_SIZE = 8;
 
-export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirectoryPlace[]; guides: GuideSummary[] }) {
+export function ExplorePlaceDirectory({ places, guides, totalCount }: {
+  places: ExploreDirectoryPlace[];
+  guides: GuideSummary[];
+  totalCount: number;
+}) {
   const [query, setQuery] = useState("");
   const [kind, setKind] = useState<ExplorePlaceKind | "all">("all");
   const [guide, setGuide] = useState("all");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [allPlaces, setAllPlaces] = useState<ExploreDirectoryPlace[] | null>(null);
+  const [catalogLoading, setCatalogLoading] = useState(false);
+  const [catalogError, setCatalogError] = useState(false);
+  const [catalogRetry, setCatalogRetry] = useState(0);
+
+  // First paint only hydrates the eight visible cards. Download the complete
+  // catalogue once, and only if a reader uses search, filters or Show more.
+  const needsCatalogue = Boolean(query.trim() || kind !== "all" || guide !== "all" || visibleCount > PAGE_SIZE);
+  useEffect(() => {
+    if (!needsCatalogue || allPlaces) return;
+    const controller = new AbortController();
+    setCatalogLoading(true);
+    setCatalogError(false);
+    fetch("/api/explore/places", { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error("Place catalogue is temporarily unavailable");
+        return response.json() as Promise<{ places: ExploreDirectoryPlace[] }>;
+      })
+      .then((payload) => {
+        if (!Array.isArray(payload.places)) throw new Error("Invalid place catalogue");
+        if (!controller.signal.aborted) setAllPlaces(payload.places);
+      })
+      .catch(() => {
+        if (!controller.signal.aborted) setCatalogError(true);
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setCatalogLoading(false);
+      });
+    return () => controller.abort();
+  }, [needsCatalogue, allPlaces, catalogRetry]);
+
+  // Keep the first eight visible while fetching more; otherwise loading a
+  // larger catalogue would blank the content and introduce layout shift.
+  const showingPreview = !allPlaces && !query.trim() && kind === "all" && guide === "all";
+  const catalogueReady = showingPreview || allPlaces !== null;
+  const availablePlaces = allPlaces ?? places;
 
   useEffect(() => {
     const syncFromUrl = () => {
@@ -54,7 +94,7 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirec
   const guideKinds = useMemo(() => new Map(guides.map((item) => [item.slug, item.kind])), [guides]);
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
-    const results = places.filter((place) => {
+    const results = availablePlaces.filter((place) => {
       if (kind !== "all" && place.kind !== kind) return false;
       if (guide !== "all" && place.guideSlug !== guide) return false;
       if (!needle) return true;
@@ -79,7 +119,7 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirec
       );
     }
     return results;
-  }, [places, kind, guide, query, guideNames, guideKinds]);
+  }, [availablePlaces, kind, guide, query, guideNames, guideKinds]);
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
@@ -90,7 +130,7 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirec
     const first = filtered[0];
     const tags = new Set(first.tags.map((tag) => tag.toLowerCase()));
     const shown = new Set(filtered.map((place) => place.slug));
-    return places
+    return availablePlaces
       .filter((place) => !shown.has(place.slug))
       .map((place) => {
         const sameDestination = place.guideSlug === first.guideSlug;
@@ -101,10 +141,13 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirec
       .filter(({ score }) => score >= 6)
       .sort((a, b) => b.score - a.score || a.place.name.localeCompare(b.place.name))
       .slice(0, 4);
-  }, [query, filtered, places]);
+  }, [query, filtered, availablePlaces]);
 
-  const visible = filtered.slice(0, visibleCount);
-  const remaining = Math.max(0, filtered.length - visible.length);
+  const resultCount = catalogueReady
+    ? (allPlaces ? filtered.length : totalCount)
+    : 0;
+  const visible = catalogueReady ? filtered.slice(0, visibleCount) : [];
+  const remaining = Math.max(0, resultCount - visible.length);
 
   return (
     <div className="explore-directory">
@@ -141,15 +184,31 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirec
 
       <div className="directory-summary">
         <span>
-          <strong>{filtered.length}</strong> place{filtered.length === 1 ? "" : "s"} found
-          {filtered.length ? " · showing " + visible.length : ""}
+          {catalogueReady ? (
+            <>
+              <strong>{resultCount}</strong> place{resultCount === 1 ? "" : "s"} found
+              {resultCount ? " · showing " + visible.length : ""}
+            </>
+          ) : catalogError ? "Place search unavailable" : "Loading places…"}
         </span>
         {(query || kind !== "all" || guide !== "all") ? (
           <button type="button" onClick={() => { setQuery(""); setKind("all"); setGuide("all"); }}>Clear filters</button>
         ) : null}
       </div>
 
-      {filtered.length ? (
+      {!catalogueReady ? (
+        <div className="empty-state" aria-live="polite">
+          {catalogError ? (
+            <>
+              <strong>Places could not be loaded.</strong>
+              <p>Your connection may be interrupted. The city and destination guides below are still available.</p>
+              <button type="button" onClick={() => setCatalogRetry((retry) => retry + 1)}>Try loading places again</button>
+            </>
+          ) : (
+            <p>{catalogLoading ? "Loading the full places catalogue…" : "Preparing place results…"}</p>
+          )}
+        </div>
+      ) : resultCount ? (
         <div className="explore-place-grid">
           {visible.map((place) => (
             <article className="explore-place-card" key={place.slug}>
@@ -177,7 +236,7 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirec
         </div>
       )}
 
-      {recommended.length > 0 ? (
+      {catalogueReady && recommended.length > 0 ? (
         <section className="explore-place-suggestions" aria-label="Related places">
           <div className="section-heading top-gap">
             <div>
@@ -201,9 +260,26 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirec
         </section>
       ) : null}
 
+      {catalogueReady && showingPreview && needsCatalogue ? (
+        <div className="explore-directory-more" aria-live="polite">
+          {catalogError ? (
+            <>
+              <p>More places could not be loaded. Your first eight results remain available.</p>
+              <button type="button" onClick={() => setCatalogRetry((retry) => retry + 1)}>
+                Try loading places again
+              </button>
+            </>
+          ) : <small>Loading more places…</small>}
+        </div>
+      ) : null}
+
       {remaining > 0 ? (
         <div className="explore-directory-more">
-          <button type="button" onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}>
+          <button
+            type="button"
+            disabled={needsCatalogue && allPlaces === null}
+            onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
+          >
             Show {Math.min(PAGE_SIZE, remaining)} more places
           </button>
           <small>{remaining} more available</small>

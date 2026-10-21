@@ -83,3 +83,7 @@ test("Explore hub uses brief CDN revalidation, but exact event calendar stays pe
     "event calendar must retain precise Nigerian-local-day boundaries");
   assert.match(vite, /cdn: cdnAdapter\(\)/);
 });
+
+// The Tour hub is a shared performance-critical surface; keep its focused
+// on-demand catalogue regression inside the already-invoked policy check.
+import "./explore-on-demand-performance-20261021.test";
