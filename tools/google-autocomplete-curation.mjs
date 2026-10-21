@@ -49,17 +49,17 @@ export const needsReview = [
 // Suggestions can have different intent from the observed query: even when
 // one page is proposed, target_canonical_url stays blank pending review.
 export const observedPageAnchors = [
-  { pillar: "services", pattern: /\\baedc\\b.*\\brefund\\b|\\brefund\\b.*\\baedc\\b/i,
+  { pillar: "services", pattern: /\baedc\b.*\brefund\b|\brefund\b.*\baedc\b/i,
     url: "https://mynigeriaguide.com/services/aedc-map-refund", query: "aedc map refund" },
-  { pillar: "services", pattern: /\\bibedc\\b.*\\brefund\\b|\\brefund\\b.*\\bibedc\\b/i,
+  { pillar: "services", pattern: /\bibedc\b.*\brefund\b|\brefund\b.*\bibedc\b/i,
     url: "https://mynigeriaguide.com/services/ibedc-map-refund", query: "ibedc map refund portal" },
-  { pillar: "services", pattern: /(?=.*\\b(?:nis|nigerian|nigeria)\\b)(?=.*\\bpassport\\b)(?=.*\\b(?:track|tracking|status)\\b)/i,
+  { pillar: "services", pattern: /(?=.*\b(?:nis|nigerian|nigeria)\b)(?=.*\bpassport\b)(?=.*\b(?:track|tracking|status)\b)/i,
     url: "https://mynigeriaguide.com/services/passport-application-tracking", query: "nis passport tracking" },
-  { pillar: "services", pattern: /(?=.*\\banambra\\b)(?=.*\\basin\\b)/i,
+  { pillar: "services", pattern: /(?=.*\banambra\b)(?=.*\basin\b)/i,
     url: "https://mynigeriaguide.com/services/anambra-asin-registration", query: "how to get asin number anambra state" },
-  { pillar: "services", pattern: /\\bmtn\\b.*\\bsim\\b.*\\b(?:swap|replacement)\\b/i,
+  { pillar: "services", pattern: /\bmtn\b.*\bsim\b.*\b(?:swap|replacement)\b/i,
     url: "https://mynigeriaguide.com/services/mtn-sim-swap-replacement", query: "mtn sim swap nigeria" },
-  { pillar: "entertainment", pattern: /\\boversabi\\s+aunty\\b/i,
+  { pillar: "entertainment", pattern: /\boversabi\s+aunty\b/i,
     url: "https://mynigeriaguide.com/entertainment/movies/oversabi-aunty", query: "oversabi aunty cast" },
 ];
 
