@@ -13,7 +13,7 @@ export function ServiceRequirements({ service }: { service: Service }) {
       <span className="section-number" aria-hidden="true">01</span>
       <h2>Requirements for {service.shortTitle}</h2>
       <p className="guide-section-intro">
-        Check these requirements against the linked official source. Document formats are shown only when explicitly stated; the steps and optional checklist appear separately.
+        Prepare the documents needed for the steps above. Formats are specified only where the official instructions support them.
       </p>
 
       <div className="requirement-summary" aria-label="Requirement categories">
