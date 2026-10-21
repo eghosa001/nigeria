@@ -17,13 +17,21 @@ export type ServiceDirectoryQuery = {
   pageSize?: number;
 };
 
+// The search index exists only on the server. It must not be serialized into
+// React Server Component props or returned by the browser-facing API.
+export type ServiceDirectoryItem = Omit<PublicServiceListing, "searchText" | "searchTerms">;
+
+function toDirectoryItem({ searchText: _searchText, searchTerms: _searchTerms, ...visible }: PublicServiceListing): ServiceDirectoryItem {
+  return visible;
+}
+
 export type ServiceDirectoryResult = {
-  items: PublicServiceListing[];
+  items: ServiceDirectoryItem[];
   total: number;
   page: number;
   pageSize: number;
   totalPages: number;
-  recommendations?: PublicServiceListing[];
+  recommendations?: ServiceDirectoryItem[];
 };
 
 export function getServiceDirectoryPageCount(pageSize = SERVICE_DIRECTORY_PAGE_SIZE) {
@@ -71,11 +79,11 @@ export function queryServiceDirectory(input: ServiceDirectoryQuery = {}): Servic
     : [];
 
   return {
-    items: rows.slice(start, start + pageSize),
+    items: rows.slice(start, start + pageSize).map(toDirectoryItem),
     total,
     page,
     pageSize,
     totalPages,
-    recommendations,
+    recommendations: recommendations.map(toDirectoryItem),
   };
 }
