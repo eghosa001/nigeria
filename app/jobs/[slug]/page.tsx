@@ -196,7 +196,6 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
             <section id="job-overview">
               <span className="eyebrow">At a glance</span>
               <div className="job-facts">
-                <div><small>Organisation</small><strong>{item.organization}</strong></div>
                 <div><small>Sector</small><strong>{item.sector}</strong></div>
                 <div><small>Location</small><strong>{item.location}</strong></div>
                 <div><small>Opportunity type</small><strong>{item.employmentType}</strong></div>
