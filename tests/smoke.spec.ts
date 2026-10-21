@@ -716,7 +716,7 @@ test("editorial light and dark themes fit representative routes on phones and de
     ".mobile-bottom-nav a.is-current",
   ];
   function isLightRgb(color: string) {
-    const matches = color.match(/\\d+(?:\\.\\d+)?/g);
+    const matches = color.match(/[0-9]+(?:[.][0-9]+)?/g);
     if (!matches || matches.length < 3) return false;
     const [r, g, b] = matches.map(Number);
     return r > 210 && g > 210 && b > 210;
