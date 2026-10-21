@@ -25,7 +25,6 @@ export function YouTubeMovieCard({
         className="youtube-movie-thumbnail"
         href={movie.internalHref}
         prefetch={false}
-        aria-label={"View details for " + movie.title}
       >
         <RemoteMoviePreviewImage
           src={"https://i.ytimg.com/vi/" + movie.videoId + "/mqdefault.jpg"}
