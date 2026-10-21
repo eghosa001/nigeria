@@ -350,15 +350,81 @@ html[data-theme="dark"] .theme-menu button { color: var(--ink); }
 /* Native controls stay in sync even if the visitor switches theme mid-session. */
 html[data-theme="dark"] :where(input, select, textarea) { color-scheme: dark; }
 html[data-theme="light"] :where(input, select, textarea) { color-scheme: light; }
+/* Editorial accents extend from the homepage into the actual destinations. */
+html[data-theme="light"] .services-directory-page {
+  background: linear-gradient(155deg, #e0e9dc, #f3f0e5 70%);
+  border-bottom: 1px solid var(--line);
+}
+html[data-theme="light"] .services-directory-page .eyebrow { color: #21624c; }
+html[data-theme="light"] .tour-compact-hero {
+  background: linear-gradient(150deg, #f2e3c7, #e6eadc 75%);
+  border-bottom-color: #c9c7b3;
+}
+html[data-theme="light"] .tour-compact-hero .eyebrow { color: #8c581b; }
+html[data-theme="light"] .jobs-hero {
+  background: linear-gradient(140deg, #e0e8e9, #f0eee5 78%);
+  border-bottom-color: #c0cbcb;
+}
+html[data-theme="light"] .jobs-hero .eyebrow { color: #365b6b; }
+html[data-theme="light"] .movie-browse-hero .eyebrow { color: #e3ba8a; }
+html[data-theme="light"] .movie-browse-heading h1 {
+  font-family: var(--editorial-display);
+  font-weight: 700;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+/* Browser chrome, native form controls and the mobile navigation must all
+   honor the active theme, including highlighted tabs. */
+html[data-theme="dark"] .mobile-bottom-nav a {
+  color: var(--muted) !important;
+}
+html[data-theme="dark"] .mobile-bottom-nav a.is-current {
+  background: var(--theme-hover) !important;
+  color: var(--green-deep) !important;
+}
+html[data-theme="dark"] .mobile-bottom-nav a.is-current svg {
+  color: var(--green) !important;
+}
+html[data-theme="dark"] :where(.mobile-admin-action) {
+  background: var(--theme-raised) !important;
+  color: var(--ink) !important;
+  border-color: var(--line) !important;
+}
 @media (max-width: 900px) {
-  html[data-theme="light"] .home-paths { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  html[data-theme="light"] .home-paths { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
   html[data-theme="light"] .home-path { min-height: 166px; }
   html[data-theme="light"] .minimal-home-copy { padding-left: 18px; }
 }
-@media (max-width: 420px) {
-  html[data-theme="light"] .home-paths { grid-template-columns: 1fr; gap: 8px; }
-  html[data-theme="light"] .home-path { min-height: 0; padding: 20px 42px 20px 19px; }
-  html[data-theme="light"] .minimal-home-copy h1 { font-size: clamp(2.8rem, 11.6vw, 3.3rem); }
+@media (max-width: 760px) {
+  /* Correct a late legacy four-column rule in globals.css in dark mode. */
+  html[data-theme="dark"] .home-paths { grid-template-columns: minmax(0, 1fr) !important; }
+  /* Editorial cards are stacked internally, not the old two-column row layout. */
+  html[data-theme="light"] .home-path {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 5px;
+    padding: 20px 16px;
+  }
+  html[data-theme="light"] .home-path > span { grid-row: auto; width: auto; }
+  html[data-theme="light"] .home-path + .home-path {
+    border-left: 1px solid #c9c6b9;
+    border-top: 4px solid var(--pillar-accent);
+  }
+  html[data-theme="light"] .home-path:last-child { border-bottom: 1px solid #c9c6b9; }
+}
+@media (max-width: 620px) {
+  html[data-theme="light"] .home-paths { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  html[data-theme="light"] .home-path {
+    min-height: 182px;
+    padding: 19px 15px;
+  }
+  html[data-theme="light"] .home-path > strong { font-size: 1.38rem; }
+  html[data-theme="light"] .home-path > small { font-size: .77rem; line-height: 1.4; }
+}
+@media (max-width: 350px) {
+  html[data-theme="light"] .home-paths { grid-template-columns: minmax(0, 1fr) !important; gap: 8px; }
+  html[data-theme="light"] .home-path { min-height: 0; padding: 19px 42px 19px 19px; }
+  html[data-theme="light"] .minimal-home-copy h1 { font-size: clamp(2.65rem, 11.6vw, 3.3rem); }
 }
 @media (prefers-reduced-motion: reduce) {
   html[data-theme="light"] .home-path { transition: none; }

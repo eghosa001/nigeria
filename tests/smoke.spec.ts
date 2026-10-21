@@ -677,3 +677,94 @@ test("independently sourced Tour and Movie corrections render without replacing 
   await expect(page.getByText("Niyi Akinmolayan", { exact: true }).first()).toBeVisible();
   await expect(page.locator('a[href="https://www.imdb.com/title/tt33255000/fullcredits/"]')).toBeVisible();
 });
+
+
+test("editorial light and dark themes fit representative routes on phones and desktops", async ({ page }, testInfo) => {
+  const mobileProject = testInfo.project.name.includes("mobile");
+  const widths = mobileProject ? [320, 360, 390] : [768, 1280];
+  await page.setViewportSize({ width: widths[0], height: 900 });
+  await page.goto("/", { waitUntil: "domcontentloaded" });
+
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  await expect(page.locator('meta[name="theme-color"]').first()).toHaveAttribute("content", "#eee7d9");
+  expect(await page.locator(".home-path").count()).toBe(4);
+  const lightCards = await page.locator(".home-path").evaluateAll((elements) =>
+    elements.map((element) => getComputedStyle(element).backgroundColor),
+  );
+  expect(new Set(lightCards).size).toBe(4);
+
+  for (const width of widths) {
+    await page.setViewportSize({ width, height: 900 });
+    const layout = await page.evaluate(() => ({
+      overflow: document.documentElement.scrollWidth - innerWidth,
+      columns: getComputedStyle(document.querySelector(".home-paths")!).gridTemplateColumns.split(" ").length,
+    }));
+    expect(layout.overflow, `light homepage at ${width}px`).toBeLessThanOrEqual(1);
+    expect(layout.columns, `light navigation at ${width}px`).toBe(width <= 350 ? 1 : width <= 900 ? 2 : 4);
+  }
+
+  await page.locator(".theme-toggle").click();
+  await page.getByRole("menuitemradio", { name: "Dark" }).click();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  await expect(page.locator('meta[name="theme-color"]').first()).toHaveAttribute("content", "#0b1410");
+
+  // These site elements must not inherit any white/light CSS declarations when
+  // switching appearance, including the highlighted mobile navigation item.
+  const surfaces = [
+    "body", ".site-header", ".home-trending-strip",
+    ".home-trending-links a", ".home-path", ".mobile-bottom-nav",
+    ".mobile-bottom-nav a.is-current",
+  ];
+  function isLightRgb(color: string) {
+    const matches = color.match(/[0-9]+(?:[.][0-9]+)?/g);
+    if (!matches || matches.length < 3) return false;
+    const [r, g, b] = matches.map(Number);
+    return r > 210 && g > 210 && b > 210;
+  }
+  for (const selector of surfaces) {
+    const result = await page.locator(selector).first().evaluate((node) => ({
+      display: getComputedStyle(node).display,
+      background: getComputedStyle(node).backgroundColor,
+    }));
+    if (result.display === "none") continue;
+    expect(isLightRgb(result.background), `dark surface ${selector}: ${result.background}`).toBe(false);
+  }
+
+  for (const width of widths) {
+    await page.setViewportSize({ width, height: 900 });
+    const layout = await page.evaluate(() => ({
+      overflow: document.documentElement.scrollWidth - innerWidth,
+      columns: getComputedStyle(document.querySelector(".home-paths")!).gridTemplateColumns.split(" ").length,
+    }));
+    expect(layout.overflow, `dark homepage at ${width}px`).toBeLessThanOrEqual(1);
+    expect(layout.columns, `dark navigation at ${width}px`).toBe(width <= 760 ? 1 : width <= 920 ? 2 : 4);
+  }
+
+  // Each pillar and one representative detail path stays navigable with
+  // dark mode persisted, a readable page title and no horizontal spill.
+  const routes = [
+    "/services", "/explore", "/jobs", "/entertainment/movies",
+    "/services/jamb-caps",
+    "/explore/design-week-lagos-2026",
+    "/jobs/nigerian-army-92rri-2026",
+    "/entertainment/movies/tele-x-zikora-2026",
+  ];
+  for (const route of routes) {
+    const response = await page.goto(route, { waitUntil: "domcontentloaded" });
+    expect(response?.status(), route).toBeLessThan(400);
+    await expect(page.locator("html"), route).toHaveAttribute("data-theme", "dark");
+    await expect(page.locator("main h1").first(), route).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth), route)
+      .toBeLessThanOrEqual(1);
+    const headerBackground = await page.locator(".site-header").evaluate((node) => getComputedStyle(node).backgroundColor);
+    expect(isLightRgb(headerBackground), `dark masthead on ${route}`).toBe(false);
+  }
+
+  await page.locator(".theme-toggle").click();
+  await page.getByRole("menuitemradio", { name: "Light" }).click();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+  await expect(page.locator('meta[name="theme-color"]').first()).toHaveAttribute("content", "#eee7d9");
+  await expect.poll(async () => page.locator('meta[name="theme-color"]').evaluateAll((metas) =>
+    metas.length > 0 && metas.every((meta) => meta.getAttribute("content") === "#eee7d9"),
+  )).toBe(true);
+});

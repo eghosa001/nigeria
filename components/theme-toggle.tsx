@@ -37,8 +37,10 @@ function applyTheme(preference: ThemePreference) {
   document.documentElement.dataset.theme = theme;
   document.documentElement.dataset.themePreference = preference;
   document.documentElement.style.colorScheme = theme;
-  const themeColor = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
-  if (themeColor) themeColor.content = theme === "dark" ? "#0b1410" : "#f8f5ed";
+  const browserColor = theme === "dark" ? "#0b1410" : "#eee7d9";
+  document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]').forEach((meta) => {
+    if (meta.content !== browserColor) meta.content = browserColor;
+  });
 }
 
 function ThemeGlyph({ preference }: { preference: ThemePreference }) {
@@ -73,9 +75,21 @@ export function ThemeToggle() {
       setPreference(next);
       applyTheme(next);
     };
+    // Next.js can append a second theme-color meta on client navigation.
+    // Keep every published browser chrome colour aligned with the chosen mode.
+    const headObserver = new MutationObserver(() => {
+      const expected = document.documentElement.dataset.theme === "dark" ? "#0b1410" : "#eee7d9";
+      document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]').forEach((meta) => {
+        if (meta.content !== expected) meta.content = expected;
+      });
+    });
+    headObserver.observe(document.head, {
+      childList: true, subtree: true, attributes: true, attributeFilter: ["content"],
+    });
     media.addEventListener("change", onSystemChange);
     window.addEventListener("storage", onStorage);
     return () => {
+      headObserver.disconnect();
       media.removeEventListener("change", onSystemChange);
       window.removeEventListener("storage", onStorage);
     };
