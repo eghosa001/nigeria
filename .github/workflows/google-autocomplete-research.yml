@@ -5,6 +5,8 @@ on:
   pull_request:
     paths:
       - 'tools/google-autocomplete-research.mjs'
+      - 'tools/google-autocomplete-curation.mjs'
+      - 'tests/google-autocomplete-curation.test.mjs'
       - '.github/workflows/google-autocomplete-research.yml'
   schedule:
     - cron: "0 5 * * 2" # weekly on Tuesday, 06:00 Africa/Lagos
@@ -27,11 +29,19 @@ jobs:
       - name: Query Nigeria-localized Google Autocomplete (research only)
         run: node tools/google-autocomplete-research.mjs
 
-      - name: Upload Nigeria Google Suggest evidence
+      - name: Verify topic-relevance safety filters
+        run: node --test tests/google-autocomplete-curation.test.mjs
+      - name: Split observed suggestions into candidates and review queue
+        run: node tools/google-autocomplete-curation.mjs
+      - name: Upload Nigeria Google Suggest evidence and review queue
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: google-autocomplete-ng
-          path: artifacts/google-autocomplete-ng.json
+          path: |
+            artifacts/google-autocomplete-ng.json
+            artifacts/google-autocomplete-reviewed-ng.csv
+            artifacts/google-autocomplete-review-queue-ng.csv
+            artifacts/google-autocomplete-review-summary-ng.json
           if-no-files-found: warn
-          retention-days: 7
+          retention-days: 14
