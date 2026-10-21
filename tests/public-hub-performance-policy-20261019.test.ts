@@ -70,3 +70,16 @@ test("offline worker never downloads the homepage, services or saved-page HTML d
   const register = read("components/service-worker-register.tsx");
   assert.match(register, /\}, 4000\);/, "register after initial page resource activity");
 });
+
+test("Explore hub uses brief CDN revalidation, but exact event calendar stays per-request", () => {
+  const explore = read("app/explore/page.tsx");
+  const events = read("app/explore/events/page.tsx");
+  const vite = read("vite.config.ts");
+  assert.match(explore, /export const revalidate = 60;/);
+  assert.doesNotMatch(explore, /export const dynamic = "force-dynamic";/);
+  assert.doesNotMatch(explore, /\bcookies\(|\bheaders\(/);
+  assert.match(explore, /getUpcomingEventGuides\(exploreGuides\)/);
+  assert.match(events, /export const dynamic = "force-dynamic";/,
+    "event calendar must retain precise Nigerian-local-day boundaries");
+  assert.match(vite, /cdn: cdnAdapter\(\)/);
+});
