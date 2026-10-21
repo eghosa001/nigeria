@@ -203,7 +203,7 @@ async function main() {
   // every HTML destination linked from sitemap pages, including intentional
   // noindex routes and inadvertently omitted canonical pages. Do not recurse
   // beyond one hop or assume that linked URLs should automatically be indexed.
-  const htmlDestination = (url) => !/\\.(?:xml|json|txt|csv|pdf|png|jpe?g|gif|webp|svg|mp4|webm|ico|css|js)(?:$|\\?)/i.test(new URL(url).pathname);
+  const htmlDestination = (url) => !/\.(?:xml|json|txt|csv|pdf|png|jpe?g|gif|webp|svg|mp4|webm|ico|css|js)$/i.test(new URL(url).pathname);
   const linkedUrls = [...missingSitemapLinks.keys()].filter(htmlDestination).sort();
   const linkedTargets = maxLinkedUrls ? linkedUrls.slice(0, maxLinkedUrls) : linkedUrls;
   const linkedRecords = new Array(linkedTargets.length);
