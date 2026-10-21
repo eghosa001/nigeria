@@ -701,6 +701,25 @@ test("editorial light and dark themes fit representative routes on phones and de
   expect(new Set(lightCards.map((card) => card.chapterColor)).size).toBe(4);
   expect(new Set(lightCards.map((card) => card.radius)).size).toBe(1);
 
+  // Legacy job and service action cards must not create dark visual islands
+  // while the visitor has selected the Ivory & Ink light theme.
+  for (const { route, selector } of [
+    { route: "/", selector: ".home-job-feature" },
+    { route: "/services/jamb-direct-entry-2026", selector: ".fee-card" },
+    { route: "/jobs/nigerian-army-92rri-2026", selector: ".job-apply-card" },
+  ]) {
+    await page.goto(route, { waitUntil: "domcontentloaded" });
+    await expect(page.locator(selector).first(), route).toBeVisible();
+    const card = await page.locator(selector).first().evaluate((node) => ({
+      background: getComputedStyle(node).backgroundColor,
+      color: getComputedStyle(node).color,
+    }));
+    expect(card.background, `light action surface ${route}`).toBe("rgb(255, 255, 255)");
+    expect(card.color, `light action text ${route}`).toBe("rgb(28, 43, 43)");
+  }
+  await page.goto("/", { waitUntil: "domcontentloaded" });
+
+
   for (const width of widths) {
     await page.setViewportSize({ width, height: 900 });
     const layout = await page.evaluate(() => ({
