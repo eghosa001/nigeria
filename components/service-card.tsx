@@ -11,7 +11,7 @@ export function ServiceCard({ service }: { service: CardService }) {
   const agency = getAgency(service.agencySlug);
 
   return (
-    <Link className="service-card" href={"/services/" + service.slug}>
+    <Link className="service-card" href={"/services/" + service.slug} prefetch={false}>
       <div className="card-topline">
         <span className="service-card-category">
           <span className="service-card-icon"><CategoryIcon category={service.category} /></span>
