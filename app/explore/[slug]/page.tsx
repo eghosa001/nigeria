@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { uniqueIntroParagraphs } from "@/lib/reader-content-dedup";
 import Link from "next/link";
 import { PageOutline } from "@/components/page-outline";
 import { notFound } from "next/navigation";
@@ -173,6 +174,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
   const hasArrivalGuidance = /transport|taxi|road|travel|bus|drive|route|walk|access|journey|getting|arriv|train|flight/i.test(visitorEvidence);
   const hasOperatingGuidance = /hour|ticket|fee|admission|cost|price|book|open|season|date|entry|timing/i.test(visitorEvidence);
   const hasIndependentSource = Boolean(guide.sources?.some((source) => source.href !== guide.source?.href));
+  const distinctIntro = uniqueIntroParagraphs(guide.summary, guide.intro);
   const hasDoNotTravelAdvisory = /\bdo not travel\b/i.test([guide.summary, ...guide.intro].join(" "));
   const destinationPhoto = destinationPhotos[guide.slug];
 
@@ -288,11 +290,11 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
             </figure>
           ) : null}
           <div className="topic-copy explore-intro-copy">
-            {guide.intro.slice(0, 1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-            {guide.intro.length > 1 ? (
+            {distinctIntro.slice(0, 1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            {distinctIntro.length > 1 ? (
               <details className="compact-disclosure explore-context-disclosure">
                 <summary>More context</summary>
-                <div>{guide.intro.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+                <div>{distinctIntro.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
               </details>
             ) : null}
           </div>

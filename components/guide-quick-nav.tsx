@@ -1,9 +1,9 @@
 "use client";
 
 const items = [
-  ["journey", "Route"],
-  ["requirements", "Requirements"],
   ["steps", "Steps"],
+  ["requirements", "Requirements"],
+  ["journey", "Other routes"],
   ["official-sources", "Sources"],
 ] as const;
 
@@ -13,13 +13,19 @@ export function GuideQuickNav({ showQuickAnswers = false, showAftercare = false,
     if (!target) return;
     const nextUrl = window.location.pathname + window.location.search + "#" + id;
     window.history.replaceState(window.history.state, "", nextUrl);
+    // Expand any optional section before scrolling to its inner anchor.
+    let disclosure: HTMLDetailsElement | null = target.closest("details");
+    while (disclosure) {
+      disclosure.open = true;
+      disclosure = disclosure.parentElement?.closest("details") ?? null;
+    }
     target.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   return (
     <nav className="guide-quick-nav" aria-label="On this page">
       <span>On this page</span>
-      {[...items.slice(0, 1), ...(showScenarios ? [["case-guidance", "Problem solving"] as const] : []), ...items.slice(1, 3), ...(showAftercare ? [["after-submit", "After submission"] as const] : []), ...(showQuickAnswers ? [["quick-answers", "Extra answers"] as const] : []), ["notes", "Cautions"] as const, ...items.slice(3)].map(([id, label]) => (
+      {[...items.slice(0, 3), ...(showScenarios ? [["case-guidance", "Special cases"] as const] : []), ...(showAftercare ? [["after-submit", "After application"] as const] : []), ...(showQuickAnswers ? [["quick-answers", "Extra answers"] as const] : []), ["notes", "Cautions"] as const, ...items.slice(3)].map(([id, label]) => (
         <a
           key={id}
           href={"#" + id}

@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+// Shared-page repetition regressions also run with this existing focused editorial suite.
+import "./sitewide-page-repetition-20261021.test";
 import { readFileSync, readdirSync } from "node:fs";
 type Guide = { slug: string; requirements: string[]; steps: string[]; notes: string[]; sources: Array<{url:string}> };
 const guides = JSON.parse(readFileSync("data/services.json", "utf8")) as Guide[];

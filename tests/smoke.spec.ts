@@ -403,8 +403,10 @@ test("mobile public layout uses a single-column hierarchy and usable navigation"
   await page.goto("/services/passport-renewal");
   const guideColumns = await page.locator(".guide-layout").evaluate((element) => getComputedStyle(element).gridTemplateColumns.split(" ").filter(Boolean).length);
   expect(guideColumns).toBe(1);
-  const statusColumns = await page.locator(".service-status-strip").evaluate((element) => getComputedStyle(element).gridTemplateColumns.split(" ").filter(Boolean).length);
-  expect(statusColumns).toBe(1);
+  // The old status strip repeated fee details and was removed sitewide.
+  await expect(page.locator(".service-status-strip")).toHaveCount(0);
+  await expect(page.locator("#steps")).toBeVisible();
+  await expect(page.locator(".service-extra-routes")).toHaveCount(1);
   const guideOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   expect(guideOverflow).toBeLessThanOrEqual(1);
 
