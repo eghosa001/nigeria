@@ -76,3 +76,13 @@ test("the crawler exports distinct linked-route evidence and retains the sitemap
   assert.match(source, /issue\.code !== "sitemap-noindex"/);
   assert.match(source, /metadata-inventory\.csv/);
 });
+
+test("linked discovery audits HTML pages without misclassifying XML resources", () => {
+  const source = readFileSync("scripts/audit-all-sitemap-urls.mjs", "utf8");
+  const predicateLine = source.split("\n").find((line) => line.includes("const htmlDestination ="));
+  assert.ok(predicateLine);
+  const isHtml = new Function("URL", predicateLine + "\nreturn htmlDestination;")(URL);
+  assert.equal(isHtml("https://mynigeriaguide.com/agencies/aedc"), true);
+  assert.equal(isHtml("https://mynigeriaguide.com/updates.xml"), false);
+  assert.equal(isHtml("https://mynigeriaguide.com/site-icon.png"), false);
+});
