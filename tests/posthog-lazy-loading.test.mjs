@@ -1,10 +1,18 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import test from "node:test";
 
 const read = (path) => readFileSync(new URL("../" + path, import.meta.url), "utf8");
 
 test("PostHog is dynamically imported outside the shared initial analytics bundle", () => {
+  // Next client instrumentation executes on every page before hydration.
+  // The early entry must not pull the entire PostHog SDK into the critical path.
+  const instrumentationEntry = new URL("../instrumentation-client.ts", import.meta.url);
+  if (existsSync(instrumentationEntry)) {
+    const entry = readFileSync(instrumentationEntry, "utf8");
+    assert.doesNotMatch(entry, /import\s+[^;]*posthog|capturePostHogPageView/i, "no eager PostHog in client instrumentation");
+  }
+  assert.match(read("app/layout.tsx"), /<PostHogAnalytics \/>/, "retain idle PostHog page-view tracking");
   for (const path of ["lib/client-analytics.ts", "components/posthog-analytics.tsx"]) {
     const source = read(path);
     assert.doesNotMatch(source, /import\s*\{[^}]*\}\s*from\s*["']@\/lib\/posthog-client["']/);
