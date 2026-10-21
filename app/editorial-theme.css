@@ -133,6 +133,7 @@ html[data-theme="light"] .minimal-home-hero {
   background-size: min(25vw, 300px) 100%;
 }
 html[data-theme="light"] .minimal-home-hero::before { content: none; }
+html[data-theme="light"] .guide-hero::after { content: none; }
 html[data-theme="light"] .minimal-home-hero-inner { gap: clamp(30px, 5vw, 60px); }
 html[data-theme="light"] .minimal-home-copy {
   max-width: 940px;
@@ -302,6 +303,14 @@ html[data-theme="light"] .movie-browse-tabs a {
 }
 html[data-theme="light"] .movie-browse-tabs a:hover {
   background: var(--theme-hover); border-color: var(--editorial-action); color: var(--editorial-action);
+}
+/* One intentional dark showcase is part of the film experience. It must
+   retain light text even though the rest of the light site is editorial white. */
+html[data-theme="light"] .movie-shelf-section .movie-section-heading h2 {
+  color: #f5f8f5;
+}
+html[data-theme="light"] .movie-shelf-section .movie-section-heading p {
+  color: #bfd0c7;
 }
 /* The feature film shelf remains genuinely cinematic; the browse catalogue
    does NOT remain dark in an otherwise light browsing experience. */
