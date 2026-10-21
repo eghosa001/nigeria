@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { indexableJobEmployers } from "@/lib/job-employers";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Nigeria Employers Hiring: Verified Jobs & Career Pages",
   description: "Browse Nigerian employers and compare their listed jobs, recruitment status and official career websites.",
   alternates: { canonical: "/jobs/employers" },
-};
+});
 
 export default function JobEmployersPage() {
   const employers = [...indexableJobEmployers].sort((a, b) =>
