@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
 import "@/app/mobile.css";
-import "@/app/theme.css";
 import "@/app/ux-polish.css";
 import "@/app/feature-tools.css";
+import "@/app/theme.css";
+import "@/app/editorial-theme.css";
 import { ADSENSE_CLIENT } from "@/lib/adsense-config";
 import { Analytics } from "@/components/analytics";
 import { JsonLd } from "@/components/json-ld";
@@ -89,7 +90,7 @@ const themeBootstrap = `
     document.documentElement.dataset.themePreference = preference;
     document.documentElement.style.colorScheme = theme;
     var themeColor = document.querySelector('meta[name="theme-color"]');
-    if (themeColor) themeColor.setAttribute("content", theme === "dark" ? "#0b1410" : "#f8f5ed");
+    if (themeColor) themeColor.setAttribute("content", theme === "dark" ? "#0b1410" : "#eee7d9");
   } catch (_) {}
 })();
 `;
@@ -144,7 +145,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="color-scheme" content="light dark" />
-        <meta name="theme-color" content="#f8f5ed" />
+        <meta name="theme-color" content="#eee7d9" />
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
         <script dangerouslySetInnerHTML={{ __html: gaBootstrap }} />
         <script dangerouslySetInnerHTML={{ __html: adsenseBootstrap }} />
