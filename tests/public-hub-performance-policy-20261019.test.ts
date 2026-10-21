@@ -89,3 +89,4 @@ test("Explore hub uses brief CDN revalidation, but exact event calendar stays pe
 import "./explore-on-demand-performance-20261021.test";
 import "./public-directory-edge-cache-20261021.test";
 import "./jobs-directory-initial-fetch-20261021.test";
+import "./jobs-facet-client-bundle-20261021.test";
