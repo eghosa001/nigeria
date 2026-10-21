@@ -8,6 +8,9 @@ export function ServiceReviewNotice({ lastVerified }: { lastVerified: string }) 
   useEffect(() => setReview(getServiceReviewStatus(lastVerified)), [lastVerified]);
   // The guide is statically generated. Determine relative ages in the browser
   // so an unredeployed page still correctly becomes due after Nigerian midnight.
+  // A current review date already appears in the hero. Repeat it only when
+  // visitors need a substantive stale-source warning.
+  if (!review || review.state === "current") return null;
   return (
     <aside className={"service-review-notice" + (review && review.state !== "current" ? " service-review-notice-due" : "")} aria-label="Source review information">
       <strong>Source review: <time dateTime={lastVerified}>{lastVerified}</time></strong>
