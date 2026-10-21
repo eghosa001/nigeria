@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Discover Nigerian movies first, then practical services and travel ideas, with source-linked information and official routes.",
     start_url: "/",
     display: "standalone",
-    background_color: "#EEE7D9",
+    background_color: "#F5F5F1",
     theme_color: "#063F2D",
     icons: [
       {
