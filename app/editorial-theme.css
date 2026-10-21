@@ -391,13 +391,13 @@ html[data-theme="dark"] :where(.mobile-admin-action) {
   border-color: var(--line) !important;
 }
 @media (max-width: 900px) {
-  html[data-theme="light"] .home-paths { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  html[data-theme="light"] .home-paths { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
   html[data-theme="light"] .home-path { min-height: 166px; }
   html[data-theme="light"] .minimal-home-copy { padding-left: 18px; }
 }
 @media (max-width: 760px) {
   /* Correct a late legacy four-column rule in globals.css in dark mode. */
-  html[data-theme="dark"] .home-paths { grid-template-columns: minmax(0, 1fr); }
+  html[data-theme="dark"] .home-paths { grid-template-columns: minmax(0, 1fr) !important; }
   /* Editorial cards are stacked internally, not the old two-column row layout. */
   html[data-theme="light"] .home-path {
     grid-template-columns: minmax(0, 1fr);
@@ -413,6 +413,7 @@ html[data-theme="dark"] :where(.mobile-admin-action) {
   html[data-theme="light"] .home-path:last-child { border-bottom: 1px solid #c9c6b9; }
 }
 @media (max-width: 620px) {
+  html[data-theme="light"] .home-paths { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
   html[data-theme="light"] .home-path {
     min-height: 182px;
     padding: 19px 15px;
@@ -421,7 +422,7 @@ html[data-theme="dark"] :where(.mobile-admin-action) {
   html[data-theme="light"] .home-path > small { font-size: .77rem; line-height: 1.4; }
 }
 @media (max-width: 350px) {
-  html[data-theme="light"] .home-paths { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  html[data-theme="light"] .home-paths { grid-template-columns: minmax(0, 1fr) !important; gap: 8px; }
   html[data-theme="light"] .home-path { min-height: 0; padding: 19px 42px 19px 19px; }
   html[data-theme="light"] .minimal-home-copy h1 { font-size: clamp(2.65rem, 11.6vw, 3.3rem); }
 }
