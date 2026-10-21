@@ -87,3 +87,4 @@ test("Explore hub uses brief CDN revalidation, but exact event calendar stays pe
 // The Tour hub is a shared performance-critical surface; keep its focused
 // on-demand catalogue regression inside the already-invoked policy check.
 import "./explore-on-demand-performance-20261021.test";
+import "./public-directory-edge-cache-20261021.test";
