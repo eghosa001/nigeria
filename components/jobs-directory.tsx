@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { JobDirectoryResult } from "@/lib/job-query";
 import type { JobSector, JobStatus } from "@/lib/jobs";
 import { jobLocationFacets, jobProfessionFacets } from "@/lib/job-facets";
 import { JobSearchWatch } from "@/components/job-search-watch";
+import { needsInitialJobsQuery } from "@/lib/jobs-initial-query";
 
 type Props = { initialResult: JobDirectoryResult };
 
@@ -30,6 +31,7 @@ export function JobsDirectory({ initialResult }: Props) {
   const [page, setPage] = useState(initialResult.page);
   const [ready, setReady] = useState(false);
   const [loading, setLoading] = useState(false);
+  const initialQueryChecked = useRef(false);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -44,6 +46,15 @@ export function JobsDirectory({ initialResult }: Props) {
 
   useEffect(() => {
     if (!ready) return;
+    // SSR already supplied the canonical first page. Avoid an identical API
+    // request during hydration; queries deep-linked in the URL still load.
+    // Once checked, every visitor-initiated filter change fetches normally.
+    if (!initialQueryChecked.current) {
+      initialQueryChecked.current = true;
+      if (!needsInitialJobsQuery({ query, sector, status, location, profession, page }, initialResult.page)) {
+        return;
+      }
+    }
     const controller = new AbortController();
     const timer = window.setTimeout(async () => {
       setLoading(true);
