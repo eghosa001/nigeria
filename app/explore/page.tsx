@@ -55,8 +55,10 @@ export const metadata: Metadata = withStaticSocialMetadata({
   alternates: { canonical: "/explore" },
 });
 
-// Event freshness is calculated in Nigerian local time on each request.
-export const dynamic = "force-dynamic";
+// Public, non-personalized destination hub: reuse rendered responses for 60s.
+// Upcoming events still use Nigerian local dates and refresh within one minute;
+// the dedicated /explore/events calendar remains request-time for exact rollover.
+export const revalidate = 60;
 
 export default function ExplorePage() {
   const cities = exploreGuides
