@@ -6,7 +6,7 @@ import { getCurrentHomeSocialTrends } from "@/data/home-social-trends";
 import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
 import { selectRecentHomeMovies } from "@/lib/home-movie-highlights";
 import { releaseItems } from "@/lib/entertainment-extras";
-import { exploreGuides } from "@/lib/explore";
+import { homeTravelHighlights } from "@/lib/home-travel-highlights";
 import { governmentOpportunities, privateOpportunities } from "@/lib/jobs";
 import { getEffectiveJobStatus } from "@/lib/job-runtime";
 
@@ -59,9 +59,8 @@ export default function HomePage() {
   // Recent verified films lead the homepage. Classics remain browsable by year.
   const movieHighlights = selectRecentHomeMovies(entertainmentTitles, releaseItems);
 
-  // A compact cross-region selection rather than the first three catalog entries.
-  const travelHighlights = ["lagos", "abuja", "kano", "obudu-mountain-resort", "yankari-game-reserve", "anambra-heritage-circuit"]
-    .flatMap((slug) => exploreGuides.filter((guide) => guide.slug === slug));
+  // Curated homepage links never need the full Tour editorial catalogue.
+  const travelHighlights = homeTravelHighlights;
 
   const activeGovernmentOpportunities = governmentOpportunities.filter(
     (item) => ["open", "screening", "training"].includes(getEffectiveJobStatus(item)),
