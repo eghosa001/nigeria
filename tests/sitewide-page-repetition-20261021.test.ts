@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
-import { leadAlreadyStatesFee, uniqueIntroParagraphs } from "../lib/reader-content-dedup";
+import { leadAlreadyStatesFee, uniqueIntroParagraphs, uniqueSupportingStatements } from "../lib/reader-content-dedup";
 import { auditPublicCatalogues, findDuplicatePassages } from "../scripts/audit-reader-repetition";
 
 const read = (path: string) => readFileSync(path, "utf8");
@@ -72,4 +72,14 @@ test("inventory all four content pillars and report remaining exact content repe
     exactRepeatFindings: report.exactRepeatFindings, byPillar: report.byPillar,
     topFindings: report.duplicates.slice(0, 8),
   }));
+});
+
+test("jobs retain unique safety and verification notes but never repeat the same statement", () => {
+  const caution = "The organisation has not published an open vacancy for this programme.";
+  const extra = "Check the issuer's official website for the current notice and opening dates.";
+  assert.deepEqual(uniqueSupportingStatements([caution], [caution, extra, extra]), [extra]);
+  assert.deepEqual(uniqueSupportingStatements([], [extra]), [extra]);
+  const page = read("app/jobs/[slug]/page.tsx");
+  assert.ok(page.includes("uniqueSupportingStatements("));
+  assert.ok(page.includes("sourceNotes.map((note)"));
 });
