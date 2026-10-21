@@ -43,6 +43,35 @@ export const needsReview = [
   /^nigerian movie actors names$/i,
 ];
 
+// Observed query -> page associations from the owner's settled Google Search
+// Console report (21 Sep–18 Oct 2026). This is a small, auditable evidence
+// bridge, not a general URL matcher or an assertion of search volume.
+// Suggestions can have different intent from the observed query: even when
+// one page is proposed, target_canonical_url stays blank pending review.
+export const observedPageAnchors = [
+  { pillar: "services", pattern: /\\baedc\\b.*\\brefund\\b|\\brefund\\b.*\\baedc\\b/i,
+    url: "https://mynigeriaguide.com/services/aedc-map-refund", query: "aedc map refund" },
+  { pillar: "services", pattern: /\\bibedc\\b.*\\brefund\\b|\\brefund\\b.*\\bibedc\\b/i,
+    url: "https://mynigeriaguide.com/services/ibedc-map-refund", query: "ibedc map refund portal" },
+  { pillar: "services", pattern: /(?=.*\\b(?:nis|nigerian|nigeria)\\b)(?=.*\\bpassport\\b)(?=.*\\b(?:track|tracking|status)\\b)/i,
+    url: "https://mynigeriaguide.com/services/passport-application-tracking", query: "nis passport tracking" },
+  { pillar: "services", pattern: /(?=.*\\banambra\\b)(?=.*\\basin\\b)/i,
+    url: "https://mynigeriaguide.com/services/anambra-asin-registration", query: "how to get asin number anambra state" },
+  { pillar: "services", pattern: /\\bmtn\\b.*\\bsim\\b.*\\b(?:swap|replacement)\\b/i,
+    url: "https://mynigeriaguide.com/services/mtn-sim-swap-replacement", query: "mtn sim swap nigeria" },
+  { pillar: "entertainment", pattern: /\\boversabi\\s+aunty\\b/i,
+    url: "https://mynigeriaguide.com/entertainment/movies/oversabi-aunty", query: "oversabi aunty cast" },
+];
+
+export function suggestExistingPage(row) {
+  if (row.status !== "candidate") return null;
+  const matches = observedPageAnchors.filter((anchor) =>
+    anchor.pillar === row.pillar && anchor.pattern.test(row.query));
+  // Ambiguity is an editorial task, never permission to choose a URL.
+  if (matches.length !== 1) return null;
+  return { url: matches[0].url, observedQuery: matches[0].query };
+}
+
 export function classifySuggestion(query) {
   if (unrelated.some((rule) => rule.test(query)))
     return { status: "exclude", reason: "Off-topic or foreign-geography autocomplete crossover" };
@@ -77,6 +106,7 @@ function csvRows(data, researchTimestamp) {
     "query", "pillar", "source_seed", "source", "researched_at_utc",
     "locale", "editorial_status", "review_reason", "search_volume",
     "search_difficulty", "target_canonical_url", "verification_state",
+    "existing_page_review_candidate", "gsc_observed_query_anchor", "targeting_caution",
   ];
   const quote = (value) => '"' + String(value ?? "").replaceAll('"', '""').replace(/[\r\n]+/g, " ") + '"';
   return [
@@ -85,6 +115,11 @@ function csvRows(data, researchTimestamp) {
       row.query, row.pillar, row.seeds, "Google Suggest (unofficial; no search volume)",
       researchTimestamp, "en-NG; hl=en; gl=ng", row.status, row.reason,
       "", "", "", "Unmapped — human content/intent review required",
+      suggestExistingPage(row)?.url ?? "",
+      suggestExistingPage(row)?.observedQuery ?? "",
+      suggestExistingPage(row)
+        ? "Observed GSC page association; review current intent, page facts and SERP before targeting"
+        : "No observed page association; research manually before assigning an indexable target",
     ].map(quote).join(",")),
   ].join("\n") + "\n";
 }
@@ -101,6 +136,8 @@ export async function run(path = inputPath) {
     locale: "en-NG", requests: raw.requests, successful: raw.successful,
     failed: raw.failed, uniqueSourceSuggestions: items.length,
     ...counts,
+    suggestedExistingPageReviewCount: items.filter((row) => suggestExistingPage(row) !== null).length,
+    evidenceWindow: "2026-09-21 to 2026-10-18",
     warning: "Source-observed suggestions only. No traffic volume, difficulty, ranking, verified page match or guaranteed performance.",
   };
   await Promise.all([
