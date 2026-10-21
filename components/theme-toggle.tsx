@@ -38,7 +38,7 @@ function applyTheme(preference: ThemePreference) {
   document.documentElement.dataset.themePreference = preference;
   document.documentElement.style.colorScheme = theme;
   const themeColor = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
-  if (themeColor) themeColor.content = theme === "dark" ? "#0b1410" : "#f8f5ed";
+  if (themeColor) themeColor.content = theme === "dark" ? "#0b1410" : "#eee7d9";
 }
 
 function ThemeGlyph({ preference }: { preference: ThemePreference }) {
