@@ -42,17 +42,32 @@ const gaBootstrap = `
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
 
-  if (!document.querySelector("script[data-mynigeriaguide-ga]")) {
+  // Queue the first pageview immediately. The optional external analytics
+  // download should not compete with the page's render-critical CSS and HTML.
+  window.gtag("js", new Date());
+  window.gtag("config", id, { anonymize_ip: true,
+    page_location: path === "/search" ? window.location.origin + path : window.location.href });
+
+  var loadAnalytics = function () {
+    if (document.querySelector("script[data-mynigeriaguide-ga]")) return;
     var script = document.createElement("script");
     script.async = true;
     script.setAttribute("data-mynigeriaguide-ga", "true");
     script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
     document.head.appendChild(script);
+  };
+  var scheduleAnalytics = function () {
+    if (typeof window.requestIdleCallback === "function") {
+      window.requestIdleCallback(loadAnalytics, { timeout: 950 });
+    } else {
+      window.setTimeout(loadAnalytics, 350);
+    }
+  };
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", scheduleAnalytics, { once: true });
+  } else {
+    scheduleAnalytics();
   }
-
-  window.gtag("js", new Date());
-  window.gtag("config", id, { anonymize_ip: true,
-    page_location: path === "/search" ? window.location.origin + path : window.location.href });
   window.__mngLastTrackedPath = path;
 })();
 `;
