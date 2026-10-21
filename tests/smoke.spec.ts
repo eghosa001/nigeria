@@ -22,6 +22,7 @@ test("phone shell fits and keeps admin out of public navigation without hydratio
   expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth), "/admin").toBeLessThanOrEqual(1);
 
   expect(hydrationErrors).toEqual([]);
+
 });
 
 import { expect, test } from "@playwright/test";
@@ -750,6 +751,31 @@ test("editorial light and dark themes fit representative routes on phones and de
         .evaluate((node) => getComputedStyle(node).backgroundColor);
       expect(cinemaCatalogueBg, "movie catalogue must be light").toBe("rgb(255, 255, 255)");
     }
+    if (route === "/jobs") {
+      const trustPanel = await page.locator(".jobs-trust-panel").evaluate((node) => ({
+        background: getComputedStyle(node).backgroundColor,
+        ink: getComputedStyle(node).color,
+      }));
+      expect(trustPanel.background, "jobs verification panel is a light paper card").toBe("rgb(255, 255, 255)");
+      expect(trustPanel.ink, "jobs verification panel uses readable ink").toBe("rgb(28, 43, 43)");
+    }
+    if (route === "/explore") {
+      const shortcuts = page.locator(".tour-compact-hero .primary-shortcuts");
+      const layout = await shortcuts.evaluate((node) => ({
+        columns: getComputedStyle(node).gridTemplateColumns.split(" ").length,
+        firstLinkHeight: node.querySelector("a")?.getBoundingClientRect().height ?? 0,
+      }));
+      expect(layout.columns, "tour shortcuts have structured navigation").toBe(mobileProject ? 2 : 3);
+      expect(layout.firstLinkHeight, "tour navigation has accessible targets").toBeGreaterThanOrEqual(44);
+    }
+  }
+  await page.goto("/entertainment/movies/tele-x-zikora-2026", { waitUntil: "domcontentloaded" });
+  if (mobileProject) {
+    const positions = await page.evaluate(() => ({
+      title: document.querySelector(".movie-detail-copy h1")!.getBoundingClientRect().top,
+      poster: document.querySelector(".movie-detail-artwork")!.getBoundingClientRect().top,
+    }));
+    expect(positions.title, "mobile film title must be visible before the tall poster").toBeLessThan(positions.poster);
   }
   await page.goto("/", { waitUntil: "domcontentloaded" });
 
