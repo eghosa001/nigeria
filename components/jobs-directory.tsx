@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { JobDirectoryResult } from "@/lib/job-query";
 import type { JobSector, JobStatus } from "@/lib/jobs";
-import { jobLocationFacets, jobProfessionFacets } from "@/lib/job-facets";
+import { jobLocationFacets, jobProfessionFacets } from "@/lib/job-facet-definitions";
 import { JobSearchWatch } from "@/components/job-search-watch";
 import { needsInitialJobsQuery } from "@/lib/jobs-initial-query";
 
