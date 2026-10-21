@@ -206,6 +206,15 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                 <p className="movie-hero-cast"><strong>Cast:</strong> No credited performers independently confirmed yet.</p>
               )}
 
+              {movie.videoId === "y2RkBwUYSvo" ? (
+                <p className="movie-long-summary">
+                  <strong>Looking for cast and production credits?</strong>{" "}
+                  <Link href="/entertainment/movies/forever-isnt-long-enough-2025#cast">
+                    Read the sourced film profile →
+                  </Link>
+                </p>
+              ) : null}
+
               {onceUponAVillageEpisode ? (
                 <p className="movie-long-summary">
                   <strong>Looking for the full series cast?</strong>{" "}
