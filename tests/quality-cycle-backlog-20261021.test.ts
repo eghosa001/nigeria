@@ -30,7 +30,7 @@ test("Ondo itinerary and statewide guide have distinct titles", () => {
   assert.ok(itinerary && statewide);
   assert.notEqual(itinerary.title, statewide.title);
   assert.match(itinerary.title, /Hills and Heritage Route/i);
-  assert.match(statewide.title, /State Road Trip/i);
+  assert.match(statewide.title, /Ondo State Nature & Heritage Guide/i);
 });
 
 test("Oversabi keeps evidence separate from viewing availability", () => {
