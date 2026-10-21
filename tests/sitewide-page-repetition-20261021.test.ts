@@ -67,9 +67,12 @@ test("inventory all four content pillars and report remaining exact content repe
   const expected = ["Services", "Tour Nigeria", "Movies & Entertainment", "Jobs & Careers"];
   for (const pillar of expected) assert.ok(report.byPillar.some((row) => row.pillar === pillar && row.urls > 0), pillar);
   assert.ok(report.uniqueCataloguedRoutes > 100);
+  assert.ok(report.presentationDedup.serviceLeadsWithExistingFee >= 30);
+  assert.ok(report.presentationDedup.jobSourceNotesSuppressed >= 1);
   console.log("REPETITION_SITEWIDE_INVENTORY " + JSON.stringify({
     routes: report.uniqueCataloguedRoutes, sourceRecords: report.sourceRecordsInspected,
-    exactRepeatFindings: report.exactRepeatFindings, byPillar: report.byPillar,
+    exactRepeatFindings: report.exactRepeatFindings,
+    presentationDedup: report.presentationDedup, byPillar: report.byPillar,
     topFindings: report.duplicates.slice(0, 8),
   }));
 });
