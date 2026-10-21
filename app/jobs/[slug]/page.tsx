@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { uniqueSupportingStatements } from "@/lib/reader-content-dedup";
 import Link from "next/link";
 import { PageOutline } from "@/components/page-outline";
 import { notFound, redirect } from "next/navigation";
@@ -132,6 +133,11 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
     about: { "@type": "Organization", name: item.organization },
     spatialCoverage: { "@type": "Place", name: item.location }
   };
+  const sourceNotes = uniqueSupportingStatements(
+    [item.summary, item.nextMilestone ?? "", item.feeNote, ...item.qualifications,
+      ...item.requirements, ...item.documents, ...item.applicationSteps],
+    item.sourceNotes,
+  );
   const jobPostingLd = buildJobPostingJsonLd(item, pageUrl);
 
   return (
@@ -267,7 +273,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
 
             <section id="job-sources">
               <h2>Sources used to verify {item.title}</h2>
-              <ul>{item.sourceNotes.map((note) => <li key={note}>{note}</li>)}</ul>
+              <ul>{sourceNotes.map((note) => <li key={note}>{note}</li>)}</ul>
               <div className="job-source-list">
                 {item.sources.map((source) => (
                   <a href={source.url} target="_blank" rel="noreferrer" key={source.url}>
