@@ -31,6 +31,20 @@ const securityHeaders = [
   { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains" },
 ];
 
+// These two public landing pages read optional query params, which makes their
+// default (unfiltered) HTML dynamically rendered and no-store in Vinext.
+// Admit only the canonical, filter-free representations to the shared edge.
+// Filtered searches remain per-request; user query strings are NEVER cached.
+// Do not apply this policy to /jobs, /admin, APIs, or detail routes.
+const publicDirectoryEdgeHeaders = [
+  { key: "Cloudflare-CDN-Cache-Control", value: "public, max-age=300, stale-while-revalidate=60" },
+];
+
+const unfilteredServiceQueries = ["q", "category", "status", "sort", "page"]
+  .map((key) => ({ type: "query" as const, key }));
+const unfilteredMovieQueries = ["q", "platform", "genre", "sort", "page"]
+  .map((key) => ({ type: "query" as const, key }));
+
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
@@ -43,6 +57,16 @@ const nextConfig: NextConfig = {
       { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
     ];
     return [
+      {
+        source: "/services",
+        missing: unfilteredServiceQueries,
+        headers: publicDirectoryEdgeHeaders,
+      },
+      {
+        source: "/entertainment/movies",
+        missing: unfilteredMovieQueries,
+        headers: publicDirectoryEdgeHeaders,
+      },
       { source: "/admin", headers: privateAdminHeaders },
       { source: "/admin/:path*", headers: privateAdminHeaders },
       { source: "/api/admin/:path*", headers: privateAdminHeaders },
