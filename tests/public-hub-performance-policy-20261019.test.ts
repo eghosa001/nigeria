@@ -91,3 +91,4 @@ import "./public-directory-edge-cache-20261021.test";
 import "./jobs-directory-initial-fetch-20261021.test";
 import "./jobs-facet-client-bundle-20261021.test";
 import "./service-card-agency-client-bundle-20261021.test";
+import "./services-directory-payload-20261021.test";
