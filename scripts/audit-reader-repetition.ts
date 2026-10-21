@@ -5,6 +5,10 @@
  */
 import { collectVoiceCorpus } from "../lib/editorial-voice-corpus";
 import { collectPublicPageVoice } from "./public-page-voice-corpus";
+import { publicServices } from "../lib/data";
+import { exploreGuides } from "../lib/explore";
+import { jobOpportunities } from "../lib/jobs";
+import { leadAlreadyStatesFee, uniqueIntroParagraphs, uniqueSupportingStatements } from "../lib/reader-content-dedup";
 
 type Passage = { pillar: string; url: string; recordKind: string; text: string };
 function comparable(value: string) {
@@ -41,6 +45,18 @@ export function auditPublicCatalogues() {
     }
   }
   const duplicates = findDuplicatePassages(paragraphs);
+  const presentationDedup = {
+    serviceLeadsWithExistingFee: publicServices.filter((entry) =>
+      leadAlreadyStatesFee(entry.summary, entry.feeLabel)).length,
+    travelIntroParagraphsSuppressed: exploreGuides.reduce((total, guide) =>
+      total + guide.intro.length - uniqueIntroParagraphs(guide.summary, guide.intro).length, 0),
+    jobSourceNotesSuppressed: jobOpportunities.reduce((total, job) =>
+      total + job.sourceNotes.length - uniqueSupportingStatements(
+        [job.summary, job.nextMilestone ?? "", job.feeNote, ...job.qualifications,
+          ...job.requirements, ...job.documents, ...job.applicationSteps],
+        job.sourceNotes,
+      ).length, 0),
+  };
   const byPillar = [...new Set(seenPages.values())].map((pillar) => ({
     pillar, urls: [...seenPages.values()].filter((value) => value === pillar).length,
     exactRepeatFindings: duplicates.filter((row) => row.pillar === pillar).length,
@@ -49,6 +65,7 @@ export function auditPublicCatalogues() {
     sourceRecordsInspected: records.length,
     uniqueCataloguedRoutes: seenPages.size,
     exactRepeatFindings: duplicates.length,
+    presentationDedup,
     byPillar,
     duplicates,
     limitation: "Static catalogue and public-page prose inventory, not a full HTML crawl. Related concepts, repeated figures and duplicated shared JSX sections require rendered-page review; findings are not automatically deleted.",
@@ -62,7 +79,7 @@ if (process.argv[1]?.endsWith("audit-reader-repetition.ts")) {
     console.log("PAGE_REPETITION_AUDIT " + JSON.stringify({
       sourceRecordsInspected: result.sourceRecordsInspected,
       uniqueCataloguedRoutes: result.uniqueCataloguedRoutes,
-      exactRepeatFindings: result.exactRepeatFindings, byPillar: result.byPillar,
+      exactRepeatFindings: result.exactRepeatFindings, presentationDedup: result.presentationDedup, byPillar: result.byPillar,
       limitation: result.limitation,
     }));
     for (const row of result.duplicates.slice(0, 35)) {
