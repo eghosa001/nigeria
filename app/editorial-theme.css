@@ -400,6 +400,59 @@ html[data-theme="light"] :where(
   .job-card p, .office-card p, .guide-content li
 ) { color: var(--editorial-muted); }
 
+/* Legacy action callouts were still dark green in light mode.
+   Treat actionable facts as calm, high-contrast white editorial panels. */
+html[data-theme="light"] :where(.home-job-feature, .fee-card, .job-apply-card) {
+  background: var(--editorial-paper);
+  background-image: none;
+  color: var(--editorial-ink);
+  border: 1px solid var(--editorial-rule);
+  border-top: 3px solid var(--editorial-action);
+  border-radius: var(--editorial-radius);
+  box-shadow: none;
+}
+html[data-theme="light"] :where(.home-job-feature, .fee-card, .job-apply-card) > :where(strong, h2, h3) {
+  color: var(--editorial-ink);
+}
+html[data-theme="light"] .home-job-feature :where(
+  .home-job-feature-summary > strong, .home-job-feature-live-item b
+) { color: var(--editorial-ink); }
+html[data-theme="light"] .home-job-feature :where(
+  span, .home-job-feature-cta
+) { color: var(--editorial-slate); }
+html[data-theme="light"] .home-job-feature :where(
+  small, .home-job-feature-live-item small
+) { color: var(--editorial-muted); }
+html[data-theme="light"] .home-job-feature :where(
+  .home-job-feature-live, .home-job-feature-live-item
+) { border-color: var(--editorial-rule); }
+html[data-theme="light"] .fee-card::after { background: var(--editorial-action); }
+html[data-theme="light"] .fee-card > span,
+html[data-theme="light"] .job-apply-card > span {
+  color: var(--editorial-action);
+}
+html[data-theme="light"] .fee-card :where(p, small),
+html[data-theme="light"] .job-apply-card :where(p, small) {
+  color: var(--editorial-muted);
+}
+html[data-theme="light"] .fee-card .button,
+html[data-theme="light"] .job-apply-card .button {
+  min-height: 48px;
+  border-radius: 7px;
+  border: 1px solid var(--editorial-action);
+  background: var(--editorial-action);
+  color: #fff;
+}
+html[data-theme="light"] .fee-card .button:hover,
+html[data-theme="light"] .job-apply-card .button:hover {
+  background: #286455;
+  color: #fff;
+}
+html[data-theme="light"] .guide-main-section {
+  background: var(--editorial-ground);
+  background-image: none;
+}
+
 /* Text-first article pages: white reading panel + quieter utility sidebar. */
 html[data-theme="light"] .guide-content {
   min-width: 0;
