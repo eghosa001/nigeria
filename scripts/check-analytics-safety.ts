@@ -43,10 +43,16 @@ const bootstrap = runInNewContext("\`" + template + "\`", {
 }) as string;
 function simulateBootstrap(hostname: string, pathname = "/", userAgent = "Mozilla/5.0", webdriver = false) {
   const injected: string[] = [];
+  const scheduled: Array<() => void> = [];
   const fakeWindow: Record<string, unknown> = {
     location: { hostname, pathname },
+    requestIdleCallback: (callback: () => void) => {
+      scheduled.push(callback);
+      return scheduled.length;
+    },
   };
   const fakeDocument = {
+    readyState: "complete",
     querySelector: () => null,
     head: { appendChild: (element: { src: string }) => injected.push(element.src) },
     createElement: () => ({
@@ -62,10 +68,15 @@ function simulateBootstrap(hostname: string, pathname = "/", userAgent = "Mozill
     Date,
     encodeURIComponent,
   }, { timeout: 1000 });
-  return { disabled: fakeWindow["ga-disable-G-TEST"], injected };
+  return { disabled: fakeWindow["ga-disable-G-TEST"], injected, scheduled, dataLayer: fakeWindow.dataLayer };
 }
-assert.equal(simulateBootstrap("mynigeriaguide.com").disabled, false);
-assert.equal(simulateBootstrap("mynigeriaguide.com").injected.length, 1);
+const productionBootstrap = simulateBootstrap("mynigeriaguide.com");
+assert.equal(productionBootstrap.disabled, false);
+assert.equal(productionBootstrap.injected.length, 0, "external GA must not compete with first paint");
+assert.equal(productionBootstrap.scheduled.length, 1, "production should schedule an idle download");
+assert.equal((productionBootstrap.dataLayer as unknown[]).length, 2, "initial GA pageview stays queued");
+productionBootstrap.scheduled[0]();
+assert.equal(productionBootstrap.injected.length, 1, "external GA eventually loads");
 for (const host of ["mynigeriaguide.workers.dev", "localhost", "preview.vercel.app"]) {
   assert.equal(simulateBootstrap(host).injected.length, 0, host);
 }
