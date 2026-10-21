@@ -2649,7 +2649,16 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
       href: "https://www.fandango.com/oversabi-aunty-2025-244306/cast-and-crew",
       lastChecked: "2026-10-13",
       note: "Additional independent corroboration of film credits and character assignments."
-    },
+    }],
+    watchLinks: [{
+      platform: "Kava",
+      label: "Watch Oversabi Aunty on Kava",
+      href: "https://watch.kava.tv/oversabi-aunty",
+      access: "subscription",
+      lastChecked: "2026-10-20",
+      note: "Primary distributor listing; account access and availability can change."
+    }]
+  },
   {
     slug: "my-fathers-shadow",
     title: "My Father's Shadow",
