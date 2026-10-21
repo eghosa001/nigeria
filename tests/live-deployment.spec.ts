@@ -162,6 +162,10 @@ test.describe("live MyNigeriaGuide deployment", () => {
     await expect(page.getByText("How to get this service", { exact: true })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Choose the correct application route" })).toBeVisible();
     await expect(page.locator('[data-journey-basis="individually-reviewed"]')).toBeVisible();
+    const aftercare = page.locator(".service-extra-aftercare");
+    await expect(aftercare.locator("summary")).toBeVisible();
+    await aftercare.locator("summary").click();
+    await expect(aftercare).toHaveAttribute("open", "");
     await expect(page.getByRole("heading", { name: /What happens after .*JAMB Direct Entry/i })).toBeVisible();
   });
 
