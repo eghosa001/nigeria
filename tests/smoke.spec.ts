@@ -688,12 +688,18 @@ test("editorial light and dark themes fit representative routes on phones and de
   await page.goto("/", { waitUntil: "domcontentloaded" });
 
   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
-  await expect(page.locator('meta[name="theme-color"]').first()).toHaveAttribute("content", "#eee7d9");
+  await expect(page.locator('meta[name="theme-color"]').first()).toHaveAttribute("content", "#f5f5f1");
   expect(await page.locator(".home-path").count()).toBe(4);
   const lightCards = await page.locator(".home-path").evaluateAll((elements) =>
-    elements.map((element) => getComputedStyle(element).backgroundColor),
+    elements.map((element) => ({
+      background: getComputedStyle(element).backgroundColor,
+      chapterColor: getComputedStyle(element).borderTopColor,
+      radius: getComputedStyle(element).borderTopLeftRadius,
+    })),
   );
-  expect(new Set(lightCards).size).toBe(4);
+  expect(new Set(lightCards.map((card) => card.background)).size).toBe(1);
+  expect(new Set(lightCards.map((card) => card.chapterColor)).size).toBe(4);
+  expect(new Set(lightCards.map((card) => card.radius)).size).toBe(1);
 
   for (const width of widths) {
     await page.setViewportSize({ width, height: 900 });
@@ -702,8 +708,31 @@ test("editorial light and dark themes fit representative routes on phones and de
       columns: getComputedStyle(document.querySelector(".home-paths")!).gridTemplateColumns.split(" ").length,
     }));
     expect(layout.overflow, `light homepage at ${width}px`).toBeLessThanOrEqual(1);
-    expect(layout.columns, `light navigation at ${width}px`).toBe(width <= 350 ? 1 : width <= 900 ? 2 : 4);
+    expect(layout.columns, `light navigation at ${width}px`).toBe(width <= 620 ? 1 : width <= 920 ? 2 : 4);
   }
+
+  // Light mode is the same calm editorial surface on every pillar,
+  // with film pages no longer unexpectedly switching to dark catalogue UI.
+  for (const route of ["/services", "/explore", "/jobs", "/entertainment/movies"]) {
+    await page.goto(route, { waitUntil: "domcontentloaded" });
+    await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+    const masthead = page.locator("main h1").first();
+    await expect(masthead, route).toBeVisible();
+    const isDark = await page.locator(route === "/entertainment/movies" ? ".movie-browse-hero" :
+      route === "/jobs" ? ".jobs-hero" :
+      route === "/explore" ? ".tour-compact-hero" : ".services-directory-page")
+      .evaluate((node) => {
+        const rgb = getComputedStyle(node).backgroundColor.match(/[0-9]+/g)?.map(Number) ?? [];
+        return rgb.length >= 3 && Math.max(...rgb.slice(0, 3)) < 110;
+      });
+    expect(isDark, `light pillar hero on ${route}`).toBe(false);
+    if (route === "/entertainment/movies") {
+      const cinemaCatalogueBg = await page.locator(".movie-catalog-section")
+        .evaluate((node) => getComputedStyle(node).backgroundColor);
+      expect(cinemaCatalogueBg, "movie catalogue must be light").toBe("rgb(255, 255, 255)");
+    }
+  }
+  await page.goto("/", { waitUntil: "domcontentloaded" });
 
   await page.locator(".theme-toggle").click();
   await page.getByRole("menuitemradio", { name: "Dark" }).click();
@@ -765,8 +794,8 @@ test("editorial light and dark themes fit representative routes on phones and de
   await page.locator(".theme-toggle").click();
   await page.getByRole("menuitemradio", { name: "Light" }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
-  await expect(page.locator('meta[name="theme-color"]').first()).toHaveAttribute("content", "#eee7d9");
+  await expect(page.locator('meta[name="theme-color"]').first()).toHaveAttribute("content", "#f5f5f1");
   await expect.poll(async () => page.locator('meta[name="theme-color"]').evaluateAll((metas) =>
-    metas.length > 0 && metas.every((meta) => meta.getAttribute("content") === "#eee7d9"),
+    metas.length > 0 && metas.every((meta) => meta.getAttribute("content") === "#f5f5f1"),
   )).toBe(true);
 });
