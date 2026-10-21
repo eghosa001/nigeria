@@ -2630,9 +2630,9 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     },
     references: [{
       label: "Netflix — Nigeria Top 10 films (28 September–11 October 2026)",
-      href: "https://www.netflix.com/tudum/top10/nigeria/films",
+      href: "https://www.netflix.com/tudum/top10/nigeria",
       lastChecked: "2026-10-15",
-      note: "Netflix's official Nigeria weekly charts ranked Oversabi Aunty #1 during 28 September–4 October and 5–11 October 2026. This is historical audience evidence, not a guarantee of current streaming access."
+      note: "Netflix's official Nigeria weekly charts ranked Oversabi Aunty #1 during 28 September–4 October and 5–11 October 2026. This historical ranking is audience evidence, not a guarantee of current streaming access."
     }, {
 
       label: "Kava — official Oversabi Aunty listing and synopsis",
@@ -2649,21 +2649,7 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
       href: "https://www.fandango.com/oversabi-aunty-2025-244306/cast-and-crew",
       lastChecked: "2026-10-13",
       note: "Additional independent corroboration of film credits and character assignments."
-    }, {
-      label: "Netflix Nigeria — title information and availability caution",
-      href: "https://www.netflix.com/ng/title/82741545",
-      lastChecked: "2026-10-20",
-      note: "Netflix’s public title page currently displays a country-unavailable notice. That public result does not establish the availability seen inside a subscriber’s own account. Its older Nigeria Top 10 ranking is historical, not a working watch link.",
-    }],
-    watchLinks: [{
-      platform: "Kava",
-      label: "Check the official Oversabi Aunty listing on Kava",
-      href: "https://watch.kava.tv/oversabi-aunty",
-      access: "subscription",
-      lastChecked: "2026-10-20",
-      note: "Kava’s official title page names this exact film and offers a Subscribe option. Confirm current Nigerian playback and subscription terms inside Kava; this is not a free YouTube upload."
-    }],
-  },
+    },
   {
     slug: "my-fathers-shadow",
     title: "My Father's Shadow",
