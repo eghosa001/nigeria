@@ -273,7 +273,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
 
             <section id="job-sources">
               <h2>Sources used to verify {item.title}</h2>
-              <ul>{sourceNotes.map((note) => <li key={note}>{note}</li>)}</ul>
+              {sourceNotes.length ? <ul>{sourceNotes.map((note) => <li key={note}>{note}</li>)}</ul> : null}
               <div className="job-source-list">
                 {item.sources.map((source) => (
                   <a href={source.url} target="_blank" rel="noreferrer" key={source.url}>
