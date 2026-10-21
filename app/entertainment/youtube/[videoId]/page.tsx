@@ -56,21 +56,31 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
     override?.description ??
       `${movie.title} (${movie.year}) from ${movie.channelName}. ${castSummary} ${movie.synopsis}`
   );
+  const seoTitle = override?.title ?? compactMetadata(
+    indexable
+      ? `Watch ${movie.title} — Official Full Movie (${movie.year})`
+      : `${movie.title} Full Movie on YouTube (${movie.year})`,
+    60,
+  );
   return {
-    title: { absolute: override?.title ?? compactMetadata(
-      indexable
-        ? `Watch ${movie.title} — Official Full Movie (${movie.year})`
-        : `${movie.title} Full Movie on YouTube (${movie.year})`,
-      60,
-    ) },
+    title: { absolute: seoTitle },
     description,
     alternates: { canonical },
     robots: indexable && !aliasToCuratedMovie ? undefined : { index: false, follow: true },
+    // Share the same verified title and canonical identity as the search result.
+    // Curated YouTube aliases deliberately resolve to the preferred film page.
     openGraph: {
-      title: movie.title + " — Nigerian Movie",
+      title: seoTitle,
       description,
+      url: canonical,
       type: "video.other",
       images: [{ url: image, alt: movie.title + " official YouTube thumbnail" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: seoTitle,
+      description,
+      images: [image],
     },
   };
 }
