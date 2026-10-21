@@ -28,3 +28,24 @@ test("only observed Google Suggest output becomes a unique candidate, never its 
   assert.equal(c.find((x) => x.query === "nysc registration requirements").seeds, "nysc call up letter | nysc registration");
   assert.equal(c.find((x) => x.query === "places to visit in calabarzon").status, "exclude");
 });
+
+test("suggest existing canonical pages only when a same-pillar GSC anchor is observed", async () => {
+  const { suggestExistingPage } = await import("../tools/google-autocomplete-curation.mjs");
+  const lookup = (pillar, query, status = "candidate") => suggestExistingPage({ pillar, query, status });
+  assert.equal(lookup("services", "aedc map refund token").url,
+    "https://mynigeriaguide.com/services/aedc-map-refund");
+  assert.equal(lookup("services", "ibedc map refund portal").url,
+    "https://mynigeriaguide.com/services/ibedc-map-refund");
+  assert.equal(lookup("services", "nigerian passport tracking status").url,
+    "https://mynigeriaguide.com/services/passport-application-tracking");
+  assert.equal(lookup("services", "how to get anambra asin online").url,
+    "https://mynigeriaguide.com/services/anambra-asin-registration");
+  assert.equal(lookup("entertainment", "oversabi aunty cast").url,
+    "https://mynigeriaguide.com/entertainment/movies/oversabi-aunty");
+  assert.equal(lookup("services", "oversabi aunty cast"), null);
+  assert.equal(lookup("entertainment", "once upon a village cast"), null);
+  assert.equal(lookup("services", "passport tracking"), null);
+  assert.equal(lookup("services", "how to renew nigerian passport"), null);
+  assert.equal(lookup("services", "aedc map refund", "review"), null);
+  assert.equal(lookup("services", "how to replace a pvc pipe", "exclude"), null);
+});
