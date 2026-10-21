@@ -286,10 +286,13 @@ test("fee pages distinguish official conflicts from verified amounts", async ({ 
 });
 
 
-test("live homepage and Latest response timing is measured without a flaky absolute performance gate", async () => {
+test("live public entry-route response timing is measured without a flaky absolute performance gate", async () => {
   test.skip(!process.env.LIVE_BASE_URL, "Production-only edge-latency sampling.");
   const base = process.env.LIVE_BASE_URL!;
-  for (const route of ["/", "/latest"]) {
+  // Homepage hits alone do not explain origin-level CrUX TTFB: include the
+  // four pillar entry routes, particularly Jobs and movie browse, to detect
+  // always-dynamic rendering even when the homepage is served from cache.
+  for (const route of ["/", "/latest", "/jobs", "/entertainment/movies", "/services", "/explore"]) {
     for (let visit = 1; visit <= 2; visit++) {
       const started = performance.now();
       const response = await fetch(base + route, {
@@ -303,13 +306,14 @@ test("live homepage and Latest response timing is measured without a flaky absol
       expect(html).toContain("MyNigeriaGuide");
       const cacheState = response.headers.get("x-vinext-cache") ??
         response.headers.get("cf-cache-status") ?? "not-exposed";
+      const clientCachePolicy = response.headers.get("cache-control") ?? "not-exposed";
       // Observational monitoring: network, region, deployment and cold starts
       // influence results. Never hide occasional slow samples or pretend that
       // a two-request measurement provides a statistically valid p95.
       console.log(
         "[edge-latency] " + route + " sample=" + visit +
         " TTFB=" + firstByteMs + "ms total=" + totalMs +
-        "ms cache=" + cacheState + " bytes=" + html.length,
+        "ms cache=" + cacheState + " policy=" + clientCachePolicy + " bytes=" + html.length,
       );
     }
   }

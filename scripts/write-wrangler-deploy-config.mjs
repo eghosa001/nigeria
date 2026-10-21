@@ -23,6 +23,14 @@ if (!generatedConfig) {
 // Never silently deploy without the production database or with staging attached.
 const source = JSON.parse(fs.readFileSync(path.resolve("wrangler.jsonc"), "utf8"));
 const generated = JSON.parse(fs.readFileSync(generatedConfig, "utf8"));
+
+// Vinext 1.0 beta.11 delegates ISR caching to a separate response entrypoint.
+// A cache-enabled *default* Worker bypasses that isolation and risks caching
+// responses before middleware and route-level admission checks run.
+// The build-generated config is the artifact Wrangler actually deploys.
+if (source.cache?.enabled === true || generated.cache?.enabled === true) {
+  throw new Error("Vinext default Worker must not enable Workers Cache; the CDN adapter owns the cacheable response entrypoint.");
+}
 const expectedBindings = source.d1_databases ?? [];
 const actualBindings = generated.d1_databases ?? [];
 if (!Array.isArray(expectedBindings) || !Array.isArray(actualBindings) ||

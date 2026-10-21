@@ -9,6 +9,12 @@ import { fileURLToPath } from 'node:url';
 const script = new URL('../scripts/write-wrangler-deploy-config.mjs', import.meta.url);
 const source = JSON.parse(fs.readFileSync(new URL('../wrangler.jsonc', import.meta.url), 'utf8'));
 
+test('Vinext default Worker does not enable Workers Cache (CDN response entrypoint owns ISR)', () => {
+  assert.notEqual(source.cache?.enabled, true, 'do not bypass Vinext response entrypoint cache isolation');
+  const vite = fs.readFileSync(new URL('../vite.config.ts', import.meta.url), 'utf8');
+  assert.match(vite, /cdn: cdnAdapter\\(\\)/, 'keep the explicit response cache adapter');
+});
+
 test('deploy pointer is written only when generated D1 identity matches source', () => {
   const cwd = fs.mkdtempSync(path.join(os.tmpdir(), 'mng-deploy-config-'));
   try {
@@ -24,6 +30,16 @@ test('deploy pointer is written only when generated D1 identity matches source',
       assert.match(run.stderr, /D1 binding/);
       assert.equal(fs.existsSync(path.join(cwd, '.wrangler/deploy/config.json')), false);
     }
+    // A generated default-entrypoint cache policy must block deployment, even
+    // if the D1 binding is valid: that would short-circuit request routing.
+    fs.writeFileSync(path.join(cwd, 'dist/server/wrangler.json'), JSON.stringify({
+      d1_databases: [binding], cache: { enabled: true },
+    }));
+    const unsafe = spawnSync(process.execPath, [fileURLToPath(script)], { cwd, encoding: 'utf8' });
+    assert.notEqual(unsafe.status, 0);
+    assert.match(unsafe.stderr, /default Worker must not enable Workers Cache/);
+    assert.equal(fs.existsSync(path.join(cwd, '.wrangler/deploy/config.json')), false);
+
     fs.writeFileSync(path.join(cwd, 'dist/server/wrangler.json'), JSON.stringify({ d1_databases: [binding] }));
     const run = spawnSync(process.execPath, [fileURLToPath(script)], { cwd, encoding: 'utf8' });
     assert.equal(run.status, 0, run.stderr);
