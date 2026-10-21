@@ -74,7 +74,10 @@ export function ExplorePlaceDirectory({ places, guides, totalCount }: {
     return () => controller.abort();
   }, [needsCatalogue, allPlaces, catalogRetry]);
 
-  const catalogueReady = !needsCatalogue || allPlaces !== null;
+  // Keep the first eight visible while fetching more; otherwise loading a
+  // larger catalogue would blank the content and introduce layout shift.
+  const showingPreview = !allPlaces && !query.trim() && kind === "all" && guide === "all";
+  const catalogueReady = showingPreview || allPlaces !== null;
   const availablePlaces = allPlaces ?? places;
 
   useEffect(() => {
@@ -257,9 +260,26 @@ export function ExplorePlaceDirectory({ places, guides, totalCount }: {
         </section>
       ) : null}
 
+      {catalogueReady && showingPreview && needsCatalogue ? (
+        <div className="explore-directory-more" aria-live="polite">
+          {catalogError ? (
+            <>
+              <p>More places could not be loaded. Your first eight results remain available.</p>
+              <button type="button" onClick={() => setCatalogRetry((retry) => retry + 1)}>
+                Try loading places again
+              </button>
+            </>
+          ) : <small>Loading more places…</small>}
+        </div>
+      ) : null}
+
       {remaining > 0 ? (
         <div className="explore-directory-more">
-          <button type="button" onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}>
+          <button
+            type="button"
+            disabled={needsCatalogue && allPlaces === null}
+            onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
+          >
             Show {Math.min(PAGE_SIZE, remaining)} more places
           </button>
           <small>{remaining} more available</small>
