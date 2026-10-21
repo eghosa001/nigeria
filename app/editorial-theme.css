@@ -475,7 +475,7 @@ html[data-theme="light"] :where(input, select, textarea) { color-scheme: light; 
   html[data-theme="light"] .home-paths { grid-template-columns: minmax(0,1fr) !important; gap: 8px; }
   html[data-theme="light"] .home-path {
     min-height: 0;
-    grid-template-columns: 38px minmax(0,1fr);
+    grid-template-columns: 48px minmax(0,1fr);
     grid-template-rows: auto auto;
     align-items: start;
     gap: 3px 14px;
