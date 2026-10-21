@@ -743,7 +743,7 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
   },
   {
     slug: "ondo-state-highlights",
-    title: "Ondo State Nature & Heritage Guide",
+    title: "Ondo State Road Trip: Idanre, Owo, Akure and Coast",
     shortTitle: "Ondo State highlights",
     kind: "destination",
     region: "Ondo State",
