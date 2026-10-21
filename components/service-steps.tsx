@@ -14,7 +14,7 @@ export function ServiceSteps({ service }: { service: Service }) {
 
       <div className="detailed-steps">
         {steps.map((step, index) => (
-          <article className="detailed-step" key={step.instruction}>
+          <article id={"service-step-" + (index + 1)} className="detailed-step" key={step.instruction} style={{ scrollMarginTop: "148px" }}>
             <div className="detailed-step-heading">
               <span className="detailed-step-number">{String(index + 1).padStart(2, "0")}</span>
               <div>
