@@ -737,7 +737,7 @@ test("editorial light and dark themes fit representative routes on phones and de
       columns: getComputedStyle(document.querySelector(".home-paths")!).gridTemplateColumns.split(" ").length,
     }));
     expect(layout.overflow, `dark homepage at ${width}px`).toBeLessThanOrEqual(1);
-    expect(layout.columns, `dark navigation at ${width}px`).toBe(width <= 760 ? 1 : 4);
+    expect(layout.columns, `dark navigation at ${width}px`).toBe(width <= 760 ? 1 : width <= 920 ? 2 : 4);
   }
 
   // Each pillar and one representative detail path stays navigable with
