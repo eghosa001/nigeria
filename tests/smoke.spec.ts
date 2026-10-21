@@ -686,7 +686,7 @@ test("editorial light and dark themes fit representative routes on phones and de
   await page.goto("/", { waitUntil: "domcontentloaded" });
 
   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
-  await expect(page.locator('meta[name="theme-color"]')).toHaveAttribute("content", "#eee7d9");
+  await expect(page.locator('meta[name="theme-color"]').first()).toHaveAttribute("content", "#eee7d9");
   expect(await page.locator(".home-path").count()).toBe(4);
   const lightCards = await page.locator(".home-path").evaluateAll((elements) =>
     elements.map((element) => getComputedStyle(element).backgroundColor),
@@ -706,7 +706,7 @@ test("editorial light and dark themes fit representative routes on phones and de
   await page.locator(".theme-toggle").click();
   await page.getByRole("menuitemradio", { name: "Dark" }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
-  await expect(page.locator('meta[name="theme-color"]')).toHaveAttribute("content", "#0b1410");
+  await expect(page.locator('meta[name="theme-color"]').first()).toHaveAttribute("content", "#0b1410");
 
   // These site elements must not inherit any white/light CSS declarations when
   // switching appearance, including the highlighted mobile navigation item.
@@ -763,5 +763,8 @@ test("editorial light and dark themes fit representative routes on phones and de
   await page.locator(".theme-toggle").click();
   await page.getByRole("menuitemradio", { name: "Light" }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
-  await expect(page.locator('meta[name="theme-color"]')).toHaveAttribute("content", "#eee7d9");
+  await expect(page.locator('meta[name="theme-color"]').first()).toHaveAttribute("content", "#eee7d9");
+  await expect.poll(async () => page.locator('meta[name="theme-color"]').evaluateAll((metas) =>
+    metas.length > 0 && metas.every((meta) => meta.getAttribute("content") === "#eee7d9"),
+  )).toBe(true);
 });
