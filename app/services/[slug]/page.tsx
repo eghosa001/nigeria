@@ -28,6 +28,7 @@ import { getGrowthHubsForService } from "@/lib/growth-hubs";
 import { getRelatedServices, getRelatedServiceReason } from "@/lib/internal-links";
 import { getServiceSearchAnswers } from "@/lib/search-answers";
 import { hasExplicitServiceGuidance } from "@/lib/service-guidance";
+import { getReviewedIcanGuidance } from "@/lib/ican-route-guidance-2026-10-17";
 import { getSiteUrl } from "@/lib/site";
 import { leadAlreadyStatesFee } from "@/lib/reader-content-dedup";
 
@@ -126,6 +127,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
   const agency = getAgency(service.agencySlug);
   const feeInSummary = leadAlreadyStatesFee(service.summary, service.feeLabel);
+  const hasAftercare = hasExplicitServiceGuidance(service.slug) || Boolean(getReviewedIcanGuidance(service.slug));
   const related = getRelatedServices(service, 6);
   const topicHubs = getGrowthHubsForService(service.slug).slice(0, 2);
   const topicSearches = topicHubs
@@ -225,7 +227,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   {primaryOfficialLink.label}
                 </a>
               ) : null}
-              <small>{service.feeLabel.trim().toUpperCase() === "FREE" ? "Basic application is free; do not pay unofficial agents." : "MyNigeriaGuide does not collect service fees."}</small>
+              <small>MyNigeriaGuide does not collect service fees. Use only the responsible provider’s official payment route.</small>
             </aside>
           </div>
           <ServiceReviewNotice lastVerified={service.lastVerified} />
@@ -265,7 +267,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="section guide-main-section">
         <div className="container guide-layout">
           <article className="guide-content">
-            <GuideQuickNav showQuickAnswers={searchAnswers.length > 0} showAftercare={hasExplicitServiceGuidance(service.slug)} showScenarios={getServiceScenarioDossier(service).length > 0} />
+            <GuideQuickNav showQuickAnswers={searchAnswers.length > 0} showAftercare={hasAftercare} showScenarios={getServiceScenarioDossier(service).length > 0} />
 
             <ServiceSteps service={service} />
 
@@ -285,7 +287,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </details>
             ) : null}
 
-            {hasExplicitServiceGuidance(service.slug) ? (
+            {hasAftercare ? (
               <details className="compact-disclosure service-extra-aftercare">
                 <summary>What to do after applying</summary>
                 <ServiceAftercare service={service} />
