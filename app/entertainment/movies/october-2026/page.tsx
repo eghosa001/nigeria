@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "October 2026 Nigerian Movie Releases",
   description: "Nigerian movie releases for October 2026: My 30th Wedding, Love On Credit, Oversabi Aunty and new cinema titles. Release dates, cast and official viewing links.",
   alternates: { canonical: "/entertainment/movies/october-2026" },
-};
+});
 
 type OctoberRelease = {
   date: string;

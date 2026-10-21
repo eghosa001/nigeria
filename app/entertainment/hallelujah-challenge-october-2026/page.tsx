@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -12,12 +13,12 @@ const youtube = "https://www.youtube.com/@NathanielBasseyMain";
 const instagram = "https://www.instagram.com/nathanielblow/";
 const organiser = "https://www.instagram.com/hallelujahchallengelive/";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Hallelujah Challenge October 2026: Time, Dates & Official Livestream",
   description:
     "The October 2026 Hallelujah Challenge runs 5–30 October at 11:59pm WAT. Find Nathaniel Bassey's official YouTube and Instagram livestream links and replay guidance.",
   alternates: { canonical: "/entertainment/hallelujah-challenge-october-2026" },
-};
+});
 
 export const revalidate = 3600;
 

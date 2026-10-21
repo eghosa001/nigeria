@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { explorePlaceKindLabel, getExplorePlacesForGuide, googleMapsUrl } from "@/lib/explore-places";
 import { getExploreGuide } from "@/lib/explore";
 import { getSiteUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Things to Do in Lagos with Kids, Couples & This Weekend",
   description: "Find things to do in Lagos, Nigeria with kids or a partner, this weekend or on a budget. Explore Lagos Island, Mainland and Lekki with verified locations.",
   alternates: { canonical: "/explore/things-to-do-lagos" }
-};
+});
 
 export default function Page() {
   const guide=getExploreGuide("lagos")!;

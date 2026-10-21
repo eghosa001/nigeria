@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { agencies, publicServices } from "@/lib/data";
@@ -6,11 +7,11 @@ import { getSiteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: { absolute: "Official Service Portals for Nigerians | MyNigeriaGuide" },
   description: "Direct official websites for Nigerian public agencies, private service providers and foreign authorities, linked to MyNigeriaGuide's verified process guides.",
   alternates: { canonical: "/official-portals" },
-};
+});
 
 export default function OfficialPortalsPage() {
   const base = getSiteUrl();

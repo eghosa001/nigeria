@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -11,12 +12,12 @@ export const dynamic = "force-dynamic";
 
 export function generateMetadata(): Metadata {
   const items = getClosingSoonJobs(jobOpportunities, 7);
-  return {
+  return withStaticSocialMetadata({
     title: "Jobs Closing This Week in Nigeria",
     description: "Verified Nigerian job and recruitment applications with published deadlines in the next seven days.",
     alternates: { canonical: "/jobs/closing-this-week" },
     robots: items.length ? undefined : { index: false, follow: true },
-  };
+  });
 }
 
 export default function ClosingThisWeekPage() {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
@@ -31,11 +32,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!hub?.detailPage) return {};
   const titles = titlesForPlatform(hub.platform);
 
-  return {
+  return withStaticSocialMetadata({
     title: "Nigerian Movies on " + hub.name + " — Popular Titles & Where to Watch",
     description: "Browse " + titles.length + " Nigerian movie guides linked to " + hub.name + ", with cast, story, runtime where verified and current official source links.",
     alternates: { canonical: "/entertainment/platforms/" + hub.slug },
-  };
+  });
 }
 
 export default async function EntertainmentPlatformPage({ params }: { params: Promise<{ slug: string }> }) {

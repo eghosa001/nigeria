@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { JobCollection } from "@/components/job-collection";
 import { jobOpportunities } from "@/lib/jobs";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Internships & SIWES Opportunities in Nigeria",
   description: "Verified internships, SIWES, industrial training, pre-NYSC and student career programmes in Nigeria with eligibility and official application routes.",
   alternates: { canonical: "/jobs/internships" }
-};
+});
 
 export default function InternshipJobsPage() {
   const items = jobOpportunities.filter((item) =>

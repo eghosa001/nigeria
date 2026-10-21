@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { getSiteUrl } from "@/lib/site";
 import { NigeriaTrendsBackfill } from "@/components/nigeria-trends-backfill";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Nigeria Social Trends: Verified Updates, 11–18 October 2026",
   description: "Nigeria's YouTube trending videos and music in October 2026, plus TikTok, Instagram, Facebook and X context. Dated chart snapshots, sources and verified guides.",
   alternates: { canonical: "/entertainment/social-trends" },
-};
+});
 
 const videoSnapshot = [
   { name: "Blaqbonez — Ikebe 3000 (feat. Asake)", type: "Music video", detail: "Listed at No. 1 on the Nigeria YouTube trending-video snapshot." },

@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { getEffectiveReleaseStatus } from "@/lib/content-freshness";
 import { releaseItems } from "@/lib/entertainment-extras";
 import { indexableYouTubeMovies } from "@/lib/youtube-library";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "New & Upcoming Nigerian Entertainment",
   description: "Fresh Nigerian streaming additions, films now showing in cinemas and upcoming film events, with official source links.",
   alternates: { canonical: "/entertainment/releases" },
-};
+});
 
 export const revalidate = 3600;
 

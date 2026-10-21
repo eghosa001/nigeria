@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { GuideAssistant } from "@/components/guide-assistant";
 import { JsonLd } from "@/components/json-ld";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   alternates: { canonical: "/assistant" },
   title: "Nigerian Government Service Guide Finder",
   description: "Find verified Nigerian government service guides for passports, NIN, CAC, JAMB, police certificates and other official tasks.",
-};
+});
 
 const faq = [
   {

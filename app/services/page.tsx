@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { PageOutline } from "@/components/page-outline";
 import { redirect } from "next/navigation";
@@ -55,12 +56,12 @@ export async function generateMetadata({
     Number(params.page ?? "1") > 1
   );
 
-  return {
+  return withStaticSocialMetadata({
     alternates: { canonical: "/services" },
     title: "CAC, NYSC, NIN, Passport & WAEC Service Guides",
     description: "Check CAC registration fees and portal, NYSC Batch C status, NIN retrieval, passport renewal, WAEC results and official Nigeria service instructions.",
     robots: filtered ? { index: false, follow: true } : undefined,
-  };
+  });
 }
 
 export const revalidate = 3600;

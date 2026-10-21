@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -6,11 +7,11 @@ import { JsonLd } from "@/components/json-ld";
 import { entertainmentTitles } from "@/lib/entertainment";
 import { getSiteUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Trending Nigerian Movies October 2026: Cast & Where to Watch",
   description: "Current and upcoming Nigerian movie releases for October 2026, with cast, release dates and verified cinema or streaming links.",
   alternates: { canonical: "/entertainment/trending" },
-};
+});
 
 const prioritySlugs = ["black-market-2026","agbara-nla-the-return","east-west-love-2026","first-lady-2026","pushing-30-2026","tele-x-zikora-2026","a-land-apart-2026","onibon-oje-2026","phoenix-fury-2026","wire-transfer-2026","mko-documentary-2026","oversabi-aunty","long-enough-2026","forever-yours-2026","once-upon-a-village-3"];
 

@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { explorePlaceKindLabel, getExplorePlacesForGuide, googleMapsUrl } from "@/lib/explore-places";
 import { getExploreGuide } from "@/lib/explore";
 import { getSiteUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Things to Do in Abuja: Family, Couples & Tourist Attractions",
   description: "Discover things to do in Abuja with kids, as a couple or this weekend. Compare parks, galleries, lakeside stops and tourist attractions with verified addresses.",
   alternates: { canonical: "/explore/things-to-do-abuja" }
-};
+});
 
 export default function Page() {
   const guide=getExploreGuide("abuja")!;

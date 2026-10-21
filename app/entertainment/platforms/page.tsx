@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { entertainmentTitles } from "@/lib/entertainment";
 import { entertainmentPlatformHubs } from "@/lib/entertainment-platform-hubs";
 import { platformGuides } from "@/lib/entertainment-extras";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Where to Watch Nigerian Movies",
   description: "Compare Nigerian movie coverage across Netflix, Prime Video, YouTube, Kava, cinemas and Africa Magic, with verified source links and platform-specific guides.",
   alternates: { canonical: "/entertainment/platforms" },
-};
+});
 
 export default function EntertainmentPlatformsPage() {
   const primarySlugs = new Set(entertainmentPlatformHubs.map((hub) => hub.slug));

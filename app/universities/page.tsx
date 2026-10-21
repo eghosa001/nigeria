@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { publicServices } from "@/lib/data";
 import { universityProfiles } from "@/lib/university-profiles";
@@ -6,12 +7,12 @@ import { queryUniversityDirectory, universitySearchSuggestions } from "@/lib/uni
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ q?: string }> }): Promise<Metadata> {
   const { q } = await searchParams;
-  return {
+  return withStaticSocialMetadata({
     title: "Nigerian University Admissions, Fees, Portals & Clearance",
     description: "Compare current-session admissions, portals, clearance requirements, screening and tuition guidance for verified Nigerian universities.",
     alternates: { canonical: "/universities" },
     robots: q?.trim() ? { index: false, follow: true } : undefined,
-  };
+  });
 }
 export const revalidate = 3600;
 

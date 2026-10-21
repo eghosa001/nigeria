@@ -1,15 +1,16 @@
 import { getEffectiveJobStatus, getEffectiveStatusLabel } from "@/lib/job-runtime";
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { jobOpportunities } from "@/lib/jobs";
 import { getSiteUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Remote Jobs Nigeria 2026: Students & No Experience",
   description: "Explore remote jobs in Nigeria for students, beginners and experienced workers. Learn location rules, dollar-payment caveats and how to verify genuine openings.",
   alternates: { canonical: "/jobs/remote" }
-};
+});
 
 const flexibleSources = [
   {

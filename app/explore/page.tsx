@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { ExplorePlaceDirectory } from "@/components/explore-place-directory";
@@ -48,11 +49,11 @@ const stateGuideLinks = [
   ["Zamfara", "zamfara-state-travel-guide"],
 ] as const;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Places to Visit in Nigeria",
   description: "Find places to visit across all 36 Nigerian states and the FCT: city guides, attractions, landmarks, hotels, restaurants, events and trip-planning tips.",
   alternates: { canonical: "/explore" },
-};
+});
 
 // Event freshness is calculated in Nigerian local time on each request.
 export const dynamic = "force-dynamic";

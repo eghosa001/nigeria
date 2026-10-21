@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -14,12 +15,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const params = await searchParams;
   const filtered = Boolean((params.q ?? "").trim() || (params.channel ?? "").trim() || Number(params.page ?? "1") > 1);
-  return {
+  return withStaticSocialMetadata({
     title: "Nigerian Movies on YouTube 2026: Full & Free",
     description: "Find the latest 2026 Nigerian movies on YouTube, Yoruba films and full Nollywood movies. Browse verified original publishers and watch legally for free.",
     alternates: { canonical: "/entertainment/youtube" },
     robots: filtered ? { index: false, follow: true } : undefined,
-  };
+  });
 }
 
 export default async function YouTubeMoviesPage({

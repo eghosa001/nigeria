@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 
-export const metadata: Metadata = { title: "Terms of use", description: "Read MyNigeriaGuide’s independent information disclaimer, acceptable use conditions and important guidance before relying on service information.", alternates: { canonical: "/terms" } };
+export const metadata: Metadata = withStaticSocialMetadata({ title: "Terms of use", description: "Read MyNigeriaGuide’s independent information disclaimer, acceptable use conditions and important guidance before relying on service information.", alternates: { canonical: "/terms" } });
 
 export default function TermsPage() {
   return (

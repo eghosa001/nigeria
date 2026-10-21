@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { serviceLocationCities } from "@/data/service-locations";
 import { officeDirectories } from "@/lib/offices";
 import { OfficeFinder } from "@/components/office-finder";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   alternates: { canonical: "/offices" },
   title: "Official office and service-location routes",
   description: "Find official Nigerian government office, centre and service-location routes without relying on copied or stale addresses.",
-};
+});
 
 export default function OfficesPage() {
   return (

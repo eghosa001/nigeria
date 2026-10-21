@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { entertainmentPeople } from "@/lib/entertainment-extras";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Nigerian Actors, Directors & Filmmakers",
   description: "Browse Nigerian actors, directors and filmmakers connected to movies in the MyNigeriaGuide entertainment catalog.",
   alternates: { canonical: "/entertainment/people" },
-};
+});
 
 export default function EntertainmentPeoplePage() {
   return (

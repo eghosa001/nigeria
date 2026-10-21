@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -10,12 +11,12 @@ export const dynamic = "force-dynamic";
 
 export function generateMetadata(): Metadata {
   const items = getRecentlyPostedJobs(jobOpportunities, 7);
-  return {
+  return withStaticSocialMetadata({
     title: "New Jobs This Week in Nigeria",
     description: "Recently posted Nigerian vacancies whose original employer posting date is verified, with official application links and requirements.",
     alternates: { canonical: "/jobs/new-this-week" },
     robots: items.length ? undefined : { index: false, follow: true },
-  };
+  });
 }
 
 export default function NewThisWeekPage() {

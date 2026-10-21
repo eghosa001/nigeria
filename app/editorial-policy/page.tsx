@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Editorial Policy",
   description: "How MyNigeriaGuide sources information, handles images and links, and corrects errors in our Nigerian movies, services, travel and jobs guides.",
   alternates: { canonical: "/editorial-policy" },
-};
+});
 
 export default function EditorialPolicyPage() {
   return (

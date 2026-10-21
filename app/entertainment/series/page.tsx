@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { seriesTitles } from "@/lib/series";
 import { getSiteUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Nigerian TV Series 2026: Nollywood, Kannywood & Where to Watch",
   description: "Browse Nigerian TV and web series with verified release status, cast information and official places to watch.",
   alternates: { canonical: "/entertainment/series" }
-};
+});
 
 export default function SeriesPage() {
   const base=getSiteUrl();

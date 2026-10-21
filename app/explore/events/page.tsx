@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -8,11 +9,11 @@ import { groupEventCalendar } from "@/lib/explore-event-calendar";
 import { todayIsoNigeria } from "@/lib/job-runtime";
 import { getSiteUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Nigeria Festivals 2026 & Announced 2027 Events",
   description: "Plan Nigeria festivals with official schedules and source notes. Distinguish upcoming dates, events needing confirmation, and archived programmes.",
   alternates: { canonical: "/explore/events" },
-};
+});
 
 // Event-date sections change on the Nigerian calendar day; do not freeze them during a build.
 export const dynamic = "force-dynamic";

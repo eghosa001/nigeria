@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { publicServices } from "@/lib/data";
 import { entertainmentTitles } from "@/lib/entertainment";
@@ -10,11 +11,11 @@ import { seriesLastChecked, seriesTitles } from "@/lib/series";
 import { indexableYouTubeMovies } from "@/lib/youtube-library";
 import { NigeriaTrendsBackfill } from "@/components/nigeria-trends-backfill";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withStaticSocialMetadata({
   title: "Latest Nigeria Movies, Services, Travel & Job Updates",
   description: "Recently source-checked Nigerian movies, services, tourism guides and currently listed employer opportunities, plus a dated editorial trends archive.",
   alternates: { canonical: "/latest" },
-};
+});
 
 // Fresh editorial shelves are public and identical across visitors. Allow
 // five-minute ISR instead of recomputing and rendering on every request;
