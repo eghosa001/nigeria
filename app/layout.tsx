@@ -83,6 +83,8 @@ const adsenseBootstrap = `
   if (document.querySelector("script[data-mynigeriaguide-adsense]")) return;
   var script = document.createElement("script");
   script.async = true;
+  // Retain early ad discovery, but give critical CSS and page imagery bandwidth priority.
+  script.fetchPriority = "low";
   script.crossOrigin = "anonymous";
   script.setAttribute("data-mynigeriaguide-adsense", "true");
   script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}";
