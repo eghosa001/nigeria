@@ -9,7 +9,7 @@ export function ServiceSteps({ service }: { service: Service }) {
       <span className="section-number" aria-hidden="true">02</span>
       <h2>How to complete {service.shortTitle} step by step</h2>
       <p className="guide-section-intro">
-        Follow the documented instructions in order. Prepare the items listed in Requirements above; we only add step-specific cautions where relevant.
+        Follow these instructions in order. Use the requirements checklist below to prepare the documents, and check the official source before submitting.
       </p>
 
       <div className="detailed-steps">
