@@ -1,9 +1,9 @@
 .section { padding: 24px 0 32px; border-bottom: 1px solid var(--line); }
 .heading { max-width: 760px; }
-.heading h2 { margin: 7px 0 12px; font-size: clamp(1.4rem, 2.25vw, 1.9rem); line-height: 1.25; }
+.heading h2 { font-family: var(--editorial-display, Georgia, serif); letter-spacing: -.02em; margin: 7px 0 12px; font-size: clamp(1.4rem, 2.25vw, 1.9rem); line-height: 1.25; }
 .heading p { color: var(--muted); line-height: 1.7; margin: 0 0 20px; }
 .cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
-.card { display: flex; flex-direction: column; gap: 10px; min-width: 0; padding: 21px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.card { display: flex; flex-direction: column; gap: 10px; min-width: 0; padding: 21px; border: 1px solid var(--line); border-radius: var(--editorial-radius, 10px); background: var(--surface); }
 .card h3 { margin: 0; font-size: 1.09rem; line-height: 1.35; }
 .card > p { margin: 0; line-height: 1.65; overflow-wrap: anywhere; }
 .checkpoint { padding: 13px 15px; border-left: 3px solid var(--green); background: var(--mint); border-radius: 6px; }
