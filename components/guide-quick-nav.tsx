@@ -25,7 +25,7 @@ export function GuideQuickNav({ showQuickAnswers = false, showAftercare = false,
   return (
     <nav className="guide-quick-nav" aria-label="On this page">
       <span>On this page</span>
-      {[...items.slice(0, 2), ...(showAftercare ? [["after-submit", "After application"] as const] : []), ...(showScenarios ? [["case-guidance", "Special cases"] as const] : []), ...items.slice(2, 3), ...(showQuickAnswers ? [["quick-answers", "Extra answers"] as const] : []), ["notes", "Cautions"] as const, ...items.slice(3)].map(([id, label]) => (
+      {[...items.slice(0, 3), ...(showScenarios ? [["case-guidance", "Special cases"] as const] : []), ...(showAftercare ? [["after-submit", "After application"] as const] : []), ...(showQuickAnswers ? [["quick-answers", "Extra answers"] as const] : []), ["notes", "Cautions"] as const, ...items.slice(3)].map(([id, label]) => (
         <a
           key={id}
           href={"#" + id}
