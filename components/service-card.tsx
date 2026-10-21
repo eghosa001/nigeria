@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { CategoryIcon } from "@/components/category-icon";
-import { getAgency } from "@/lib/data";
+import { getAgency } from "@/lib/agency-directory";
 import type { PublicServiceListing } from "@/lib/data";
 import type { Service } from "@/lib/types";
 import { StatusBadge } from "@/components/status-badge";
