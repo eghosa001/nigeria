@@ -28,6 +28,31 @@ test("1/7/30/90-day and cumulative windows preserve the correct calendar boundar
   assert.equal(rows[4].impressions, 2000);
   assert.equal(rows[4].pageViews, 400);
 });
+test("search impression deltas exclude provisional days while retaining live daily data", () => {
+  const rows = buildPeriodRows(
+    [{ date: "2026-10-22", pageViews: 10 }],
+    [
+      { date: "2026-10-19", impressions: 80, clicks: 3 },
+      { date: "2026-10-20", impressions: 100, clicks: 4 },
+      { date: "2026-10-21", impressions: 1, clicks: 0 }, // incomplete Google data
+    ],
+    "2026-10-22",
+    { ga4StartDate: "2026-10-01", gscStartDate: "2026-10-01",
+      pageViews: 200, sessions: 90, impressions: 181, clicks: 7 },
+    "2026-10-22",
+    "2026-10-20", // most recent completed Pacific day
+  );
+  assert.equal(rows[0].startDate, "2026-10-22");
+  assert.equal(rows[0].gscStartDate, "2026-10-20");
+  assert.equal(rows[0].gscEndDate, "2026-10-20");
+  assert.equal(rows[0].pageViews, 10);
+  assert.equal(rows[0].impressions, 100);
+  assert.equal(rows[0].previousImpressions, 80);
+  assert.equal(metricDelta(rows[0].impressions, rows[0].previousImpressions), 25);
+  assert.equal(rows[1].gscStartDate, "2026-10-14");
+  assert.equal(rows[1].gscEndDate, "2026-10-20");
+});
+
 test("unreported traffic and zero denominators cannot produce fake percentage growth", () => {
   assert.equal(metricDelta(null, 0), null);
   assert.equal(metricDelta(8, 0), null);
