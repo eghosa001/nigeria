@@ -6,6 +6,7 @@ import { ExplorePlaceDirectory } from "@/components/explore-place-directory";
 import { exploreGuides } from "@/lib/explore";
 import { getUpcomingEventGuides } from "@/lib/explore-event-featured";
 import { publicExplorePlaceDirectory } from "@/lib/explore-directory-payload";
+import { getFilterableExploreGuides } from "@/lib/explore-directory-guide-options";
 import { getSiteUrl } from "@/lib/site";
 import { destinationPhotos, destinationPhotoUrls } from "@/lib/destination-photos";
 
@@ -82,6 +83,10 @@ export default function ExplorePage() {
       priority[guidePriority.get(first.guideSlug) ?? "event"] -
       priority[guidePriority.get(second.guideSlug) ?? "event"])
     .slice(0, 8);
+  // The place filter must not serialize empty dropdown destinations that have
+  // no published visitor-directory places. Full editorial guide navigation
+  // remains in the crawlable sections below; no guide pages are removed.
+  const filterableGuides = getFilterableExploreGuides(exploreGuides, publicExplorePlaceDirectory);
   const base = getSiteUrl();
 
   const collectionLd = {
@@ -217,7 +222,7 @@ export default function ExplorePage() {
           <ExplorePlaceDirectory
             places={initialDirectoryPlaces}
             totalCount={publicExplorePlaceDirectory.length}
-            guides={exploreGuides.map((guide) => ({ slug: guide.slug, shortTitle: guide.shortTitle, kind: guide.kind }))}
+            guides={filterableGuides}
           />
         </div>
       </section>
