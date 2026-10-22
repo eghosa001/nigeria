@@ -37,10 +37,13 @@ test("movies directory keeps the exact default ranking and visible fields withou
     assert.deepEqual(getVerifiedYouTubePreview(item), getVerifiedYouTubePreview(movie));
     assert.deepEqual(getSourceLinkedFilmPreview(item), getSourceLinkedFilmPreview(movie));
   }
-  assert.ok(
-    JSON.stringify(result.items).length < JSON.stringify(original).length,
-    "browser RSC payload should be smaller than full editorial movie records",
-  );
+  const originalBytes = Buffer.byteLength(JSON.stringify(original));
+  const compactBytes = Buffer.byteLength(JSON.stringify(result.items));
+  assert.ok(compactBytes < originalBytes,
+    "browser RSC payload should be smaller than full editorial movie records");
+  console.info("[movie-directory-payload] default 30-card JSON:", originalBytes,
+    "bytes original vs", compactBytes, "bytes compact; reduction",
+    ((1 - compactBytes / originalBytes) * 100).toFixed(1) + "%");
 });
 
 test("movie searching and platform filters still run against the full server catalogue", () => {
