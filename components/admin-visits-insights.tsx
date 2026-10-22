@@ -417,7 +417,7 @@ export function AdminVisitsInsights() {
           <td><strong>{count(row.sessions)}</strong><Delta current={row.sessions} previous={row.previousSessions} /></td>
         </tr>)}</tbody>
       </table></div>
-      <p className="visits-footnote">Percentage changes compare each window with the immediately preceding window of equal length. Today may be incomplete; “—” means unavailable, not zero. The source-specific date ranges are listed in each row because GA4 uses Lagos dates while Google Search Console uses Pacific dates.</p>
+      <p className="visits-footnote">Percentage changes compare equal-length periods. Google impressions and clicks use the latest completed Pacific reporting day; newer provisional results remain in the daily chart and the separately labelled hourly feed. Website visits use Lagos dates and may include an unfinished current day. “—” means unavailable, not zero. Each period shows the exact source-specific dates.</p>
       <p className="visits-footnote">Latest reported days: GA4 <strong>{report.latestGA4Date ?? "unavailable"}</strong>; Google Search Console <strong>{report.latestGSCDate ?? "unavailable"}</strong>.</p>
       {report.errors.ga4 || report.errors.gsc ? <p className="visits-source-warning">{report.errors.ga4 ? "GA4: " + report.errors.ga4 + ". " : ""}{report.errors.gsc ? "GSC: " + report.errors.gsc : ""}</p> : null}
     </section>

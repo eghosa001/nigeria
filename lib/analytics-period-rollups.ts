@@ -64,6 +64,7 @@ export function buildPeriodRows(
   todayLagos: string,
   all: { ga4StartDate: string; gscStartDate: string; pageViews: number | null; sessions: number | null; clicks: number | null; impressions: number | null; position?: number | null },
   todayPacific = todayLagos,
+  settledSearchThrough = todayPacific,
 ): PeriodRow[] {
   const periods: Array<{ key: PeriodRow["key"]; days: number }> = [
     { key: "1d", days: 1 },
@@ -75,7 +76,8 @@ export function buildPeriodRows(
     const startDate = shiftIsoDay(todayLagos, 1 - days);
     const previousEnd = shiftIsoDay(startDate, -1);
     const previousStart = shiftIsoDay(startDate, -days);
-    const gscStartDate = shiftIsoDay(todayPacific, 1 - days);
+    // Google daily snapshots may include partial days. Compare equal, fully reported windows.
+    const gscStartDate = shiftIsoDay(settledSearchThrough, 1 - days);
     const gscPreviousEnd = shiftIsoDay(gscStartDate, -1);
     const gscPreviousStart = shiftIsoDay(gscStartDate, -days);
     return {
@@ -83,12 +85,12 @@ export function buildPeriodRows(
       startDate,
       endDate: todayLagos,
       gscStartDate,
-      gscEndDate: todayPacific,
+      gscEndDate: settledSearchThrough,
       pageViews: aggregateMetric(ga4Days, startDate, todayLagos, "pageViews"),
       sessions: aggregateMetric(ga4Days, startDate, todayLagos, "sessions"),
-      impressions: aggregateMetric(gscDays, gscStartDate, todayPacific, "impressions"),
-      clicks: aggregateMetric(gscDays, gscStartDate, todayPacific, "clicks"),
-      position: averagePosition(gscDays, gscStartDate, todayPacific),
+      impressions: aggregateMetric(gscDays, gscStartDate, settledSearchThrough, "impressions"),
+      clicks: aggregateMetric(gscDays, gscStartDate, settledSearchThrough, "clicks"),
+      position: averagePosition(gscDays, gscStartDate, settledSearchThrough),
       previousPageViews: aggregateMetric(ga4Days, previousStart, previousEnd, "pageViews"),
       previousSessions: aggregateMetric(ga4Days, previousStart, previousEnd, "sessions"),
       previousClicks: aggregateMetric(gscDays, gscPreviousStart, gscPreviousEnd, "clicks"),
