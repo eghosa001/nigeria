@@ -107,6 +107,20 @@ async function queryOverview() {
         date: row.keys?.[0] ?? "", impressions: row.impressions ?? 0, clicks: row.clicks ?? 0,
         position: row.position ?? 0,
       })).filter((row) => /^\d{4}-\d{2}-\d{2}$/.test(row.date)) : [];
+  // Search Console's dataState=all includes provisional recent dates. Keep those
+  // rows in the daily chart and use the direct hourly feed for freshness, but
+  // anchor summary comparisons to the last completed Pacific date only.
+  const firstIncompleteGscDate = gscDaily.status === "fulfilled"
+    ? (gscDaily.value.metadata?.firstIncompleteDate ?? gscDaily.value.metadata?.first_incomplete_date)
+    : undefined;
+  // Where Google omits completeness metadata, conservatively exclude the
+  // last two Pacific dates rather than presenting a partially collected day
+  // as a genuine decrease.
+  const completeGscCutoff = firstIncompleteGscDate
+    ? shiftIsoDay(firstIncompleteGscDate, -1)
+    : shiftIsoDay(pacificDay, -2);
+  const settledGscThrough = gscDays.filter((row) => row.date <= completeGscCutoff).at(-1)?.date
+    ?? completeGscCutoff;
   const ga4Totals = ga4Lifetime.status === "fulfilled"
     ? (ga4Lifetime.value.totals?.[0] ?? ga4Lifetime.value.rows?.[0] ?? null) : null;
   // When filtered traffic appears empty, probe the unfiltered property to
@@ -132,7 +146,7 @@ async function queryOverview() {
     clicks: gscLifetime.status === "fulfilled" ? (gscTotals?.clicks ?? 0) : null,
     impressions: gscLifetime.status === "fulfilled" ? (gscTotals?.impressions ?? 0) : null,
     position: gscLifetime.status === "fulfilled" ? (gscTotals?.position ?? null) : null,
-  }, pacificDay);
+  }, pacificDay, settledGscThrough);
   const daily = new Map<string, TrafficDay>();
   for (const row of ga4Days) daily.set(row.date, row);
   for (const row of gscDays) daily.set(row.date, { ...(daily.get(row.date) ?? { date: row.date }), ...row });
