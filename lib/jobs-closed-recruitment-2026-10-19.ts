@@ -69,11 +69,63 @@ const closedRecruitments: Record<string, IssuerCheck> = {
   },
 };
 
+
+/**
+ * Dated, role-specific corrections checked on 22 October 2026.
+ * A disappeared job URL is not proof that the employer has stopped hiring,
+ * and an expired announced deadline is not proof of a formally extended window.
+ */
+function applyIssuerStatusCorrections20261022(item: CareerOpportunity): CareerOpportunity {
+  if (item.slug === "eha-medical-doctor-abuja-2026") {
+    return {
+      ...item,
+      status: "unverified",
+      statusLabel: "Original Abuja vacancy unavailable — new opening unconfirmed",
+      summary: "The original EHA Clinics Medical Doctor advert in Lifecamp, Abuja returned HTTP 404 on 22 October 2026. The employer's current vacancies board listed other positions, but not this Abuja doctor role. The earlier professional requirements remain for reference; they do not establish a current application.",
+      applicationSteps: [
+        "Check the current EHA Clinics jobs board for a newly listed Medical Doctor position in Abuja.",
+        "If one appears, verify the worksite, licence, post-NYSC experience and eligibility questions in that exact new advert.",
+        "Apply only through the employer's new role-specific application form; the previous Abuja vacancy URL is unavailable."
+      ],
+      officialUrl: "https://erp.eha.ng/jobs",
+      officialUrlLabel: "Check current EHA Clinics vacancies",
+      verifiedAt: "2026-10-22",
+      sourceNotes: [
+        ...item.sourceNotes,
+        "Issuer check 22 October 2026: the former Abuja Medical Doctor detail URL returned HTTP 404; the live EHA Clinics jobs board listed other roles but not this position. A future reopening remains possible."
+      ],
+      sources: [{ label: "EHA Clinics current vacancies board — old Abuja role unavailable", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-22" }]
+    };
+  }
+  if (item.slug === "nigerian-army-92rri-2026") {
+    return {
+      ...item,
+      status: "unverified",
+      statusLabel: "21 October deadline passed — extension not confirmed",
+      summary: "The published Nigerian Army 92RRI deadline was 21 October 2026 and has passed. The official recruitment site has displayed a generic 'ongoing' banner, but that alone does not establish a formal extension. Check the issuer for a newly dated notice; existing applicants should preserve their documents for any confirmed screening.",
+      applicationSteps: [
+        "The announced 21 October 2026 application deadline has passed. Do not assume the portal's generic 'ongoing' banner extends it.",
+        "If you already applied, confirm that you completed online submission rather than only printing the photo card.",
+        "Keep the signed photo card, guarantor, applicant declaration and state/LGA forms. Check the official shortlist before attending any screening.",
+        "The Army previously listed 17 November–1 December 2026 for state-of-origin screening; verify any changes with the issuer before travelling."
+      ],
+      officialUrlLabel: "Check official Army recruitment and shortlist updates",
+      nextMilestone: "The announced 21 October deadline has passed. Screening was previously scheduled for 17 November–1 December 2026; no extension of the application period has been independently confirmed.",
+      sourceNotes: [
+        ...item.sourceNotes,
+        "Deadline review 22 October 2026: the published 21 October date has elapsed. The portal's generic ongoing banner does not independently establish a new application deadline."
+      ]
+    };
+  }
+  return item;
+}
+
 export const checkedClosedRecruitmentSlugs20261019 = Object.keys(closedRecruitments);
 
 export function applyIssuerClosedRecruitmentChecks20261019(item: CareerOpportunity): CareerOpportunity {
-  const review = closedRecruitments[item.slug];
-  if (!review) return applyNafAndUnilorinIssuerChecks20261020(applyVerifiedEmployerBoards20261020(applyVerifiedOctoberJobSourceRechecks20261020(applyMayBakerOctoberLiveVacancy20261020(item))));
+  const corrected = applyIssuerStatusCorrections20261022(item);
+  const review = closedRecruitments[corrected.slug];
+  if (!review) return applyNafAndUnilorinIssuerChecks20261020(applyVerifiedEmployerBoards20261020(applyVerifiedOctoberJobSourceRechecks20261020(applyMayBakerOctoberLiveVacancy20261020(corrected))));
   const checkedAt = review.checkedAt ?? "2026-10-19";
   const sources = item.sources.map(source =>
     source.url === review.source ? { ...source, lastChecked: checkedAt } : source);
