@@ -217,7 +217,7 @@ export default function ExplorePage() {
           <ExplorePlaceDirectory
             places={initialDirectoryPlaces}
             totalCount={publicExplorePlaceDirectory.length}
-            guides={exploreGuides.map((guide) => ({ slug: guide.slug, shortTitle: guide.shortTitle, kind: guide.kind }))}
+            guides={exploreGuides.map((guide) => [guide.slug, guide.shortTitle, guide.kind] as const)}
           />
         </div>
       </section>
