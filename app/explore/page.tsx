@@ -6,6 +6,7 @@ import { ExplorePlaceDirectory } from "@/components/explore-place-directory";
 import { exploreGuides } from "@/lib/explore";
 import { getUpcomingEventGuides } from "@/lib/explore-event-featured";
 import { publicExplorePlaceDirectory } from "@/lib/explore-directory-payload";
+import { getFilterableExploreGuides } from "@/lib/explore-directory-guide-options";
 import { getSiteUrl } from "@/lib/site";
 import { destinationPhotos, destinationPhotoUrls } from "@/lib/destination-photos";
 
@@ -82,6 +83,12 @@ export default function ExplorePage() {
       priority[guidePriority.get(first.guideSlug) ?? "event"] -
       priority[guidePriority.get(second.guideSlug) ?? "event"])
     .slice(0, 8);
+  // The destination selector should list only guides with published places.
+  // Preserve all other travel links and state, city and itinerary browse pages.
+  const filterableGuides = getFilterableExploreGuides(
+    exploreGuides.map((guide) => [guide.slug, guide.shortTitle, guide.kind] as const),
+    publicExplorePlaceDirectory,
+  );
   const base = getSiteUrl();
 
   const collectionLd = {
@@ -217,7 +224,7 @@ export default function ExplorePage() {
           <ExplorePlaceDirectory
             places={initialDirectoryPlaces}
             totalCount={publicExplorePlaceDirectory.length}
-            guides={exploreGuides.map((guide) => [guide.slug, guide.shortTitle, guide.kind] as const)}
+            guides={filterableGuides}
           />
         </div>
       </section>
