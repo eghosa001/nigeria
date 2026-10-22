@@ -126,16 +126,16 @@ export const jobGrowthWave9: CareerOpportunity[] = [
     ],
     officialUrl: "https://capitalsageholdings.com/sageforge",
     officialUrlLabel: "Open the official SageForge programme page",
-    verifiedAt: "2026-10-07",
+    verifiedAt: "2026-10-22",
     deadline: "2026-10-31",
     nextMilestone: "Applications close 31 October 2026.",
     feeNote: "No application fee is stated on the official SageForge page. Use only the application route linked by CapitalSage.",
     sourceNotes: [
       "CapitalSage says SageForge is a twelve-month programme for an inaugural cohort of 60 graduates, with a six-week foundation block in Ibadan.",
-      "The official page states that applications close on 31 October 2026 and that graduates from all disciplines may apply."
+      "Rechecked the CapitalSage official programme page on 22 October 2026: its Apply Now link remains visible, the published deadline is 31 October 2026, and graduates from all disciplines may apply."
     ],
     sources: [
-      { label: "CapitalSage Holdings — SageForge", url: "https://capitalsageholdings.com/sageforge", lastChecked: "2026-10-07" }
+      { label: "CapitalSage Holdings — SageForge", url: "https://capitalsageholdings.com/sageforge", lastChecked: "2026-10-22" }
     ]
   },
   {
