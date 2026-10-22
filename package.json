@@ -48,7 +48,7 @@
     "check:premium-film-guides": "tsx scripts/check-premium-film-guides.ts"
   },
   "dependencies": {
-    "next": "16.3.8",
+    "next": "16.4.2",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "vinext": "1.0.0-beta.11",
