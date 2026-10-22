@@ -1,4 +1,9 @@
 import type { EntertainmentTitle } from "@/lib/entertainment";
+import type { MoviePreviewWatchLink } from "@/lib/movie-directory-card";
+
+type MovieArtworkInput = Pick<
+  EntertainmentTitle, "slug" | "title" | "year" | "genres" | "artwork" | "sourcePreview" | "trailer"
+> & { watchLinks: readonly MoviePreviewWatchLink[] };
 import { canDisplayClientEntertainmentArtwork } from "@/lib/entertainment-client-artwork";
 import { getSourceLinkedFilmPreview, getVerifiedYouTubePreview } from "@/lib/movie-media-previews";
 import { RemoteMoviePreviewImage } from "@/components/remote-movie-preview-image";
@@ -24,7 +29,7 @@ function posterPalette(slug: string) {
   return posterPalettes[(hash >>> 0) % posterPalettes.length];
 }
 
-function GeneratedArtwork({ title, variant, showSourceLink }: { title: EntertainmentTitle; variant: "card" | "hero"; showSourceLink: boolean }) {
+function GeneratedArtwork({ title, variant, showSourceLink }: { title: MovieArtworkInput; variant: "card" | "hero"; showSourceLink: boolean }) {
   const [dark, mid, accent] = posterPalette(title.slug);
   return (
     <figure
@@ -72,7 +77,7 @@ export function EntertainmentArtwork({
   variant = "card",
   showSourceLink = false,
 }: {
-  title: EntertainmentTitle;
+  title: MovieArtworkInput;
   variant?: "card" | "hero";
   showSourceLink?: boolean;
 }) {

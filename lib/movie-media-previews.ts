@@ -1,4 +1,5 @@
 import type { EntertainmentTitle } from "@/lib/entertainment";
+import type { MoviePreviewWatchLink } from "@/lib/movie-directory-card";
 
 export type VerifiedYouTubePreview = {
   videoId: string;
@@ -8,7 +9,7 @@ export type VerifiedYouTubePreview = {
 };
 
 /** Never derive a video poster from an unverified, third-party or non-YouTube URL. */
-export function getVerifiedYouTubePreview(title: EntertainmentTitle): VerifiedYouTubePreview | null {
+export function getVerifiedYouTubePreview(title: Pick<EntertainmentTitle, "trailer"> & { watchLinks: readonly MoviePreviewWatchLink[] }): VerifiedYouTubePreview | null {
   const fullMovie = title.watchLinks.find((link) =>
     link.platform === "YouTube" &&
     link.access === "full-movie" &&
@@ -51,7 +52,7 @@ export function getVerifiedYouTubePreview(title: EntertainmentTitle): VerifiedYo
  * poster licence. The approved/licensed artwork branch takes precedence.
  * An arbitrary movie database image does not qualify.
  */
-export function getSourceLinkedFilmPreview(title: EntertainmentTitle) {
+export function getSourceLinkedFilmPreview(title: Pick<EntertainmentTitle, "sourcePreview">) {
   const preview = title.sourcePreview;
   if (!preview ||
       !["official-film-site", "official-distributor", "official-exhibitor", "press-supplied"].includes(preview.sourceKind) ||

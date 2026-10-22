@@ -10,7 +10,7 @@ import type { EntertainmentTitle } from "@/lib/entertainment";
  *
  * Any change to the server policy must preserve the parity regression test.
  */
-export function canDisplayClientEntertainmentArtwork(title: EntertainmentTitle) {
+export function canDisplayClientEntertainmentArtwork(title: Pick<EntertainmentTitle, "artwork">) {
   const artwork = title.artwork;
   return Boolean(
     artwork &&
