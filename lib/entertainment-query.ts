@@ -1,5 +1,6 @@
 import { entertainmentTitles, type EntertainmentPlatform, type EntertainmentTitle } from "@/lib/entertainment";
 import { movieSearchCore } from "@/lib/movie-search-intent";
+import { toMovieDirectoryCard, type MovieDirectoryCard } from "@/lib/movie-directory-card";
 
 export const ENTERTAINMENT_DIRECTORY_PAGE_SIZE = 30;
 
@@ -15,7 +16,7 @@ export type EntertainmentDirectoryQuery = {
 };
 
 export type EntertainmentDirectoryResult = {
-  items: EntertainmentTitle[];
+  items: MovieDirectoryCard[];
   total: number;
   page: number;
   pageSize: number;
@@ -83,7 +84,7 @@ export function queryEntertainmentDirectory(input: EntertainmentDirectoryQuery =
   const start = (page - 1) * pageSize;
 
   return {
-    items: rows.slice(start, start + pageSize),
+    items: rows.slice(start, start + pageSize).map(toMovieDirectoryCard),
     total,
     page,
     pageSize,
