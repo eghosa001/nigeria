@@ -126,16 +126,16 @@ export const jobGrowthWave9: CareerOpportunity[] = [
     ],
     officialUrl: "https://capitalsageholdings.com/sageforge",
     officialUrlLabel: "Open the official SageForge programme page",
-    verifiedAt: "2026-10-07",
+    verifiedAt: "2026-10-22",
     deadline: "2026-10-31",
     nextMilestone: "Applications close 31 October 2026.",
     feeNote: "No application fee is stated on the official SageForge page. Use only the application route linked by CapitalSage.",
     sourceNotes: [
       "CapitalSage says SageForge is a twelve-month programme for an inaugural cohort of 60 graduates, with a six-week foundation block in Ibadan.",
-      "The official page states that applications close on 31 October 2026 and that graduates from all disciplines may apply."
+      "Rechecked the CapitalSage official programme page on 22 October 2026: its Apply Now link remains visible, the published deadline is 31 October 2026, and graduates from all disciplines may apply."
     ],
     sources: [
-      { label: "CapitalSage Holdings — SageForge", url: "https://capitalsageholdings.com/sageforge", lastChecked: "2026-10-07" }
+      { label: "CapitalSage Holdings — SageForge", url: "https://capitalsageholdings.com/sageforge", lastChecked: "2026-10-22" }
     ]
   },
   {
@@ -144,8 +144,8 @@ export const jobGrowthWave9: CareerOpportunity[] = [
     organization: "Schneider Electric Nigeria",
     kind: "programme",
     sector: "International",
-    status: "open",
-    statusLabel: "Current Schneider Electric graduate programme — verify live status before applying",
+    status: "unverified",
+    statusLabel: "Specific Nigeria 2027 vacancy not reconfirmed — check employer",
     summary: "Schneider Electric's 2027 Nigeria Graduate Programme is a 24-month structured development route based in Lagos, with rotational assignments, mentorship and practical business projects. The programme is expected to start in February 2027.",
     location: "Lagos, Nigeria",
     employmentType: "24-month graduate development programme",
@@ -159,27 +159,29 @@ export const jobGrowthWave9: CareerOpportunity[] = [
       "Legally authorised to work in Nigeria and able to be based in Lagos for the programme."
     ],
     requirements: [
-      "Open the exact Schneider Electric Careers listing and confirm it remains available before applying.",
+      "Open Schneider Electric early careers and search for the exact Nigeria 2027 programme; its original job ID is 131650, but recent availability is unverified.",
       "Do not rely on conflicting third-party deadline dates; MyNigeriaGuide does not publish a closing date unless it is confirmed on the employer's live listing.",
       "Be available to start the programme in February 2027 and commit to the full 24-month programme."
     ],
     documents: ["Current CV/resume", "Degree/education details", "NYSC information", "Other information requested by Schneider Electric Careers"],
     applicationSteps: [
-      "Open Schneider Electric's official job listing for the Nigeria 2027 Graduate Programme.",
+      "Open Schneider Electric's official early-careers directory and look for a currently available Nigeria 2027 Graduate Programme (historical job ID 131650).",
       "Confirm the live status, Lagos location and eligibility criteria.",
-      "Complete the official Schneider Electric Careers application.",
+      "Complete an application only if the employer provides an active role-specific Apply link for that programme.",
       "Keep the application confirmation and use the employer's careers system for later status updates."
     ],
-    officialUrl: "https://careers.se.com/jobs/131650",
-    officialUrlLabel: "Open Schneider Electric Careers — job 131650",
+    officialUrl: "https://careers.se.com/early-careers",
+    officialUrlLabel: "Check current Schneider Electric early-careers opportunities",
     verifiedAt: "2026-10-07",
     nextMilestone: "Programme start is scheduled for February 2027; confirm the live application status on Schneider Electric Careers.",
     feeNote: "Use Schneider Electric's official careers system. Do not pay for access to a vacancy, shortlist, test or interview.",
     sourceNotes: [
+      "22 October 2026: Schneider Electric's general early-careers directory is accessible, but the employer's old Nigeria 2027 job 131650 detail URL was not independently retrievable. Its application status is unverified; this is not proof of closure.",
       "The current programme is described as a 24-month structured learning and development journey based in Lagos.",
       "Third-party listings show conflicting closing dates, so this page intentionally does not present an unverified deadline and directs applicants back to the live Schneider Electric Careers listing."
     ],
     sources: [
+      { label: "Schneider Electric current early-careers directory — exact role unverified", url: "https://careers.se.com/early-careers", lastChecked: "2026-10-22" },
       { label: "Schneider Electric Careers — Nigeria 2027 Graduate Programme (job 131650)", url: "https://careers.se.com/jobs/131650", lastChecked: "2026-10-07" },
       { label: "Schneider Electric Nigeria — Students and Young Professionals", url: "https://www.se.com/ng/en/about-us/careers/students-and-young-professionals/", lastChecked: "2026-10-07" }
     ]
