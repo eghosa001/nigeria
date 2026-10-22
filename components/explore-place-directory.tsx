@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import type { ExplorePlaceKind } from "@/lib/explore-places";
 
-type GuideSummary = { slug: string; shortTitle: string; kind: "city" | "destination" | "itinerary" | "event" };
+type GuideSummary = readonly [slug: string, shortTitle: string, kind: "city" | "destination" | "itinerary" | "event"];
 export type ExploreDirectoryPlace = {
   slug: string;
   guideSlug: string;
@@ -90,8 +90,8 @@ export function ExplorePlaceDirectory({ places, guides, totalCount }: {
     return () => window.removeEventListener("popstate", syncFromUrl);
   }, []);
 
-  const guideNames = useMemo(() => new Map(guides.map((item) => [item.slug, item.shortTitle])), [guides]);
-  const guideKinds = useMemo(() => new Map(guides.map((item) => [item.slug, item.kind])), [guides]);
+  const guideNames = useMemo(() => new Map<string, string>(guides.map(([slug, shortTitle]) => [slug, shortTitle])), [guides]);
+  const guideKinds = useMemo(() => new Map<string, GuideSummary[2]>(guides.map(([slug, , kind]) => [slug, kind])), [guides]);
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
     const results = availablePlaces.filter((place) => {
@@ -177,7 +177,7 @@ export function ExplorePlaceDirectory({ places, guides, totalCount }: {
           Destination
           <select value={guide} onChange={(event) => setGuide(event.target.value)}>
             <option value="all">All destinations</option>
-            {guides.map((item) => <option key={item.slug} value={item.slug}>{item.shortTitle}</option>)}
+            {guides.map(([slug, shortTitle]) => <option key={slug} value={slug}>{shortTitle}</option>)}
           </select>
         </label>
       </div>
