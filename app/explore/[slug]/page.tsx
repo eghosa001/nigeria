@@ -278,9 +278,11 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
             <figure className="tour-guide-photo">
               <img
                 src={destinationPhotoUrls(destinationPhoto).src}
+                srcSet={destinationPhotoUrls(destinationPhoto).srcSet}
+                sizes="(max-width: 760px) calc(100vw - 28px), 720px"
                 alt={destinationPhoto.alt}
                 width={720} height={480}
-                loading="eager" decoding="async" referrerPolicy="no-referrer"
+                loading="eager" fetchPriority="high" decoding="async" referrerPolicy="no-referrer"
               />
               <figcaption>
                 Photo: <a href={destinationPhotoUrls(destinationPhoto).creditUrl} target="_blank" rel="noopener noreferrer">{destinationPhoto.credit}</a>
