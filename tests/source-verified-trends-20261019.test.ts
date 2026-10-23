@@ -27,6 +27,8 @@ test("homepage trends require evidence of momentum, not a four-pillar quota", ()
   assert.equal(getCurrentHomeSocialTrends("2026-10-29").length, 0);
   const homepage = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
   assert.match(homepage, /socialTrends\.length > 0 &&/);
+  const styles = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");
+  assert.match(styles, /\.home-trending-links a:only-child\s*\{[^}]*grid-column: 1 \/ -1;/);
 });
 
 test("JAMB candidate acceptance and paid letter printing remain two different tasks", () => {
