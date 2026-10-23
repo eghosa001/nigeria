@@ -31,7 +31,7 @@ test("only safe unfiltered public hubs receive shared edge cache policies", asyn
   }
 
   assert.ok(shared.every((rule) => rule.source === "/" || rule.source === "/entertainment" ||
-    rule.source === "/explore" || rule.source === "/services" || rule.source === "/entertainment/movies"),
+    rule.source === "/explore" || rule.source === "/latest" || rule.source === "/services" || rule.source === "/entertainment/movies"),
     "private and parameterized routes must not receive shared CDN HTML caching");
 
   const admin = rules.find((rule) => rule.source === "/admin");
