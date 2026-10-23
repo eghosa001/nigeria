@@ -26,7 +26,7 @@ test("homepage trends require evidence of momentum, not a four-pillar quota", ()
   assert.ok(current.every(item => item.momentumEvidence?.primaryUrl && item.momentumEvidence.corroborationUrl));
   assert.equal(getCurrentHomeSocialTrends("2026-10-29").length, 0);
   const homepage = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
-  assert.match(homepage, /socialTrends\\.length > 0 &&/);
+  assert.match(homepage, /socialTrends\.length > 0 &&/);
 });
 
 test("JAMB candidate acceptance and paid letter printing remain two different tasks", () => {
