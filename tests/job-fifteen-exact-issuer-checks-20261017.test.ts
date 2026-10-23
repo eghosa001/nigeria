@@ -4,7 +4,7 @@ import { getJobOpportunity } from "../lib/jobs";
 import { verifiedJobSlugs20261016 } from "../lib/job-verified-pathways-2026-10-16";
 import { fifteenExactRoleReviews20261017, reviewedExactRoleSlugs20261017 } from "../lib/job-fifteen-exact-issuer-checks-2026-10-17";
 
-test("fifteen original real-role guides explain exact employer evidence without fabricated closing dates", () => {
+test("fifteen original issuer reviews retain their evidence without keeping a retired vacancy open", () => {
   assert.equal(reviewedExactRoleSlugs20261017.length, 15);
   assert.equal(new Set(reviewedExactRoleSlugs20261017).size, 15);
   for (const slug of reviewedExactRoleSlugs20261017) {
@@ -12,6 +12,16 @@ test("fifteen original real-role guides explain exact employer evidence without 
     const checked = fifteenExactRoleReviews20261017[slug];
     assert.ok(job, slug + ": canonical job missing");
     assert.equal(job.kind, "vacancy", slug);
+    if (slug === "eha-medical-doctor-abuja-2026") {
+      // The 17 October issuer observation remains historical evidence; the
+      // same named vacancy returned 404 and was absent from the 23 October board.
+      assert.equal(job.status, "unverified", slug);
+      assert.equal(job.officialUrl, "https://erp.eha.ng/jobs", slug);
+      assert.equal(job.verifiedAt, "2026-10-23", slug);
+      assert.ok(job.sourceNotes.some(note => /Issuer check 23 October 2026/.test(note)), slug);
+      assert.ok(job.sources.every(source => source.url !== checked.issuerUrl), slug);
+      continue;
+    }
     assert.equal(job.status, "open", slug);
     assert.equal(job.deadline, undefined, slug);
     assert.equal(job.officialUrl, checked.issuerUrl, slug);
