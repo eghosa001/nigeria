@@ -9,7 +9,7 @@ test("only safe unfiltered public hubs receive shared edge cache policies", asyn
     rule.headers.some(({ key }) => key.toLowerCase() === "cloudflare-cdn-cache-control"),
   );
   assert.deepEqual(shared.map((rule) => rule.source).sort(),
-    ["/", "/entertainment", "/entertainment/movies", "/explore", "/services"]);
+    ["/", "/entertainment", "/entertainment/movies", "/explore", "/latest", "/services"]);
 
   for (const rule of shared) {
     const expected = rule.source === "/services"
