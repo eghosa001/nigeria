@@ -115,6 +115,8 @@ export default function ExplorePage() {
 
   return (
     <>
+      <link rel="preconnect" href="https://commons.wikimedia.org" />
+      <link rel="dns-prefetch" href="https://upload.wikimedia.org" />
       <JsonLd data={collectionLd} />
 
       <section className="section page-top minimal-section-hero tour-compact-hero">
