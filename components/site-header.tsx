@@ -255,6 +255,7 @@ export function SiteHeader() {
                 data-nav-pending={pendingHref === item.href ? "true" : undefined}
                 onMouseEnter={() => warmOnIntent(item.href)}
                 onFocus={() => warmOnIntent(item.href)}
+                onTouchStart={() => warmOnIntent(item.href)}
                 onClick={() => indicateNavigation(item.href)}>
                 <NavIcon name={item.icon} />
                 <span>{item.label}</span>
