@@ -51,5 +51,5 @@ test("renewal warns about NIS refund eligibility and preserves precise source da
   assert.match(advice, /six weeks/i);
   assert.match(advice, /misspelled email domain/i);
   assert.equal(renew.sources.filter((source) => source.url === "https://immigration.gov.ng/refundpolicy/").length, 1);
-  assert.equal(renew.lastVerified, "2026-10-16");
+  assert.equal(renew.lastVerified, "2026-10-23");
 });
