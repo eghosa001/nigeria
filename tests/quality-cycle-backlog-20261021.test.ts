@@ -29,7 +29,10 @@ test("Ondo itinerary and statewide guide have distinct titles", () => {
   const statewide = exploreGuides.find(item => item.slug === "ondo-state-highlights");
   assert.ok(itinerary && statewide);
   assert.notEqual(itinerary.title, statewide.title);
-  assert.match(itinerary.title, /Hills and Heritage Route/i);
+  assert.equal(itinerary.kind, "itinerary");
+  assert.equal(statewide.kind, "destination");
+  assert.match(itinerary.title, /Idanre.*Owo.*Akure/i);
+  assert.match(itinerary.summary, /UNESCO.*Tentative List/i);
   assert.match(statewide.title, /Ondo State Nature & Heritage Guide/i);
 });
 
