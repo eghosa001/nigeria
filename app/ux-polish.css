@@ -193,3 +193,46 @@ html[data-theme="dark"] .job-card-open .job-deadline strong {
   :where(h2, h3)[id], #service-directory, #popular-service-tasks, #service-categories, #trip-sources { scroll-margin-top: 115px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Navigation: instant acknowledgement without expensive initial page prefetch.
+   Animate only the two-pixel progress bar, never the entire header surface. */
+.mng-route-announcer {
+  position: absolute;
+  width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+.site-header[data-navigation-pending="true"]::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: -2px;
+  height: 2px; z-index: 3;
+  background: linear-gradient(90deg, transparent 0%, var(--green) 42%, var(--gold) 68%, transparent 100%);
+  background-size: 200% 100%;
+  animation: mng-nav-progress 850ms ease-in-out infinite;
+  pointer-events: none;
+}
+.mobile-bottom-nav a[data-nav-pending="true"] {
+  box-shadow: inset 0 -3px 0 var(--green);
+}
+@keyframes mng-nav-progress {
+  from { background-position: 100% 0; }
+  to { background-position: -100% 0; }
+}
+
+/* Streaming fallback appears only when a route actually needs more time.
+   Keep its dimensions predictable and avoid shifting the fixed navigation. */
+.mng-page-loading { min-height: min(56vh, 490px); padding: clamp(28px, 6vw, 62px) 0; }
+.mng-page-loading-inner { max-width: 860px; }
+.mng-page-loading-kicker { color: var(--green); letter-spacing: .12em; font-weight: 800; font-size: .72rem; text-transform: uppercase; }
+.mng-page-loading p { color: var(--muted); margin: .6rem 0 1.5rem; font-size: 1rem; }
+.mng-page-loading-skeleton { display: grid; gap: 14px; }
+.mng-page-loading-bar, .mng-page-loading-panel {
+  display: block; background: var(--theme-soft, var(--surface));
+  border: 1px solid var(--line); border-radius: 10px;
+}
+.mng-page-loading-bar { height: 22px; }
+.mng-page-loading-bar-long { width: min(70%, 540px); }
+.mng-page-loading-bar-short { width: min(48%, 380px); }
+.mng-page-loading-panel { margin-top: 12px; height: clamp(115px, 23vh, 190px); }
+@media (prefers-reduced-motion: reduce) {
+  .site-header[data-navigation-pending="true"]::after { animation: none; }
+}
