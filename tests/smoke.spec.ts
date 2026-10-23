@@ -725,7 +725,7 @@ test("editorial light and dark themes fit representative routes on phones and de
       background: getComputedStyle(node).backgroundColor,
       color: getComputedStyle(node).color,
     }));
-    const channels = (value: string) => (value.match(/\\d+/g) ?? []).slice(0, 3).map(Number);
+    const channels = (value: string) => (value.match(/\d+/g) ?? []).slice(0, 3).map(Number);
     const [br, bg, bb] = channels(card.background);
     const [fr, fg, fb] = channels(card.color);
     expect(Math.min(br, bg, bb), `light editorial paper on ${route}`).toBeGreaterThanOrEqual(235);
