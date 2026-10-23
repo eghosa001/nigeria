@@ -3633,9 +3633,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
       locations: [{ locality: "Abuja", region: "FCT", country: "NG" }]
     },
     sector: "Private",
-    status: "open",
-    statusLabel: "Applications open",
-    summary: "EHA Clinics is recruiting a Medical Doctor in Abuja through its official jobs platform.",
+    status: "unverified",
+    statusLabel: "Original Abuja advert unavailable — new opening unconfirmed",
+    summary: "The original EHA Clinics Abuja Medical Doctor vacancy returned HTTP 404 on 23 October 2026, and the employer\'s current jobs board did not list this role. Its earlier qualifications are retained for reference, not as evidence that applications remain open.",
     location: "Lifecamp, Abuja, FCT",
     employmentType: "Clinical medical role",
     audiences: ["Medical doctors", "Physicians", "Healthcare professionals"],
@@ -3643,15 +3643,14 @@ const rawJobOpportunities: CareerOpportunity[] = [
     qualifications: ["Medical degree such as MBBS, MBChB, MD or DO from a recognised institution.", "Completion of internship and the employer's stated post-NYSC experience.", "Current MDCN registration and practice licence.", "BLS and ACLS completion."],
     requirements: ["NYSC completion.", "Current professional licence.", "Basic computer knowledge and EHA Clinics' eligibility requirements."],
     documents: ["CV/resume", "Medical licence and registration details", "Education, internship and NYSC information"],
-    applicationSteps: ["Open the official EHA Clinics vacancy.", "Review the medical qualification and experience requirements.", "Complete the eligibility check.", "Continue to the official application."],
-    officialUrl: "https://erp.eha.ng/jobs/medical-doctor-abuja-549",
-    officialUrlLabel: "Apply on EHA Clinics",
-    verifiedAt: "2026-10-05",
+    applicationSteps: ["Check EHA Clinics\' current jobs board for a newly published Medical Doctor vacancy in Abuja.", "If one appears, confirm its exact worksite, current MDCN licence, post-NYSC experience and other requirements in that new advert.", "Use only the application control on the new employer-issued vacancy; the old Abuja role link is unavailable."],
+    officialUrl: "https://erp.eha.ng/jobs",
+    officialUrlLabel: "Check current EHA Clinics vacancies",
+    verifiedAt: "2026-10-23",
     feeNote: "Apply only through EHA Clinics' official jobs portal.",
-    sourceNotes: ["EHA Clinics listed the Abuja Medical Doctor role as posted on 1 October 2026.", "The role page identifies Lifecamp, Abuja and requires an active medical licence."],
+    sourceNotes: ["EHA Clinics listed the Abuja Medical Doctor role as posted on 1 October 2026.", "The historical advert identified Lifecamp, Abuja and required an active medical licence.", "Issuer check 23 October 2026: the former Abuja Medical Doctor detail returned HTTP 404; the current EHA Clinics jobs board listed other vacancies but not this role. A future opening has not been confirmed."],
     sources: [
-      { label: "EHA Clinics — Medical Doctor, Abuja", url: "https://erp.eha.ng/jobs/medical-doctor-abuja-549", lastChecked: "2026-10-05" },
-      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
+      { label: "EHA Clinics current vacancies board", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-23" }
     ]
   },
   {
