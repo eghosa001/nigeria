@@ -448,3 +448,115 @@ html[data-theme="dark"] :is(.mng-hero-search,.section-quick-search,.minimal-serv
 @media (prefers-reduced-motion: reduce) {
   html[data-theme] .home-path { transition: none; }
 }
+
+
+/* Pillar hubs: four distinct entrances within one coherent publication. */
+html[data-theme] :is(.services-directory-page,.tour-compact-hero,.movie-browse-hero,.jobs-hero) {
+  background: var(--cream) !important;
+  background-image: none !important;
+  border-color: var(--line) !important;
+}
+html[data-theme] :is(.services-directory-page,.movie-browse-hero,.tour-compact-hero) .eyebrow,
+html[data-theme] .jobs-hero .eyebrow {
+  color: var(--editorial-action) !important; font-size: .72rem;
+  font-weight: 800; text-transform: uppercase; letter-spacing: .105em;
+}
+html[data-theme] :is(.services-directory-page,.movie-browse-hero,.tour-compact-hero,.jobs-hero) h1 {
+  font-family: var(--editorial-display);
+  font-size: clamp(2.5rem,5.1vw,4.7rem);
+  line-height: 1.08; letter-spacing: -.052em;
+  max-width: 19ch; color: var(--ink) !important;
+}
+html[data-theme] :is(.services-directory-page,.tour-compact-hero,.movie-browse-hero,.jobs-hero) .page-intro {
+  max-width: 64ch; font-size: clamp(1rem,1.5vw,1.17rem);
+  line-height: 1.68; color: var(--muted) !important;
+}
+html[data-theme] :is(.service-category-featured a,.movie-discovery-card,.tour-photo-card,.jobs-path-card) {
+  border-radius: 13px !important; overflow: hidden;
+}
+html[data-theme] .service-category-featured a {
+  background: var(--surface) !important; border-color: var(--line) !important;
+  border-top: 3px solid #ae4939 !important; color: var(--ink) !important;
+  transition: border-color 150ms ease, transform 150ms ease;
+}
+html[data-theme] .service-category-featured a:hover {
+  border-top-color: #d9a23c !important; transform: translateY(-2px);
+}
+html[data-theme] .tour-photo-card {
+  border-color: var(--line) !important;
+}
+html[data-theme] .tour-photo-card img {
+  object-fit: cover;
+}
+html[data-theme] .tour-photo-card-meta {
+  background: var(--surface) !important; color: var(--ink) !important;
+}
+html[data-theme] .movie-discovery-card {
+  border: 1px solid var(--line) !important;
+  background: var(--surface) !important;
+}
+html[data-theme] .movie-discovery-card :is(h2,h3,strong) {
+  color: var(--ink) !important; font-family: var(--editorial-display);
+}
+html[data-theme] :is(.jobs-open-section,.tour-featured-section,.movie-shelf-section) {
+  background: var(--cream) !important; border-color: var(--line) !important;
+}
+html[data-theme] :is(.jobs-open-grid,.tour-photo-grid,.movie-discovery-grid) {
+  gap: clamp(12px,2vw,24px);
+}
+html[data-theme] .jobs-open-grid .job-card {
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+}
+html[data-theme] .jobs-open-grid .job-card h3 a {
+  font-family: var(--editorial-display); color: var(--ink) !important;
+}
+html[data-theme] :is(.job-card-top,.job-card-footer) {
+  border-color: var(--line) !important;
+}
+html[data-theme] :is(.job-card,.job-card-body,.jobs-path-card) p {
+  line-height: 1.61;
+}
+html[data-theme] .jobs-path-card-dark {
+  background: #245a62 !important; color: #fff8ea !important;
+  border-color: #245a62 !important;
+}
+html[data-theme] .jobs-path-card-dark :is(strong,span,b,p) { color: #fff8ea !important; }
+html[data-theme="dark"] .jobs-path-card-dark { background: #245a62 !important; }
+html[data-theme="dark"] :is(.movie-discovery-card,.service-category-featured a,.tour-photo-card-meta,.jobs-open-grid .job-card) {
+  background: #1a2a30 !important; color: #f5f1e8 !important;
+  border-color: #35474a !important;
+}
+html[data-theme="dark"] .service-category-featured a { border-top-color: #f08c70 !important; }
+
+/* Article reading surfaces: long-form clarity and source visibility. */
+html[data-theme] :is(.guide-hero,.job-detail-hero,.movie-detail-hero,.explore-guide-hero) {
+  background: var(--cream) !important; background-image: none !important;
+  border-color: var(--line) !important;
+}
+html[data-theme] :is(.guide-content,.job-detail-content,.movie-detail-content) {
+  color: var(--ink); line-height: 1.75;
+  overflow-wrap: break-word;
+}
+html[data-theme] :is(.guide-content,.job-detail-content,.movie-detail-content) :is(h2,h3) {
+  font-family: var(--editorial-display); color: var(--ink) !important;
+  line-height: 1.18;
+}
+html[data-theme] :is(.guide-content,.job-detail-content,.movie-detail-content) a:not(.button) {
+  text-underline-offset: .18em;
+}
+html[data-theme] :is(.guide-content,.job-detail-content,.movie-detail-content) :is(blockquote,aside) {
+  border-color: var(--line);
+}
+html[data-theme] :is(.guide-content,.job-detail-content,.movie-detail-content) :is(p,li) {
+  max-width: 78ch;
+}
+html[data-theme] :is(.guide-content,.job-detail-content,.movie-detail-content) :is(a,button):focus-visible {
+  outline: 3px solid var(--gold); outline-offset: 3px;
+}
+@media (max-width: 620px) {
+  html[data-theme] :is(.services-directory-page,.tour-compact-hero,.movie-browse-hero,.jobs-hero) h1 {
+    font-size: clamp(2.3rem,10vw,3.3rem); line-height: 1.1;
+  }
+  html[data-theme] :is(.jobs-open-grid,.tour-photo-grid,.movie-discovery-grid) { gap: 12px; }
+}
