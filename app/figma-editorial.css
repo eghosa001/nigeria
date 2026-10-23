@@ -561,3 +561,24 @@ html[data-theme] :is(.guide-content,.job-detail-content,.movie-detail-content) :
   }
   html[data-theme] :is(.jobs-open-grid,.tour-photo-grid,.movie-discovery-grid) { gap: 12px; }
 }
+
+
+/* Closing the publication: a single masthead-to-footer identity. */
+html[data-theme] .site-footer.minimal-footer {
+  background: #15292e !important;
+  border-top: 1px solid rgba(230,183,94,.3);
+  color: #f7f3ea !important;
+}
+html[data-theme] .minimal-footer :is(.footer-intro p,.footer-grid a,.footer-bottom) {
+  color: #c1d0cc !important;
+}
+html[data-theme] .minimal-footer .footer-grid strong {
+  color: #e6b75e !important;
+  letter-spacing: .045em;
+}
+html[data-theme] .minimal-footer :is(.footer-grid a,.footer-intro a):hover {
+  color: #fff8ea !important;
+}
+html[data-theme] .minimal-footer .footer-bottom {
+  border-top-color: rgba(230,183,94,.21);
+}
