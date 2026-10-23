@@ -338,5 +338,6 @@ jobs:
           done
           echo "Production did not reach commit $expected within 10 minutes."
           exit 1
-      - run: npx playwright install --with-deps chromium
+      # GitHub-hosted runner provides Chromium system libraries; avoid a slow apt dependency pass.
+      - run: npx playwright install chromium
       - run: npx playwright test --config playwright.live.config.ts tests/live-deployment.spec.ts
