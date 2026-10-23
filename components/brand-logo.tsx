@@ -6,8 +6,8 @@ export function BrandMark({ className = "" }: { className?: string }) {
       role="img"
       aria-label="MyNigeriaGuide"
     >
-      <rect width="48" height="48" rx="14" fill="#063F2D" />
-      <circle cx="24" cy="34" r="3.2" fill="#D1A24A" />
+      <rect width="48" height="48" rx="14" fill="#AE4939" />
+      <circle cx="24" cy="34" r="3.2" fill="#D9A23C" />
       <path d="M24 31V23.5" fill="none" stroke="#FFFDF8" strokeWidth="3.3" strokeLinecap="round" />
       <path d="M24 24C20.5 20.5 17.3 17.8 13.4 15.4" fill="none" stroke="#FFFDF8" strokeWidth="3.3" strokeLinecap="round" />
       <path d="M24 24C27.8 20.2 31.1 17.6 35.2 15.2" fill="none" stroke="#FFFDF8" strokeWidth="3.3" strokeLinecap="round" />
