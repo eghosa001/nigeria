@@ -142,6 +142,7 @@ export function SiteHeader() {
                   <Link
                     key={item.href}
                     href={item.href}
+                    prefetch={false}
                     className={active ? "nav-active" : undefined}
                     aria-current={active ? "page" : undefined}
                   >
@@ -152,13 +153,13 @@ export function SiteHeader() {
             </div>
 
             <div className="primary-nav-utilities" aria-label="Utilities">
-              <Link href="/features" className={pathname === "/features" ? "nav-active" : undefined}>
+              <Link href="/features" prefetch={false} className={pathname === "/features" ? "nav-active" : undefined}>
                 What you can do
               </Link>
-              <Link href="/search" className={pathname.startsWith("/search") ? "nav-active" : undefined}>
+              <Link href="/search" prefetch={false} className={pathname.startsWith("/search") ? "nav-active" : undefined}>
                 Search
               </Link>
-              <Link href="/saved" className={pathname.startsWith("/saved") ? "nav-active" : undefined}>
+              <Link href="/saved" prefetch={false} className={pathname.startsWith("/saved") ? "nav-active" : undefined}>
                 Saved
               </Link>
             </div>
@@ -179,7 +180,7 @@ export function SiteHeader() {
                     ? pathname === cleanHref
                     : pathname === cleanHref || (cleanHref !== "/services" && pathname.startsWith(cleanHref + "/"));
                   return (
-                    <Link key={item.href + item.label} href={item.href} className={active ? "is-current" : undefined} aria-current={active ? "page" : undefined}>
+                    <Link key={item.href + item.label} href={item.href} prefetch={false} className={active ? "is-current" : undefined} aria-current={active ? "page" : undefined}>
                       {item.label}
                     </Link>
                   );
