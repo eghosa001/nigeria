@@ -844,3 +844,17 @@ test("editorial light and dark themes fit representative routes on phones and de
     metas.length > 0 && metas.every((meta) => meta.getAttribute("content") === "#f5f5f1"),
   )).toBe(true);
 });
+
+test("five mobile navigation destinations respond and preserve real page content", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/");
+  for (const href of ["/services", "/explore", "/entertainment/movies", "/jobs", "/"]) {
+    await page.locator('.mobile-bottom-nav a[href="' + href + '"]').click();
+    await expect(page).toHaveURL((url) => url.pathname === href);
+    await expect(page.locator("main h1")).toHaveCount(1);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth),
+      "No horizontal overflow after navigation to " + href).toBeLessThanOrEqual(1);
+  }
+  await expect(page.locator(".mobile-header-actions a[href='/saved']")).toBeVisible();
+  await expect(page.locator(".mng-route-announcer")).toHaveCount(1);
+});
