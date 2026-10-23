@@ -45,7 +45,11 @@ test("fresh, renewal, correction and special applicant pathways stay distinct", 
 
 test("renewal warns about NIS refund eligibility and preserves precise source dates", () => {
   const advice = renew.notes.at(-1) ?? "";
-  assert.match(advice, /duplicate payment on the same application/i);
+  assert.match(advice, /double payment on one passport application/i);
+  assert.match(advice, /two separate applications for the same person/i);
+  assert.match(advice, /except contactless applications/i);
+  assert.match(advice, /queried or rejected/i);
+  assert.match(advice, /full name, application ID, payment reference and proof of debit/i);
   assert.match(advice, /booked appointment/i);
   assert.match(advice, /within 21 days of payment/i);
   assert.match(advice, /six weeks/i);
