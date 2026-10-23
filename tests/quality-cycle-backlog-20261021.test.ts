@@ -32,7 +32,7 @@ test("Ondo itinerary and statewide guide have distinct titles", () => {
   assert.equal(itinerary.kind, "itinerary");
   assert.equal(statewide.kind, "destination");
   assert.match(itinerary.title, /Idanre.*Owo.*Akure/i);
-  assert.match(itinerary.summary, /separate visits.*Check access/i);
+  assert.match(itinerary.summary, /UNESCO.*Tentative List/i);
   assert.match(statewide.title, /Ondo State Nature & Heritage Guide/i);
 });
 
