@@ -12,5 +12,6 @@ test("YouTube detail social previews use the exact validated title, preferred ca
   assert.match(metadata, /openGraph:\s*\{[\s\S]*?title: seoTitle,[\s\S]*?url: canonical/);
   assert.match(metadata, /twitter:\s*\{[\s\S]*?title: seoTitle,[\s\S]*?images: \[image\]/);
   assert.match(metadata, /movie\.source === "curated" \? movie\.internalHref/);
-  assert.match(metadata, /robots: indexable && !aliasToCuratedMovie \? undefined : \{ index: false, follow: true \}/);
+  assert.doesNotMatch(metadata, /indexable && !aliasToCuratedMovie/);
+  assert.match(metadata, /robots: indexable \? undefined : \{ index: false, follow: true \}/);
 });
