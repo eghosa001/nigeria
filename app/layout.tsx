@@ -5,6 +5,7 @@ import "@/app/ux-polish.css";
 import "@/app/feature-tools.css";
 import "@/app/theme.css";
 import "@/app/editorial-theme.css";
+import "@/app/figma-editorial.css";
 import { ADSENSE_CLIENT } from "@/lib/adsense-config";
 import { Analytics } from "@/components/analytics";
 import { JsonLd } from "@/components/json-ld";
