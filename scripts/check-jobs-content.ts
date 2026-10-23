@@ -373,7 +373,8 @@ for (const slug of checkedIssuerCareerSlugs20261016) {
   const evidence = checkedIssuerCareers20261016[slug];
   assert(job?.kind === "career-page" && job.status === "career-page",
     slug + " must remain a careers directory, not an open vacancy.");
-  assert(job.verifiedAt === "2026-10-16" && job.deadline === undefined,
+  const reviewedAt = slug === "coronation-merchant-bank-careers" ? "2026-10-23" : "2026-10-16";
+  assert(job.verifiedAt === reviewedAt && job.deadline === undefined,
     slug + " must have a factual date and no universal application deadline.");
   assert(job.summary === evidence.lead && job.applicationSteps.length === 5 &&
     job.applicationSteps.every(step => step.length >= 85),
@@ -381,7 +382,7 @@ for (const slug of checkedIssuerCareerSlugs20261016) {
   assert(job.sourceNotes.some(note => note.includes(evidence.guard.slice(0, 35))),
     slug + " must retain issuer-specific applicant safety caveat.");
   assert(job.sources.some(source => source.url === evidence.url &&
-    source.lastChecked === "2026-10-16"), slug + " lost its issuer's original citation.");
+    source.lastChecked === reviewedAt), slug + " lost its issuer's original citation.");
 }
 for (const slug of ["keystone-bank-careers", "coronation-merchant-bank-careers",
   "nem-insurance-careers"]) {
