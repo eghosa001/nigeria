@@ -45,7 +45,6 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
   const image = "https://i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg";
   const cast = leadMovieCast(movie, 4);
   const indexable = isIndexableYouTubeDetailMovie(movie);
-  const aliasToCuratedMovie = movie.source === "curated";
   const override = indexable ? youtubeSeoOverrides[movie.videoId] : undefined;
   // Actor-credit visibility depends on source evidence, not indexing eligibility.
   // A page with confirmed actors but a thin synopsis may still be noindex.
@@ -66,7 +65,10 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
     title: { absolute: seoTitle },
     description,
     alternates: { canonical },
-    robots: indexable && !aliasToCuratedMovie ? undefined : { index: false, follow: true },
+    // Do not combine noindex with a canonical hint for indexable editorial
+    // YouTube aliases: Google recommends canonical-only consolidation.
+    // Truly unverified/thin video pages remain excluded from indexing.
+    robots: indexable ? undefined : { index: false, follow: true },
     // Share the same verified title and canonical identity as the search result.
     // Curated YouTube aliases deliberately resolve to the preferred film page.
     openGraph: {
