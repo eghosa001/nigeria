@@ -25,6 +25,10 @@ const text = execFileSync("git", ["diff", "--unified=0", base, "HEAD", "--", ...
 const added = text.split("\n").filter((line) => line.startsWith("+") && !line.startsWith("+++"));
 const found = new Set();
 for (const line of added) {
+  // A connection hint names the CDN origin, not a navigable link. A CDN's
+  // "/" endpoint can legitimately be 404 even when its images work.
+  // Never exempt editorial links or actual image source URLs.
+  if (/^\+\s*<link\s+rel=["'](?:preconnect|dns-prefetch)["']/.test(line)) continue;
   for (const match of line.matchAll(/https:\/\/[^"'\s<>\\)]+/g)) {
     const url = match[0].replace(/[.,;:\}\]]+$/, "");
     try {
