@@ -390,3 +390,14 @@ body:has(.admin-nav) > .site-footer {
   .jobs-tracker-row > div:last-child { grid-column: auto; }
   .jobs-safety-grid { gap: 25px; }
 }
+
+/* Mobile scrolling must not continuously re-sample and blur the whole page
+   behind the sticky dark masthead. The existing opaque-enough theme surface
+   preserves contrast without GPU backdrop compositing on every frame. */
+@media (max-width: 760px) {
+  html[data-theme="dark"] .site-header {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    background: var(--theme-header) !important;
+  }
+}

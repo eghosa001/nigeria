@@ -228,7 +228,8 @@ jobs:
         if: steps.scope.outputs.run == 'true'
       - run: npm run build:next
         if: steps.scope.outputs.run == 'true'
-      - run: npx playwright install --with-deps chromium
+      # GitHub-hosted runner provides Chromium system libraries; avoid a slow apt dependency pass.
+      - run: npx playwright install chromium
         if: steps.scope.outputs.run == 'true'
       - name: Check YouTube directory search and publisher filters
         if: steps.scope.outputs.mode == 'youtube-directory'

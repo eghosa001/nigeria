@@ -239,7 +239,10 @@ jobs:
         if: steps.scope.outputs.run == 'true'
       - run: npm run build
         if: steps.scope.outputs.run == 'true'
-      - run: npx playwright install --with-deps chromium
+      # GitHub-hosted Ubuntu provides Chromium's shared libraries. Avoid an
+      # unnecessary apt-system-dependency pass that can stall the Worker QA job.
+      # The full browser smoke still runs and fails on any missing library.
+      - run: npx playwright install chromium
         if: steps.scope.outputs.run == 'true'
       - name: Verify ads.txt on the built Cloudflare runtime
         if: steps.scope.outputs.mode == 'ads-txt'

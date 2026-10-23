@@ -318,3 +318,63 @@ test("live public entry-route response timing is measured without a flaky absolu
     }
   }
 });
+
+
+test("live mobile first-paint metrics are sampled alongside edge timing", async ({ page }, testInfo) => {
+  test.skip(!process.env.LIVE_BASE_URL || testInfo.project.name !== "live-mobile",
+    "Production mobile-only Core Web Vitals observational sample.");
+
+  await page.addInitScript(() => {
+    const store = { lcp: 0, cls: 0, longestInteraction: 0 };
+    Object.assign(window, { __mngVitalsProbe: store });
+    if (typeof PerformanceObserver === "undefined") return;
+    try {
+      new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) store.lcp = entry.startTime;
+      }).observe({ type: "largest-contentful-paint", buffered: true });
+    } catch {}
+    try {
+      new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          const shift = entry as PerformanceEntry & { value: number; hadRecentInput: boolean };
+          if (!shift.hadRecentInput) store.cls += shift.value;
+        }
+      }).observe({ type: "layout-shift", buffered: true });
+    } catch {}
+    try {
+      new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          const event = entry as PerformanceEntry & { duration: number; interactionId?: number };
+          if (event.interactionId) store.longestInteraction = Math.max(store.longestInteraction, event.duration);
+        }
+      }).observe({ type: "event", buffered: true, durationThreshold: 16 } as PerformanceObserverInit & { durationThreshold: number });
+    } catch {}
+  });
+
+  // Sample genuine production responses without imposing a synthetic traffic
+  // spike. The mobile emulation comes from the existing Pixel 7 project.
+  for (const route of ["/", "/jobs", "/entertainment/movies", "/explore"]) {
+    const response = await page.goto(route, { waitUntil: "load" });
+    expect(response?.ok(), route).toBe(true);
+    await page.waitForTimeout(300);
+    const metrics = await page.evaluate(() => {
+      const nav = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
+      const fcp = performance.getEntriesByName("first-contentful-paint")[0];
+      const probe = (window as Window & {
+        __mngVitalsProbe?: { lcp: number; cls: number; longestInteraction: number }
+      }).__mngVitalsProbe;
+      return {
+        ttfbMs: nav ? Math.round(nav.responseStart - nav.startTime) : null,
+        fcpMs: fcp ? Math.round(fcp.startTime) : null,
+        lcpMs: probe?.lcp ? Math.round(probe.lcp) : null,
+        cls: probe ? Number(probe.cls.toFixed(4)) : null,
+        observedInpMs: probe?.longestInteraction || null,
+      };
+    });
+    // These are lab samples, not 28-day Chrome p75 field results. Recording
+    // rather than hard-coding a pass prevents regional variance or CI CPU
+    // contention from concealing actual regressions.
+    console.log("[mobile-cwv-observation] " + route + " " + JSON.stringify(metrics));
+    expect(metrics.ttfbMs, route + " must have browser navigation timing").not.toBeNull();
+  }
+});

@@ -1,5 +1,6 @@
 import { documentedMovieCast, leadMovieCast } from "@/lib/movie-cast-credits";
 import type { Metadata } from "next";
+import { cache } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -14,6 +15,10 @@ import { hasValidVideoPublishDate } from "@/lib/youtube-video-publication-date";
 import { youtubeEditorialDossiers } from "@/lib/youtube-editorial-dossiers";
 
 export const revalidate = 86400;
+
+// Share a single published-video lookup between metadata and page rendering.
+// During a D1 cutover this also prevents a duplicate network/database read.
+const readPublishedVideo = cache((videoId: string) => youtubeServerStore.detail(videoId));
 
 const youtubeSeoOverrides: Record<string, { title: string; description: string }> = {
   "KWIpR47N9hc": { title: "Love Always Wins Cast & Full Movie (2026)", description: "Love Always Wins cast, story and official full movie on YouTube. See the verified publisher, runtime and where to watch the Nigerian movie." },
@@ -39,7 +44,7 @@ function compactMetadata(value: string, maxLength = 155) {
 
 export async function generateMetadata({ params }: { params: Promise<{ videoId: string }> }): Promise<Metadata> {
   const { videoId } = await params;
-  const movie = await youtubeServerStore.detail(videoId);
+  const movie = await readPublishedVideo(videoId);
   if (!movie) return {};
   const canonical = movie.source === "curated" ? movie.internalHref : "/entertainment/youtube/" + movie.videoId;
   const image = "https://i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg";
@@ -102,7 +107,7 @@ function personHref(name: string) {
 
 export default async function YouTubeMovieDetailPage({ params }: { params: Promise<{ videoId: string }> }) {
   const { videoId } = await params;
-  const movie = await youtubeServerStore.detail(videoId);
+  const movie = await readPublishedVideo(videoId);
   if (!movie) notFound();
   const indexable = isIndexableYouTubeDetailMovie(movie);
   // A missing long-form dossier can prevent indexing; it must not hide known cast.
@@ -162,6 +167,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
 
   return (
     <>
+      <link rel="preconnect" href="https://i.ytimg.com" crossOrigin="" />
       <JsonLd data={ld} />
       {videoLd ? <JsonLd data={videoLd} /> : null}
 

@@ -74,21 +74,37 @@ const gaBootstrap = `
 
 // The early guard and client-side guard share their exact host/agent lists.
 
-// Load AdSense before React hydration so slow/mobile navigations do not
-// silently lose the publisher script. Admin paths are excluded by design.
+// Preserve the publisher script and queued ad slots, but never compete
+// with the initial document, CSS, LCP image, or React hydration for bandwidth.
+// Schedule after the load event and the first idle opportunity. Admin excluded.
 const adsenseBootstrap = `
 (function () {
   var path = window.location.pathname || "/";
   if (path === "/admin" || path.indexOf("/admin/") === 0) return;
-  if (document.querySelector("script[data-mynigeriaguide-adsense]")) return;
-  var script = document.createElement("script");
-  script.async = true;
-  // Retain early ad discovery, but give critical CSS and page imagery bandwidth priority.
-  script.fetchPriority = "low";
-  script.crossOrigin = "anonymous";
-  script.setAttribute("data-mynigeriaguide-adsense", "true");
-  script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}";
-  document.head.appendChild(script);
+  var loadAds = function () {
+    if (document.querySelector("script[data-mynigeriaguide-adsense]")) return;
+    var script = document.createElement("script");
+    script.async = true;
+    script.fetchPriority = "low";
+    script.crossOrigin = "anonymous";
+    script.setAttribute("data-mynigeriaguide-adsense", "true");
+    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}";
+    document.head.appendChild(script);
+  };
+  var scheduleAds = function () {
+    if (typeof window.requestIdleCallback === "function") {
+      window.requestIdleCallback(loadAds, { timeout: 2300 });
+    } else {
+      window.setTimeout(loadAds, 1200);
+    }
+  };
+  if (document.readyState === "complete") scheduleAds();
+  else {
+    window.addEventListener("load", scheduleAds, { once: true });
+    // A stalled third-party image must not indefinitely suppress advertising.
+    // Still allow the document's render-critical requests to go first.
+    window.setTimeout(loadAds, 3500);
+  }
 })();
 `;
 
