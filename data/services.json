@@ -34,9 +34,16 @@
       "Do not infer a ₦30,000 correction-of-data administrative fee for every simple renewal from the table of additional services. The official portal determines the charges applicable to the particular application.",
       "The revised April 2026 NIS SLA retained a 21-day target after successful enrolment for reissue. It is not a guarantee that a booklet can be collected on a precise date or a promise of an appointment within 21 days.",
       "NIS asks renewal applicants to upload a compliant photograph and relevant civil/origin evidence and appear with the current booklet for biometric capture. A fully remote renewal is not established by the official guidance.",
-      "Passport fees quoted in naira apply to applications within Nigeria. NIS has published distinct US-dollar amounts for applications abroad; verify current mission and payment requirements."
+      "Passport fees quoted in naira apply to applications within Nigeria. NIS has published distinct US-dollar amounts for applications abroad; verify current mission and payment requirements.",
+      "Before paying again to fix a mistake or switch booklet size, check the NIS refund rules: duplicate payment on the same application or certain payments before an appointment is booked may qualify for review. An already-booked appointment, errors found after payment, or paying for another application to swap 32- and 64-page booklets are excluded. Submit any refund request within 21 days of payment with your application ID, payment reference and debit evidence. NIS says approved refunds typically take six weeks. Verify its published contact details directly because the policy page prints an apparently misspelled email domain."
     ],
     "sources": [
+      {
+        "label": "NIS — online payment refund exceptions, 21-day claim limit and contact discrepancy",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://immigration.gov.ng/refundpolicy/",
+        "lastChecked": "2026-10-23"
+      },
       {
         "label": "NIS — official Renewal/Reissue steps including NIN verification and photo upload",
         "agency": "Nigeria Immigration Service",
