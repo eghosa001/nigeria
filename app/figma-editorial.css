@@ -410,7 +410,7 @@ html[data-theme="dark"] :is(.mng-hero-search,.section-quick-search,.minimal-serv
     border: 1px solid rgba(255,255,255,.12) !important; border-radius: 14px !important;
   }
   html[data-theme] .mobile-bottom-nav a { color: #c3d3d0 !important; }
-  html[data-theme] .mobile-bottom-nav a.is-current { color: #e6b75e !important; background: rgba(255,255,255,.075) !important; }
+  html[data-theme] .mobile-bottom-nav a.is-current { color: #e6b75e !important; background: #2a4045 !important; }
 }
 @media (max-width: 620px) {
   html[data-theme] .minimal-home-hero { padding: 30px 0 33px !important; }
