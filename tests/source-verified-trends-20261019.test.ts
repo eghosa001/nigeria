@@ -116,3 +116,20 @@ test("decorative Jobs counters are not spoken twice", () => {
   assert.match(source, /<ol className="job-steps">/);
   assert.match(source, /<span aria-hidden="true">\{index \+ 1\}<\/span>/);
 });
+
+test("23 October Agbara Nla feature uses dated distributor evidence and the existing film URL", () => {
+  const current = getCurrentHomeSocialTrends("2026-10-23");
+  assert.equal(current.length, 4);
+  assert.equal(new Set(current.map(item => item.pillar)).size, 4);
+  const trend = current.find(item => item.href === "/entertainment/movies/agbara-nla-the-return");
+  assert.ok(trend);
+  assert.match(trend.title, /₦354\.5m/i);
+  assert.equal(getCurrentHomeSocialTrends("2026-10-29").some(item => item.href === trend.href), false);
+  const film = entertainmentTitles.find(item => item.slug === "agbara-nla-the-return");
+  assert.ok(film);
+  assert.match(film.synopsis, /20 October 2026.*₦354\.5 million/);
+  assert.match(film.synopsis, /distributor figures/i);
+  assert.ok(film.references?.some(source => source.href === "https://www.instagram.com/p/Dera0nJoS4N/"));
+  assert.ok(film.references?.some(source => source.href.includes("punchng.com/agbara-nla-grosses-n307m")));
+  assert.equal(film.watchLinks.some(link => link.access === "full-movie"), false);
+});

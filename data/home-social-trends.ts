@@ -15,6 +15,16 @@ export type HomeSocialTrend = {
  * - Every item must point to a real MyNigeriaGuide page that already meets the site's source, freshness, SEO and quality standards.
  */
 export const homeSocialTrends: HomeSocialTrend[] = [
+  // Dated distributor announcements on 16 and 20 October (Nile Entertainment),
+  // corroborated by PUNCH; this is measurable film momentum, not an event advert.
+  // Reuse the existing film profile, and expire the homepage feature promptly.
+  {
+    pillar: "Movies & Entertainment",
+    title: "Agbara Nla: Nile reports ₦354.5m Nigerian box office after a strong weekend",
+    href: "/entertainment/movies/agbara-nla-the-return",
+    checkedAt: "2026-10-23",
+    expiresAt: "2026-10-28",
+  },
   // 19 Oct: original issuer evidence, corroborated with independent coverage.
   // Each story strengthens one existing canonical guide; no new thin pages.
   {
