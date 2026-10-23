@@ -261,6 +261,8 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
 
   return (
     <>
+      {destinationPhoto ? <link rel="preconnect" href="https://commons.wikimedia.org" /> : null}
+      {destinationPhoto ? <link rel="dns-prefetch" href="https://upload.wikimedia.org" /> : null}
       <JsonLd data={[breadcrumbLd, webpageLd, guideLd, placesLd, ...(faqLd ? [faqLd] : [])]} />
       <section className="section page-top explore-guide-hero">
         <div className="container">
