@@ -5854,6 +5854,11 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   border-radius: 14px;
   background: white;
 }
+.home-trending-links a:only-child {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: 760px;
+}
 .home-trending-links a:hover {
   transform: translateY(-1px);
   border-color: #b5c8ba;

@@ -4,6 +4,8 @@ export type HomeSocialTrend = {
   href: string;
   checkedAt: string;
   expiresAt: string;
+  /** Current measurable momentum, supported by a primary actor and independent reporting. */
+  momentumEvidence?: { primaryUrl: string; corroborationUrl: string; verifiedAt: string };
 };
 
 /**
@@ -24,6 +26,11 @@ export const homeSocialTrends: HomeSocialTrend[] = [
     href: "/entertainment/movies/agbara-nla-the-return",
     checkedAt: "2026-10-23",
     expiresAt: "2026-10-28",
+    momentumEvidence: {
+      primaryUrl: "https://www.instagram.com/p/Dera0nJoS4N/",
+      corroborationUrl: "https://punchng.com/agbara-nla-hits-n354-5m-leads-nigerian-box-office/",
+      verifiedAt: "2026-10-23",
+    },
   },
   // 19 Oct: original issuer evidence, corroborated with independent coverage.
   // Each story strengthens one existing canonical guide; no new thin pages.
@@ -267,6 +274,9 @@ export function getCurrentHomeSocialTrends(today = new Date(Date.now() + 60 * 60
   const usedPillars = new Set<string>();
   const usedHrefs = new Set<string>();
   return homeSocialTrends.filter((item) => {
+    // An issuer notice, release date or application deadline alone is not evidence of a trend.
+    // Fail closed: leave the shelf sparse rather than promoting unsupported popularity.
+    if (!item.momentumEvidence || item.momentumEvidence.verifiedAt > today) return false;
     if (item.checkedAt > today || item.expiresAt < today) return false;
     const pillar = item.pillar === "Movies" ? "Movies & Entertainment" : item.pillar;
     if (usedPillars.has(pillar) || usedHrefs.has(item.href)) return false;

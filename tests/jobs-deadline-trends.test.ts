@@ -78,28 +78,19 @@ test("private and deadline-sensitive job routes render per request, while public
   assert.match(source("app/api/jobs/route.ts"), /"Cache-Control": "no-store"/);
 });
 
-test("homepage keeps all pillars distinct and rotates temporary deadline trends", () => {
-  const today = getCurrentHomeSocialTrends("2026-10-09");
-  const jobs = today.filter((item) => item.pillar === "Jobs & Careers");
-  assert.equal(jobs.length, 1);
-  assert.equal(jobs[0]?.href, "/jobs/deloitte-nigeria-early-careers");
-  assert.equal(new Set(today.map((item) => item.href)).size, today.length);
-  assert.equal(new Set(today.map((item) => item.pillar)).size, today.length);
-  assert.equal(getCurrentHomeSocialTrends("2026-10-10").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/afdb-2027-internship-session-one");
-  assert.equal(getCurrentHomeSocialTrends("2026-10-12").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/afdb-2027-internship-session-one");
-  assert.equal(getCurrentHomeSocialTrends("2026-10-13").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/nova-bank-graduate-trainee-2026");
-  assert.equal(getCurrentHomeSocialTrends("2026-10-15").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/nova-bank-graduate-trainee-2026");
-  assert.equal(getCurrentHomeSocialTrends("2026-10-16").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/ebid-young-professionals-2026");
-  assert.equal(getCurrentHomeSocialTrends("2026-10-30").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/ebid-young-professionals-2026");
-  assert.equal(getCurrentHomeSocialTrends("2026-10-31").some((item) => item.pillar === "Jobs & Careers"), false);
-  assert.equal(getCurrentHomeSocialTrends("2026-10-10").find((item) => item.pillar === "Tour Nigeria")?.href, "/explore/felabration-2026");
-  assert.equal(getCurrentHomeSocialTrends("2026-10-13").find((item) => item.pillar === "Tour Nigeria")?.href, "/explore/ofala-onitsha-2026");
-  assert.equal(getCurrentHomeSocialTrends("2026-10-17").find((item) => item.pillar === "Tour Nigeria")?.href, "/explore/ofala-onitsha-2026");
-  assert.equal(getCurrentHomeSocialTrends("2026-10-18").find((item) => item.pillar === "Tour Nigeria")?.href, "/explore/design-week-lagos-2026");
-  assert.equal(getCurrentHomeSocialTrends("2026-10-31").find((item) => item.pillar === "Tour Nigeria")?.href, "/explore/ecowas-food-cultural-festival-benin-2026");
-  assert.equal(getCurrentHomeSocialTrends("2026-11-01").find((item) => item.pillar === "Tour Nigeria")?.href, "/explore/benin-royal-coronation-anniversary-2026");
-  assert.equal(getCurrentHomeSocialTrends("2026-11-21").find((item) => item.pillar === "Tour Nigeria")?.href, "/explore/benin-royal-coronation-anniversary-2026");
-  assert.equal(getCurrentHomeSocialTrends("2026-11-22").some((item) => item.pillar === "Tour Nigeria"), false);
+test("a deadline or scheduled event alone never qualifies as a homepage trend", () => {
+  // Job and event pages retain their canonical URLs and historical facts;
+  // only independently corroborated current momentum can enter the trend shelf.
+  for (const day of ["2026-10-09", "2026-10-12", "2026-10-19", "2026-10-30", "2026-11-01"]) {
+    const trends = getCurrentHomeSocialTrends(day);
+    assert.ok(trends.every((item) => item.momentumEvidence?.primaryUrl && item.momentumEvidence.corroborationUrl));
+    assert.ok(trends.every((item) => item.pillar !== "Jobs & Careers" && item.pillar !== "Tour Nigeria"));
+    assert.equal(new Set(trends.map((item) => item.href)).size, trends.length);
+  }
+  assert.deepEqual(getCurrentHomeSocialTrends("2026-10-23").map((item) => item.href), [
+    "/entertainment/movies/agbara-nla-the-return",
+  ]);
+  assert.deepEqual(getCurrentHomeSocialTrends("2026-10-29"), []);
 });
 
 test("challenge reuses one canonical verified guide, not a fabricated job vacancy", () => {

@@ -17,16 +17,18 @@ const service = (slug: string) => {
   return item;
 };
 
-test("four current trends are source-specific, distinct canonicals, not new pages", () => {
-  const current = getCurrentHomeSocialTrends("2026-10-19");
-  assert.equal(current.length, 4);
-  assert.equal(new Set(current.map(t => t.pillar)).size, 4);
-  assert.equal(new Set(current.map(t => t.href)).size, 4);
-  assert.ok(current.some(t => t.href === "/services/jamb-caps"));
-  assert.ok(current.some(t => t.href === "/explore/design-week-lagos-2026"));
-  assert.ok(current.some(t => t.href === "/entertainment/movies/tele-x-zikora-2026"));
-  assert.ok(current.some(t => t.href === "/jobs/nigerian-army-92rri-2026"));
-  assert.equal(getCurrentHomeSocialTrends("2026-10-27").some(t => t.href === "/jobs/nigerian-army-92rri-2026"), false);
+test("homepage trends require evidence of momentum, not a four-pillar quota", () => {
+  // Issuer notices, scheduled events and job deadlines remain useful guides,
+  // but are not promoted as viral stories without independently verified momentum.
+  assert.deepEqual(getCurrentHomeSocialTrends("2026-10-19"), []);
+  const current = getCurrentHomeSocialTrends("2026-10-23");
+  assert.deepEqual(current.map(item => item.href), ["/entertainment/movies/agbara-nla-the-return"]);
+  assert.ok(current.every(item => item.momentumEvidence?.primaryUrl && item.momentumEvidence.corroborationUrl));
+  assert.equal(getCurrentHomeSocialTrends("2026-10-29").length, 0);
+  const homepage = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
+  assert.match(homepage, /socialTrends\.length > 0 &&/);
+  const styles = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");
+  assert.match(styles, /\.home-trending-links a:only-child\s*\{[^}]*grid-column: 1 \/ -1;/);
 });
 
 test("JAMB candidate acceptance and paid letter printing remain two different tasks", () => {
@@ -119,8 +121,8 @@ test("decorative Jobs counters are not spoken twice", () => {
 
 test("23 October Agbara Nla feature uses dated distributor evidence and the existing film URL", () => {
   const current = getCurrentHomeSocialTrends("2026-10-23");
-  assert.equal(current.length, 4);
-  assert.equal(new Set(current.map(item => item.pillar)).size, 4);
+  assert.equal(current.length, 1);
+  assert.equal(new Set(current.map(item => item.pillar)).size, 1);
   const trend = current.find(item => item.href === "/entertainment/movies/agbara-nla-the-return");
   assert.ok(trend);
   assert.match(trend.title, /₦354\.5m/i);
