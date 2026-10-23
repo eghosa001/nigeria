@@ -304,6 +304,7 @@ html[data-theme] .home-trending-links a {
 html[data-theme] .home-trending-links a:hover { border-color: var(--editorial-action) !important; }
 html[data-theme] .home-trending-links strong { font-family: var(--editorial-display); font-size: 1.2rem; line-height: 1.3; }
 html[data-theme] .home-trending-links span { color: var(--editorial-action) !important; }
+html[data-theme] .home-trending-links > a:only-child { grid-column: 1 / -1; width: min(100%,680px); }
 html[data-theme] :is(.minimal-home-movies, .minimal-home-tour, .minimal-home-jobs) {
   background: var(--cream) !important;
   border-color: var(--line) !important;
