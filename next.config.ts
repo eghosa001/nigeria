@@ -75,6 +75,7 @@ const nextConfig: NextConfig = {
       // Cache only public, anonymous, canonical editorial responses at the edge.
       { source: "/", missing: unfilteredEditorialQueries, headers: publicEditorialCache },
       { source: "/entertainment", missing: unfilteredEditorialQueries, headers: publicEditorialCache },
+      { source: "/latest", missing: unfilteredEditorialQueries, headers: publicEditorialCache },
       { source: "/explore", missing: unfilteredExploreQueries, headers: publicTourCache },
       {
         source: "/services",
