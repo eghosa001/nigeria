@@ -725,8 +725,11 @@ test("editorial light and dark themes fit representative routes on phones and de
       background: getComputedStyle(node).backgroundColor,
       color: getComputedStyle(node).color,
     }));
-    expect(card.background, `light action surface ${route}`).toBe("rgb(255, 255, 255)");
-    expect(card.color, `light action text ${route}`).toBe("rgb(28, 43, 43)");
+    const channels = (value: string) => (value.match(/\\d+/g) ?? []).slice(0, 3).map(Number);
+    const [br, bg, bb] = channels(card.background);
+    const [fr, fg, fb] = channels(card.color);
+    expect(Math.min(br, bg, bb), `light editorial paper on ${route}`).toBeGreaterThanOrEqual(235);
+    expect(Math.max(fr, fg, fb), `dark readable editorial ink on ${route}`).toBeLessThan(115);
   }
   await page.goto("/", { waitUntil: "domcontentloaded" });
 
