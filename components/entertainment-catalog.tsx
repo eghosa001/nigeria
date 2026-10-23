@@ -69,8 +69,8 @@ export function EntertainmentCatalog({
     }
 
     const controller = new AbortController();
+    setLoading(true);
     const timer = window.setTimeout(async () => {
-      setLoading(true);
       const params = new URLSearchParams();
       if (query.trim()) params.set("q", query.trim());
       if (platform !== "all") params.set("platform", platform);
@@ -98,7 +98,7 @@ export function EntertainmentCatalog({
       } finally {
         if (!controller.signal.aborted) setLoading(false);
       }
-    }, query ? 200 : 0);
+    }, query ? 275 : 0);
 
     return () => {
       window.clearTimeout(timer);
