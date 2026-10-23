@@ -103,17 +103,17 @@ export const checkedIssuerCareers20261016: Record<string, IssuerReview> = {
     "guard": "The firm has a named 2026 MDP listing on its recruiter-owned portal, but its deadline must be verified from that record; a programme page's Apply button does not establish perpetual admission."
   },
   "coronation-merchant-bank-careers": {
-    "url": "https://www.coronationmb.com/careers/",
-    "extra": null,
-    "lead": "Coronation Merchant Bank's current official careers page explicitly reports no job openings available. It also describes banking, risk and digital financial-services career paths, staff development and remuneration, but those descriptions are employer information rather than live vacancies.",
+    "url": "https://www.coronation.ng/careers/",
+    "extra": "https://www.coronationmb.com/",
+    "lead": "Coronation Group's official careers page is an accessible recruitment starting point for the group, including its Merchant Bank business. It describes graduate and professional career pathways, but that overview is not evidence that Coronation Merchant Bank has a particular role currently accepting applications. The earlier bank-specific careers URL was unavailable during the latest source check.",
     "steps": [
-      "Read the 'There are currently No Job Openings Available' section before deciding whether you can apply.",
-      "If a new vacancy appears in future, check the named position, duty station and required experience on Coronation's own page.",
-      "Treat invitations from WhatsApp, paid screening agents or copied vacancy advertisements as unverified unless Coronation confirms the exact opening on its owned channel.",
-      "The employer displays no available jobs in its own listing area; do not create a CV-to-vacancy instruction until that changes.",
-      "If an external recruiter claims an imminent role, request a matching Coronation listing or a verified issuer confirmation before proceeding."
+      "Use the official Coronation Group careers page, then look for a current listing that explicitly names the Merchant Bank entity.",
+      "Verify each named role, location, requirements, vacancy date and employer-owned application destination before preparing an application.",
+      "A generic Graduate Trainee Programme description or careers introduction does not mean applications are currently open.",
+      "If no Merchant Bank-specific vacancy is listed, treat the guide as an employer career directory rather than an active opportunity.",
+      "Avoid third-party or paid screening agents unless the employer verifies the particular recruitment channel."
     ],
-    "guard": "This is a careers directory with no listed opening on the checked issuer page, not a newly opened October 2026 recruitment drive."
+    "guard": "This is a verified employer-careers entry point, not an independently confirmed open 2026 Merchant Bank vacancy. Recheck before applying."
   },
   "greenwich-merchant-bank-careers": {
     "url": "https://www.greenwichbankgroup.com/22careers/",
