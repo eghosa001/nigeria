@@ -16,7 +16,7 @@
     "start:vinext": "wrangler dev --config dist/server/wrangler.json",
     "deploy:cloudflare": "wrangler deploy --config dist/server/wrangler.json",
     "check:content": "tsx scripts/check-content-quality.ts && tsx scripts/audit-editorial-voice.ts --summary && npm run check:humanizer && npm run check:performance-policy",
-    "check:performance-policy": "tsx --test tests/public-hub-performance-policy-20261019.test.ts",
+    "check:performance-policy": "tsx --test tests/public-hub-performance-policy-20261019.test.ts && node --test tests/cwv-critical-path-20261023.test.mjs",
     "check:humanizer": "tsx --test tests/sitewide-humanizer-coverage-20261018.test.ts tests/humanizer-sitewide-templates-20261018.test.ts",
     "audit:voice": "tsx scripts/audit-editorial-voice.ts",
     "audit:repetition": "tsx scripts/audit-reader-repetition.ts",
