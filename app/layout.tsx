@@ -99,7 +99,12 @@ const adsenseBootstrap = `
     }
   };
   if (document.readyState === "complete") scheduleAds();
-  else window.addEventListener("load", scheduleAds, { once: true });
+  else {
+    window.addEventListener("load", scheduleAds, { once: true });
+    // A stalled third-party image must not indefinitely suppress advertising.
+    // Still allow the document's render-critical requests to go first.
+    window.setTimeout(loadAds, 3500);
+  }
 })();
 `;
 
