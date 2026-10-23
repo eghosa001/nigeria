@@ -694,13 +694,23 @@ test("editorial light and dark themes fit representative routes on phones and de
   const lightCards = await page.locator(".home-path").evaluateAll((elements) =>
     elements.map((element) => ({
       background: getComputedStyle(element).backgroundColor,
-      chapterColor: getComputedStyle(element).borderTopColor,
+      foreground: getComputedStyle(element.querySelector("strong")!).color,
       radius: getComputedStyle(element).borderTopLeftRadius,
+      height: element.getBoundingClientRect().height,
     })),
   );
-  expect(new Set(lightCards.map((card) => card.background)).size).toBe(1);
-  expect(new Set(lightCards.map((card) => card.chapterColor)).size).toBe(4);
+  // The Figma editorial redesign uses four deliberately distinct pillar colours:
+  // ink, terracotta, lagoon and gold. Protect that identity AND readable labels.
+  expect(lightCards.map((card) => card.background)).toEqual([
+    "rgb(24, 41, 45)", "rgb(174, 73, 57)",
+    "rgb(36, 90, 98)", "rgb(217, 162, 60)",
+  ]);
+  expect(lightCards.map((card) => card.foreground)).toEqual([
+    "rgb(255, 248, 234)", "rgb(255, 248, 234)",
+    "rgb(255, 248, 234)", "rgb(24, 41, 45)",
+  ]);
   expect(new Set(lightCards.map((card) => card.radius)).size).toBe(1);
+  expect(lightCards.every((card) => card.height >= 80)).toBe(true);
 
   // Legacy job and service action cards must not create dark visual islands
   // while the visitor has selected the Ivory & Ink light theme.
@@ -756,8 +766,8 @@ test("editorial light and dark themes fit representative routes on phones and de
         background: getComputedStyle(node).backgroundColor,
         ink: getComputedStyle(node).color,
       }));
-      expect(trustPanel.background, "jobs verification panel is a light paper card").toBe("rgb(255, 255, 255)");
-      expect(trustPanel.ink, "jobs verification panel uses readable ink").toBe("rgb(28, 43, 43)");
+      expect(trustPanel.background, "jobs verification panel uses the lagoon editorial colour").toBe("rgb(36, 90, 98)");
+      expect(trustPanel.ink, "jobs verification panel uses readable ivory").toBe("rgb(255, 248, 234)");
     }
     if (route === "/explore") {
       const shortcuts = page.locator(".tour-compact-hero .primary-shortcuts");
@@ -813,7 +823,7 @@ test("editorial light and dark themes fit representative routes on phones and de
       columns: getComputedStyle(document.querySelector(".home-paths")!).gridTemplateColumns.split(" ").length,
     }));
     expect(layout.overflow, `dark homepage at ${width}px`).toBeLessThanOrEqual(1);
-    expect(layout.columns, `dark navigation at ${width}px`).toBe(width <= 760 ? 1 : width <= 920 ? 2 : 4);
+    expect(layout.columns, `dark navigation at ${width}px`).toBe(width <= 620 ? 1 : width <= 920 ? 2 : 4);
   }
 
   // Each pillar and one representative detail path stays navigable with
