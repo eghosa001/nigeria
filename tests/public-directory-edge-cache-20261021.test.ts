@@ -2,24 +2,37 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import config from "../next.config";
 
-test("only unfiltered public directory landing pages receive a five-minute edge cache policy", async () => {
+test("only safe unfiltered public hubs receive shared edge cache policies", async () => {
   assert.ok(config.headers, "Next config must define header rules");
   const rules = await config.headers();
   const shared = rules.filter((rule) =>
     rule.headers.some(({ key }) => key.toLowerCase() === "cloudflare-cdn-cache-control"),
   );
   assert.deepEqual(shared.map((rule) => rule.source).sort(),
-    ["/entertainment/movies", "/services"]);
+    ["/", "/entertainment", "/entertainment/movies", "/explore", "/services"]);
 
   for (const rule of shared) {
     const expected = rule.source === "/services"
       ? ["q", "category", "status", "sort", "page"]
-      : ["q", "platform", "genre", "sort", "page"];
+      : rule.source === "/entertainment/movies"
+        ? ["q", "platform", "genre", "sort", "page"]
+        : rule.source === "/explore"
+          ? ["q", "type", "city", "region", "page", "sort"]
+          : ["q", "page", "search", "sort"];
     assert.deepEqual(rule.missing?.map((entry) => entry.type === "query" ? entry.key : ""), expected,
       rule.source + " must never cache filtered searches or paginated results");
+    const expectedControl = rule.source === "/explore"
+      ? "public, max-age=60, stale-while-revalidate=30"
+      : ["/services", "/entertainment/movies"].includes(rule.source)
+        ? "public, max-age=300, stale-while-revalidate=60"
+        : "public, max-age=120, stale-while-revalidate=60";
     assert.equal(rule.headers.find(({ key }) => key === "Cloudflare-CDN-Cache-Control")?.value,
-      "public, max-age=300, stale-while-revalidate=60");
+      expectedControl);
   }
+
+  assert.ok(shared.every((rule) => rule.source === "/" || rule.source === "/entertainment" ||
+    rule.source === "/explore" || rule.source === "/services" || rule.source === "/entertainment/movies"),
+    "private and parameterized routes must not receive shared CDN HTML caching");
 
   const admin = rules.find((rule) => rule.source === "/admin");
   const adminApi = rules.find((rule) => rule.source === "/api/admin/:path*");
