@@ -100,7 +100,7 @@ export function ServiceDirectory({
       } finally {
         if (!controller.signal.aborted) setLoading(false);
       }
-    }, query ? 200 : 0);
+    }, query ? 275 : 0);
 
     return () => {
       window.clearTimeout(timer);

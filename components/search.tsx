@@ -16,7 +16,9 @@ export function ServiceSearch() {
     const value = query.trim();
     setResults([]);
     setFailed(false);
-    if (!value) {
+    // A one-character query matches most of the entire public catalogue.
+    // Delay the expensive remote search until the visitor has entered a useful term.
+    if (value.length < 2) {
       setLoading(false);
       return;
     }
@@ -38,7 +40,7 @@ export function ServiceSearch() {
       } finally {
         if (!controller.signal.aborted) setLoading(false);
       }
-    }, 180);
+    }, 275);
 
     return () => {
       window.clearTimeout(timer);
@@ -56,7 +58,8 @@ export function ServiceSearch() {
       </div>
       {query.trim() ? (
         <div className="search-results" aria-live="polite">
-          {loading ? <div className="search-empty">Finding relevant guides…</div> :
+          {query.trim().length < 2 ? <div className="search-empty">Type at least two characters to search guides.</div> :
+          loading ? <div className="search-empty">Finding relevant guides…</div> :
             failed ? <div className="search-empty">
               Search is temporarily unavailable. <Link href={"/services?q=" + encodeURIComponent(query.trim())}>Search the full directory →</Link>
             </div> : results.length ? results.map((service) => (
