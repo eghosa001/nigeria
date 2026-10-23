@@ -762,7 +762,7 @@ test("editorial light and dark themes fit representative routes on phones and de
     if (route === "/entertainment/movies") {
       const cinemaCatalogueBg = await page.locator(".movie-catalog-section")
         .evaluate((node) => getComputedStyle(node).backgroundColor);
-      expect(cinemaCatalogueBg, "movie catalogue must be light").toBe("rgb(255, 255, 255)");
+      expect(cinemaCatalogueBg, "movie catalogue must use warm ivory paper").toBe("rgb(255, 253, 247)");
     }
     if (route === "/jobs") {
       const trustPanel = await page.locator(".jobs-trust-panel").evaluate((node) => ({
