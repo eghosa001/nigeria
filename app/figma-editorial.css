@@ -228,7 +228,7 @@ html[data-theme] :is(.mng-home-cover a,.home-path):focus-visible {
   background: #245a62;
 }
 .mng-cover-art small {
-  color: #e6b75e; font-size: .63rem; line-height: 1.6;
+  color: #ffe1a3; font-size: .63rem; line-height: 1.6;
   letter-spacing: .08em; text-transform: uppercase; font-weight: 800;
 }
 .mng-cover-art strong {
