@@ -36,7 +36,7 @@ export function RemoteMoviePreviewImage({
           width={480}
           height={360}
           loading={loading}
-          fetchPriority={priority ? "high" : "auto"}
+          fetchPriority={priority ? "high" : loading === "lazy" ? "low" : "auto"}
           decoding="async"
           referrerPolicy="strict-origin-when-cross-origin"
           onError={() => setAttempt((value) => value + 1)}
