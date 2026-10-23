@@ -347,7 +347,7 @@ test("live mobile first-paint metrics are sampled alongside edge timing", async 
           const event = entry as PerformanceEntry & { duration: number; interactionId?: number };
           if (event.interactionId) store.longestInteraction = Math.max(store.longestInteraction, event.duration);
         }
-      }).observe({ type: "event", buffered: true, durationThreshold: 16 });
+      }).observe({ type: "event", buffered: true, durationThreshold: 16 } as PerformanceObserverInit & { durationThreshold: number });
     } catch {}
   });
 
