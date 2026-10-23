@@ -120,3 +120,15 @@ test("compact Jobs preview keeps one opportunity per employer", () => {
   ];
   assert.deepEqual(pickDistinctEmployerPreview(opportunities, 3).map((item) => item.slug), ["role-a", "role-c", "role-d"]);
 });
+
+test("Army 92RRI expired deadline is distinguished from the undated portal banner without losing NIN verification", () => {
+  const army = jobOpportunities.find((item) => item.slug === "nigerian-army-92rri-2026");
+  assert.ok(army);
+  assert.equal(getEffectiveJobStatus(army, "2026-10-23"), "closed");
+  assert.match(army.summary, /21 October 2026.*undated.*does not establish an extension/i);
+  assert.match(army.applicationSteps.join(" "), /NINAuth.*share-code.*QR/i);
+  assert.match(army.applicationSteps.join(" "), /printing the photo card without submitting online/i);
+  assert.match(army.applicationSteps.at(-1) ?? "", /not a confirmed deadline extension/i);
+  assert.match(army.officialUrlLabel, /Check official Army/);
+  assert.equal(army.verifiedAt, "2026-10-14"); // Never advance checked dates for copy-only repairs.
+});
