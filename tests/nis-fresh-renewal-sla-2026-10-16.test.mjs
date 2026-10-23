@@ -20,7 +20,7 @@ test("2026 NIS passport pages retain separate original canonical and appropriate
     assert.equal(record.officialPortal, "https://passport.immigration.gov.ng/");
     assert.match(record.timeline, /not (?:an appointment wait-time or guaranteed|a guaranteed|a guarantee)/i);
     assert.ok(record.steps.length >= 7);
-    assert.ok(record.sources.every((source) => source.lastChecked === "2026-10-16"));
+    assert.ok(record.sources.every((source) => source.lastChecked === (source.url.endsWith("/refundpolicy/") ? "2026-10-23" : "2026-10-16")));
   }
 });
 test("fees and in-person biometric stages are not mistaken for full online service", () => {
@@ -41,4 +41,15 @@ test("fresh, renewal, correction and special applicant pathways stay distinct", 
   assert.match(renew.steps.join(" "), /lost\/stolen/i);
   assert.match(renew.steps.join(" "), /change-of-data/i);
   assert.ok(!fresh.summary.startsWith("A source-linked starter checklist"));
+});
+
+test("renewal warns about NIS refund eligibility and preserves precise source dates", () => {
+  const advice = renew.notes.at(-1) ?? "";
+  assert.match(advice, /duplicate payment on the same application/i);
+  assert.match(advice, /booked appointment/i);
+  assert.match(advice, /within 21 days of payment/i);
+  assert.match(advice, /six weeks/i);
+  assert.match(advice, /misspelled email domain/i);
+  assert.equal(renew.sources.filter((source) => source.url === "https://immigration.gov.ng/refundpolicy/").length, 1);
+  assert.equal(renew.lastVerified, "2026-10-16");
 });
