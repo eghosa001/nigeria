@@ -1,7 +1,7 @@
 import type { CareerOpportunity } from "@/lib/jobs";
 
-// Twenty-five existing employer directories, independently checked against
-// issuer-controlled pages on 16 October 2026. All dates are editorial evidence
+// Twenty-five existing employer directories reviewed on 16 October 2026,
+// with the Coronation Merchant Bank group-careers fallback rechecked on 23 October. All dates are editorial evidence
 // dates, not invented role openings, current filing windows or submission tests.
 type IssuerReview = {
   url: string;
@@ -103,17 +103,17 @@ export const checkedIssuerCareers20261016: Record<string, IssuerReview> = {
     "guard": "The firm has a named 2026 MDP listing on its recruiter-owned portal, but its deadline must be verified from that record; a programme page's Apply button does not establish perpetual admission."
   },
   "coronation-merchant-bank-careers": {
-    "url": "https://www.coronationmb.com/careers/",
-    "extra": null,
-    "lead": "Coronation Merchant Bank's current official careers page explicitly reports no job openings available. It also describes banking, risk and digital financial-services career paths, staff development and remuneration, but those descriptions are employer information rather than live vacancies.",
+    "url": "https://www.coronation.ng/careers/",
+    "extra": "https://www.coronationmb.com/",
+    "lead": "Coronation Group's official careers page is an accessible recruitment starting point for the group, including its Merchant Bank business. It describes graduate and professional career pathways, but that overview is not evidence that Coronation Merchant Bank has a particular role currently accepting applications. No open roles at Coronation Merchant Bank have been independently confirmed in the latest source check; the earlier bank-specific careers URL was unavailable.",
     "steps": [
-      "Read the 'There are currently No Job Openings Available' section before deciding whether you can apply.",
-      "If a new vacancy appears in future, check the named position, duty station and required experience on Coronation's own page.",
-      "Treat invitations from WhatsApp, paid screening agents or copied vacancy advertisements as unverified unless Coronation confirms the exact opening on its owned channel.",
-      "The employer displays no available jobs in its own listing area; do not create a CV-to-vacancy instruction until that changes.",
-      "If an external recruiter claims an imminent role, request a matching Coronation listing or a verified issuer confirmation before proceeding."
+      "Use the official Coronation Group careers page, then look for a current listing that explicitly names the Merchant Bank entity.",
+      "Verify each named role, location, requirements, vacancy date and employer-owned application destination before preparing an application.",
+      "A generic Graduate Trainee Programme description or careers introduction does not mean applications are currently open.",
+      "If no Merchant Bank-specific vacancy is listed, treat the guide as an employer career directory rather than an active opportunity.",
+      "Avoid third-party or paid screening agents unless the employer verifies the particular recruitment channel."
     ],
-    "guard": "This is a careers directory with no listed opening on the checked issuer page, not a newly opened October 2026 recruitment drive."
+    "guard": "This is a verified employer-careers entry point, not an independently confirmed open 2026 Merchant Bank vacancy. Recheck before applying."
   },
   "greenwich-merchant-bank-careers": {
     "url": "https://www.greenwichbankgroup.com/22careers/",
@@ -345,15 +345,17 @@ export const checkedIssuerCareerSlugs20261016 = Object.keys(checkedIssuerCareers
 export function applyMoreIssuerCareerReviews20261016(item: CareerOpportunity): CareerOpportunity {
   const review = checkedIssuerCareers20261016[item.slug];
   if (!review || item.kind !== "career-page" || item.officialUrl !== review.url) return item;
+  const checkedAt = item.slug === "coronation-merchant-bank-careers" ? "2026-10-23" : "2026-10-16";
+  const checkedLabel = item.slug === "coronation-merchant-bank-careers" ? "23 October 2026" : "16 October 2026";
   const sources = [...item.sources];
   for (const url of [review.url, review.extra].filter((value): value is string => Boolean(value))) {
     const position = sources.findIndex(source => source.url === url);
     if (position !== -1) {
-      sources[position] = { ...sources[position], lastChecked: "2026-10-16" };
+      sources[position] = { ...sources[position], lastChecked: checkedAt };
     } else {
       sources.push({
         label: item.organization + " original employer careers / vacancy information",
-        url, lastChecked: "2026-10-16"
+        url, lastChecked: checkedAt
       });
     }
   }
@@ -361,15 +363,15 @@ export function applyMoreIssuerCareerReviews20261016(item: CareerOpportunity): C
     ...item,
     kind: "career-page",
     status: "career-page",
-    statusLabel: "Issuer career directory reviewed 16 October 2026 — verify named roles",
-    verifiedAt: "2026-10-16",
+    statusLabel: "Issuer career directory reviewed " + checkedLabel + " — verify named roles",
+    verifiedAt: checkedAt,
     deadline: undefined,
     nextMilestone: undefined,
     summary: review.lead,
     applicationSteps: review.steps,
     sourceNotes: [
       review.guard,
-      "Source review date: 16 October 2026. Job boards, linked forms and dates can change; a company careers page alone never proves a specific vacancy is currently accepting applications.",
+      "Source review date: " + checkedLabel + ". Job boards, linked forms and dates can change; a company careers page alone never proves a specific vacancy is currently accepting applications.",
       "Original issuer destination reviewed: " + review.url + (review.extra ? "; related issuer page: " + review.extra : "; the issuer page alone did not supply an additional role-specific source."),
     ],
     sources,

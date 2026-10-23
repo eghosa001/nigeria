@@ -261,6 +261,8 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
 
   return (
     <>
+      {destinationPhoto ? <link rel="preconnect" href="https://commons.wikimedia.org" /> : null}
+      {destinationPhoto ? <link rel="dns-prefetch" href="https://upload.wikimedia.org" /> : null}
       <JsonLd data={[breadcrumbLd, webpageLd, guideLd, placesLd, ...(faqLd ? [faqLd] : [])]} />
       <section className="section page-top explore-guide-hero">
         <div className="container">
@@ -278,9 +280,11 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
             <figure className="tour-guide-photo">
               <img
                 src={destinationPhotoUrls(destinationPhoto).src}
+                srcSet={destinationPhotoUrls(destinationPhoto).srcSet}
+                sizes="(max-width: 760px) calc(100vw - 28px), 720px"
                 alt={destinationPhoto.alt}
                 width={720} height={480}
-                loading="eager" decoding="async" referrerPolicy="no-referrer"
+                loading="eager" fetchPriority="high" decoding="async" referrerPolicy="no-referrer"
               />
               <figcaption>
                 Photo: <a href={destinationPhotoUrls(destinationPhoto).creditUrl} target="_blank" rel="noopener noreferrer">{destinationPhoto.credit}</a>

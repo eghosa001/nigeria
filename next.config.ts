@@ -40,6 +40,21 @@ const publicDirectoryEdgeHeaders = [
   { key: "Cloudflare-CDN-Cache-Control", value: "public, max-age=300, stale-while-revalidate=60" },
 ];
 
+// CDN caching is restricted to non-personalized, filter-free editorial entry
+// routes. Stale delivery avoids a thundering herd when a fresh copy is being
+// generated; short TTLs limit how long time-sensitive public summaries age.
+// These headers are not applied to job status pages, APIs, admin, or searches.
+const publicEditorialCache = [
+  { key: "Cloudflare-CDN-Cache-Control", value: "public, max-age=120, stale-while-revalidate=60" },
+];
+const publicTourCache = [
+  { key: "Cloudflare-CDN-Cache-Control", value: "public, max-age=60, stale-while-revalidate=30" },
+];
+const unfilteredExploreQueries = ["q", "type", "city", "region", "page", "sort"]
+  .map((key) => ({ type: "query" as const, key }));
+const unfilteredEditorialQueries = ["q", "page", "search", "sort"]
+  .map((key) => ({ type: "query" as const, key }));
+
 const unfilteredServiceQueries = ["q", "category", "status", "sort", "page"]
   .map((key) => ({ type: "query" as const, key }));
 const unfilteredMovieQueries = ["q", "platform", "genre", "sort", "page"]
@@ -57,6 +72,11 @@ const nextConfig: NextConfig = {
       { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
     ];
     return [
+      // Cache only public, anonymous, canonical editorial responses at the edge.
+      { source: "/", missing: unfilteredEditorialQueries, headers: publicEditorialCache },
+      { source: "/entertainment", missing: unfilteredEditorialQueries, headers: publicEditorialCache },
+      { source: "/latest", missing: unfilteredEditorialQueries, headers: publicEditorialCache },
+      { source: "/explore", missing: unfilteredExploreQueries, headers: publicTourCache },
       {
         source: "/services",
         missing: unfilteredServiceQueries,

@@ -119,7 +119,7 @@ const careerSeeds = [
     "coronation-merchant-bank-careers",
     "Private",
     "Banking",
-    "https://www.coronationmb.com/careers/",
+    "https://www.coronation.ng/careers/",
     "Nigeria"
   ],
   [

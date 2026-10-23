@@ -115,6 +115,8 @@ export default function ExplorePage() {
 
   return (
     <>
+      <link rel="preconnect" href="https://commons.wikimedia.org" />
+      <link rel="dns-prefetch" href="https://upload.wikimedia.org" />
       <JsonLd data={collectionLd} />
 
       <section className="section page-top minimal-section-hero tour-compact-hero">
@@ -152,16 +154,20 @@ export default function ExplorePage() {
             <a href="#browse-guides">Browse all destinations →</a>
           </div>
           <div className="tour-photo-grid">
-            {featuredDestinations.filter((guide) => destinationPhotos[guide.slug]).map((guide) => {
+            {featuredDestinations.filter((guide) => destinationPhotos[guide.slug]).map((guide, index) => {
               const photo = destinationPhotos[guide.slug];
-              const { src, creditUrl, licenseUrl } = destinationPhotoUrls(photo);
+              const { src, srcSet, creditUrl, licenseUrl } = destinationPhotoUrls(photo);
               return (
                 <article className="tour-photo-card" key={guide.slug}>
                   <Link href={"/explore/" + guide.slug} className="tour-photo-card-link">
                     <img
                       src={src}
-                      alt={photo.alt} width={720} height={480} loading="lazy" decoding="async"
-                      referrerPolicy="no-referrer"
+                      srcSet={srcSet}
+                      sizes="(max-width: 620px) calc(100vw - 28px), (max-width: 1100px) 45vw, 360px"
+                      alt={photo.alt} width={720} height={480}
+                      loading={index === 0 ? "eager" : "lazy"}
+                      fetchPriority={index === 0 ? "high" : "low"}
+                      decoding="async" referrerPolicy="no-referrer"
                     />
                     <span className="tour-photo-card-meta">{guide.region}</span>
                     <strong>{guide.shortTitle}</strong>
