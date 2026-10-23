@@ -819,3 +819,10 @@ html[data-theme="light"] .tour-compact-hero .primary-shortcuts a:hover {
   }
 }
 
+
+/* Keep the deadline CTA legible when the global light theme renders its
+   formerly-dark jobs card on editorial white paper. */
+html[data-theme="light"] .jobs-path-card-dark > span,
+html[data-theme="light"] .jobs-path-card-dark > b {
+  color: var(--editorial-action) !important;
+}
