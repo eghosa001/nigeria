@@ -115,12 +115,13 @@ export default function HomePage() {
         </div>
       </section>
 
+      {socialTrends.length > 0 && (
       <section className="home-trending-strip" aria-labelledby="home-trending-title">
         <div className="container">
           <div className="home-trending-heading">
             <div>
               <span className="eyebrow">Trending now</span>
-              <h2 id="home-trending-title">Trending across Nigeria right now.</h2>
+              <h2 id="home-trending-title">Current stories with verified momentum.</h2>
             </div>
             <Link href="/latest">See all latest updates →</Link>
           </div>
@@ -134,6 +135,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      )}
 
       <section className="feature-quickstart" aria-label="Useful things you can do">
         <div className="container feature-quickstart-inner">
