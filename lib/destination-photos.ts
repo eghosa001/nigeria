@@ -20,8 +20,10 @@ export const destinationPhotos: Record<string, DestinationPhoto> = {
 };
 
 export function destinationPhotoUrls(photo: DestinationPhoto) {
+  const path = "https://commons.wikimedia.org/wiki/Special:FilePath/" + photo.file;
   return {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/" + photo.file + "?width=720",
+    src: path + "?width=720",
+    srcSet: [320, 480, 720, 960].map((width) => path + "?width=" + width + " " + width + "w").join(", "),
     creditUrl: "https://commons.wikimedia.org/wiki/File:" + photo.file,
     licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
   };
