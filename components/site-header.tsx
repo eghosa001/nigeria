@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import { BrandLogo } from "@/components/brand-logo";
 import { ThemeToggle } from "@/components/theme-toggle";
 
@@ -110,25 +111,68 @@ const mobileNavigation = [
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const router = useRouter();
+  const prefetched = useRef(new Set<string>());
+  const [pendingHref, setPendingHref] = useState<string | null>(null);
+
+  // Keep initial navigation lean. Warm only the destination a reader actually
+  // points at or focuses, never all four heavy pillars on first paint.
+  // Deadline-sensitive Jobs and live searches must not be prefetched.
+  function warmOnIntent(href: string) {
+    const path = href.split("#")[0] || "/";
+    if (path === pathname || path === "/jobs" || path.startsWith("/jobs/") || path === "/search") return;
+    if (document.visibilityState === "hidden" || prefetched.current.has(path) || prefetched.current.size >= 2) return;
+    const connection = (navigator as Navigator & {
+      connection?: { saveData?: boolean; effectiveType?: string };
+    }).connection;
+    if (connection?.saveData || ["slow-2g", "2g"].includes(connection?.effectiveType ?? "")) return;
+    prefetched.current.add(path);
+    router.prefetch(path);
+  }
+
+  // A click must visibly acknowledge input while the destination is pending.
+  // The route loading boundary supplies a useful shell on slower transitions.
+  function indicateNavigation(href: string) {
+    const path = href.split("#")[0] || "/";
+    if (path !== pathname) setPendingHref(path);
+  }
+
+  useEffect(() => {
+    prefetched.current.clear();
+    setPendingHref(null);
+  }, [pathname]);
+
+  // A failed network navigation must not leave a permanent progress indicator.
+  useEffect(() => {
+    if (!pendingHref) return;
+    const reset = window.setTimeout(() => setPendingHref(null), 10_000);
+    return () => window.clearTimeout(reset);
+  }, [pendingHref]);
+
   const sectionKey = sectionForPath(pathname);
   const context = sectionKey ? sectionNavigation[sectionKey] : null;
 
   return (
     <>
-      <header className="site-header">
+      <header className="site-header" data-navigation-pending={pendingHref ? "true" : undefined}>
         <a className="skip-link" href="#main-content">Skip to content</a>
 
         <div className="container header-inner">
-          <Link className="brand brand-home-link" href="/" aria-label="MyNigeriaGuide home">
+          <Link className="brand brand-home-link" href="/" aria-label="MyNigeriaGuide home"
+            onMouseEnter={() => warmOnIntent("/")} onFocus={() => warmOnIntent("/")}
+            onClick={() => indicateNavigation("/")}>
             <BrandLogo />
           </Link>
 
           <div className="mobile-header-actions" aria-label="Quick actions">
-            <Link className="mobile-header-action" href="/search" prefetch={false} aria-label="Search MyNigeriaGuide">
+            <Link className="mobile-header-action" href="/search" prefetch={false} aria-label="Search MyNigeriaGuide"
+              onClick={() => indicateNavigation("/search")}>
               <NavIcon name="search" />
               <span>Search</span>
             </Link>
-            <Link className="mobile-header-action mobile-header-action-secondary" href="/saved" prefetch={false} aria-label="Open saved items">
+            <Link className="mobile-header-action mobile-header-action-secondary" href="/saved" prefetch={false} aria-label="Open saved items"
+              onMouseEnter={() => warmOnIntent("/saved")} onFocus={() => warmOnIntent("/saved")}
+              onClick={() => indicateNavigation("/saved")}>
               <NavIcon name="saved" />
               <span>Saved</span>
             </Link>
@@ -144,6 +188,10 @@ export function SiteHeader() {
                     href={item.href}
                     prefetch={false}
                     className={active ? "nav-active" : undefined}
+                    data-nav-pending={pendingHref === item.href ? "true" : undefined}
+                    onMouseEnter={() => warmOnIntent(item.href)}
+                    onFocus={() => warmOnIntent(item.href)}
+                    onClick={() => indicateNavigation(item.href)}
                     aria-current={active ? "page" : undefined}
                   >
                     {item.label}
@@ -153,13 +201,13 @@ export function SiteHeader() {
             </div>
 
             <div className="primary-nav-utilities" aria-label="Utilities">
-              <Link href="/features" prefetch={false} className={pathname === "/features" ? "nav-active" : undefined}>
+              <Link href="/features" prefetch={false} className={pathname === "/features" ? "nav-active" : undefined} onMouseEnter={() => warmOnIntent("/features")} onFocus={() => warmOnIntent("/features")} onClick={() => indicateNavigation("/features")}>
                 What you can do
               </Link>
-              <Link href="/search" prefetch={false} className={pathname.startsWith("/search") ? "nav-active" : undefined}>
+              <Link href="/search" prefetch={false} className={pathname.startsWith("/search") ? "nav-active" : undefined} onMouseEnter={() => warmOnIntent("/search")} onFocus={() => warmOnIntent("/search")} onClick={() => indicateNavigation("/search")}>
                 Search
               </Link>
-              <Link href="/saved" prefetch={false} className={pathname.startsWith("/saved") ? "nav-active" : undefined}>
+              <Link href="/saved" prefetch={false} className={pathname.startsWith("/saved") ? "nav-active" : undefined} onMouseEnter={() => warmOnIntent("/saved")} onFocus={() => warmOnIntent("/saved")} onClick={() => indicateNavigation("/saved")}>
                 Saved
               </Link>
             </div>
@@ -180,7 +228,11 @@ export function SiteHeader() {
                     ? pathname === cleanHref
                     : pathname === cleanHref || (cleanHref !== "/services" && pathname.startsWith(cleanHref + "/"));
                   return (
-                    <Link key={item.href + item.label} href={item.href} prefetch={false} className={active ? "is-current" : undefined} aria-current={active ? "page" : undefined}>
+                    <Link key={item.href + item.label} href={item.href} prefetch={false} className={active ? "is-current" : undefined} aria-current={active ? "page" : undefined}
+                      data-nav-pending={pendingHref === cleanHref ? "true" : undefined}
+                      onMouseEnter={() => warmOnIntent(item.href)}
+                      onFocus={() => warmOnIntent(item.href)}
+                      onClick={() => indicateNavigation(item.href)}>
                       {item.label}
                     </Link>
                   );
@@ -189,6 +241,9 @@ export function SiteHeader() {
             </div>
           </div>
         ) : null}
+        <span className="mng-route-announcer" role="status" aria-live="polite">
+          {pendingHref ? "Opening page…" : ""}
+        </span>
       </header>
 
       <nav className="mobile-bottom-nav" aria-label="Mobile navigation">
@@ -196,7 +251,11 @@ export function SiteHeader() {
           {mobileNavigation.map((item) => {
             const active = isMobileItemActive(pathname, item.href);
             return (
-              <Link key={item.href} href={item.href} prefetch={false} className={active ? "is-current" : undefined} aria-current={active ? "page" : undefined}>
+              <Link key={item.href} href={item.href} prefetch={false} className={active ? "is-current" : undefined} aria-current={active ? "page" : undefined}
+                data-nav-pending={pendingHref === item.href ? "true" : undefined}
+                onMouseEnter={() => warmOnIntent(item.href)}
+                onFocus={() => warmOnIntent(item.href)}
+                onClick={() => indicateNavigation(item.href)}>
                 <NavIcon name={item.icon} />
                 <span>{item.label}</span>
               </Link>
