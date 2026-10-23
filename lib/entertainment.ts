@@ -489,7 +489,7 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Drama", "Faith", "Fantasy", "Nollywood"],
     languages: ["Yoruba", "English"],
-    synopsis: "Olaboye and Olatomi leave city life for Muwonleru, where their mission confronts the dark influence of herbalist Isawuru and forces the community into a spiritual battle over faith, sacrifice and restoration.",
+    synopsis: "Olaboye and Olatomi leave city life for Muwonleru, where their mission confronts the dark influence of herbalist Isawuru and forces the community into a spiritual battle over faith, sacrifice and restoration. On 20 October 2026, distributor Nile Entertainment reported ₦354.5 million in cumulative Nigerian cinema takings, up from its reported ₦307.2 million on 16 October. These are dated distributor figures, not live ticket availability or independently audited results.",
     cast: ["Mike Bamiloye", "Yemi Adepoju", "Mosiko Remilekun Adesina", "Omolara Ayoola", "Gloria Bamiloye"],
     directors: ["Damilola Mike-Bamiloye", "Joshua Bamiloye"],
     runtimeMinutes: 157,
@@ -504,7 +504,9 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     },
     references: [
       { label: "Agbara Nla: The Return — official film and cast", href: "https://www.agbaranla.com/", lastChecked: "2026-10-13", note: "Original production site confirms Isawuru's actor, reimagining, directors, filmmakers and 1 October premiere." },
-      { label: "Silverbird Cinemas — Agbara Nla showtimes", href: "https://silverbirdcinemas.com/movie/agbara-nla-the-return/", lastChecked: "2026-10-13", note: "Cinema schedule and 157-minute runtime, with exhibitor-specific date." }
+      { label: "Silverbird Cinemas — Agbara Nla showtimes", href: "https://silverbirdcinemas.com/movie/agbara-nla-the-return/", lastChecked: "2026-10-13", note: "Cinema schedule and 157-minute runtime, with exhibitor-specific date." },
+      { label: "Nile Entertainment — 20 October box-office announcement", href: "https://www.instagram.com/p/Dera0nJoS4N/", lastChecked: "2026-10-23", note: "Distributor announced ₦354.5m cumulative Nigerian box office; this is not independently audited revenue, a national trend rank, or confirmed cinema availability today." },
+      { label: "PUNCH — reported 16 October box-office announcement", href: "https://punchng.com/agbara-nla-grosses-n307m-ranks-fourth-among-2026-nollywood-films/", lastChecked: "2026-10-23", note: "Contemporaneous account of Nile Entertainment’s ₦307.2m figure on 16 October; provides dated context for the later report." }
     ],
     watchLinks: [
       {
