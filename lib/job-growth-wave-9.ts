@@ -7,9 +7,9 @@ export const jobGrowthWave9: CareerOpportunity[] = [
     organization: "Deloitte Nigeria",
     kind: "programme",
     sector: "Private",
-    status: "open",
-    statusLabel: "Applications open until 9 October 2026",
-    summary: "Deloitte Nigeria's separate 2026 Graduate Recruitment Refresh for Consulting is open in Lagos until 9 October 2026. This is distinct from the Tax & Legal graduate page already covered on MyNigeriaGuide.",
+    status: "closed",
+    statusLabel: "Official 2026 deadline passed — advert expired",
+    summary: "Deloitte Nigeria's Consulting Graduate Recruitment Refresh in Lagos closed on 9 October 2026. The official SmartRecruiters advert now displays 'Sorry, this job has expired'. This historical guide is distinct from the Tax & Legal recruitment page.",
     location: "Lagos, Nigeria",
     employmentType: "Full-time graduate recruitment",
     audiences: ["Fresh graduates", "NYSC-completed applicants", "Consulting applicants", "Technology and transformation applicants"],
@@ -22,29 +22,29 @@ export const jobGrowthWave9: CareerOpportunity[] = [
       "Applicant must not have written the Deloitte aptitude test before."
     ],
     requirements: [
-      "Use Deloitte's official SmartRecruiters advert for the Consulting refresh.",
-      "Do not submit a second application if you already applied to Deloitte's 2026 graduate advert that closed on 10 April 2026; the current advert warns that duplicate or multiple applications can lead to disqualification.",
-      "Apply before 9 October 2026 and do not pay an unofficial recruiter for test, shortlist or interview access."
+      "Review Deloitte's official SmartRecruiters advert as the historical source for this concluded Consulting recruitment window.",
+      "Deloitte's 2026 advert instructed people who had already applied to the April 2026 recruitment not to apply again; submitting duplicate applications could lead to disqualification.",
+      "The application deadline passed on 9 October 2026. For a later opportunity, verify a newly dated Deloitte listing and never pay an unofficial recruiter."
     ],
     documents: ["Current CV/resume", "Education, O'Level and NYSC information requested by the official Deloitte form"],
     applicationSteps: [
-      "Open Deloitte's official SmartRecruiters advert for the 2026 Graduate Recruitment Refresh — Consulting.",
+      "Read Deloitte's expired 2026 Consulting advert for the original qualification requirements and recruitment notice.",
       "Confirm the degree/HND, O'Level, age and NYSC requirements and make sure you have not previously written the Deloitte aptitude test.",
       "If you applied in the earlier 2026 cycle that closed on 10 April, do not submit another application.",
-      "Complete the official application before 9 October 2026 and keep the confirmation."
+      "If you applied within the 2026 window, retain your confirmation and monitor Deloitte's official recruitment messages. Do not submit a fresh application to the expired advert."
     ],
     officialUrl: "https://jobs.smartrecruiters.com/Deloitte6/744000153123620-2026-graduate-recruitment-refresh-consulting",
-    officialUrlLabel: "Apply on Deloitte's official Consulting advert",
-    verifiedAt: "2026-10-07",
+    officialUrlLabel: "View Deloitte's expired 2026 Consulting advert",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-09",
-    nextMilestone: "Applications close 9 October 2026.",
+    nextMilestone: "The 9 October 2026 deadline passed; the official SmartRecruiters page currently says the job has expired.",
     feeNote: "No application fee. Deloitte's official advert warns candidates about recruitment fraud and unofficial payment requests.",
     sourceNotes: [
-      "The live Deloitte advert is specifically for Africa Consulting Services and is separate from the Tax & Legal refresh already listed on MyNigeriaGuide.",
+      "The expired Deloitte advert is specifically for Africa Consulting Services, separate from the Tax & Legal refresh already listed on MyNigeriaGuide.",
       "The official advert gives the closing date as 9 October 2026 and tells applicants from the April 2026 cycle not to reapply."
     ],
     sources: [
-      { label: "Deloitte — 2026 Graduate Recruitment Refresh, Consulting", url: "https://jobs.smartrecruiters.com/Deloitte6/744000153123620-2026-graduate-recruitment-refresh-consulting", lastChecked: "2026-10-07" }
+      { label: "Deloitte — 2026 Graduate Recruitment Refresh, Consulting", url: "https://jobs.smartrecruiters.com/Deloitte6/744000153123620-2026-graduate-recruitment-refresh-consulting", lastChecked: "2026-10-24" }
     ]
   },
   {
