@@ -72,10 +72,10 @@ export const independentlyCheckedEvents20261017: Record<string, EventCorrection>
       label: "Branddek Limited — African Creators Conference 2.0 original Eventbrite ticket",
       href: "https://www.eventbrite.com/e/african-creators-conference-20-tickets-1997149958287",
     },
-    context: "Branddek Limited's Eventbrite entry independently identifies the conference as a Friday 30 October event at Abuja Trade & Convention Center, KM 8 Umaru Musa Yar'Adua Road, Lugbe. Its listed doors-open time is 7:30am, earlier than the conference's 8am timetable; some event listings instead refer to 8:30am as the programme start.",
+    context: "The official African Creators Conference homepage says 30–31 October 2026, but Branddek Limited's original Eventbrite ticket specifies Friday 30 October only, from 8am to 5pm with doors at 7:30am at Abuja Trade & Convention Centre, Lugbe. A city listing gives an 8am start and 8am doors. That Friday ticket is not evidence of a separately scheduled or included Saturday event.",
     planning: {
-      label: "Account for Lugbe travel and early admission",
-      detail: "Plan arrival using the original venue address rather than a generic central-Abuja destination. The organiser lists doors at 7:30am and a full-day programme; check your admission category, whether registration is still available and the final start time before leaving.",
+      label: "Confirm which conference day your ticket permits",
+      detail: "Use Branddek's Friday ticket for 30 October at KM 8 Umaru Musa Yar'Adua Road, Lugbe, and check the 7:30am doors. The conference homepage mentions 31 October, but no separate date-specific Saturday venue or admission right is shown in that Friday ticket; ask the organiser before booking a second-day stay.",
     },
   },
   "festmint-abuja-2026": {
@@ -146,13 +146,13 @@ export const independentlyCheckedEvents20261017: Record<string, EventCorrection>
   },
   "beneficial-ownership-asset-recovery-conference-2026": {
     source: {
-      label: "Corporate Affairs Commission — national registry's linked conference notice",
-      href: "https://cac.gov.ng/",
+      label: "Corporate Affairs Commission — 19 October postponement notice",
+      href: "https://boconference.cac.gov.ng/notice",
     },
-    context: "The Corporate Affairs Commission's official national-registry homepage independently links to the 8–11 November Global Conference on Beneficial Ownership and Asset Recovery. The conference programme treats 8 November as arrival/registration and 11 November as departure; the main technical panels are on 9 and 10 November, not all four days.",
+    context: "CAC issued a 19 October 2026 postponement notice: the proposed 8–11 November Global Conference on Beneficial Ownership and Assets Recovery is moved to June 2027, with exact dates still unpublished due to visa delays. The old November technical-session schedule cannot be reused as a June booking plan. Existing payments and invoices remain valid.",
     planning: {
-      label: "Pick the right conference session before paying",
-      detail: "For technical sessions, plan around 9–10 November at Sheraton Ikeja; 8 November is largely arrivals and 11 November departures. The organiser lists early-bird registration only through 15 October and a later registration period through 5 November. Confirm the actual delegate invoice and conference-secretariat address rather than paying an unofficial representative.",
+      label: "Protect existing registrations during postponement",
+      detail: "Do not travel for 8–11 November 2026: CAC postponed the programme to unspecified dates in June 2027. CAC says existing registrations and payment references remain valid without a new payment. For travel or refund questions, use boarc@cac.gov.ng or the official CAC notice; do not trust old November invoices or an agent asking for a second fee.",
     },
   },
   "hallelujah-festival-lagos-october-2026": {
