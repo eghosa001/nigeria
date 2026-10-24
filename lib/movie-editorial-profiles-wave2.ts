@@ -155,22 +155,22 @@ export const movieEditorialProfilesWave2: Record<string, MovieEditorialProfile> 
         heading: "A Yoruba kingdom threatened by a warlord",
         paragraphs: [
           "Onibọn Oje is a Yoruba-language epic set in an imagined historical kingdom. When a warlord endangers the community, the people can no longer depend on the security of ordinary life. A warrior emerges from among the townspeople and becomes central to the resistance. The film's premise ties personal revenge to a wider struggle for survival.",
-          "The announced cast includes Odunlade Adekola, Fathia Balogun, Kolawole Ajeyemi and Bola Akinola. Their presence has been confirmed by the theatrical distributor, but the published release information does not consistently map those performers to individual character names. That distinction is important for searches asking who plays a particular warrior or ruler.",
+          "The theatrical distributor names Odunlade Adekola, Fathia Balogun, Kolawole Ajeyemi and Bose Akinola. Silverbird also credits Bose Akinola; the earlier Bola Akinola spelling in this guide was incorrect. No source here confirms which fictional character each actor portrays, so cast presence must not be turned into invented role assignments.",
           "The production uses sets at the Pacesetter Film Arena in Ibadan, a purpose-built filming location that helps establish the film's palaces, communal spaces and combat scenes. The filmmakers position the film within Nigeria's growing tradition of indigenous-language theatrical epics rather than as a contemporary urban drama.",
         ],
       },
       {
-        heading: "Filmmakers, production and upcoming release",
+        heading: "Filmmakers, release and verified cinema availability",
         paragraphs: [
           "Mustapha Jayeola produced Onibọn Oje and co-directed it with Olawale Samson Adebayo. The producing organisations are Exceptional Pictures and Pacesetter Film Arena; the theatrical distribution is handled by Tribe Nation Theatrical Distribution. These film-specific credits can help readers distinguish it from other Yoruba historical action stories.",
-          "The distributor lists 23 October 2026 as the Nigerian cinema release date. This is a scheduled future opening, not proof of a film already playing on 13 October 2026. The official listing should remain the primary reference for updates or schedule changes.",
-          "The accessible sources document a story about a threatened kingdom and an unexpected defender, but do not establish a legal free full-film upload. Viewers seeking Onibọn Oje should check distributor and cinema information rather than treating unrelated YouTube videos with similar names as the official release.",
+          "Tribe Nation Theatrical announced 23 October 2026 as the opening date. On 24 October, Silverbird Cinemas listed Onibon Òjé as Now Showing with screenings in Lagos, Abuja and Kaduna, while Filmworld also listed a dated screening. These are named exhibitors, not a guarantee that every theatre offers the film or that the same times apply tomorrow. Open the cinema schedule linked below before making travel plans.",
+          "The distributor and exhibitors establish cinema availability, not an authorised free full-film stream. To watch Onibọn Oje, check the named cinema's actual location and date-specific listing rather than trusting unrelated YouTube uploads or payment links.",
         ],
       },
     ],
     questions: [
-      { question: "Which actors are in Onibọn Oje?", answer: "The officially announced cast includes Odunlade Adekola, Fathia Balogun, Kolawole Ajeyemi and Bola Akinola. Character names will be added only when confirmed." },
-      { question: "Is Onibọn Oje out yet?", answer: "As of 13 October 2026 the film is scheduled for cinema release on 23 October 2026, according to Tribe Nation Theatrical Distribution." },
+      { question: "Which actors are in Onibọn Oje?", answer: "Tribe Nation Theatrical lists Odunlade Adekola, Fathia Balogun, Kolawole Ajeyemi and Bose Akinola; Silverbird independently credits Bose Akinola. Character names are not guessed." },
+      { question: "Is Onibọn Oje out yet?", answer: "Yes, named Nigerian exhibitors now list cinema screenings following the 23 October 2026 release. On 24 October Silverbird listed showtimes in Lagos, Abuja and Kaduna, and Filmworld also carried a listing. Check the cinema website for the exact date and venue; this does not establish streaming availability." },
     ],
   },
   "sibe": {

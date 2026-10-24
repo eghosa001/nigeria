@@ -390,9 +390,9 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     year: 2026,
     format: "movie",
     genres: ["Drama", "Action", "Epic", "Yoruba", "Nollywood"],
-    languages: ["Yoruba"],
+    languages: ["Yoruba", "English"],
     synopsis: "A peaceful ancient Yoruba kingdom is threatened by a ruthless warlord until an unlikely warrior rises from among the townspeople to defend the community and seek vengeance.",
-    cast: ["Odunlade Adekola", "Fathia Balogun", "Kolawole Ajeyemi", "Bola Akinola"],
+    cast: ["Odunlade Adekola", "Fathia Balogun", "Kolawole Ajeyemi", "Bose Akinola"],
     featuredCast: ["Odunlade Adekola", "Fathia Balogun", "Kolawole Ajeyemi"],
     directors: ["Mustapha Jayeola", "Olawale Samson Adebayo"],
     featured: true,
@@ -405,9 +405,12 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
       lastChecked: "2026-10-05",
     },
     references: [
-      { label: "Tribe Nation Theatrical — Onibọn Oje filmmaker announcement", href: "https://www.tntheatrical.com/post/odunlade-adekola-fathia-balogun-and-kolawole-ajeyemi-lead-new-yoruba-epic-onib%E1%BB%8Dn-oje-in-cinemas-oc", lastChecked: "2026-10-13", note: "Official film launch announcement verifies cast, Ibadan filming location, directors and scheduled 23 October release." }
+      { label: "Tribe Nation Theatrical — Onibọn Oje filmmaker announcement", href: "https://www.tntheatrical.com/post/odunlade-adekola-fathia-balogun-and-kolawole-ajeyemi-lead-new-yoruba-epic-onib%E1%BB%8Dn-oje-in-cinemas-oc", lastChecked: "2026-10-13", note: "Official film launch announcement verifies original cast, Ibadan filming location, directors and the 23 October announced release." },
+      { label: "Tribe Nation — current Onibọn Oje film and cast catalogue", href: "https://www.tntheatrical.com/all-titles/onibon-oje", lastChecked: "2026-10-24", note: "Distributor now lists Bose Akinola and Yoruba/English language credits; do not confuse this with older Bola Akinola copies." },
+      { label: "Silverbird Cinemas — Onibon Òjé now showing and screened venues", href: "https://silverbirdcinemas.com/movie/onibon-oje/", lastChecked: "2026-10-24", note: "Exhibitor displays Now Showing, dated 23 October release and location-specific listings; screening times may change without notice." },
+      { label: "Filmworld Cinemas — 24 October Onibon Òjé screening", href: "https://filmworldcinemas.com/showtime/daily-showtime/", lastChecked: "2026-10-24", note: "Independent cinema advertises 24 October screening, corroborating exhibitor availability beyond the distributor schedule." }
     ],
-    watchLinks: [{ platform: "Cinema", label: "Check the official distributor release page", href: "https://www.tntheatrical.com/post/odunlade-adekola-fathia-balogun-and-kolawole-ajeyemi-lead-new-yoruba-epic-onib%E1%BB%8Dn-oje-in-cinemas-oc", access: "cinema", lastChecked: "2026-10-05", note: "Tribe Nation Theatrical Distribution lists the Nigerian cinema release for 23 October 2026." }]
+    watchLinks: [{ platform: "Cinema", label: "Check current Silverbird screenings", href: "https://silverbirdcinemas.com/movie/onibon-oje/", access: "cinema", lastChecked: "2026-10-24", note: "Silverbird currently lists Onibọn Oje as Now Showing and publishes theatre-specific schedules. Check your chosen cinema before travelling or paying." }]
   },
   {
     slug: "wire-transfer-2026",
