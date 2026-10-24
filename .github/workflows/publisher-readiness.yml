@@ -28,6 +28,8 @@ on:
       - "scripts/audit-publisher-readiness.ts"
       - "scripts/audit-legacy-content.ts"
       - "scripts/audit-publication-standards.ts"
+      - "scripts/audit-reader-repetition.ts"
+      - "tests/sitewide-page-repetition-20261021.test.ts"
       - "docs/FOUR_PILLAR_PUBLICATION_STANDARD.md"
       - ".github/workflows/publisher-readiness.yml"
 
@@ -60,6 +62,11 @@ jobs:
           ./node_modules/.bin/tsx scripts/audit-publication-standards.ts --json > publication-standards.json
           node -e 'const a=require("./legacy-audit.json"); if(!a.coverage.allCatalogRecords||a.coverage.indexableCatalogRecords<1000) process.exit(1); console.log("Legacy records inspected:",a.coverage.allCatalogRecords,"indexable:",a.coverage.indexableCatalogRecords); for(const x of a.groups) console.log(x.group,JSON.stringify(x)); console.log("Issue counts:",JSON.stringify(a.issueCounts));'
           node -e 'const a=require("./publisher-audit.json"); if(!a.uniqueCatalogUrls||a.byPillar.length!==6) process.exit(1); for(const x of a.byPillar) console.log(x.pillar, JSON.stringify(x)); console.log("Publisher audit generated:",a.uniqueCatalogUrls,"records");'
+      - name: Audit within-page and across-page reused paragraphs
+        run: |
+          ./node_modules/.bin/tsx --test tests/sitewide-page-repetition-20261021.test.ts
+          ./node_modules/.bin/tsx scripts/audit-reader-repetition.ts --json > repetition-audit.json
+          node -e 'const a=require("./repetition-audit.json"); console.log("Routes inspected:",a.uniqueCataloguedRoutes,"same-route flags:",a.exactRepeatFindings,"cross-route review leads:",a.crossPageRepeatFindings); if(!Number.isInteger(a.crossPageRepeatFindings)) process.exit(1);'
       - name: Strict new-page publication gate
         if: github.event_name == 'pull_request'
         env:
@@ -94,4 +101,5 @@ jobs:
             publisher-audit.json
             legacy-audit.json
             publication-standards.json
+            repetition-audit.json
           retention-days: 14
