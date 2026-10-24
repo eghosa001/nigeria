@@ -341,17 +341,17 @@ export const movieEditorialProfilesWave2: Record<string, MovieEditorialProfile> 
         ],
       },
       {
-        heading: "Official teaser and announced cinema release",
+        heading: "Cinema release and verified exhibitor screenings",
         paragraphs: [
-          "The studio publicity identifies Adenike Adebayo-Esho as writer and director and announces a Nigerian theatrical opening for 23 October 2026. The official Imagine Media Studios teaser is linked on this page, together with the movie's promotional account. The date is a scheduled future release relative to 13 October 2026.",
-          "Because the film has not reached its announced general opening at the source check, a full credited cast and verified character names may not yet be public. It would be misleading to publish a detailed role-by-role table based on promotional photos or fan predictions. Confirmed production information can be added as the distributor releases it.",
+          "The studio publicity identifies Adenike Adebayo-Esho as writer and director and announces a Nigerian theatrical opening for 23 October 2026. The official Imagine Media Studios teaser is linked on this page, together with the movie's promotional account. Silverbird Ikeja and DreamPark cinema listings confirm the film was screening on 24 October 2026. Opening times depend on the individual cinema and date.",
+          "The film has reached cinemas, but exhibitor listings do not independently establish the full character-to-actor credits. It would be misleading to publish a detailed role-by-role table based on promotional photos or fan predictions. Confirmed production information can be added as the distributor releases it.",
           "No authorised free full-movie stream is established by the teaser or social account. Cinema visitors should confirm which branch has scheduled the film; users searching for 'Tele x Zikora full movie' should distinguish the official short promotional video from unauthorised uploads.",
         ],
       },
     ],
     questions: [
       { question: "Who are the cast members in Tele x Zikora?", answer: "The official teaser publicity identifies Mike Afolarin, Genoveva Umeh, Angel Unigwe, Eronini Osinachim and Kanaga Eme Jnr. Individual character names are not independently verified in this guide." },
-      { question: "When is Tele x Zikora coming to cinemas?", answer: "The production announced a 23 October 2026 Nigerian cinema release. The source used here is the Imagine Media Studios teaser and its accompanying release notice." },
+      { question: "Is Tele x Zikora now showing in cinemas?", answer: "Yes. Silverbird Ikeja and DreamPark list screenings dated 24 October following the 23 October release; confirm your cinema and day before travelling." },
     ],
   },
 };
