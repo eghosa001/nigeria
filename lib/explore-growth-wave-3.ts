@@ -56,30 +56,77 @@ export const exploreGrowthWave3: ExploreGuide[] = [
     lastReviewed: "2026-10-06"
   },
   {
-    slug: "african-creators-conference-abuja-2026",
-    title: "African Creators Conference 2.0 Abuja 2026: Date, Venue & Planning",
-    shortTitle: "African Creators Conference 2.0",
-    kind: "event",
-    region: "Federal Capital Territory",
-    summary: "African Creators Conference 2.0 is scheduled for 30 October 2026 from 8:30 AM to 5:00 PM at Abuja Trade and Convention Centre in Lugbe, bringing creators, innovators, investors and policymakers together across creative, digital, fintech and green-innovation sectors.",
-    intro: [
-      "African Creators Conference 2.0 is a one-day Abuja conference scheduled for Friday 30 October 2026 at Abuja Trade and Convention Centre, KM 8 Umaru Musa Yar'Adua Road, Lugbe. Visit Abuja lists doors from 8:00 AM and the programme from 8:30 AM to 5:00 PM.",
-      "The conference is organised by Branddek Limited and brings together creators, innovators, investors and policymakers across Africa's creative, digital, fintech and green-innovation sectors. The official city listing says the 2025 edition drew more than 3,000 attendees."
+    "slug": "african-creators-conference-abuja-2026",
+    "title": "African Creators Conference 2.0 Abuja 2026: Dates, Tickets & Venue Check",
+    "shortTitle": "African Creators Conference 2.0",
+    "kind": "event",
+    "region": "Federal Capital Territory",
+    "summary": "The African Creators Conference organiser promotes 30–31 October 2026 in Abuja, but Branddek Limited's dated Eventbrite admission is explicitly for Friday 30 October, 8 a.m.–5 p.m. at Abuja Trade & Convention Centre in Lugbe, with 7:30 a.m. doors. No separate 31 October venue or ticket entitlement was established from that Friday ticket; confirm Day 2 before travel.",
+    "intro": [
+      "African Creators Conference 2.0's official conference website currently advertises 30–31 October 2026 at Abuja Trade & Convention Centre. Yet its ticket organiser Branddek Limited sells or registers attendance for a specific Friday 30 October event from 8 a.m. to 5 p.m. That difference matters if visitors plan to stay or pay for two days: a Friday ticket is not proof of a separate Saturday event or a two-day pass.",
+      "The event brings together African creators, innovators, investors, policymakers and participants from the creative, digital, fintech and green economy. For the verified Friday ticket, Eventbrite lists doors at 7:30 a.m. and the centre at KM 8 Umaru Musa Yar'Adua Road, Lugbe, in Abuja's Airport Road corridor. An older city listing says 8 a.m. doors and 8:30 a.m. sessions; follow the admission ticket's check-in instructions when attending that specific event.",
+      "The 2026 programme and venue can still change. If your purpose is a named speaker, investor meeting, workshop or 31 October session, ask the organiser for an exact programme, badge category, day-specific venue and separate admission rules before you make non-refundable travel arrangements."
     ],
-    bestFor: ["Creators", "Technology", "Fintech", "Networking"],
-    highlights: [
-      { name: "30 October 2026", detail: "The current Visit Abuja listing gives an 8:30 AM–5:00 PM programme, with doors opening at 8:00 AM." },
-      { name: "Abuja Trade and Convention Centre", detail: "The listed venue is KM 8 Umaru Musa Yar'Adua Road in the Lugbe/Airport Road corridor." },
-      { name: "Cross-sector creator economy", detail: "The conference connects creative-industry, digital, fintech and green-innovation participants with investors and policymakers." },
-      { name: "Free parking listed", detail: "The current event listing states that free parking is available on site; reconfirm access arrangements before travelling." }
+    "bestFor": [
+      "African creator economy",
+      "Tech and fintech networking",
+      "Digital entrepreneurship",
+      "Creative-industry business events"
     ],
-    planning: [
-      { label: "Confirm registration before travelling", detail: "Use the organiser-linked registration route and verify the live ticket or registration status before setting out." },
-      { label: "Plan Airport Road travel", detail: "The venue is in Lugbe rather than central Abuja, so allow realistic time from Wuse, Maitama or the CBD." },
-      { label: "Arrive before the programme starts", detail: "Doors are listed for 8:00 AM, giving time for registration, security and finding the conference space before the 8:30 AM start." },
-      { label: "Re-check the agenda", detail: "Speaker order, sessions and access details can change; confirm the current organiser programme close to 30 October." }
+    "highlights": [
+      {
+        "name": "30 October — ticketed/registered Friday",
+        "detail": "The Branddek Limited Eventbrite listing identifies 8 a.m.–5 p.m. on Friday 30 October and 7:30 a.m. doors."
+      },
+      {
+        "name": "31 October — organiser date, access unconfirmed",
+        "detail": "The African Creators Conference homepage mentions 30–31 October, but the verified Friday ticket does not establish a separate Saturday venue, schedule or entry."
+      },
+      {
+        "name": "Abuja Trade & Convention Centre, Lugbe",
+        "detail": "The 30 October ticket gives KM 8 Umaru Musa Yar'Adua Road, Lugbe. Allow extra time from central Abuja and verify the actual gate."
+      },
+      {
+        "name": "Digital, creative, fintech and green themes",
+        "detail": "Speakers and workshops target innovators, creators and investors; speaker or business opportunities must not be treated as guaranteed individual meetings."
+      }
     ],
-    source: { label: "Visit Abuja — African Creators Conference 2.0", href: "https://www.visitabuja.org/event/african-creators-conference-2-0/" },
-    lastReviewed: "2026-10-06"
+    "planning": [
+      {
+        "label": "Which day does the ticket actually cover?",
+        "detail": "Branddek's ticket is specifically for Friday 30 October. The main organiser's two-day headline is not proof the same ticket covers Saturday 31 October; confirm 31 October separately."
+      },
+      {
+        "label": "When should I arrive?",
+        "detail": "The Friday ticket lists 7:30 a.m. doors and 8 a.m.–5 p.m. programming. A city guide gives slightly later entry times; check the latest organiser ticket rather than assuming a common start across both days."
+      },
+      {
+        "label": "How do I avoid the wrong Abuja venue?",
+        "detail": "Use the exact KM 8 Umaru Musa Yar'Adua Road, Lugbe address for Friday. Do not confuse the venue with central Abuja conference halls, and confirm Saturday's location independently if announced."
+      },
+      {
+        "label": "What if I am paying for multiple delegates?",
+        "detail": "Check the named attendee category and date on the organiser-issued receipt. A two-day promotion, old social card or unrelated payment account does not establish a valid second-day entry."
+      },
+      {
+        "label": "Can I count on a particular speaker or investor meeting?",
+        "detail": "No. Verify the final session lineup and registration category with the event organiser; attendee access does not guarantee a private appointment, pitch selection or paid job."
+      }
+    ],
+    "source": {
+      "label": "African Creators Conference — official 30–31 October organiser website",
+      "href": "https://africancreatorsconference.com/"
+    },
+    "sources": [
+      {
+        "label": "Branddek Limited — exact Friday 30 October event and entrance time",
+        "href": "https://www.eventbrite.com/e/african-creators-conference-20-tickets-1997149958287"
+      },
+      {
+        "label": "Visit Abuja — older Friday event calendar listing",
+        "href": "https://www.visitabuja.org/event/african-creators-conference-2-0/"
+      }
+    ],
+    "lastReviewed": "2026-10-24"
   }
 ];
