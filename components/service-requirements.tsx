@@ -13,7 +13,9 @@ export function ServiceRequirements({ service }: { service: Service }) {
       <span className="section-number" aria-hidden="true">02</span>
       <h2>Requirements for {service.shortTitle}</h2>
       <p className="guide-section-intro">
-        Prepare the documents needed for the steps above. Formats are specified only where the official instructions support them.
+        {service.slug === "neco-2026-timetable"
+          ? "This public timetable download does not require a payment, phone verification or identity document. Choose Internal or External and use a device that opens PDF files."
+          : "Prepare the documents needed for the steps above. Formats are specified only where the official instructions support them."}
       </p>
 
       <div className="requirement-summary" aria-label="Requirement categories">

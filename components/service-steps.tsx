@@ -9,7 +9,9 @@ export function ServiceSteps({ service }: { service: Service }) {
       <span className="section-number" aria-hidden="true">01</span>
       <h2>How to complete {service.shortTitle} step by step</h2>
       <p className="guide-section-intro">
-        Follow these instructions in order. Use the requirements checklist below to prepare the documents, and check the official source before submitting.
+        {service.slug === "neco-2026-timetable"
+          ? "No application submission is needed to read NECO’s public timetable. Choose the correct examination PDF, then check your registered papers, date and start time directly against NECO."
+          : "Follow these instructions in order. Use the requirements checklist below to prepare the documents, and check the official source before submitting."}
       </p>
 
       <div className="detailed-steps">
