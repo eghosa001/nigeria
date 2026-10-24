@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { leadAlreadyStatesFee, uniqueIntroParagraphs, uniqueSupportingStatements } from "../lib/reader-content-dedup";
-import { auditPublicCatalogues, findDuplicatePassages } from "../scripts/audit-reader-repetition";
+import { auditPublicCatalogues, findDuplicatePassages, findCrossPageDuplicatePassages } from "../scripts/audit-reader-repetition";
 
 const read = (path: string) => readFileSync(path, "utf8");
 
@@ -37,6 +37,22 @@ test("source repetition scan groups duplicates on the same page, not across diff
   ];
   assert.equal(findDuplicatePassages(rows).length, 1);
   assert.equal(findDuplicatePassages(rows)[0].url, "/services/one");
+});
+
+test("cross-page repetition is separately flagged without conflating a same-page repeat", () => {
+  const phrase = "This authoritative service source describes official submission evidence, which should not be repeated unchanged across unrelated task pages.";
+  const rows = [
+    { pillar: "Services", url: "/services/one", recordKind: "service", text: phrase },
+    { pillar: "Services", url: "/services/one", recordKind: "service", text: phrase },
+    { pillar: "Tour Nigeria", url: "/explore/two", recordKind: "tour-guide", text: phrase },
+    { pillar: "Services", url: "/services/three", recordKind: "service", text: "A separate distinct guide." },
+  ];
+  const findings = findCrossPageDuplicatePassages(rows);
+  assert.equal(findings.length, 1);
+  assert.equal(findings[0].affectedUrls, 2);
+  assert.deepEqual(findings[0].urls, ["/explore/two", "/services/one"]);
+  assert.ok(findings[0].interpretation.includes("editorial review"));
+  assert.equal(findCrossPageDuplicatePassages(rows.filter(r => r.url === "/services/one")).length, 0);
 });
 
 test("shared service template shows steps first, without a duplicate fee-status strip", () => {
