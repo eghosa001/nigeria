@@ -88,7 +88,35 @@ export default function HomePage() {
             <span className="eyebrow">MyNigeriaGuide</span>
             <h1>Nigerian movies, services, travel and jobs — made easier.</h1>
             <p>Watch Nigerian movies, handle essential services, find verified career opportunities, and discover places worth going.</p>
+            <form className="mng-hero-search" method="get" action="/search" role="search">
+              <input
+                id="mng-home-search"
+                name="q"
+                type="search"
+                placeholder="Search a film, service, place or opportunity…"
+                aria-label="Search MyNigeriaGuide"
+                required
+              />
+              <button type="submit">Search</button>
+            </form>
+            <p className="mng-hero-trust">Official sources where available · Clear next steps · Designed for mobile</p>
           </div>
+
+          <aside className="mng-home-cover" aria-label="Discover more about MyNigeriaGuide">
+            <div className="mng-cover-kicker"><span>The Nigeria edition</span><span>Est. for the curious</span></div>
+            <div className="mng-cover-art" aria-hidden="true">
+              <span className="mng-cover-initial">N</span>
+              <div>
+                <small>Made for curiosity</small>
+                <strong>What&apos;s next?</strong>
+              </div>
+            </div>
+            <div className="mng-cover-caption">
+              <strong>A country of stories. A place for answers.</strong>
+              <p>From cinema and culture to the practical details of everyday life, explore Nigeria with a clearer sense of direction.</p>
+              <Link href="/features">See what you can do here ↗</Link>
+            </div>
+          </aside>
 
           <nav className="home-paths" aria-label="Start with MyNigeriaGuide">
             <Link href="/entertainment/movies" prefetch={false} className="home-path home-path-movies">
