@@ -582,8 +582,8 @@ const rawJobOpportunities: CareerOpportunity[] = [
     organization: "Nigerian Navy",
     sector: "Government",
     status: "open",
-    statusLabel: "Applications open",
-    summary: "Nigerian Navy Basic Training School Batch 39 recruitment is open on the Navy's official portal, with online registration running through 31 October 2026.",
+    statusLabel: "Batch 39 portal open through 31 October 2026, 23:59 WAT",
+    summary: "Nigerian Navy Basic Training School Batch 39 registration remains open on its official portal until 31 October 2026 at 23:59 WAT. The Navy separately schedules an aptitude test for shortlisted applicants on 21 November, followed by a projected first-quarter 2027 training intake. The test date is not another chance to submit a late application.",
     location: "Nigeria",
     employmentType: "Military recruitment / Basic Training School",
     audiences: ["School leavers", "Technical applicants", "ND/NCE holders", "Maritime-career applicants"],
@@ -612,17 +612,17 @@ const rawJobOpportunities: CareerOpportunity[] = [
     ],
     officialUrl: "https://joinnigeriannavy.navy.mil.ng/",
     officialUrlLabel: "Apply on the official Nigerian Navy portal",
-    verifiedAt: "2026-10-19",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-31",
-    nextMilestone: "Batch 39 aptitude testing is scheduled for 21 November 2026; the portal lists basic training for the first quarter of 2027.",
+    nextMilestone: "Submit the original application by 31 October 2026 at 23:59 WAT. The Navy schedules a separate 21 November aptitude test for shortlisted applicants; basic training is provisionally listed for Q1 2027.",
     feeNote: "Use only the official Nigerian Navy recruitment domain. MyNigeriaGuide does not collect recruitment fees or credentials.",
     sourceNotes: [
-      "On 19 October 2026, the official Nigerian Navy Batch 39 portal still displayed applications and the deadline of 31 October 2026 at 23:59 WAT.",
+      "On 24 October 2026, the official Navy Batch 39 recruitment portal still displayed current registration, explicitly closing 31 October at 23:59 WAT.",
       "The official portal says Batch 39 applications opened on 2 October 2026 and close on 31 October 2026 at 23:59 WAT.",
       "The Navy portal lists the aptitude test for 21 November 2026 and describes identity verification, application and status tracking stages."
     ],
     sources: [
-      { label: "Nigerian Navy Batch 39 Recruitment Portal", url: "https://joinnigeriannavy.navy.mil.ng/", lastChecked: "2026-10-19" }
+      { label: "Nigerian Navy Batch 39 Recruitment Portal", url: "https://joinnigeriannavy.navy.mil.ng/", lastChecked: "2026-10-24" }
     ]
   },
   {
@@ -2778,7 +2778,7 @@ const rawJobOpportunities: CareerOpportunity[] = [
     kind: "programme",
     sector: "Private",
     status: "open",
-    statusLabel: "Apply Now on official site",
+    statusLabel: "Coronation 2026 academy displays official Apply Now — rechecked 24 October",
     summary: "Coronation's official 2026 Graduate Trainee Programme Academy page shows an Apply Now route across nine pathways including actuarial, finance, insurance, investment, sales and technology.",
     location: "Nigeria",
     employmentType: "Graduate trainee programme",
@@ -2790,11 +2790,11 @@ const rawJobOpportunities: CareerOpportunity[] = [
     applicationSteps: ["Open the Coronation 2026 Graduate Trainee Academy.", "Review the available pathways.", "Choose a pathway that fits your background.", "Select Apply Now and complete the official application."],
     officialUrl: "https://www.coronation.ng/coronation-academies/",
     officialUrlLabel: "Open Coronation 2026 Academy",
-    verifiedAt: "2026-10-05",
-    nextMilestone: "The official 2026 academy page displayed Apply Now when checked; confirm availability before submitting.",
+    verifiedAt: "2026-10-24",
+    nextMilestone: "On 24 October the official Coronation Academies page still displayed its Apply Now route across nine graduate pathways. No closing date was verified, so confirm the selected application journey before submitting.",
     feeNote: "Apply through Coronation's official website.",
-    sourceNotes: ["Coronation's official 2026 Graduate Trainee Programme Academy lists nine career pathways and an Apply Now control."],
-    sources: [{ label: "Coronation 2026 Graduate Trainee Programme Academy", url: "https://www.coronation.ng/coronation-academies/", lastChecked: "2026-10-05" }]
+    sourceNotes: ["Coronation's first-party Academy page still displays nine career pathways and a visible Apply Now control on 24 October 2026; this does not prove a particular applicant will be accepted."],
+    sources: [{ label: "Coronation 2026 Graduate Trainee Programme Academy", url: "https://www.coronation.ng/coronation-academies/", lastChecked: "2026-10-24" }]
   },
   {
     slug: "lafarge-africa-careers",
@@ -3609,8 +3609,8 @@ const rawJobOpportunities: CareerOpportunity[] = [
     },
     sector: "Private",
     status: "open",
-    statusLabel: "Applications open",
-    summary: "EHA Clinics is recruiting a Registered Nurse for Yaba, Lagos through its official jobs portal.",
+    statusLabel: "Employer job board lists Registered Nurse — checked 24 October",
+    summary: "EHA Clinics continues to list its Registered Nurse — Yaba, Lagos vacancy on the employer's jobs index, where the entry is dated 20 October 2026. The named role-detail URL is still accessible and specifies licensed professional nursing requirements. The catalogue's older September posting metadata should not be mistaken for the October vacancy-board update.",
     location: "Yaba, Lagos State",
     employmentType: "Clinical nursing role",
     audiences: ["Registered nurses", "Healthcare professionals"],
@@ -3621,12 +3621,12 @@ const rawJobOpportunities: CareerOpportunity[] = [
     applicationSteps: ["Open the official EHA Clinics vacancy.", "Review clinical experience and licence requirements.", "Complete the eligibility check.", "Continue to the official application."],
     officialUrl: "https://erp.eha.ng/jobs/registered-nurse-yaba-lagos-1011",
     officialUrlLabel: "Apply on EHA Clinics",
-    verifiedAt: "2026-10-05",
+    verifiedAt: "2026-10-24",
     feeNote: "Use EHA Clinics' official jobs system.",
-    sourceNotes: ["EHA Clinics listed the Registered Nurse — Yaba Lagos role as posted on 27 September 2026.", "The employer's detail page includes professional nursing requirements."],
+    sourceNotes: ["EHA Clinics' public jobs directory still lists Registered Nurse — Yaba Lagos on 24 October with a 20 October board timestamp. The original stored posting date remains 27 September and is not overwritten with the later update.", "The employer's exact nurse-detail page remains accessible and states licensed nursing requirements; confirm the role's live application control before submitting personal information."],
     sources: [
-      { label: "EHA Clinics — Registered Nurse, Yaba Lagos", url: "https://erp.eha.ng/jobs/registered-nurse-yaba-lagos-1011", lastChecked: "2026-10-05" },
-      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
+      { label: "EHA Clinics — Registered Nurse, Yaba Lagos", url: "https://erp.eha.ng/jobs/registered-nurse-yaba-lagos-1011", lastChecked: "2026-10-24" },
+      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-24" }
     ]
   },
   {
@@ -3742,7 +3742,7 @@ const rawJobOpportunities: CareerOpportunity[] = [
     },
     sector: "Private",
     status: "open",
-    statusLabel: "Applications open",
+    statusLabel: "Pharmacist posted on current EHA jobs board — checked 24 October",
     summary: "EHA Clinics lists a Pharmacist opening at Lugbe/Asba, Abuja, at an advertised ₦181,440 gross per month. Applicants need a pharmacy degree, current PCN practice licence and at least two years of post-NYSC pharmacy experience. Check the employer's eligibility questions before applying.",
     location: "Lugbe / Asba, Abuja, FCT",
     employmentType: "Clinical pharmacy role",
@@ -3754,12 +3754,12 @@ const rawJobOpportunities: CareerOpportunity[] = [
     applicationSteps: ["Open the official EHA Clinics Pharmacist vacancy.", "Review qualification and licence requirements.", "Complete the eligibility check.", "Continue to the official application."],
     officialUrl: "https://erp.eha.ng/jobs/pharmacist-546",
     officialUrlLabel: "Apply on EHA Clinics",
-    verifiedAt: "2026-10-14",
+    verifiedAt: "2026-10-24",
     feeNote: "Use EHA Clinics' official recruitment platform.",
-    sourceNotes: ["EHA Clinics listed the Pharmacist role as posted on 29 September 2026.", "The employer's detail page places the role in Lugbe or Asba, Abuja, and requires a current PCN practice licence and at least two years of post-NYSC experience.", "The employer's published gross monthly salary is ₦181,440, with health coverage, performance bonus and a 13th-month benefit; reconfirm the current offer before accepting."],
+    sourceNotes: ["EHA's official vacancies index lists a current Pharmacist entry dated 19 October 2026; the original stored September posting date is retained separately, not represented as a fresh job creation.", "The employer's detail page places the role in Lugbe or Asba, Abuja, and requires a current PCN practice licence and at least two years of post-NYSC experience.", "The employer's published gross monthly salary is ₦181,440, with health coverage, performance bonus and a 13th-month benefit; reconfirm the current offer before accepting."],
     sources: [
-      { label: "EHA Clinics — Pharmacist", url: "https://erp.eha.ng/jobs/pharmacist-546", lastChecked: "2026-10-14" },
-      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-14" }
+      { label: "EHA Clinics — Pharmacist", url: "https://erp.eha.ng/jobs/pharmacist-546", lastChecked: "2026-10-24" },
+      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-24" }
     ]
   },
   {
