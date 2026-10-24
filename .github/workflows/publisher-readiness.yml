@@ -66,7 +66,7 @@ jobs:
         run: |
           ./node_modules/.bin/tsx --test tests/sitewide-page-repetition-20261021.test.ts
           ./node_modules/.bin/tsx scripts/audit-reader-repetition.ts --json > repetition-audit.json
-          node -e 'const a=require("./repetition-audit.json"); console.log("Routes inspected:",a.uniqueCataloguedRoutes,"same-route flags:",a.exactRepeatFindings,"cross-route review leads:",a.crossPageRepeatFindings); if(!Number.isInteger(a.crossPageRepeatFindings)) process.exit(1);'
+          node -e 'const a=require("./repetition-audit.json"); console.log("Routes inspected:",a.uniqueCataloguedRoutes,"same-route flags:",a.exactRepeatFindings,"cross-route review leads:",a.crossPageRepeatFindings); console.log("Top cross-route groups:",JSON.stringify(a.crossPageDuplicates.slice(0,10).map(x=>({routes:x.urls.slice(0,5),affected:x.affectedUrls,pillars:x.pillars})))); if(!Number.isInteger(a.crossPageRepeatFindings)) process.exit(1);'
       - name: Strict new-page publication gate
         if: github.event_name == 'pull_request'
         env:
