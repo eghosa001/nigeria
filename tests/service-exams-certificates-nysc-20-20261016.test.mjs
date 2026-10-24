@@ -34,7 +34,7 @@ test("20 distinct existing canonical education guides have actionable, cited ste
     assert.ok(s.requirements.length >= 2, slug);
     assert.ok(s.sources.length >= 1, slug);
     assert.ok(s.sources.every((source) => source.url.startsWith("https://")), slug);
-    assert.equal(s.lastVerified, "2026-10-16", slug);
+    assert.equal(s.lastVerified, slug === "waec-lost-certificate" ? "2026-10-24" : "2026-10-16", slug);
   }
 });
 
@@ -44,7 +44,7 @@ test("critical fee, eligibility and failure-path distinctions do not regress", (
   assert.match(text("jamb-2026-utme-registration"), /accredited CBT/i);
   assert.match(text("jamb-print-result"), /₦1,000/);
   assert.match(text("waec-digital-certificate"), /Certificate Access/);
-  assert.match(text("waec-lost-certificate"), /does not (?:routinely )?(?:duplicate|print)/i);
+  assert.match(text("waec-lost-certificate"), /does not (?:routinely )?(?:duplicate|print)|does not normally replace/i);
   assert.match(text("neco-payment"), /no (?:user )?account (?:is )?needed/i);
   assert.match(text("neco-2026-ssce-internal-registration"), /29 May 2026/);
   assert.match(text("nysc-registration-local"), /Revalidation/);
