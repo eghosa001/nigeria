@@ -34,26 +34,26 @@ export const exploreGrowthWave: ExploreGuide[] = [
     shortTitle: "African SDGs Film Festival",
     kind: "event",
     region: "Federal Capital Territory",
-    summary: "The African SDGs Film Festival is scheduled for 4–5 November 2026 at Silverbird Cinemas Abuja, using film and storytelling to focus on the UN Sustainable Development Goals.",
+    summary: "The African SDGs Film Festival lists 4–5 November 2026 in Abuja, but the organiser-linked ticket is for Wednesday 4 November at Silverbird Cinemas, 10:00 a.m.–4:00 p.m. The 5 November programme and venue have not yet been published; do not assume the same cinema or hours apply on Day 2.",
     intro: [
-      "The African SDGs Film Festival returns to Abuja on 4 and 5 November 2026 at Silverbird Cinemas in the Central Business District. The festival is built around films and conversations connected to the United Nations Sustainable Development Goals.",
-      "The published event listing gives a 10:00 AM start and 6:00 PM finish on both festival days. Programme and ticket details can still change, so confirm the live organiser-linked listing before travelling."
+      "The African SDGs Film Festival is advertised across 4–5 November in Abuja, linking environmental and social-impact storytelling to the UN Sustainable Development Goals. The currently documented screening/ticket venue is Silverbird Cinemas in the Central Business District for Wednesday 4 November only; Day 2's venue remains unconfirmed.",
+      "Visit Abuja now identifies Wednesday 4 November tickets and a 10:00 a.m.–4:00 p.m. programme at Silverbird Cinemas. Although 5 November also appears on the festival calendar, its separate location and session times have not been published. Ask the organiser for an official Day 2 schedule before making a second-day booking."
     ],
     bestFor: ["Film", "Sustainability", "Creative industry", "November events"],
     highlights: [
-      { name: "4–5 November 2026", detail: "The festival runs over two days, with published hours of 10:00 AM to 6:00 PM." },
-      { name: "Silverbird Cinemas Abuja", detail: "The listed venue is 1161 Memorial Drive, by Musa Yar'Adua Center, Central Business District." },
+      { name: "4–5 November 2026", detail: "4 November is confirmed as 10:00 a.m.–4:00 p.m. at Silverbird; 5 November is advertised but its separate session details remain unverified." },
+      { name: "4 November: Silverbird Cinemas", detail: "Day 1 venue is 1161 Memorial Drive by Musa Yar'Adua Center, CBD, Abuja. Do not use this as a confirmed Day 2 location." },
       { name: "SDG-focused storytelling", detail: "The programme uses film as a platform for public education, advocacy and discussion around sustainable development." },
       { name: "Second edition", detail: "The listing describes the 2026 programme as following an inaugural 2025 edition that attracted submissions from multiple countries." }
     ],
     planning: [
-      { label: "Check the current programme", detail: "Confirm screening and session times before leaving; a festival-day window does not guarantee every film runs continuously." },
-      { label: "Confirm access", detail: "Use the organiser-linked ticket or registration route and verify any session-specific access requirements." },
+      { label: "Confirm separate day programmes", detail: "The current ticketed Day 1 runs Wednesday 4 November, 10 a.m.–4 p.m. The organiser-linked listing has not published a 5 November venue or schedule; do not plan a two-day cinema itinerary from the Day 1 ticket alone." },
+      { label: "Use verified ticket routes", detail: "For 4 November, use only the organiser-linked Eventbrite route reached from Visit Abuja. For 5 November, request a separately dated official announcement before sending payment or booking travel." },
       { label: "Plan CBD transport", detail: "Allow time for Central Business District traffic, parking or ride-hailing pickup around Memorial Drive." },
       { label: "Pair nearby stops carefully", detail: "If adding another Central Area activity, leave enough buffer so a delayed screening does not disrupt the rest of your day." }
     ],
     source: { label: "Visit Abuja — African SDGs Film Festival 2026", href: "https://www.visitabuja.org/event/african-sdgs-film-festival-2026/" },
-    lastReviewed: "2026-10-06"
+    lastReviewed: "2026-10-24"
   },
   {
     slug: "all-africa-challenge-trophy-abuja-2026",
