@@ -20,6 +20,13 @@ export const issuerRecheckedRoles20261020 = Object.keys(checkedSources);
 export function applyVerifiedOctoberJobSourceRechecks20261020(job: CareerOpportunity): CareerOpportunity {
   const official = checkedSources[job.slug];
   if (!official) return job;
+  // Reviews are applied late in the catalog pipeline. Never downgrade a
+  // matching first-party source check dated after this 20 October snapshot.
+  if (job.verifiedAt > "2026-10-20" &&
+      job.sources.some(source =>
+        source.url === official && source.lastChecked === job.verifiedAt)) {
+    return job;
+  }
   const base = {
     ...job,
     verifiedAt: "2026-10-20",

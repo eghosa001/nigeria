@@ -182,7 +182,29 @@ export function hasVerifiedUndatedRoleApplicationReview20261017(item: CareerOppo
 export function applyFifteenExactRoleChecks20261017(job: CareerOpportunity): CareerOpportunity {
   const review = fifteenExactRoleReviews20261017[job.slug];
   if (!review || job.kind !== "vacancy" || job.status !== "open" || job.officialUrl !== review.issuerUrl) return job;
-  // We only reconfirm the original issuer link and observed source content:
+  // A later *source-matched* check must win over this dated 17 October
+  // historical review. Otherwise the final catalogue silently rewinds the
+  // public verifiedAt, source date and next step to the older observation.
+  if (job.verifiedAt > "2026-10-17" &&
+      job.sources.some(source =>
+        source.url === review.issuerUrl && source.lastChecked === job.verifiedAt)) {
+    const legacyContext = [
+      review.primaryDetail,
+      "Historical employer observation (17 October 2026): " + review.statusDetail,
+    ];
+    return {
+      ...job,
+      // Preserve the newer issuer's availability wording while retaining
+      // role-specific qualifications from the older independent review.
+      sourceNotes: [...new Set([...job.sourceNotes, ...legacyContext])],
+      applicationSteps: [
+        ...job.applicationSteps.filter(step => !/rolling|guaranteed|automatic acceptance/i.test(step)),
+        review.applicantCheck,
+        "Open this exact issuer requisition again immediately before applying; stop if the named vacancy or employer's actual Apply route is no longer accepting applicants.",
+      ],
+    };
+  }
+
   // never invent a deadline, extend a recruitment window or assert that an
   // employer promised rolling hiring merely because a page is still online.
   return {
