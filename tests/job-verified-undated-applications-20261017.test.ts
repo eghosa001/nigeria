@@ -11,6 +11,16 @@ test("15 exact issuer Apply routes qualify only with current untampered source e
   for (const slug of reviewedExactRoleSlugs20261017) {
     const job = getJobOpportunity(slug);
     assert.ok(job, slug);
+    if (slug === "eha-medical-doctor-abuja-2026") {
+      // The old exact issuer vacancy later returned 404 and the employer
+      // removed it from its board. The dated 23-Oct closed/unverified finding
+      // supersedes the archived 17-Oct Apply-route observation.
+      assert.equal(job.status, "unverified");
+      assert.equal(job.verifiedAt, "2026-10-23");
+      assert.equal(documented(job, "2026-10-17"), false);
+      assert.equal(documented(job, "2026-10-24"), false);
+      continue;
+    }
     if (slug === "eha-registered-nurse-yaba-lagos-2026" ||
         slug === "eha-pharmacist-abuja-2026") {
       // The legacy 17-Oct exact-source review is superseded by a new 24-Oct
