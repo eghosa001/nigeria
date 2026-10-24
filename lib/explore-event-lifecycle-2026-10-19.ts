@@ -1,4 +1,5 @@
 import type { ExploreGuide } from "@/lib/explore";
+import { latestEventIssuerGuides20261024 } from "@/lib/explore-issuer-event-reviews-20261024";
 import { applyAiff2026ConfirmedSessionDecisions } from "@/lib/explore-aiff-programme-decisions-2026-10-19";
 
 // 19 October 2026: individually re-opened NIFAFEST's 15–17 October programme,
@@ -10,6 +11,17 @@ export const reviewedEventSlugs20261019 = [
 ] as const;
 
 export function applyCurrentEventVisitorDecisions20261019(guide: ExploreGuide): ExploreGuide {
+  // The newest source-specific event decisions must win over earlier layers.
+  const current = latestEventIssuerGuides20261024[guide.slug];
+  if (current) {
+    const seen = new Set<string>();
+    const sources = [...(current.sources ?? []), ...(guide.sources ?? [])].filter(item => {
+      if (item.href === current.source?.href || seen.has(item.href)) return false;
+      seen.add(item.href);
+      return true;
+    });
+    return { ...guide, ...current, sources };
+  }
   if (guide.slug === "smfest-abuja-2026") {
     // The official 17–18 October programme is over; ticket cards now say
     // 'Out of stock'. Historical details remain useful, but are not a booking.
