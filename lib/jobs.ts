@@ -191,9 +191,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
     organization: "FirstBank Nigeria",
     kind: "programme",
     sector: "Private",
-    status: "open",
-    statusLabel: "Applications open until 18 October 2026",
-    summary: "FirstBank is recruiting young STEM graduates into its 2026 Technology Academy, a talent-development route for technology careers supporting the bank's digital transformation. The current application deadline is 18 October 2026.",
+    status: "closed",
+    statusLabel: "2026 Academy application deadline passed — 18 October",
+    summary: "FirstBank's 2026 Technology Academy invited STEM graduates to its graduate trainee programme, with a published application deadline of 18 October 2026. That deadline has passed. This page preserves the original eligibility and technology career pathways for applicants and later intakes; no reopened 2026 application window has been established.",
     location: "Nigeria",
     employmentType: "Graduate technology trainee programme",
     audiences: ["STEM graduates", "Engineering graduates", "Computer science graduates", "IT graduates", "Data and technology applicants"],
@@ -205,30 +205,31 @@ const rawJobOpportunities: CareerOpportunity[] = [
       "Strong analytical and problem-solving ability plus clear interest in technology and continuous learning."
     ],
     requirements: [
-      "Use the official FirstBank Oracle recruitment page linked from the current vacancy notice.",
-      "Confirm that your degree discipline and class meet the published Technology Academy eligibility before applying.",
-      "Submit before 18 October 2026 and do not pay anyone for access to the recruitment process."
+      "The original Technology Academy application route was FirstBank's Oracle Candidate Experience job 1829. It should now be treated as historical until FirstBank publishes a new dated notice.",
+      "The 2026 requirements included a STEM degree, minimum 2:1 and completed NYSC or exemption. Confirm new requirements only when FirstBank advertises a subsequent intake.",
+      "The 18 October 2026 application deadline has passed; do not pay anyone claiming an old form or recruiter can bypass the closing date."
     ],
     documents: ["CV/resume", "Degree/qualification details", "NYSC discharge or exemption information", "Other identity or application details requested by the official FirstBank recruitment system"],
     applicationSteps: [
-      "Open the official FirstBank candidate-experience vacancy page.",
-      "Review the Technology Academy eligibility and confirm your STEM degree, grade and NYSC status.",
-      "Complete the candidate profile and upload the information requested by FirstBank's recruitment system.",
-      "Submit before 18 October 2026 and retain the application confirmation."
+      "Read the archived FirstBank Oracle job 1829 to understand the 2026 Academy's original eligibility, where accessible.",
+      "If you applied by the deadline, retain your acknowledgement and monitor communications from the bank's official recruitment channel.",
+      "If you did not apply, look for a new dated FirstBank careers announcement rather than resubmitting documents to the old job 1829 route.",
+      "Treat the expired 18 October 2026 deadline as final unless FirstBank itself publishes an explicit extension; the original listing is not evidence of one."
     ],
     officialUrl: "https://hdbc.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/1829",
-    officialUrlLabel: "Apply on FirstBank's official recruitment system",
-    verifiedAt: "2026-10-06",
+    officialUrlLabel: "Review FirstBank's 2026 Technology Academy vacancy archive",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-18",
-    nextMilestone: "Applications close 18 October 2026.",
+    nextMilestone: "The original 2026 application window ended 18 October; applicants should retain confirmation and check only verified FirstBank communications.",
     feeNote: "No application fee is stated. Use only FirstBank's official recruitment system and ignore payment requests from third parties.",
     sourceNotes: [
-      "The current vacancy is specifically for FirstBank's Technology Academy graduate-trainee pipeline.",
-      "FirstBank has previously described the Technology Academy as a recurring strategic initiative for building its technology talent pool."
+      "The 2026 vacancy was specifically for FirstBank's Technology Academy. A text-only 24 October recheck of the Oracle job 1829 route returned a JavaScript candidate-experience shell, so it could not independently confirm any extension.",
+      "This is a historical eligibility guide, not a forecast of any 2027 intake; multiple contemporaneous 2026 recruitment notices independently record the 18 October deadline."
     ],
     sources: [
       { label: "FirstBank official Oracle recruitment page", url: "https://hdbc.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/1829", lastChecked: "2026-10-06" },
-      { label: "FirstBank Technology Academy vacancy summary", url: "https://www.opportunitiesforafricans.com/first-bank-nigeria-technology-academy-graduate-trainee-program-2026/", lastChecked: "2026-10-06" }
+      { label: "FirstBank Technology Academy vacancy summary", url: "https://www.opportunitiesforafricans.com/first-bank-nigeria-technology-academy-graduate-trainee-program-2026/", lastChecked: "2026-10-06" },
+      { label: "Contemporaneous first-hand job 1829 and deadline report", url: "https://www.hotnigerianjobs.com/print/969101/", lastChecked: "2026-10-24" }
     ]
   },
   {
