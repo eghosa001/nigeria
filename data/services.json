@@ -34,9 +34,16 @@
       "Do not infer a ₦30,000 correction-of-data administrative fee for every simple renewal from the table of additional services. The official portal determines the charges applicable to the particular application.",
       "The revised April 2026 NIS SLA retained a 21-day target after successful enrolment for reissue. It is not a guarantee that a booklet can be collected on a precise date or a promise of an appointment within 21 days.",
       "NIS asks renewal applicants to upload a compliant photograph and relevant civil/origin evidence and appear with the current booklet for biometric capture. A fully remote renewal is not established by the official guidance.",
-      "Passport fees quoted in naira apply to applications within Nigeria. NIS has published distinct US-dollar amounts for applications abroad; verify current mission and payment requirements."
+      "Passport fees quoted in naira apply to applications within Nigeria. NIS has published distinct US-dollar amounts for applications abroad; verify current mission and payment requirements.",
+      "NIS may review a double payment on one passport application, or payment before an appointment is booked (except contactless applications). It excludes two separate applications for the same person, an already-booked appointment, errors discovered after payment, a new application to change between 32- and 64-page booklets, and applications queried or rejected. Request any refund within 21 days of payment with your full name, application ID, payment reference and proof of debit. NIS says approved refunds typically take six weeks after it receives the complaint. The policy prints an apparently misspelled support-email domain; confirm the contact through NIS's official contact page before sending personal records."
     ],
     "sources": [
+      {
+        "label": "NIS — online payment refund exceptions, 21-day claim limit and contact discrepancy",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://immigration.gov.ng/refundpolicy/",
+        "lastChecked": "2026-10-23"
+      },
       {
         "label": "NIS — official Renewal/Reissue steps including NIN verification and photo upload",
         "agency": "Nigeria Immigration Service",
@@ -78,7 +85,7 @@
       "first-nigerian-passport",
       "passport-change-of-data"
     ],
-    "lastVerified": "2026-10-16",
+    "lastVerified": "2026-10-23",
     "searchTerms": [
       "renew Nigerian passport 2026",
       "Nigerian passport renewal fee 100000 200000",
