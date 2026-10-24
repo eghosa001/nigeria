@@ -206,6 +206,9 @@ jobs:
           node-version: ${{ steps.scope.outputs.mode == 'youtube-d1-integration' && '24' || '22' }}
       - run: npm install --no-audit --no-fund
         if: steps.scope.outputs.mode != 'skip' && steps.scope.outputs.mode != 'youtube-d1-integration' && steps.scope.outputs.mode != 'youtube-d1-production' && steps.scope.outputs.mode != 'ads-txt' && steps.scope.outputs.mode != 'indexnow'
+      - name: Ensure newer issuer verification wins in final Jobs catalogue
+        if: steps.scope.outputs.mode == 'jobs' || steps.scope.outputs.mode == 'full'
+        run: npx tsx --test tests/job-later-review-precedence-20261024.test.ts tests/job-fifteen-exact-issuer-checks-20261017.test.ts tests/job-verified-undated-applications-20261017.test.ts tests/four-live-employer-rechecks-20261024.test.ts
       - name: Verify AEDC refund online route and optional office handling
         if: steps.scope.outputs.service_journey_changed == 'true'
         run: npx tsx --test tests/aedc-map-refund-journey.test.ts
