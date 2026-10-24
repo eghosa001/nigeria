@@ -14152,9 +14152,32 @@ const preCurrentEventGuides: ExploreGuide[] = previousEventReviewGuides.map(guid
   };
 });
 
-// Dated current-event decisions apply after all other contributor overlays.
-// Never overwrite earlier sourced visitor evidence outside these two pages.
-export const exploreGuides: ExploreGuide[] = preCurrentEventGuides.map(applyCurrentEventVisitorDecisions20261019);
+// Three 24 October issuer rechecks supersede the older (15-19 October) tour
+// supplement layers. Those layers can add citations, but must not reinstate
+// November registration dates, past fair travel instructions or an invented
+// two-day admission. This narrow precedence rule keeps historical research.
+const latestIssuerEventSlugs = new Set([
+  "beneficial-ownership-asset-recovery-conference-2026",
+  "african-traditional-food-fair-abuja-2026",
+  "african-creators-conference-abuja-2026",
+]);
+const latestIssuerEventGuides = new Map(uncorrectedExploreGuides
+  .filter(guide => latestIssuerEventSlugs.has(guide.slug))
+  .map(guide => [guide.slug, guide] as const));
+
+// Dated event decisions apply after the other independently checked layers.
+export const exploreGuides: ExploreGuide[] =
+  preCurrentEventGuides.map(applyCurrentEventVisitorDecisions20261019).map(guide => {
+    const updated = latestIssuerEventGuides.get(guide.slug);
+    if (!updated) return guide;
+    const seen = new Set<string>();
+    const sources = [...(updated.sources ?? []), ...(guide.sources ?? [])].filter(source => {
+      if (source.href === updated.source?.href || seen.has(source.href)) return false;
+      seen.add(source.href);
+      return true;
+    });
+    return { ...guide, ...updated, sources };
+  });
 
 // The checked-in Tour catalog is immutable for the lifetime of this Worker
 // module. Index once instead of scanning every record for each guide request.
