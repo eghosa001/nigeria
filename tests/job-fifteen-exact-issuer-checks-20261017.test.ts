@@ -25,6 +25,18 @@ test("fifteen original issuer reviews retain their evidence without keeping a re
     assert.equal(job.status, "open", slug);
     assert.equal(job.deadline, undefined, slug);
     assert.equal(job.officialUrl, checked.issuerUrl, slug);
+    if (slug === "eha-registered-nurse-yaba-lagos-2026" ||
+        slug === "eha-pharmacist-abuja-2026") {
+      // These exact vacancies were rechecked directly on 24 October; do not
+      // allow the original 17 October audit to undo that newer evidence.
+      assert.equal(job.verifiedAt, "2026-10-24", slug);
+      assert.ok(job.statusLabel.includes("24 October"), slug);
+      assert.ok(job.sources.some(source => source.url === checked.issuerUrl && source.lastChecked === "2026-10-24"), slug);
+      assert.ok(job.sourceNotes.includes(checked.primaryDetail), slug);
+      assert.ok(job.applicationSteps.includes(checked.applicantCheck), slug);
+      assert.ok(job.applicationSteps.some(step => /immediately before applying/i.test(step)), slug);
+      continue;
+    }
     const prior = verifiedJobSlugs20261016.includes(slug);
     assert.equal(job.verifiedAt, prior ? "2026-10-16" : "2026-10-17", slug);
     assert.ok(job.statusLabel.includes("deadline"), slug);
