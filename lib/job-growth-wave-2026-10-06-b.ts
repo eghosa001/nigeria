@@ -89,9 +89,9 @@ export const jobGrowthWaveThree: CareerOpportunity[] = [
       "oil-gas-energy"
     ],
     "sector": "Private",
-    "status": "open",
-    "statusLabel": "Applications open until 9 October 2026",
-    "summary": "All On is recruiting a Lagos-based Finance & Operations Analyst to support accounting, investment finance, reporting, budgeting, treasury, procurement and governance work. The official vacancy closes 9 October 2026.",
+    "status": "closed",
+    "statusLabel": "Applications closed 9 October 2026 — archived issuer vacancy",
+    "summary": "All On's original Lagos Finance & Operations Analyst recruitment advertised 9 October 2026 as its closing date, which has passed. The issuer still publishes the archived role and email-application instructions, but it has not established a new submission window. This page preserves the requirements and original hiring process for past applicants and future verification.",
     "location": "Lagos, Nigeria",
     "employmentType": "Finance & Operations role",
     "audiences": [
@@ -117,33 +117,34 @@ export const jobGrowthWaveThree: CareerOpportunity[] = [
       "Have practical experience with month-end close, journal preparation, reconciliations and financial reporting.",
       "Demonstrate strong Excel skills and experience with financial models/reporting tools; ERP or accounting-system experience is required, with SAP listed as an advantage.",
       "Experience in investment management, private equity, venture capital, development finance, impact investing, loan administration or portfolio finance is advantageous.",
-      "Prepare a tailored cover letter and resume and follow All On's stated email-application instruction before the deadline."
+      "The original advert requested a cover letter and resume by email. The published deadline has passed; save those details only as historical process information."
     ],
     "documents": [
       "Cover letter",
       "Resume/CV"
     ],
     "applicationSteps": [
-      "Open All On's official Finance & Operations Analyst vacancy and review the responsibilities and 3–5 year experience requirement.",
-      "Prepare a cover letter and resume showing relevant accounting, finance, reporting, Excel/ERP and investment-operations experience.",
-      "Send the application to the HR email stated on the official vacancy page using the vacancy's specified subject line.",
-      "Submit before 9 October 2026 and retain your sent-email record."
+      "Open All On's original Finance & Operations Analyst vacancy to review the exact 9 October 2026 closing date, Lagos location, criteria and original email-submission instructions.",
+      "If you applied by 9 October, keep your sent-email confirmation, CV and cover letter and check only official employer messages for any selection update.",
+      "Do not email a new application simply because the archived job description still displays an HR address; only a newly dated employer notice can establish a reopening.",
+      "Review All On's current careers page for a separately advertised and still-open vacancy that matches your experience. Do not pay an intermediary for a past application or shortlist."
     ],
     "officialUrl": "https://www.all-on.com/careers/finance-and-operations-analyst.html",
-    "officialUrlLabel": "Open All On's official Analyst vacancy",
-    "verifiedAt": "2026-10-06",
+    "officialUrlLabel": "Read All On's concluded Finance & Operations Analyst vacancy",
+    "verifiedAt": "2026-10-24",
     "deadline": "2026-10-09",
-    "nextMilestone": "Applications close 9 October 2026.",
+    "nextMilestone": "The employer-published 9 October 2026 deadline passed. No new applications are verified for this named vacancy; previous applicants should retain their sent-email evidence and consult All On for genuine updates.",
     "feeNote": "All On's official vacancy instructs candidates to send a cover letter and resume by email and does not state an application fee. Do not pay for shortlisting or interview access.",
     "sourceNotes": [
       "All On's official vacancy page lists Lagos as the location and 9 October 2026 as the application deadline.",
-      "The official page publishes the degree, preferred professional qualification, 3–5 years experience and detailed finance/operations responsibilities used in this guide."
+      "The official page publishes the degree, preferred professional qualification, 3–5 years experience and detailed finance/operations responsibilities used in this guide.",
+      "As of 24 October 2026, All On's official careers listing still displays the original 9 October date for the Finance & Operations Analyst role. A retained job page and HR email are not evidence that the vacancy remains open."
     ],
     "sources": [
       {
         "label": "All On — Finance & Operations Analyst",
         "url": "https://www.all-on.com/careers/finance-and-operations-analyst.html",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-24"
       }
     ]
   },
@@ -157,9 +158,9 @@ export const jobGrowthWaveThree: CareerOpportunity[] = [
       "oil-gas-energy"
     ],
     "sector": "Private",
-    "status": "open",
-    "statusLabel": "Applications open until 9 October 2026",
-    "summary": "All On is recruiting a six-month Finance & Operations Intern in Lagos to support financial reporting, budgets, invoices, procurement and operational coordination. The official application deadline is 9 October 2026.",
+    "status": "closed",
+    "statusLabel": "Applications closed 9 October 2026 — archived issuer vacancy",
+    "summary": "All On's original six-month Lagos Finance & Operations internship recruitment advertised 9 October 2026 as its closing date, which has passed. The issuer still publishes the archived role and email-application instructions, but it has not established a new submission window. This page preserves the requirements and original hiring process for past applicants and future verification.",
     "location": "Lagos, Nigeria",
     "employmentType": "Six-month internship",
     "audiences": [
@@ -183,34 +184,35 @@ export const jobGrowthWaveThree: CareerOpportunity[] = [
     "requirements": [
       "Be comfortable supporting monthly/programme financial reports, budget tracking, invoices, journal/reconciliation work and procurement administration.",
       "Show attention to detail, accurate financial/administrative work and good communication skills.",
-      "Prepare a cover letter and resume and use All On's stated subject line for the internship application.",
-      "Submit before the 9 October 2026 deadline."
+      "The archived internship requested a cover letter and resume using the specified subject line; its application period has ended.",
+      "The 9 October 2026 deadline has passed; late submissions are not confirmed."
     ],
     "documents": [
       "Cover letter",
       "Resume/CV"
     ],
     "applicationSteps": [
-      "Open All On's official Finance & Operations Intern page and review the six-month Lagos internship responsibilities.",
-      "Prepare a cover letter and resume highlighting the relevant degree, Excel/Word ability, analytical skills and any finance, operations or procurement exposure.",
-      "Email the application to the HR address stated on the official page with the subject line specified by All On.",
-      "Submit before 9 October 2026 and keep your sent-email record."
+      "Open All On's original Finance & Operations Intern vacancy to review the exact 9 October 2026 closing date, Lagos location, criteria and original email-submission instructions.",
+      "If you applied by 9 October, keep your sent-email confirmation, CV and cover letter and check only official employer messages for any selection update.",
+      "Do not email a new application simply because the archived job description still displays an HR address; only a newly dated employer notice can establish a reopening.",
+      "Review All On's current careers page for a separately advertised and still-open vacancy that matches your experience. Do not pay an intermediary for a past application or shortlist."
     ],
     "officialUrl": "https://www.all-on.com/careers/finance-and-operations--intern.html",
-    "officialUrlLabel": "Open All On's official internship vacancy",
-    "verifiedAt": "2026-10-06",
+    "officialUrlLabel": "Read All On's concluded Finance & Operations Intern vacancy",
+    "verifiedAt": "2026-10-24",
     "deadline": "2026-10-09",
-    "nextMilestone": "Applications close 9 October 2026.",
+    "nextMilestone": "The employer-published 9 October 2026 deadline passed. No new applications are verified for this named vacancy; previous applicants should retain their sent-email evidence and consult All On for genuine updates.",
     "feeNote": "The official All On internship page asks for a cover letter and resume by email and does not state an application fee.",
     "sourceNotes": [
       "All On's official page states that this is a six-month Lagos internship and gives 9 October 2026 as the deadline.",
-      "The page lists a recent relevant bachelor's degree plus analytical, organisational, Microsoft Office, accuracy and communication requirements."
+      "The page lists a recent relevant bachelor's degree plus analytical, organisational, Microsoft Office, accuracy and communication requirements.",
+      "As of 24 October 2026, All On's official careers listing still displays the original 9 October date for the Finance & Operations Intern role. A retained job page and HR email are not evidence that the vacancy remains open."
     ],
     "sources": [
       {
         "label": "All On — Finance & Operations Intern",
         "url": "https://www.all-on.com/careers/finance-and-operations--intern.html",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-24"
       }
     ]
   },
@@ -224,9 +226,9 @@ export const jobGrowthWaveThree: CareerOpportunity[] = [
       "oil-gas-energy"
     ],
     "sector": "Private",
-    "status": "open",
-    "statusLabel": "Applications open until 11 October 2026",
-    "summary": "All On is hiring a Finance Controller in Lagos to lead finance planning, reporting, governance, audit, commercial-deal economics and investment-finance support. The official vacancy closes 11 October 2026.",
+    "status": "closed",
+    "statusLabel": "Applications closed 11 October 2026 — archived issuer vacancy",
+    "summary": "All On's original Lagos Finance Controller recruitment advertised 11 October 2026 as its closing date, which has passed. The issuer still publishes the archived role and email-application instructions, but it has not established a new submission window. This page preserves the requirements and original hiring process for past applicants and future verification.",
     "location": "Lagos, Nigeria",
     "employmentType": "Senior finance role",
     "audiences": [
@@ -252,33 +254,34 @@ export const jobGrowthWaveThree: CareerOpportunity[] = [
       "Have experience in private-equity or venture-capital investment management.",
       "Demonstrate strong analytical ability and economic/financial modelling experience.",
       "Understand governance structures and key value drivers for ventures or joint ventures and be able to balance financial return with business priorities.",
-      "Prepare a cover letter and resume and use the exact application subject stated on All On's official page."
+      "The concluded role required a cover letter and resume with All On's specified email subject. This is historical information, not a live invitation."
     ],
     "documents": [
       "Cover letter",
       "Resume/CV"
     ],
     "applicationSteps": [
-      "Open All On's official Finance Controller vacancy and review the 7–10 year experience, professional qualification and investment-management requirements.",
-      "Prepare a cover letter and resume showing finance leadership, commercial finance/M&A, modelling, governance and private-equity/venture-capital experience.",
-      "Send the documents to the HR email listed on the official vacancy with All On's specified subject line.",
-      "Submit before 11 October 2026 and retain your sent-email record."
+      "Open All On's original Finance Controller vacancy to review the exact 11 October 2026 closing date, Lagos location, criteria and original email-submission instructions.",
+      "If you applied by 11 October, keep your sent-email confirmation, CV and cover letter and check only official employer messages for any selection update.",
+      "Do not email a new application simply because the archived job description still displays an HR address; only a newly dated employer notice can establish a reopening.",
+      "Review All On's current careers page for a separately advertised and still-open vacancy that matches your experience. Do not pay an intermediary for a past application or shortlist."
     ],
     "officialUrl": "https://www.all-on.com/careers/finance-controller.html",
-    "officialUrlLabel": "Open All On's official Finance Controller vacancy",
-    "verifiedAt": "2026-10-06",
+    "officialUrlLabel": "Read All On's concluded Finance Controller vacancy",
+    "verifiedAt": "2026-10-24",
     "deadline": "2026-10-11",
-    "nextMilestone": "Applications close 11 October 2026.",
+    "nextMilestone": "The employer-published 11 October 2026 deadline passed. No new applications are verified for this named vacancy; previous applicants should retain their sent-email evidence and consult All On for genuine updates.",
     "feeNote": "All On's official vacancy asks for a cover letter and resume and does not state an application fee. Ignore payment requests for recruitment access.",
     "sourceNotes": [
       "All On's official Finance Controller page lists Lagos and an 11 October 2026 application deadline.",
-      "The page states 7–10 years of finance-management/commercial-finance or M&A experience, a relevant degree, professional qualification and private-equity/venture-capital experience."
+      "The page states 7–10 years of finance-management/commercial-finance or M&A experience, a relevant degree, professional qualification and private-equity/venture-capital experience.",
+      "As of 24 October 2026, All On's official careers listing still displays the original 11 October date for the Finance Controller role. A retained job page and HR email are not evidence that the vacancy remains open."
     ],
     "sources": [
       {
         "label": "All On — Finance Controller",
         "url": "https://www.all-on.com/careers/finance-controller.html",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-24"
       }
     ]
   }
