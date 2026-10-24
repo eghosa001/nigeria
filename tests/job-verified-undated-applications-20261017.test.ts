@@ -11,6 +11,15 @@ test("15 exact issuer Apply routes qualify only with current untampered source e
   for (const slug of reviewedExactRoleSlugs20261017) {
     const job = getJobOpportunity(slug);
     assert.ok(job, slug);
+    if (slug === "eha-registered-nurse-yaba-lagos-2026" ||
+        slug === "eha-pharmacist-abuja-2026") {
+      // The legacy 17-Oct exact-source review is superseded by a new 24-Oct
+      // issuer-board confirmation; it must not masquerade as an old-date check.
+      assert.equal(documented(job, "2026-10-17"), false, slug);
+      assert.equal(job.verifiedAt, "2026-10-24", slug);
+      assert.ok(job.sources.some(source => source.url === job.officialUrl && source.lastChecked === "2026-10-24"));
+      continue;
+    }
     assert.equal(documented(job, "2026-10-17"), true, slug);
     assert.equal(documented({ ...job, sources: [] }, "2026-10-17"), false, slug);
     assert.equal(documented({ ...job, applicationSteps: [] }, "2026-10-17"), false, slug);
