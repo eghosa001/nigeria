@@ -157,36 +157,78 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
     lastReviewed: "2026-10-06"
   },
   {
-    slug: "african-traditional-food-fair-abuja-2026",
-    title: "African Traditional Food Fair Abuja 2026: Date, Venue & Planning",
-    shortTitle: "African Traditional Food Fair",
-    kind: "event",
-    region: "Federal Capital Territory",
-    summary: "The organiser lists the African Traditional Food Fair for 17 October 2026 at Abuja’s FCT Exhibition Pavilion, while local calendars conflict on whether an additional 16 October programme exists. Check the official attendee registration and Friday access before travelling.",
-    intro: [
-      "The event organiser’s official website identifies the 8th African Traditional Food Fair for Saturday 17 October 2026 at the FCT Exhibition Pavilion on Herbert Macaulay Way in Abuja. Its programme spans indigenous-food stalls, live cooking, nutrition conversations, cultural performances and policy discussions.",
-      "Public timetables disagree: Visit Abuja’s individual event page lists 17 October from 10:00 AM to 6:00 PM, but its October events calendar lists 16–17 October. The organiser’s own homepage and attendee registration page identify 17 October without confirming an open Friday programme. Do not assume public entry on Friday 16 October until the organiser confirms the additional day and times."
+    "slug": "african-traditional-food-fair-abuja-2026",
+    "title": "African Traditional Food Fair Abuja 2026: Past Dates, Programme & Festival Guide",
+    "shortTitle": "African Traditional Food Fair 2026",
+    "kind": "event",
+    "region": "Federal Capital Territory",
+    "summary": "The African Traditional Food Fair's 2026 programme at the FCT Exhibition Pavilion is over: organiser material named Saturday 17 October, while an 8 October News Agency of Nigeria report also announced a Friday 16 October policy/news session. These were October 2026 dates, not upcoming registration for future attendance.",
+    "intro": [
+      "The eighth African Traditional Food Fair was advertised for Abuja's FCT Exhibition Pavilion, Herbert Macaulay Way, beside the International Conference Centre. The organiser's website listed Saturday 17 October 2026 for the public food event, with planned indigenous-food stalls, cooking demonstrations, nutrition conversations and cultural showcases. This date is already past.",
+      "The announcement reported by the News Agency of Nigeria on 8 October set out a wider 16–17 October programme, with a 9 a.m. Friday news conference and policy dialogue preceding Saturday's food and cultural fiesta. That distinction helps explain why some calendars displayed one day and others two; it does not prove every announced activity ultimately took place.",
+      "The organiser's attendee registration form may remain reachable, but it belongs to the ended edition. Do not submit personal details or pay someone claiming to sell entry to the concluded 2026 fair. For another edition, wait for a newly dated organiser announcement."
     ],
-    bestFor: ["Food", "Culture", "Family outings", "October events"],
-    highlights: [
-      { name: "17 October 2026", detail: "The fair runs from 10:00 AM to 6:00 PM." },
-      { name: "FCT Exhibition Pavilion", detail: "The listed venue is on Herbert Macaulay Way in Central Area, beside the International Conference Centre." },
-      { name: "Indigenous food & tasting", detail: "The programme brings together farmers, chefs, food producers, policymakers and food innovators with public tasting, cooking and produce stalls." },
-      { name: "Registration and date check", detail: "The organiser provides an attendee registration form at afritraditionalfoodfair.org/register/. Its landing page confirms 17 October; ask directly before planning for Friday 16 October." }
+    "bestFor": [
+      "African food heritage",
+      "Festival programme archives",
+      "Indigenous agriculture and nutrition",
+      "Abuja cultural events"
     ],
-    planning: [
-      { label: "Register using the organiser’s attendee form", detail: "The official registration page offers an Attendee category and requests name, email, phone and consent. Use https://afritraditionalfoodfair.org/register/; the form’s availability does not establish a paid or free entry policy, so ask the organiser to confirm any cost." },
-      { label: "Arrive with a Central Area transport plan", detail: "The venue is close to major Abuja event and conference traffic; allow time for parking or ride-hailing pickup." },
-      { label: "Check food-allergy details directly", detail: "If you have a serious allergy or dietary restriction, ask individual vendors about ingredients rather than relying on assumptions." },
-      { label: "Resolve Friday versus Saturday before travelling", detail: "For Friday 16 October, the local events calendar conflicts with the official 17 October date. Contact the organiser via afritradfoodfair@gmail.com or +234 813 668 6874 to confirm whether Friday is open to attendees; do not rely on a third-party listing as a ticket." }
+    "highlights": [
+      {
+        "name": "16–17 October 2026 — announced programme",
+        "detail": "News Agency of Nigeria reported policy/news activities for 16 October and a food-and-cultural fiesta for 17 October; both days are past."
+      },
+      {
+        "name": "17 October — public fair",
+        "detail": "The organiser and Visit Abuja advertised Saturday 17 October at the FCT Exhibition Pavilion in Abuja Central Area."
+      },
+      {
+        "name": "Indigenous food and sustainability",
+        "detail": "The announcement focused on regional foods, farmers, chefs, produce innovation, nutrition and climate-resilient food systems. Advertised activities are not independently verified attendance."
+      },
+      {
+        "name": "Do not reuse 2026 registration links",
+        "detail": "The old attendee form may still be online; a functioning form does not establish fresh 2026 or 2027 event access."
+      }
     ],
-    source: { label: "African Traditional Food Fair — organiser and 2026 venue", href: "https://afritraditionalfoodfair.org/" },
-    sources: [
-      { label: "African Traditional Food Fair — official attendee registration", href: "https://afritraditionalfoodfair.org/register/" },
-      { label: "Visit Abuja — event date as listed on individual event page", href: "https://www.visitabuja.org/event/8th-african-traditional-food-fair/" },
-      { label: "Visit Abuja — October calendar listing, including conflicting Friday date", href: "https://www.visitabuja.org/events/" },
+    "planning": [
+      {
+        "label": "Can I still attend the October 2026 edition?",
+        "detail": "No. The advertised 16–17 October programme has passed. Do not book travel or submit an attendee registration assuming those events are upcoming."
+      },
+      {
+        "label": "Why did some calendars mention 16 October?",
+        "detail": "The organiser's website highlighted Saturday 17 October; independent 8 October reporting described a separate Friday 16 October press and policy component. These are programme components, not two independently bookable public food fairs."
+      },
+      {
+        "label": "Where was the fair advertised?",
+        "detail": "FCT Exhibition Pavilion on Herbert Macaulay Way, Central Area, Abuja, beside the International Conference Centre. This identifies the historical venue, not the location of any newly scheduled edition."
+      },
+      {
+        "label": "Where should I check a future edition?",
+        "detail": "Consult the organiser's website for a new dated announcement and confirm the exact venue, entry terms and 2027 programme before paying or sharing personal data."
+      }
     ],
-    lastReviewed: "2026-10-16"
+    "source": {
+      "label": "African Traditional Food Fair — organiser and 2026 venue",
+      "href": "https://afritraditionalfoodfair.org/"
+    },
+    "sources": [
+      {
+        "label": "News Agency of Nigeria — 8 October report of 16–17 October programme",
+        "href": "https://nannews.ng/african-food-fair-to-celebrate-nigerian-culinary-heritage/"
+      },
+      {
+        "label": "Visit Abuja — 17 October public fair",
+        "href": "https://www.visitabuja.org/event/8th-african-traditional-food-fair/"
+      },
+      {
+        "label": "Original organiser registration page, now historical",
+        "href": "https://afritraditionalfoodfair.org/register/"
+      }
+    ],
+    "lastReviewed": "2026-10-24"
   },
   {
     slug: "abuja-international-film-festival-2026",
@@ -1118,31 +1160,78 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
   },
 
   {
-    slug: "beneficial-ownership-asset-recovery-conference-2026",
-    title: "Lagos Beneficial Ownership & Asset Recovery Conference 2026 Guide",
-    shortTitle: "BO & Asset Recovery Conference 2026",
-    kind: "itinerary",
-    region: "Lagos State",
-    summary: "Plan for the CAC-led Global Conference on Beneficial Ownership & Asset Recovery at Sheraton Hotels, Ikeja, from 8–11 November 2026, including registration, venue, airport and entry details.",
-    intro: [
-      "The Corporate Affairs Commission and partner agencies are hosting the Global Conference on Beneficial Ownership & Asset Recovery in Lagos from 8 to 11 November 2026.",
-      "The official programme uses Sheraton Hotels in Ikeja as the conference venue, with arrival and registration on 8 November, two main conference days on 9–10 November and departures on 11 November."
+    "slug": "beneficial-ownership-asset-recovery-conference-2026",
+    "title": "CAC BOAR Conference Postponed: June 2027 Dates, Registration & Travel Advice",
+    "shortTitle": "BOAR Conference — Postponed",
+    "kind": "itinerary",
+    "region": "Lagos State",
+    "summary": "CAC postponed the Beneficial Ownership and Assets Recovery Global Conference, originally scheduled for 8–11 November 2026 in Ikeja, to June 2027 because of international-delegate visa delays. Exact June dates have not been announced. Existing registrations and payments remain valid; do not book travel for the former November dates.",
+    "intro": [
+      "The Corporate Affairs Commission issued an official postponement notice dated 19 October 2026. The November 8–11 conference no longer goes ahead on its original dates; organisers now aim for June 2027, with exact dates still to be communicated. The notice cites visa-processing constraints affecting international delegates. A stale November programme page or event calendar is not proof of a live November meeting.",
+      "CAC says existing registrations, generated invoices and payments remain valid for the rescheduled edition and registration remains open. There is no need to submit a second payment because the conference moved. Anyone who cannot attend the later dates should contact the CAC conference secretariat for their options; the notice does not promise automatic refunds or new June dates.",
+      "The previously advertised Sheraton Ikeja venue, arrival programme and November 9–10 technical panels belong to the original timetable. Treat their exact days, guest transfers, accommodation, plenary speakers and workshop slots as historical until CAC publishes an updated June 2027 schedule and re-confirms which travel arrangements still apply."
     ],
-    bestFor: ["Business travel", "Governance", "Compliance", "International conference"],
-    highlights: [
-      { name: "8–11 November 2026", detail: "The official conference site publishes a four-day Lagos programme covering arrivals, plenaries, technical sessions and departures." },
-      { name: "Sheraton Hotels, Ikeja", detail: "The venue is at 30 Mobolaji Bank Anthony Way, Ikeja, near Murtala Muhammed International Airport." },
-      { name: "Early bird to 15 October", detail: "The official in-person delegate fee is ₦250,000 through 15 October; late registration is ₦300,000 from 16 October to 5 November. Virtual rates are lower." },
-      { name: "International delegate support", detail: "The organiser publishes guidance on e-Visas, invitation letters, airport protocol, yellow-fever documentation and Nigeria's Landing Card." }
+    "bestFor": [
+      "Registered delegates checking postponement",
+      "Beneficial ownership and compliance",
+      "Asset recovery researchers",
+      "International participants arranging future travel"
     ],
-    planning: [
-      { label: "Register through the official conference site", detail: "Use the CAC-hosted conference site and its generated invoice rather than third-party payment requests." },
-      { label: "Stay close to Ikeja if possible", detail: "The venue is near Lagos airport, so accommodation on the Ikeja axis reduces cross-city travel for an event with early starts." },
-      { label: "Check entry documents early", detail: "International visitors should confirm passport validity, yellow-fever documentation, visa status where required and the online Landing Card before travel." },
-      { label: "Build around the two main conference days", detail: "The substantive plenaries, panels and workshops are on 9 and 10 November; 8 November is arrival/registration and 11 November is departure." }
+    "highlights": [
+      {
+        "name": "19 October 2026 — official postponement",
+        "detail": "CAC says the 8–11 November 2026 conference has moved to June 2027, exact dates still to be announced."
+      },
+      {
+        "name": "Existing registration stays valid",
+        "detail": "CAC says registrations and payments already made remain valid, with existing invoice/payment references unchanged. Do not repay without an issuer-generated invoice."
+      },
+      {
+        "name": "Former November programme is obsolete",
+        "detail": "The old agenda showed arrivals on 8 November, panels 9–10 November and departure 11 November. These are not confirmed June 2027 session dates."
+      },
+      {
+        "name": "Ikeja venue requires re-confirmation",
+        "detail": "Sheraton Ikeja was the original venue. Verify the final site, room, hotels and travel support when CAC announces the revised dates."
+      }
     ],
-    source: { label: "CAC Global Conference on Beneficial Ownership & Asset Recovery", href: "https://boconference.cac.gov.ng/" },
-    lastReviewed: "2026-10-05",
+    "planning": [
+      {
+        "label": "Should I travel to Lagos on 8–11 November?",
+        "detail": "No: CAC explicitly postponed that edition. Cancel or adjust tentative bookings in line with the provider's conditions, and avoid non-refundable June arrangements until the exact dates are officially published."
+      },
+      {
+        "label": "If I already registered or paid, what changes?",
+        "detail": "CAC states that the existing registration, invoice and payment reference remain valid and no action is required. Save the acknowledgement; direct requests for alternative arrangements to boarc@cac.gov.ng using the contact on CAC's own notice."
+      },
+      {
+        "label": "Is registration or a new invoice needed?",
+        "detail": "Registration remains open according to CAC. Use only the secure route and official generated invoice at boconference.cac.gov.ng; an old third-party November ticket or unsolicited replacement-invoice message is not valid evidence of new payment."
+      },
+      {
+        "label": "Are June 2027 dates and speakers final?",
+        "detail": "No. The exact date and revised programme are still pending. The former 9–10 November sessions and original Sheraton venue are historical planning information, not confirmed new dates."
+      },
+      {
+        "label": "Where can I check the controlling announcement?",
+        "detail": "Read the dated CAC postponement notice first and check the conference homepage for a newer date-specific update before any travel, room or visa commitment."
+      }
+    ],
+    "source": {
+      "label": "CAC — official 19 October 2026 BOAR conference postponement",
+      "href": "https://boconference.cac.gov.ng/notice"
+    },
+    "sources": [
+      {
+        "label": "CAC — conference homepage and current delegate information",
+        "href": "https://boconference.cac.gov.ng/"
+      },
+      {
+        "label": "CAC — legacy general homepage showing outdated November banner",
+        "href": "https://www.cac.gov.ng/"
+      }
+    ],
+    "lastReviewed": "2026-10-24"
   },
   {
     slug: "abia-state-travel-guide",
