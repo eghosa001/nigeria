@@ -16,6 +16,18 @@ export const verifiedOctoberFilm: EntertainmentTitle[] = [
     directors: ["Lancelot Oduwa Imasuen"],
     references: [
       {
+        label: "The Guardian — 17 October 2026 filmmaker preview and distribution",
+        href: "https://guardian.ng/saturday-magazine/weekend-beats/issakaba-returns-25-years-after/",
+        lastChecked: "2026-10-24",
+        note: "Reports Lancelot Imasuen's press preview, Sam Dede as Ebube, distributor Blue Pictures and the planned 13 November cinema opening. This is a preview report, not evidence of a bookable screening."
+      },
+      {
+        label: "Vanguard — October 2026 Lagos press screening",
+        href: "https://www.vanguardngr.com/2026/10/moviegoers-in-frenzy-as-issakaba-the-return-is-set-for-november-cinema-release/",
+        lastChecked: "2026-10-24",
+        note: "Named coverage of the Lagos press screening and announced November cinema date; it does not establish released full-film viewing or local showtimes."
+      },
+      {
         label: "Nollywood.com — film details and release listing",
         href: "https://nollywood.com/movies/issakaba-the-return",
         lastChecked: "2026-10-10",

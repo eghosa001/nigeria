@@ -26,7 +26,7 @@ export const individuallyResearchedFilmDossiers20261015B: Record<string, MovieEd
       {
         heading: "Release date, cinema information and what remains unconfirmed",
         paragraphs: [
-          "The announced Nigerian theatrical date is 13 November 2026. Film reporting identifies Blue Pictures Distribution and credits Lancelot Oduwa Imasuen as director; the film catalogue also lists that planned date. As of this guide's 15 October 2026 check, the release is still in the future, so a cinema listing is not a functioning ticket, an available streaming link or a confirmed showtime in any particular Nigerian city.",
+          "The announced Nigerian theatrical date is 13 November 2026. Reports from the film's October Lagos press screening, including The Guardian and Vanguard, identify Blue Pictures Distribution and returning director Lancelot Oduwa Imasuen. The planned date was still in the future at this 24 October check. A film listing or press preview is not a functioning ticket, licensed full-film stream or confirmed showtime in any particular Nigerian city.",
           "For a legitimate viewing option, use the official distributor or local cinema's own schedule once booking is actually available. Watch the trailer at its original publisher if you want a preview; don't mistake full versions of the 2001 film or misleadingly titled reuploads for the forthcoming sequel. Any later digital premiere, age rating, final runtime or change to the theatrical date should be reported only after the rights holder or distributor confirms it.",
         ],
       },
@@ -34,7 +34,7 @@ export const individuallyResearchedFilmDossiers20261015B: Record<string, MovieEd
     questions: [
       {
         question: "Is Issakaba: The Return already available to watch in October 2026?",
-        answer: "No confirmed full-film stream or active local cinema showtime is established by the cited sources as of 15 October 2026. The reported nationwide cinema release is scheduled for 13 November 2026. Current trailer and film-listing links are not tickets or full-film access.",
+        answer: "No confirmed full-film stream or active local cinema showtime is established by the cited sources as of 24 October 2026. The reported nationwide cinema release is scheduled for 13 November 2026. Current trailer and film-listing links are not tickets or full-film access.",
       },
       {
         question: "Who plays Ebube in Issakaba: The Return?",
