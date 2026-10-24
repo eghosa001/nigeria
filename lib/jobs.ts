@@ -238,9 +238,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
     organization: "Kaduna State Primary Health Care Board",
     kind: "recruitment-exercise",
     sector: "Government",
-    status: "open",
-    statusLabel: "Applications open until 14 October 2026",
-    summary: "Kaduna State's official recruitment portal is accepting applications for 10 permanent and pensionable Primary Health Care Board vacancy positions from 4 to 14 October 2026.",
+    status: "closed",
+    statusLabel: "Recruitment window closed 14 October — no PHCB vacancies open",
+    summary: "Kaduna State Primary Health Care Board advertised ten positions during 4–14 October 2026. This deadline has passed, and the official Kaduna State Job Bank now reports that no PHCB vacancy is open. The qualifications and CONHESS grades remain available here for candidates who already applied or are reviewing the 2026 exercise.",
     location: "Kaduna State, Nigeria",
     employmentType: "Permanent and pensionable health-service appointments",
     audiences: ["Nurses and midwives", "Community health workers", "Environmental health professionals", "Health educators", "Nutrition professionals", "Health information professionals"],
@@ -251,29 +251,29 @@ const rawJobOpportunities: CareerOpportunity[] = [
       "Applicants should open the exact vacancy on the Kaduna recruitment portal and use that role's qualification and CONHESS details as the controlling requirement."
     ],
     requirements: [
-      "Create or use the applicant profile required by the official Kaduna State recruitment portal.",
-      "Apply only to roles for which your education and professional registration match the vacancy requirements.",
-      "Treat the official portal's closing date of 14 October 2026 as the deadline rather than dates copied to third-party job sites."
+      "Existing candidates should retain access to their Kaduna State Job Bank profile and submitted application evidence. A reusable profile does not indicate a current PHCB vacancy.",
+      "The original advertised roles had different education and professional-registration rules. Use those published qualifications if asked for screening after an application submitted by 14 October.",
+      "The PHCB window ended 14 October 2026. Await an independently dated new official opening instead of treating a preserved archive as an invitation."
     ],
     documents: ["Education credentials relevant to the selected vacancy", "Professional registration evidence where required", "Identity/profile information requested by the official portal"],
     applicationSteps: [
-      "Open the official Kaduna State Recruitment Portal and review the 10 PHCB vacancies.",
-      "Open the exact role that matches your qualification and confirm the CONHESS placement, appointment type and professional registration requirement.",
-      "Complete or update your applicant profile and attach the credentials requested for that role.",
-      "Submit the application through the official Apply control before 14 October 2026 and retain the confirmation."
+      "Check the official Kaduna State Job Bank homepage: it now says no PHCB vacancy is currently open.",
+      "If you submitted on time, identify the exact role and CONHESS placement recorded in your application; requirements differ across the ten cadres.",
+      "Use the existing candidate dashboard to check submission evidence and any subsequently announced screening or CBT notices; do not upload identification to unofficial sites.",
+      "No new 2026 PHCB application is currently offered. Keep your original confirmation and do not pay anyone who promises a late submission."
     ],
     officialUrl: "https://recruitment.kdsg.gov.ng/",
-    officialUrlLabel: "Open the official Kaduna State recruitment portal",
-    verifiedAt: "2026-10-06",
+    officialUrlLabel: "Check closed PHCB intake on the official Kaduna State Job Bank",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-14",
-    nextMilestone: "The official vacancy window closes 14 October 2026.",
+    nextMilestone: "The official vacancy window closed on 14 October 2026. Existing candidates may check their dashboard; no new PHCB vacancy is currently open.",
     feeNote: "Use only the Kaduna State Government recruitment portal. No application fee is shown on the public vacancy listing.",
     sourceNotes: [
-      "The official portal currently lists 10 PHCB vacancy positions for the 4–14 October 2026 window.",
+      "The official Job Bank preserves the completed 4–14 October 2026 ten-position PHCB recruitment and states that no PHCB vacancy is currently open. The announced 1,800 appointments refer to the exercise in total, not each cadre.",
       "The public listings include permanent and pensionable appointments across nursing, community health, environmental health, nutrition and health-information roles."
     ],
     sources: [
-      { label: "Kaduna State Recruitment Portal — PHCB vacancies", url: "https://recruitment.kdsg.gov.ng/", lastChecked: "2026-10-06" }
+      { label: "Kaduna State Recruitment Portal — PHCB vacancies", url: "https://recruitment.kdsg.gov.ng/", lastChecked: "2026-10-24" }
     ]
   },
   {
