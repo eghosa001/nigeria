@@ -8038,7 +8038,7 @@
     ],
     "steps": [
       "Review NHIA's GIFSHIP programme details and confirm that a public-sector, OPSSHIP or other category is not the intended scheme.",
-      "Choose a supported class such as GIFSHIP-g for general public, GIFSHIP-r for retirees or the specific category NHIA confirms.",
+      "Choose the category NHIA confirms for your circumstances, such as GIFSHIP-g for the general public or GIFSHIP-r for retirees. Serving NYSC members have a separate GIFSHIP-n arrangement; check their NYSC enrolment route instead of assuming a personally paid GIFSHIP-g plan.",
       "Read NHIA's dedicated GIFSHIP Registration Requirements before assuming any family size or premium amount: its individual/family package wording is inconsistent.",
       "For an individual/family, attend the NHIA office or submit the required enrolment forms with all identity and dependant documents.",
       "For a group, collect NHIA forms for each of at least 10 members, prepare the membership schedule, and choose the prescribed online/office enrolment method.",
@@ -8052,7 +8052,8 @@
       "The official enrolment-requirements page contains contradictory individual/family numerical wording; ask NHIA directly and keep its quote rather than inventing a total.",
       "Paying a Remita bill does not alone prove that coverage has been activated.",
       "Different NHIA programmes have different dependant rules; do not apply the employer's spouse-plus-four rule to every GIFSHIP group.",
-      "Editorial review remains flagged until NHIA reconciles the published individual/family pricing; only the clearly stated group amounts are used here as reference prices."
+      "Editorial review remains flagged until NHIA reconciles the published individual/family pricing; only the clearly stated group amounts are used here as reference prices.",
+      "NYSC says GIFSHIP-n cover for mobilised and serving corps members is funded by the Federal Government. Corps members should check the NYSC/NHIA scheme-specific enrolment process rather than pay for the general-public GIFSHIP package on the strength of this guide."
     ],
     "sources": [
       {
@@ -8065,7 +8066,7 @@
         "label": "NHIA Individual/Family Health Insurance Information",
         "agency": "National Health Insurance Authority",
         "url": "https://www.nhia.gov.ng/service/land-insurance/",
-        "lastChecked": "2026-10-16"
+        "lastChecked": "2026-10-24"
       },
       {
         "label": "NHIA enrolment form",
@@ -8077,14 +8078,20 @@
         "label": "NHIA published GIFSHIP prices, NIN and enrollment requirements",
         "agency": "National Health Insurance Authority",
         "url": "https://www.nhia.gov.ng/2776-2/",
-        "lastChecked": "2026-10-16"
+        "lastChecked": "2026-10-24"
+      },
+      {
+        "label": "NYSC — NHIA GIFSHIP-n enrolment for serving corps members",
+        "agency": "National Youth Service Corps",
+        "url": "https://www.nysc.gov.ng/nhia.html",
+        "lastChecked": "2026-10-24"
       }
     ],
     "related": [
       "nhia-find-right-health-plan",
       "nhia-private-sector-coverage"
     ],
-    "lastVerified": "2026-10-16",
+    "lastVerified": "2026-10-24",
     "searchTerms": [
       "NHIA GIFSHIP",
       "health insurance Nigeria self employed",
