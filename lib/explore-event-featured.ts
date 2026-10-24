@@ -11,7 +11,8 @@ export const featuredEventEndDates: Readonly<Record<string, string>> = {
   "felabration-2026": "2026-10-18",
   "design-week-lagos-2026": "2026-10-25",
   "lagos-fashion-week-2026": "2026-11-01",
-  "beneficial-ownership-asset-recovery-conference-2026": "2026-11-11",
+  // BOAR was postponed from November 2026 to June 2027, without exact dates.
+  // Do not promote an unconfirmed date to the Upcoming events carousel.
   "detty-december-lagos-2026": "2026-12-30",
   "ecowas-food-cultural-festival-benin-2026": "2026-10-31",
   "ofala-onitsha-2026": "2026-10-25",
@@ -25,6 +26,8 @@ export const featuredEventEndDates: Readonly<Record<string, string>> = {
   "smfest-abuja-2026": "2026-10-18",
   "fashion-fables-runway-africa-abuja-2026": "2026-10-18",
   "abuja-international-film-festival-2026": "2026-10-24",
+  // Eventbrite confirms Friday Oct 30, not a 31 Oct ticket.
+  "african-creators-conference-abuja-2026": "2026-10-30",
   "hallelujah-festival-lagos-october-2026": "2026-10-30",
   "moonshot-techcabal-lagos-2026": "2026-10-29",
   "festmint-abuja-2026": "2026-11-06",
