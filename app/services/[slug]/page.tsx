@@ -128,7 +128,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
   const agency = getAgency(service.agencySlug);
   const feeInSummary = leadAlreadyStatesFee(service.summary, service.feeLabel);
-  const hasAftercare = hasExplicitServiceGuidance(service.slug) || Boolean(getReviewedIcanGuidance(service.slug));
+  // Individually reviewed: NIS passport tracking is a status lookup, not a new application.
+  // Its generic journey, scenarios, aftercare and personal process tracker repeat
+  // the sourced steps and distract from the actual two-number lookup.
+  const isPassportTrackingOnly = service.slug === "passport-application-tracking";
+  const hasOtherRoutes = !isPassportTrackingOnly;
+  const hasAftercare = !isPassportTrackingOnly && (hasExplicitServiceGuidance(service.slug) || Boolean(getReviewedIcanGuidance(service.slug)));
+  const hasScenarios = !isPassportTrackingOnly && getServiceScenarioDossier(service).length > 0;
   const related = getRelatedServices(service, 6);
   const topicHubs = getGrowthHubsForService(service.slug).slice(0, 2);
   const topicSearches = topicHubs
@@ -268,7 +274,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="section guide-main-section">
         <div className="container guide-layout">
           <article className="guide-content">
-            <GuideQuickNav showQuickAnswers={searchAnswers.length > 0} showAftercare={hasAftercare} showScenarios={getServiceScenarioDossier(service).length > 0} />
+            <GuideQuickNav showOtherRoutes={hasOtherRoutes} showQuickAnswers={searchAnswers.length > 0} showAftercare={hasAftercare} showScenarios={hasScenarios} />
 
             <ServiceIntentShortcuts service={service} />
 
@@ -276,14 +282,16 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
             <ServiceRequirements service={service} />
 
-            <details className="compact-disclosure service-extra-routes">
-              <summary>Alternative application routes and troubleshooting</summary>
-              <ServiceJourney service={service} />
-            </details>
+            {hasOtherRoutes ? (
+              <details className="compact-disclosure service-extra-routes">
+                <summary>Alternative application routes and troubleshooting</summary>
+                <ServiceJourney service={service} />
+              </details>
+            ) : null}
 
             <ServiceContext service={service} />
 
-            {getServiceScenarioDossier(service).length > 0 ? (
+            {hasScenarios ? (
               <details className="compact-disclosure service-extra-cases">
                 <summary>Special cases and other options</summary>
                 <ServiceScenarios service={service} />
@@ -297,7 +305,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </details>
             ) : null}
 
-            <ProcessTracker service={service} />
+            {!isPassportTrackingOnly ? <ProcessTracker service={service} /> : null}
 
             {searchAnswers.length ? <ServiceSearchAnswers service={service} /> : null}
 
