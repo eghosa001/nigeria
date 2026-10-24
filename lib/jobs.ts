@@ -329,9 +329,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
     organization: "SNV",
     kind: "vacancy",
     sector: "International",
-    status: "open",
-    statusLabel: "Applications open",
-    summary: "SNV is recruiting a full-time Energy Advisor in Abuja for an energy project, with a two-year national employment contract and an application deadline of 8 October 2026.",
+    status: "closed",
+    statusLabel: "SNV Energy Advisor application deadline passed 8 October",
+    summary: "SNV's Abuja Energy Advisor national-contract vacancy published an 8 October 2026 closing date that has passed. The role involved a two-year energy project with a prospective start conditional on the contract award. An old SmartRecruiters 'I'm interested' control is not independent confirmation that the individual application was extended.",
     location: "Abuja, FCT",
     employmentType: "Full-time national employment contract (2 years)",
     audiences: ["Energy professionals", "Engineers", "Development-sector professionals", "Renewable-energy specialists"],
@@ -353,23 +353,23 @@ const rawJobOpportunities: CareerOpportunity[] = [
       "Referee details if requested during SNV's later reference and safeguarding checks"
     ],
     applicationSteps: [
-      "Open SNV's official SmartRecruiters vacancy page.",
-      "Review the Energy Advisor qualifications and confirm your energy-sector and development experience.",
-      "Upload your CV and motivation letter in English through the official application control.",
-      "Submit before the 8 October 2026 deadline and monitor the email address used for the application."
+      "Read the archived SNV SmartRecruiters Energy Advisor advert for its original role requirements and 8 October deadline.",
+      "If you submitted before the deadline, keep the original confirmation and monitor only employer communications.",
+      "The prior 1 November expected start was subject to contract award; neither award nor appointment is established by the advert.",
+      "Look for newly dated SNV roles on its careers website; do not assume the expired form accepts legitimate late applications."
     ],
     officialUrl: "https://jobs.smartrecruiters.com/snv/744000152591820",
     officialUrlLabel: "Apply on SNV's official vacancy page",
-    verifiedAt: "2026-10-05",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-08",
-    nextMilestone: "Applications close 8 October 2026. SNV lists an expected start date of 1 November 2026, subject to contract award timing.",
+    nextMilestone: "SNV published 8 October as the Energy Advisor application deadline; an expected 1 November start was contingent on contract award, not an assurance of hiring.",
     feeNote: "No application fee is listed. Apply only through SNV's official vacancy system.",
     sourceNotes: [
       "SNV lists the duty station as Abuja and the contract as a two-year full-time national employment contract.",
       "The official vacancy asks applicants to upload a CV and motivation letter in English and states that only shortlisted candidates will be contacted."
     ],
     sources: [
-      { label: "SNV Energy Advisor — SmartRecruiters", url: "https://jobs.smartrecruiters.com/snv/744000152591820", lastChecked: "2026-10-05" }
+      { label: "SNV Energy Advisor — SmartRecruiters", url: "https://jobs.smartrecruiters.com/snv/744000152591820", lastChecked: "2026-10-24" }
     ]
   },
   {
@@ -378,9 +378,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
     organization: "SNV",
     kind: "vacancy",
     sector: "International",
-    status: "open",
-    statusLabel: "Applications open",
-    summary: "SNV is recruiting a Project Manager in Abuja to lead an energy project, with a two-year national employment contract and an application deadline of 8 October 2026.",
+    status: "closed",
+    statusLabel: "SNV Project Manager recruitment closed 8 October",
+    summary: "SNV's Abuja Project Manager position for a two-year energy project published an 8 October 2026 application deadline. The individual SmartRecruiters application subsequently expired; the original advertisement remains for reference but does not authorize another registration or guarantee a November start.",
     location: "Abuja, FCT",
     employmentType: "Full-time national employment contract (2 years)",
     audiences: ["Senior energy professionals", "Project managers", "Development-sector leaders", "Engineers"],
@@ -402,23 +402,23 @@ const rawJobOpportunities: CareerOpportunity[] = [
       "Referee details if requested during SNV's later reference and safeguarding checks"
     ],
     applicationSteps: [
-      "Open SNV's official Project Manager vacancy page.",
-      "Compare your energy-sector leadership experience with the published qualifications.",
-      "Upload your CV and motivation letter in English through the official SmartRecruiters application.",
-      "Submit before 8 October 2026 and retain the application confirmation."
+      "Read SNV's original Abuja Project Manager posting as an archive with its 8 October application deadline.",
+      "Retain your acknowledgement and the CV or motivation letter if you applied during the advertised period.",
+      "The planned November contract start depended on an award and does not guarantee an appointment.",
+      "Seek a new individually dated SNV vacancy if you did not submit before the closing date."
     ],
     officialUrl: "https://jobs.smartrecruiters.com/SNV/744000152590475-project-manager",
     officialUrlLabel: "Apply on SNV's official vacancy page",
-    verifiedAt: "2026-10-05",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-08",
-    nextMilestone: "Applications close 8 October 2026. SNV lists an expected start date of 1 November 2026, subject to contract award timing.",
+    nextMilestone: "The original SNV Project Manager vacancy expired after 8 October; there is no issuer-confirmed new application window or guaranteed start.",
     feeNote: "No application fee is listed. Apply only through SNV's official vacancy system.",
     sourceNotes: [
       "SNV lists Abuja as the duty station and a two-year full-time national employment contract.",
       "The role covers overall project management, quality assurance, finance/contract management, people leadership and donor/stakeholder delivery."
     ],
     sources: [
-      { label: "SNV Project Manager — SmartRecruiters", url: "https://jobs.smartrecruiters.com/SNV/744000152590475-project-manager", lastChecked: "2026-10-05" }
+      { label: "SNV Project Manager — SmartRecruiters", url: "https://jobs.smartrecruiters.com/SNV/744000152590475-project-manager", lastChecked: "2026-10-24" }
     ]
   },
   {
@@ -1548,9 +1548,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
     organization: "Deloitte Nigeria",
     kind: "programme",
     sector: "Private",
-    status: "open",
-    statusLabel: "Applications open until 9 October 2026",
-    summary: "Deloitte Nigeria has reopened its 2026 graduate recruitment for the Tax & Legal unit in Lagos. The official advert closes on 9 October 2026 and says candidates who already applied in the cycle that closed on 10 April should not apply again.",
+    status: "closed",
+    statusLabel: "Deloitte Tax & Legal graduate applications ended 9 October",
+    summary: "Deloitte Nigeria's 2026 Graduate Recruitment Refresh for its Tax & Legal unit in Lagos advertised a 9 October 2026 deadline. That window has ended. The original issuer posting remains available, but does not prove a new intake; its notice also warns those who applied in the cycle ending 10 April against duplicate submissions.",
     location: "Lagos, Nigeria",
     employmentType: "Full-time graduate recruitment",
     audiences: ["Fresh graduates", "NYSC-completed applicants", "Tax & legal graduate applicants"],
@@ -1569,23 +1569,23 @@ const rawJobOpportunities: CareerOpportunity[] = [
     ],
     documents: ["CV/resume and the education/NYSC information requested by the official application form"],
     applicationSteps: [
-      "Open Deloitte's official SmartRecruiters advert for the 2026 Graduate Recruitment Refresh — Tax & Legal Unit.",
-      "Confirm that you meet the degree/HND, O'Level, age and NYSC requirements and that you have not previously written the Deloitte aptitude test.",
-      "If you applied in the earlier 2026 cycle that closed on 10 April, do not submit another application.",
-      "Complete the official application before 9 October 2026 and keep the confirmation."
+      "Consult Deloitte's original Tax & Legal graduate advert as a historical record of the 9 October closing date.",
+      "If you submitted before closing, retain confirmation and await the employer's official assessment updates.",
+      "Do not duplicate a prior 2026 application from the earlier April cycle; the original advert warns of disqualification.",
+      "Find a separate, newly dated Deloitte job posting before sending another application."
     ],
     officialUrl: "https://jobs.smartrecruiters.com/Deloitte6/744000153123709-2026-graduate-recruitment-refresh-tax-and-legal-unit-",
     officialUrlLabel: "Apply on Deloitte's official SmartRecruiters advert",
-    verifiedAt: "2026-10-06",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-09",
-    nextMilestone: "Applications close 9 October 2026.",
+    nextMilestone: "The 9 October 2026 application deadline passed; Deloitte cautions that repeat applications from its April cycle can disqualify the candidate.",
     feeNote: "No application fee. Deloitte's official advert warns that it never asks candidates for upfront recruitment payments.",
     sourceNotes: [
       "The live Deloitte advert is specifically a 2026 Graduate Recruitment Refresh for the Tax & Legal Unit in Lagos.",
       "The advert preserves the core early-career eligibility criteria and explicitly tells prior April applicants not to apply again."
     ],
     sources: [
-      { label: "Deloitte — 2026 Graduate Recruitment Refresh, Tax & Legal", url: "https://jobs.smartrecruiters.com/Deloitte6/744000153123709-2026-graduate-recruitment-refresh-tax-and-legal-unit-", lastChecked: "2026-10-06" }
+      { label: "Deloitte — 2026 Graduate Recruitment Refresh, Tax & Legal", url: "https://jobs.smartrecruiters.com/Deloitte6/744000153123709-2026-graduate-recruitment-refresh-tax-and-legal-unit-", lastChecked: "2026-10-24" }
     ]
   },
   {
