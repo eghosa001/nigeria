@@ -1543,7 +1543,7 @@
     "slug": "waec-lost-certificate",
     "title": "What to do if a WAEC certificate is lost or damaged",
     "shortTitle": "Lost WAEC certificate",
-    "summary": "WAEC does not issue an ordinary duplicate of a lost certificate. It offers a statement of result, paid result confirmation or an attestation of result for lost or damaged certificates; use WAEC's official support route and confirm the requirements for your examination type. WAEC does not routinely print a duplicate of a lost original. Candidates must choose a statement, attestation or result confirmation based on what the receiving institution actually requires.",
+    "summary": "WAEC does not normally replace an original certificate reported lost or damaged. Its official FAQ instead identifies a statement of result, paid confirmation of results and attestation of result as different remedies. Before paying, ask the school, employer or institution requesting proof which specific WAEC-issued document it will accept and confirm your examination type and service requirements with WAEC.",
     "category": "Education",
     "agencySlug": "waec",
     "feeLabel": "Fee depends on requested service",
@@ -1559,13 +1559,13 @@
       "Read WAEC Nigeria's official FAQ on lost or damaged certificates to choose the correct outcome: statement of result, paid confirmation of results or attestation of result rather than a reprinted certificate.",
       "School candidates should ask their former school for help identifying the appropriate WAEC office or submission route; private candidates can contact WAEC directly through its official channels.",
       "Ask the responsible WAEC office for the current supporting documents, identity requirements and fee for the chosen service before submitting an application or paying.",
-      "For a school-candidate record, approach the former school or principal first; private candidates should confirm the direct WAEC office route rather than relying on a school that did not enter them.",
+      "After choosing the service, verify the official WAEC office or submission channel and retain the receipt; do not send examination numbers, identity documents or payment to an unverified agent.",
       "If an agent advertises a 'duplicate WAEC certificate', decline the offer and verify the claimed product through the official WAEC Nigeria FAQ or office.",
-      "Keep the official acknowledgement and follow up through the same WAEC route. The original lost certificate is not reissued as an ordinary duplicate."
+      "Keep the official acknowledgement and track dispatch or collection through the same WAEC channel. Confirm that any formal result confirmation reaches the intended receiving institution."
     ],
     "notes": [
-      "WAEC's FAQ states that lost certificates are not replaced with a duplicate certificate in the ordinary way.",
-      "WAEC explicitly states that lost certificates are not replaced in the usual manner; statements, confirmation and attestation are different official options.",
+      "WAEC's FAQ distinguishes three remedies after loss: a statement of result, formal result confirmation and an attestation document. These are not identical outputs.",
+      "School candidates may need help from their original school, while private candidates should check with WAEC directly; the proper route depends on examination type and the required output.",
       "Check the document type the recipient will accept before paying for a service that produces a different output.",
       "Ordinary certificate loss does not mean WAEC can change grades or recreate a full replacement original."
     ],
@@ -1574,10 +1574,10 @@
         "label": "WAEC Nigeria FAQ",
         "agency": "West African Examinations Council Nigeria",
         "url": "https://www.waecnigeria.org/faq",
-        "lastChecked": "2026-10-14"
+        "lastChecked": "2026-10-24"
       }
     ],
-    "lastVerified": "2026-10-16",
+    "lastVerified": "2026-10-24",
     "searchTerms": [
       "Lost WAEC certificate",
       "What to do if a WAEC certificate is lost or damaged",
