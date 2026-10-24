@@ -92,7 +92,9 @@ export function getStepDetails(service: Service): StepDetail[] {
   return service.steps.map((instruction, index) => {
     const stage = reviewedStageSequences[service.slug]?.[index] ?? stageFor(instruction, index);
     const checkpoint = checkpointFor(instruction, stage);
-    const keep = keepFor(instruction);
+    // The NIS status lookup only reads an existing application; attaching a
+    // generic "keep as evidence" instruction to finding its number adds filler.
+    const keep = service.slug === "passport-application-tracking" ? undefined : keepFor(instruction);
     // A generic reminder should not occupy a full paragraph at every step.
     const uniqueCheckpoint = checkpoint && !checkpoints.has(checkpoint) ? checkpoint : undefined;
     const uniqueKeep = keep && !keeps.has(keep) ? keep : undefined;
