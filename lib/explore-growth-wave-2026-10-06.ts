@@ -64,23 +64,23 @@ export const exploreGrowthWave: ExploreGuide[] = [
     summary: "The 2026 All Africa Challenge Trophy runs 4–6 November at IBB International Golf & Country Club in Abuja, bringing national women’s amateur golf teams from around 30 African countries together for the continental team championship.",
     intro: [
       "The All Africa Challenge Trophy is scheduled for 4 to 6 November 2026 at IBB International Golf & Country Club in Maitama, Abuja. The Ladies Golf Association of Nigeria is hosting the team championship, with national sides from around 30 countries expected.",
-      "The competition sits inside a wider 2–7 November programme. Spectator access and tee times were not yet published when this guide was reviewed, so confirm the live organiser information before travelling to the club."
+      "The AACT programme runs 2–7 November, with team-championship rounds 4–6 November and a closing banquet on 6 November. The Ladies Golf Association of Nigeria now also lists a separate Nigeria Ladies Open for 7–10 November, expanding the overall multi-event golf calendar to 10 November. Do not treat all nine dates as AACT team-match days. Public spectator access and exact tee times are not established by a competitor-registration form."
     ],
     bestFor: ["Golf", "Sports", "Women’s sport", "November events"],
     highlights: [
-      { name: "4–6 November 2026", detail: "The championship competition is scheduled across three days, within a wider 2–7 November programme." },
+      { name: "4–6 November 2026", detail: "AACT team rounds take place 4–6 November within the 2–7 November AACT programme. The separate Nigeria Ladies Open follows 7–10 November." },
       { name: "IBB International Golf & Country Club", detail: "The listed venue is the Maitama golf club in Abuja." },
-      { name: "Pan-African team event", detail: "National women’s amateur teams from around 30 countries are expected to compete." },
+      { name: "Pan-African team event", detail: "Women’s national amateur teams compete in the AACT; LGAN separately schedules a supporters game on 3 November and a Ladies Open on 7–10 November." },
       { name: "Spectator details pending", detail: "Tee times and public-access arrangements had not been announced at the latest review." }
     ],
     planning: [
-      { label: "Confirm spectator access", detail: "Check the organiser or club before travelling; do not assume general public entry for every competition session." },
+      { label: "Confirm the right event and access", detail: "LGAN’s registration concerns teams, supporters and eligible competitors; it is not proof of public spectator admission. Ask the organiser/club about watching the 4–6 November AACT rounds." },
       { label: "Check tee times", detail: "Golf schedules can start early and change with tournament operations or weather, so verify the day’s order of play." },
       { label: "Plan Maitama transport", detail: "Allow time for event traffic and any club-entry checks when using ride-hailing or private transport." },
       { label: "Respect course rules", detail: "Follow spectator zones, silence requirements and photography restrictions communicated by officials at the venue." }
     ],
     source: { label: "Visit Abuja — All Africa Challenge Trophy 2026", href: "https://www.visitabuja.org/event/all-africa-challenge-trophy-aact-2026/" },
-    lastReviewed: "2026-10-06"
+    lastReviewed: "2026-10-24"
   },
   {
     slug: "art-meets-fashion-abuja-2026",
