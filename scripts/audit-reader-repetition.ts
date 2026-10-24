@@ -33,6 +33,34 @@ export function findDuplicatePassages(passages: Passage[]) {
     }))).sort((a, b) => b.appearances - a.appearances || a.url.localeCompare(b.url));
 }
 
+/**
+ * Same substantive paragraph reused on different canonical URLs.
+ * This is an editorial REVIEW LEAD, not a plagiarism finding. Agency
+ * disclaimers and legitimately identical legal text can be appropriate.
+ */
+export function findCrossPageDuplicatePassages(passages: Passage[]) {
+  const groups = new Map<string, Passage[]>();
+  for (const passage of passages) {
+    const normalized = comparable(passage.text);
+    if (normalized.length < 85) continue;
+    groups.set(normalized, [...(groups.get(normalized) ?? []), passage]);
+  }
+  return [...groups.values()].flatMap((group) => {
+    const byUrl = new Map<string, Passage>();
+    for (const passage of group) if (!byUrl.has(passage.url)) byUrl.set(passage.url, passage);
+    if (byUrl.size < 2) return [];
+    const distinct = [...byUrl.values()];
+    return [{
+      affectedUrls: distinct.length,
+      urls: distinct.map(({ url }) => url).sort(),
+      pillars: [...new Set(distinct.map(({ pillar }) => pillar))].sort(),
+      recordKinds: [...new Set(distinct.map(({ recordKind }) => recordKind))].sort(),
+      sample: distinct[0].text.slice(0, 210),
+      interpretation: "Needs editorial review; exact shared prose across URLs is not by itself copied-content proof.",
+    }];
+  }).sort((a, b) => b.affectedUrls - a.affectedUrls || a.urls[0].localeCompare(b.urls[0]));
+}
+
 export function auditPublicCatalogues() {
   const records = [...collectVoiceCorpus(), ...collectPublicPageVoice()];
   const seenPages = new Map<string, string>();
@@ -45,6 +73,7 @@ export function auditPublicCatalogues() {
     }
   }
   const duplicates = findDuplicatePassages(paragraphs);
+  const crossPageDuplicates = findCrossPageDuplicatePassages(paragraphs);
   const presentationDedup = {
     serviceLeadsWithExistingFee: publicServices.filter((entry) =>
       leadAlreadyStatesFee(entry.summary, entry.feeLabel)).length,
@@ -65,10 +94,12 @@ export function auditPublicCatalogues() {
     sourceRecordsInspected: records.length,
     uniqueCataloguedRoutes: seenPages.size,
     exactRepeatFindings: duplicates.length,
+    crossPageRepeatFindings: crossPageDuplicates.length,
+    crossPageDuplicates,
     presentationDedup,
     byPillar,
     duplicates,
-    limitation: "Static catalogue and public-page prose inventory, not a full HTML crawl. Related concepts, repeated figures and duplicated shared JSX sections require rendered-page review; findings are not automatically deleted.",
+    limitation: "Static catalogue and public-page prose inventory, not a full HTML crawl. Shared passages, including legitimate common legal text, are editorial review leads only; external copying, licensing and rendered JSX require separate proof. Findings never trigger automatic deletion.",
   };
 }
 
@@ -79,9 +110,13 @@ if (process.argv[1]?.endsWith("audit-reader-repetition.ts")) {
     console.log("PAGE_REPETITION_AUDIT " + JSON.stringify({
       sourceRecordsInspected: result.sourceRecordsInspected,
       uniqueCataloguedRoutes: result.uniqueCataloguedRoutes,
-      exactRepeatFindings: result.exactRepeatFindings, presentationDedup: result.presentationDedup, byPillar: result.byPillar,
+      exactRepeatFindings: result.exactRepeatFindings, crossPageRepeatFindings: result.crossPageRepeatFindings,
+      presentationDedup: result.presentationDedup, byPillar: result.byPillar,
       limitation: result.limitation,
     }));
+    for (const row of result.crossPageDuplicates.slice(0, 20)) {
+      console.log("CROSS_PAGE_REVIEW " + row.affectedUrls + " routes " + row.urls.slice(0, 5).join(", ") + ": " + row.sample);
+    }
     for (const row of result.duplicates.slice(0, 35)) {
       console.log(row.url + " (" + row.appearances + " copies, " + row.recordKinds.join(", ") + "): " + row.sample);
     }
