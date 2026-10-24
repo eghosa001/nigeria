@@ -9,9 +9,9 @@ export const octoberVerifiedProgrammes: CareerOpportunity[] = [
     organization: "African Development Bank Group",
     kind: "programme",
     sector: "International",
-    status: "open",
-    statusLabel: "Applications close 12 October 2026 (midnight GMT)",
-    summary: "The African Development Bank is recruiting for the first 2027 internship session, expected to begin from 15 January 2027. This is a postgraduate internship, not a general undergraduate vacancy: eligible applicants must be enrolled in a master's programme or have obtained that degree within the past year. Placements may be remote or at headquarters and country offices, according to departmental needs.",
+    status: "closed",
+    statusLabel: "Session 1 application deadline passed — 12 October 2026 (midnight GMT)",
+    summary: "The African Development Bank's Session 1 application window for its 2027 internship programme closed at midnight GMT on 12 October 2026. This guide documents the concluded intake, not an open vacancy. Selected interns are expected to begin from 15 January 2027. Applicants needed to be enrolled in a master's programme or within one year of obtaining the degree; remote placement was not guaranteed.",
     location: "Abidjan, Côte d'Ivoire, country or regional offices, or remote; assigned by the Bank",
     employmentType: "Internship programme (Session 1, 2027)",
     audiences: ["Current master's students", "Recent master's graduates", "Citizens of AfDB member countries", "Eligible Nigerian graduates"],
@@ -23,10 +23,10 @@ export const octoberVerifiedProgrammes: CareerOpportunity[] = [
       "Communicate effectively in English or French, with the language proficiency described in the official notice; practical office software skills are expected."
     ],
     requirements: [
-      "Apply for Session 1 of the 2027 intake, not a past intake or an unrelated AfDB regular staff position.",
+      "Session 1 of the 2027 intake is closed; candidates who already applied should use their existing application record. A future internship session requires a newly dated official vacancy notice.",
       "Be prepared for either a remote or on-site placement; the Bank assigns the location according to hiring-unit needs. A remote option is not guaranteed.",
       "The Bank may recruit approximately 40 interns for this session, but selection is competitive and an application is not an offer.",
-      "The official deadline is midnight GMT on 12 October 2026. Do not assume that Nigerian midnight is the closing time."
+      "The official midnight GMT deadline on 12 October 2026 has passed. The still-readable advertisement does not establish a reopened application window."
     ],
     documents: [
       "Current CV of no more than two pages, in Word or PDF as specified by the AfDB application checklist.",
@@ -35,27 +35,28 @@ export const octoberVerifiedProgrammes: CareerOpportunity[] = [
       "Accurate email, phone number and nationality information for the official online application."
     ],
     applicationSteps: [
-      "Open the Bank's official 2027 Internship Program — Session 1 vacancy announcement.",
-      "Read both the official eligibility requirements and terms before creating an application.",
-      "Create or access your candidate account on the AfDB recruitment portal; use the external-candidate route if you do not work at the Bank.",
-      "Upload the two-page CV, master's enrolment/degree evidence and motivation letter, then review all fields before submission.",
-      "Submit by midnight GMT on 12 October and keep the electronic receipt. The Bank says unsuccessful applicants may not receive an individual rejection; the selection page refers to notification by 30 November 2026."
+      "Read the Bank's official 2027 Internship Program — Session 1 vacancy announcement as an archive of the concluded intake.",
+      "If you already applied, revisit the Bank's eligibility and terms for the selection procedure and keep your acknowledgement.",
+      "Keep access to the email and candidate account used before the deadline; do not treat an archived Apply button as a fresh intake.",
+      "Keep copies of the submitted CV and supporting documents if the Bank requests a further assessment. The document checklist describes the concluded intake.",
+      "The Bank's selection-cycle page says all applicants will receive an outcome email by 30 November 2026, while its terms say no response by that date means unsuccessful. These instructions differ; keep the submission acknowledgement and check official Bank messages."
     ],
     officialUrl: "https://www.afdb.org/en/vacancy/2027-internship-program-session-1-97099",
-    officialUrlLabel: "Open the official AfDB 2027 internship vacancy",
-    verifiedAt: "2026-10-10",
+    officialUrlLabel: "Read the archived AfDB 2027 Session 1 vacancy",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-12",
-    nextMilestone: "Application closes midnight GMT, 12 October; internship starts from 15 January 2027 for selected interns.",
+    nextMilestone: "Session 1 applications closed on 12 October 2026 at midnight GMT. AfDB's published outcome date is 30 November 2026; selected interns are expected to begin from 15 January 2027.",
     feeNote: "The Bank states that eligible interns receive a stipend and medical insurance, but interns pay for travel and upkeep where required. Do not pay a third party to submit an application.",
     sourceNotes: [
       "This is a postgraduate internship; a bachelor's degree by itself does not satisfy the master's enrolment/recency condition.",
-      "Eligibility, required attachments, stipend provisions and precise GMT cut-off were cross-checked against the Bank's official vacancy, programme eligibility and terms pages.",
+      "Eligibility, attachments, stipend terms and the deadline are from AfDB's official published pages. The selection-cycle page and terms differ about individual email notifications; neither guarantees an offer.",
       "The Bank's location is not a promise of a Nigerian remote role."
     ],
     sources: [
-      { label: "AfDB — 2027 Internship Session 1 vacancy", url: "https://www.afdb.org/en/vacancy/2027-internship-program-session-1-97099", lastChecked: "2026-10-10" },
-      { label: "AfDB — eligibility requirements", url: "https://www.afdb.org/en/about-us/careers/internship-programme/eligibility-requirements", lastChecked: "2026-10-10" },
-      { label: "AfDB — application checklist and conditions", url: "https://www.afdb.org/en/about-us/careers/internship-programme/terms-and-conditions", lastChecked: "2026-10-10" }
+      { label: "AfDB — 2027 Internship Session 1 vacancy", url: "https://www.afdb.org/en/vacancy/2027-internship-program-session-1-97099", lastChecked: "2026-10-24" },
+      { label: "AfDB — eligibility requirements", url: "https://www.afdb.org/en/about-us/careers/internship-programme/eligibility-requirements", lastChecked: "2026-10-24" },
+      { label: "AfDB — application checklist and conditions", url: "https://www.afdb.org/en/about-us/careers/internship-programme/terms-and-conditions", lastChecked: "2026-10-24" },
+      { label: "AfDB — 2027 Session 1 selection cycle and outcome notice", url: "https://www.afdb.org/en/about-us/careers/internship-programme/selection-cycle", lastChecked: "2026-10-24" }
     ]
   },
   {
