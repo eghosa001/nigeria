@@ -10,6 +10,42 @@ export const reviewedEventSlugs20261019 = [
 ] as const;
 
 export function applyCurrentEventVisitorDecisions20261019(guide: ExploreGuide): ExploreGuide {
+  if (guide.slug === "smfest-abuja-2026") {
+    // The official 17–18 October programme is over; ticket cards now say
+    // 'Out of stock'. Historical details remain useful, but are not a booking.
+    // The contact FAQ still differs on whether 16 October was an event day.
+    const citations = [
+      { label: "SMFest — official 2026 event dates and Wuye venue", href: "https://smfest.org/" },
+      { label: "SMFest — 2026 ticket tiers marked out of stock", href: "https://smfest.org/ticket/" },
+      { label: "SMFest — contact FAQ with differing 16–18 October dates", href: "https://smfest.org/contact/" },
+    ];
+    const sources = [...(guide.sources ?? [])];
+    for (const citation of citations) {
+      if (guide.source?.href !== citation.href && !sources.some(source => source.href === citation.href)) sources.push(citation);
+    }
+    return {
+      ...guide,
+      summary: "SMFest Abuja's advertised 17–18 October 2026 conference at Family Worship Centre, Wuye, has passed. This guide records the announced AdvantageX programme, venue and former ticket categories; it is not a current ticket offer or evidence that every planned session took place.",
+      intro: [
+        "The organiser's main event page advertised 17 and 18 October 2026 at Family Worship Centre in Wuye, Abuja, with a 9 AM start and the AdvantageX theme. Those dates have passed. The site still contains booking links, but the 2026 ticket page marks the listed tiers out of stock. Do not use an old checkout link to plan attendance.",
+        "An unresolved discrepancy remains in the organiser's own pages: its contact FAQ says 16–18 October, whereas its event homepage and About FAQ say 17–18 October. That difference may reflect ancillary activities, but there is no source-backed reason to claim Friday was a public conference day. The published programme does not verify what actually took place.",
+      ],
+      highlights: [
+        { name: "Advertised main dates: 17–18 October 2026", detail: "The event homepage listed Saturday and Sunday, with a 9 AM start. Both dates have passed." },
+        { name: "Advertised venue: Family Worship Centre, Wuye", detail: "FWC Wuye, Abuja was the organiser's stated main conference location." },
+        { name: "AdvantageX programme", detail: "The organiser advertised business, technology and creator sessions; actual speaker attendance and delivered sessions have not been independently verified." },
+        { name: "Historical ticket tiers", detail: "The organiser displayed ₦15,000–₦250,000 categories. Its ticket page now shows them as out of stock; those amounts are not current offers." },
+      ],
+      planning: [
+        { label: "Can you still buy a 2026 conference ticket?", detail: "The advertised event ended on 18 October. The organiser's 2026 ticket categories are marked out of stock. Do not pay a reseller or follow an undated invitation for this edition." },
+        { label: "Where was the 2026 venue?", detail: "Family Worship Centre, Wuye, Abuja. This is a record of the announced location, not an upcoming event booking or assertion that every programme activity happened there." },
+        { label: "Why do the organiser's dates disagree?", detail: "SMFest's homepage lists 17–18 October, but its contact FAQ says 16–18 October. Treat 17–18 as the advertised main conference dates and verify any separately claimed 16 October session with the organiser." },
+        { label: "Looking for highlights or a future edition?", detail: "Check SMFest's new dated announcements or published recordings. Do not assume the 2026 ticket price, speaker roster, venue or programme will apply to a future event." },
+      ],
+      sources,
+      lastReviewed: "2026-10-24",
+    };
+  }
   if (guide.slug === "nifafest-abuja-2026") {
     return {
       ...guide,
