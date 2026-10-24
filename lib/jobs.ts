@@ -472,9 +472,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
     title: "Nigerian Air Force Airmen/Airwomen Recruitment 2026",
     organization: "Nigerian Air Force",
     sector: "Government",
-    status: "open",
-    statusLabel: "Applications open",
-    summary: "The Nigerian Air Force 2026 Airmen/Airwomen Basic Military Training Course recruitment is open. The official portal shows an application window from 3 September to 14 October 2026.",
+    status: "closed",
+    statusLabel: "NAF BMTC applications closed — aptitude test scheduled 24 October",
+    summary: "The NAF BMTC 47/2026 application window ended 14 October. The official portal now says applications are closed. A notice published 22 October invited specific eligible applicants to a zonal general aptitude test scheduled for 24 October 2026 at 7:00 a.m. across 15 centres. It is not an invitation for unregistered people to apply.",
     location: "Nigeria",
     employmentType: "Military recruitment / Basic Military Training Course",
     audiences: ["SSCE holders", "ND/NCE holders", "Tradesmen/Women", "Non-Tradesmen/Women"],
@@ -497,25 +497,26 @@ const rawJobOpportunities: CareerOpportunity[] = [
       "Any additional documents listed in the current application instructions"
     ],
     applicationSteps: [
-      "Open the official Nigerian Air Force recruitment portal.",
-      "Confirm that you are applying for the open Airmen/Airwomen BMTC exercise, not the closed DSSC route.",
-      "Read the current exercise instructions and verify your age, height and qualification category.",
-      "Start a new application through the official portal and complete the requested information.",
-      "Keep your application details so you can continue or check later stages through the same portal."
+      "Check the official NAF recruitment portal: BMTC 47/2026 applications closed on 14 October 2026.",
+      "If you applied during the original intake, consult the official 22 October invitation lists and the assigned zonal aptitude-test centre.",
+      "The NAF notice scheduled the test for 24 October at 7:00 a.m. with acknowledgement form, pencil and eraser; follow the published ban on prohibited gadgets.",
+      "Only candidates specifically invited should attend; do not infer a second session or reopening without an issuer announcement.",
+      "Recruitment is free. Retain the original acknowledgement and do not pay anybody for a selection slot."
     ],
     officialUrl: "https://nafrecruitment.airforce.mil.ng/",
     officialUrlLabel: "Apply on the official NAF recruitment portal",
-    verifiedAt: "2026-10-05",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-14",
-    nextMilestone: "Applications are open until 14 October 2026 according to the official portal.",
+    nextMilestone: "The official 22 October NAF notice scheduled a 24 October 2026, 7:00 a.m. aptitude test for named applicants; no new recruitment window is open.",
     feeNote: "The Nigerian Air Force states that recruitment/enlistment is FREE and is done through its official recruitment portal.",
     sourceNotes: [
-      "The official NAF portal marks the Airmen/Airwomen BMTC exercise as open.",
+      "The official NAF portal now marks BMTC applications closed. Its 22 October notice invites eligible candidates to a zonal aptitude test.",
       "The portal lists 3 September 2026 to 14 October 2026 for the current exercise.",
-      "The DSSC section on the same portal is currently marked closed."
+      "Both the BMTC and DSSC application periods are currently closed on the NAF portal."
     ],
     sources: [
-      { label: "Nigerian Air Force Recruitment Portal", url: "https://nafrecruitment.airforce.mil.ng/", lastChecked: "2026-10-05" }
+      { label: "Nigerian Air Force Recruitment Portal", url: "https://nafrecruitment.airforce.mil.ng/", lastChecked: "2026-10-24" },
+      { label: "NAF official BMTC 47/2026 zonal test notice of 22 October", url: "https://nafrecruitment.airforce.mil.ng/updates/", lastChecked: "2026-10-24" }
     ]
   },
   {
@@ -2412,9 +2413,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
     organization: "University of Benin",
     kind: "recruitment-exercise",
     sector: "Government",
-    status: "open",
-    statusLabel: "Applications open",
-    summary: "The University of Benin is accepting applications for teaching and non-teaching positions under an advertisement published 27 August 2026 for a six-week application period.",
+    status: "closed",
+    statusLabel: "UNIBEN six-week staff intake ended in October",
+    summary: "UNIBEN's teaching and non-teaching vacancy advertisement of 27 August 2026 invited applications for six weeks, ending around 8 October 2026. The historical university news post is still visible but does not announce another intake; the page retains the original CV and referee requirements.",
     location: "Benin City, Edo State",
     employmentType: "Academic and non-teaching university positions",
     audiences: ["Academics", "Administrators", "Technical professionals", "University professionals"],
@@ -2422,15 +2423,21 @@ const rawJobOpportunities: CareerOpportunity[] = [
     qualifications: ["Qualifications depend on the advertised position; applicants must satisfy the specific academic or non-teaching criteria in UNIBEN's official notice."],
     requirements: ["Use the UNIBEN employment portal linked by the university.", "Prepare the application letter, detailed CV and passport photograph requested by the notice.", "Meet the position-specific academic, professional and NYSC requirements where applicable."],
     documents: ["Application letter", "Detailed CV", "Passport photograph", "Credentials and supporting information required by the selected position"],
-    applicationSteps: ["Open UNIBEN's official 2026 vacancy notice.", "Choose the teaching or non-teaching position.", "Open the linked UNIBEN employment portal.", "Upload the requested application materials.", "Submit within the six-week application window."],
+    applicationSteps: [
+      "Read UNIBEN's 27 August staff recruitment notice as the source for the original six-week application period.",
+      "If you applied in time, keep your employment-portal acknowledgement, application letter and detailed CV.",
+      "Referees were instructed to supply confidential reports within one week after closing; this is not an extension for new applications.",
+      "Follow the university's own future selection and interview communications; an old vacancy link does not establish a new intake.",
+      "Do not pay anyone claiming to provide a late UNIBEN academic or non-teaching application."
+    ],
     officialUrl: "https://news.uniben.edu/advertisement-for-teaching-and-non-teaching-staff-positions-university-of-benin-2/",
     officialUrlLabel: "Read UNIBEN 2026 vacancy notice",
-    verifiedAt: "2026-10-05",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-08",
-    nextMilestone: "The six-week window from 27 August 2026 runs to 8 October 2026.",
+    nextMilestone: "The six-week window from 27 August ended around 8 October 2026. An additional week for referee reports did not extend new candidate registration.",
     feeNote: "Apply through the University of Benin portal linked in the official notice.",
     sourceNotes: ["UNIBEN's official notice states that applications are invited for teaching and non-teaching positions and that the advertisement runs for six weeks from 27 August 2026."],
-    sources: [{ label: "UNIBEN 2026 Teaching and Non-Teaching Vacancies", url: "https://news.uniben.edu/advertisement-for-teaching-and-non-teaching-staff-positions-university-of-benin-2/", lastChecked: "2026-10-05" }]
+    sources: [{ label: "UNIBEN 2026 Teaching and Non-Teaching Vacancies", url: "https://news.uniben.edu/advertisement-for-teaching-and-non-teaching-staff-positions-university-of-benin-2/", lastChecked: "2026-10-24" }]
   },
   {
     slug: "unilag-professorial-chair-2026",
@@ -2443,9 +2450,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
       locations: [{ locality: "Akoka", region: "Lagos State", country: "NG" }]
     },
     sector: "Government",
-    status: "open",
-    statusLabel: "Applications open",
-    summary: "UNILAG is accepting applications for the Senator Douye Diri Professorial Chair in Leadership and Good Governance. The three-year senior academic appointment closes on 20 October 2026.",
+    status: "closed",
+    statusLabel: "UNILAG Professorial Chair applications closed 20 October",
+    summary: "UNILAG's September 2026 vacancy for the three-year Senator Douye Diri Professorial Chair in Leadership and Good Governance carried a 20 October 2026 closing date. That deadline has passed; the original announcement is an archive, not evidence that late applications are allowed.",
     location: "Akoka, Lagos",
     employmentType: "Three-year senior academic appointment",
     audiences: ["Full Professors", "Senior academics", "Political science scholars", "Leadership and governance researchers"],
@@ -2473,18 +2480,17 @@ const rawJobOpportunities: CareerOpportunity[] = [
       "Online application acknowledgement slip"
     ],
     applicationSteps: [
-      "Read the full UNILAG Professorial Chair notice and confirm that you meet the minimum eligibility criteria.",
-      "Prepare the CV, publications, Personal Statement and the required two-year strategic plan.",
-      "Complete the application through UNILAG's official career portal at career.unilag.edu.ng/jobportal/jobportal/.",
-      "Print or save the acknowledgement slip produced by the online application.",
-      "Follow the notice's submission instructions to the Office of Advancement or Human Resources Management Directorate.",
-      "Complete submission on or before 20 October 2026."
+      "Read the 9 September university vacancy notice as a record of the original Professorial Chair eligibility and deadline.",
+      "If you submitted before 20 October, keep the UNILAG online acknowledgement and proof of delivery to the prescribed office.",
+      "Retain the detailed CV, publications, Personal Statement and two-year strategic plan for any requested official follow-up.",
+      "The former career-portal link does not confirm applications have reopened; look for a new dated university notice.",
+      "Do not assume an interview or appointment date from the original announcement."
     ],
     officialUrl: "https://unilag.edu.ng/call-for-applications-for-the-senator-douye-diri-professorial-chair-in-leadership-and-good-governance-department-of-political-science/",
     officialUrlLabel: "Open UNILAG vacancy notice",
-    verifiedAt: "2026-10-05",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-20",
-    nextMilestone: "Applications close Tuesday, 20 October 2026.",
+    nextMilestone: "The official 20 October 2026 Professorial Chair closing date has passed; no subsequent shortlist or extension is established by that notice.",
     feeNote: "Use the UNILAG career portal and submission contacts stated in the university's official notice.",
     sourceNotes: [
       "UNILAG published the call on 9 September 2026 and states that applications close on 20 October 2026.",
@@ -2492,8 +2498,8 @@ const rawJobOpportunities: CareerOpportunity[] = [
       "UNILAG directs candidates to its official career portal and requires a Personal Statement plus a detailed two-year strategic plan."
     ],
     sources: [
-      { label: "UNILAG Professorial Chair Vacancy", url: "https://unilag.edu.ng/call-for-applications-for-the-senator-douye-diri-professorial-chair-in-leadership-and-good-governance-department-of-political-science/", lastChecked: "2026-10-05" },
-      { label: "UNILAG Career Portal", url: "https://career.unilag.edu.ng/jobportal/jobportal/", lastChecked: "2026-10-05" }
+      { label: "UNILAG Professorial Chair Vacancy", url: "https://unilag.edu.ng/call-for-applications-for-the-senator-douye-diri-professorial-chair-in-leadership-and-good-governance-department-of-political-science/", lastChecked: "2026-10-24" },
+      { label: "UNILAG Career Portal", url: "https://career.unilag.edu.ng/jobportal/jobportal/", lastChecked: "2026-10-24" }
     ]
   },
   {
