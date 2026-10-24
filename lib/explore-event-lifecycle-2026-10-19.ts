@@ -10,6 +10,39 @@ export const reviewedEventSlugs20261019 = [
 ] as const;
 
 export function applyCurrentEventVisitorDecisions20261019(guide: ExploreGuide): ExploreGuide {
+  if (guide.slug === "smfest-abuja-2026") {
+    // The organiser still advertises tickets, but its explicitly dated October
+    // 2026 edition has passed. Do not claim confirmed attendance or a new edition.
+    return {
+      ...guide,
+      title: "SMFest Abuja 2026: Past Event, Venue & Programme Record",
+      summary: "SMFest Abuja advertised its AdvantageX conference for 17–18 October 2026 at Family Worship Centre, Wuye. Those dates have passed. This is a reference to the organiser's published programme, not an open ticket offer or confirmation of the event's outcome.",
+      intro: [
+        "The SMFest organiser listed the Abuja edition for Saturday 17 and Sunday 18 October 2026 from 9am at Family Worship Centre in Wuye. It promoted technology, business, social media and creator sessions under the AdvantageX theme; this describes the published programme rather than verified attendance or delivered sessions.",
+        "The official main website and About FAQ list 17–18 October, while its Contact FAQ lists 16–18 October. The discrepancy may relate to Friday activities, but the organiser has not established that in the cited pages. All of these dates are now past.",
+        "Ticket and volunteering buttons may still appear on the organiser's site. They are not evidence that the October edition is accepting new registrations or that a new Abuja date has been announced. Seek a fresh dated event notice, not an old checkout link."
+      ],
+      highlights: [
+        { name: "Advertised dates", detail: "The main organiser programme identified 17–18 October 2026; its separate Contact FAQ also mentioned 16 October." },
+        { name: "Advertised venue", detail: "Family Worship Centre (FWC), Plot 648 Idris Gidado Street, Wuye, Abuja. This is a past event address, not a current admission instruction." },
+        { name: "AdvantageX programme", detail: "The organiser promoted speakers and sessions in social media, technology, entrepreneurship and business." },
+        { name: "Original ticket options", detail: "The event originally advertised different ticket tiers. These are historical prices, not a current purchase recommendation." }
+      ],
+      planning: [
+        { label: "Can I still attend the 2026 event?", detail: "No future attendance window is established by the official 17–18 October schedule. Avoid using archived ticket or volunteer registration links for this concluded edition." },
+        { label: "Were all sessions delivered?", detail: "The published speaker list and ticket descriptions are not independent evidence of attendance, delivery or event outcomes. Look for dated organiser recordings or reports before attributing results." },
+        { label: "What was the venue?", detail: "Family Worship Centre, Wuye, was the advertised Abuja venue. Do not travel there expecting the 2026 conference; routine church opening is separate from event access." },
+        { label: "How do I find a later edition?", detail: "Use the organiser's official website for a newly dated SMFest announcement and verify the city, venue and registration deadline before payment." }
+      ],
+      sources: [
+        ...(guide.sources ?? []),
+        { label: "SMFest — official 2026 event dates and AdvantageX programme", href: "https://smfest.org/" },
+        { label: "SMFest — organiser About FAQ with 17–18 October dates", href: "https://smfest.org/about/" },
+        { label: "SMFest — organiser Contact FAQ with differing 16–18 October dates", href: "https://smfest.org/contact/" }
+      ],
+      lastReviewed: "2026-10-24",
+    };
+  }
   if (guide.slug === "nifafest-abuja-2026") {
     return {
       ...guide,
