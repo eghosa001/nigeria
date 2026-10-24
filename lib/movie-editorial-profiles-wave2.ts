@@ -337,7 +337,7 @@ export const movieEditorialProfilesWave2: Record<string, MovieEditorialProfile> 
         paragraphs: [
           "Tele x Zikora takes place at the fictional Lagos Metropolitan University. Two students whose lives and expectations differ encounter one another on campus. The announced story combines coming-of-age experiences with questions about identity, ambition and social pressure, rather than simply treating university life as a backdrop for romance.",
           "The promotional cast includes Mike Afolarin, Genoveva Umeh, Angel Unigwe, Eronini Osinachim and Kanaga Eme Jnr. The official teaser establishes their association with the film, but available verified credits do not establish which actor plays each title character. This guide deliberately does not assume that cast-list order corresponds to the characters Tele or Zikora.",
-          "A campus setting gives this movie a distinct search audience. Some readers may want to know who plays the leads; others are looking for release information, an official trailer or a synopsis that does not reveal the ending. The production's own teaser is the best reference for what has been officially announced ahead of the theatrical run.",
+          "A campus setting gives this movie a distinct search audience. Some readers may want to know who plays the leads; others are looking for release information, an official trailer or a synopsis that does not reveal the ending. The studio teaser remains useful for the film's original announcement; named cinemas now provide stronger evidence for actual release-day and post-release screenings.",
         ],
       },
       {
@@ -345,7 +345,7 @@ export const movieEditorialProfilesWave2: Record<string, MovieEditorialProfile> 
         paragraphs: [
           "The studio publicity identifies Adenike Adebayo-Esho as writer and director and announces a Nigerian theatrical opening for 23 October 2026. The official Imagine Media Studios teaser is linked on this page, together with the movie's promotional account. Silverbird Ikeja and DreamPark cinema listings confirm the film was screening on 24 October 2026. Opening times depend on the individual cinema and date.",
           "The film has reached cinemas, but exhibitor listings do not independently establish the full character-to-actor credits. It would be misleading to publish a detailed role-by-role table based on promotional photos or fan predictions. Confirmed production information can be added as the distributor releases it.",
-          "No authorised free full-movie stream is established by the teaser or social account. Cinema visitors should confirm which branch has scheduled the film; users searching for 'Tele x Zikora full movie' should distinguish the official short promotional video from unauthorised uploads.",
+          "The official studio teaser is promotional, not an authorised full-film stream. Cinema visitors should consult the actual Silverbird or DreamPark branch schedule and pay only through its stated ticket route.",
         ],
       },
     ],
