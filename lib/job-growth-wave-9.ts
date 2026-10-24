@@ -53,9 +53,9 @@ export const jobGrowthWave9: CareerOpportunity[] = [
     organization: "Oilserv Group",
     kind: "programme",
     sector: "Private",
-    status: "open",
-    statusLabel: "Applications open until 10 October 2026",
-    summary: "Oilserv's 2027 Ingenious Graduate Trainee Programme is a two-year entry-level development programme in Port Harcourt, combining six months of rotations with eighteen months of specialised development. Applications close 10 October 2026.",
+    status: "closed",
+    statusLabel: "2027 trainee intake closed applications 10 October 2026",
+    summary: "Oilserv's 2027 Ingenious Graduate Trainee Programme was advertised as a two-year Port Harcourt development programme: six months of cross-functional rotations followed by eighteen months of specialised work. The published application deadline was 10 October 2026, and its SeamlessHR job listing now identifies the role as expired. This is a historical intake guide, not an open application.",
     location: "Port Harcourt, Rivers State, Nigeria",
     employmentType: "Full-time two-year graduate trainee programme",
     audiences: ["Engineering graduates", "Accounting graduates", "Technical safety graduates", "ESG graduates", "Recent graduates"],
@@ -67,30 +67,30 @@ export const jobGrowthWave9: CareerOpportunity[] = [
       "No prior full-time work experience is required."
     ],
     requirements: [
-      "Use Oilserv's official careers page or the linked Oilserv SeamlessHR application portal.",
-      "Confirm that your degree and NYSC status meet the published eligibility rules.",
-      "Submit before 10 October 2026 and keep the application confirmation."
+      "The published 2027 trainee recruitment used Oilserv's official careers page and SeamlessHR job 10943. Both remain useful as historical eligibility references, not evidence of a reopened intake.",
+      "The original 2027 programme required at least a 2:2 in an eligible discipline and completed NYSC. Confirm any future programme's requirements from a new Oilserv announcement.",
+      "The 10 October 2026 deadline has passed. Applicants who submitted in time should keep confirmations; later applicants should not use the expired job link as a live registration form."
     ],
     documents: ["Current CV/resume", "Degree details", "NYSC discharge information", "Other information requested by Oilserv's official application portal"],
     applicationSteps: [
-      "Open Oilserv's official 2027 Ingenious Graduate Trainee page.",
-      "Review the eligibility criteria and programme structure.",
-      "Follow the official Apply Here link to Oilserv's SeamlessHR recruitment portal.",
-      "Complete the application before 10 October 2026 and retain the confirmation."
+      "Read Oilserv's dated 2027 Ingenious Graduate Trainee announcement for the original programme structure and eligibility.",
+      "The two-year programme structure is an announced plan, not a guarantee of successful selection or a permanent placement.",
+      "Check SeamlessHR job 10943's current status before acting: the named 2027 listing was marked expired at review.",
+      "If you already applied by 10 October, retain the acknowledgement and wait for verified Oilserv hiring messages. A new application requires a fresh dated intake notice."
     ],
     officialUrl: "https://oilservcareers.seamlesshiring.com/job/view/10943?application_source=Direct+URL",
-    officialUrlLabel: "Apply on Oilserv's official recruitment portal",
-    verifiedAt: "2026-10-07",
+    officialUrlLabel: "View expired Oilserv 2027 trainee vacancy",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-10",
-    nextMilestone: "Applications close 10 October 2026.",
+    nextMilestone: "The published 2027 trainee application window ended 10 October 2026; Oilserv has not confirmed an extension in the cited announcement.",
     feeNote: "Oilserv's official recruitment pages do not state an application fee. Do not pay an unofficial recruiter for access to the programme.",
     sourceNotes: [
-      "Oilserv's own careers page states that the 2027 programme lasts two years and closes on 10 October 2026.",
-      "The official SeamlessHR listing places the role in Port Harcourt and describes a six-month rotational phase followed by eighteen months of specialised development."
+      "Oilserv's own careers notice confirms the two-year 2027 programme and 10 October 2026 closing date; its 2026-titled webpage and historical URL path are inconsistent with the 2027 programme body, so use the specific published programme year.",
+      "Oilserv's SeamlessHR job 10943 specifies Port Harcourt, the six- and eighteen-month phases and currently describes the position as expired. A remaining 'Apply Here' button on the parent careers article does not reopen a closed intake."
     ],
     sources: [
-      { label: "Oilserv — 2027 Ingenious Graduate Trainee Programme", url: "https://oilservltd-ng.com/careers/vacancies/2024-graduate-training-program/", lastChecked: "2026-10-07" },
-      { label: "Oilserv official SeamlessHR application", url: "https://oilservcareers.seamlesshiring.com/job/view/10943?application_source=Direct+URL", lastChecked: "2026-10-07" }
+      { label: "Oilserv — 2027 Ingenious Graduate Trainee Programme", url: "https://oilservltd-ng.com/careers/vacancies/2024-graduate-training-program/", lastChecked: "2026-10-24" },
+      { label: "Oilserv official SeamlessHR application", url: "https://oilservcareers.seamlesshiring.com/job/view/10943?application_source=Direct+URL", lastChecked: "2026-10-24" }
     ]
   },
   {
