@@ -6,26 +6,10 @@ import type { CareerOpportunity } from "@/lib/jobs";
  */
 export function applyNafAndUnilorinIssuerChecks20261020(job: CareerOpportunity): CareerOpportunity {
   if (job.slug === "nigerian-air-force-airmen-airwomen-recruitment-2026") {
-    return {
-      ...job,
-      status: "closed",
-      statusLabel: "2026 BMTC applications closed — acknowledgements available",
-      verifiedAt: "2026-10-20",
-      summary: "The Nigerian Air Force recruitment portal states that no exercise is currently ongoing. Its Basic Military Training Course and Direct Short Service Commission sections both show Application is closed. The earlier 3 September–14 October 2026 BMTC application period has ended; existing applicants may still print acknowledgement cards.",
-      nextMilestone: "Do not submit a new application for the concluded 2026 BMTC exercise. If you previously registered, use the official portal to print your acknowledgement card and monitor issuer-issued updates; no new recruitment round is announced on this page.",
-      applicationSteps: [
-        "Open the original Nigerian Air Force recruitment portal to check the current status banner.",
-        "The 2026 BMTC application window closed on 14 October; the official site currently states that no recruitment exercise is ongoing.",
-        "If you previously submitted an application, use the portal's acknowledgement-card printing facility rather than starting a fresh form.",
-        "Only a newly dated Nigerian Air Force notice can establish another BMTC or DSSC intake. Avoid unofficial paid recruitment links.",
-      ],
-      sourceNotes: [
-        "Issuer rechecked 20 October 2026: portal displays 'No exercise is currently ongoing', 'Application is closed' for BMTC and DSSC, plus an acknowledgement-card print route for existing candidates.",
-        "The original recruitment period was 3 September through 14 October 2026. Category requirements below are historical until a separately dated exercise is announced.",
-      ],
-      sources: job.sources.map(source => source.url === "https://nafrecruitment.airforce.mil.ng/"
-        ? { ...source, lastChecked: "2026-10-20" } : source),
-    };
+    // The canonical record was reverified on 24 October with the issuer's
+    // new 22 October BMTC aptitude-test invitation. Do not overwrite
+    // its details with this older 20 October snapshot.
+    return job;
   }
   if (job.slug === "unilorin-careers") {
     return {

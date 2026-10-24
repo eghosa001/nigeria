@@ -28,7 +28,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
     "sector": "Government",
     "status": "closed",
     "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
-    "summary": "Kaduna State Primary Health Care Board advertised the Nursing Officer Grade III role as a permanent and pensionable appointment · conhess 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
+    "summary": "Kaduna State Primary Health Care Board advertised the Nursing Officer Grade III role as a permanent and pensionable appointment at CONHESS 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 6",
     "audiences": [
@@ -107,7 +107,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
     "sector": "Government",
     "status": "closed",
     "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
-    "summary": "Kaduna State Primary Health Care Board advertised the Community Health Technician role as a permanent and pensionable appointment · conhess 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
+    "summary": "Kaduna State Primary Health Care Board advertised the Community Health Technician role as a permanent and pensionable appointment at CONHESS 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 6",
     "audiences": [
@@ -186,7 +186,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
     "sector": "Government",
     "status": "closed",
     "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
-    "summary": "Kaduna State Primary Health Care Board advertised the Environmental Health Officer Grade II role as a permanent and pensionable appointment · conhess 7 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 7 requirements for people who applied or are researching the concluded exercise.",
+    "summary": "Kaduna State Primary Health Care Board advertised the Environmental Health Officer Grade II role as a permanent and pensionable appointment at CONHESS 7 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 7 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 7",
     "audiences": [
@@ -265,7 +265,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
     "sector": "Government",
     "status": "closed",
     "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
-    "summary": "Kaduna State Primary Health Care Board advertised the Environmental Health Technician role as a permanent and pensionable appointment · conhess 6/7 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6/7 requirements for people who applied or are researching the concluded exercise.",
+    "summary": "Kaduna State Primary Health Care Board advertised the Environmental Health Technician role as a permanent and pensionable appointment at CONHESS 6/7 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6/7 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 6/7",
     "audiences": [
@@ -344,7 +344,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
     "sector": "Government",
     "status": "closed",
     "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
-    "summary": "Kaduna State Primary Health Care Board advertised the Medical Laboratory Technician role as a permanent and pensionable appointment · conhess 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
+    "summary": "Kaduna State Primary Health Care Board advertised the Medical Laboratory Technician role as a permanent and pensionable appointment at CONHESS 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 6",
     "audiences": [
@@ -423,7 +423,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
     "sector": "Government",
     "status": "closed",
     "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
-    "summary": "Kaduna State Primary Health Care Board advertised the Pharmacy Technician role as a permanent and pensionable appointment · conhess 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
+    "summary": "Kaduna State Primary Health Care Board advertised the Pharmacy Technician role as a permanent and pensionable appointment at CONHESS 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 6",
     "audiences": [
@@ -502,7 +502,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
     "sector": "Government",
     "status": "closed",
     "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
-    "summary": "Kaduna State Primary Health Care Board advertised the Health Educator role as a permanent and pensionable appointment · conhess 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
+    "summary": "Kaduna State Primary Health Care Board advertised the Health Educator role as a permanent and pensionable appointment at CONHESS 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 6",
     "audiences": [
@@ -581,7 +581,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
     "sector": "Government",
     "status": "closed",
     "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
-    "summary": "Kaduna State Primary Health Care Board advertised the Nutrition Officer role as a permanent and pensionable appointment · conhess 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
+    "summary": "Kaduna State Primary Health Care Board advertised the Nutrition Officer role as a permanent and pensionable appointment at CONHESS 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 6",
     "audiences": [
@@ -660,7 +660,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
     "sector": "Government",
     "status": "closed",
     "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
-    "summary": "Kaduna State Primary Health Care Board advertised the Health Information Management Technician role as a permanent and pensionable appointment · conhess 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
+    "summary": "Kaduna State Primary Health Care Board advertised the Health Information Management Technician role as a permanent and pensionable appointment at CONHESS 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 6",
     "audiences": [
@@ -739,7 +739,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
     "sector": "Government",
     "status": "closed",
     "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
-    "summary": "Kaduna State Primary Health Care Board advertised the Community Health Assistant role as a permanent and pensionable appointment · conhess 3 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 3 requirements for people who applied or are researching the concluded exercise.",
+    "summary": "Kaduna State Primary Health Care Board advertised the Community Health Assistant role as a permanent and pensionable appointment at CONHESS 3 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 3 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 3",
     "audiences": [
