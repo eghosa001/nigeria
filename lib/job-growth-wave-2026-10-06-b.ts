@@ -11,9 +11,9 @@ export const jobGrowthWaveThree: CareerOpportunity[] = [
       "construction-infrastructure"
     ],
     "sector": "Private",
-    "status": "open",
-    "statusLabel": "Applications open until 9 October 2026",
-    "summary": "Greenpeg Nigeria's Technical Trainee Programme 2.0 is recruiting HND graduates for seven engineering and technical-sales tracks in Lagos, with onsite training, live industrial-project exposure and a published 9 October 2026 deadline.",
+    "status": "unverified",
+    "statusLabel": "Current intake unclear — conflicting official opening and closing dates",
+    "summary": "Greenpeg's official Technical Trainee Programme 2.0 page advertises seven onsite engineering and technical-sales tracks for HND graduates in Lagos but displays contradictory application timing: a 16 September–9 October 2026 window in its application instructions and a separate banner stating applications open 16 October 2026. A general candidate form remains accessible. A current end date or confirmation that this specific intake reopened is not independently established; verify the exact cohort directly with Greenpeg before submitting documents.",
     "location": "Ikeja, Lagos, Nigeria",
     "employmentType": "Full-time onsite technical trainee programme",
     "audiences": [
@@ -41,7 +41,7 @@ export const jobGrowthWaveThree: CareerOpportunity[] = [
       "Be proficient in Microsoft Office, particularly Excel and Word, and demonstrate analytical, communication and report-writing skills.",
       "Engineering applicants should be interested in design, calculations, technical drawings and modelling; AutoCAD or related software is an advantage.",
       "Engineering applicants must be willing to work at project sites, including offshore locations when required; external-sales applicants should be comfortable with travel and client-site visits.",
-      "Use Greenpeg's own application form and upload an up-to-date CV before the 9 October 2026 deadline."
+      "Greenpeg's 9 October closing date conflicts with its newer 16 October opening banner. Before uploading personal data, confirm whether Technical Trainee Programme 2.0 is currently taking applications for your chosen cohort."
     ],
     "documents": [
       "Up-to-date CV/resume.",
@@ -50,32 +50,31 @@ export const jobGrowthWaveThree: CareerOpportunity[] = [
       "Optional cover letter, LinkedIn profile or portfolio if useful to the chosen track."
     ],
     "applicationSteps": [
-      "Open Greenpeg's official Technical Trainee Programme 2.0 page and review the seven available engineering and technical-sales tracks.",
-      "Confirm the general HND, NYSC, experience and skills requirements, then read the additional criteria for the engineering or sales track you want.",
-      "Use Greenpeg's official application form, select the role/department, enter your experience and qualification details, and upload your CV.",
-      "Review the application carefully, give the required recruitment-data consent and submit before 9 October 2026.",
-      "If shortlisted, Greenpeg states that candidates proceed to a technical assessment and interview before offer and onboarding."
+      "Read Greenpeg's Technical Trainee Programme 2.0 page and identify the seven engineering and sales roles relevant to your HND, NYSC and experience.",
+      "Compare the official page's 16 September–9 October application-period text with the conflicting 16 October 'applications open' banner; neither alone establishes a reliable current closing date.",
+      "Use the company's published contacts or a newly dated Greenpeg announcement to clarify whether the specific trainee intake is open and which deadline controls.",
+      "Only after resolving the cohort status, use Greenpeg's own application route to submit an accurate CV and qualifications, avoiding unofficial links or recruitment fees.",
+      "Greenpeg describes assessment and interview for shortlisted applicants but has not confirmed a universal result date or guaranteed employment."
     ],
     "officialUrl": "https://greenpeg.com/graduate-trainee/",
-    "officialUrlLabel": "Open Greenpeg Technical Trainee Programme 2.0",
-    "verifiedAt": "2026-10-06",
-    "deadline": "2026-10-09",
-    "nextMilestone": "Applications close 9 October 2026; shortlisted applicants move to technical assessment and interview.",
+    "officialUrlLabel": "Check Greenpeg's conflicting 2026 trainee dates",
+    "verifiedAt": "2026-10-24",
+        "nextMilestone": "The Greenpeg page simultaneously contains a 9 October historical closing date and a 16 October opening banner. No unambiguous current deadline has been verified; seek a fresh issuer clarification before applying.",
     "feeNote": "Greenpeg states that the programme is free to apply. Do not pay anyone for application access, shortlisting or an interview slot.",
     "sourceNotes": [
-      "Greenpeg's official programme page states that applications opened 16 September 2026, close 9 October 2026 and are for full-time onsite trainee roles in Lagos.",
-      "The official page lists seven roles and publishes separate general, engineering-track and sales-track requirements plus the application process."
+      "The official programme page still says applications ran 16 September–9 October 2026 in its application-process section, but its top banner and application block state applications open 16 October. Treat this source-level contradiction as unresolved, not a verified extension.",
+      "Greenpeg lists seven programme roles with general, engineering and sales criteria. Its separate https://greenpeg.com/apply/ form is a general career submission form and does not by itself establish that Technical Trainee Programme 2.0 is taking 2026 applicants."
     ],
     "sources": [
       {
         "label": "Greenpeg Technical Trainee Programme 2.0",
         "url": "https://greenpeg.com/graduate-trainee/",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-24"
       },
       {
         "label": "Greenpeg candidate application form",
         "url": "https://greenpeg.com/apply/",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-24"
       }
     ]
   },
