@@ -9,9 +9,9 @@ export const verifiedTrendProgrammes: CareerOpportunity[] = [
     organization: "Zenith Bank / Beyond Limits",
     kind: "programme",
     sector: "Private",
-    status: "open",
-    statusLabel: "Applications open until 13 October 2026",
-    summary: "Apply for the 2026 Zenith Bank Zecathon 6.0 fintech hackathon as a team of 2–4 African innovators aged 20–35. Free applications close 13 October; selected teams attend a Lagos innovation sprint 20–22 October.",
+    status: "closed",
+    statusLabel: "2026 Hackathon application window closed 13 October",
+    summary: "The Zenith Bank Zecathon 6.0 Hackathon's free application window closed on 13 October 2026. The organiser invited African innovators aged 20–35 to apply in teams of two to four, scheduled the Lagos sprint for 20–22 October and listed the final pitch for 28 October. This is an archived contest guide, not an open job or registration offer.",
     location: "Lagos, Nigeria (in-person for selected teams; online application)",
     employmentType: "Hackathon and innovation competition — not a paid job or recruitment",
     audiences: ["African developers", "Students aged 20–35", "Fintech innovators", "Designers", "Startup builders"],
@@ -25,7 +25,7 @@ export const verifiedTrendProgrammes: CareerOpportunity[] = [
       "Choose an official challenge track and propose an original technology-led solution; published themes include POS analytics, alternative credit scoring, digital fraud, SME finance, banking inclusion and trust.",
       "Explain the practical problem, proposed product, target users, technological approach, feasibility, impact and scalability.",
       "Ensure the team owns the submitted intellectual property and that no participant has a disqualifying conflict of interest with programme organisers or judges.",
-      "Plan your own Lagos accommodation and travel if shortlisted. The organiser says meals, refreshments, workspace and internet are provided for the hackathon, but not lodging.",
+      "For those shortlisted before the deadline, the organiser's original terms placed Lagos travel and accommodation with participants and offered meals, workspace and internet. These historical logistics do not establish a new attendance window.",
       "This listing is specifically for the Hackathon. The Startup Pitch Competition is for registered, growth-stage businesses with traction, and the Future Innovators Challenge targets secondary-school teams; their eligibility differs."
     ],
     documents: [
@@ -35,29 +35,29 @@ export const verifiedTrendProgrammes: CareerOpportunity[] = [
       "Any additional attachments or registration answers required on the official organiser application form."
     ],
     applicationSteps: [
-      "Open the official Zenith Bank Hackathon programme page from Beyond Limits and read its complete eligibility and track-specific rules.",
-      "Form a team of two to four eligible members, select one track and agree on a specific problem the team can address.",
-      "Prepare a short original proposal covering the problem, proposed AI/technology solution, impact, target users, implementation and each member's role.",
-      "Follow the official Apply Now link from the organiser page. Check the form's fields, upload the requested pitch deck and submit by 13 October 2026.",
-      "Watch the organiser's official announcements for selection results on 16 October. Selected teams should confirm travel and attendance arrangements for 20–22 October in Lagos.",
-      "If shortlisted, check the published schedule for the 23 October semifinal demonstration and 28 October final pitch."
+      "Read Beyond Limits' official Zenith Bank Hackathon rules as a record of the concluded 2026 application window.",
+      "The 2026 hackathon required teams of two to four eligible members; future editions may set different requirements.",
+      "Review the 2026 selection criteria to understand the original proposal, technology, impact and team-role requirements.",
+      "Do not submit documents to an old Apply Now button or copied registration form: the official application period ended 13 October 2026.",
+      "The organiser scheduled selection notices for 16 October and the Lagos sprint for 20–22 October. The published schedule alone does not verify which teams attended.",
+      "The published semifinal date of 23 October has passed; the organiser lists a final pitch for 28 October 2026. Check current organiser announcements for finalists, access or event changes rather than assuming results."
     ],
     officialUrl: "https://beyondlimits.global/zecathonhackathon/",
-    officialUrlLabel: "Read rules and apply through the official Zecathon Hackathon page",
-    verifiedAt: "2026-10-08",
+    officialUrlLabel: "Read official Zecathon Hackathon 2026 archive and schedule",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-13",
-    nextMilestone: "Selection notices: 16 October; Lagos hackathon: 20–22 October; semifinals: 23 October; final: 28 October 2026.",
+    nextMilestone: "The 13 October application deadline and 20–23 October sprint/semifinal schedule are past; the organiser lists a 28 October 2026 final pitch, subject to any fresh programme notice.",
     feeNote: "The organiser explicitly says participation is free. No application, interview or recruitment fees should be paid. This is a contest and does not offer guaranteed employment.",
     sourceNotes: [
       "The official Zecathon 6.0 landing page lists Hackathon, Startup Pitch and Future Innovators as separate programmes with different eligibility.",
       "The organiser's Hackathon page has conflicting prize figures in different blocks (₦70m and ₦90m). Do not treat either as a confirmed hackathon-specific amount; consult the organiser's latest written rules before relying on prize numbers.",
-      "The application deadline, team size, age range, in-person location, participant expenses and submission stages are taken from the current organiser programme page.",
+      "The concluded 2026 application deadline, team size, ages, Lagos location and participant costs are drawn from the official organiser page checked 24 October; its still-visible Apply links do not reopen applications.",
       "No JobPosting structured data applies because participants are competing, not applying for employment."
     ],
     sources: [
-      { label: "Beyond Limits / Zenith Bank — Zecathon 6.0 official programme overview", url: "https://beyondlimits.global/zecathon6/landing/", lastChecked: "2026-10-08" },
-      { label: "Beyond Limits / Zenith Bank — Hackathon rules, timeline and FAQs", url: "https://beyondlimits.global/zecathonhackathon/", lastChecked: "2026-10-08" },
-      { label: "Beyond Limits / Zenith Bank — Startup Pitch eligibility (different track)", url: "https://beyondlimits.global/zecathonbusinesspitch/", lastChecked: "2026-10-08" }
+      { label: "Beyond Limits / Zenith Bank — Zecathon 6.0 official programme overview", url: "https://beyondlimits.global/zecathon6/landing/", lastChecked: "2026-10-24" },
+      { label: "Beyond Limits / Zenith Bank — Hackathon rules, timeline and FAQs", url: "https://beyondlimits.global/zecathonhackathon/", lastChecked: "2026-10-24" },
+      { label: "Beyond Limits / Zenith Bank — Startup Pitch eligibility (different track)", url: "https://beyondlimits.global/zecathonbusinesspitch/", lastChecked: "2026-10-24" }
     ]
   }
 ];
