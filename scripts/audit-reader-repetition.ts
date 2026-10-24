@@ -7,7 +7,10 @@ import { collectVoiceCorpus } from "../lib/editorial-voice-corpus";
 import { collectPublicPageVoice } from "./public-page-voice-corpus";
 import { publicServices } from "../lib/data";
 import { exploreGuides } from "../lib/explore";
-import { jobOpportunities } from "../lib/jobs";
+import { jobOpportunities, isIndexableJobOpportunity } from "../lib/jobs";
+import { entertainmentTitles } from "../lib/entertainment";
+import { seriesTitles } from "../lib/series";
+import { indexableYouTubeMovies } from "../lib/youtube-library";
 import { leadAlreadyStatesFee, uniqueIntroParagraphs, uniqueSupportingStatements } from "../lib/reader-content-dedup";
 
 type Passage = { pillar: string; url: string; recordKind: string; text: string };
@@ -74,6 +77,20 @@ export function auditPublicCatalogues() {
   }
   const duplicates = findDuplicatePassages(paragraphs);
   const crossPageDuplicates = findCrossPageDuplicatePassages(paragraphs);
+  // Separate publication-relevant canonical routes from nonindexable directory
+  // discovery records; large shared career-portal templates are intentionally
+  // kept out of Google indexing and must not dominate the AdSense priority list.
+  const knownIndexableRoutes = new Set([
+    ...publicServices.map(s => "/services/" + s.slug),
+    ...exploreGuides.map(g => "/explore/" + g.slug),
+    ...entertainmentTitles.map(m => "/entertainment/movies/" + m.slug),
+    ...seriesTitles.map(s => "/entertainment/series/" + s.slug),
+    ...jobOpportunities.filter(isIndexableJobOpportunity).map(j => "/jobs/" + j.slug),
+    ...indexableYouTubeMovies.map(m => "/entertainment/youtube/" + m.videoId),
+  ]);
+  const indexableCrossPageDuplicates = findCrossPageDuplicatePassages(
+    paragraphs.filter(p => knownIndexableRoutes.has(p.url)),
+  );
   const presentationDedup = {
     serviceLeadsWithExistingFee: publicServices.filter((entry) =>
       leadAlreadyStatesFee(entry.summary, entry.feeLabel)).length,
@@ -96,6 +113,9 @@ export function auditPublicCatalogues() {
     exactRepeatFindings: duplicates.length,
     crossPageRepeatFindings: crossPageDuplicates.length,
     crossPageDuplicates,
+    knownIndexableCataloguedRoutes: [...seenPages.keys()].filter(url => knownIndexableRoutes.has(url)).length,
+    indexableCrossPageRepeatFindings: indexableCrossPageDuplicates.length,
+    indexableCrossPageDuplicates,
     presentationDedup,
     byPillar,
     duplicates,
@@ -111,9 +131,14 @@ if (process.argv[1]?.endsWith("audit-reader-repetition.ts")) {
       sourceRecordsInspected: result.sourceRecordsInspected,
       uniqueCataloguedRoutes: result.uniqueCataloguedRoutes,
       exactRepeatFindings: result.exactRepeatFindings, crossPageRepeatFindings: result.crossPageRepeatFindings,
+      indexableCrossPageRepeatFindings: result.indexableCrossPageRepeatFindings,
+      knownIndexableCataloguedRoutes: result.knownIndexableCataloguedRoutes,
       presentationDedup: result.presentationDedup, byPillar: result.byPillar,
       limitation: result.limitation,
     }));
+    for (const row of result.indexableCrossPageDuplicates.slice(0, 15)) {
+      console.log("INDEXABLE_CROSS_PAGE_REVIEW " + row.affectedUrls + " routes " + row.urls.slice(0, 5).join(", ") + ": " + row.sample);
+    }
     for (const row of result.crossPageDuplicates.slice(0, 20)) {
       console.log("CROSS_PAGE_REVIEW " + row.affectedUrls + " routes " + row.urls.slice(0, 5).join(", ") + ": " + row.sample);
     }
