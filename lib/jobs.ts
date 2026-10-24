@@ -238,9 +238,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
     organization: "Kaduna State Primary Health Care Board",
     kind: "recruitment-exercise",
     sector: "Government",
-    status: "open",
-    statusLabel: "Applications open until 14 October 2026",
-    summary: "Kaduna State's official recruitment portal is accepting applications for 10 permanent and pensionable Primary Health Care Board vacancy positions from 4 to 14 October 2026.",
+    status: "closed",
+    statusLabel: "Recruitment window closed 14 October — no PHCB vacancies open",
+    summary: "Kaduna State Primary Health Care Board advertised ten positions during 4–14 October 2026. This deadline has passed, and the official Kaduna State Job Bank now reports that no PHCB vacancy is open. The qualifications and CONHESS grades remain available here for candidates who already applied or are reviewing the 2026 exercise.",
     location: "Kaduna State, Nigeria",
     employmentType: "Permanent and pensionable health-service appointments",
     audiences: ["Nurses and midwives", "Community health workers", "Environmental health professionals", "Health educators", "Nutrition professionals", "Health information professionals"],
@@ -251,29 +251,29 @@ const rawJobOpportunities: CareerOpportunity[] = [
       "Applicants should open the exact vacancy on the Kaduna recruitment portal and use that role's qualification and CONHESS details as the controlling requirement."
     ],
     requirements: [
-      "Create or use the applicant profile required by the official Kaduna State recruitment portal.",
-      "Apply only to roles for which your education and professional registration match the vacancy requirements.",
-      "Treat the official portal's closing date of 14 October 2026 as the deadline rather than dates copied to third-party job sites."
+      "Existing candidates should retain access to their Kaduna State Job Bank profile and submitted application evidence. A reusable profile does not indicate a current PHCB vacancy.",
+      "The original advertised roles had different education and professional-registration rules. Use those published qualifications if asked for screening after an application submitted by 14 October.",
+      "The PHCB window ended 14 October 2026. Await an independently dated new official opening instead of treating a preserved archive as an invitation."
     ],
     documents: ["Education credentials relevant to the selected vacancy", "Professional registration evidence where required", "Identity/profile information requested by the official portal"],
     applicationSteps: [
-      "Open the official Kaduna State Recruitment Portal and review the 10 PHCB vacancies.",
-      "Open the exact role that matches your qualification and confirm the CONHESS placement, appointment type and professional registration requirement.",
-      "Complete or update your applicant profile and attach the credentials requested for that role.",
-      "Submit the application through the official Apply control before 14 October 2026 and retain the confirmation."
+      "Check the official Kaduna State Job Bank homepage: it now says no PHCB vacancy is currently open.",
+      "If you submitted on time, identify the exact role and CONHESS placement recorded in your application; requirements differ across the ten cadres.",
+      "Use the existing candidate dashboard to check submission evidence and any subsequently announced screening or CBT notices; do not upload identification to unofficial sites.",
+      "No new 2026 PHCB application is currently offered. Keep your original confirmation and do not pay anyone who promises a late submission."
     ],
     officialUrl: "https://recruitment.kdsg.gov.ng/",
-    officialUrlLabel: "Open the official Kaduna State recruitment portal",
-    verifiedAt: "2026-10-06",
+    officialUrlLabel: "Check closed PHCB intake on the official Kaduna State Job Bank",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-14",
-    nextMilestone: "The official vacancy window closes 14 October 2026.",
+    nextMilestone: "The official vacancy window closed on 14 October 2026. Existing candidates may check their dashboard; no new PHCB vacancy is currently open.",
     feeNote: "Use only the Kaduna State Government recruitment portal. No application fee is shown on the public vacancy listing.",
     sourceNotes: [
-      "The official portal currently lists 10 PHCB vacancy positions for the 4–14 October 2026 window.",
+      "The official Job Bank preserves the completed 4–14 October 2026 ten-position PHCB recruitment and states that no PHCB vacancy is currently open. The announced 1,800 appointments refer to the exercise in total, not each cadre.",
       "The public listings include permanent and pensionable appointments across nursing, community health, environmental health, nutrition and health-information roles."
     ],
     sources: [
-      { label: "Kaduna State Recruitment Portal — PHCB vacancies", url: "https://recruitment.kdsg.gov.ng/", lastChecked: "2026-10-06" }
+      { label: "Kaduna State Recruitment Portal — PHCB vacancies", url: "https://recruitment.kdsg.gov.ng/", lastChecked: "2026-10-24" }
     ]
   },
   {
@@ -329,9 +329,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
     organization: "SNV",
     kind: "vacancy",
     sector: "International",
-    status: "open",
-    statusLabel: "Applications open",
-    summary: "SNV is recruiting a full-time Energy Advisor in Abuja for an energy project, with a two-year national employment contract and an application deadline of 8 October 2026.",
+    status: "closed",
+    statusLabel: "SNV Energy Advisor application deadline passed 8 October",
+    summary: "SNV's Abuja Energy Advisor national-contract vacancy published an 8 October 2026 closing date that has passed. The role involved a two-year energy project with a prospective start conditional on the contract award. An old SmartRecruiters 'I'm interested' control is not independent confirmation that the individual application was extended.",
     location: "Abuja, FCT",
     employmentType: "Full-time national employment contract (2 years)",
     audiences: ["Energy professionals", "Engineers", "Development-sector professionals", "Renewable-energy specialists"],
@@ -353,23 +353,23 @@ const rawJobOpportunities: CareerOpportunity[] = [
       "Referee details if requested during SNV's later reference and safeguarding checks"
     ],
     applicationSteps: [
-      "Open SNV's official SmartRecruiters vacancy page.",
-      "Review the Energy Advisor qualifications and confirm your energy-sector and development experience.",
-      "Upload your CV and motivation letter in English through the official application control.",
-      "Submit before the 8 October 2026 deadline and monitor the email address used for the application."
+      "Read the archived SNV SmartRecruiters Energy Advisor advert for its original role requirements and 8 October deadline.",
+      "If you submitted before the deadline, keep the original confirmation and monitor only employer communications.",
+      "The prior 1 November expected start was subject to contract award; neither award nor appointment is established by the advert.",
+      "Look for newly dated SNV roles on its careers website; do not assume the expired form accepts legitimate late applications."
     ],
     officialUrl: "https://jobs.smartrecruiters.com/snv/744000152591820",
     officialUrlLabel: "Apply on SNV's official vacancy page",
-    verifiedAt: "2026-10-05",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-08",
-    nextMilestone: "Applications close 8 October 2026. SNV lists an expected start date of 1 November 2026, subject to contract award timing.",
+    nextMilestone: "SNV published 8 October as the Energy Advisor application deadline; an expected 1 November start was contingent on contract award, not an assurance of hiring.",
     feeNote: "No application fee is listed. Apply only through SNV's official vacancy system.",
     sourceNotes: [
       "SNV lists the duty station as Abuja and the contract as a two-year full-time national employment contract.",
       "The official vacancy asks applicants to upload a CV and motivation letter in English and states that only shortlisted candidates will be contacted."
     ],
     sources: [
-      { label: "SNV Energy Advisor — SmartRecruiters", url: "https://jobs.smartrecruiters.com/snv/744000152591820", lastChecked: "2026-10-05" }
+      { label: "SNV Energy Advisor — SmartRecruiters", url: "https://jobs.smartrecruiters.com/snv/744000152591820", lastChecked: "2026-10-24" }
     ]
   },
   {
@@ -378,9 +378,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
     organization: "SNV",
     kind: "vacancy",
     sector: "International",
-    status: "open",
-    statusLabel: "Applications open",
-    summary: "SNV is recruiting a Project Manager in Abuja to lead an energy project, with a two-year national employment contract and an application deadline of 8 October 2026.",
+    status: "closed",
+    statusLabel: "SNV Project Manager recruitment closed 8 October",
+    summary: "SNV's Abuja Project Manager position for a two-year energy project published an 8 October 2026 application deadline. The individual SmartRecruiters application subsequently expired; the original advertisement remains for reference but does not authorize another registration or guarantee a November start.",
     location: "Abuja, FCT",
     employmentType: "Full-time national employment contract (2 years)",
     audiences: ["Senior energy professionals", "Project managers", "Development-sector leaders", "Engineers"],
@@ -402,23 +402,23 @@ const rawJobOpportunities: CareerOpportunity[] = [
       "Referee details if requested during SNV's later reference and safeguarding checks"
     ],
     applicationSteps: [
-      "Open SNV's official Project Manager vacancy page.",
-      "Compare your energy-sector leadership experience with the published qualifications.",
-      "Upload your CV and motivation letter in English through the official SmartRecruiters application.",
-      "Submit before 8 October 2026 and retain the application confirmation."
+      "Read SNV's original Abuja Project Manager posting as an archive with its 8 October application deadline.",
+      "Retain your acknowledgement and the CV or motivation letter if you applied during the advertised period.",
+      "The planned November contract start depended on an award and does not guarantee an appointment.",
+      "Seek a new individually dated SNV vacancy if you did not submit before the closing date."
     ],
     officialUrl: "https://jobs.smartrecruiters.com/SNV/744000152590475-project-manager",
     officialUrlLabel: "Apply on SNV's official vacancy page",
-    verifiedAt: "2026-10-05",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-08",
-    nextMilestone: "Applications close 8 October 2026. SNV lists an expected start date of 1 November 2026, subject to contract award timing.",
+    nextMilestone: "The original SNV Project Manager vacancy expired after 8 October; there is no issuer-confirmed new application window or guaranteed start.",
     feeNote: "No application fee is listed. Apply only through SNV's official vacancy system.",
     sourceNotes: [
       "SNV lists Abuja as the duty station and a two-year full-time national employment contract.",
       "The role covers overall project management, quality assurance, finance/contract management, people leadership and donor/stakeholder delivery."
     ],
     sources: [
-      { label: "SNV Project Manager — SmartRecruiters", url: "https://jobs.smartrecruiters.com/SNV/744000152590475-project-manager", lastChecked: "2026-10-05" }
+      { label: "SNV Project Manager — SmartRecruiters", url: "https://jobs.smartrecruiters.com/SNV/744000152590475-project-manager", lastChecked: "2026-10-24" }
     ]
   },
   {
@@ -472,9 +472,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
     title: "Nigerian Air Force Airmen/Airwomen Recruitment 2026",
     organization: "Nigerian Air Force",
     sector: "Government",
-    status: "open",
-    statusLabel: "Applications open",
-    summary: "The Nigerian Air Force 2026 Airmen/Airwomen Basic Military Training Course recruitment is open. The official portal shows an application window from 3 September to 14 October 2026.",
+    status: "closed",
+    statusLabel: "NAF BMTC applications closed — aptitude test scheduled 24 October",
+    summary: "The NAF BMTC 47/2026 application window ended 14 October. The official portal now says applications are closed. A notice published 22 October invited specific eligible applicants to a zonal general aptitude test scheduled for 24 October 2026 at 7:00 a.m. across 15 centres. It is not an invitation for unregistered people to apply.",
     location: "Nigeria",
     employmentType: "Military recruitment / Basic Military Training Course",
     audiences: ["SSCE holders", "ND/NCE holders", "Tradesmen/Women", "Non-Tradesmen/Women"],
@@ -497,25 +497,26 @@ const rawJobOpportunities: CareerOpportunity[] = [
       "Any additional documents listed in the current application instructions"
     ],
     applicationSteps: [
-      "Open the official Nigerian Air Force recruitment portal.",
-      "Confirm that you are applying for the open Airmen/Airwomen BMTC exercise, not the closed DSSC route.",
-      "Read the current exercise instructions and verify your age, height and qualification category.",
-      "Start a new application through the official portal and complete the requested information.",
-      "Keep your application details so you can continue or check later stages through the same portal."
+      "Check the official NAF recruitment portal: BMTC 47/2026 applications closed on 14 October 2026.",
+      "If you applied during the original intake, consult the official 22 October invitation lists and the assigned zonal aptitude-test centre.",
+      "The NAF notice scheduled the test for 24 October at 7:00 a.m. with acknowledgement form, pencil and eraser; follow the published ban on prohibited gadgets.",
+      "Only candidates specifically invited should attend; do not infer a second session or reopening without an issuer announcement.",
+      "Recruitment is free. Retain the original acknowledgement and do not pay anybody for a selection slot."
     ],
     officialUrl: "https://nafrecruitment.airforce.mil.ng/",
     officialUrlLabel: "Apply on the official NAF recruitment portal",
-    verifiedAt: "2026-10-05",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-14",
-    nextMilestone: "Applications are open until 14 October 2026 according to the official portal.",
+    nextMilestone: "The official 22 October NAF notice scheduled a 24 October 2026, 7:00 a.m. aptitude test for named applicants; no new recruitment window is open.",
     feeNote: "The Nigerian Air Force states that recruitment/enlistment is FREE and is done through its official recruitment portal.",
     sourceNotes: [
-      "The official NAF portal marks the Airmen/Airwomen BMTC exercise as open.",
+      "The official NAF portal now marks BMTC applications closed. Its 22 October notice invites eligible candidates to a zonal aptitude test.",
       "The portal lists 3 September 2026 to 14 October 2026 for the current exercise.",
-      "The DSSC section on the same portal is currently marked closed."
+      "Both the BMTC and DSSC application periods are currently closed on the NAF portal."
     ],
     sources: [
-      { label: "Nigerian Air Force Recruitment Portal", url: "https://nafrecruitment.airforce.mil.ng/", lastChecked: "2026-10-05" }
+      { label: "Nigerian Air Force Recruitment Portal", url: "https://nafrecruitment.airforce.mil.ng/", lastChecked: "2026-10-24" },
+      { label: "NAF official BMTC 47/2026 zonal test notice of 22 October", url: "https://nafrecruitment.airforce.mil.ng/updates/", lastChecked: "2026-10-24" }
     ]
   },
   {
@@ -1547,9 +1548,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
     organization: "Deloitte Nigeria",
     kind: "programme",
     sector: "Private",
-    status: "open",
-    statusLabel: "Applications open until 9 October 2026",
-    summary: "Deloitte Nigeria has reopened its 2026 graduate recruitment for the Tax & Legal unit in Lagos. The official advert closes on 9 October 2026 and says candidates who already applied in the cycle that closed on 10 April should not apply again.",
+    status: "closed",
+    statusLabel: "Deloitte Tax & Legal graduate applications ended 9 October",
+    summary: "Deloitte Nigeria's 2026 Graduate Recruitment Refresh for its Tax & Legal unit in Lagos advertised a 9 October 2026 deadline. That window has ended. The original issuer posting remains available, but does not prove a new intake; its notice also warns those who applied in the cycle ending 10 April against duplicate submissions.",
     location: "Lagos, Nigeria",
     employmentType: "Full-time graduate recruitment",
     audiences: ["Fresh graduates", "NYSC-completed applicants", "Tax & legal graduate applicants"],
@@ -1568,23 +1569,23 @@ const rawJobOpportunities: CareerOpportunity[] = [
     ],
     documents: ["CV/resume and the education/NYSC information requested by the official application form"],
     applicationSteps: [
-      "Open Deloitte's official SmartRecruiters advert for the 2026 Graduate Recruitment Refresh — Tax & Legal Unit.",
-      "Confirm that you meet the degree/HND, O'Level, age and NYSC requirements and that you have not previously written the Deloitte aptitude test.",
-      "If you applied in the earlier 2026 cycle that closed on 10 April, do not submit another application.",
-      "Complete the official application before 9 October 2026 and keep the confirmation."
+      "Consult Deloitte's original Tax & Legal graduate advert as a historical record of the 9 October closing date.",
+      "If you submitted before closing, retain confirmation and await the employer's official assessment updates.",
+      "Do not duplicate a prior 2026 application from the earlier April cycle; the original advert warns of disqualification.",
+      "Find a separate, newly dated Deloitte job posting before sending another application."
     ],
     officialUrl: "https://jobs.smartrecruiters.com/Deloitte6/744000153123709-2026-graduate-recruitment-refresh-tax-and-legal-unit-",
     officialUrlLabel: "Apply on Deloitte's official SmartRecruiters advert",
-    verifiedAt: "2026-10-06",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-09",
-    nextMilestone: "Applications close 9 October 2026.",
+    nextMilestone: "The 9 October 2026 application deadline passed; Deloitte cautions that repeat applications from its April cycle can disqualify the candidate.",
     feeNote: "No application fee. Deloitte's official advert warns that it never asks candidates for upfront recruitment payments.",
     sourceNotes: [
       "The live Deloitte advert is specifically a 2026 Graduate Recruitment Refresh for the Tax & Legal Unit in Lagos.",
       "The advert preserves the core early-career eligibility criteria and explicitly tells prior April applicants not to apply again."
     ],
     sources: [
-      { label: "Deloitte — 2026 Graduate Recruitment Refresh, Tax & Legal", url: "https://jobs.smartrecruiters.com/Deloitte6/744000153123709-2026-graduate-recruitment-refresh-tax-and-legal-unit-", lastChecked: "2026-10-06" }
+      { label: "Deloitte — 2026 Graduate Recruitment Refresh, Tax & Legal", url: "https://jobs.smartrecruiters.com/Deloitte6/744000153123709-2026-graduate-recruitment-refresh-tax-and-legal-unit-", lastChecked: "2026-10-24" }
     ]
   },
   {
@@ -2412,9 +2413,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
     organization: "University of Benin",
     kind: "recruitment-exercise",
     sector: "Government",
-    status: "open",
-    statusLabel: "Applications open",
-    summary: "The University of Benin is accepting applications for teaching and non-teaching positions under an advertisement published 27 August 2026 for a six-week application period.",
+    status: "closed",
+    statusLabel: "UNIBEN six-week staff intake ended in October",
+    summary: "UNIBEN's teaching and non-teaching vacancy advertisement of 27 August 2026 invited applications for six weeks, ending around 8 October 2026. The historical university news post is still visible but does not announce another intake; the page retains the original CV and referee requirements.",
     location: "Benin City, Edo State",
     employmentType: "Academic and non-teaching university positions",
     audiences: ["Academics", "Administrators", "Technical professionals", "University professionals"],
@@ -2422,15 +2423,21 @@ const rawJobOpportunities: CareerOpportunity[] = [
     qualifications: ["Qualifications depend on the advertised position; applicants must satisfy the specific academic or non-teaching criteria in UNIBEN's official notice."],
     requirements: ["Use the UNIBEN employment portal linked by the university.", "Prepare the application letter, detailed CV and passport photograph requested by the notice.", "Meet the position-specific academic, professional and NYSC requirements where applicable."],
     documents: ["Application letter", "Detailed CV", "Passport photograph", "Credentials and supporting information required by the selected position"],
-    applicationSteps: ["Open UNIBEN's official 2026 vacancy notice.", "Choose the teaching or non-teaching position.", "Open the linked UNIBEN employment portal.", "Upload the requested application materials.", "Submit within the six-week application window."],
+    applicationSteps: [
+      "Read UNIBEN's 27 August staff recruitment notice as the source for the original six-week application period.",
+      "If you applied in time, keep your employment-portal acknowledgement, application letter and detailed CV.",
+      "Referees were instructed to supply confidential reports within one week after closing; this is not an extension for new applications.",
+      "Follow the university's own future selection and interview communications; an old vacancy link does not establish a new intake.",
+      "Do not pay anyone claiming to provide a late UNIBEN academic or non-teaching application."
+    ],
     officialUrl: "https://news.uniben.edu/advertisement-for-teaching-and-non-teaching-staff-positions-university-of-benin-2/",
     officialUrlLabel: "Read UNIBEN 2026 vacancy notice",
-    verifiedAt: "2026-10-05",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-08",
-    nextMilestone: "The six-week window from 27 August 2026 runs to 8 October 2026.",
+    nextMilestone: "The six-week window from 27 August ended around 8 October 2026. An additional week for referee reports did not extend new candidate registration.",
     feeNote: "Apply through the University of Benin portal linked in the official notice.",
     sourceNotes: ["UNIBEN's official notice states that applications are invited for teaching and non-teaching positions and that the advertisement runs for six weeks from 27 August 2026."],
-    sources: [{ label: "UNIBEN 2026 Teaching and Non-Teaching Vacancies", url: "https://news.uniben.edu/advertisement-for-teaching-and-non-teaching-staff-positions-university-of-benin-2/", lastChecked: "2026-10-05" }]
+    sources: [{ label: "UNIBEN 2026 Teaching and Non-Teaching Vacancies", url: "https://news.uniben.edu/advertisement-for-teaching-and-non-teaching-staff-positions-university-of-benin-2/", lastChecked: "2026-10-24" }]
   },
   {
     slug: "unilag-professorial-chair-2026",
@@ -2443,9 +2450,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
       locations: [{ locality: "Akoka", region: "Lagos State", country: "NG" }]
     },
     sector: "Government",
-    status: "open",
-    statusLabel: "Applications open",
-    summary: "UNILAG is accepting applications for the Senator Douye Diri Professorial Chair in Leadership and Good Governance. The three-year senior academic appointment closes on 20 October 2026.",
+    status: "closed",
+    statusLabel: "UNILAG Professorial Chair applications closed 20 October",
+    summary: "UNILAG's September 2026 vacancy for the three-year Senator Douye Diri Professorial Chair in Leadership and Good Governance carried a 20 October 2026 closing date. That deadline has passed; the original announcement is an archive, not evidence that late applications are allowed.",
     location: "Akoka, Lagos",
     employmentType: "Three-year senior academic appointment",
     audiences: ["Full Professors", "Senior academics", "Political science scholars", "Leadership and governance researchers"],
@@ -2473,18 +2480,17 @@ const rawJobOpportunities: CareerOpportunity[] = [
       "Online application acknowledgement slip"
     ],
     applicationSteps: [
-      "Read the full UNILAG Professorial Chair notice and confirm that you meet the minimum eligibility criteria.",
-      "Prepare the CV, publications, Personal Statement and the required two-year strategic plan.",
-      "Complete the application through UNILAG's official career portal at career.unilag.edu.ng/jobportal/jobportal/.",
-      "Print or save the acknowledgement slip produced by the online application.",
-      "Follow the notice's submission instructions to the Office of Advancement or Human Resources Management Directorate.",
-      "Complete submission on or before 20 October 2026."
+      "Read the 9 September university vacancy notice as a record of the original Professorial Chair eligibility and deadline.",
+      "If you submitted before 20 October, keep the UNILAG online acknowledgement and proof of delivery to the prescribed office.",
+      "Retain the detailed CV, publications, Personal Statement and two-year strategic plan for any requested official follow-up.",
+      "The former career-portal link does not confirm applications have reopened; look for a new dated university notice.",
+      "Do not assume an interview or appointment date from the original announcement."
     ],
     officialUrl: "https://unilag.edu.ng/call-for-applications-for-the-senator-douye-diri-professorial-chair-in-leadership-and-good-governance-department-of-political-science/",
     officialUrlLabel: "Open UNILAG vacancy notice",
-    verifiedAt: "2026-10-05",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-20",
-    nextMilestone: "Applications close Tuesday, 20 October 2026.",
+    nextMilestone: "The official 20 October 2026 Professorial Chair closing date has passed; no subsequent shortlist or extension is established by that notice.",
     feeNote: "Use the UNILAG career portal and submission contacts stated in the university's official notice.",
     sourceNotes: [
       "UNILAG published the call on 9 September 2026 and states that applications close on 20 October 2026.",
@@ -2492,8 +2498,8 @@ const rawJobOpportunities: CareerOpportunity[] = [
       "UNILAG directs candidates to its official career portal and requires a Personal Statement plus a detailed two-year strategic plan."
     ],
     sources: [
-      { label: "UNILAG Professorial Chair Vacancy", url: "https://unilag.edu.ng/call-for-applications-for-the-senator-douye-diri-professorial-chair-in-leadership-and-good-governance-department-of-political-science/", lastChecked: "2026-10-05" },
-      { label: "UNILAG Career Portal", url: "https://career.unilag.edu.ng/jobportal/jobportal/", lastChecked: "2026-10-05" }
+      { label: "UNILAG Professorial Chair Vacancy", url: "https://unilag.edu.ng/call-for-applications-for-the-senator-douye-diri-professorial-chair-in-leadership-and-good-governance-department-of-political-science/", lastChecked: "2026-10-24" },
+      { label: "UNILAG Career Portal", url: "https://career.unilag.edu.ng/jobportal/jobportal/", lastChecked: "2026-10-24" }
     ]
   },
   {

@@ -19,16 +19,16 @@ export const jobGrowthWave: CareerOpportunity[] = [
     },
     "jobPostingAuthorization": {
       "publicEvidenceUrl": "https://recruitment.kdsg.gov.ng/",
-      "verifiedAt": "2026-10-06",
-      "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
+      "verifiedAt": "2026-10-24",
+      "note": "Kaduna State PHCB publicly advertised this exact vacancy, grade and original 14 October closing date; as of 24 October the official portal says no PHCB vacancy is open."
     },
     "topicSlugs": [
       "healthcare-pharma"
     ],
     "sector": "Government",
-    "status": "open",
-    "statusLabel": "Applications open until 14 October 2026",
-    "summary": "Kaduna State Primary Health Care Board is recruiting a Nursing Officer Grade III under its 2026 exercise. The official Kaduna State recruitment portal lists the appointment as permanent and pensionable, placement CONHESS 6, with applications closing 14 October 2026.",
+    "status": "closed",
+    "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
+    "summary": "Kaduna State Primary Health Care Board advertised the Nursing Officer Grade III role as a permanent and pensionable appointment · conhess 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 6",
     "audiences": [
@@ -44,9 +44,9 @@ export const jobGrowthWave: CareerOpportunity[] = [
     ],
     "requirements": [
       "Registered Nurse or Registered Midwife qualification from a recognised Nursing or Midwifery Institution, with registration by the Nursing and Midwifery Council of Nigeria (NMCN).",
-      "Create or update a profile on the official Kaduna State recruitment portal and make sure the qualification used for this application is recorded correctly.",
+      "Existing applicants should confirm the professional credentials saved with their submission in the official Kaduna candidate dashboard.",
       "Professional registration is required for screening where the vacancy states it; the portal may allow submission before the credential is recorded, but screening determines whether the published requirement is met.",
-      "Submit only one accurate application through the official Kaduna State recruitment platform before the closing date."
+      "The published 14 October deadline has passed. Retain evidence of any timely application; the state Job Bank reports no current PHCB vacancy."
     ],
     "documents": [
       "CV/resume or employment history details requested by the Kaduna recruitment profile.",
@@ -55,20 +55,20 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "Identity and profile information requested by the official Kaduna State recruitment portal."
     ],
     "applicationSteps": [
-      "Open the official Kaduna State recruitment portal and create or sign in to your reusable candidate profile.",
-      "Complete personal information, qualifications, experience, skills and professional credentials accurately.",
-      "Open the Nursing Officer Grade III vacancy under the Kaduna State Primary Health Care Board 2026 Recruitment exercise and review the published CONHESS 6 requirements.",
-      "Select the highest qualification being used for the application, review the captured information and submit through the official Apply control.",
-      "Keep the submission evidence and use the portal dashboard for screening, CBT, interview or final-status updates."
+      "Use the official Kaduna State Job Bank to confirm that the 4–14 October 2026 PHCB recruitment has ended; a reusable profile button does not mean this role is open.",
+      "If you applied by the deadline, sign in to your own candidate dashboard to check the submitted application record and any state-issued updates.",
+      "Retain your Nursing Officer Grade III qualification, CONHESS 6 placement details and any professional-registration evidence for an officially announced screening.",
+      "Check the official portal for CBT, interview or selection instructions. The expired advert does not promise a new application date or an appointment.",
+      "Do not pay an intermediary for late PHCB forms, a selection slot or a claimed reopening of the concluded exercise."
     ],
     "officialUrl": "https://recruitment.kdsg.gov.ng/",
-    "officialUrlLabel": "Apply on the Kaduna State recruitment portal",
-    "verifiedAt": "2026-10-06",
+    "officialUrlLabel": "View concluded Kaduna State PHCB recruitment and candidate dashboard",
+    "verifiedAt": "2026-10-24",
     "deadline": "2026-10-14",
-    "nextMilestone": "Applications close 14 October 2026; later screening or CBT updates are posted in the candidate dashboard.",
+    "nextMilestone": "Applications ended 14 October 2026. The official Kaduna State Job Bank currently says no vacancy is open; existing candidates should check their own dashboard for screening or other future announcements.",
     "feeNote": "The official Kaduna State recruitment portal does not state an application fee. Do not pay an unofficial agent for a shortlist, CBT slot or appointment.",
     "sourceNotes": [
-      "The official portal lists Nursing Officer Grade III as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
+      "The original official PHCB notice listed Nursing Officer Grade III as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
       "The published placement is CONHESS 6, the appointment is permanent and pensionable, and the common application window is 4–14 October 2026.",
       "The official portal preserves the submitted application as a profile snapshot and is the controlling source for later recruitment-stage updates."
     ],
@@ -76,7 +76,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       {
         "label": "Kaduna State Recruitment Portal — Nursing Officer Grade III",
         "url": "https://recruitment.kdsg.gov.ng/",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-24"
       }
     ]
   },
@@ -98,16 +98,16 @@ export const jobGrowthWave: CareerOpportunity[] = [
     },
     "jobPostingAuthorization": {
       "publicEvidenceUrl": "https://recruitment.kdsg.gov.ng/",
-      "verifiedAt": "2026-10-06",
-      "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
+      "verifiedAt": "2026-10-24",
+      "note": "Kaduna State PHCB publicly advertised this exact vacancy, grade and original 14 October closing date; as of 24 October the official portal says no PHCB vacancy is open."
     },
     "topicSlugs": [
       "healthcare-pharma"
     ],
     "sector": "Government",
-    "status": "open",
-    "statusLabel": "Applications open until 14 October 2026",
-    "summary": "Kaduna State Primary Health Care Board is recruiting a Community Health Technician under its 2026 exercise. The official Kaduna State recruitment portal lists the appointment as permanent and pensionable, placement CONHESS 6, with applications closing 14 October 2026.",
+    "status": "closed",
+    "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
+    "summary": "Kaduna State Primary Health Care Board advertised the Community Health Technician role as a permanent and pensionable appointment · conhess 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 6",
     "audiences": [
@@ -123,9 +123,9 @@ export const jobGrowthWave: CareerOpportunity[] = [
     ],
     "requirements": [
       "Professional Diploma or National Diploma in Community Health Technician (CHEW) from a recognised College/School of Health Science/Technology, with registration by the National Council for Community Health Practice Board of Nigeria.",
-      "Create or update a profile on the official Kaduna State recruitment portal and make sure the qualification used for this application is recorded correctly.",
+      "Existing applicants should confirm the professional credentials saved with their submission in the official Kaduna candidate dashboard.",
       "Professional registration is required for screening where the vacancy states it; the portal may allow submission before the credential is recorded, but screening determines whether the published requirement is met.",
-      "Submit only one accurate application through the official Kaduna State recruitment platform before the closing date."
+      "The published 14 October deadline has passed. Retain evidence of any timely application; the state Job Bank reports no current PHCB vacancy."
     ],
     "documents": [
       "CV/resume or employment history details requested by the Kaduna recruitment profile.",
@@ -134,20 +134,20 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "Identity and profile information requested by the official Kaduna State recruitment portal."
     ],
     "applicationSteps": [
-      "Open the official Kaduna State recruitment portal and create or sign in to your reusable candidate profile.",
-      "Complete personal information, qualifications, experience, skills and professional credentials accurately.",
-      "Open the Community Health Technician vacancy under the Kaduna State Primary Health Care Board 2026 Recruitment exercise and review the published CONHESS 6 requirements.",
-      "Select the highest qualification being used for the application, review the captured information and submit through the official Apply control.",
-      "Keep the submission evidence and use the portal dashboard for screening, CBT, interview or final-status updates."
+      "Use the official Kaduna State Job Bank to confirm that the 4–14 October 2026 PHCB recruitment has ended; a reusable profile button does not mean this role is open.",
+      "If you applied by the deadline, sign in to your own candidate dashboard to check the submitted application record and any state-issued updates.",
+      "Retain your Community Health Technician qualification, CONHESS 6 placement details and any professional-registration evidence for an officially announced screening.",
+      "Check the official portal for CBT, interview or selection instructions. The expired advert does not promise a new application date or an appointment.",
+      "Do not pay an intermediary for late PHCB forms, a selection slot or a claimed reopening of the concluded exercise."
     ],
     "officialUrl": "https://recruitment.kdsg.gov.ng/",
-    "officialUrlLabel": "Apply on the Kaduna State recruitment portal",
-    "verifiedAt": "2026-10-06",
+    "officialUrlLabel": "View concluded Kaduna State PHCB recruitment and candidate dashboard",
+    "verifiedAt": "2026-10-24",
     "deadline": "2026-10-14",
-    "nextMilestone": "Applications close 14 October 2026; later screening or CBT updates are posted in the candidate dashboard.",
+    "nextMilestone": "Applications ended 14 October 2026. The official Kaduna State Job Bank currently says no vacancy is open; existing candidates should check their own dashboard for screening or other future announcements.",
     "feeNote": "The official Kaduna State recruitment portal does not state an application fee. Do not pay an unofficial agent for a shortlist, CBT slot or appointment.",
     "sourceNotes": [
-      "The official portal lists Community Health Technician as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
+      "The original official PHCB notice listed Community Health Technician as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
       "The published placement is CONHESS 6, the appointment is permanent and pensionable, and the common application window is 4–14 October 2026.",
       "The official portal preserves the submitted application as a profile snapshot and is the controlling source for later recruitment-stage updates."
     ],
@@ -155,7 +155,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       {
         "label": "Kaduna State Recruitment Portal — Community Health Technician",
         "url": "https://recruitment.kdsg.gov.ng/",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-24"
       }
     ]
   },
@@ -177,16 +177,16 @@ export const jobGrowthWave: CareerOpportunity[] = [
     },
     "jobPostingAuthorization": {
       "publicEvidenceUrl": "https://recruitment.kdsg.gov.ng/",
-      "verifiedAt": "2026-10-06",
-      "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
+      "verifiedAt": "2026-10-24",
+      "note": "Kaduna State PHCB publicly advertised this exact vacancy, grade and original 14 October closing date; as of 24 October the official portal says no PHCB vacancy is open."
     },
     "topicSlugs": [
       "healthcare-pharma"
     ],
     "sector": "Government",
-    "status": "open",
-    "statusLabel": "Applications open until 14 October 2026",
-    "summary": "Kaduna State Primary Health Care Board is recruiting a Environmental Health Officer Grade II under its 2026 exercise. The official Kaduna State recruitment portal lists the appointment as permanent and pensionable, placement CONHESS 7, with applications closing 14 October 2026.",
+    "status": "closed",
+    "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
+    "summary": "Kaduna State Primary Health Care Board advertised the Environmental Health Officer Grade II role as a permanent and pensionable appointment · conhess 7 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 7 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 7",
     "audiences": [
@@ -202,9 +202,9 @@ export const jobGrowthWave: CareerOpportunity[] = [
     ],
     "requirements": [
       "Degree in Environmental Health Science from a recognised university, with registration by the Environmental Health Officers Registration Board of Nigeria (EHORBON).",
-      "Create or update a profile on the official Kaduna State recruitment portal and make sure the qualification used for this application is recorded correctly.",
+      "Existing applicants should confirm the professional credentials saved with their submission in the official Kaduna candidate dashboard.",
       "Professional registration is required for screening where the vacancy states it; the portal may allow submission before the credential is recorded, but screening determines whether the published requirement is met.",
-      "Submit only one accurate application through the official Kaduna State recruitment platform before the closing date."
+      "The published 14 October deadline has passed. Retain evidence of any timely application; the state Job Bank reports no current PHCB vacancy."
     ],
     "documents": [
       "CV/resume or employment history details requested by the Kaduna recruitment profile.",
@@ -213,20 +213,20 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "Identity and profile information requested by the official Kaduna State recruitment portal."
     ],
     "applicationSteps": [
-      "Open the official Kaduna State recruitment portal and create or sign in to your reusable candidate profile.",
-      "Complete personal information, qualifications, experience, skills and professional credentials accurately.",
-      "Open the Environmental Health Officer Grade II vacancy under the Kaduna State Primary Health Care Board 2026 Recruitment exercise and review the published CONHESS 7 requirements.",
-      "Select the highest qualification being used for the application, review the captured information and submit through the official Apply control.",
-      "Keep the submission evidence and use the portal dashboard for screening, CBT, interview or final-status updates."
+      "Use the official Kaduna State Job Bank to confirm that the 4–14 October 2026 PHCB recruitment has ended; a reusable profile button does not mean this role is open.",
+      "If you applied by the deadline, sign in to your own candidate dashboard to check the submitted application record and any state-issued updates.",
+      "Retain your Environmental Health Officer Grade II qualification, CONHESS 7 placement details and any professional-registration evidence for an officially announced screening.",
+      "Check the official portal for CBT, interview or selection instructions. The expired advert does not promise a new application date or an appointment.",
+      "Do not pay an intermediary for late PHCB forms, a selection slot or a claimed reopening of the concluded exercise."
     ],
     "officialUrl": "https://recruitment.kdsg.gov.ng/",
-    "officialUrlLabel": "Apply on the Kaduna State recruitment portal",
-    "verifiedAt": "2026-10-06",
+    "officialUrlLabel": "View concluded Kaduna State PHCB recruitment and candidate dashboard",
+    "verifiedAt": "2026-10-24",
     "deadline": "2026-10-14",
-    "nextMilestone": "Applications close 14 October 2026; later screening or CBT updates are posted in the candidate dashboard.",
+    "nextMilestone": "Applications ended 14 October 2026. The official Kaduna State Job Bank currently says no vacancy is open; existing candidates should check their own dashboard for screening or other future announcements.",
     "feeNote": "The official Kaduna State recruitment portal does not state an application fee. Do not pay an unofficial agent for a shortlist, CBT slot or appointment.",
     "sourceNotes": [
-      "The official portal lists Environmental Health Officer Grade II as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
+      "The original official PHCB notice listed Environmental Health Officer Grade II as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
       "The published placement is CONHESS 7, the appointment is permanent and pensionable, and the common application window is 4–14 October 2026.",
       "The official portal preserves the submitted application as a profile snapshot and is the controlling source for later recruitment-stage updates."
     ],
@@ -234,7 +234,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       {
         "label": "Kaduna State Recruitment Portal — Environmental Health Officer Grade II",
         "url": "https://recruitment.kdsg.gov.ng/",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-24"
       }
     ]
   },
@@ -256,16 +256,16 @@ export const jobGrowthWave: CareerOpportunity[] = [
     },
     "jobPostingAuthorization": {
       "publicEvidenceUrl": "https://recruitment.kdsg.gov.ng/",
-      "verifiedAt": "2026-10-06",
-      "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
+      "verifiedAt": "2026-10-24",
+      "note": "Kaduna State PHCB publicly advertised this exact vacancy, grade and original 14 October closing date; as of 24 October the official portal says no PHCB vacancy is open."
     },
     "topicSlugs": [
       "healthcare-pharma"
     ],
     "sector": "Government",
-    "status": "open",
-    "statusLabel": "Applications open until 14 October 2026",
-    "summary": "Kaduna State Primary Health Care Board is recruiting a Environmental Health Technician under its 2026 exercise. The official Kaduna State recruitment portal lists the appointment as permanent and pensionable, placement CONHESS 6/7, with applications closing 14 October 2026.",
+    "status": "closed",
+    "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
+    "summary": "Kaduna State Primary Health Care Board advertised the Environmental Health Technician role as a permanent and pensionable appointment · conhess 6/7 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6/7 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 6/7",
     "audiences": [
@@ -281,9 +281,9 @@ export const jobGrowthWave: CareerOpportunity[] = [
     ],
     "requirements": [
       "National Diploma or Higher National Diploma in Environmental Health from an approved health institution, with the professional registration stated by the Kaduna portal for the technician cadre.",
-      "Create or update a profile on the official Kaduna State recruitment portal and make sure the qualification used for this application is recorded correctly.",
+      "Existing applicants should confirm the professional credentials saved with their submission in the official Kaduna candidate dashboard.",
       "Professional registration is required for screening where the vacancy states it; the portal may allow submission before the credential is recorded, but screening determines whether the published requirement is met.",
-      "Submit only one accurate application through the official Kaduna State recruitment platform before the closing date."
+      "The published 14 October deadline has passed. Retain evidence of any timely application; the state Job Bank reports no current PHCB vacancy."
     ],
     "documents": [
       "CV/resume or employment history details requested by the Kaduna recruitment profile.",
@@ -292,20 +292,20 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "Identity and profile information requested by the official Kaduna State recruitment portal."
     ],
     "applicationSteps": [
-      "Open the official Kaduna State recruitment portal and create or sign in to your reusable candidate profile.",
-      "Complete personal information, qualifications, experience, skills and professional credentials accurately.",
-      "Open the Environmental Health Technician vacancy under the Kaduna State Primary Health Care Board 2026 Recruitment exercise and review the published CONHESS 6/7 requirements.",
-      "Select the highest qualification being used for the application, review the captured information and submit through the official Apply control.",
-      "Keep the submission evidence and use the portal dashboard for screening, CBT, interview or final-status updates."
+      "Use the official Kaduna State Job Bank to confirm that the 4–14 October 2026 PHCB recruitment has ended; a reusable profile button does not mean this role is open.",
+      "If you applied by the deadline, sign in to your own candidate dashboard to check the submitted application record and any state-issued updates.",
+      "Retain your Environmental Health Technician qualification, CONHESS 6/7 placement details and any professional-registration evidence for an officially announced screening.",
+      "Check the official portal for CBT, interview or selection instructions. The expired advert does not promise a new application date or an appointment.",
+      "Do not pay an intermediary for late PHCB forms, a selection slot or a claimed reopening of the concluded exercise."
     ],
     "officialUrl": "https://recruitment.kdsg.gov.ng/",
-    "officialUrlLabel": "Apply on the Kaduna State recruitment portal",
-    "verifiedAt": "2026-10-06",
+    "officialUrlLabel": "View concluded Kaduna State PHCB recruitment and candidate dashboard",
+    "verifiedAt": "2026-10-24",
     "deadline": "2026-10-14",
-    "nextMilestone": "Applications close 14 October 2026; later screening or CBT updates are posted in the candidate dashboard.",
+    "nextMilestone": "Applications ended 14 October 2026. The official Kaduna State Job Bank currently says no vacancy is open; existing candidates should check their own dashboard for screening or other future announcements.",
     "feeNote": "The official Kaduna State recruitment portal does not state an application fee. Do not pay an unofficial agent for a shortlist, CBT slot or appointment.",
     "sourceNotes": [
-      "The official portal lists Environmental Health Technician as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
+      "The original official PHCB notice listed Environmental Health Technician as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
       "The published placement is CONHESS 6/7, the appointment is permanent and pensionable, and the common application window is 4–14 October 2026.",
       "The official portal preserves the submitted application as a profile snapshot and is the controlling source for later recruitment-stage updates."
     ],
@@ -313,7 +313,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       {
         "label": "Kaduna State Recruitment Portal — Environmental Health Technician",
         "url": "https://recruitment.kdsg.gov.ng/",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-24"
       }
     ]
   },
@@ -335,16 +335,16 @@ export const jobGrowthWave: CareerOpportunity[] = [
     },
     "jobPostingAuthorization": {
       "publicEvidenceUrl": "https://recruitment.kdsg.gov.ng/",
-      "verifiedAt": "2026-10-06",
-      "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
+      "verifiedAt": "2026-10-24",
+      "note": "Kaduna State PHCB publicly advertised this exact vacancy, grade and original 14 October closing date; as of 24 October the official portal says no PHCB vacancy is open."
     },
     "topicSlugs": [
       "healthcare-pharma"
     ],
     "sector": "Government",
-    "status": "open",
-    "statusLabel": "Applications open until 14 October 2026",
-    "summary": "Kaduna State Primary Health Care Board is recruiting a Medical Laboratory Technician under its 2026 exercise. The official Kaduna State recruitment portal lists the appointment as permanent and pensionable, placement CONHESS 6, with applications closing 14 October 2026.",
+    "status": "closed",
+    "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
+    "summary": "Kaduna State Primary Health Care Board advertised the Medical Laboratory Technician role as a permanent and pensionable appointment · conhess 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 6",
     "audiences": [
@@ -360,9 +360,9 @@ export const jobGrowthWave: CareerOpportunity[] = [
     ],
     "requirements": [
       "National Diploma in Medical Laboratory Science from a recognised Health Science Institution, with the technician-cadre professional registration stated on the official vacancy.",
-      "Create or update a profile on the official Kaduna State recruitment portal and make sure the qualification used for this application is recorded correctly.",
+      "Existing applicants should confirm the professional credentials saved with their submission in the official Kaduna candidate dashboard.",
       "Professional registration is required for screening where the vacancy states it; the portal may allow submission before the credential is recorded, but screening determines whether the published requirement is met.",
-      "Submit only one accurate application through the official Kaduna State recruitment platform before the closing date."
+      "The published 14 October deadline has passed. Retain evidence of any timely application; the state Job Bank reports no current PHCB vacancy."
     ],
     "documents": [
       "CV/resume or employment history details requested by the Kaduna recruitment profile.",
@@ -371,20 +371,20 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "Identity and profile information requested by the official Kaduna State recruitment portal."
     ],
     "applicationSteps": [
-      "Open the official Kaduna State recruitment portal and create or sign in to your reusable candidate profile.",
-      "Complete personal information, qualifications, experience, skills and professional credentials accurately.",
-      "Open the Medical Laboratory Technician vacancy under the Kaduna State Primary Health Care Board 2026 Recruitment exercise and review the published CONHESS 6 requirements.",
-      "Select the highest qualification being used for the application, review the captured information and submit through the official Apply control.",
-      "Keep the submission evidence and use the portal dashboard for screening, CBT, interview or final-status updates."
+      "Use the official Kaduna State Job Bank to confirm that the 4–14 October 2026 PHCB recruitment has ended; a reusable profile button does not mean this role is open.",
+      "If you applied by the deadline, sign in to your own candidate dashboard to check the submitted application record and any state-issued updates.",
+      "Retain your Medical Laboratory Technician qualification, CONHESS 6 placement details and any professional-registration evidence for an officially announced screening.",
+      "Check the official portal for CBT, interview or selection instructions. The expired advert does not promise a new application date or an appointment.",
+      "Do not pay an intermediary for late PHCB forms, a selection slot or a claimed reopening of the concluded exercise."
     ],
     "officialUrl": "https://recruitment.kdsg.gov.ng/",
-    "officialUrlLabel": "Apply on the Kaduna State recruitment portal",
-    "verifiedAt": "2026-10-06",
+    "officialUrlLabel": "View concluded Kaduna State PHCB recruitment and candidate dashboard",
+    "verifiedAt": "2026-10-24",
     "deadline": "2026-10-14",
-    "nextMilestone": "Applications close 14 October 2026; later screening or CBT updates are posted in the candidate dashboard.",
+    "nextMilestone": "Applications ended 14 October 2026. The official Kaduna State Job Bank currently says no vacancy is open; existing candidates should check their own dashboard for screening or other future announcements.",
     "feeNote": "The official Kaduna State recruitment portal does not state an application fee. Do not pay an unofficial agent for a shortlist, CBT slot or appointment.",
     "sourceNotes": [
-      "The official portal lists Medical Laboratory Technician as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
+      "The original official PHCB notice listed Medical Laboratory Technician as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
       "The published placement is CONHESS 6, the appointment is permanent and pensionable, and the common application window is 4–14 October 2026.",
       "The official portal preserves the submitted application as a profile snapshot and is the controlling source for later recruitment-stage updates."
     ],
@@ -392,7 +392,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       {
         "label": "Kaduna State Recruitment Portal — Medical Laboratory Technician",
         "url": "https://recruitment.kdsg.gov.ng/",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-24"
       }
     ]
   },
@@ -414,16 +414,16 @@ export const jobGrowthWave: CareerOpportunity[] = [
     },
     "jobPostingAuthorization": {
       "publicEvidenceUrl": "https://recruitment.kdsg.gov.ng/",
-      "verifiedAt": "2026-10-06",
-      "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
+      "verifiedAt": "2026-10-24",
+      "note": "Kaduna State PHCB publicly advertised this exact vacancy, grade and original 14 October closing date; as of 24 October the official portal says no PHCB vacancy is open."
     },
     "topicSlugs": [
       "healthcare-pharma"
     ],
     "sector": "Government",
-    "status": "open",
-    "statusLabel": "Applications open until 14 October 2026",
-    "summary": "Kaduna State Primary Health Care Board is recruiting a Pharmacy Technician under its 2026 exercise. The official Kaduna State recruitment portal lists the appointment as permanent and pensionable, placement CONHESS 6, with applications closing 14 October 2026.",
+    "status": "closed",
+    "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
+    "summary": "Kaduna State Primary Health Care Board advertised the Pharmacy Technician role as a permanent and pensionable appointment · conhess 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 6",
     "audiences": [
@@ -439,9 +439,9 @@ export const jobGrowthWave: CareerOpportunity[] = [
     ],
     "requirements": [
       "Completion of the prescribed three-year Pharmacy Technician training programme at a School of Health Technology, with the registration stated by the official Kaduna vacancy.",
-      "Create or update a profile on the official Kaduna State recruitment portal and make sure the qualification used for this application is recorded correctly.",
+      "Existing applicants should confirm the professional credentials saved with their submission in the official Kaduna candidate dashboard.",
       "Professional registration is required for screening where the vacancy states it; the portal may allow submission before the credential is recorded, but screening determines whether the published requirement is met.",
-      "Submit only one accurate application through the official Kaduna State recruitment platform before the closing date."
+      "The published 14 October deadline has passed. Retain evidence of any timely application; the state Job Bank reports no current PHCB vacancy."
     ],
     "documents": [
       "CV/resume or employment history details requested by the Kaduna recruitment profile.",
@@ -450,20 +450,20 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "Identity and profile information requested by the official Kaduna State recruitment portal."
     ],
     "applicationSteps": [
-      "Open the official Kaduna State recruitment portal and create or sign in to your reusable candidate profile.",
-      "Complete personal information, qualifications, experience, skills and professional credentials accurately.",
-      "Open the Pharmacy Technician vacancy under the Kaduna State Primary Health Care Board 2026 Recruitment exercise and review the published CONHESS 6 requirements.",
-      "Select the highest qualification being used for the application, review the captured information and submit through the official Apply control.",
-      "Keep the submission evidence and use the portal dashboard for screening, CBT, interview or final-status updates."
+      "Use the official Kaduna State Job Bank to confirm that the 4–14 October 2026 PHCB recruitment has ended; a reusable profile button does not mean this role is open.",
+      "If you applied by the deadline, sign in to your own candidate dashboard to check the submitted application record and any state-issued updates.",
+      "Retain your Pharmacy Technician qualification, CONHESS 6 placement details and any professional-registration evidence for an officially announced screening.",
+      "Check the official portal for CBT, interview or selection instructions. The expired advert does not promise a new application date or an appointment.",
+      "Do not pay an intermediary for late PHCB forms, a selection slot or a claimed reopening of the concluded exercise."
     ],
     "officialUrl": "https://recruitment.kdsg.gov.ng/",
-    "officialUrlLabel": "Apply on the Kaduna State recruitment portal",
-    "verifiedAt": "2026-10-06",
+    "officialUrlLabel": "View concluded Kaduna State PHCB recruitment and candidate dashboard",
+    "verifiedAt": "2026-10-24",
     "deadline": "2026-10-14",
-    "nextMilestone": "Applications close 14 October 2026; later screening or CBT updates are posted in the candidate dashboard.",
+    "nextMilestone": "Applications ended 14 October 2026. The official Kaduna State Job Bank currently says no vacancy is open; existing candidates should check their own dashboard for screening or other future announcements.",
     "feeNote": "The official Kaduna State recruitment portal does not state an application fee. Do not pay an unofficial agent for a shortlist, CBT slot or appointment.",
     "sourceNotes": [
-      "The official portal lists Pharmacy Technician as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
+      "The original official PHCB notice listed Pharmacy Technician as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
       "The published placement is CONHESS 6, the appointment is permanent and pensionable, and the common application window is 4–14 October 2026.",
       "The official portal preserves the submitted application as a profile snapshot and is the controlling source for later recruitment-stage updates."
     ],
@@ -471,7 +471,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       {
         "label": "Kaduna State Recruitment Portal — Pharmacy Technician",
         "url": "https://recruitment.kdsg.gov.ng/",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-24"
       }
     ]
   },
@@ -493,16 +493,16 @@ export const jobGrowthWave: CareerOpportunity[] = [
     },
     "jobPostingAuthorization": {
       "publicEvidenceUrl": "https://recruitment.kdsg.gov.ng/",
-      "verifiedAt": "2026-10-06",
-      "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
+      "verifiedAt": "2026-10-24",
+      "note": "Kaduna State PHCB publicly advertised this exact vacancy, grade and original 14 October closing date; as of 24 October the official portal says no PHCB vacancy is open."
     },
     "topicSlugs": [
       "healthcare-pharma"
     ],
     "sector": "Government",
-    "status": "open",
-    "statusLabel": "Applications open until 14 October 2026",
-    "summary": "Kaduna State Primary Health Care Board is recruiting a Health Educator under its 2026 exercise. The official Kaduna State recruitment portal lists the appointment as permanent and pensionable, placement CONHESS 6, with applications closing 14 October 2026.",
+    "status": "closed",
+    "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
+    "summary": "Kaduna State Primary Health Care Board advertised the Health Educator role as a permanent and pensionable appointment · conhess 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 6",
     "audiences": [
@@ -518,9 +518,9 @@ export const jobGrowthWave: CareerOpportunity[] = [
     ],
     "requirements": [
       "Completion of the prescribed three-year Health Education programme at a recognised College/School of Health Science/Technology, with the professional registration stated by the official vacancy.",
-      "Create or update a profile on the official Kaduna State recruitment portal and make sure the qualification used for this application is recorded correctly.",
+      "Existing applicants should confirm the professional credentials saved with their submission in the official Kaduna candidate dashboard.",
       "Professional registration is required for screening where the vacancy states it; the portal may allow submission before the credential is recorded, but screening determines whether the published requirement is met.",
-      "Submit only one accurate application through the official Kaduna State recruitment platform before the closing date."
+      "The published 14 October deadline has passed. Retain evidence of any timely application; the state Job Bank reports no current PHCB vacancy."
     ],
     "documents": [
       "CV/resume or employment history details requested by the Kaduna recruitment profile.",
@@ -529,20 +529,20 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "Identity and profile information requested by the official Kaduna State recruitment portal."
     ],
     "applicationSteps": [
-      "Open the official Kaduna State recruitment portal and create or sign in to your reusable candidate profile.",
-      "Complete personal information, qualifications, experience, skills and professional credentials accurately.",
-      "Open the Health Educator vacancy under the Kaduna State Primary Health Care Board 2026 Recruitment exercise and review the published CONHESS 6 requirements.",
-      "Select the highest qualification being used for the application, review the captured information and submit through the official Apply control.",
-      "Keep the submission evidence and use the portal dashboard for screening, CBT, interview or final-status updates."
+      "Use the official Kaduna State Job Bank to confirm that the 4–14 October 2026 PHCB recruitment has ended; a reusable profile button does not mean this role is open.",
+      "If you applied by the deadline, sign in to your own candidate dashboard to check the submitted application record and any state-issued updates.",
+      "Retain your Health Educator qualification, CONHESS 6 placement details and any professional-registration evidence for an officially announced screening.",
+      "Check the official portal for CBT, interview or selection instructions. The expired advert does not promise a new application date or an appointment.",
+      "Do not pay an intermediary for late PHCB forms, a selection slot or a claimed reopening of the concluded exercise."
     ],
     "officialUrl": "https://recruitment.kdsg.gov.ng/",
-    "officialUrlLabel": "Apply on the Kaduna State recruitment portal",
-    "verifiedAt": "2026-10-06",
+    "officialUrlLabel": "View concluded Kaduna State PHCB recruitment and candidate dashboard",
+    "verifiedAt": "2026-10-24",
     "deadline": "2026-10-14",
-    "nextMilestone": "Applications close 14 October 2026; later screening or CBT updates are posted in the candidate dashboard.",
+    "nextMilestone": "Applications ended 14 October 2026. The official Kaduna State Job Bank currently says no vacancy is open; existing candidates should check their own dashboard for screening or other future announcements.",
     "feeNote": "The official Kaduna State recruitment portal does not state an application fee. Do not pay an unofficial agent for a shortlist, CBT slot or appointment.",
     "sourceNotes": [
-      "The official portal lists Health Educator as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
+      "The original official PHCB notice listed Health Educator as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
       "The published placement is CONHESS 6, the appointment is permanent and pensionable, and the common application window is 4–14 October 2026.",
       "The official portal preserves the submitted application as a profile snapshot and is the controlling source for later recruitment-stage updates."
     ],
@@ -550,7 +550,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       {
         "label": "Kaduna State Recruitment Portal — Health Educator",
         "url": "https://recruitment.kdsg.gov.ng/",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-24"
       }
     ]
   },
@@ -572,16 +572,16 @@ export const jobGrowthWave: CareerOpportunity[] = [
     },
     "jobPostingAuthorization": {
       "publicEvidenceUrl": "https://recruitment.kdsg.gov.ng/",
-      "verifiedAt": "2026-10-06",
-      "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
+      "verifiedAt": "2026-10-24",
+      "note": "Kaduna State PHCB publicly advertised this exact vacancy, grade and original 14 October closing date; as of 24 October the official portal says no PHCB vacancy is open."
     },
     "topicSlugs": [
       "healthcare-pharma"
     ],
     "sector": "Government",
-    "status": "open",
-    "statusLabel": "Applications open until 14 October 2026",
-    "summary": "Kaduna State Primary Health Care Board is recruiting a Nutrition Officer under its 2026 exercise. The official Kaduna State recruitment portal lists the appointment as permanent and pensionable, placement CONHESS 6, with applications closing 14 October 2026.",
+    "status": "closed",
+    "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
+    "summary": "Kaduna State Primary Health Care Board advertised the Nutrition Officer role as a permanent and pensionable appointment · conhess 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 6",
     "audiences": [
@@ -597,9 +597,9 @@ export const jobGrowthWave: CareerOpportunity[] = [
     ],
     "requirements": [
       "Ordinary National Diploma or National Diploma in Nutrition and Dietetics, Applied Nutrition or equivalent from a recognised institution, with the professional registration stated by the official vacancy.",
-      "Create or update a profile on the official Kaduna State recruitment portal and make sure the qualification used for this application is recorded correctly.",
+      "Existing applicants should confirm the professional credentials saved with their submission in the official Kaduna candidate dashboard.",
       "Professional registration is required for screening where the vacancy states it; the portal may allow submission before the credential is recorded, but screening determines whether the published requirement is met.",
-      "Submit only one accurate application through the official Kaduna State recruitment platform before the closing date."
+      "The published 14 October deadline has passed. Retain evidence of any timely application; the state Job Bank reports no current PHCB vacancy."
     ],
     "documents": [
       "CV/resume or employment history details requested by the Kaduna recruitment profile.",
@@ -608,20 +608,20 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "Identity and profile information requested by the official Kaduna State recruitment portal."
     ],
     "applicationSteps": [
-      "Open the official Kaduna State recruitment portal and create or sign in to your reusable candidate profile.",
-      "Complete personal information, qualifications, experience, skills and professional credentials accurately.",
-      "Open the Nutrition Officer vacancy under the Kaduna State Primary Health Care Board 2026 Recruitment exercise and review the published CONHESS 6 requirements.",
-      "Select the highest qualification being used for the application, review the captured information and submit through the official Apply control.",
-      "Keep the submission evidence and use the portal dashboard for screening, CBT, interview or final-status updates."
+      "Use the official Kaduna State Job Bank to confirm that the 4–14 October 2026 PHCB recruitment has ended; a reusable profile button does not mean this role is open.",
+      "If you applied by the deadline, sign in to your own candidate dashboard to check the submitted application record and any state-issued updates.",
+      "Retain your Nutrition Officer qualification, CONHESS 6 placement details and any professional-registration evidence for an officially announced screening.",
+      "Check the official portal for CBT, interview or selection instructions. The expired advert does not promise a new application date or an appointment.",
+      "Do not pay an intermediary for late PHCB forms, a selection slot or a claimed reopening of the concluded exercise."
     ],
     "officialUrl": "https://recruitment.kdsg.gov.ng/",
-    "officialUrlLabel": "Apply on the Kaduna State recruitment portal",
-    "verifiedAt": "2026-10-06",
+    "officialUrlLabel": "View concluded Kaduna State PHCB recruitment and candidate dashboard",
+    "verifiedAt": "2026-10-24",
     "deadline": "2026-10-14",
-    "nextMilestone": "Applications close 14 October 2026; later screening or CBT updates are posted in the candidate dashboard.",
+    "nextMilestone": "Applications ended 14 October 2026. The official Kaduna State Job Bank currently says no vacancy is open; existing candidates should check their own dashboard for screening or other future announcements.",
     "feeNote": "The official Kaduna State recruitment portal does not state an application fee. Do not pay an unofficial agent for a shortlist, CBT slot or appointment.",
     "sourceNotes": [
-      "The official portal lists Nutrition Officer as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
+      "The original official PHCB notice listed Nutrition Officer as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
       "The published placement is CONHESS 6, the appointment is permanent and pensionable, and the common application window is 4–14 October 2026.",
       "The official portal preserves the submitted application as a profile snapshot and is the controlling source for later recruitment-stage updates."
     ],
@@ -629,7 +629,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       {
         "label": "Kaduna State Recruitment Portal — Nutrition Officer",
         "url": "https://recruitment.kdsg.gov.ng/",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-24"
       }
     ]
   },
@@ -651,16 +651,16 @@ export const jobGrowthWave: CareerOpportunity[] = [
     },
     "jobPostingAuthorization": {
       "publicEvidenceUrl": "https://recruitment.kdsg.gov.ng/",
-      "verifiedAt": "2026-10-06",
-      "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
+      "verifiedAt": "2026-10-24",
+      "note": "Kaduna State PHCB publicly advertised this exact vacancy, grade and original 14 October closing date; as of 24 October the official portal says no PHCB vacancy is open."
     },
     "topicSlugs": [
       "healthcare-pharma"
     ],
     "sector": "Government",
-    "status": "open",
-    "statusLabel": "Applications open until 14 October 2026",
-    "summary": "Kaduna State Primary Health Care Board is recruiting a Health Information Management Technician under its 2026 exercise. The official Kaduna State recruitment portal lists the appointment as permanent and pensionable, placement CONHESS 6, with applications closing 14 October 2026.",
+    "status": "closed",
+    "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
+    "summary": "Kaduna State Primary Health Care Board advertised the Health Information Management Technician role as a permanent and pensionable appointment · conhess 6 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 6 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 6",
     "audiences": [
@@ -676,9 +676,9 @@ export const jobGrowthWave: CareerOpportunity[] = [
     ],
     "requirements": [
       "Ordinary National Diploma or National Diploma in Health Information Management from a recognised College/School of Health Science/Technology, with registration by the Health Information Management Registration Board of Nigeria (HMRBN).",
-      "Create or update a profile on the official Kaduna State recruitment portal and make sure the qualification used for this application is recorded correctly.",
+      "Existing applicants should confirm the professional credentials saved with their submission in the official Kaduna candidate dashboard.",
       "Professional registration is required for screening where the vacancy states it; the portal may allow submission before the credential is recorded, but screening determines whether the published requirement is met.",
-      "Submit only one accurate application through the official Kaduna State recruitment platform before the closing date."
+      "The published 14 October deadline has passed. Retain evidence of any timely application; the state Job Bank reports no current PHCB vacancy."
     ],
     "documents": [
       "CV/resume or employment history details requested by the Kaduna recruitment profile.",
@@ -687,20 +687,20 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "Identity and profile information requested by the official Kaduna State recruitment portal."
     ],
     "applicationSteps": [
-      "Open the official Kaduna State recruitment portal and create or sign in to your reusable candidate profile.",
-      "Complete personal information, qualifications, experience, skills and professional credentials accurately.",
-      "Open the Health Information Management Technician vacancy under the Kaduna State Primary Health Care Board 2026 Recruitment exercise and review the published CONHESS 6 requirements.",
-      "Select the highest qualification being used for the application, review the captured information and submit through the official Apply control.",
-      "Keep the submission evidence and use the portal dashboard for screening, CBT, interview or final-status updates."
+      "Use the official Kaduna State Job Bank to confirm that the 4–14 October 2026 PHCB recruitment has ended; a reusable profile button does not mean this role is open.",
+      "If you applied by the deadline, sign in to your own candidate dashboard to check the submitted application record and any state-issued updates.",
+      "Retain your Health Information Management Technician qualification, CONHESS 6 placement details and any professional-registration evidence for an officially announced screening.",
+      "Check the official portal for CBT, interview or selection instructions. The expired advert does not promise a new application date or an appointment.",
+      "Do not pay an intermediary for late PHCB forms, a selection slot or a claimed reopening of the concluded exercise."
     ],
     "officialUrl": "https://recruitment.kdsg.gov.ng/",
-    "officialUrlLabel": "Apply on the Kaduna State recruitment portal",
-    "verifiedAt": "2026-10-06",
+    "officialUrlLabel": "View concluded Kaduna State PHCB recruitment and candidate dashboard",
+    "verifiedAt": "2026-10-24",
     "deadline": "2026-10-14",
-    "nextMilestone": "Applications close 14 October 2026; later screening or CBT updates are posted in the candidate dashboard.",
+    "nextMilestone": "Applications ended 14 October 2026. The official Kaduna State Job Bank currently says no vacancy is open; existing candidates should check their own dashboard for screening or other future announcements.",
     "feeNote": "The official Kaduna State recruitment portal does not state an application fee. Do not pay an unofficial agent for a shortlist, CBT slot or appointment.",
     "sourceNotes": [
-      "The official portal lists Health Information Management Technician as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
+      "The original official PHCB notice listed Health Information Management Technician as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
       "The published placement is CONHESS 6, the appointment is permanent and pensionable, and the common application window is 4–14 October 2026.",
       "The official portal preserves the submitted application as a profile snapshot and is the controlling source for later recruitment-stage updates."
     ],
@@ -708,7 +708,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       {
         "label": "Kaduna State Recruitment Portal — Health Information Management Technician",
         "url": "https://recruitment.kdsg.gov.ng/",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-24"
       }
     ]
   },
@@ -730,16 +730,16 @@ export const jobGrowthWave: CareerOpportunity[] = [
     },
     "jobPostingAuthorization": {
       "publicEvidenceUrl": "https://recruitment.kdsg.gov.ng/",
-      "verifiedAt": "2026-10-06",
-      "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
+      "verifiedAt": "2026-10-24",
+      "note": "Kaduna State PHCB publicly advertised this exact vacancy, grade and original 14 October closing date; as of 24 October the official portal says no PHCB vacancy is open."
     },
     "topicSlugs": [
       "healthcare-pharma"
     ],
     "sector": "Government",
-    "status": "open",
-    "statusLabel": "Applications open until 14 October 2026",
-    "summary": "Kaduna State Primary Health Care Board is recruiting a Community Health Assistant under its 2026 exercise. The official Kaduna State recruitment portal lists the appointment as permanent and pensionable, placement CONHESS 3, with applications closing 14 October 2026.",
+    "status": "closed",
+    "statusLabel": "Applications closed 14 October 2026 — no PHCB vacancy now open",
+    "summary": "Kaduna State Primary Health Care Board advertised the Community Health Assistant role as a permanent and pensionable appointment · conhess 3 in its 4–14 October 2026 recruitment exercise. The deadline has passed and the official Kaduna State Job Bank now says no PHCB vacancy is open. This historical vacancy page preserves the original CONHESS 3 requirements for people who applied or are researching the concluded exercise.",
     "location": "Kaduna State, Nigeria",
     "employmentType": "Permanent and pensionable appointment · CONHESS 3",
     "audiences": [
@@ -755,9 +755,9 @@ export const jobGrowthWave: CareerOpportunity[] = [
     ],
     "requirements": [
       "Certificate in Community Health (JCHEW) from a recognised College/School of Health Science/Technology, with registration by the National Council for Community Health Practice Board of Nigeria.",
-      "Create or update a profile on the official Kaduna State recruitment portal and make sure the qualification used for this application is recorded correctly.",
+      "Existing applicants should confirm the professional credentials saved with their submission in the official Kaduna candidate dashboard.",
       "Professional registration is required for screening where the vacancy states it; the portal may allow submission before the credential is recorded, but screening determines whether the published requirement is met.",
-      "Submit only one accurate application through the official Kaduna State recruitment platform before the closing date."
+      "The published 14 October deadline has passed. Retain evidence of any timely application; the state Job Bank reports no current PHCB vacancy."
     ],
     "documents": [
       "CV/resume or employment history details requested by the Kaduna recruitment profile.",
@@ -766,20 +766,20 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "Identity and profile information requested by the official Kaduna State recruitment portal."
     ],
     "applicationSteps": [
-      "Open the official Kaduna State recruitment portal and create or sign in to your reusable candidate profile.",
-      "Complete personal information, qualifications, experience, skills and professional credentials accurately.",
-      "Open the Community Health Assistant vacancy under the Kaduna State Primary Health Care Board 2026 Recruitment exercise and review the published CONHESS 3 requirements.",
-      "Select the highest qualification being used for the application, review the captured information and submit through the official Apply control.",
-      "Keep the submission evidence and use the portal dashboard for screening, CBT, interview or final-status updates."
+      "Use the official Kaduna State Job Bank to confirm that the 4–14 October 2026 PHCB recruitment has ended; a reusable profile button does not mean this role is open.",
+      "If you applied by the deadline, sign in to your own candidate dashboard to check the submitted application record and any state-issued updates.",
+      "Retain your Community Health Assistant qualification, CONHESS 3 placement details and any professional-registration evidence for an officially announced screening.",
+      "Check the official portal for CBT, interview or selection instructions. The expired advert does not promise a new application date or an appointment.",
+      "Do not pay an intermediary for late PHCB forms, a selection slot or a claimed reopening of the concluded exercise."
     ],
     "officialUrl": "https://recruitment.kdsg.gov.ng/",
-    "officialUrlLabel": "Apply on the Kaduna State recruitment portal",
-    "verifiedAt": "2026-10-06",
+    "officialUrlLabel": "View concluded Kaduna State PHCB recruitment and candidate dashboard",
+    "verifiedAt": "2026-10-24",
     "deadline": "2026-10-14",
-    "nextMilestone": "Applications close 14 October 2026; later screening or CBT updates are posted in the candidate dashboard.",
+    "nextMilestone": "Applications ended 14 October 2026. The official Kaduna State Job Bank currently says no vacancy is open; existing candidates should check their own dashboard for screening or other future announcements.",
     "feeNote": "The official Kaduna State recruitment portal does not state an application fee. Do not pay an unofficial agent for a shortlist, CBT slot or appointment.",
     "sourceNotes": [
-      "The official portal lists Community Health Assistant as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
+      "The original official PHCB notice listed Community Health Assistant as one of 10 positions in the Kaduna State Primary Health Care Board 2026 recruitment exercise.",
       "The published placement is CONHESS 3, the appointment is permanent and pensionable, and the common application window is 4–14 October 2026.",
       "The official portal preserves the submitted application as a profile snapshot and is the controlling source for later recruitment-stage updates."
     ],
@@ -787,7 +787,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       {
         "label": "Kaduna State Recruitment Portal — Community Health Assistant",
         "url": "https://recruitment.kdsg.gov.ng/",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-24"
       }
     ]
   }
