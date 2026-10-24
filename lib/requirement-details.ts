@@ -20,12 +20,20 @@ function kindFor(item: string): RequirementKind {
   if (/\b(?:Application|Reference) Number\b/i.test(item)) return "Identity / account detail";
   if (/payment|receipt|transaction|remita|rrr|fee evidence/i.test(item)) return "Payment / transaction evidence";
   if (/passport|certificate|slip|letter|affidavit|publication|photograph|photo|report|statement|extract|form|card|licen[cs]e|transcript|result|birth record|declaration|proof|identification|\bID\b/i.test(item)) return "Document";
+  // A phone or computer with a PDF reader is a viewing tool, not identity
+  // evidence. Avoid showing SMS/OTP/account instructions on free public PDFs.
+  if (/\b(?:phone|computer|tablet|device)\b.{0,95}\b(?:pdf reader|pdf viewer|pdf file|pdf download)\b/i.test(item)) return "Other requirement";
   if (/\bNIN\b|\bBVN\b|email|phone|gsm|number|code|pin|e-pin|serial|matric|account|username|password|reference|date of birth|\bDOB\b|address/i.test(item)) return "Identity / account detail";
   if (/training|school|senate|list|eligib|qualification|enrol|registration|approval|accredited|citizen|resident|sponsor|institution|age requirement/i.test(item)) return "Eligibility / prerequisite";
   return "Other requirement";
 }
 
 function purposeFor(item: string, service: Service) {
+  if (service.slug === "neco-2026-timetable") {
+    if (/pdf viewer|pdf reader/i.test(item)) return "Use any device that opens PDFs to read and save the public NECO timetable. No SMS code, candidate account or personal phone number is required merely to download it.";
+    if (/registered NECO subjects/i.test(item)) return "Match each enrolled subject and paper to the date and time in the official Internal or External timetable before planning examination travel.";
+    if (/Internal timetable or.*External timetable/i.test(item)) return "The SSCE Internal and External examinations use different official PDFs. Select the examination you actually entered so you do not attend on the wrong date.";
+  }
   if (service.agencySlug === "ican" && /(?:professional[- ]student|student) registration number/i.test(item)) {
     return "Matches the student's existing ICAN professional account and examination or exemption application, not a company registration.";
   }
