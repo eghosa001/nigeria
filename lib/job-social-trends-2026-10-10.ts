@@ -64,9 +64,9 @@ export const octoberVerifiedProgrammes: CareerOpportunity[] = [
     organization: "NOVA Bank",
     kind: "programme",
     sector: "Private",
-    status: "open",
-    statusLabel: "Applications close 15 October 2026",
-    summary: "NOVA Bank is accepting applications for its one-year Graduate Trainee Programme from 7 to 15 October 2026. It combines classroom training, practical projects and mentorship at the bank. Applicants need at least a 2:1 bachelor's degree, completed NYSC and must not be older than 27.",
+    status: "closed",
+    statusLabel: "2026 application window closed on 15 October",
+    summary: "NOVA Bank invited applications for its one-year Graduate Trainee Programme from 7 to 15 October 2026. That window has ended; this is an archived guide, not an open vacancy. The programme combines classroom learning, practical projects and mentorship. The original eligibility criteria included a 2:1 bachelor's degree, completed NYSC and a maximum age of 27.",
     location: "Nigeria; confirm location and reporting arrangements directly with NOVA Bank",
     employmentType: "One-year graduate training programme",
     audiences: ["Recent Nigerian graduates", "NYSC-completed applicants", "Banking graduates", "Business and technology graduates"],
@@ -78,9 +78,9 @@ export const octoberVerifiedProgrammes: CareerOpportunity[] = [
       "A willingness to learn banking operations, customer service and technology-led financial services."
     ],
     requirements: [
-      "Check the degree class, NYSC completion and age rules before investing time in the form.",
-      "Use the application button embedded in NOVA Bank's own graduate trainee page; the Bank currently routes applicants to a Google Form from its domain.",
-      "Apply during the published 7–15 October 2026 window and keep confirmation of submission.",
+      "The original degree-class, completed-NYSC and age rules describe the concluded 2026 intake; a future cycle could have different requirements.",
+      "The bank's archived announcement still links to an application form, but a visible form link does not extend the concluded 7–15 October window.",
+      "Applicants who submitted during 7–15 October 2026 should keep their confirmation and follow only NOVA Bank's verified communications.",
       "The bank describes a one-year learning programme; it does not publicly guarantee a permanent placement or publish an exact salary on this announcement."
     ],
     documents: [
@@ -90,24 +90,24 @@ export const octoberVerifiedProgrammes: CareerOpportunity[] = [
       "Other evidence only if the official form asks for it."
     ],
     applicationSteps: [
-      "Open the official NOVA Bank Graduate Trainee Programme page.",
-      "Read the 'Who can Apply' section and verify that your 2:1, completed NYSC and age meet every condition.",
-      "Use the 'Apply here' button on NOVA Bank's own site; avoid unrelated application links distributed in social-media comments.",
-      "Complete the bank-linked form carefully, checking your contact information and qualification details.",
-      "Submit before 15 October 2026 and retain the response confirmation. Watch official NOVA Bank communication for any screening instructions."
+      "Read the official NOVA Bank 2026 Graduate Trainee Programme announcement as a record of the concluded application window.",
+      "Compare the original 2:1, completed NYSC and age requirements with your qualifications for any future intake; requirements may change.",
+      "Do not treat the October 2026 application form or a social media link as proof of a reopened intake.",
+      "If you applied within the published window, retain the confirmation and monitor the email address given to NOVA Bank.",
+      "For a future intake, check NOVA Bank's careers site for a fresh dated notice rather than submitting to the old form."
     ],
     officialUrl: "https://www.novabank.ng/careers/nova-bank-graduate-trainee-program-ngtp/",
-    officialUrlLabel: "Apply from NOVA Bank's official NGTP page",
-    verifiedAt: "2026-10-10",
+    officialUrlLabel: "View NOVA Bank's 2026 NGTP announcement",
+    verifiedAt: "2026-10-24",
     deadline: "2026-10-15",
-    nextMilestone: "NGTP application window closes 15 October 2026.",
+    nextMilestone: "The published 2026 application period ended 15 October. No new intake was confirmed on NOVA Bank's announcement checked 24 October 2026.",
     feeNote: "NOVA Bank warns against phishing and requests for PINs, token codes, BVN or ATM details. Do not pay intermediaries or provide banking secrets to apply.",
     sourceNotes: [
       "The exact opening date, closing date, 2:1 requirement, completed-NYSC rule and age cap are published on NOVA Bank's official site.",
-      "Only the bank-linked application form is treated as an application route; the programme page is not evidence of a guaranteed employment outcome."
+      "The issuer's announcement still displays an application link, but the stated deadline has passed. A visible form is not evidence that applications reopened."
     ],
     sources: [
-      { label: "NOVA Bank — Graduate Trainee Program (NGTP)", url: "https://www.novabank.ng/careers/nova-bank-graduate-trainee-program-ngtp/", lastChecked: "2026-10-10" }
+      { label: "NOVA Bank — Graduate Trainee Program (NGTP)", url: "https://www.novabank.ng/careers/nova-bank-graduate-trainee-program-ngtp/", lastChecked: "2026-10-24" }
     ]
   },
   {
