@@ -94,10 +94,10 @@ export const independentlyCheckedEvents20261017: Record<string, EventCorrection>
       label: "African SDGs Film Festival — organiser-linked Eventbrite ticket for 4 November",
       href: "https://www.eventbrite.co.uk/e/african-sdgs-film-festival-2026-tickets-1994313667866",
     },
-    context: "The festival's organiser-linked Eventbrite page is a ticket route for Wednesday 4 November at Silverbird Cinemas Abuja. The separate city calendar advertises a 4–5 November festival, but explicitly says the Day 2 programme and venue are unpublished; the first day's ticket must not be presented as confirmation of a complete two-day cinema schedule.",
+    context: "As reviewed 24 October, Visit Abuja's organiser-linked Eventbrite ticket is specifically for Wednesday 4 November at Silverbird Cinemas Abuja, 10:00 a.m.–4:00 p.m. Its 4–5 November calendar entry separately states that Day 2's programme and venue are not published. Do not use the Wednesday ticket or CBD address to promise Thursday screenings, admission or times.",
     planning: {
-      label: "Treat 4 November as the ticketed day until Day 2 is verified",
-      detail: "Check the 4 November Silverbird Cinemas ticket details and the named organiser before paying. If planning for Thursday 5 November, request a separately dated official Day 2 screening or venue programme; the reported 2025 submission volume does not confirm a 2026 screening line-up.",
+      label: "Treat 4 November, 10 a.m.–4 p.m., as the only currently ticketed session",
+      detail: "Check the official 4 November 10 a.m.–4 p.m. Silverbird ticket details before paying; any 5 November screening or venue requires a new organiser-confirmed schedule. The 2025 film-submission count is historical, not evidence of 2026 Day 2 admission.",
     },
   },
   "all-africa-challenge-trophy-abuja-2026": {
