@@ -96,7 +96,7 @@ const records: Record<string,Entry> = {
     ],
     "context": [
       "Akay Mason directed the 2024 film. Nse Ikpe-Etim, Jim Iyke, Lilian Esoro, Tina Mba, Jide Awobona and Nosa Rex are listed in its cast record. The IMDb film page supplies a reference for the title and credited performers.",
-      "Unlike some other films in the catalog, No Fury does not have a verified current official viewing link. This page must not invent a Netflix listing or free YouTube release. It can still document the movie and its filmmakers while explaining clearly that legal playback has not yet been established."
+      "Silverbird Cinemas listed No Fury sessions at Ikeja and Galleria on 24 October 2026 after the announced 23 October cinema release. Viewers should check those date-specific official cinema schedules, not assume that an authorised Netflix or free YouTube full-film version exists."
     ],
     "questions": [
       [
@@ -105,7 +105,7 @@ const records: Record<string,Entry> = {
       ],
       [
         "Where can No Fury be watched legally?",
-        "A current authorised full-length viewing option has not been verified in this catalog."
+        "The film is listed at named Silverbird cinema locations as of 24 October 2026, with varying showtimes. No authorised streaming or free full-film upload has been established."
       ]
     ]
   },

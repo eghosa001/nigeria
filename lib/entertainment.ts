@@ -477,13 +477,15 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
       { label: "What Kept Me Up — Nigeria 23 October 2026 theatrical premiere",
         href: "https://whatkeptmeup.com/preview/new-in-nigeria-movies-and-tv-shows-to-watch-this-october-2026/",
         lastChecked: "2026-10-17",
-        note: "The 23 October 2026 FilmOne cinema opening is future as of this evidence review, not an existing showtime." },
+        note: "Pre-release FilmOne cinema-opening report for 23 October. Subsequent 24 October Silverbird cinema schedules now corroborate actual public screenings." },
       { label: "Nollywood.com — exact No Fury cinema identity",
         href: "https://www.nollywood.com/movies/no-fury",
         lastChecked: "2026-10-17",
-        note: "Exact film record and scheduled Nigerian theatrical release, not a playable full film or confirmed ticket transaction." }
+        note: "Exact film record and announced 23 October Nigerian theatrical release, not a playable full film." },
+      { label: "Silverbird Galleria — No Fury 23–29 October now showing", href: "https://silverbirdcinemas.com/cinema/galleria/", lastChecked: "2026-10-24", note: "Named theatre lists No Fury release 23 October and Saturday 24 October screenings; does not establish authorised streaming or other cinema showtimes." },
+      { label: "Silverbird Ikeja — No Fury 24 October sessions", href: "https://silverbirdcinemas.com/cinema/ikeja/", lastChecked: "2026-10-24", note: "A second theatre also publishes No Fury screenings on 24 October; schedules remain subject to change." }
     ],
-    watchLinks: []
+    watchLinks: [{ platform: "Cinema", label: "Check current No Fury cinema showtimes", href: "https://silverbirdcinemas.com/cinema/galleria/", access: "cinema", lastChecked: "2026-10-24", note: "Silverbird Galleria publishes location-specific No Fury showtimes. Check the current schedule before travelling; no legal full-film stream is established." }]
   },
   {
     slug: "agbara-nla-the-return",
@@ -617,7 +619,10 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
       href: "https://whatkeptmeup.com/nigerian-film-news/nile-entertainment-october-2026-releases/",
       lastChecked: "2026-10-17",
       note: "The September 2026 distributor coverage embeds the video titled A LAND APART_OFFICIAL TRAILER [2026]. The publisher's original YouTube thumbnail is shown as a linked video preview; no standalone poster-reuse rights are claimed."
-    }],
+    },
+      { label: "Silverbird Ikeja — A Land Apart 23–29 October exhibition", href: "https://silverbirdcinemas.com/cinema/ikeja/", lastChecked: "2026-10-24", note: "Named cinema now lists A Land Apart screenings after its 23 October release. Times and venues can change." },
+      { label: "Nile Cinemas — A Land Apart 24 October programme", href: "https://nile-redesign.cap.reachcinema.io/", lastChecked: "2026-10-24", note: "Separate exhibitor advertises A Land Apart as Now Showing with a Saturday 24 October dated session." }
+    ],
     sourcePreview: {
       url: "https://africanmoviedb.com/image/title/O-1HQ9d2zjTmvm-pPdgUZ.webp",
       sourceUrl: "https://africanmoviedb.com/title/a-land-apart-2026",
@@ -629,11 +634,11 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     watchLinks: [
       {
         platform: "Cinema",
-        label: "Open the official production links",
-        href: "https://linktr.ee/sutoriteraprojects",
+        label: "Check Silverbird's current A Land Apart showtimes",
+        href: "https://silverbirdcinemas.com/cinema/ikeja/",
         access: "cinema",
-        lastChecked: "2026-10-04",
-        note: "Sutori Tera's official project links include A Land Apart trailer/release material. The current Nigerian cinema date is 23 October 2026."
+        lastChecked: "2026-10-24",
+        note: "Silverbird Ikeja publishes A Land Apart sessions after its 23 October Nigerian release. Nile Cinemas independently lists an actual 24 October programme; availability is venue/date-specific, not an authorised stream."
       }
     ]
   },
@@ -644,7 +649,7 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Drama", "Coming of age", "Campus", "Nollywood"],
     languages: ["English"],
-    synopsis: "A campus drama about two students from different backgrounds at the fictional Lagos Metropolitan University, whose competing ambitions and expectations reshape friendship and romance. The producers announced a Nigerian cinema opening for 23 October 2026; a trailer and advance release notice are not proof of an active showtime or a free full-film stream.",
+    synopsis: "Tele x Zikora is a Lagos campus drama about students from different backgrounds whose ambitions, friendships and romantic expectations collide. The announced 23 October 2026 release has been followed by 24 October screenings independently listed by Silverbird Cinemas and DreamPark Cinemas. Venue-specific showtimes can change; no authorised free full-film upload has been established.",
     cast: ["Mike Afolarin", "Genoveva Umeh", "Angel Unigwe", "Eronini Osinachim", "Kanaga Eme Jnr."],
     directors: ["Adenike Adebayo-Esho"],
     trailer: {
@@ -665,8 +670,10 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
         label: "OYA Magazine — Tele x Zikora announcement and preview",
         href: "https://www.oyamag.com/tele-x-zikora-teaser-first-look/",
         lastChecked: "2026-10-19",
-        note: "Independent coverage of the planned cinema release; not evidence of public playback, ticket availability or artwork reuse rights.",
-      }
+        note: "Independent pre-release reporting; later screenings were confirmed separately against exhibitor listings. This article is not artwork-reuse permission.",
+      },
+      { label: "Silverbird Ikeja — Tele x Zikora 23–29 October schedule", href: "https://silverbirdcinemas.com/cinema/ikeja/", lastChecked: "2026-10-24", note: "Official exhibitor lists a released 23 October film and location-specific sessions on 24 October; schedules are subject to change." },
+      { label: "DreamPark Cinemas — Tele x Zikora dated sessions", href: "https://www.dreamparkcinemas.com/movies/tele-x-zikora/", lastChecked: "2026-10-24", note: "Independent exhibitor marks Now Showing with 24 October sessions; DreamPark explicitly says its tickets are bought at the cinema, not online." }
     ],
     sourcePreview: {
       url: "https://www.oyamag.com/wp-content/uploads/2026/09/A-new-young-adult-campus-movie-is-coming-to-Nigerian-cinemasTele-x-Zikora-%40telexzikora-is-Wr-1200x1500.jpg",
@@ -679,11 +686,11 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     watchLinks: [
       {
         platform: "Cinema",
-        label: "Check official updates for the planned 23 October cinema release",
-        href: "https://x.com/telexzikora",
+        label: "Check official Silverbird cinema showtimes",
+        href: "https://silverbirdcinemas.com/cinema/ikeja/",
         access: "cinema",
-        lastChecked: "2026-10-04",
-        note: "The producer announced a 23 October Nigerian cinema opening. This is an official-update link, NOT a verified seat, current showtime or full-film stream. Check cinema availability directly."
+        lastChecked: "2026-10-24",
+        note: "Silverbird's Ikeja branch lists Tele x Zikora as now showing with 24 October 2026 screenings. Check your preferred cinema's date-specific times; this link is not a full-film stream."
       }
     ]
   },
