@@ -11,7 +11,7 @@ test("African SDGs Film Festival distinguishes 4 November tickets from unverifie
   assert.match(page.summary, /5 November programme and venue.*not yet been published/);
   assert.doesNotMatch([page.summary, ...page.intro, ...page.highlights.map(x => x.detail)].join(" "), /10:00 AM to 6:00 PM|6:00 PM finish on both|both festival days at Silverbird/i);
   assert.match(page.planning.map(x => x.detail).join(" "), /Day 2|5 November/);
-  assert.ok(page.source.href === "https://www.visitabuja.org/event/african-sdgs-film-festival-2026/");
+  assert.ok(page.source?.href === "https://www.visitabuja.org/event/african-sdgs-film-festival-2026/");
   const verified = independentlyCheckedEvents20261017[page.slug];
   assert.ok(verified);
   assert.match(verified.context, /10:00 a\.m\.\u20134:00 p\.m\./);
