@@ -1,3 +1,4 @@
+import "./film-reader-repetition-20261026.test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";

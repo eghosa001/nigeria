@@ -12,7 +12,29 @@ const repeatedAbeQuestions = new Set([
   "Is Abe Odale released, and why isn't there a Watch button?",
 ]);
 
+// The full 2025 dossier remains available for source audits. Its rendered page
+// already gives the synopsis, cast, director, release identity and official
+// watch link. Only the two distinct, useful findings belong in the film guide.
 export function getVisibleMovieEditorial(slug: string, dossier: MovieEditorialProfile) {
+  if (slug === "forever-isnt-long-enough-2025") {
+    return {
+      sections: [
+        {
+          heading: "Grace's estranged aunt",
+          paragraphs: [
+            "Grace reconnects with an aunt who had also experienced rejection. Their relationship brings a different perspective on judgment, belonging and compassion; the publisher synopsis does not establish the ending.",
+          ],
+        },
+        {
+          heading: "Character credits still unconfirmed",
+          paragraphs: [
+            "Royal Arts TV names the performers and Plex identifies the director, but neither checked source conclusively assigns an actor to Grace or her aunt. The cast and director are listed above without invented character credits.",
+          ],
+        },
+      ],
+      questions: [],
+    };
+  }
   if (slug !== "abe-odale-2026") {
     return { sections: dossier.sections, questions: dossier.questions };
   }
@@ -22,4 +44,16 @@ export function getVisibleMovieEditorial(slug: string, dossier: MovieEditorialPr
     sections: dossier.sections.filter(part => !repeatedAbeSections.has(part.heading)),
     questions: dossier.questions.filter(part => !repeatedAbeQuestions.has(part.question)),
   };
+}
+
+/** Avoid showing the same verified director twice in the cast and credits area. */
+export function getAdditionalMovieCrewCredits(
+  directors: readonly string[],
+  crew: MovieEditorialProfile["crew"],
+): MovieEditorialProfile["crew"] {
+  const normalized = new Set(directors.map(name => name.trim().toLocaleLowerCase("en")));
+  return crew.filter(({ role, name }) =>
+    !(/^director(?:\s*\([^)]*\))?$/i.test(role.trim()) &&
+      normalized.has(name.trim().toLocaleLowerCase("en"))),
+  );
 }
