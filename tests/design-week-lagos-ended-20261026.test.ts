@@ -8,7 +8,8 @@ test("Design Week Lagos 2026 is an ended, sourced archive rather than a live tic
   assert.equal(guide.lastReviewed, "2026-10-26");
   assert.match(guide.summary, /18–25 October 2026 dates have passed/);
   assert.match(guide.summary, /Hall programme as ended/);
-  assert.match(guide.intro.join(" "), /schedule alone does not establish attendance or results/);
+  assert.match(guide.intro.join(" "), /not evidence that every activity took place/);
+  assert.doesNotMatch(guide.intro.join(" "), /industrialisation and architecture on 22 October/, "do not duplicate day-by-day highlights in the introduction");
   assert.match(guide.planning[0].detail, /marks the 2026 event as ended/);
   assert.equal(guide.planning.length, 4, "retain four distinct practical visitor decisions");
   assert.match(guide.planning[3].detail, /no photos or videos are available/);
