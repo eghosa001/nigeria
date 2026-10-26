@@ -174,7 +174,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
           </div>
 
           <aside className="job-apply-card" id="official-application">
-            <span>{isCareerPortal ? "Official careers source" : "Official application source"}</span>
+            <span>{isCareerPortal ? "Official careers source" : effectiveStatus === "closed" ? "Original employer notice — applications closed" : effectiveStatus === "unverified" ? "Employer source — opening unconfirmed" : "Official application source"}</span>
             <strong>{item.organization}</strong>
             <p>MyNigeriaGuide does not receive your application, password, NIN or recruitment payment.</p>
             <JobApplyLink className="button" href={item.officialUrl} slug={item.slug} employer={item.organization} status={effectiveStatus}>
@@ -191,7 +191,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
           { href: "#job-overview", label: "At a glance" },
           { href: "#requirements", label: "Eligibility" },
           { href: "#documents", label: "Documents" },
-          { href: "#apply", label: isCareerPortal ? "Use the careers portal" : "How to apply" },
+          { href: "#apply", label: isCareerPortal ? "Use the careers portal" : effectiveStatus === "closed" ? "Previous application steps" : effectiveStatus === "unverified" ? "Check availability" : "How to apply" },
           { href: "#job-sources", label: "Verification sources" },
         ]} />
       </div>
@@ -245,7 +245,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
             {item.kind === "vacancy" && effectiveStatus === "open" ? <JobApplicationReadiness /> : null}
 
             <section id="apply">
-              <h2>{isCareerPortal ? "How to use " + item.organization + "'s official careers portal" : "How to apply for " + item.title + " or check your status"}</h2>
+              <h2>{isCareerPortal ? "How to use " + item.organization + "'s official careers portal" : effectiveStatus === "closed" ? "Previous application steps and status for " + item.title : effectiveStatus === "unverified" ? "Application availability and official sources for " + item.title : "How to apply for " + item.title}</h2>
               <ol className="job-steps">{item.applicationSteps.map((text, index) => <li key={text}><span aria-hidden="true">{index + 1}</span><p>{text}</p></li>)}</ol>
             </section>
 
