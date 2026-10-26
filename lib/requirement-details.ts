@@ -120,6 +120,14 @@ export function getRequirementDetails(service: Service): RequirementDetail[] {
     // Preserve every requirement, and the first useful explanation.
     const why = purpose && !seenPurposes.has(purpose) ? purpose : undefined;
     if (purpose) seenPurposes.add(purpose);
-    return { item, kind: kindFor(item), why, format: formatFor(item) };
+    // JAMB's SMS-only profile-code route does not require proof of payment.
+    // The word "transactions" in the SIM requirement describes future identity
+    // use; airtime is a network prerequisite, not a payment receipt.
+    const kind = service.slug === "jamb-profile-code" && /phone number\/SIM/i.test(item)
+      ? "Identity / account detail"
+      : service.slug === "jamb-profile-code" && /\bairtime\b/i.test(item)
+      ? "Other requirement"
+      : kindFor(item);
+    return { item, kind, why, format: formatFor(item) };
   });
 }
