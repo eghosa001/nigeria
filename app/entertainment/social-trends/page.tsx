@@ -178,8 +178,8 @@ const verifiedWebDiscovery = [
   {
     pillar: "Movies & Entertainment",
     label: "Lagos music · published 10 October",
-    title: "Felabration line-up confirmed for the New Afrika Shrine",
-    detail: "The broadcaster names Femi, Made and Seun Kuti, plus other performers, among the advertised main-festival acts. The separate Freedom Park Underground System programme has different entry terms and should not be confused with the Shrine.",
+    title: "Felabration 2026: archived New Afrika Shrine line-up",
+    detail: "The 12–18 October festival has ended. Contemporary coverage named Femi, Made and Seun Kuti among advertised acts; the separate Freedom Park programme had different entry terms. This is an archive, not a current show.",
     source: "Voice of Nigeria — 2026 Felabration coverage",
     url: "https://von.gov.ng/lagos-hosts-felabration-2026-october-12-18/",
     href: "/explore/felabration-2026",
@@ -452,24 +452,23 @@ export default function SocialTrendsPage() {
           </section>
 
           <section className="top-gap" aria-labelledby="social-creators">
-            <span className="eyebrow">Social media and creator events · 10 October 2026</span>
+            <span className="eyebrow">Social media and creator events · past October event</span>
             <h2 id="social-creators">SMFest Abuja: verified creator and tech event</h2>
             <p>
-              SMFest Abuja's organiser lists its main event for 17–18 October 2026
+              SMFest Abuja's organiser listed its main event for 17–18 October 2026
               at Family Worship Centre, Wuye, Abuja, from 9 am, under the
-              AdvantageX theme. This is a verifiable offline event for social-media
-              creators and digital entrepreneurs, not evidence that a particular
-              hashtag is currently trending on TikTok or Instagram.
+              AdvantageX theme. Those dates have passed. This archived creator-event listing is not a current ticket offer,
+              or evidence that any hashtag is trending on TikTok or Instagram.
             </p>
             <div className="minimal-inline-links">
               <Link href="/explore/smfest-abuja-2026">Dates, venue and visitor planning</Link>
               <Link href="/jobs/guides/job-scam-red-flags-nigeria">Check suspicious creator and job offers</Link>
             </div>
-            <p><a href="https://smfest.org/" target="_blank" rel="noopener noreferrer">Confirm the live SMFest programme with the organiser ↗</a></p>
+            <p><a href="https://smfest.org/" target="_blank" rel="noopener noreferrer">Check the organiser for future SMFest programmes ↗</a></p>
           </section>
 
           <section className="top-gap" aria-labelledby="nigeria-trend-editorial">
-            <span className="eyebrow">Free web research · Source-checked 11 October 2026</span>
+            <span className="eyebrow">Earlier October research · preserved for reference</span>
             <h2 id="nigeria-trend-editorial">Stories worth checking across all four pillars</h2>
             <p>
               We use independent search discovery to find potential Nigerian stories, then verify them
@@ -513,9 +512,10 @@ export default function SocialTrendsPage() {
           <section className="top-gap" aria-labelledby="sources">
             <h2 id="sources">Sources and freshness</h2>
             <p>
-              The Nigeria trending-video snapshot was checked 11 October 2026 using Kworb's
-              public YouTube chart. The weekly music examples use Soundcharts' chart for the
-              week of 5 October 2026. Digital-audience figures come from DataReportal's
+              The recent Nigerian video observations come from independent Kworb and TubeStats
+              charts dated 25 October 2026. The archived video rankings use an 11 October
+              Kworb snapshot; the earlier music examples use Soundcharts for the week of
+              5 October. Digital-audience figures come from DataReportal's
               Digital 2026 Nigeria report, which uses late-2025 observations.
               Rankings and audience estimates are not directly comparable.
             </p>
