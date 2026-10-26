@@ -55,9 +55,11 @@ test("seven additional guides have source-backed date updates and corrected acti
   for (const slug of slugs) {
     const row = rows.find(item => item.slug === slug);
     assert.ok(row, slug);
-    assert.equal(row.lastVerified, "2026-10-17", slug);
+    // NYSC DOB was rechecked on 26 October after two stale official-domain links returned 403.
+    const expectedDate = slug === "nysc-correct-date-of-birth" ? "2026-10-26" : "2026-10-17";
+    assert.equal(row.lastVerified, expectedDate, slug);
     assert.ok(row.sources.length > 0, slug);
-    assert.ok(row.sources.every(source => source.lastChecked === "2026-10-17" && source.url.startsWith("https://")), slug);
+    assert.ok(row.sources.every(source => source.lastChecked === expectedDate && source.url.startsWith("https://")), slug);
   }
   const france = rows.find(item => item.slug === "france-schengen-short-stay-visa")!;
   assert.match(france.steps.join(" "), /demande-de-visa/);
