@@ -1,5 +1,5 @@
 import { documentedMovieCast, leadMovieCast } from "@/lib/movie-cast-credits";
-import { getVisibleMovieEditorial } from "@/lib/movie-editorial-presentation";
+import { getAdditionalMovieCrewCredits, getVisibleMovieEditorial } from "@/lib/movie-editorial-presentation";
 import type { Metadata } from "next";
 import { compactSearchText } from "@/lib/search-snippet";
 import Link from "next/link";
@@ -301,6 +301,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
   const documentedCast = documentedMovieCast(title);
   const editorial = getMovieEditorialProfile(title.slug);
   const visibleEditorial = editorial ? getVisibleMovieEditorial(title.slug, editorial) : null;
+  const additionalCrew = editorial ? getAdditionalMovieCrewCredits(title.directors ?? [], editorial.crew) : [];
   const image = movieImageUrl(title, base);
   const movieLd = {
     "@context": "https://schema.org",
@@ -528,11 +529,11 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                     </div>
                   </div>
                 ) : null}
-                {editorial.crew.length ? (
+                {additionalCrew.length ? (
                   <div className="movie-credit-group">
                     <h3>Additional production credits</h3>
                     <div className="movie-fact-grid">
-                      {editorial.crew.map(({ name, role }) => (
+                      {additionalCrew.map(({ name, role }) => (
                         <article key={role}><span>{role}</span><strong>{name}</strong></article>
                       ))}
                     </div>
