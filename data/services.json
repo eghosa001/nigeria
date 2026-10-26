@@ -4755,17 +4755,17 @@
       {
         "label": "NYSC date-of-birth correction",
         "agency": "National Youth Service Corps",
-        "url": "https://platforms.nysc.gov.ng/correctdob.html",
-        "lastChecked": "2026-10-17"
+        "url": "https://www.nysc.gov.ng/correctdob.html",
+        "lastChecked": "2026-10-26"
       },
       {
         "label": "NYSC FAQ",
         "agency": "National Youth Service Corps",
-        "url": "https://platforms.nysc.gov.ng/faq.html",
-        "lastChecked": "2026-10-17"
+        "url": "https://www.nysc.gov.ng/faq.html",
+        "lastChecked": "2026-10-26"
       }
     ],
-    "lastVerified": "2026-10-17",
+    "lastVerified": "2026-10-26",
     "searchTerms": [
       "NYSC DOB correction",
       "How NYSC date-of-birth correction works",

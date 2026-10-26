@@ -110,8 +110,8 @@ const amendments: Record<string, ServiceAmendment> = {
     ],
     "step": "After the WAEC verification result is displayed, submit only if the returned identity record is the candidate's own; if it mismatches, cancel and resolve the underlying examination details before trying again.",
     "sources": [
-      "https://platforms.nysc.gov.ng/correctdob.html",
-      "https://platforms.nysc.gov.ng/mobreg.html"
+      "https://www.nysc.gov.ng/correctdob.html",
+      "https://www.nysc.gov.ng/mobreg.html"
     ]
   },
   "nysc-lost-exemption-certificate": {
@@ -261,15 +261,20 @@ const amendments: Record<string, ServiceAmendment> = {
 export function applyCandidateServiceReviews20261017(service: Service): Service {
   const change = amendments[service.slug];
   if (!change) return service;
+  const reviewDate = "2026-10-17";
   const sources = [...service.sources];
   for (const url of change.sources) {
     const i = sources.findIndex(source => source.url === url);
-    if (i >= 0) sources[i] = { ...sources[i], lastChecked: "2026-10-17" };
+    // The 17 October editorial layer must not erase a later issuer recheck.
+    if (i >= 0) sources[i] = {
+      ...sources[i],
+      lastChecked: sources[i].lastChecked > reviewDate ? sources[i].lastChecked : reviewDate,
+    };
     else sources.push({
       label: service.agencySlug.toUpperCase() + " official service procedure / checked notice",
       agency: service.agencySlug.toUpperCase(),
       url,
-      lastChecked: "2026-10-17",
+      lastChecked: reviewDate,
     });
   }
   return {
@@ -278,6 +283,6 @@ export function applyCandidateServiceReviews20261017(service: Service): Service 
     steps: service.steps.includes(change.step) ? service.steps : [...service.steps, change.step],
     notes: [...service.notes, ...change.notes.filter(note => !service.notes.includes(note))],
     sources,
-    lastVerified: "2026-10-17",
+    lastVerified: service.lastVerified > reviewDate ? service.lastVerified : reviewDate,
   };
 }

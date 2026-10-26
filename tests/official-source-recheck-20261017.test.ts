@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
+import { getPublicService } from "../lib/data";
 
 const rows = JSON.parse(readFileSync("data/services.json", "utf8")) as Array<{
   slug: string;
@@ -55,14 +56,22 @@ test("seven additional guides have source-backed date updates and corrected acti
   for (const slug of slugs) {
     const row = rows.find(item => item.slug === slug);
     assert.ok(row, slug);
-    assert.equal(row.lastVerified, "2026-10-17", slug);
+    // NYSC DOB was rechecked on 26 October after two stale official-domain links returned 403.
+    const expectedDate = slug === "nysc-correct-date-of-birth" ? "2026-10-26" : "2026-10-17";
+    assert.equal(row.lastVerified, expectedDate, slug);
     assert.ok(row.sources.length > 0, slug);
-    assert.ok(row.sources.every(source => source.lastChecked === "2026-10-17" && source.url.startsWith("https://")), slug);
+    assert.ok(row.sources.every(source => source.lastChecked === expectedDate && source.url.startsWith("https://")), slug);
   }
   const france = rows.find(item => item.slug === "france-schengen-short-stay-visa")!;
   assert.match(france.steps.join(" "), /demande-de-visa/);
   assert.ok(france.sources.some(source => source.url === "https://france-visas.gouv.fr/demande-de-visa"));
   assert.doesNotMatch(france.sources.map(source => source.url).join(" "), /\/online-application/);
+  const liveDobGuide = getPublicService("nysc-correct-date-of-birth");
+  assert.ok(liveDobGuide);
+  assert.equal(liveDobGuide.lastVerified, "2026-10-26", "old editorial overlay must not roll back newer checks");
+  assert.ok(liveDobGuide.sources.some(source => source.url === "https://www.nysc.gov.ng/correctdob.html" && source.lastChecked === "2026-10-26"));
+  assert.ok(liveDobGuide.sources.some(source => source.url === "https://www.nysc.gov.ng/faq.html" && source.lastChecked === "2026-10-26"));
+  assert.ok(liveDobGuide.sources.every(source => !source.url.includes("platforms.nysc.gov.ng")), "blocked legacy NYSC sources should not be rendered");
   const senate = rows.find(item => item.slug === "nysc-senate-list")!;
   assert.match(senate.steps[0], /verifysenatelists/);
   const nelfund = rows.find(item => item.slug === "nelfund-student-loan-application")!;
