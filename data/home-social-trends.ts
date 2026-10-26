@@ -17,6 +17,21 @@ export type HomeSocialTrend = {
  * - Every item must point to a real MyNigeriaGuide page that already meets the site's source, freshness, SEO and quality standards.
  */
 export const homeSocialTrends: HomeSocialTrend[] = [
+  // The named artists' official music video was published in October; two
+  // independent Nigeria video charts placed it at No. 1 on 25 October.
+  // Chart rank is a dated observation, not a cross-platform reach metric.
+  {
+    pillar: "Movies & Entertainment",
+    title: "Met You: Carterefe and Taylor Jasmine top Nigeria's 25 October video chart",
+    href: "/entertainment/social-trends",
+    checkedAt: "2026-10-26",
+    expiresAt: "2026-10-28",
+    momentumEvidence: {
+      primaryUrl: "https://music.apple.com/us/music-video/met-you/6824769428",
+      corroborationUrl: "https://kworb.net/youtube/trending/ng.html",
+      verifiedAt: "2026-10-26",
+    },
+  },
   // Dated distributor announcements on 16 and 20 October (Nile Entertainment),
   // corroborated by PUNCH; this is measurable film momentum, not an event advert.
   // Reuse the existing film profile, and expire the homepage feature promptly.
