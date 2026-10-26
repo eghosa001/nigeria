@@ -53,7 +53,7 @@ export function getAdditionalMovieCrewCredits(
 ): MovieEditorialProfile["crew"] {
   const normalized = new Set(directors.map(name => name.trim().toLocaleLowerCase("en")));
   return crew.filter(({ role, name }) =>
-    !(/^director(?:\\s*\\([^)]*\\))?$/i.test(role.trim()) &&
+    !(/^director(?:\s*\([^)]*\))?$/i.test(role.trim()) &&
       normalized.has(name.trim().toLocaleLowerCase("en"))),
   );
 }
