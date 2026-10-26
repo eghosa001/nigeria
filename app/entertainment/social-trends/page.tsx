@@ -7,10 +7,60 @@ import { getSiteUrl } from "@/lib/site";
 import { NigeriaTrendsBackfill } from "@/components/nigeria-trends-backfill";
 
 export const metadata: Metadata = withStaticSocialMetadata({
-  title: "Nigeria Social Trends: Verified Updates, 11–18 October 2026",
-  description: "Nigeria's YouTube trending videos and music in October 2026, plus TikTok, Instagram, Facebook and X context. Dated chart snapshots, sources and verified guides.",
+  title: "Nigeria Social Trends: October 2026 Video Charts & Platform Research",
+  description: "Dated 25 October Nigerian YouTube video rankings, older chart archives, and responsible research links for X, TikTok, Instagram, Facebook, Threads and WhatsApp.",
   alternates: { canonical: "/entertainment/social-trends" },
 });
+
+/** Both independent charts listed these Nigerian videos on 25 October 2026.
+ * This is a historical snapshot, not a live count, official YouTube API, or
+ * evidence that a trailer can be watched as a complete film.
+ */
+const recentNigeriaVideoSnapshot = [
+  {
+    rank: 1,
+    name: "Taylor Jasmine & Carterefe — Met You (official video)",
+    context: "Music video; chart position reflects the 25 October Nigeria trending-video snapshot.",
+  },
+  {
+    rank: 2,
+    name: "Ruwan Dare — Season 2 trailer",
+    context: "Promotional trailer. Its chart position does not confirm release or where full episodes are available.",
+  },
+  {
+    rank: 5,
+    name: "Ikunle 2 — trailer featuring Jide Awobona, Oyindamola Sanni and Fisayo Abebi",
+    context: "A trailer appeared on the chart; check the original publisher before assuming a full-film upload.",
+  },
+];
+
+const publicPlatformResearch = [
+  {
+    name: "TikTok",
+    url: "https://www.tiktok.com/tag/nollywood",
+    text: "Explore public Nollywood videos and sounds. A hashtag page is not a Nigeria-only trend ranking; results can vary by account.",
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/explore/tags/nollywood/",
+    text: "Discover film and creator posts. Look for the original artist, distributor or organiser before quoting announcements.",
+  },
+  {
+    name: "Facebook",
+    url: "https://www.facebook.com/",
+    text: "Use Facebook search to find posts from identified Nigerian publishers. Sign-in may be required; results are not a national chart.",
+  },
+  {
+    name: "Threads",
+    url: "https://www.threads.net/search?q=Nollywood",
+    text: "Review public entertainment conversations; search ordering does not establish Nigerian reach or a national ranking.",
+  },
+  {
+    name: "WhatsApp Channels",
+    url: "https://www.whatsapp.com/channels",
+    text: "Use verified official channels for updates. Private WhatsApp messages and forwards cannot substantiate public popularity.",
+  },
+];
 
 const videoSnapshot = [
   { name: "Blaqbonez — Ikebe 3000 (feat. Asake)", type: "Music video", detail: "Listed at No. 1 on the Nigeria YouTube trending-video snapshot." },
@@ -98,8 +148,8 @@ const verifiedWebDiscovery = [
   {
     pillar: "Tour Nigeria",
     label: "X lead · organiser verified 11 October",
-    title: "Leadway Lifestyle Fair: Lagos visit on 24–25 October",
-    detail: "The #LeadwayLifestyleFair discussion led to an organiser check: Leadway's own website confirms the dates and Victoria Island area. SME exhibitor registration has closed; visitors should check the official attendance link before travel.",
+    title: "Leadway Lifestyle Fair: archived Lagos event on 24–25 October",
+    detail: "The organiser advertised 24–25 October in Victoria Island. Those dates have passed. The original notice is kept for reference, not as evidence of a future fair or current ticket availability.",
     source: "Leadway Group — official event notice",
     url: "https://www.leadway.com/leadway-media-dash/",
     href: "/explore/events",
@@ -128,8 +178,8 @@ const verifiedWebDiscovery = [
   {
     pillar: "Movies & Entertainment",
     label: "Lagos music · published 10 October",
-    title: "Felabration line-up confirmed for the New Afrika Shrine",
-    detail: "The broadcaster names Femi, Made and Seun Kuti, plus other performers, among the advertised main-festival acts. The separate Freedom Park Underground System programme has different entry terms and should not be confused with the Shrine.",
+    title: "Felabration 2026: archived New Afrika Shrine line-up",
+    detail: "The 12–18 October festival has ended. Contemporary coverage named Femi, Made and Seun Kuti among advertised acts; the separate Freedom Park programme had different entry terms. This is an archive, not a current show.",
     source: "Voice of Nigeria — 2026 Felabration coverage",
     url: "https://von.gov.ng/lagos-hosts-felabration-2026-october-12-18/",
     href: "/explore/felabration-2026",
@@ -183,7 +233,7 @@ export default function SocialTrendsPage() {
     name: "YouTube and social media trends in Nigeria — October 2026",
     description: "Source-checked Nigerian YouTube and social media discovery, with dated chart snapshots.",
     url,
-    dateModified: "2026-10-18",
+    dateModified: "2026-10-26",
     isPartOf: { "@type": "WebSite", name: "MyNigeriaGuide", url: base },
     mainEntity: {
       "@type": "ItemList",
@@ -203,18 +253,42 @@ export default function SocialTrendsPage() {
             { label: "Entertainment", href: "/entertainment" },
             { label: "YouTube & social trends" },
           ]} />
-          <span className="eyebrow">Nigeria · Sources checked 11 October 2026</span>
+          <span className="eyebrow">Nigeria · New video-source check 26 October 2026</span>
           <h1>YouTube and social media trends in Nigeria</h1>
           <p className="page-intro">
-            See what Nigeria-focused video charts showed this week, discover music and film previews,
-            and learn how to follow entertainment conversations on TikTok, Facebook, Instagram and X
-            without confusing popularity with verified facts.
+            Explore a dated Nigerian video-chart snapshot, find film and music discoveries, and check
+            social conversations across X, TikTok, Instagram, Facebook and other platforms
+            without treating unverified posts as news.
           </p>
           <p className="job-muted">
             The earlier video rankings below are a dated 11 October snapshot, not a live social-media feed. Chart positions can
             change at any time. The audience figures below are advertising-reach estimates from
             late 2025, published in the Digital 2026 Nigeria report, not October 2026 active-user counts.
           </p>
+
+          <section className="top-gap" aria-labelledby="recent-nigeria-video-trends">
+            <span className="eyebrow">YouTube Nigeria · 25 October 2026 chart snapshot</span>
+            <h2 id="recent-nigeria-video-trends">Recent Nigerian videos worth checking</h2>
+            <p>
+              Two independent video-chart trackers listed these titles on 25 October.
+              These positions are dated observations, not a live YouTube ranking or a claim
+              about national view counts. A trailer does not mean a full film is available.
+            </p>
+            <div className="home-category-grid compact-category-grid">
+              {recentNigeriaVideoSnapshot.map((item) => (
+                <article className="home-category-card" key={item.name}>
+                  <span>Chart position {item.rank} · 25 October</span>
+                  <h3>{item.name}</h3>
+                  <p>{item.context}</p>
+                </article>
+              ))}
+            </div>
+            <div className="minimal-inline-links">
+              <a href="https://kworb.net/youtube/trending/ng.html" target="_blank" rel="noopener noreferrer">Kworb Nigeria video snapshot ↗</a>
+              <a href="https://tubestats.io/trending-videos/NG" target="_blank" rel="noopener noreferrer">Compare the independent TubeStats chart ↗</a>
+              <Link href="/entertainment/youtube">Browse verified full Nigerian films</Link>
+            </div>
+          </section>
 
           <NigeriaTrendsBackfill compact />
 
@@ -249,9 +323,34 @@ export default function SocialTrendsPage() {
             <p className="job-muted">These independent websites offer publicly viewable Nigerian X topic rankings; neither is an official X API or a guaranteed live national snapshot. We link to them for human review, not automatic bulk collection, and independently verify claims before publishing.</p>
           </section>
 
+          <section className="top-gap" aria-labelledby="public-platform-research">
+            <span className="eyebrow">TikTok · Instagram · Facebook · Threads · WhatsApp</span>
+            <h2 id="public-platform-research">Follow public conversations at their sources</h2>
+            <p>
+              Open each platform to investigate Nigeria-relevant conversations. These are
+              search and discovery links, not scraped national rankings. Posts, shares and
+              hashtags are starting points; verify claims with the original publisher,
+              agency or organiser before using them in a guide.
+            </p>
+            <div className="home-category-grid compact-category-grid">
+              {publicPlatformResearch.map((platform) => (
+                <article className="home-category-card" key={platform.name}>
+                  <h3>{platform.name}</h3>
+                  <p>{platform.text}</p>
+                  <a href={platform.url} target="_blank" rel="noopener noreferrer">Explore {platform.name} ↗</a>
+                </article>
+              ))}
+            </div>
+            <p className="job-muted">
+              X research by topic appears above; the dated YouTube chart and source links
+              appear above and below. None of these platforms provides a shared, comparable
+              public metric for what is trending across Nigeria.
+            </p>
+          </section>
+
           <section className="top-gap" aria-labelledby="youtube-video-trends">
             <span className="eyebrow">YouTube Nigeria · 11 October 2026 snapshot</span>
-            <h2 id="youtube-video-trends">Videos drawing attention</h2>
+            <h2 id="youtube-video-trends">Archive: earlier October chart entries</h2>
             <p>The following appeared in the Nigeria trending-video chart observed on 11 October.
               These are chart observations, not claims about all-time popularity or full-film availability.</p>
             <div className="home-category-grid compact-category-grid">
@@ -353,24 +452,23 @@ export default function SocialTrendsPage() {
           </section>
 
           <section className="top-gap" aria-labelledby="social-creators">
-            <span className="eyebrow">Social media and creator events · 10 October 2026</span>
+            <span className="eyebrow">Social media and creator events · past October event</span>
             <h2 id="social-creators">SMFest Abuja: verified creator and tech event</h2>
             <p>
-              SMFest Abuja's organiser lists its main event for 17–18 October 2026
+              SMFest Abuja's organiser listed its main event for 17–18 October 2026
               at Family Worship Centre, Wuye, Abuja, from 9 am, under the
-              AdvantageX theme. This is a verifiable offline event for social-media
-              creators and digital entrepreneurs, not evidence that a particular
-              hashtag is currently trending on TikTok or Instagram.
+              AdvantageX theme. Those dates have passed. This archived creator-event listing is not a current ticket offer,
+              or evidence that any hashtag is trending on TikTok or Instagram.
             </p>
             <div className="minimal-inline-links">
               <Link href="/explore/smfest-abuja-2026">Dates, venue and visitor planning</Link>
               <Link href="/jobs/guides/job-scam-red-flags-nigeria">Check suspicious creator and job offers</Link>
             </div>
-            <p><a href="https://smfest.org/" target="_blank" rel="noopener noreferrer">Confirm the live SMFest programme with the organiser ↗</a></p>
+            <p><a href="https://smfest.org/" target="_blank" rel="noopener noreferrer">Check the organiser for future SMFest programmes ↗</a></p>
           </section>
 
           <section className="top-gap" aria-labelledby="nigeria-trend-editorial">
-            <span className="eyebrow">Free web research · Source-checked 11 October 2026</span>
+            <span className="eyebrow">Earlier October research · preserved for reference</span>
             <h2 id="nigeria-trend-editorial">Stories worth checking across all four pillars</h2>
             <p>
               We use independent search discovery to find potential Nigerian stories, then verify them
@@ -414,16 +512,17 @@ export default function SocialTrendsPage() {
           <section className="top-gap" aria-labelledby="sources">
             <h2 id="sources">Sources and freshness</h2>
             <p>
-              The Nigeria trending-video snapshot was checked 11 October 2026 using Kworb's
-              public YouTube chart. The weekly music examples use Soundcharts' chart for the
-              week of 5 October 2026. Digital-audience figures come from DataReportal's
+              The recent Nigerian video observations come from independent Kworb and TubeStats
+              charts dated 25 October 2026. The archived video rankings use an 11 October
+              Kworb snapshot; the earlier music examples use Soundcharts for the week of
+              5 October. Digital-audience figures come from DataReportal's
               Digital 2026 Nigeria report, which uses late-2025 observations.
               Rankings and audience estimates are not directly comparable.
             </p>
             <p className="job-muted">
-              Last editorial review: 11 October 2026. The dated rankings should be
-              replaced or archived when a newer, verified snapshot is published.
-              Follow the linked sources for up-to-date platform activity.
+              Last editorial check: 26 October 2026. The new video-chart observation
+              is dated 25 October; the 11 October rankings remain a labelled archive.
+              Visit the linked original sources to check later changes.
             </p>
           </section>
         </div>
