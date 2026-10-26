@@ -1,15 +1,23 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 
-test("AI search crawlers keep public access and private-path restrictions", () => {
-  const robots = readFileSync("app/robots.ts", "utf8");
-  for (const bot of ["OAI-SearchBot", "PerplexityBot", "Claude-SearchBot"]) {
-    assert.ok(robots.includes(bot), bot + " is not declared");
+test("public robots.txt is a static asset with private-path exclusions and three sitemap feeds", () => {
+  assert.equal(existsSync("app/robots.ts"), false, "No runtime metadata route may shadow the static crawler asset");
+  const robots = readFileSync("public/robots.txt", "utf8");
+  const groups = robots.split(/\n\s*\n/).filter((group) => /User-agent:/i.test(group));
+  const expectedAgents = ["*", "OAI-SearchBot", "PerplexityBot", "Claude-SearchBot", "Claude-User"];
+  assert.equal(groups.length, expectedAgents.length);
+  for (let index = 0; index < expectedAgents.length; index++) {
+    assert.match(groups[index], new RegExp("User-agent: " + expectedAgents[index].replace("*", "\\*"), "i"));
+    assert.match(groups[index], /Allow: \/(?:\n|$)/);
+    assert.match(groups[index], /Disallow: \/admin/);
+    assert.match(groups[index], /Disallow: \/api\//);
   }
-  assert.match(robots, /disallow:\s*restrictedPaths/g);
-  assert.match(robots, /"\/admin", "\/api\/"/);
-  assert.match(robots, /sitemap-index\.xml/);
+  for (const feed of ["sitemap-index.xml", "recent-pages.xml", "video-sitemap.xml"]) {
+    assert.ok(robots.includes("Sitemap: https://mynigeriaguide.com/" + feed), feed);
+  }
+  assert.equal(robots.endsWith("\n"), true);
 });
 
 test("AI navigation file references only established site sections", () => {
