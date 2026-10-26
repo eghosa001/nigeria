@@ -26,11 +26,12 @@ test("EBID dossier has the five exact issuer-required document types", () => {
 
 test("EBID paper/email source discrepancy and rechecked issuer dates are preserved", () => {
   assert.ok(ebid);
-  assert.ok(ebid.applicationSteps.some(item => item.includes("'paper form'") && item.includes("by email")));
+  assert.ok(ebid.applicationSteps.some(item => item.includes("'paper form'") && item.includes("Both explicitly instruct candidates to apply by email")));
   assert.ok(ebid.applicationSteps.some(item => item.includes("recrutbidc@bidc-ebid.org")));
   assert.equal(ebid.verifiedAt, "2026-10-26");
   assert.ok(ebid.sources.some(source => source.url.endsWith("/employment/") && source.lastChecked === "2026-10-26"));
   assert.ok(ebid.sources.some(source => source.url.endsWith("Advertise_Young_Professional_03September_en.pdf") && source.lastChecked === "2026-10-26"));
+  assert.ok(ebid.sources.some(source => source.url.endsWith("Advertise-Young-Professional_2026_en.pdf") && source.lastChecked === "2026-10-26"));
   assert.ok(ebid.sources.some(source => source.url.includes("linkedin.com") && source.lastChecked === "2026-10-10"),
     "do not refresh a source date without checking that source");
 });
