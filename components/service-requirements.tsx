@@ -12,11 +12,9 @@ export function ServiceRequirements({ service }: { service: Service }) {
     <section id="requirements">
       <span className="section-number" aria-hidden="true">02</span>
       <h2>Requirements for {service.shortTitle}</h2>
-      <p className="guide-section-intro">
-        {service.slug === "neco-2026-timetable"
-          ? "This public timetable download does not require a payment, phone verification or identity document. Choose Internal or External and use a device that opens PDF files."
-          : "Prepare the documents needed for the steps above. Formats are specified only where the official instructions support them."}
-      </p>
+      {service.slug === "neco-2026-timetable" ? (
+        <p className="guide-section-intro">This public timetable download does not require a payment, phone verification or identity document. Choose Internal or External and use a device that opens PDF files.</p>
+      ) : null}
 
       <div className="requirement-summary" aria-label="Requirement categories">
         {Object.entries(counts).map(([kind, count]) => (
