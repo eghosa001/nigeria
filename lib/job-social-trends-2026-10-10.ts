@@ -119,14 +119,14 @@ export const octoberVerifiedProgrammes: CareerOpportunity[] = [
     sector: "International",
     status: "open",
     statusLabel: "Applications close 30 October 2026",
-    summary: "The ECOWAS Bank for Investment and Development is recruiting young professionals from West African countries and the diaspora for departmental rotations and supervised work at its development-finance institution. Its current call is for graduates under 30 with a master's degree or equivalent and the programme's language and professional qualifications.",
+    summary: "The ECOWAS Bank for Investment and Development is recruiting young professionals from West African countries and the diaspora for departmental rotations and supervised work at its development-finance institution. Its 2026 notice requires a relevant master's degree and language proficiency, but gives conflicting wording on whether someone who is exactly 30 qualifies.",
     location: "EBID headquarters, Lomé, Togo; the employer determines posting",
     employmentType: "Young Trainee Professional Staff programme",
     audiences: ["West African master's graduates", "Nigerian postgraduate professionals", "Early-career economics and finance professionals", "Engineering, technology and public policy graduates"],
     fields: ["Finance and accounting", "Economic analysis", "Investment and risk", "Engineering and infrastructure", "Information technology", "Law and audit", "Human resources and administration", "Development finance"],
     qualifications: [
       "Be a national of an eligible West African country, including Nigeria, as described in EBID's recruitment notice.",
-      "Be under 30 years of age and hold a master's degree or equivalent qualification in a relevant area.",
+      "Hold a master's degree or equivalent in a relevant field. The 2026 EBID notice says both 'not more than thirty (30)' in the programme description and 'less than 30' under eligibility. Applicants exactly 30 should seek clarification from EBID before relying on either age rule.",
       "Meet the Bank's professional experience, academic and language requirements in the actual 2026 notice.",
       "The 2026 employer notice requires fluency in one of English, French or Portuguese and working knowledge of another; review the exact language expectations for your chosen discipline."
     ],
@@ -137,21 +137,22 @@ export const octoberVerifiedProgrammes: CareerOpportunity[] = [
       "Use the email address and subject line that EBID itself published; do not send personal documents to recruiters using unofficial accounts."
     ],
     documents: [
-      "Current CV and application/cover letter explaining relevant postgraduate skills.",
-      "Copy of master's degree or equivalent qualifications as required by the 2026 vacancy notice.",
-      "A copy of national identity card or passport plus a birth certificate as requested by the 2026 vacancy notice.",
-      "Language and professional credentials specifically requested by EBID."
+      "A detailed CV.",
+      "Copies of qualifications obtained, including the relevant master's degree or equivalent.",
+      "A copy of national identity card or passport.",
+      "A copy of birth certificate.",
+      "A motivation letter explaining your reasons for joining, areas of competence or interest, relevant experience and career plans."
     ],
     applicationSteps: [
       "Open the EBID Employment page and select the current 'JOB ADVERTISEMENT FOR YOUNG PROFESSIONALS' entry.",
       "Read the exact 2026 employer notice for graduate eligibility, language fluency, five required document types and the Lomé selection-test location before applying.",
-      "Prepare your CV, cover letter and other requested documents. Do not rely on requirements copied from older recruitment rounds.",
+      "EBID hosts two versions of its 2026 PDF: one says 'paper form', while the other omits those words. Both explicitly instruct candidates to apply by email. Use the published email route; do not assume postal submission is required.",
       "Send the documents as directed by the employer to recrutbidc@bidc-ebid.org with subject 'YOUNG PROFESSIONALS RECRUITMENT PROGRAMME – 2026', after confirming that instruction on its official announcement.",
       "Send before the stated 30 October 2026 deadline, retain the sent email and monitor the same inbox for a response."
     ],
     officialUrl: "https://www.bidc-ebid.org/en/employment/",
     officialUrlLabel: "Read EBID's official 2026 Young Professionals notice",
-    verifiedAt: "2026-10-24",
+    verifiedAt: "2026-10-26",
     deadline: "2026-10-30",
     nextMilestone: "Employer-announced application deadline: 30 October 2026.",
     feeNote: "No unofficial application-payment route is endorsed. Use only the Bank's own published email and recruitment notice; do not transfer money to people promising selection.",
@@ -161,9 +162,9 @@ export const octoberVerifiedProgrammes: CareerOpportunity[] = [
       "The 2026 notice describes professional grade P1-1 conditions with allowances, insurance and pension; conversion after the six-month probation is conditional. Shortlisted-candidate assessments are written and oral tests at the bank's Lomé headquarters.",
     ],
     sources: [
-      { label: "EBID — live employment notices", url: "https://www.bidc-ebid.org/en/employment/", lastChecked: "2026-10-10" },
-      { label: "EBID — official 2026 Young Professionals full notice (PDF)", url: "https://www.bidc-ebid.org/en/wp-content/uploads/Advertise_Young_Professional_03September_en.pdf", lastChecked: "2026-10-10" },
-      { label: "EBID — 2026 Young Professionals issuer notice (alternate official PDF)", url: "https://www.bidc-ebid.org/en/wp-content/uploads/Advertise-Young-Professional_2026_en.pdf", lastChecked: "2026-10-24" },
+      { label: "EBID — live employment notices", url: "https://www.bidc-ebid.org/en/employment/", lastChecked: "2026-10-26" },
+      { label: "EBID — official 2026 Young Professionals full notice (PDF)", url: "https://www.bidc-ebid.org/en/wp-content/uploads/Advertise_Young_Professional_03September_en.pdf", lastChecked: "2026-10-26" },
+      { label: "EBID — 2026 Young Professionals issuer notice (alternate official PDF)", url: "https://www.bidc-ebid.org/en/wp-content/uploads/Advertise-Young-Professional_2026_en.pdf", lastChecked: "2026-10-26" },
       { label: "EBID — 2026 Young Professionals announcement", url: "https://www.linkedin.com/posts/bidc-ebid_ebid-youngprofessionals-ebidishiring-activity-7512768696118091777-ZWYU", lastChecked: "2026-10-10" },
       { label: "EBID — Young Professional Program overview", url: "https://www.bidc-ebid.org/en/working-with-ebid/young-professional-program/", lastChecked: "2026-10-10" }
     ]
