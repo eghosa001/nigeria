@@ -146,7 +146,7 @@ export const octoberVerifiedProgrammes: CareerOpportunity[] = [
     applicationSteps: [
       "Open the EBID Employment page and select the current 'JOB ADVERTISEMENT FOR YOUNG PROFESSIONALS' entry.",
       "Read the exact 2026 employer notice for graduate eligibility, language fluency, five required document types and the Lomé selection-test location before applying.",
-      "The same EBID PDF first calls the dossier 'paper form' but then explicitly directs submission by email. It does not clarify whether a physical copy is also needed; ask EBID before sending unsolicited paper documents.",
+      "EBID hosts two versions of its 2026 PDF: one says 'paper form', while the other omits those words. Both explicitly instruct candidates to apply by email. Use the published email route; do not assume postal submission is required.",
       "Send the documents as directed by the employer to recrutbidc@bidc-ebid.org with subject 'YOUNG PROFESSIONALS RECRUITMENT PROGRAMME – 2026', after confirming that instruction on its official announcement.",
       "Send before the stated 30 October 2026 deadline, retain the sent email and monitor the same inbox for a response."
     ],
@@ -164,7 +164,7 @@ export const octoberVerifiedProgrammes: CareerOpportunity[] = [
     sources: [
       { label: "EBID — live employment notices", url: "https://www.bidc-ebid.org/en/employment/", lastChecked: "2026-10-26" },
       { label: "EBID — official 2026 Young Professionals full notice (PDF)", url: "https://www.bidc-ebid.org/en/wp-content/uploads/Advertise_Young_Professional_03September_en.pdf", lastChecked: "2026-10-26" },
-      { label: "EBID — 2026 Young Professionals issuer notice (alternate official PDF)", url: "https://www.bidc-ebid.org/en/wp-content/uploads/Advertise-Young-Professional_2026_en.pdf", lastChecked: "2026-10-24" },
+      { label: "EBID — 2026 Young Professionals issuer notice (alternate official PDF)", url: "https://www.bidc-ebid.org/en/wp-content/uploads/Advertise-Young-Professional_2026_en.pdf", lastChecked: "2026-10-26" },
       { label: "EBID — 2026 Young Professionals announcement", url: "https://www.linkedin.com/posts/bidc-ebid_ebid-youngprofessionals-ebidishiring-activity-7512768696118091777-ZWYU", lastChecked: "2026-10-10" },
       { label: "EBID — Young Professional Program overview", url: "https://www.bidc-ebid.org/en/working-with-ebid/young-professional-program/", lastChecked: "2026-10-10" }
     ]
