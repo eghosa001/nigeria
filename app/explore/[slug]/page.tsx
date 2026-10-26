@@ -339,7 +339,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
 
       <section className="section explore-guide-highlights" id="trip-highlights">
         <div className="container">
-          <div className="section-heading"><div><span className="eyebrow">Highlights</span><h2>{hasDoNotTravelAdvisory ? "What to know about " : "What to see in "}{guide.shortTitle}</h2></div></div>
+          <div className="section-heading"><div><span className="eyebrow">Highlights</span><h2>{guide.kind === "event" ? "Event details for " : hasDoNotTravelAdvisory ? "What to know about " : "What to see in "}{guide.shortTitle}</h2></div></div>
           <div className="explore-highlight-grid">
             {guide.highlights.map((highlight) => (
               <article className="explore-highlight-card" key={highlight.name}>

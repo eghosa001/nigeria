@@ -479,7 +479,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               {!title.directors?.length ? (
                 <div className="movie-credit-group">
                   <h3>Director credit not yet independently verified</h3>
-                  <p className="movie-long-summary">The film-specific sources used for this entry do not confirm a director. We list only verified cast and crew; no name is inferred from the distributor, lead actor or upload channel. Consult the cited production references below for further credit verification.</p>
+                  <p className="movie-long-summary">The cited film-specific sources do not confirm a director, so we do not attribute one.</p>
                 </div>
               ) : null}
 
@@ -526,7 +526,6 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                         <article key={actor}><span>{character}</span><strong>{actor}</strong></article>
                       ))}
                     </div>
-                    <p className="movie-long-summary">Only character assignments independently confirmed by credited sources are included. Other documented performers appear in the cast list above without guessed roles.</p>
                   </div>
                 ) : null}
                 {editorial.crew.length ? (

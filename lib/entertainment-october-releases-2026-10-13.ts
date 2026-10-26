@@ -262,11 +262,12 @@ export const verifiedOctoberMovieReleases20261013: EntertainmentTitle[] = [
     "languages": [
       "Yoruba"
     ],
-    "synopsis": "Abe Odale (Blade of Betrayal) is an October 2026 Yoruba-language movie written and produced by Omobolanle Salisu, directed by Wasiu Adeyanju and promoted for release through the LibraTV YouTube channel. Release reporting names Mide Martins, Ayo Olaiya, Antar Laniyan and Omobolanle Salisu, but does not independently document a detailed scene-by-scene plot or reliable character assignments. Do not confuse publicity about the theme of betrayal with a verified synopsis.",
+    "synopsis": "Abe Odale (Blade of Betrayal) premiered on the LibraTV YouTube channel on 11 October 2026. Omobolanle Salisu wrote and produced this Yoruba-language film, directed by Wasiu Adeyanju. Reported performers include Mide Martins, Ayo Olaiya, Antar Laniyan, Femi Adebayo and Salisu. The cited release report does not establish which characters they portray or what specifically happens in the story, so no plot or character assignments are invented here.",
     "cast": [
       "Mide Martins",
       "Ayo Olaiya",
       "Antar Laniyan",
+      "Femi Adebayo",
       "Omobolanle Salisu"
     ],
     "directors": ["Wasiu Adeyanju"],
@@ -279,8 +280,8 @@ export const verifiedOctoberMovieReleases20261013: EntertainmentTitle[] = [
       {
         "label": "Nollywood Times — Abe Odale release, channel and confirmed cast",
         "href": "https://www.nollywoodtimes.com/2026/10/abe-odale-premieres-on-libratv-youtube.html",
-        "lastChecked": "2026-10-16",
-        "note": "The film-specific 12 October report names director Wasiu Adeyanju, writer/producer Omobolanle Salisu and the 11 October LibraTV premiere. It does NOT verify a detailed synopsis, role assignments, or an exact watch URL."
+        "lastChecked": "2026-10-26",
+        "note": "The 12 October film-specific report confirms the 11 October LibraTV premiere, director Wasiu Adeyanju, writer-producer Omobolanle Salisu and five named performers including Femi Adebayo. It does not establish character roles, a detailed plot or an exact authorised watch URL."
       }
     ],
     "watchLinks": []
