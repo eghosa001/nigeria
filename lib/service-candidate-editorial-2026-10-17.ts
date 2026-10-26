@@ -134,8 +134,8 @@ const amendments: Record<string, ServiceAmendment> = {
     ],
     "step": "If the dashboard still shows relocation as submitted or recommended, do not travel to the requested state on the strength of that status. Check with the serving State Coordinator about current posting duties; only an NYSC-approved relocation notice with the new state and reporting particulars changes where to report.",
     "sources": [
-      "https://platforms.nysc.gov.ng/corpmob.html",
-      "https://platforms.nysc.gov.ng/mobreg.html"
+      "https://www.nysc.gov.ng/corpmob.html",
+      "https://www.nysc.gov.ng/mobreg.html"
     ]
   },
   "nysc-revalidation": {
