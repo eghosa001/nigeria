@@ -109,14 +109,17 @@ export function getRequirementDetails(service: Service): RequirementDetail[] {
   // from loose keyword overlap: that previously repeated unrelated entire steps.
   // Preserve every published requirement; source-backed amendments must
   // be made to the actual service record, not silently hidden in presentation.
-  return service.requirements.map((item) => ({
-    item,
-    kind: kindFor(item),
-    why: service.slug === "passport-application-tracking" && /Application Number/i.test(item)
+  const seenPurposes = new Set<string>();
+  return service.requirements.map((item) => {
+    const purpose = service.slug === "passport-application-tracking" && /Application Number/i.test(item)
       ? "Required by NIS to find the submitted passport application."
       : service.slug === "passport-application-tracking" && /Reference Number/i.test(item)
       ? "Required with the Application Number to retrieve the application status."
-      : purposeFor(item, service),
-    format: formatFor(item),
-  }));
+      : purposeFor(item, service);
+    // Identical explanations add no value twice on the same page.
+    // Preserve every requirement, and the first useful explanation.
+    const why = purpose && !seenPurposes.has(purpose) ? purpose : undefined;
+    if (purpose) seenPurposes.add(purpose);
+    return { item, kind: kindFor(item), why, format: formatFor(item) };
+  });
 }
