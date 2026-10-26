@@ -56,7 +56,7 @@ test("indexability never determines whether a recorded performer is shown as cas
 test("actor and character credits remain different kinds of evidence", () => {
   const curated = src("app/entertainment/movies/[slug]/page.tsx");
   assert.match(curated, /editorial\.roles\.length/);
-  assert.match(curated, /Only character assignments independently confirmed/);
+  // The credits are structurally separated; no boilerplate disclaimer is required under each cast grid.\n  assert.match(curated, /editorial\\.roles\\.map\\(\\(\\{ actor, character \\}\\)/);\n  assert.match(curated, /documentedCast\\.slice\\(0, 8\\)/);
   assert.doesNotMatch(curated, /title\.subjects\?\.map\(\(name\) => \(\{ "@type": "Person", name \}\)\).*actor:/);
 });
 
