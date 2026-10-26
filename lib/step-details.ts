@@ -92,7 +92,10 @@ export function getStepDetails(service: Service): StepDetail[] {
   const checkpoints = new Set<string>();
   const keeps = new Set<string>();
   return service.steps.map((instruction, index) => {
-    const stage = reviewedStageSequences[service.slug]?.[index] ?? stageFor(instruction, index);
+    // Some residence classes explicitly have no fee: this is a class decision, not a universal payment step.
+    const stage = service.slug === "e-cerpac-application" && index === 3
+      ? "Check class fee"
+      : reviewedStageSequences[service.slug]?.[index] ?? stageFor(instruction, index);
     const checkpoint = checkpointFor(instruction, stage);
     // The NIS status lookup only reads an existing application; attaching a
     // generic "keep as evidence" instruction to finding its number adds filler.
