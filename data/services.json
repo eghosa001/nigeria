@@ -2267,17 +2267,17 @@
     ],
     "notes": [
       "NYSC states relocation is processed electronically and describes marital and health grounds among concessional cases.",
-      "NYSC states that relocations and cancellations are vetted by its responsible offices. Submitting supporting documents is not itself approval to report to another state or employer."
+      "NYSC distinguishes orientation-camp relocation from other post-camp requests. Its published policy says other post-camp relocations are processed three months after orientation and relocation stops six months into the service year. These are policy windows, not a guarantee of approval; ask the serving State Coordinator which current route applies before making travel arrangements."
     ],
     "sources": [
       {
         "label": "NYSC Corps Mobilization",
         "agency": "National Youth Service Corps",
         "url": "https://www.nysc.gov.ng/corpmob.html",
-        "lastChecked": "2026-10-15"
+        "lastChecked": "2026-10-26"
       }
     ],
-    "lastVerified": "2026-10-15",
+    "lastVerified": "2026-10-26",
     "searchTerms": [
       "NYSC relocation",
       "How NYSC relocation works",
@@ -10318,24 +10318,24 @@
     "feeNote": "e-CERPAC charges depend on the residence category. Use the amount generated on the official NIS e-CERPAC portal and do not pay an unofficial account.",
     "timeline": "Processing depends on category eligibility, document review, payment and biometric requirements shown by the e-CERPAC system.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-26",
     "officialPortal": "https://cerpac.immigration.gov.ng/requirements",
     "requirements": [
       "A passport and immigration status that support the chosen residence-permit category",
       "The category-specific evidence shown by NIS, such as employment/quota, student, dependant or spouse documentation",
       "A valid email address and contact information for the e-CERPAC account",
-      "Funds for the official category-specific e-CERPAC payment"
+      "Check the exact NIS residence class for any required fee; the R4A government and R5A international NGO pages currently say no fee is required"
     ],
     "steps": [
-      "Open the NIS e-CERPAC requirements page and select the residence category that matches the applicant's actual purpose in Nigeria.",
+      "Open NIS's category list and select the right residence class: R2A private employment, R3A free-zone employment, R4A government service, R5A international NGO, R6A religious work, R7A student or N1A spouse of a Nigerian citizen. Each has its own required evidence.",
       "Create the e-CERPAC account and start the application with the passport number and the identity information shown in the travel document.",
       "Upload the category-specific immigration, employment, study, dependant or family evidence listed for that permit class.",
-      "Review the application, make the official payment through the e-CERPAC system and retain the payment/application reference.",
+      "Check the selected class's official fee instructions before submitting. Pay through NIS only if that class requires it: published R4A government and R5A international NGO applications say no fee is required. Keep the application reference and any official payment acknowledgement.",
       "Check the e-CERPAC account for approval and biometric instructions, then keep the issued residence-permit information with the passport and immigration records."
     ],
     "notes": [
       "NIS states that CERPAC is required for many non-Nigerians staying in Nigeria beyond the short-visit period for work, business or long-term residence.",
-      "The documents differ materially by residence category, so do not copy an employee checklist for a student, dependant or spouse application.",
+      "The NIS requirements differ for principal workers, students, dependants and spouses. Do not copy an employee's quota, fee or document checklist into a government-official, international NGO, student or spouse category.",
       "A CERPAC is a residence/identity permit and is not identical to an entry visa."
     ],
     "sources": [
@@ -10343,13 +10343,25 @@
         "label": "NIS e-CERPAC Requirements",
         "agency": "Nigeria Immigration Service",
         "url": "https://cerpac.immigration.gov.ng/requirements",
-        "lastChecked": "2026-10-01"
+        "lastChecked": "2026-10-26"
       },
       {
         "label": "Nigeria Immigration Service",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NIS e-CERPAC R4A government employment",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://cerpac.immigration.gov.ng/requirements?type=R4A",
+        "lastChecked": "2026-10-26"
+      },
+      {
+        "label": "NIS e-CERPAC R5A international NGO employment",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://cerpac.immigration.gov.ng/requirements?type=R5A",
+        "lastChecked": "2026-10-26"
       }
     ],
     "searchTerms": [
@@ -13066,27 +13078,27 @@
     "steps": [
       "Open the official Nigerian Tax ID portal and choose the Tax ID retrieval option.",
       "Select Individual, Corporate or the entity type that matches the taxpayer whose Tax ID you need.",
-      "For an individual, enter the NIN and matching personal identity fields; for a registered organisation, enter the CAC registration information requested by the portal.",
+      "For an individual, supply the 11-digit NIN, then confirm the first name, surname and date of birth requested by the portal against the NIMC record. For a registered organisation, search the CAC name or enter its RC number and provide the fields for that entity type.",
       "Complete the portal security check and submit the identity match request.",
-      "Review and save the Tax ID returned by the official portal, or correct the underlying NIN/CAC identity record first if the portal reports a mismatch."
+      "If the identity check succeeds, save the 13-digit Tax ID displayed by NRS. If the NIN name/date of birth or CAC name/RC number does not match, correct the underlying record or use official NRS/JRB support; do not pay for a second identity."
     ],
     "notes": [
       "NRS/JRB describe the Tax ID as a harmonised national tax identity linked to foundational records such as NIN for individuals and CAC registration for businesses.",
       "The official portal says a valid Tax ID is required for many public and private services, including banking, employment documentation, government contracts and statutory filings.",
-      "If identity records do not match, the portal can require the underlying NIN/CAC record to be corrected first."
+      "Tax ID retrieval confirms a registered identity, not tax payment or tax clearance. When the portal's NIN/CAC verification service is temporarily unavailable, consult its service-status page and retry later; do not submit someone else's credentials."
     ],
     "sources": [
       {
         "label": "Nigerian Tax ID Retrieval Portal",
         "agency": "Nigeria Revenue Service / Joint Revenue Board",
         "url": "https://taxid.nrs.gov.ng/",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-26"
       },
       {
         "label": "How Tax ID Retrieval Works",
         "agency": "Nigeria Revenue Service / Joint Revenue Board",
         "url": "https://taxid.nrs.gov.ng/how-it-works",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-26"
       }
     ],
     "searchTerms": [
@@ -13110,7 +13122,7 @@
       "nrs-corporate-tax-registration",
       "nrs-tax-clearance-certificate"
     ],
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-26"
   },
   {
     "slug": "passport-application-tracking",
@@ -13491,19 +13503,19 @@
       "Open the official NABTEB eWorld result checker.",
       "Enter the candidate identification number exactly as issued by NABTEB.",
       "Select the correct examination type and examination year.",
-      "Enter the card serial number and the 12-digit result-checking PIN.",
+      "Enter the scratch-card serial number (a letter followed by digits on the back of the card) in the serial field, then enter the separate 12-digit PIN in the PIN field.",
       "Submit the form and wait for the result window to load; save or print the result if needed."
     ],
     "notes": [
       "NABTEB says a result-checking PIN is tied to the eWorld scratch card and should not be reused for a different candidate.",
-      "The official eWorld page also publishes an SMS result-checking format, but users should confirm that the shortcode and mobile route are still available before relying on it."
+      "NABTEB's eWorld page shows a card serial with a letter prefix, separate from the 12-digit PIN. Do not reuse a card already used for another candidate. Its published 32327 SMS format is not proof the shortcode is currently working; prefer the web checker if uncertain."
     ],
     "sources": [
       {
         "label": "NABTEB eWorld Result Checker",
         "agency": "National Business and Technical Examinations Board",
         "url": "https://eworld.nabteb.gov.ng/",
-        "lastChecked": "2026-10-03"
+        "lastChecked": "2026-10-26"
       },
       {
         "label": "NABTEB official website — Result Checker",
@@ -13531,7 +13543,7 @@
       "waec-check-result",
       "neco-check-result"
     ],
-    "lastVerified": "2026-10-03"
+    "lastVerified": "2026-10-26"
   },
   {
     "slug": "check-nin-number",
