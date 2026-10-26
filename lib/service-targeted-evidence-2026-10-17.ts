@@ -143,6 +143,6 @@ export function applyTargetedServiceEvidence20261017(service: Service): Service 
     sources,
     // Dated editorial review covers the revised user-facing answer, action and
     // source; this is not a claim that a real user transaction succeeded.
-    lastVerified: "2026-10-17"
+    lastVerified: service.lastVerified > "2026-10-17" ? service.lastVerified : "2026-10-17"
   };
 }

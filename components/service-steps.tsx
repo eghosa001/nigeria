@@ -7,12 +7,10 @@ export function ServiceSteps({ service }: { service: Service }) {
   return (
     <section id="steps">
       <span className="section-number" aria-hidden="true">01</span>
-      <h2>How to complete {service.shortTitle} step by step</h2>
-      <p className="guide-section-intro">
-        {service.slug === "neco-2026-timetable"
-          ? "No application submission is needed to read NECO’s public timetable. Choose the correct examination PDF, then check your registered papers, date and start time directly against NECO."
-          : "Follow these instructions in order. Use the requirements checklist below to prepare the documents, and check the official source before submitting."}
-      </p>
+      <h2>Steps for {service.shortTitle}</h2>
+      {service.slug === "neco-2026-timetable" ? (
+        <p className="guide-section-intro">No application submission is needed to read NECO’s public timetable. Choose the correct examination PDF, then check your registered papers, date and start time directly against NECO.</p>
+      ) : null}
 
       <div className="detailed-steps">
         {steps.map((step, index) => (

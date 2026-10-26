@@ -27,7 +27,9 @@ export function isPaymentAction(step: string) {
   // refund guides; "never pay an agent" must not become a Payment step.
   const action = step
     .replace(/\b(?:do not|don't|never|avoid|without)\s+(?:ever\s+)?pay(?:ing)?\b[^.!?;]*/gi, "")
-    .replace(/\b(?:do not|don't|never|avoid)\s+(?:make|complete|process|submit|initiate)\s+(?:(?:a|the|any)\s+)?payment\b[^.!?;]*/gi, "");
+    .replace(/\b(?:do not|don't|never|avoid)\s+(?:make|complete|process|submit|initiate)\s+(?:(?:a|the|any)\s+)?payment\b[^.!?;]*/gi, "")
+    // Warnings about paying intermediaries are not instructions to pay.
+    .replace(/\b(?:rather than|instead of)\s+pay(?:ing)?\b[^.!?;]*/gi, "");
   return /\b(?:pay|paying)\b(?!\s+attention\b)/i.test(action)
     || /\b(?:make|complete|proceed to|process|settle|submit|initiate)\s+(?:(?:the|an?|your|required|official|applicable|registration|application|remaining)\s+){0,4}(?:payment|fee|charge)\b(?!\s+(?:status|reference|number|receipt|evidence|proof|confirmation|details|record|history|code)\b)/i.test(action)
     || /\bcheckout\b|\b(?:payment|fee)\s+(?:checkout|gateway|screen)\b.*\b(?:proceed|complete|pay)\b/i.test(action);
@@ -90,7 +92,10 @@ export function getStepDetails(service: Service): StepDetail[] {
   const checkpoints = new Set<string>();
   const keeps = new Set<string>();
   return service.steps.map((instruction, index) => {
-    const stage = reviewedStageSequences[service.slug]?.[index] ?? stageFor(instruction, index);
+    // Some residence classes explicitly have no fee: this is a class decision, not a universal payment step.
+    const stage = service.slug === "e-cerpac-application" && index === 3
+      ? "Check class fee"
+      : reviewedStageSequences[service.slug]?.[index] ?? stageFor(instruction, index);
     const checkpoint = checkpointFor(instruction, stage);
     // The NIS status lookup only reads an existing application; attaching a
     // generic "keep as evidence" instruction to finding its number adds filler.
