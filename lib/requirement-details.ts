@@ -113,7 +113,7 @@ export function getRequirementDetails(service: Service): RequirementDetail[] {
   return service.requirements.map((item) => {
     // JAMB already explains the candidate-owned SIM in its journey and scenario;
     // do not restate generic SMS/OTP boilerplate in the requirements list.
-    const purpose = service.slug === "jamb-profile-code" && /phone number\/SIM/i.test(item)
+    const purpose = service.slug === "jamb-profile-code" && (/phone number\/SIM/i.test(item) || /\bairtime\b/i.test(item))
       ? undefined
       : service.slug === "passport-application-tracking" && /Application Number/i.test(item)
       ? "Required by NIS to find the submitted passport application."

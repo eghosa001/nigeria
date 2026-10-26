@@ -51,6 +51,7 @@ test("JAMB SMS profile code does not falsely demand payment evidence", () => {
   ]);
   assert.ok(details.every(detail => detail.kind !== "Payment / transaction evidence"));
   assert.equal(details[1].why, undefined, "Do not repeat generic SIM advice from the journey");
+  assert.equal(details[2].why, undefined, "Airtime is not an OTP or recovery credential");
   const explanations = details.map(detail => detail.why).filter(Boolean);
   assert.equal(new Set(explanations).size, explanations.length);
   assert.equal(service.lastVerified, "2026-10-16", "A presentation correction is not a new source review");
