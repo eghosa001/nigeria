@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
+import { getPublicService } from "../lib/data";
 
 const rows = JSON.parse(readFileSync("data/services.json", "utf8")) as Array<{
   slug: string;
@@ -65,6 +66,12 @@ test("seven additional guides have source-backed date updates and corrected acti
   assert.match(france.steps.join(" "), /demande-de-visa/);
   assert.ok(france.sources.some(source => source.url === "https://france-visas.gouv.fr/demande-de-visa"));
   assert.doesNotMatch(france.sources.map(source => source.url).join(" "), /\/online-application/);
+  const liveDobGuide = getPublicService("nysc-correct-date-of-birth");
+  assert.ok(liveDobGuide);
+  assert.equal(liveDobGuide.lastVerified, "2026-10-26", "old editorial overlay must not roll back newer checks");
+  assert.ok(liveDobGuide.sources.some(source => source.url === "https://www.nysc.gov.ng/correctdob.html" && source.lastChecked === "2026-10-26"));
+  assert.ok(liveDobGuide.sources.some(source => source.url === "https://www.nysc.gov.ng/faq.html" && source.lastChecked === "2026-10-26"));
+  assert.ok(liveDobGuide.sources.every(source => !source.url.includes("platforms.nysc.gov.ng")), "blocked legacy NYSC sources should not be rendered");
   const senate = rows.find(item => item.slug === "nysc-senate-list")!;
   assert.match(senate.steps[0], /verifysenatelists/);
   const nelfund = rows.find(item => item.slug === "nelfund-student-loan-application")!;
