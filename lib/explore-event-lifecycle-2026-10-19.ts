@@ -84,8 +84,9 @@ export function applyCurrentEventVisitorDecisions20261019(guide: ExploreGuide): 
     const newSource = { label: "Design Week Lagos — organiser's 18–25 October 2026 programme", href: "https://designweeklagos.com/" };
     const faq = { label: "Design Week Lagos — organiser's multi-venue FAQ", href: "https://designweeklagos.com/faq/" };
     const ended = { label: "National Theatre — 2026 Hall event marked ended (checked 26 October)", href: "https://nationaltheatre.gov.ng/whatson" };
+    const gallery = { label: "National Theatre — completed 2026 Hall event, gallery not yet published (checked 26 October)", href: "https://nationaltheatre.gov.ng/event/gallery/design-week-lagos-2026/XzBl38MQ" };
     const sources = [...(guide.sources ?? [])];
-    for (const s of [newSource, faq, ended]) {
+    for (const s of [newSource, faq, ended, gallery]) {
       if (guide.source?.href !== s.href && !sources.some(existing => existing.href === s.href)) sources.push(s);
     }
     return {
@@ -98,7 +99,8 @@ export function applyCurrentEventVisitorDecisions20261019(guide: ExploreGuide): 
       planning: [
         { label: "Can you still book the 2026 Hall programme?", detail: "No. The National Theatre marks the 2026 event as ended. Do not pay through an old event-ticket link or assume that the former 10:00–18:00 provisional window is a current visiting schedule." },
         { label: "Was every festival activity at the National Theatre?", detail: "No. The organiser described separate galleries, showrooms and partner activations across Lagos. The National Theatre Hall dates did not cover every citywide event, and the old schedule does not establish current public access to those venues." },
-        { label: "Where can you check a future edition?", detail: "Wait for a new dated announcement from designweeklagos.com and check the exact venue, session and admission route before planning travel. Neither the 2026 ticket link nor the old Hall timetable proves a future event is open." }
+        { label: "Where can you check a future edition?", detail: "Wait for a new dated announcement from designweeklagos.com and check the exact venue, session and admission route before planning travel. Neither the 2026 ticket link nor the old Hall timetable proves a future event is open." },
+        { label: "Where are the 2026 results or event photos?", detail: "The National Theatre's completed-event gallery currently says no photos or videos are available. Do not claim that advertised talks, student awards or named appearances happened without a later organiser report or independently documented result." }
       ],
       sources,
       lastReviewed: "2026-10-26",
