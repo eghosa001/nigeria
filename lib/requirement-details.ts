@@ -111,7 +111,11 @@ export function getRequirementDetails(service: Service): RequirementDetail[] {
   // be made to the actual service record, not silently hidden in presentation.
   const seenPurposes = new Set<string>();
   return service.requirements.map((item) => {
-    const purpose = service.slug === "passport-application-tracking" && /Application Number/i.test(item)
+    // JAMB already explains the candidate-owned SIM in its journey and scenario;
+    // do not restate generic SMS/OTP boilerplate in the requirements list.
+    const purpose = service.slug === "jamb-profile-code" && /phone number\/SIM/i.test(item)
+      ? undefined
+      : service.slug === "passport-application-tracking" && /Application Number/i.test(item)
       ? "Required by NIS to find the submitted passport application."
       : service.slug === "passport-application-tracking" && /Reference Number/i.test(item)
       ? "Required with the Application Number to retrieve the application status."
@@ -120,6 +124,14 @@ export function getRequirementDetails(service: Service): RequirementDetail[] {
     // Preserve every requirement, and the first useful explanation.
     const why = purpose && !seenPurposes.has(purpose) ? purpose : undefined;
     if (purpose) seenPurposes.add(purpose);
-    return { item, kind: kindFor(item), why, format: formatFor(item) };
+    // JAMB's SMS-only profile-code route does not require proof of payment.
+    // The word "transactions" in the SIM requirement describes future identity
+    // use; airtime is a network prerequisite, not a payment receipt.
+    const kind = service.slug === "jamb-profile-code" && /phone number\/SIM/i.test(item)
+      ? "Identity / account detail"
+      : service.slug === "jamb-profile-code" && /\bairtime\b/i.test(item)
+      ? "Other requirement"
+      : kindFor(item);
+    return { item, kind, why, format: formatFor(item) };
   });
 }

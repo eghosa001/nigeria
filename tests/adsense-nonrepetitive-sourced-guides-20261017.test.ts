@@ -40,6 +40,22 @@ test("a free, reference-free service is not given a made-up payment receipt", ()
   assert.match(guidance.aftercare[0].detail, /if the responsible organisation provides one/i);
 });
 
+test("JAMB SMS profile code does not falsely demand payment evidence", () => {
+  const service = getPublicService("jamb-profile-code");
+  assert.ok(service);
+  const details = getRequirementDetails(service);
+  assert.deepEqual(details.map(detail => detail.kind), [
+    "Identity / account detail",
+    "Identity / account detail",
+    "Other requirement",
+  ]);
+  assert.ok(details.every(detail => detail.kind !== "Payment / transaction evidence"));
+  assert.equal(details[1].why, undefined, "Do not repeat generic SIM advice from the journey");
+  const explanations = details.map(detail => detail.why).filter(Boolean);
+  assert.equal(new Set(explanations).size, explanations.length);
+  assert.equal(service.lastVerified, "2026-10-16", "A presentation correction is not a new source review");
+});
+
 test("Abe Odale remains sourced but omits repeated watch-link uncertainty", () => {
   const dossier = getMovieEditorialProfile("abe-odale-2026");
   assert.ok(dossier);

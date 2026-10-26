@@ -9,6 +9,8 @@ on:
       - "data/*.json"
       - "lib/data.ts"
       - "lib/service*.ts"
+      - "lib/requirement-details.ts"
+      - "tests/adsense-nonrepetitive-sourced-guides-20261017.test.ts"
       - "lib/agency*.ts"
       - "lib/entertainment*.ts"
       - "lib/movie-*.ts"
