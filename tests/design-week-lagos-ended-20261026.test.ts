@@ -1,0 +1,24 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+import { exploreGuides } from "../lib/explore";
+
+test("Design Week Lagos 2026 is an ended, sourced archive rather than a live ticket guide", () => {
+  const guide = exploreGuides.find((item) => item.slug === "design-week-lagos-2026");
+  assert.ok(guide, "preserve the existing canonical itinerary");
+  assert.equal(guide.lastReviewed, "2026-10-26");
+  assert.match(guide.summary, /18–25 October 2026 dates have passed/);
+  assert.match(guide.summary, /Hall programme as ended/);
+  assert.match(guide.intro.join(" "), /schedule alone does not establish attendance or results/);
+  assert.match(guide.planning[0].detail, /marks the 2026 event as ended/);
+  assert.doesNotMatch(guide.planning.map((p) => p.label).join(" "), /Which hall date should you book|Register with the official event partner/);
+  assert.ok(guide.planning.every((p) => !/buy a ticket|book the 2026|pay for admission/i.test(p.detail) || /Do not pay|No\./.test(p.detail)));
+  assert.equal(new Set(guide.planning.map((p) => p.label)).size, guide.planning.length);
+  const urls = new Set([guide.source?.href, ...(guide.sources ?? []).map((source) => source.href)]);
+  for (const url of [
+    "https://designweeklagos.com/",
+    "https://designweeklagos.com/faq/",
+    "https://nationaltheatre.gov.ng/whatson",
+    "https://nationaltheatre.gov.ng/event/register/design-week-lagos-2026/XzBl38MQ",
+  ]) assert.ok(urls.has(url), "missing issuer evidence: " + url);
+  assert.equal(new Set(guide.intro).size, guide.intro.length);
+});
