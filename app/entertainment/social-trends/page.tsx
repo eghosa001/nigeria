@@ -47,8 +47,8 @@ const publicPlatformResearch = [
   },
   {
     name: "Facebook",
-    url: "https://www.facebook.com/search/posts/?q=Nollywood",
-    text: "Review public posts from identified Nigerian publishers. Facebook search may require sign-in and is not a national chart.",
+    url: "https://www.facebook.com/",
+    text: "Use Facebook search to find posts from identified Nigerian publishers. Sign-in may be required; results are not a national chart.",
   },
   {
     name: "Threads",
