@@ -201,7 +201,6 @@ const amendments: Record<string, ServiceAmendment> = {
   "neco-2026-timetable": {
     "lead": "NECO's 2026 SSCE Internal and External timetables are separate official documents. The External examination is scheduled for 4–21 November 2026; read the specific paper and practical dates in the attached timetable instead of a generic calendar.",
     "notes": [
-      "NECO's current official website separately publishes 2026 SSCE External registration guidance: normal registration closes 26 October 2026 at midnight, after which the announced ₦5,000 late-registration charge applies. This is a registration rule, not a fee for downloading the timetable.",
       "For External candidates, match the timetable's subject paper, time, centre arrangements and any practical component against the candidate's registration record. A date range for the whole examination is not the start time for each subject."
     ],
     "step": "If a revised timetable appears on the NECO website, replace a saved social-media timetable copy with that later official document before arranging work leave or travel.",
