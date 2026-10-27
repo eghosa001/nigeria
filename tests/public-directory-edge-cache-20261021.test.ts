@@ -6,7 +6,7 @@ test("only safe unfiltered public hubs receive shared edge cache policies", asyn
   assert.ok(config.headers, "Next config must define header rules");
   const rules = await config.headers();
   const shared = rules.filter((rule) =>
-    rule.headers.some(({ key }) => key.toLowerCase() === "cloudflare-cdn-cache-control"),
+    rule.headers.some(({ key, value }) => key.toLowerCase() === "cloudflare-cdn-cache-control" && value.startsWith("public")),
   );
   assert.deepEqual(shared.map((rule) => rule.source).sort(),
     ["/", "/entertainment", "/entertainment/movies", "/explore", "/latest", "/services"]);
@@ -46,4 +46,18 @@ test("only safe unfiltered public hubs receive shared edge cache policies", asyn
       "deadline-sensitive Jobs status pages must never use this shared CDN cache policy",
     );
   }
+});
+
+
+test("concluded Design Week canonical detail forbids shared HTML caching without changing other routes", async () => {
+  assert.ok(config.headers);
+  const rules = await config.headers();
+  const exact = rules.filter((rule) => rule.source === "/explore/design-week-lagos-2026");
+  assert.equal(exact.length, 1);
+  const headers = new Map(exact[0].headers.map(({ key, value }) => [key.toLowerCase(), value]));
+  assert.match(headers.get("cache-control") ?? "", /no-store/);
+  assert.equal(headers.get("cdn-cache-control"), "no-store");
+  assert.equal(headers.get("cloudflare-cdn-cache-control"), "no-store");
+  assert.ok(!rules.some((rule) => rule.source === "/explore/:path*" && rule.headers.some(({ value }) => value.includes("no-store"))),
+    "do not disable caching for unrelated Tour guides");
 });
