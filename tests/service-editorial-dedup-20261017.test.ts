@@ -113,3 +113,19 @@ test("NERC's full 2026 state-transfer notice and short announcement discrepancy 
   assert.match(billing.notes.join(" "), /billing month/i);
   assert.match(band.notes.join(" "), /hours of supply/i);
 });
+
+test("NECO public timetable keeps one registration deadline warning and distinct paper guidance", async () => {
+  const { publicServices } = await import("../lib/data");
+  const guide = publicServices.find((service) => service.slug === "neco-2026-timetable");
+  assert.ok(guide, "Existing canonical timetable guide must remain present");
+  const datedWarnings = guide.notes.filter(
+    (note) => note.includes("26 October 2026") && note.includes("₦5,000"),
+  );
+  assert.equal(datedWarnings.length, 1, "No duplicate late-fee paragraphs across source and editorial overlay");
+  assert.match(datedWarnings[0], /registration deadline|normal registration/i);
+  assert.ok(
+    guide.notes.some((note) => /subject paper, time, centre arrangements/.test(note)),
+    "Preserve practical subject-level timetable instructions",
+  );
+  assert.equal(guide.lastVerified, "2026-10-17", "Deletion is not a new issuer recheck");
+});
