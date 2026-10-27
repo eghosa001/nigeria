@@ -5225,9 +5225,8 @@
     "steps": [
       "Open AEDC's official MAP Refund Portal and enter the correct prepaid meter number.",
       "Submit your meter number to check for an eligible refund record or token. A lookup alone does not guarantee eligibility.",
-      "If a refund is recorded, confirm the meter number and electricity-credit amount, then copy the 20-digit load token.",
+      "If a refund is recorded, confirm the meter number and electricity-credit amount, then copy the 20-digit load token. The monthly notice should also show the original meter cost, credits already applied and outstanding balance under NERC's amended order; keep it to reconcile any discrepancy.",
       "Enter the load token on your prepaid meter as you would a normal electricity token. It represents credited units, not money sent to a bank.",
-      "Check the AEDC refund notice for the original meter cost, the total reimbursement credits already applied and the outstanding balance. NERC requires these figures in monthly notifications; retain any notice that does not reconcile with your payment receipt.",
       "If an eligible refund notification is missing, your meter number returns no record, or the token fails, email map.refund@abujaelectricity.com with proof of MAP meter payment. AEDC also lists 08039070070 and its Customer Experience Centres for support; you do not have to visit a centre just to check the online portal.",
       "If AEDC has not resolved a missing refund, failed credit token or disputed MAP payment, lodge a formal complaint with its Customer Complaints Unit and keep the complaint reference, meter number and payment proof. NERC's published process permits escalation of unresolved complaints to the Consumer Forum and then the Commission. Check the competent state electricity regulator where jurisdiction has transferred."
     ],
