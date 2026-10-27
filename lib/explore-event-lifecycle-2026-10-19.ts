@@ -92,9 +92,10 @@ export function applyCurrentEventVisitorDecisions20261019(guide: ExploreGuide): 
     return {
       ...guide,
       title: "Design Week Lagos 2026: Past Dates and National Theatre Programme",
-      summary: "Design Week Lagos's advertised 18–25 October 2026 dates have passed. The National Theatre now marks its 22–25 October Hall programme as ended. This guide preserves the published schedule, not a current ticket offer or proof that every session took place.",
+      summary: "Design Week Lagos's advertised 18–25 October 2026 dates have passed. The National Theatre now marks its 22–25 October Hall programme as ended. This page preserves the published schedule; it is not a current ticket offer.",
       intro: [
-        "The organiser advertised an eight-day, citywide festival from 18 to 25 October 2026. The National Theatre in Iganmu was the main hub, with a separate published Hall programme for 22–25 October. The schedule does not establish which activities took place."
+        "The organiser advertised an eight-day, citywide festival from 18 to 25 October 2026. The National Theatre in Iganmu was the main hub, with a separate published Hall programme for 22–25 October.",
+        "The Hall programme listed exhibitions, industry talks and a student competition. Those were advertised sessions; the official listing does not confirm which speakers attended, whether every talk took place or any competition result."
       ],
       highlights: guide.highlights.map((highlight) => {
         if (highlight.name === "18–25 October — full festival week") {
