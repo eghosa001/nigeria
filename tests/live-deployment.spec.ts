@@ -378,3 +378,17 @@ test("live mobile first-paint metrics are sampled alongside edge timing", async 
     expect(metrics.ttfbMs, route + " must have browser navigation timing").not.toBeNull();
   }
 });
+
+
+test("production canonical Design Week archive cannot serve superseded 2026 booking copy", async ({ request }) => {
+  test.skip(!process.env.LIVE_BASE_URL, "Production-only canonical freshness check.");
+  // Intentionally no cache-busting query or request no-cache header: visitors and
+  // search engines use the ordinary canonical URL. This catches stale edge HTML.
+  const response = await request.get("/explore/design-week-lagos-2026", { failOnStatusCode: false });
+  expect(response.status()).toBe(200);
+  const html = await response.text();
+  expect(html).toContain("18–25 October 2026 dates have passed");
+  expect(html).toContain("Hall programme as ended");
+  expect(html).not.toContain("Which hall date should you book?");
+  expect(html).not.toContain("Register with the official event partner");
+});
