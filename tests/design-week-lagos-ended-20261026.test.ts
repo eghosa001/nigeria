@@ -9,8 +9,9 @@ test("Design Week Lagos 2026 is an ended, sourced archive rather than a live tic
   assert.equal(guide.lastReviewed, "2026-10-26");
   assert.match(guide.summary, /18–25 October 2026 dates have passed/);
   assert.match(guide.summary, /Hall programme as ended/);
-  assert.match(guide.summary, /not a current ticket offer or proof that every session took place/);
-  assert.equal(guide.intro.length, 1, "do not repeat ended-event status in a second introduction");
+  assert.match(guide.summary, /not a current ticket offer/);
+  assert.equal(guide.intro.length, 2, "two different source-backed paragraphs, not a repeated ended-event warning");
+  assert.match(guide.intro[1], /does not confirm which speakers attended/);
   assert.match(guide.title, /Past Dates/);
   const hall = guide.highlights.find((item) => item.name === "National Theatre, Iganmu");
   assert.ok(hall);
