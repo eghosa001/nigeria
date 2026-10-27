@@ -50,6 +50,13 @@ const publicEditorialCache = [
 const publicTourCache = [
   { key: "Cloudflare-CDN-Cache-Control", value: "public, max-age=60, stale-while-revalidate=30" },
 ];
+// Ended-event archives must not retain obsolete ticket guidance in shared caches.
+// Scope this to the confirmed problematic canonical route; do not slow all Tour guides.
+const endedEventNoStoreHeaders = [
+  { key: "Cache-Control", value: "no-store, max-age=0, must-revalidate" },
+  { key: "CDN-Cache-Control", value: "no-store" },
+  { key: "Cloudflare-CDN-Cache-Control", value: "no-store" },
+];
 const unfilteredExploreQueries = ["q", "type", "city", "region", "page", "sort"]
   .map((key) => ({ type: "query" as const, key }));
 const unfilteredEditorialQueries = ["q", "page", "search", "sort"]
@@ -77,6 +84,7 @@ const nextConfig: NextConfig = {
       { source: "/entertainment", missing: unfilteredEditorialQueries, headers: publicEditorialCache },
       { source: "/latest", missing: unfilteredEditorialQueries, headers: publicEditorialCache },
       { source: "/explore", missing: unfilteredExploreQueries, headers: publicTourCache },
+      { source: "/explore/design-week-lagos-2026", headers: endedEventNoStoreHeaders },
       {
         source: "/services",
         missing: unfilteredServiceQueries,
