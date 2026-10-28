@@ -1,4 +1,7 @@
 export const serviceSeoTitleTemplates: Record<string, string> = {
+  "jamb-profile-code": "JAMB Profile Code: NIN SMS to 55019 or 66019",
+  "waec-collect-certificate": "Collect WAEC Certificate: School vs Private Candidates",
+  "nysc-correct-date-of-birth": "NYSC DOB Correction: WAEC PIN, Steps & Deadline",
   "neco-2026-ssce-external-registration": "NECO External Registration {year}: Deadline & Portal",
   "nin-enrolment": "NIN Registration Nigeria {year}: Free Enrolment & Requirements",
   "ecowas-travel-certificate": "ECOWAS Travel Certificate Price {year}: Form & Requirements",
@@ -107,6 +110,9 @@ export function getServiceSeoTitleOverride(slug: string, year: string) {
 
 
 export const serviceSeoDescriptionTemplates: Record<string, string> = {
+  "jamb-profile-code": "Text NIN, a space and your 11-digit NIN to 55019 or 66019 from your own SIM. Resolve incorrect details before buying a JAMB e-PIN.",
+  "waec-collect-certificate": "School WASSCE candidates collect from their schools; private candidates contact the responsible WAEC office. Check certificate readiness before travelling.",
+  "nysc-correct-date-of-birth": "NYSC DOB correction uses a WAEC verification PIN and exam details before service starts. Learn the cutoff and the separate exemption-certificate process.",
   "waec-collect-certificate": "Collect your WAEC certificate: school candidates use their schools; private candidates contact the WAEC office for their exam state. Check ID and readiness first.",
   "check-nin-number": "Forgot your NIN? Dial *346# to use NIMC’s phone retrieval service, or visit a NIMC office. Check network charges and keep your NIN private.",
   "neco-2026-ssce-external-registration": "NECO 2026 SSCE External registration: normal deadline 26 October, late registration until 3 November, official portal, steps and exam timetable.",
