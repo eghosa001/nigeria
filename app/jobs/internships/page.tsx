@@ -3,20 +3,22 @@ import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { JobCollection } from "@/components/job-collection";
 import { jobOpportunities } from "@/lib/jobs";
+import { isCurrentInternshipOpportunity } from "@/lib/job-internships";
 
 export const metadata: Metadata = withStaticSocialMetadata({
-  title: "Internships & SIWES Opportunities in Nigeria",
-  description: "Verified internships, SIWES, industrial training, pre-NYSC and student career programmes in Nigeria with eligibility and official application routes.",
+  title: { absolute: "Internships & SIWES Nigeria | MyNigeriaGuide" },
+  description: "Find Nigerian internship and SIWES requirements, verified individual intakes where available, and official employer pathways. Check which applications are actually open.",
   alternates: { canonical: "/jobs/internships" }
 });
 
 export default function InternshipJobsPage() {
-  const items = jobOpportunities.filter((item) =>
-    [item.title, item.employmentType, ...item.audiences, ...item.fields]
-      .join(" ")
-      .toLowerCase()
-      .match(/intern|siwes|student|industrial training|pre-nysc/)
-  );
+  const items = jobOpportunities.filter((item) => isCurrentInternshipOpportunity(item));
+  // The following are permanent issuer-sourced programme guides, NOT
+  // assertions of an open internship vacancy or an accepting application form.
+  const pathwaySlugs = ["shell-nigeria-siwes", "airtel-nigeria-careers", "kpmg-nigeria-careers"];
+  const pathways = pathwaySlugs
+    .map((slug) => jobOpportunities.find((item) => item.slug === slug))
+    .filter((item) => item?.status === "career-page");
 
   return (
     <>
@@ -24,8 +26,8 @@ export default function InternshipJobsPage() {
         <div className="container">
           <Link href="/jobs" className="back-link">← Jobs & Careers</Link>
           <span className="eyebrow">Students & internships</span>
-          <h1>Internships, SIWES and pre-NYSC opportunities.</h1>
-          <p className="page-intro">Official student pathways with course, CGPA, school-letter and programme requirements where the employer publishes them.</p>
+          <h1>Internships and SIWES in Nigeria: find the right route.</h1>
+          <p className="page-intro">Check whether an internship intake is open before applying. Compare SIWES, student placements and graduate internships using the employer’s published requirements.</p>
         </div>
       </section>
       <section className="section">
@@ -38,7 +40,36 @@ export default function InternshipJobsPage() {
           </div>
         </div>
       </section>
-      <section className="section"><div className="container"><JobCollection opportunities={items} /></div></section>
+      <section className="section">
+        <div className="container">
+          <div className="minimal-section-heading">
+            <div><span className="eyebrow">Current opportunities</span><h2>Specific internship intakes</h2></div>
+          </div>
+          {items.length ? (
+            <JobCollection opportunities={items} />
+          ) : (
+            <p className="page-intro">No individual internship intake in our reviewed records is confirmed open or upcoming. This is not a claim that every employer has stopped recruiting: check the official programme routes below for the latest application window.</p>
+          )}
+          <div className="minimal-section-heading top-gap">
+            <div><span className="eyebrow">Official programme guidance</span><h2>Where to check SIWES and internship applications</h2></div>
+          </div>
+          <p>These are employer-published routes and eligibility guides, not live vacancy announcements. An employer's general careers page does not confirm that its internship form is accepting applications today.</p>
+          <div className="home-updates-grid">
+            {pathways.map((item) => item ? (
+              <article className="home-update-card" key={item.slug}>
+                <h3>{item.organization}</h3>
+                <p>{item.slug === "shell-nigeria-siwes"
+                  ? "Shell’s student industrial-training guidance explains its university/polytechnic and school-authorisation requirements."
+                  : item.slug === "airtel-nigeria-careers"
+                    ? "Airtel distinguishes undergraduate and graduate internships from other job openings. Confirm the current intake dates."
+                    : "KPMG explains separate undergraduate, pre-NYSC and graduate internships with different eligibility rules."}</p>
+                <Link href={"/jobs/" + item.slug}>Eligibility and official source →</Link>
+              </article>
+            ) : null)}
+          </div>
+          <p className="top-gap">Looking for general graduate employment rather than an internship? <Link href="/jobs/graduate">View graduate and trainee programmes →</Link></p>
+        </div>
+      </section>
     </>
   );
 }

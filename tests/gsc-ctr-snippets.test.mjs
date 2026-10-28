@@ -80,3 +80,18 @@ test("Sibe search snippet answers observed cast and full-movie intent", () => {
   assert.match(snippet[1], /Sibe.*Bimbo Ademoye/);
   assert.match(snippet[2], /Uche Montana.*official Bimbo Ademoye TV full movie/i);
 });
+
+test("three GSC soft-404 guides retain distinct source-backed searchable answers", () => {
+  const titles = templates("serviceSeoTitleTemplates");
+  const descriptions = templates("serviceSeoDescriptionTemplates");
+  const followUps = readFileSync(new URL("../lib/search-answers.ts", import.meta.url), "utf8");
+  for (const slug of ["jamb-profile-code", "waec-collect-certificate", "nysc-correct-date-of-birth"]) {
+    const service = services.find((item) => item.slug === slug);
+    assert.ok(service?.status === "verified" && service.sources?.length, slug);
+    assert.ok(titles[slug]?.length <= 60 && descriptions[slug]?.length <= 155, slug);
+    assert.match(followUps, new RegExp('"' + slug + '": \\['));
+  }
+  assert.match(descriptions["jamb-profile-code"], /55019 or 66019/);
+  assert.match(descriptions["waec-collect-certificate"], /private candidates contact the responsible WAEC office/);
+  assert.match(descriptions["nysc-correct-date-of-birth"], /before service starts/);
+});
