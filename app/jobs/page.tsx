@@ -90,7 +90,7 @@ export default function JobsPage() {
               <summary>Latest recruitment verification notes</summary>
               <div className="jobs-editorial-updates-content">
             <p className="job-muted">Newly checked 11 October 2026: <Link href="/jobs/moniepoint-early-careers-talent-acquisition-specialist">Moniepoint’s Early Careers Talent Acquisition Specialist vacancy</Link> is an experienced recruiting role requiring 5–7 years, not a graduate-trainee opening. Confirm its current availability on the employer’s official application page.</p>
-            <p className="job-muted">New official opportunity: <Link href="/jobs/founder-dojo-imo-cohort-two-2026">Founder Dojo Imo Cohort 2</Link> offers free founder-development training and mentorship. Apply by 19 October for first consideration; the operator confirms 2 November as the final deadline. It is <strong>not</strong> a salaried vacancy.</p>
+            <p className="job-muted">Deadline rechecked on the organiser’s official page 28 October 2026: <Link href="/jobs/founder-dojo-imo-cohort-two-2026">Founder Dojo Imo Cohort 2</Link> has passed its 19 October first-consideration date. The organiser still lists 2 November 2026 as the final deadline and displays an application form; confirm that submissions remain accepted before applying. This is free founder training, <strong>not</strong> salaried employment.</p>
               </div>
             </details>
           </div>
