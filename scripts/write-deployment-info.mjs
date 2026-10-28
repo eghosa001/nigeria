@@ -1,5 +1,10 @@
 import { execFileSync } from "node:child_process";
 import { mkdir, writeFile } from "node:fs/promises";
+import { patchVinextMetadata } from "./patch-vinext-head-metadata.mjs";
+
+// Called by prebuild, prebuild:vinext and prebuild:next before Vinext loads.
+// Fail the build if the pinned Vinext implementation cannot be safely patched.
+console.log("Vinext head-metadata cache safeguard:", patchVinextMetadata());
 
 function git(...args) {
   try {

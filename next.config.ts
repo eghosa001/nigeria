@@ -72,7 +72,12 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   // Broaden metadata-in-head treatment to generic SEO crawlers without forcing
   // regular browser traffic onto the slower blocking-metadata path.
-  htmlLimitedBots: /[\w-]+-Google|Google-[\w-]+|Chrome-Lighthouse|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|redditbot|ia_archiver|Bingbot|BingPreview|applebot|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight|Googlebot|bot|crawl|spider|SEOAnalyzer|FiveT|HeadlessChrome/i,
+  // Vinext 1.0.0-beta.11 may cache streamed metadata after no-User-Agent
+  // regeneration. Keep canonical/title/robots tags in <head> for every
+  // visitor while the production app remains on this release. The prebuild
+  // patch also prevents empty-User-Agent renders from streaming metadata.
+  // See cloudflare/vinext#3435 and the four-pillar crawler parity regression.
+  htmlLimitedBots: /.*/,
   async headers() {
     const privateAdminHeaders = [
       { key: "Cache-Control", value: "private, no-store" },

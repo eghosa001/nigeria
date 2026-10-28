@@ -66,10 +66,16 @@ jobs:
             echo "mode=full" >> "$GITHUB_OUTPUT"
           fi
 
-          other_job_files="$(printf '%s\n' "$changed" | grep -E '^(lib/(jobs|job-runtime|job-query|job-topics|job-facets|job-employers|career-guides)\.ts$|app/api/jobs/|scripts/check-job-links\.mjs$|data/job-retired-redirects\.json$|next\.config\.ts$)' || true)"
+          # A crawler-metadata-only next.config change cannot alter employer
+          # URLs. Keep the strict full network audit for any other config edit
+          # (including redirects), and for every actual Jobs link change.
+          next_config_non_metadata="$(git diff --unified=0 "$base_sha" HEAD -- next.config.ts |
+            grep -E '^[+-][^+-]' |
+            grep -Ev '^[+-][[:space:]]*(//|htmlLimitedBots:)' || true)"
+          other_job_files="$(printf '%s\n' "$changed" | grep -E '^(lib/(jobs|job-runtime|job-query|job-topics|job-facets|job-employers|career-guides)\.ts$|app/api/jobs/|scripts/check-job-links\.mjs$|data/job-retired-redirects\.json$)' || true)"
           url_diff="$(git diff "$base_sha" HEAD -- lib/job-scale-wave.ts app/jobs | grep -E '^[+-].*(https?://|officialUrl|sources:|url:|href=["'\'' ]https?://)' || true)"
 
-          if [ -n "$other_job_files" ] || [ -n "$url_diff" ]; then
+          if [ -n "$other_job_files" ] || [ -n "$url_diff" ] || [ -n "$next_config_non_metadata" ]; then
             echo "links=true" >> "$GITHUB_OUTPUT"
             echo "Jobs link-bearing changes detected."
           else
