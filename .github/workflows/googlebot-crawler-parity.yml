@@ -1,0 +1,27 @@
+name: Googlebot Crawler Parity
+
+on:
+  pull_request:
+    paths:
+      - "scripts/check-googlebot-crawl-parity.mjs"
+      - "tests/googlebot-crawl-parity.test.mjs"
+      - ".github/workflows/googlebot-crawler-parity.yml"
+      - ".github/workflows/production-monitor.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  crawl-parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Test indexability and canonical validation
+        run: node --test tests/googlebot-crawl-parity.test.mjs
+      - name: Compare live public HTML under browser and Googlebot-like user agents
+        run: node scripts/check-googlebot-crawl-parity.mjs
