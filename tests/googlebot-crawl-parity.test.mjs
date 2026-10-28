@@ -29,3 +29,9 @@ test("blocks header noindex and meta noindex regardless of attribute order", () 
 test("rejects Cloudflare resource failure masquerading as a 200 response", () => {
   assert.throws(() => validateIndexableHtml(input({ html: good + "Worker exceeded resource limits" })), /Worker resource failure/);
 });
+
+test("browser streaming may place metadata after head; crawler metadata must be in head", () => {
+  const streamed = '<html><head></head><body><h1>ICAN registration</h1><title>ICAN exam registration</title><link rel="canonical" href="' + canonical + '"></body></html>';
+  assert.equal(validateIndexableHtml(input({ html: streamed })).canonical, canonical);
+  assert.throws(() => validateIndexableHtml(input({ html: streamed, requireHeadMetadata: true })), /canonical link/);
+});
