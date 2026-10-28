@@ -38,6 +38,7 @@ const quickServices = [
   { label: "BVN services", href: "/topics/bvn" },
   { label: "CAC registration", href: "/topics/cac-business" },
   { label: "ECOWAS certificate", href: "/services/ecowas-travel-certificate" },
+  { label: "Passport application tracking", href: "/services/passport-application-tracking" },
   { label: "Pension & RSA", href: "/topics/pension-services-nigeria" },
   { label: "Foreign visas", href: "/categories/foreign-visas" },
 ];
@@ -271,6 +272,7 @@ export default function HomePage() {
             <Link href="/jobs/nigerian-army-92rri-2026">Army 92RRI recruitment status</Link>
             <Link href="/jobs/remote">Remote jobs in Nigeria</Link>
             <Link href="/jobs/graduate">Graduate jobs &amp; trainee programmes</Link>
+            <Link href="/jobs/internships">Internships &amp; SIWES</Link>
           </div>
 
           <div className="home-jobs-grid">
