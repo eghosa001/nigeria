@@ -27,7 +27,7 @@ export function validateIndexableHtml({ status, headers, html, canonical, requir
     throw new Error("Cloudflare Worker resource failure in HTML");
   }
   const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1];
-  if (requireHeadMetadata && !head) throw new Error("Missing HTML head");
+  if (requireHeadMetadata && head === undefined) throw new Error("Missing HTML head");
   // Next.js streams metadata outside <head> for ordinary browsers, but
   // sends it in <head> to recognised HTML-limited search crawlers.
   const metadata = requireHeadMetadata ? head : html;
