@@ -91,11 +91,21 @@ export function applyCurrentEventVisitorDecisions20261019(guide: ExploreGuide): 
     }
     return {
       ...guide,
-      summary: "Design Week Lagos's advertised 18–25 October 2026 dates have passed. The National Theatre now marks its 22–25 October Hall programme as ended. This guide preserves the published schedule, not a current ticket offer or proof that every session took place.",
+      title: "Design Week Lagos 2026: Past Dates and National Theatre Programme",
+      summary: "Design Week Lagos's advertised 18–25 October 2026 dates have passed. The National Theatre now marks its 22–25 October Hall programme as ended. This page preserves the published schedule; it is not a current ticket offer.",
       intro: [
-        "The organiser advertised an eight-day, citywide design festival from 18 to 25 October 2026. The National Theatre in Iganmu was the main hub, with a separate published Hall programme for 22–25 October. Those dates are now historical.",
-        "The National Theatre's current What's On listing marks Design Week Lagos 2026 as ended. The dated session themes in the highlights below are the advertised programme, not evidence that every activity took place."
+        "The organiser advertised an eight-day, citywide festival from 18 to 25 October 2026. The National Theatre in Iganmu was the main hub, with a separate published Hall programme for 22–25 October.",
+        "The Hall programme listed exhibitions, industry talks and a student competition. Those were advertised sessions; the official listing does not confirm which speakers attended, whether every talk took place or any competition result."
       ],
+      highlights: guide.highlights.map((highlight) => {
+        if (highlight.name === "18–25 October — full festival week") {
+          return { ...highlight, detail: "The organiser's 2026 programme covered venues beyond the National Theatre; partner activities had their own access arrangements." };
+        }
+        if (highlight.name === "National Theatre, Iganmu") {
+          return { ...highlight, detail: "The venue advertised a 22–25 October Hall programme with provisional 10:00–18:00 sessions. These are past event times, not current visiting hours or a bookable session." };
+        }
+        return highlight;
+      }),
       planning: [
         { label: "Can you still book the 2026 Hall programme?", detail: "No. The National Theatre marks the 2026 event as ended. Do not pay through an old event-ticket link or assume that the former 10:00–18:00 provisional window is a current visiting schedule." },
         { label: "Was every festival activity at the National Theatre?", detail: "No. The organiser described separate galleries, showrooms and partner activations across Lagos. The National Theatre Hall dates did not cover every citywide event, and the old schedule does not establish current public access to those venues." },
