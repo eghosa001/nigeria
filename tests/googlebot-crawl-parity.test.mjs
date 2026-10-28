@@ -76,3 +76,14 @@ test("Design Week cache guard rejects old ticket prompts on the normal canonical
   assert.throws(() => assertFreshnessSignals(stale, "stale", marker), /missing verified current copy/);
   assert.throws(() => assertFreshnessSignals(good.replace("historic record", marker.forbidden[1] + " historic record"), "old", marker), /obsolete public copy/);
 });
+
+test("completed React streamed server output is compared, not just the loading skeleton", () => {
+  const skeleton = '<html><body><main id="main-content"><!--$--><!--$?--><template id="B:0"></template><section><p>Opening your guide…</p></section><!--/$--><!--/$--></main><footer>Visit the main guide</footer>';
+  const body = '<h1>Design Week Lagos</h1><p>Design Week Lagos 2026 has ended. Its historical dates were 18–25 October. Use the original organizer for future editions.</p><p>No old payment link or expired registration is an active offer for 2026.</p>';
+  const streamed = skeleton + '<div hidden id="S:0">' + body + '</div><script>$RC("B:0","S:0")</script></body></html>';
+  const stale = streamed.replace("has ended", "is open");
+  assert.match(getArticleText(streamed), /Design Week Lagos 2026 has ended/);
+  assert.ok(!getArticleText(streamed).includes("Opening your guide"));
+  assert.throws(() => assertSameArticleContent(stale, streamed, "stale stream"), /stale article body differs/);
+  assert.throws(() => getArticleText(skeleton + '</body></html>'), /Unresolved streamed article boundary/);
+});
