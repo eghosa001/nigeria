@@ -81,11 +81,10 @@ export function assertSamePageIdentity(a, b, label) {
 }
 
 export function getArticleText(html) {
-  const match = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i);
-  if (!match) throw new Error("Missing visible <main> article content");
-  // Ignore Next/Vinext hydration, serialized state and icons. Compare only
-  // rendered visitor copy, never HTML attributes, nonce IDs or timestamps.
-  const clean = match[1]
+  const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i);
+  if (!main) throw new Error("Missing visible <main> article content");
+
+  const toText = (fragment) => fragment
     .replace(/<(?:script|style|template|svg)\b[^>]*>[\s\S]*?<\/(?:script|style|template|svg)>/gi, " ")
     .replace(/<[^>]*>/g, " ")
     .replace(/&(#x[0-9a-f]+|#[0-9]+|amp|lt|gt|quot|apos|nbsp|ndash|mdash|rsquo|lsquo);/gi, (_, entity) => {
@@ -97,8 +96,25 @@ export function getArticleText(html) {
     })
     .replace(/\s+/g, " ")
     .trim();
-  if (clean.length < 100) throw new Error("Missing substantial visitor article text; raw main length=" + match[1].length + ", text length=" + clean.length + ", excerpt=" + JSON.stringify(match[1].slice(0, 350)) + ", streamSegment=" + JSON.stringify(html.slice(Math.max(0, html.indexOf('id="S:0"') - 200), html.indexOf('id="S:0"') + 650)));
-  return clean;
+
+  let visible = toText(main[1]);
+  if (visible.length < 100) {
+    // React streams a resolved Suspense subtree into <div hidden id="S:0">
+    // outside <main>, then moves it into the placeholder <template id="B:0">
+    // with $RC. Parsing only initial <main> sees "Opening your guide…" and
+    // incorrectly declares the fully server-rendered article missing.
+    const pending = main[1].match(/<template\b[^>]*\bid=(["'])B:(\d+)\1/i);
+    if (pending) {
+      const match = [...html.matchAll(/<div\b[^>]*\bid=(["'])S:(\d+)\1[^>]*>/gi)]
+        .find((segment) => segment[2] === pending[2]);
+      if (!match) throw new Error("Unresolved streamed article boundary B:" + pending[2]);
+      // All bytes were fetched before this check; scripts and serialization
+      // are removed from the content comparison, not executed by the crawler.
+      visible = toText(html.slice(match.index + match[0].length));
+    }
+  }
+  if (visible.length < 100) throw new Error("Missing substantial server-rendered article text");
+  return visible;
 }
 
 export function assertSameArticleContent(canonicalHtml, freshHtml, label) {
