@@ -14,7 +14,7 @@ import { serviceLocationCities } from "@/data/service-locations";
 import { getSiteUrl } from "@/lib/site";
 import { getServiceDirectoryPageCount } from "@/lib/service-query";
 import { isIndexableJobOpportunity, jobOpportunities } from "@/lib/jobs";
-import { getRecentlyPostedJobs } from "@/lib/job-runtime";
+
 import { jobTopics } from "@/lib/job-topics";
 import { careerGuides } from "@/lib/career-guides";
 import { jobLocationFacets, jobProfessionFacets } from "@/lib/job-facets";
@@ -135,12 +135,11 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
       { url: base + "/jobs/internships", lastModified: jobsModified },
       { url: base + "/jobs/engineering", lastModified: jobsModified },
       { url: base + "/jobs/remote", lastModified: "2026-10-04" },
-      // This time-sensitive collection explicitly noindexes itself when empty.
-      // Do not advertise it as an indexable canonical in a fresh sitemap build.
-      ...(getRecentlyPostedJobs(jobOpportunities, 7).length
-        ? [{ url: base + "/jobs/new-this-week", lastModified: jobsModified }]
-        : []),
-      { url: base + "/jobs/closing-this-week", lastModified: jobsModified },
+      // Intentionally exclude the rolling seven-day job collections.
+      // Their metadata becomes noindex when empty, while sitemaps are static
+      // until the next deployment. A previous build can therefore list a URL
+      // whose current HTTP response declares noindex. Both pages remain
+      // internally linked and accessible when readers need them.
       { url: base + "/jobs/employers", lastModified: jobsModified },
       ...indexableJobEmployers.map((employer) => ({
         url: base + "/jobs/employers/" + employer.slug,
