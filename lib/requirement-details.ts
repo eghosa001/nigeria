@@ -29,6 +29,23 @@ function kindFor(item: string): RequirementKind {
 }
 
 function purposeFor(item: string, service: Service) {
+  // These three GSC soft-404 guides had broad "used to trace a record"
+  // explanations under their specific requirements. Retain the requirements,
+  // but explain the actual issuer-verified purpose instead of boilerplate.
+  if (service.slug === "jamb-profile-code") {
+    if (/11-digit NIN/i.test(item)) return "The candidate uses this exact NIN in the JAMB SMS request (NIN, one space, then 11 digits) to 55019 or 66019.";
+    if (/phone number|\bSIM\b/i.test(item)) return "JAMB associates the candidate's profile with this number; keep control of the SIM for later e-PIN and registration transactions.";
+    if (/airtime/i.test(item)) return "The JAMB SMS uses the mobile network; JAMB support advises having sufficient ordinary airtime before sending.";
+  }
+  if (service.slug === "waec-collect-certificate") {
+    if (/candidate full name|examination number/i.test(item)) return "The school or responsible WAEC office uses these examination details to identify the candidate's original certificate and check if it is ready.";
+    if (/identification|collection requirements/i.test(item)) return "The school or WAEC office determines what identification it accepts for this candidate. Confirm the exact documents before visiting.";
+  }
+  if (service.slug === "nysc-correct-date-of-birth") {
+    if (/WAEC verification PIN/i.test(item)) return "NYSC uses this PIN to verify the prospective corps member's WAEC record before allowing an ordinary date-of-birth correction.";
+    if (/WAEC type\/year|examination number/i.test(item)) return "The exam type, year and number must match the WAEC record returned for verification on the NYSC dashboard.";
+    if (/NYSC dashboard/i.test(item)) return "The prospective corps member submits the request through the existing NYSC account, before service commencement.";
+  }
   if (service.slug === "neco-2026-timetable") {
     if (/pdf viewer|pdf reader/i.test(item)) return "Use any device that opens PDFs to read and save the public NECO timetable. No SMS code, candidate account or personal phone number is required merely to download it.";
     if (/registered NECO subjects/i.test(item)) return "Match each enrolled subject and paper to the date and time in the official Internal or External timetable before planning examination travel.";
