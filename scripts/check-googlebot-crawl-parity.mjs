@@ -97,7 +97,7 @@ export function getArticleText(html) {
     })
     .replace(/\s+/g, " ")
     .trim();
-  if (clean.length < 100) throw new Error("Missing substantial visitor article text; raw main length=" + match[1].length + ", text length=" + clean.length + ", excerpt=" + JSON.stringify(match[1].slice(0, 700)));
+  if (clean.length < 100) throw new Error("Missing substantial visitor article text; raw main length=" + match[1].length + ", text length=" + clean.length + ", excerpt=" + JSON.stringify(match[1].slice(0, 350)) + ", streamSegment=" + JSON.stringify(html.slice(Math.max(0, html.indexOf('id="S:0"') - 200), html.indexOf('id="S:0"') + 650)));
   return clean;
 }
 
