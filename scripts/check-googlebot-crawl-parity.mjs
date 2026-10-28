@@ -97,7 +97,7 @@ export function getArticleText(html) {
     })
     .replace(/\s+/g, " ")
     .trim();
-  if (clean.length < 100) throw new Error("Missing substantial visitor article text");
+  if (clean.length < 100) throw new Error("Missing substantial visitor article text; raw main length=" + match[1].length + ", text length=" + clean.length + ", excerpt=" + JSON.stringify(match[1].slice(0, 700)));
   return clean;
 }
 
