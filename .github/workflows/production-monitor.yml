@@ -27,6 +27,7 @@ jobs:
     env:
       LIVE_BASE_URL: https://mynigeriaguide.com
     steps:
+      - uses: actions/checkout@v4
       - name: Wait for exact production SHA before post-merge crawler verification
         if: github.event_name == 'push'
         shell: bash
