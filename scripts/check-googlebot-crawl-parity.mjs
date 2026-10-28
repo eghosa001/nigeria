@@ -81,12 +81,12 @@ export function assertSamePageIdentity(a, b, label) {
 }
 
 export function getArticleText(html) {
-  const match = html.match(/<main\\b[^>]*>([\\s\\S]*?)<\\/main>/i);
+  const match = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i);
   if (!match) throw new Error("Missing visible <main> article content");
   // Ignore Next/Vinext hydration, serialized state and icons. Compare only
   // rendered visitor copy, never HTML attributes, nonce IDs or timestamps.
   const clean = match[1]
-    .replace(/<(?:script|style|template|svg)\\b[^>]*>[\\s\\S]*?<\\/(?:script|style|template|svg)>/gi, " ")
+    .replace(/<(?:script|style|template|svg)\b[^>]*>[\s\S]*?<\/(?:script|style|template|svg)>/gi, " ")
     .replace(/<[^>]*>/g, " ")
     .replace(/&(#x[0-9a-f]+|#[0-9]+|amp|lt|gt|quot|apos|nbsp|ndash|mdash|rsquo|lsquo);/gi, (_, entity) => {
       const named = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", ndash: "–", mdash: "—", rsquo: "’", lsquo: "‘" };
@@ -95,7 +95,7 @@ export function getArticleText(html) {
       const value = Number.parseInt(entity.slice(hex ? 2 : 1), hex ? 16 : 10);
       return value > 0 && value <= 0x10ffff ? String.fromCodePoint(value) : " ";
     })
-    .replace(/\\s+/g, " ")
+    .replace(/\s+/g, " ")
     .trim();
   if (clean.length < 100) throw new Error("Missing substantial visitor article text");
   return clean;
