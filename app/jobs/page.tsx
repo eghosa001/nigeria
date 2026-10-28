@@ -126,7 +126,6 @@ export default function JobsPage() {
                   <div className="job-card-body">
                     <p className="job-organisation">{item.organization}</p>
                     <h3><Link href={"/jobs/" + item.slug}>{item.title}</Link></h3>
-                    <p>{item.summary}</p>
                     {item.deadline ? <p className="job-deadline"><strong>Deadline:</strong> {new Date(item.deadline + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}</p> : null}
                   </div>
                   <div className="job-card-footer">
