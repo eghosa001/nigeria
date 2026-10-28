@@ -9,6 +9,23 @@ export const CRAWL_CANARIES = [
   "/jobs/nigerian-army-92rri-2026",
 ];
 
+// The 27 Oct Design Week regression (#726) served obsolete booking advice
+// at the normal URL while a fresh query showed an ended-event archive. Its
+// title, H1 and canonical could still match, so metadata-only checks miss it.
+export const CONTENT_FRESHNESS_CANARIES = [
+  {
+    path: "/explore/design-week-lagos-2026",
+    required: [
+      "18–25 October 2026 dates have passed",
+      "Do not pay through an old event-ticket link",
+    ],
+    forbidden: [
+      "Which hall date should you book?",
+      "Register with the official event partner",
+    ],
+  },
+];
+
 const USER_AGENTS = {
   browser: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131.0.0.0 Safari/537.36",
   googlebotLike: "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
@@ -63,6 +80,43 @@ export function assertSamePageIdentity(a, b, label) {
   }
 }
 
+export function getArticleText(html) {
+  const match = html.match(/<main\\b[^>]*>([\\s\\S]*?)<\\/main>/i);
+  if (!match) throw new Error("Missing visible <main> article content");
+  // Ignore Next/Vinext hydration, serialized state and icons. Compare only
+  // rendered visitor copy, never HTML attributes, nonce IDs or timestamps.
+  const clean = match[1]
+    .replace(/<(?:script|style|template|svg)\\b[^>]*>[\\s\\S]*?<\\/(?:script|style|template|svg)>/gi, " ")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&(#x[0-9a-f]+|#[0-9]+|amp|lt|gt|quot|apos|nbsp|ndash|mdash|rsquo|lsquo);/gi, (_, entity) => {
+      const named = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", ndash: "–", mdash: "—", rsquo: "’", lsquo: "‘" };
+      if (!entity.startsWith("#")) return named[entity.toLowerCase()] ?? " ";
+      const hex = entity[1].toLowerCase() === "x";
+      const value = Number.parseInt(entity.slice(hex ? 2 : 1), hex ? 16 : 10);
+      return value > 0 && value <= 0x10ffff ? String.fromCodePoint(value) : " ";
+    })
+    .replace(/\\s+/g, " ")
+    .trim();
+  if (clean.length < 100) throw new Error("Missing substantial visitor article text");
+  return clean;
+}
+
+export function assertSameArticleContent(canonicalHtml, freshHtml, label) {
+  if (getArticleText(canonicalHtml) !== getArticleText(freshHtml)) {
+    throw new Error(label + ": stale article body differs between canonical and fresh HTML");
+  }
+}
+
+export function assertFreshnessSignals(html, label, { required, forbidden }) {
+  const visible = getArticleText(html);
+  for (const phrase of required) {
+    if (!visible.includes(phrase)) throw new Error(label + ": missing verified current copy: " + phrase);
+  }
+  for (const phrase of forbidden) {
+    if (visible.includes(phrase)) throw new Error(label + ": obsolete public copy still served: " + phrase);
+  }
+}
+
 async function fetchWithRetry(url, userAgent) {
   let lastError;
   for (let attempt = 1; attempt <= 3; attempt++) {
@@ -92,6 +146,7 @@ export async function auditLive(base = process.env.LIVE_BASE_URL || "https://myn
   for (const path of CRAWL_CANARIES) {
     const canonical = origin + path;
     const results = {};
+    let responseForBot;
     for (const [agent, value] of Object.entries(USER_AGENTS)) {
       const response = await fetchWithRetry(canonical, value);
       if (response.finalUrl !== canonical) {
@@ -99,6 +154,7 @@ export async function auditLive(base = process.env.LIVE_BASE_URL || "https://myn
       }
       try {
         results[agent] = validateIndexableHtml({ ...response, canonical, requireHeadMetadata: true });
+        if (agent === "googlebotLike") responseForBot = response;
       } catch (error) {
         throw new Error(path + " " + agent + ": " + error.message, { cause: error });
       }
@@ -115,9 +171,24 @@ export async function auditLive(base = process.env.LIVE_BASE_URL || "https://myn
     }
     const freshIdentity = validateIndexableHtml({ ...fresh, canonical, requireHeadMetadata: true });
     assertSamePageIdentity(results.googlebotLike, freshIdentity, path + " cached vs fresh");
-    console.log(path, "ordinary and fresh Googlebot metadata match");
+    assertSameArticleContent(responseForBot.html, fresh.html, path + " canonical vs fresh");
+    console.log(path, "ordinary and fresh Googlebot metadata and article copy match");
   }
-  console.log("Four-pillar canonical cache and crawler parity passed. This is not a Google indexing or ranking verdict.");
+  for (const marker of CONTENT_FRESHNESS_CANARIES) {
+    const canonical = origin + marker.path;
+    const ordinary = await fetchWithRetry(canonical, USER_AGENTS.googlebotLike);
+    if (ordinary.finalUrl !== canonical) throw new Error(marker.path + ": unexpected canonical redirect");
+    validateIndexableHtml({ ...ordinary, canonical, requireHeadMetadata: true });
+    assertFreshnessSignals(ordinary.html, marker.path + " canonical", marker);
+    const freshUrl = canonical + "?__mng_seo_crawl_probe=" + Date.now();
+    const fresh = await fetchWithRetry(freshUrl, USER_AGENTS.googlebotLike);
+    if (fresh.finalUrl !== freshUrl) throw new Error(marker.path + ": fresh probe redirect");
+    validateIndexableHtml({ ...fresh, canonical, requireHeadMetadata: true });
+    assertFreshnessSignals(fresh.html, marker.path + " fresh", marker);
+    assertSameArticleContent(ordinary.html, fresh.html, marker.path);
+    console.log(marker.path, "ended-event canonical is accurate and article content matches fresh response");
+  }
+  console.log("Four-pillar crawler and content freshness passed. This is not a Google indexing or ranking verdict.");
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
