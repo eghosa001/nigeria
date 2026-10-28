@@ -12,7 +12,7 @@ export const metadata: Metadata = withStaticSocialMetadata({
 });
 
 export default function InternshipJobsPage() {
-  const items = jobOpportunities.filter(isCurrentInternshipOpportunity);
+  const items = jobOpportunities.filter((item) => isCurrentInternshipOpportunity(item));
   // The following are permanent issuer-sourced programme guides, NOT
   // assertions of an open internship vacancy or an accepting application form.
   const pathwaySlugs = ["shell-nigeria-siwes", "airtel-nigeria-careers", "kpmg-nigeria-careers"];
