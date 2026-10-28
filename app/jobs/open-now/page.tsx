@@ -12,7 +12,7 @@ import { getSiteUrl } from "@/lib/site";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = withStaticSocialMetadata({
-  title: "Jobs Open Now in Nigeria: Verified Vacancies & Recruitment",
+  title: { absolute: "Open Jobs in Nigeria | MyNigeriaGuide" },
   description: "Check current Nigerian job vacancies and recruitment exercises separately from open training and entrepreneurship programmes.",
   alternates: { canonical: "/jobs/open-now" },
 });
