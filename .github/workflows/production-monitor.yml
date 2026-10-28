@@ -2,6 +2,14 @@ name: Production health monitor
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "next.config.ts"
+      - "package.json"
+      - "scripts/patch-vinext-head-metadata.mjs"
+      - "scripts/check-googlebot-crawl-parity.mjs"
+      - ".github/workflows/production-monitor.yml"
   schedule:
     - cron: "17 */6 * * *"
 
@@ -55,7 +63,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          node --test tests/googlebot-crawl-parity.test.mjs
+          node --test tests/googlebot-crawl-parity.test.mjs tests/vinext-head-metadata.test.mjs
           node scripts/check-googlebot-crawl-parity.mjs
 
       - name: Detect intermittent Worker resource failures
