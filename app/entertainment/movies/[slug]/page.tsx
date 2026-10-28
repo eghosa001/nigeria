@@ -104,8 +104,8 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     description: "Pieces That Fit cast, story and the official Omoni Oboli TV full-movie link, with Micheal Dappa, Ekama Etim-Inyang, Ehis Perfect and Floyd Igbo.",
   },
   "oversabi-aunty": {
-    title: "Oversabi Aunty (2025) Cast, Characters & Where to Watch",
-    description: "Oversabi Aunty cast and verified roles: Toyin Abraham as Toun, Enioluwa Adeoluwa as Chuka, Efe Irele as Seyi. Check official Netflix and Kava listings.",
+    title: "Oversabi Aunty Cast (2025): Toyin Abraham & Where to Watch",
+    description: "Oversabi Aunty cast and roles: Toyin Abraham as Toun, Mike Ezuruonye as Chidi, Enioluwa Adeoluwa as Chuka and Efe Irele as Seyi. See Kava viewing options.",
   },
   // These original movie profiles are the canonical destination for the
   // corresponding noindex YouTube video URLs previously affected by 5xx.
