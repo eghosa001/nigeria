@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { CRAWL_CANARIES, validateIndexableHtml } from "../scripts/check-googlebot-crawl-parity.mjs";
+import { CRAWL_CANARIES, validateIndexableHtml, assertSamePageIdentity } from "../scripts/check-googlebot-crawl-parity.mjs";
 
 const canonical = "https://mynigeriaguide.com/services/ican-professional-exam-registration";
 const good = '<!doctype html><html><head><title>ICAN exam registration</title><link rel="canonical" href="' + canonical + '"><meta name="robots" content="index,follow"></head><body><h1>ICAN registration</h1></body></html>';
@@ -30,8 +30,21 @@ test("rejects Cloudflare resource failure masquerading as a 200 response", () =>
   assert.throws(() => validateIndexableHtml(input({ html: good + "Worker exceeded resource limits" })), /Worker resource failure/);
 });
 
-test("browser streaming may place metadata after head; crawler metadata must be in head", () => {
+test("rejects streamed body metadata for canonical Googlebot HTML", () => {
   const streamed = '<html><head></head><body><h1>ICAN registration</h1><title>ICAN exam registration</title><link rel="canonical" href="' + canonical + '"></body></html>';
-  assert.equal(validateIndexableHtml(input({ html: streamed })).canonical, canonical);
   assert.throws(() => validateIndexableHtml(input({ html: streamed, requireHeadMetadata: true })), /canonical link/);
+  assert.throws(() => validateIndexableHtml(input({ html: streamed.replace("<head></head>", ""), requireHeadMetadata: true })), /Missing HTML head/);
+});
+
+test("cache freshness guard catches stale canonical title, canonical and H1", () => {
+  const current = validateIndexableHtml(input({ requireHeadMetadata: true }));
+  assert.equal(current.heading, "ICAN registration");
+  assert.doesNotThrow(() => assertSamePageIdentity(current, { ...current }, "same page"));
+  for (const changed of [
+    { ...current, title: "Old page title" },
+    { ...current, canonical: "https://mynigeriaguide.com/services/other" },
+    { ...current, heading: "Stale application steps" },
+  ]) {
+    assert.throws(() => assertSamePageIdentity(current, changed, "cached vs fresh"), /mismatched title, canonical or H1/);
+  }
 });

@@ -26,7 +26,8 @@ export function validateIndexableHtml({ status, headers, html, canonical, requir
   if (/Worker exceeded resource limits|Error 1102/i.test(html)) {
     throw new Error("Cloudflare Worker resource failure in HTML");
   }
-  const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? html;
+  const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1];
+  if (requireHeadMetadata && head === undefined) throw new Error("Missing HTML head");
   // Next.js streams metadata outside <head> for ordinary browsers, but
   // sends it in <head> to recognised HTML-limited search crawlers.
   const metadata = requireHeadMetadata ? head : html;
@@ -47,8 +48,19 @@ export function validateIndexableHtml({ status, headers, html, canonical, requir
   }
   const title = metadata.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1]?.trim();
   if (!title) throw new Error("Missing HTML title");
-  if (!/<h1\b/i.test(html)) throw new Error("Missing visible H1");
-  return { title, canonical: declaredCanonical };
+  const h1 = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1];
+  if (!h1) throw new Error("Missing visible H1");
+  return {
+    title,
+    canonical: declaredCanonical,
+    heading: h1.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim(),
+  };
+}
+
+export function assertSamePageIdentity(a, b, label) {
+  if (a.title !== b.title || a.canonical !== b.canonical || a.heading !== b.heading) {
+    throw new Error(label + ": mismatched title, canonical or H1 in ordinary vs fresh HTML");
+  }
 }
 
 async function fetchWithRetry(url, userAgent) {
@@ -56,7 +68,8 @@ async function fetchWithRetry(url, userAgent) {
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
       const response = await fetch(url, {
-        headers: { "user-agent": userAgent, "cache-control": "no-cache" },
+        // Test the actual ordinary response; no-cache hides stale CDN entries.
+        headers: { "user-agent": userAgent },
         redirect: "follow",
         signal: AbortSignal.timeout(20000),
       });
@@ -85,17 +98,26 @@ export async function auditLive(base = process.env.LIVE_BASE_URL || "https://myn
         throw new Error(path + " " + agent + ": unexpected redirect to " + response.finalUrl);
       }
       try {
-        results[agent] = validateIndexableHtml({ ...response, canonical, requireHeadMetadata: agent === "googlebotLike" });
+        results[agent] = validateIndexableHtml({ ...response, canonical, requireHeadMetadata: true });
       } catch (error) {
         throw new Error(path + " " + agent + ": " + error.message, { cause: error });
       }
       console.log(path, agent, "HTTP 200, indexable, canonical verified");
     }
-    if (results.browser.title !== results.googlebotLike.title) {
-      throw new Error(path + ": title differs between browser and Googlebot-like user agents");
+    assertSamePageIdentity(results.browser, results.googlebotLike, path + " browser vs Googlebot");
+
+    // Compare the unmodified, possibly cached canonical URL with a fresh
+    // query on the same route. Do not submit probe URLs to search engines.
+    const freshUrl = canonical + "?__mng_seo_crawl_probe=" + Date.now();
+    const fresh = await fetchWithRetry(freshUrl, USER_AGENTS.googlebotLike);
+    if (fresh.finalUrl !== freshUrl) {
+      throw new Error(path + ": unexpected fresh probe redirect to " + fresh.finalUrl);
     }
+    const freshIdentity = validateIndexableHtml({ ...fresh, canonical, requireHeadMetadata: true });
+    assertSamePageIdentity(results.googlebotLike, freshIdentity, path + " cached vs fresh");
+    console.log(path, "ordinary and fresh Googlebot metadata match");
   }
-  console.log("Four-pillar crawler parity passed. This is not a Google indexing or ranking verdict.");
+  console.log("Four-pillar canonical cache and crawler parity passed. This is not a Google indexing or ranking verdict.");
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
