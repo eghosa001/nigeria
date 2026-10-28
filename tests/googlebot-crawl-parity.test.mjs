@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { CRAWL_CANARIES, validateIndexableHtml, assertSamePageIdentity } from "../scripts/check-googlebot-crawl-parity.mjs";
+import { CRAWL_CANARIES, CONTENT_FRESHNESS_CANARIES, validateIndexableHtml, assertSamePageIdentity, getArticleText, assertSameArticleContent, assertFreshnessSignals } from "../scripts/check-googlebot-crawl-parity.mjs";
 
 const canonical = "https://mynigeriaguide.com/services/ican-professional-exam-registration";
 const good = '<!doctype html><html><head><title>ICAN exam registration</title><link rel="canonical" href="' + canonical + '"><meta name="robots" content="index,follow"></head><body><h1>ICAN registration</h1></body></html>';
@@ -47,4 +47,43 @@ test("cache freshness guard catches stale canonical title, canonical and H1", ()
   ]) {
     assert.throws(() => assertSamePageIdentity(current, changed, "cached vs fresh"), /mismatched title, canonical or H1/);
   }
+});
+
+test("ordinary and fresh pages with unchanged titles/H1 still fail on stale visitor content", () => {
+  const prefix = '<html><head><title>Design Week</title></head><body><main id="main-content"><h1>Design Week Lagos</h1>';
+  const current = prefix + '<p>Design Week Lagos 2026 dates have passed. Visitors should not buy tickets for last year’s event.</p><p>Original organizer announcement and event schedule are retained as historical evidence.</p></main></body></html>';
+  const stale = prefix + '<p>Design Week Lagos 2026 dates have passed. Visitors should register for tickets for last year’s event.</p><p>Original organizer announcement and event schedule are retained as historical evidence.</p></main></body></html>';
+  assert.equal(getArticleText(current).includes("Design Week Lagos"), true);
+  assert.doesNotThrow(() => assertSameArticleContent(current, current, "consistent"));
+  assert.throws(() => assertSameArticleContent(stale, current, "canonical"), /stale article body differs/);
+  assert.throws(() => getArticleText("<html><body>missing main</body></html>"), /Missing visible/);
+});
+
+test("content comparison ignores Next hydration scripts and equivalent HTML entities", () => {
+  const content = '<main><h1>Event info</h1><p>' + "The 18–25 October event has ended and no new tickets are on sale at this point." + '</p><p>Follow the original organizer for a new future edition when one has been confirmed.</p>';
+  const a = content + '<script>window.__next={"old":"false"}</script></main>';
+  const b = content.replace("18–25", "18&#8211;25") + '<script>window.__next={"counter":234}</script></main>';
+  assert.equal(getArticleText(a), getArticleText(b));
+  assert.doesNotThrow(() => assertSameArticleContent(a, b, "hydration independent"));
+});
+
+test("Design Week cache guard rejects old ticket prompts on the normal canonical URL", () => {
+  const marker = CONTENT_FRESHNESS_CANARIES.find(x => x.path === "/explore/design-week-lagos-2026");
+  assert.ok(marker);
+  const good = '<main><h1>Design Week Lagos</h1><p>' + marker.required.join(". ") + '</p><p>This is a historic record of previously announced events. Check with the original organizer before planning a future visit.</p></main>';
+  assert.doesNotThrow(() => assertFreshnessSignals(good, "current", marker));
+  const stale = good.replace(marker.required[0], "Which hall date should you book?");
+  assert.throws(() => assertFreshnessSignals(stale, "stale", marker), /missing verified current copy/);
+  assert.throws(() => assertFreshnessSignals(good.replace("historic record", marker.forbidden[1] + " historic record"), "old", marker), /obsolete public copy/);
+});
+
+test("completed React streamed server output is compared, not just the loading skeleton", () => {
+  const skeleton = '<html><body><main id="main-content"><!--$--><!--$?--><template id="B:0"></template><section><p>Opening your guide…</p></section><!--/$--><!--/$--></main><footer>Visit the main guide</footer>';
+  const body = '<h1>Design Week Lagos</h1><p>Design Week Lagos 2026 has ended. Its historical dates were 18–25 October. Use the original organizer for future editions.</p><p>No old payment link or expired registration is an active offer for 2026.</p>';
+  const streamed = skeleton + '<div hidden id="S:0">' + body + '</div><script>$RC("B:0","S:0")</script></body></html>';
+  const stale = streamed.replace("has ended", "is open");
+  assert.match(getArticleText(streamed), /Design Week Lagos 2026 has ended/);
+  assert.ok(!getArticleText(streamed).includes("Opening your guide"));
+  assert.throws(() => assertSameArticleContent(stale, streamed, "stale stream"), /stale article body differs/);
+  assert.throws(() => getArticleText(skeleton + '</body></html>'), /Unresolved streamed article boundary/);
 });
