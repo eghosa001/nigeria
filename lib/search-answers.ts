@@ -19,6 +19,18 @@ function listPreview(items: string[], limit = 3) {
 // Follow-ups match evidenced Search Console intents and official source details.
 // They complement, rather than duplicate, the five standard service questions.
 const specificFollowUps: Record<string, SearchAnswer[]> = {
+  "jamb-profile-code": [
+    { question: "Does a JAMB profile code mean I have registered for the exam?", answer: "No. The profile code identifies the candidate for later transactions. It is not the paid UTME/Direct Entry e-PIN or proof of registration at a CBT centre. Keep the original SIM and verify personal details before buying an e-PIN." },
+    { question: "What should I do if the JAMB profile-code SMS returns the wrong name?", answer: "Do not pay for registration under the wrong identity. Recheck the NIN and candidate's own SIM, resolve incorrect NIN biodata through NIMC and use JAMB's official help channel if the SMS still fails." },
+  ],
+  "waec-collect-certificate": [
+    { question: "Can a school candidate collect a WAEC certificate from any WAEC office?", answer: "WAEC's published route is through the school for school WASSCE candidates. Contact the school to confirm it has received the original certificate before travelling; a result visible online does not prove the paper certificate is ready." },
+    { question: "Where should a WAEC private candidate collect the original certificate?", answer: "Start with the WAEC Zonal or Branch office responsible for the state where the examination was written. Confirm the exact collection location, certificate availability and required identification with WAEC before making a trip." },
+  ],
+  "nysc-correct-date-of-birth": [
+    { question: "Can I correct my NYSC date of birth after service has started?", answer: "NYSC says ordinary date-of-birth corrections are not entertained after deployment and commencement of the service year. It also does not change the date of birth on an issued Certificate of National Service." },
+    { question: "What if NYSC has already issued the wrong exemption certificate?", answer: "NYSC describes a separate correction process through the institution's Student Affairs Officer, supported by the original exemption certificate and examination evidence. Do not create a second NYSC account to bypass that process." },
+  ],
   "aedc-map-refund": [
     { question: "How do I check my AEDC MAP refund status?", answer: "Visit the official AEDC refund checker at maprefund.abujaelectricity.com and submit your prepaid meter number. AEDC's checker can show a refund record or token if eligible; a lookup is not a guarantee of eligibility." },
     { question: "Does AEDC pay MAP refunds into a bank account?", answer: "AEDC describes approved MAP refunds as electricity units issued using a 20-digit load token, not ordinary cash transfers. Load a token on the corresponding prepaid meter. If it is missing, email map.refund@abujaelectricity.com with proof of your MAP purchase." },
