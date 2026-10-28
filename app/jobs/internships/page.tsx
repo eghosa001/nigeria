@@ -7,7 +7,7 @@ import { isCurrentInternshipOpportunity } from "@/lib/job-internships";
 
 export const metadata: Metadata = withStaticSocialMetadata({
   title: { absolute: "Internships & SIWES Nigeria | MyNigeriaGuide" },
-  description: "Find open Nigerian internship and SIWES intakes, eligibility rules and official employer routes. General careers pages are not confirmed vacancies.",
+  description: "Check Nigerian internship and SIWES intake status, requirements and official employer routes. A careers page alone does not confirm an open vacancy.",
   alternates: { canonical: "/jobs/internships" }
 });
 
