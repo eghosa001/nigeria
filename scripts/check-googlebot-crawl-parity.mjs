@@ -15,24 +15,24 @@ const USER_AGENTS = {
 };
 
 function attr(tag, name) {
-  const match = tag.match(new RegExp("\\b" + name + "\\s*=\\s*([\"'])(.*?)\\1", "i"));
+  const match = tag.match(new RegExp("\b" + name + "\s*=\s*([\"'])(.*?)\\1", "i"));
   return match?.[2] ?? null;
 }
 
 export function validateIndexableHtml({ status, headers, html, canonical }) {
   if (status !== 200) throw new Error("Expected HTTP 200; received " + status);
   const xRobots = headers.get("x-robots-tag") ?? "";
-  if (/\\bnoindex\\b/i.test(xRobots)) throw new Error("X-Robots-Tag contains noindex");
+  if (/\bnoindex\b/i.test(xRobots)) throw new Error("X-Robots-Tag contains noindex");
   if (/Worker exceeded resource limits|Error 1102/i.test(html)) {
     throw new Error("Cloudflare Worker resource failure in HTML");
   }
-  const head = html.match(/<head\\b[^>]*>([\\s\\S]*?)<\\/head>/i)?.[1] ?? html;
-  const metas = [...head.matchAll(/<meta\\b[^>]*>/gi)].map((m) => m[0]);
+  const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? html;
+  const metas = [...head.matchAll(/<meta\b[^>]*>/gi)].map((m) => m[0]);
   if (metas.some((tag) => /^(robots|googlebot)$/i.test(attr(tag, "name") ?? "") &&
-      /\\bnoindex\\b/i.test(attr(tag, "content") ?? ""))) {
+      /\bnoindex\b/i.test(attr(tag, "content") ?? ""))) {
     throw new Error("Robots meta tag contains noindex");
   }
-  const canonicalTags = [...head.matchAll(/<link\\b[^>]*>/gi)]
+  const canonicalTags = [...head.matchAll(/<link\b[^>]*>/gi)]
     .map((m) => m[0])
     .filter((tag) => (attr(tag, "rel") ?? "").toLowerCase() === "canonical");
   if (canonicalTags.length !== 1) {
@@ -42,9 +42,9 @@ export function validateIndexableHtml({ status, headers, html, canonical }) {
   if (declaredCanonical !== canonical) {
     throw new Error("Wrong canonical: " + declaredCanonical + " (expected " + canonical + ")");
   }
-  const title = head.match(/<title\\b[^>]*>([\\s\\S]*?)<\\/title>/i)?.[1]?.trim();
+  const title = head.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1]?.trim();
   if (!title) throw new Error("Missing HTML title");
-  if (!/<h1\\b/i.test(html)) throw new Error("Missing visible H1");
+  if (!/<h1\b/i.test(html)) throw new Error("Missing visible H1");
   return { title, canonical: declaredCanonical };
 }
 
@@ -72,7 +72,7 @@ async function fetchWithRetry(url, userAgent) {
 }
 
 export async function auditLive(base = process.env.LIVE_BASE_URL || "https://mynigeriaguide.com") {
-  const origin = base.replace(/\\/$/, "");
+  const origin = base.replace(/\/$/, "");
   for (const path of CRAWL_CANARIES) {
     const canonical = origin + path;
     const results = {};
