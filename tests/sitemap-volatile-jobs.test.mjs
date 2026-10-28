@@ -19,3 +19,9 @@ test("rolling job collections cannot become noindex while still advertised in st
   assert.match(sitemap, /base \+ "\/jobs\/open-now"/);
   assert.match(sitemap, /base \+ "\/jobs\/deadlines"/);
 });
+
+test("open Jobs canonical title does not exceed search display length", () => {
+  const openNow = readFileSync("app/jobs/open-now/page.tsx", "utf8");
+  assert.match(openNow, /title: \{ absolute: "Open Jobs in Nigeria \| MyNigeriaGuide" \}/);
+  assert.match(openNow, /canonical: "\/jobs\/open-now"/);
+});
