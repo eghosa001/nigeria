@@ -40,7 +40,18 @@ test("high-impression movie snippet retains verifiable cast and watch intent", (
   assert.ok(snippet[2].length <= 155);
   assert.match(snippet[1], /Oversabi Aunty.*Where to Watch/);
   assert.match(snippet[2], /Toyin Abraham/);
-  assert.match(snippet[2], /official trailer and where-to-watch status/i);
+  assert.match(snippet[2], /Mike Ezuruonye as Chidi/);
+  assert.match(snippet[2], /Kava viewing options/i);
+});
+
+test("October 28 canonical search-demand routes keep targeted titles and homepage discovery", () => {
+  const titles = templates("serviceSeoTitleTemplates");
+  const descriptions = templates("serviceSeoDescriptionTemplates");
+  const home = readFileSync(new URL("../app/page.tsx", import.meta.url), "utf8");
+  assert.match(titles["passport-application-tracking"], /^Track Nigerian Passport Application: NIS Portal/);
+  assert.match(descriptions["passport-application-tracking"], /Application Number and Reference Number/);
+  assert.match(home, /label: "Passport application tracking", href: "\/services\/passport-application-tracking"/);
+  assert.match(home, /href="\/jobs\/internships">Internships &amp; SIWES<\/Link>/);
 });
 
 test("October zero-click service snippets reflect official routes and fit search results", () => {
