@@ -27,7 +27,10 @@ export function validateIndexableHtml({ status, headers, html, canonical, requir
     throw new Error("Cloudflare Worker resource failure in HTML");
   }
   const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? html;
-  // Next.js streams metadata outside <head> for ordinary browsers, but\n  // sends it in <head> to recognised HTML-limited search crawlers.\n  const metadata = requireHeadMetadata ? head : html;\n  const metas = [...metadata.matchAll(/<meta\b[^>]*>/gi)].map((m) => m[0]);
+  // Next.js streams metadata outside <head> for ordinary browsers, but
+  // sends it in <head> to recognised HTML-limited search crawlers.
+  const metadata = requireHeadMetadata ? head : html;
+  const metas = [...metadata.matchAll(/<meta\b[^>]*>/gi)].map((m) => m[0]);
   if (metas.some((tag) => /^(robots|googlebot)$/i.test(attr(tag, "name") ?? "") &&
       /\bnoindex\b/i.test(attr(tag, "content") ?? ""))) {
     throw new Error("Robots meta tag contains noindex");
