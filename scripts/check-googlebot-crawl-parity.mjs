@@ -19,7 +19,7 @@ function attr(tag, name) {
   return match?.[2] ?? null;
 }
 
-export function validateIndexableHtml({ status, headers, html, canonical }) {
+export function validateIndexableHtml({ status, headers, html, canonical, requireHeadMetadata = false }) {
   if (status !== 200) throw new Error("Expected HTTP 200; received " + status);
   const xRobots = headers.get("x-robots-tag") ?? "";
   if (/\bnoindex\b/i.test(xRobots)) throw new Error("X-Robots-Tag contains noindex");
@@ -27,12 +27,12 @@ export function validateIndexableHtml({ status, headers, html, canonical }) {
     throw new Error("Cloudflare Worker resource failure in HTML");
   }
   const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? html;
-  const metas = [...head.matchAll(/<meta\b[^>]*>/gi)].map((m) => m[0]);
+  // Next.js streams metadata outside <head> for ordinary browsers, but\n  // sends it in <head> to recognised HTML-limited search crawlers.\n  const metadata = requireHeadMetadata ? head : html;\n  const metas = [...metadata.matchAll(/<meta\b[^>]*>/gi)].map((m) => m[0]);
   if (metas.some((tag) => /^(robots|googlebot)$/i.test(attr(tag, "name") ?? "") &&
       /\bnoindex\b/i.test(attr(tag, "content") ?? ""))) {
     throw new Error("Robots meta tag contains noindex");
   }
-  const canonicalTags = [...head.matchAll(/<link\b[^>]*>/gi)]
+  const canonicalTags = [...metadata.matchAll(/<link\b[^>]*>/gi)]
     .map((m) => m[0])
     .filter((tag) => (attr(tag, "rel") ?? "").toLowerCase() === "canonical");
   if (canonicalTags.length !== 1) {
@@ -42,7 +42,7 @@ export function validateIndexableHtml({ status, headers, html, canonical }) {
   if (declaredCanonical !== canonical) {
     throw new Error("Wrong canonical: " + declaredCanonical + " (expected " + canonical + ")");
   }
-  const title = head.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1]?.trim();
+  const title = metadata.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1]?.trim();
   if (!title) throw new Error("Missing HTML title");
   if (!/<h1\b/i.test(html)) throw new Error("Missing visible H1");
   return { title, canonical: declaredCanonical };
@@ -82,7 +82,7 @@ export async function auditLive(base = process.env.LIVE_BASE_URL || "https://myn
         throw new Error(path + " " + agent + ": unexpected redirect to " + response.finalUrl);
       }
       try {
-        results[agent] = validateIndexableHtml({ ...response, canonical });
+        results[agent] = validateIndexableHtml({ ...response, canonical, requireHeadMetadata: agent === "googlebotLike" });
       } catch (error) {
         throw new Error(path + " " + agent + ": " + error.message, { cause: error });
       }
