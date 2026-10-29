@@ -797,7 +797,17 @@ test("editorial light and dark themes fit representative routes on phones and de
     const [r, g, b] = matches.map(Number);
     return r > 210 && g > 210 && b > 210;
   }
+  // Trending is deliberately absent when no story has independently verified momentum.
+  // Do not wait 30 seconds for a section the editorial policy correctly omits.
+  const hasVerifiedTrends = (await page.locator(".home-trending-strip").count()) > 0;
+  const trendLinkCount = await page.locator(".home-trending-links a").count();
+  if (hasVerifiedTrends) {
+    expect(trendLinkCount, "A rendered trending strip must contain actual stories").toBeGreaterThan(0);
+  } else {
+    expect(trendLinkCount, "Do not render orphan trending links without verified stories").toBe(0);
+  }
   for (const selector of surfaces) {
+    if (!hasVerifiedTrends && selector.startsWith(".home-trending-")) continue;
     const result = await page.locator(selector).first().evaluate((node) => ({
       display: getComputedStyle(node).display,
       background: getComputedStyle(node).backgroundColor,
