@@ -107,7 +107,7 @@ test("jobs retain unique safety and verification notes but never repeat the same
 
 test("series header prints the source-review note once, without duplicating the official watch link", () => {
   const page = read("app/entertainment/series/[slug]/page.tsx");
-  assert.equal((page.match(/Availability and sources checked \{checked\}\./g) ?? []).length, 1);
+  assert.equal((page.match(/Availability and sources checked/g) ?? []).length, 1);
   assert.ok(page.includes("Availability checked"), "Keep the labelled date in the facts grid");
   assert.ok(page.includes("item.watchLinks.map"), "Keep the official viewing options");
 });
