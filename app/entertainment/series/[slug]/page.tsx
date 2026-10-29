@@ -113,7 +113,6 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
           <div className="movie-detail-actions">
             {item.watchLinks.map((link)=><a className="button" href={link.href} target="_blank" rel="noreferrer" key={link.href}>{link.label} ↗</a>)}
           </div>
-          <small className="movie-freshness-note">Availability and sources checked {checked}.</small>
         </div>
       </section>
 
