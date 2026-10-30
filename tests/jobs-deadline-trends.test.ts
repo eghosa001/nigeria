@@ -125,19 +125,19 @@ test("Army 92RRI expired deadline is distinguished from the undated portal banne
 });
 
 
-test("KPMG Nigeria internship guide exposes conflicting issuer rules and a separate NYSC pathway without inventing an opening", () => {
+test("KPMG Nigeria internship eligibility and separate NYSC pathway rely on the current issuer portal", () => {
   const kpmg = jobOpportunities.find((item) => item.slug === "kpmg-nigeria-careers");
   assert.ok(kpmg, "retain one canonical KPMG careers guide");
   assert.equal(kpmg.status, "career-page", "do not imply a vacancy is open");
   assert.equal(kpmg.verifiedAt, "2026-10-03", "source-specific recheck does not refresh the entire guide");
-  const discrepancy = kpmg.sourceNotes.find((note) => note.includes("Conflicting KPMG-hosted internship rules"));
-  assert.ok(discrepancy);
-  assert.match(discrepancy, /two O'Level sittings.*12 weeks.*one sitting.*eight weeks/);
-  assert.match(discrepancy, /Confirm the requirements for your particular intake directly with KPMG/);
-  assert.match(discrepancy, /neither page establishes an open application window/);
+  const internship = kpmg.sourceNotes.find((note) => note.includes("KPMG's published internship eligibility"));
+  assert.ok(internship);
+  assert.match(internship, /second year but not final year/);
+  assert.match(internship, /two sittings.*2:1 degree.*12 weeks/);
+  assert.match(internship, /not evidence that applications are open/);
   const nysc = kpmg.sourceNotes.find((note) => note.includes("For an NYSC placement"));
   assert.match(nysc ?? "", /aptitude test is not required.*posted there by NYSC.*available vacancy/);
   assert.ok(kpmg.sources.some((source) => source.url === "https://apps.ng.kpmg.com/careers/team.html" && source.lastChecked === "2026-10-30"));
-  assert.ok(kpmg.sources.some((source) => source.url === "https://stg-publish.kpmg.com/ng/en/home/careers/kpmg-internship-program-.html" && source.lastChecked === "2026-10-30"));
+  assert.ok(!kpmg.sources.some((source) => source.url.includes("stg-publish.kpmg.com")), "do not cite an inaccessible staging URL");
   assert.equal(jobOpportunities.filter((item) => item.slug === kpmg.slug).length, 1);
 });
