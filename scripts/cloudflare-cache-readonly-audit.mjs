@@ -126,4 +126,47 @@ if (zone) {
   }
 }
 
+
+if (zone) {
+  const query = `query($zone: string!, $start: Time!, $end: Time!) {
+    viewer { zones(filter: { zoneTag: $zone }) {
+      crawler: httpRequestsAdaptiveGroups(
+        filter: { datetime_geq:$start, datetime_lt:$end, requestSource:"eyeball",
+          userAgent_like:"%Googlebot%" }
+        limit:35, orderBy:[count_DESC]) {
+        count dimensions { clientRequestPath edgeResponseStatus }
+      }
+      errors: httpRequestsAdaptiveGroups(
+        filter: { datetime_geq:$start, datetime_lt:$end, requestSource:"eyeball",
+          edgeResponseStatus_geq:500 }
+        limit:10, orderBy:[count_DESC]) {
+        count dimensions { edgeResponseStatus }
+      }
+    } }
+  }`;
+  for (const date of ["2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-28"]) {
+    const end = new Date(Date.parse(date + "T00:00:00Z") + 86400000).toISOString();
+    try {
+      const response = await fetch(base + "graphql", {
+        method:"POST", headers:{Authorization:"Bearer " + token, "Content-Type":"application/json"},
+        body:JSON.stringify({query,variables:{zone,start:date+"T00:00:00Z",end}}),
+        signal:AbortSignal.timeout(15000)
+      });
+      const value = await response.json();
+      if (!response.ok || value.errors?.length) {
+        console.log("Historical path/error check " + date + ": unavailable HTTP " + response.status + " " +
+          JSON.stringify((value.errors||[]).map(e=>String(e.message).slice(0,150))));
+        continue;
+      }
+      const z=value.data?.viewer?.zones?.[0]||{};
+      console.log("Historical crawler top paths " + date + ": " + JSON.stringify((z.crawler||[])
+        .map(x=>({path:x.dimensions.clientRequestPath,status:x.dimensions.edgeResponseStatus,count:x.count}))));
+      console.log("Historical overall site 5xx " + date + ": " + JSON.stringify((z.errors||[])
+        .map(x=>({status:x.dimensions.edgeResponseStatus,count:x.count}))));
+    } catch(error) {
+      console.log("Historical path/error check " + date + ": connection error "+error.name);
+    }
+  }
+}
+
 console.log("Cloudflare audit complete. GET requests plus POST read-only simulated Trace; no configuration writes.");
