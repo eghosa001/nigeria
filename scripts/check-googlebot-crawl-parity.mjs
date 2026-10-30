@@ -30,6 +30,7 @@ export const CONTENT_FRESHNESS_CANARIES = [
 const USER_AGENTS = {
   browser: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131.0.0.0 Safari/537.36",
   googlebotLike: "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+  emptyAgent: "", // Reproduce Vinext background regeneration with absent/empty UA.
 };
 
 function attr(tag, name) {
@@ -194,6 +195,7 @@ export async function auditLive(base = process.env.LIVE_BASE_URL || "https://myn
       console.log(path, agent, "HTTP 200, indexable, canonical verified");
     }
     assertSamePageIdentity(results.browser, results.googlebotLike, path + " browser vs Googlebot");
+    assertSamePageIdentity(results.browser, results.emptyAgent, path + " browser vs empty-Agent");
 
     // Compare the unmodified, possibly cached canonical URL with a fresh
     // query on the same route. Do not submit probe URLs to search engines.
@@ -206,6 +208,15 @@ export async function auditLive(base = process.env.LIVE_BASE_URL || "https://myn
     const freshIdentity = validateIndexableHtml({ ...fresh, canonical, requireHeadMetadata: true });
     assertSamePageIdentity(results.googlebotLike, freshIdentity, path + " cached vs fresh");
     assertSameArticleContent(responseForBot.html, fresh.html, path + " canonical vs fresh");
+    // A no/empty User-Agent was the upstream Vinext metadata caching regression.
+    // Request a unique query to exercise a separate Cloudflare edge cache key.
+    // This checks delivered metadata; it does not prove cross-deployment freshness.
+    const emptyAgentUrl = canonical + "?__mng_seo_empty_agent_probe=" + Date.now();
+    const emptyResponse = await fetchWithRetry(emptyAgentUrl, "");
+    reportCacheHeaders(path + " empty-Agent query", emptyResponse);
+    const emptyIdentity = validateIndexableHtml({ ...emptyResponse, canonical, requireHeadMetadata: true });
+    assertSamePageIdentity(results.googlebotLike, emptyIdentity, path + " Googlebot vs empty-Agent");
+    assertSameArticleContent(responseForBot.html, emptyResponse.html, path + " Googlebot vs empty-Agent");
     console.log(path, "ordinary and fresh Googlebot metadata and article copy match");
   }
   for (const marker of CONTENT_FRESHNESS_CANARIES) {
