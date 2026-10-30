@@ -129,7 +129,7 @@ test("KPMG Nigeria internship eligibility and separate NYSC pathway rely on the 
   const kpmg = jobOpportunities.find((item) => item.slug === "kpmg-nigeria-careers");
   assert.ok(kpmg, "retain one canonical KPMG careers guide");
   assert.equal(kpmg.status, "career-page", "do not imply a vacancy is open");
-  assert.equal(kpmg.verifiedAt, "2026-10-03", "source-specific recheck does not refresh the entire guide");
+  assert.equal(kpmg.verifiedAt, "2026-10-16", "retain the existing effective issuer overlay review date, not the new source check date");
   const internship = kpmg.sourceNotes.find((note) => note.includes("KPMG's published internship eligibility"));
   assert.ok(internship);
   assert.match(internship, /second year but not final year/);
