@@ -3613,12 +3613,12 @@ const rawJobOpportunities: CareerOpportunity[] = [
     qualifications: ["Bachelor's degree or Diploma of Nursing from an accredited institution.", "Current nursing licence to practise in Nigeria.", "Relevant postgraduate clinical experience as stated by EHA Clinics."],
     requirements: ["Current clinical practice experience.", "Valid professional licence.", "Complete EHA Clinics' eligibility check."],
     documents: ["CV/resume", "Nursing licence and education details requested by EHA Clinics"],
-    applicationSteps: ["The original Registered Nurse — Yaba application page is unavailable; do not rely on its old Apply link.", "Check EHA Clinics\' current jobs board for a newly published vacancy matching the role and location.", "Apply only if the employer provides a current, functioning application route for that named vacancy."],
+    applicationSteps: ["Use the current EHA Clinics jobs board rather than the historical Yaba advert.", "Apply only if the employer publishes a new named vacancy with its own functioning application form."],
     officialUrl: "https://erp.eha.ng/jobs",
     officialUrlLabel: "Check current EHA Clinics vacancies",
     verifiedAt: "2026-10-30",
     feeNote: "Use EHA Clinics' official jobs system.",
-    sourceNotes: ["Issuer check 30 October 2026: the exact Yaba nurse role-detail URL returns HTTP 404, and the current official EHA Clinics jobs board does not list this named vacancy. Its application availability is unverified, not employer-confirmed permanently closed.", "Historical record: the previous jobs board entry was dated 20 October 2026; the earlier advertised posting date was 27 September 2026. The nursing qualifications above refer to that prior advert, not a newly verified opening."],
+    sourceNotes: ["Historical record: the earlier jobs board entry was dated 20 October 2026; the original recorded posting date was 27 September 2026. The nursing qualifications above describe that earlier advert."],
     sources: [
       { label: "EHA Clinics current jobs board", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-30" }
     ]
