@@ -170,4 +170,36 @@ if (zone) {
 }
 
 
+
+if (zone) {
+  const query = `query($zone: string!, $start: Time!, $end: Time!) {
+    viewer { zones(filter:{zoneTag:$zone}) {
+      httpRequestsAdaptiveGroups(
+        filter:{datetime_geq:$start,datetime_lt:$end,requestSource:"eyeball",
+          edgeResponseStatus_geq:500}
+        limit:30,orderBy:[count_DESC]) {
+        count dimensions { edgeResponseStatus clientRequestPath }
+      }
+    } }
+  }`;
+  for (const date of ["2026-10-20","2026-10-21","2026-10-22","2026-10-28"]) {
+    const end=new Date(Date.parse(date+"T00:00:00Z")+86400000).toISOString();
+    try {
+      const response=await fetch(base+"graphql",{
+        method:"POST",headers:{Authorization:"Bearer "+token,"Content-Type":"application/json"},
+        body:JSON.stringify({query,variables:{zone,start:date+"T00:00:00Z",end}}),
+        signal:AbortSignal.timeout(12000)
+      });
+      const val=await response.json();
+      if(!response.ok||val.errors?.length) {
+        console.log("Historic 5xx affected paths "+date+": unavailable "+response.status);
+        continue;
+      }
+      const data=val.data?.viewer?.zones?.[0]?.httpRequestsAdaptiveGroups||[];
+      console.log("Historic 5xx affected paths "+date+": "+JSON.stringify(data.map(x=>({
+        status:x.dimensions.edgeResponseStatus,path:x.dimensions.clientRequestPath,count:x.count}))));
+    }catch(err){console.log("Historic 5xx affected paths "+date+": connection error "+err.name);}
+  }
+}
+
 console.log("Cloudflare audit complete. GET requests plus POST read-only simulated Trace; no configuration writes.");
