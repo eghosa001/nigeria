@@ -36,7 +36,7 @@
     "check:crawl-resilience": "node scripts/check-crawl-resilience.mjs",
     "postbuild": "node scripts/write-wrangler-deploy-config.mjs",
     "postbuild:vinext": "node scripts/write-wrangler-deploy-config.mjs",
-    "check:jobs": "tsx scripts/check-jobs-content.ts && tsx scripts/check-job-redirects.ts",
+    "check:jobs": "tsx scripts/check-jobs-content.ts && tsx scripts/check-job-redirects.ts && tsx --test tests/eha-nurse-broken-application-20261030.test.ts",
     "check:job-links": "node scripts/check-job-links.mjs",
     "check:entertainment-content": "tsx scripts/check-entertainment-content.ts && tsx scripts/check-premium-film-guides.ts",
     "check:freshness": "tsx scripts/check-freshness.ts",
