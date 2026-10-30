@@ -2,7 +2,7 @@
 // Run only on the owner-controlled diagnostic branch, never on outside forks.
 // Do not print credentials or unrestricted Cloudflare configuration payloads.
 const token = process.env.CLOUDFLARE_API_TOKEN;
-const account = process.env.CLOUDFLARE_ACCOUNT_ID;
+let account = process.env.CLOUDFLARE_ACCOUNT_ID;
 let zone = process.env.CLOUDFLARE_ZONE_ID;
 const base = "https://api.cloudflare.com/client/v4/";
 if (!token) {
@@ -44,7 +44,12 @@ function settings(rule) {
 }
 if (!zone) {
   const zones = await call("GET", "zones?name=mynigeriaguide.com", null, "Zone lookup");
-  zone = Array.isArray(zones) ? zones.find(x => x.name === "mynigeriaguide.com")?.id : undefined;
+  const selected = Array.isArray(zones) ? zones.find(x => x.name === "mynigeriaguide.com") : undefined;
+  zone = selected?.id;
+  if (!account && selected?.account?.id) {
+    account = selected.account.id;
+    console.log("Account identity resolved from the authorized zone lookup.");
+  }
 }
 if (zone) {
   const cache = await call("GET", "zones/" + zone + "/rulesets/phases/http_request_cache_settings/entrypoint", null, "Zone cache rule entrypoint");
