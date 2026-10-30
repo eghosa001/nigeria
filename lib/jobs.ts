@@ -1534,11 +1534,14 @@ const rawJobOpportunities: CareerOpportunity[] = [
     sourceNotes: [
       "KPMG Nigeria publishes detailed internship and graduate-trainee eligibility rules.",
       "Its careers portal also exposes current vacancies and experienced-hire pathways.",
-      "The FY27 Graduate Trainee application window closed on 6 March 2026, so that historic campaign is not presented here as currently open."
+      "The FY27 Graduate Trainee application window closed on 6 March 2026, so that historic campaign is not presented here as currently open.",
+      "Conflicting KPMG-hosted internship rules, checked 30 October 2026: the main Nigeria careers portal permits up to two O'Level sittings and asks pre-NYSC interns for at least 12 weeks; a separate KPMG-hosted internship page says one sitting and at least eight weeks. Confirm the requirements for your particular intake directly with KPMG before applying; neither page establishes an open application window.",
+      "For an NYSC placement, KPMG says its graduate-trainee aptitude test is not required, but the applicant must be posted there by NYSC, meet graduate-trainee criteria and be subject to an available vacancy."
     ],
     sources: [
       { label: "KPMG Nigeria Careers", url: "https://apps.ng.kpmg.com/careers/", lastChecked: "2026-10-03" },
-      { label: "KPMG Programmes & Eligibility", url: "https://apps.ng.kpmg.com/careers/team.html", lastChecked: "2026-10-03" },
+      { label: "KPMG Programmes & Eligibility (current portal)", url: "https://apps.ng.kpmg.com/careers/team.html", lastChecked: "2026-10-30" },
+      { label: "KPMG-hosted alternative internship requirements (conflicts with main portal)", url: "https://stg-publish.kpmg.com/ng/en/home/careers/kpmg-internship-program-.html", lastChecked: "2026-10-30" },
       { label: "KPMG Current Vacancies", url: "https://apps.ng.kpmg.com/careers/jobs.html", lastChecked: "2026-10-03" }
     ]
   },
