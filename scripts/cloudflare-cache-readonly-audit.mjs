@@ -170,37 +170,4 @@ if (zone) {
 }
 
 
-if (zone) {
-  const query = `query($zone: string!, $start: Time!, $end: Time!) {
-    viewer { zones(filter:{zoneTag:$zone}) {
-      httpRequestsAdaptiveGroups(filter:{
-        datetime_geq:$start,datetime_lt:$end,requestSource:"eyeball",userAgent_like:"%Googlebot%"
-      },limit:30,orderBy:[count_DESC]) {
-        count dimensions { clientAsn edgeResponseStatus }
-      }
-    } }
-  }`;
-  for (const date of ["2026-10-19","2026-10-20","2026-10-21","2026-10-22","2026-10-28"]) {
-    const end = new Date(Date.parse(date + "T00:00:00Z") + 86400000).toISOString();
-    try {
-      const response=await fetch(base+"graphql",{
-        method:"POST",headers:{Authorization:"Bearer "+token,"Content-Type":"application/json"},
-        body:JSON.stringify({query,variables:{zone,start:date+"T00:00:00Z",end}}),
-        signal:AbortSignal.timeout(12000)
-      });
-      const value=await response.json();
-      if(!response.ok || value.errors?.length) {
-        console.log("Crawler ASN check "+date+": unavailable "+response.status+" "+
-          JSON.stringify((value.errors||[]).map(e=>String(e.message).slice(0,160))));
-        continue;
-      }
-      const grouped=value.data?.viewer?.zones?.[0]?.httpRequestsAdaptiveGroups||[];
-      console.log("Crawler ASN check "+date+" (claimed Googlebot only): "+
-        JSON.stringify(grouped.map(x=>({asn:x.dimensions.clientAsn,status:x.dimensions.edgeResponseStatus,count:x.count}))));
-    }catch(error) {
-      console.log("Crawler ASN check "+date+": connection error "+error.name);
-    }
-  }
-}
-
 console.log("Cloudflare audit complete. GET requests plus POST read-only simulated Trace; no configuration writes.");
