@@ -3602,15 +3602,10 @@ const rawJobOpportunities: CareerOpportunity[] = [
     title: "EHA Clinics Registered Nurse — Yaba, Lagos",
     organization: "EHA Clinics",
     kind: "vacancy",
-    posting: {
-      jobTitle: "Registered Nurse",
-      datePosted: "2026-09-27",
-      locations: [{ locality: "Yaba", region: "Lagos State", country: "NG" }]
-    },
     sector: "Private",
-    status: "open",
-    statusLabel: "Employer job board lists Registered Nurse — checked 24 October",
-    summary: "EHA Clinics continues to list its Registered Nurse — Yaba, Lagos vacancy on the employer's jobs index, where the entry is dated 20 October 2026. The named role-detail URL is still accessible and specifies licensed professional nursing requirements. The catalogue's older September posting metadata should not be mistaken for the October vacancy-board update.",
+    status: "unverified",
+    statusLabel: "Original Yaba nurse application unavailable — checked 30 October",
+    summary: "EHA Clinics previously advertised a Registered Nurse role in Yaba, Lagos. Its original application page returned HTTP 404 on 30 October 2026, and the employer\'s current jobs board does not list this exact vacancy. A new application route has not been verified; this is not proof that all future nurse recruitment has ended.",
     location: "Yaba, Lagos State",
     employmentType: "Clinical nursing role",
     audiences: ["Registered nurses", "Healthcare professionals"],
@@ -3618,15 +3613,14 @@ const rawJobOpportunities: CareerOpportunity[] = [
     qualifications: ["Bachelor's degree or Diploma of Nursing from an accredited institution.", "Current nursing licence to practise in Nigeria.", "Relevant postgraduate clinical experience as stated by EHA Clinics."],
     requirements: ["Current clinical practice experience.", "Valid professional licence.", "Complete EHA Clinics' eligibility check."],
     documents: ["CV/resume", "Nursing licence and education details requested by EHA Clinics"],
-    applicationSteps: ["Open the official EHA Clinics vacancy.", "Review clinical experience and licence requirements.", "Complete the eligibility check.", "Continue to the official application."],
-    officialUrl: "https://erp.eha.ng/jobs/registered-nurse-yaba-lagos-1011",
-    officialUrlLabel: "Apply on EHA Clinics",
-    verifiedAt: "2026-10-24",
+    applicationSteps: ["The original Registered Nurse — Yaba application page is unavailable; do not rely on its old Apply link.", "Check EHA Clinics\' current jobs board for a newly published vacancy matching the role and location.", "Apply only if the employer provides a current, functioning application route for that named vacancy."],
+    officialUrl: "https://erp.eha.ng/jobs",
+    officialUrlLabel: "Check current EHA Clinics vacancies",
+    verifiedAt: "2026-10-30",
     feeNote: "Use EHA Clinics' official jobs system.",
-    sourceNotes: ["EHA Clinics' public jobs directory still lists Registered Nurse — Yaba Lagos on 24 October with a 20 October board timestamp. The original stored posting date remains 27 September and is not overwritten with the later update.", "The employer's exact nurse-detail page remains accessible and states licensed nursing requirements; confirm the role's live application control before submitting personal information."],
+    sourceNotes: ["Issuer check 30 October 2026: the exact Yaba nurse role-detail URL returns HTTP 404, and the current official EHA Clinics jobs board does not list this named vacancy. Its application availability is unverified, not employer-confirmed permanently closed.", "Historical record: the previous jobs board entry was dated 20 October 2026; the earlier advertised posting date was 27 September 2026. The nursing qualifications above refer to that prior advert, not a newly verified opening."],
     sources: [
-      { label: "EHA Clinics — Registered Nurse, Yaba Lagos", url: "https://erp.eha.ng/jobs/registered-nurse-yaba-lagos-1011", lastChecked: "2026-10-24" },
-      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-24" }
+      { label: "EHA Clinics current jobs board", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-30" }
     ]
   },
   {
