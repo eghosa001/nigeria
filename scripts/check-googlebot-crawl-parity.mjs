@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { pathToFileURL } from "node:url";
 
 // Four already-published, canonical guides. These are crawl canaries, not
@@ -133,6 +134,21 @@ export function assertFreshnessSignals(html, label, { required, forbidden }) {
   }
 }
 
+// Diagnostic only: log actual canonical/fresh response evidence without changing fetch headers,
+// cache policy, route identity, or any of the existing SEO pass/fail assertions.
+function reportCacheHeaders(label, response) {
+  const keys = ["date", "age", "cf-cache-status", "cf-ray", "cache-control", "cdn-cache-control",
+    "cloudflare-cdn-cache-control", "etag", "last-modified", "vary", "x-robots-tag"];
+  const cacheHeaders = Object.fromEntries(keys.map(key => [key, response.headers.get(key)])
+    .filter(([, value]) => value !== null));
+  let articleDigest = null;
+  try { articleDigest = createHash("sha256").update(getArticleText(response.html)).digest("hex").slice(0, 20); }
+  catch { /* The existing assertion below decides whether the page is valid. */ }
+  console.log("Googlebot CDN cache diagnostic:", JSON.stringify({label, status: response.status,
+    finalUrl: response.finalUrl, bodyBytes: Buffer.byteLength(response.html),
+    articleSha256Prefix: articleDigest, headers: cacheHeaders}));
+}
+
 async function fetchWithRetry(url, userAgent) {
   let lastError;
   for (let attempt = 1; attempt <= 3; attempt++) {
@@ -165,6 +181,7 @@ export async function auditLive(base = process.env.LIVE_BASE_URL || "https://myn
     let responseForBot;
     for (const [agent, value] of Object.entries(USER_AGENTS)) {
       const response = await fetchWithRetry(canonical, value);
+      reportCacheHeaders(path + " canonical " + agent, response);
       if (response.finalUrl !== canonical) {
         throw new Error(path + " " + agent + ": unexpected redirect to " + response.finalUrl);
       }
@@ -182,6 +199,7 @@ export async function auditLive(base = process.env.LIVE_BASE_URL || "https://myn
     // query on the same route. Do not submit probe URLs to search engines.
     const freshUrl = canonical + "?__mng_seo_crawl_probe=" + Date.now();
     const fresh = await fetchWithRetry(freshUrl, USER_AGENTS.googlebotLike);
+    reportCacheHeaders(path + " query comparison", fresh);
     if (fresh.finalUrl !== freshUrl) {
       throw new Error(path + ": unexpected fresh probe redirect to " + fresh.finalUrl);
     }
@@ -193,11 +211,13 @@ export async function auditLive(base = process.env.LIVE_BASE_URL || "https://myn
   for (const marker of CONTENT_FRESHNESS_CANARIES) {
     const canonical = origin + marker.path;
     const ordinary = await fetchWithRetry(canonical, USER_AGENTS.googlebotLike);
+    reportCacheHeaders(marker.path + " canonical", ordinary);
     if (ordinary.finalUrl !== canonical) throw new Error(marker.path + ": unexpected canonical redirect");
     validateIndexableHtml({ ...ordinary, canonical, requireHeadMetadata: true });
     assertFreshnessSignals(ordinary.html, marker.path + " canonical", marker);
     const freshUrl = canonical + "?__mng_seo_crawl_probe=" + Date.now();
     const fresh = await fetchWithRetry(freshUrl, USER_AGENTS.googlebotLike);
+    reportCacheHeaders(marker.path + " query comparison", fresh);
     if (fresh.finalUrl !== freshUrl) throw new Error(marker.path + ": fresh probe redirect");
     validateIndexableHtml({ ...fresh, canonical, requireHeadMetadata: true });
     assertFreshnessSignals(fresh.html, marker.path + " fresh", marker);
