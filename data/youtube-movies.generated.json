@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-10T18:19:44.727Z",
+  "generatedAt": "2026-10-31T10:29:02.786Z",
   "syncMode": "incremental",
   "sourceCount": 97,
-  "importedCount": 3690,
-  "importedThisRun": 38,
-  "pendingQualityCount": 819,
-  "pendingThisRun": 3,
+  "importedCount": 3787,
+  "importedThisRun": 143,
+  "pendingQualityCount": 856,
+  "pendingThisRun": 37,
   "duplicateTitleCount": 0,
   "failedSourceCount": 5,
   "requiredFailedSourceCount": 0,
@@ -42,6 +42,1854 @@
     }
   ],
   "movies": [
+    {
+      "videoId": "7AOEUP9mBJo",
+      "title": "DIVORCE ME",
+      "rawTitle": "DIVORCE ME- INI EDO, FREDRICK LEONARD, ANTHONY WOODE, LYDIA NZE. LASTEST NOLLYWOOD MOVIE 2026",
+      "synopsis": "DIVORCE ME is a gripping Nollywood Romantic drama about love, resentment, betrayal, pride, and a marriage pushed to its breaking point. As buried truths begin to surface, two people who once promised forever are forced to confront the one question neither of them is ready to answer — is this marriage worth saving, or is divorce the only way out?",
+      "cast": [
+        "Ini Edo",
+        "Fredrick Leonard",
+        "Anthony Woode",
+        "Lydia Lawrence Nze",
+        "DIRECTED BY",
+        "Benjamin Barnabas"
+      ],
+      "featuredCast": [
+        "Ini Edo",
+        "Fredrick Leonard",
+        "Anthony Woode"
+      ],
+      "channelName": "Ini Edo Tv",
+      "channelId": "UC1Ti2Ku3o8k0gcL8ku4lyrg",
+      "channelUrl": "https://www.youtube.com/@iniedotv",
+      "publishedAt": "2026-10-30T17:00:28Z",
+      "year": 2026,
+      "durationMinutes": 113,
+      "viewCount": 355611,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=7AOEUP9mBJo",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "fCxjqEk2Edo",
+      "title": "SOUR GRAPES",
+      "rawTitle": "SOUR GRAPES | LOVE WILL LEAVE YOU SPEECHLESS | FREDERICK LEONARD & SHAZNAY OKAWA | NEW MOVIE 2026",
+      "synopsis": "SOUR GRAPES is a full-length Nigerian film published by Love Story Media, featuring FREDERICK LEONARD, SHAZNAY OKAWA. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "FREDERICK LEONARD",
+        "SHAZNAY OKAWA"
+      ],
+      "featuredCast": [
+        "FREDERICK LEONARD",
+        "SHAZNAY OKAWA"
+      ],
+      "channelName": "Love Story Media",
+      "channelId": "UCKnp918QQ3gQIsmDXEZ0gdA",
+      "channelUrl": "https://www.youtube.com/@lovestorymedia247",
+      "publishedAt": "2026-10-30T17:00:02Z",
+      "year": 2026,
+      "durationMinutes": 99,
+      "viewCount": 104746,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=fCxjqEk2Edo",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "K9kVQ2iqEso",
+      "title": "A TALE OF SILENT SISTERS",
+      "rawTitle": "A TALE OF SILENT SISTERS - ANGEL UIGWE, CHIKE DANIELS, PATIENCE UJAH latest 2026 nigerian movies",
+      "synopsis": "A TALE OF SILENT SISTERS is a full-length Nigerian film published by Uchenna Mbunabo Tv, featuring ANGEL UIGWE, CHIKE DANIELS, PATIENCE UJAH. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "ANGEL UIGWE",
+        "CHIKE DANIELS",
+        "PATIENCE UJAH"
+      ],
+      "featuredCast": [
+        "ANGEL UIGWE",
+        "CHIKE DANIELS",
+        "PATIENCE UJAH"
+      ],
+      "channelName": "Uchenna Mbunabo Tv",
+      "channelId": "UCypAoMCRQuNL2RBwy-x4oQg",
+      "channelUrl": "https://www.youtube.com/@uchennambunabotv02",
+      "publishedAt": "2026-10-30T16:00:27Z",
+      "year": 2026,
+      "durationMinutes": 152,
+      "viewCount": 505011,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=K9kVQ2iqEso",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "-p_Zy8ilyIE",
+      "title": "TWO SHADES OF LOVE",
+      "rawTitle": "TWO SHADES OF LOVE - FRANCES NWABUNIKE/RAY ADEKA/NIGERIAN MOVIES 2026 LATEST MOVIES",
+      "synopsis": "Love and greed can only go hand in hand if the heart chooses to be gullible.",
+      "cast": [
+        "Frances Nwabunike"
+      ],
+      "featuredCast": [
+        "Frances Nwabunike"
+      ],
+      "channelName": "OrjiTv",
+      "channelId": "UCiahLsxiMoVkuUM1bbgPg0g",
+      "channelUrl": "https://www.youtube.com/@orjitv",
+      "publishedAt": "2026-10-30T16:00:06Z",
+      "year": 2026,
+      "durationMinutes": 121,
+      "viewCount": 53048,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=-p_Zy8ilyIE",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "Hc1X1tPnzHU",
+      "title": "OLORISA",
+      "rawTitle": "OLORISA - Ibrahim Chatta, Damilola Oni, Adeniyi Johnson, Irewole Latest 2026 Yoruba Movie#trending",
+      "synopsis": "When a mysterious illness resists all medical explanation, a devout Christian doctor must confront his forgotten ancestral destiny as the spiritual vessel of a powerful deity-or risk losing a young girl's life and unraveling the balance between two worlds. OLORISA showing now on Adekaz Premium Tv Youtube.",
+      "cast": [
+        "Yomi Fashlansho"
+      ],
+      "featuredCast": [
+        "Yomi Fashlansho"
+      ],
+      "channelName": "ADEKAZ PREMIUM TV",
+      "channelId": "UCK2-495cMvdhaMqXcLlgmcg",
+      "channelUrl": "https://www.youtube.com/@adekazpremiumtvee",
+      "publishedAt": "2026-10-30T15:00:31Z",
+      "year": 2026,
+      "durationMinutes": 118,
+      "viewCount": 66749,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=Hc1X1tPnzHU",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "iHFHZvkHOyQ",
+      "title": "WARRIOR LOVER 2",
+      "rawTitle": "WARRIOR LOVER 2 - THE CONTINUATION | LATEST NIGERIAN  FULL MOVIE 2026",
+      "synopsis": "WARRIOR LOVER 2 is a full-length Nigerian film published by AWELE HANSEL TV 365. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "AWELE HANSEL TV 365",
+      "channelId": "UC37J3xebDvtq_WtnzYi4wyw",
+      "channelUrl": "https://www.youtube.com/@awelehanseltv365",
+      "publishedAt": "2026-10-30T15:00:29Z",
+      "year": 2026,
+      "durationMinutes": 80,
+      "viewCount": 193820,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=iHFHZvkHOyQ",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "zDyHHXL9Lf0",
+      "title": "7 DAYS TO REVENGE",
+      "rawTitle": "7 DAYS TO REVENGE - EBUBE OBI, LIZZY GOLD - NIGERIA MOVIE 2026 LATEST FULL MOVIE",
+      "synopsis": "IFYEZE NOLLY TV @IfyEzenollytv-b7u PRODUCES BEST NOLLYWOOD MOVIES THAT ENTERTAINS AND EDUCATES ABOUT LIFE, MARRIAGE/RELATIONSHIP AND THE REAL AFRICAN CULTURE.",
+      "cast": [
+        "EBUBE OBI",
+        "LIZZY GOLD - NIGERIA"
+      ],
+      "featuredCast": [
+        "EBUBE OBI",
+        "LIZZY GOLD - NIGERIA"
+      ],
+      "channelName": "IfyEze Nolly tv",
+      "channelId": "UCFVseBemDz2KhVgh4S0-U1g",
+      "channelUrl": "https://www.youtube.com/@ifyezenollytv-b7u",
+      "publishedAt": "2026-10-30T14:20:21Z",
+      "year": 2026,
+      "durationMinutes": 102,
+      "viewCount": 1903,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=zDyHHXL9Lf0",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "2RhBuIxGnZI",
+      "title": "USER FRIENDLY- RUTHKADIRI MAURICE SAM FESSA BETTY AJOKU",
+      "rawTitle": "USER FRIENDLY- RUTHKADIRI MAURICE SAM  FESSA BETTY AJOKU",
+      "synopsis": "USER FRIENDLY- RUTHKADIRI MAURICE SAM FESSA BETTY AJOKU is a full-length Nigerian film published by RuthKadiri247. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "RuthKadiri247",
+      "channelId": "UCjcFNZE51DmSrGYBqixs0Ug",
+      "channelUrl": "https://www.youtube.com/@ruthkadiri247",
+      "publishedAt": "2026-10-29T16:26:15Z",
+      "year": 2026,
+      "durationMinutes": 131,
+      "viewCount": 1288311,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=2RhBuIxGnZI",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "_ofUzj64nN8",
+      "title": "UNSPOKEN HEARTS",
+      "rawTitle": "UNSPOKEN HEARTS - Nigerian Movies 2026 Latest Full Movies",
+      "synopsis": "UNSPOKEN HEARTS is a full-length Nigerian film published by Royal Arts TV, featuring Nancy Isime, Tracy Edera. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "Nancy Isime",
+        "Tracy Edera"
+      ],
+      "featuredCast": [
+        "Nancy Isime",
+        "Tracy Edera"
+      ],
+      "channelName": "Royal Arts TV",
+      "channelId": "UCHtfUf-9779RPujVXixJ7Tw",
+      "channelUrl": "https://www.youtube.com/@royalartstv",
+      "publishedAt": "2026-10-29T16:00:31Z",
+      "year": 2026,
+      "durationMinutes": 114,
+      "viewCount": 46718,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=_ofUzj64nN8",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "tLE58EL4Goo",
+      "title": "The Billionaire's Wife",
+      "rawTitle": "The Billionaire's Wife - New Nollywood Movie starring Omeche Oko, Michael Ejoor, Iyanu Dokubo",
+      "synopsis": "The Billionaire's Wife is a full-length Nigerian film published by Uduak Isong TV, featuring Omeche Oko, Michael Ejoor, Iyanu Dokubo. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "Omeche Oko",
+        "Michael Ejoor",
+        "Iyanu Dokubo"
+      ],
+      "featuredCast": [
+        "Omeche Oko",
+        "Michael Ejoor",
+        "Iyanu Dokubo"
+      ],
+      "channelName": "Uduak Isong TV",
+      "channelId": "UCVVs7iCZgDTBi7nPs4m4ksg",
+      "channelUrl": "https://www.youtube.com/@uduakisong",
+      "publishedAt": "2026-10-29T16:00:27Z",
+      "year": 2026,
+      "durationMinutes": 91,
+      "viewCount": 276677,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=tLE58EL4Goo",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "1oqipr8rGYI",
+      "title": "STRANDED FATE",
+      "rawTitle": "STRANDED FATE- RACHEL EDWARDS, ETIM EFFIONG, UTI NWACHUKWU, DEBBY FELIX | LATEST 2026 NIGERIAN MOVIE",
+      "synopsis": "If you love Nigerian cinema—from gripping dramas and thrilling action flicks to hilarious comedies and heartwarming romances—you've come to the right place. We are dedicated to bringing you the newest releases from the heart of the Nigerian film industry, uploaded frequently for your viewing pleasure.",
+      "cast": [
+        "RACHEL EDWARDS",
+        "ETIM EFFIONG",
+        "UTI NWACHUKWU",
+        "DEBBY FELIX"
+      ],
+      "featuredCast": [
+        "RACHEL EDWARDS",
+        "ETIM EFFIONG",
+        "UTI NWACHUKWU"
+      ],
+      "channelName": "Rachel Edwards",
+      "channelId": "UC24UJLQHsZ7UeAzQgDKqqUg",
+      "channelUrl": "https://www.youtube.com/@racheledwardstv",
+      "publishedAt": "2026-10-29T16:00:10Z",
+      "year": 2026,
+      "durationMinutes": 121,
+      "viewCount": 109447,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=1oqipr8rGYI",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "CMwKBygUMRQ",
+      "title": "IYA OMO 2 Latest Yoruba Movie 2026 ll Damilola Oni, Lanre Adediwura, Adekunle Akanbi, Kemi Iyanda",
+      "rawTitle": "IYA OMO 2  Latest Yoruba Movie 2026 ll Damilola Oni, Lanre Adediwura, Adekunle Akanbi, Kemi Iyanda",
+      "synopsis": "A mother’s love knows no bounds, but what happens when the past returns and threatens everything she has fought to protect ?",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "THE DAMILOLA ONI TV",
+      "channelId": "UCi00_82Wh1q_rm2Yz8m7GIA",
+      "channelUrl": "https://www.youtube.com/@thedamilolaoni",
+      "publishedAt": "2026-10-29T15:00:02Z",
+      "year": 2026,
+      "durationMinutes": 112,
+      "viewCount": 1047401,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=CMwKBygUMRQ",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "1GuM7ILjPRQ",
+      "title": "PARENTS BY ACCIDENT",
+      "rawTitle": "PARENTS BY ACCIDENT | TIMINI EGBUSON, MIWA OLORUNFEMI | 2026 Latest Nigerian Full Movies",
+      "synopsis": "PARENTS BY ACCIDENT | TIMINI EGBUSON, MIWA OLORUNFEMI | 2026 Latest Nigerian (Nollywood) Full Movies",
+      "cast": [
+        "TIMINI EGBUSON",
+        "MIWA OLORUNFEMI",
+        "OGECHUKWU ANASOR",
+        "OMOTOYOSI SHAIBU",
+        "ALEXIS EGBERE",
+        "KESTER NSAKA",
+        "CHIAMAKA NWOKEUKWU",
+        "KOKO HANSON",
+        "OLAMILEKAN BOLUWATIFE",
+        "MIRIAM OGBONNA"
+      ],
+      "featuredCast": [
+        "TIMINI EGBUSON",
+        "MIWA OLORUNFEMI",
+        "OGECHUKWU ANASOR"
+      ],
+      "channelName": "Chinedu Benjamin TV",
+      "channelId": "UCPbe5URc7tuQw3pfnBTAtNA",
+      "channelUrl": "https://www.youtube.com/@chinedubenjamintv",
+      "publishedAt": "2026-10-29T14:00:26Z",
+      "year": 2026,
+      "durationMinutes": 108,
+      "viewCount": 2247402,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=1GuM7ILjPRQ",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "UL77qsqIDLQ",
+      "title": "SLAPPING QUEEN PT 6",
+      "rawTitle": "SLAPPING QUEEN PT 6 - Mike Godson, sonia ogene, Helen Peters - 2026 Latest Nigerian Nollywood Movie",
+      "synopsis": "Slapping Queen - New Nollywood Movie is a 2026 Nigerian film. It will have You Glue On A Chair Starring; Mike Godson, Sonia ogene, Helen Peters And More actors and actresses. -Slapping Queen (New Movie) - 2026 Latest New Nigerian Nollywood Movie",
+      "cast": [
+        "Mike Godson",
+        "Eelen Peters",
+        "Zainab Chinwe",
+        "Sonia Ogene",
+        "Karen igbinigie",
+        "Thomas Page",
+        "Onyi Blessing",
+        "Segun Success",
+        "Peter Mafia",
+        "Sunshine Erondu",
+        "Nnamdi Nwaigwe"
+      ],
+      "featuredCast": [
+        "Mike Godson",
+        "Eelen Peters",
+        "Zainab Chinwe"
+      ],
+      "channelName": "Nollywoodpicturestv",
+      "channelId": "UCi8vPG6uMxIjoZMhLLX2BkQ",
+      "channelUrl": "https://www.youtube.com/@nollywoodpicturestv",
+      "publishedAt": "2026-10-29T11:30:18Z",
+      "year": 2026,
+      "durationMinutes": 57,
+      "viewCount": 12033,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=UL77qsqIDLQ",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "dI-efArZ80E",
+      "title": "SLAPPING QUEEN PT 5",
+      "rawTitle": "SLAPPING QUEEN PT 5 - Mike Godson, sonia ogene, Helen Peters - 2026 Latest Nigerian Nollywood Movie",
+      "synopsis": "Slapping Queen - New Nollywood Movie is a 2026 Nigerian film. It will have You Glue On A Chair Starring; Mike Godson, Sonia ogene, Helen Peters And More actors and actresses. -Slapping Queen (New Movie) - 2026 Latest New Nigerian Nollywood Movie",
+      "cast": [
+        "Mike Godson",
+        "Eelen Peters",
+        "Zainab Chinwe",
+        "Sonia Ogene",
+        "Karen igbinigie",
+        "Thomas Page",
+        "Onyi Blessing",
+        "Segun Success",
+        "Peter Mafia",
+        "Sunshine Erondu",
+        "Nnamdi Nwaigwe"
+      ],
+      "featuredCast": [
+        "Mike Godson",
+        "Eelen Peters",
+        "Zainab Chinwe"
+      ],
+      "channelName": "Nollywoodpicturestv",
+      "channelId": "UCi8vPG6uMxIjoZMhLLX2BkQ",
+      "channelUrl": "https://www.youtube.com/@nollywoodpicturestv",
+      "publishedAt": "2026-10-29T11:00:34Z",
+      "year": 2026,
+      "durationMinutes": 58,
+      "viewCount": 19519,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=dI-efArZ80E",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "TKsiTCoCnTc",
+      "title": "ANOTHER WRONG MARRIAGE-mr aloy tv",
+      "rawTitle": "ANOTHER WRONG MARRIAGE-mr aloy tv - Latest Nigerian Movie 2026",
+      "synopsis": "ANOTHER WRONG MARRIAGE-mr aloy tv is a full-length Nigerian film published by Mr  Aloy  Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "Mr  Aloy  Tv",
+      "channelId": "UCoPAnHtnoM7f0p7BfApC5-g",
+      "channelUrl": "https://www.youtube.com/@mraloytv",
+      "publishedAt": "2026-10-28T17:25:55Z",
+      "year": 2026,
+      "durationMinutes": 285,
+      "viewCount": 13179,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=TKsiTCoCnTc",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "eYt7tSqvc_U",
+      "title": "CAUGHT IN THE CYCLE",
+      "rawTitle": "CAUGHT IN THE CYCLE - Nigerian Movies 2026 Latest Full Movies",
+      "synopsis": "So you never miss a new movie! Your next favorite Nigerian movie is just a click away. Start watching now!",
+      "cast": [
+        "Stan Nze",
+        "Angel Unigwe",
+        "Leolidas Ewane"
+      ],
+      "featuredCast": [
+        "Stan Nze",
+        "Angel Unigwe",
+        "Leolidas Ewane"
+      ],
+      "channelName": "BIODUNSTEPHEN TV",
+      "channelId": "UCLgjn9SPLG7BxyuFB_uNfXQ",
+      "channelUrl": "https://www.youtube.com/@biodunstephentv",
+      "publishedAt": "2026-10-28T17:00:36Z",
+      "year": 2026,
+      "durationMinutes": 99,
+      "viewCount": 868696,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=eYt7tSqvc_U",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "GYA7DLSxHTQ",
+      "title": "MARK OF IKENGA",
+      "rawTitle": "MARK OF IKENGA - LIZZY GOLD ONUWAJE, PRISMA JAMES, GINA KINGS - Latest Nigerian Movie",
+      "synopsis": "MARK OF IKENGA is a full-length Nigerian film published by LizzyGold Tv, featuring LIZZY GOLD ONUWAJE, PRISMA JAMES, GINA KINGS -. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "LIZZY GOLD ONUWAJE",
+        "PRISMA JAMES",
+        "GINA KINGS -"
+      ],
+      "featuredCast": [
+        "LIZZY GOLD ONUWAJE",
+        "PRISMA JAMES",
+        "GINA KINGS -"
+      ],
+      "channelName": "LizzyGold Tv",
+      "channelId": "UCDHPAuCA5JKzq_ujcy4meXg",
+      "channelUrl": "https://www.youtube.com/@lizzygoldtv",
+      "publishedAt": "2026-10-28T17:00:20Z",
+      "year": 2026,
+      "durationMinutes": 157,
+      "viewCount": 726902,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=GYA7DLSxHTQ",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "KHtBFzfvEl4",
+      "title": "IN HIS SHOES",
+      "rawTitle": "IN HIS SHOES - SONIA UCHE, DANIEL ETIM, OSAS IGHODARO LATEST 2026 NIGERIAN MOVIES",
+      "synopsis": "Danny is a devoted husband and father doing everything he can to provide for his family. But with mounting financial pressure and a wife who seems impossible to satisfy, his sacrifices begin to take a toll.",
+      "cast": [
+        "SONIA UCHE",
+        "DANIEL ETIM",
+        "OSAS IGHODARO"
+      ],
+      "featuredCast": [
+        "SONIA UCHE",
+        "DANIEL ETIM",
+        "OSAS IGHODARO"
+      ],
+      "channelName": "Sonia Uche Tv",
+      "channelId": "UCHY9J0IWIWht6GqIBiLidBA",
+      "channelUrl": "https://www.youtube.com/@soniauchetv",
+      "publishedAt": "2026-10-28T17:00:17Z",
+      "year": 2026,
+      "durationMinutes": 107,
+      "viewCount": 2060242,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=KHtBFzfvEl4",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "0OyN2EanNFY",
+      "title": "THE OTHER SIDE OF POWER : Van Vicker : Detola Jones , 2026",
+      "rawTitle": "THE OTHER SIDE OF POWER  : Van Vicker : Detola Jones , 2026 latest Nigerian movies",
+      "synopsis": "Husband talked down his his wife for been jobless, but he never knew what awaits him",
+      "cast": [
+        "Van Vicker"
+      ],
+      "featuredCast": [
+        "Van Vicker"
+      ],
+      "channelName": "GLOBAL CROWN TV",
+      "channelId": "UCoFEyPFU3Lc-mzDlDLTdPIA",
+      "channelUrl": "https://www.youtube.com/@globalcrowntv5294",
+      "publishedAt": "2026-10-28T15:30:36Z",
+      "year": 2026,
+      "durationMinutes": 136,
+      "viewCount": 306320,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=0OyN2EanNFY",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "mTetKI6qS_Y",
+      "title": "LOVE FOR GRANTED",
+      "rawTitle": "LOVE FOR GRANTED - VAN VICKER/NAZO EKEZIE/NIGERIAN MOVIES 2026 LATEST FULL/ LOVE MOVIES",
+      "synopsis": "Please like the video and drop a comment if you find it interesting....... or not.",
+      "cast": [
+        "Van Vicker",
+        "Nazo Ekezie https"
+      ],
+      "featuredCast": [
+        "Van Vicker",
+        "Nazo Ekezie https"
+      ],
+      "channelName": "Divine Touch tv",
+      "channelId": "UCrIiFTecq0FVdtl81dsS2Zg",
+      "channelUrl": "https://www.youtube.com/@divinetouchtvsub_confirmation1",
+      "publishedAt": "2026-10-28T15:00:00Z",
+      "year": 2026,
+      "durationMinutes": 123,
+      "viewCount": 17845,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=mTetKI6qS_Y",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "7ocs_M0zCGo",
+      "title": "HALF OF BOTH WORLDS",
+      "rawTitle": "HALF OF BOTH WORLDS - MAURICE SAM, ALEX CROSS, AUDREY HARRISON, KAIMA J, Latest 2026 Nigerian Movie",
+      "synopsis": "Sometimes, where you come from doesn't determine how far you can go in life. What truly matters is the love, sacrifices, and opportunities that shape your journey",
+      "cast": [
+        "MAURICE SAM",
+        "ALEX CROSS",
+        "AUDREY HARRISON"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "ALEX CROSS",
+        "AUDREY HARRISON"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-10-27T17:00:13Z",
+      "year": 2026,
+      "durationMinutes": 106,
+      "viewCount": 2071396,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=7ocs_M0zCGo",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "xQSC6fwna4E",
+      "title": "WEEKEND WITH EXES",
+      "rawTitle": "WEEKEND WITH EXES - CLINTON JOSHUA, SARIAN MARTIN, DORIS IFEKA latest 2026 nigerian movie",
+      "synopsis": "WEEKEND WITH EXES is a full-length Nigerian film published by Uchenna Mbunabo Tv, featuring CLINTON JOSHUA, SARIAN MARTIN, DORIS IFEKA. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "CLINTON JOSHUA",
+        "SARIAN MARTIN",
+        "DORIS IFEKA"
+      ],
+      "featuredCast": [
+        "CLINTON JOSHUA",
+        "SARIAN MARTIN",
+        "DORIS IFEKA"
+      ],
+      "channelName": "Uchenna Mbunabo Tv",
+      "channelId": "UCypAoMCRQuNL2RBwy-x4oQg",
+      "channelUrl": "https://www.youtube.com/@uchennambunabotv02",
+      "publishedAt": "2026-10-26T16:00:40Z",
+      "year": 2026,
+      "durationMinutes": 145,
+      "viewCount": 4314576,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=xQSC6fwna4E",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "yDLxF-t9x2A",
+      "title": "SLAPPING QUEEN PT 4",
+      "rawTitle": "SLAPPING QUEEN PT 4 - Mike Godson, sonia ogene, Helen Peters - 2026 Latest Nigerian Nollywood Movie",
+      "synopsis": "Slapping Queen - New Nollywood Movie is a 2026 Nigerian film. It will have You Glue On A Chair Starring; Mike Godson, Sonia ogene, Helen Peters And More actors and actresses. -Slapping Queen (New Movie) - 2026 Latest New Nigerian Nollywood Movie",
+      "cast": [
+        "Mike Godson",
+        "Eelen Peters",
+        "Zainab Chinwe",
+        "Sonia Ogene",
+        "Karen igbinigie",
+        "Thomas Page",
+        "Onyi Blessing",
+        "Segun Success",
+        "Peter Mafia",
+        "Sunshine Erondu",
+        "Nnamdi Nwaigwe"
+      ],
+      "featuredCast": [
+        "Mike Godson",
+        "Eelen Peters",
+        "Zainab Chinwe"
+      ],
+      "channelName": "Nollywoodpicturestv",
+      "channelId": "UCi8vPG6uMxIjoZMhLLX2BkQ",
+      "channelUrl": "https://www.youtube.com/@nollywoodpicturestv",
+      "publishedAt": "2026-10-26T11:30:19Z",
+      "year": 2026,
+      "durationMinutes": 57,
+      "viewCount": 19561,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=yDLxF-t9x2A",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "64t5PTzCtSI",
+      "title": "SLAPPING QUEEN PT 3",
+      "rawTitle": "SLAPPING QUEEN PT 3 - Mike Godson, sonia ogene, Helen Peters - 2026 Latest Nigerian Nollywood Movie",
+      "synopsis": "Slapping Queen - New Nollywood Movie is a 2026 Nigerian film. It will have You Glue On A Chair Starring; Mike Godson, Sonia ogene, Helen Peters And More actors and actresses. -Slapping Queen (New Movie) - 2026 Latest New Nigerian Nollywood Movie",
+      "cast": [
+        "Mike Godson",
+        "Eelen Peters",
+        "Zainab Chinwe",
+        "Sonia Ogene",
+        "Karen igbinigie",
+        "Thomas Page",
+        "Onyi Blessing",
+        "Segun Success",
+        "Peter Mafia",
+        "Sunshine Erondu",
+        "Nnamdi Nwaigwe"
+      ],
+      "featuredCast": [
+        "Mike Godson",
+        "Eelen Peters",
+        "Zainab Chinwe"
+      ],
+      "channelName": "Nollywoodpicturestv",
+      "channelId": "UCi8vPG6uMxIjoZMhLLX2BkQ",
+      "channelUrl": "https://www.youtube.com/@nollywoodpicturestv",
+      "publishedAt": "2026-10-26T11:00:19Z",
+      "year": 2026,
+      "durationMinutes": 58,
+      "viewCount": 21143,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=64t5PTzCtSI",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "eE2rNMMUXeo",
+      "title": "Honey In The Middle",
+      "rawTitle": "Honey In The Middle | Latest 2026 Nigerian Movie | Director's Cut",
+      "synopsis": "* African Movies with English Subtitles , French Subtitles and Spanish Subtitles (for our international viewers!)",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "MacidaTv",
+      "channelId": "UCwEhtyYsO35SVr9Cf8PexOA",
+      "channelUrl": "https://www.youtube.com/@macidatv",
+      "publishedAt": "2026-10-25T17:45:27Z",
+      "year": 2026,
+      "durationMinutes": 159,
+      "viewCount": 62609,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=eE2rNMMUXeo",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "US2BwzlTs4o",
+      "title": "FALSE COMFORT",
+      "rawTitle": "FALSE COMFORT ; VICTORY MICHAEL, PRISMA JAMES, CHINENYE UBA, 2026 Latest Nollywood Movie",
+      "synopsis": "FALSE COMFORT is a full-length Nigerian film published by Uche Nancy Update Tv, featuring Victory Michael, CHINENYE UBA. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "Victory Michael",
+        "CHINENYE UBA"
+      ],
+      "featuredCast": [
+        "Victory Michael",
+        "CHINENYE UBA"
+      ],
+      "channelName": "Uche Nancy Update Tv",
+      "channelId": "UCllyxqlpQNkJpXf3PHb4aWQ",
+      "channelUrl": "https://www.youtube.com/@uchenancyupdatetv",
+      "publishedAt": "2026-10-25T16:09:59Z",
+      "year": 2026,
+      "durationMinutes": 155,
+      "viewCount": 1556293,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=US2BwzlTs4o",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "YeUC42cB4Zw",
+      "title": "MARRIED BUT SINGLE",
+      "rawTitle": "MARRIED BUT SINGLE -  african movies Latest Nigerian Movie 2026 #trending  #movie  #drama",
+      "synopsis": "MARRIED BUT SINGLE is one movie that will open your eyes and glue to your seat as it reviews the weakness of many men over their women without knowing how it effect them . How everything ended was very beautiful and very interesting",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "Mr  Aloy  Tv",
+      "channelId": "UCoPAnHtnoM7f0p7BfApC5-g",
+      "channelUrl": "https://www.youtube.com/@mraloytv",
+      "publishedAt": "2026-10-25T14:48:04Z",
+      "year": 2026,
+      "durationMinutes": 125,
+      "viewCount": 199587,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=YeUC42cB4Zw",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "cCnFV5X6SRM",
+      "title": "A LITTLE OFF PLAN- UZOR ARUKWE, BOLAJI OGUNMOLA, EMEMUFOT, NAS. LATEST NIGERIAN FULL",
+      "rawTitle": "A LITTLE OFF PLAN- UZOR ARUKWE, BOLAJI OGUNMOLA, EMEMUFOT, NAS. LATEST NIGERIAN FULL NOLLYWOOD MOVIE",
+      "synopsis": "When a successful, fiercely independent 37-year-old woman is dumped by the man she thought she would marry, she decides to take motherhood into her own hands. But an unexpected encounter with a charming, unpolished motor park worker turns her carefully planned life upside down, forcing her to confront the one thing she never planned for—falling in love with",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "BOLAJI OGUNMOLA TV",
+      "channelId": "UCqxprLDy_2hMQ7aQp_4NNuA",
+      "channelUrl": "https://www.youtube.com/@bolajiogunmolatv",
+      "publishedAt": "2026-10-24T17:00:25Z",
+      "year": 2026,
+      "durationMinutes": 109,
+      "viewCount": 4450255,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=cCnFV5X6SRM",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "OptRHnmKlCY",
+      "title": "LOVE FOUND ME. New",
+      "rawTitle": "LOVE FOUND ME. New Nollywood Movie starring Toosweet Annan,  Pamela Okoye",
+      "synopsis": "LOVE FOUND ME. New is a full-length Nigerian film published by Uduak Isong TV, featuring Toosweet Annan, Pamela Okoye. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "Toosweet Annan",
+        "Pamela Okoye"
+      ],
+      "featuredCast": [
+        "Toosweet Annan",
+        "Pamela Okoye"
+      ],
+      "channelName": "Uduak Isong TV",
+      "channelId": "UCVVs7iCZgDTBi7nPs4m4ksg",
+      "channelUrl": "https://www.youtube.com/@uduakisong",
+      "publishedAt": "2026-10-24T16:24:52Z",
+      "year": 2026,
+      "durationMinutes": 86,
+      "viewCount": 240956,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=OptRHnmKlCY",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "vrvSNtNYeXY",
+      "title": "THE LOVE CLAUSE",
+      "rawTitle": "THE LOVE CLAUSE - Nigerian Movies 2026 Latest Full Movies",
+      "synopsis": "Ejiro ends marriages for a living. Demi plans them. When a televised debate turns their fiery clashes into a public sensation, neither expects the chemistry to follow them off-screen.",
+      "cast": [
+        "Chike Daniels",
+        "Toluwani George",
+        "Sydney Ihionu"
+      ],
+      "featuredCast": [
+        "Chike Daniels",
+        "Toluwani George",
+        "Sydney Ihionu"
+      ],
+      "channelName": "Omoni Oboli TV",
+      "channelId": "UCbvdwZvZgdl-pPyomEmaEfg",
+      "channelUrl": "https://www.youtube.com/@omoniobolitv",
+      "publishedAt": "2026-10-24T16:00:01Z",
+      "year": 2026,
+      "durationMinutes": 151,
+      "viewCount": 2053349,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=vrvSNtNYeXY",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "-wczrqks7uk",
+      "title": "WARRIOR LOVER",
+      "rawTitle": "WARRIOR LOVER // LATEST NOLLYWOOD MOVIE 2026.",
+      "synopsis": "WARRIOR LOVER is a full-length Nigerian film published by AWELE HANSEL TV 365. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "AWELE HANSEL TV 365",
+      "channelId": "UC37J3xebDvtq_WtnzYi4wyw",
+      "channelUrl": "https://www.youtube.com/@awelehanseltv365",
+      "publishedAt": "2026-10-24T15:00:17Z",
+      "year": 2026,
+      "durationMinutes": 114,
+      "viewCount": 666978,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=-wczrqks7uk",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "ks_GZZbJkHE",
+      "title": "TENANTS IN CHAOS",
+      "rawTitle": "TENANTS IN CHAOS | Kid Baby & Baba Tee| Nigerian 2026 Full Comedy Movie",
+      "synopsis": "Welcome to TENANTS IN CHAOS, where peace is a stranger, trouble is a permanent tenant, and every day comes with a fresh dose of madness!",
+      "cast": [
+        "the hilarious Kid Baby",
+        "Baba Tee"
+      ],
+      "featuredCast": [
+        "the hilarious Kid Baby",
+        "Baba Tee"
+      ],
+      "channelName": "BETH-SHEBA TV",
+      "channelId": "UCvpMr7hfgCBPsbQFz1v8fUA",
+      "channelUrl": "https://www.youtube.com/@beth-shebatv",
+      "publishedAt": "2026-10-23T17:00:23Z",
+      "year": 2026,
+      "durationMinutes": 95,
+      "viewCount": 53316,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=ks_GZZbJkHE",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "GqOdMdRS7gY",
+      "title": "WHEN A GEN Z IS PREGNANT",
+      "rawTitle": "WHEN A GEN Z IS PREGNANT - Kanayo O. Kanayo, Efe Irele - Nigerian Movies 2026 Latest Full Movies",
+      "synopsis": "Discover the Nigerian movies that showcase Nollywood's passion and creativity. Kanayo O Kanayo Tv is more than entertainment – it’s an experience! Join our community to stay updated on the best of Nigerian movies.",
+      "cast": [
+        "Kanayo O. Kanayo",
+        "Efe Irele -"
+      ],
+      "featuredCast": [
+        "Kanayo O. Kanayo",
+        "Efe Irele -"
+      ],
+      "channelName": "Kanayo O Kanayo Tv",
+      "channelId": "UCm0KZvpCmZC7Jcc9OofIdRQ",
+      "channelUrl": "https://www.youtube.com/@kanayookanayotv",
+      "publishedAt": "2026-10-23T16:00:31Z",
+      "year": 2026,
+      "durationMinutes": 120,
+      "viewCount": 1691801,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=GqOdMdRS7gY",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "Cka3AXRBkvw",
+      "title": "LOVE'S SIGNATURE",
+      "rawTitle": "LOVE'S SIGNATURE - Nigerian Movies 2026 Latest Full Movies",
+      "synopsis": "He could control everything and everyone, until the one woman he underestimated became the one he couldn’t live without.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "Blessing Obasi TV",
+      "channelId": "UCIT1gRMia48fegizq1baniw",
+      "channelUrl": "https://www.youtube.com/@blessingobasitv",
+      "publishedAt": "2026-10-23T16:00:29Z",
+      "year": 2026,
+      "durationMinutes": 139,
+      "viewCount": 2404100,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=Cka3AXRBkvw",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "D7SLxpGHEYc",
+      "title": "AMOTAN 2",
+      "rawTitle": "AMOTAN 2 - Mercy Aigbe, Habeeb Alagbe, Joke Muyiwa Latest 2026 Yoruba Drama Movie #trending",
+      "synopsis": "They call her AMOTAN, the woman who sees beyond the eyes and knows what others cannot comprehend. But behind her mysterious gift lies a story yet to be told. Who is she really and what secrets will be revealed? AMOTAN 2 showing now on Mercy Aigbe Tv",
+      "cast": [
+        "Mercy Aigbe",
+        "Habeeb Alagbe",
+        "Joke Muyiwa"
+      ],
+      "featuredCast": [
+        "Mercy Aigbe",
+        "Habeeb Alagbe",
+        "Joke Muyiwa"
+      ],
+      "channelName": "MERCY AIGBE TV",
+      "channelId": "UChkgGXQY9aRSdrNKiDgjssg",
+      "channelUrl": "https://www.youtube.com/@mercyaigbetv",
+      "publishedAt": "2026-10-23T16:00:02Z",
+      "year": 2026,
+      "durationMinutes": 66,
+      "viewCount": 322327,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=D7SLxpGHEYc",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "M9gvhnbnHjE",
+      "title": "LOVE OVER CLASS",
+      "rawTitle": "LOVE OVER CLASS - MIRACLE GODWIN/BRYAN OKWARA/NIGERIAN MOVIES 2026 LATEST MOVIES",
+      "synopsis": "A fight for love is never a lost battle as long as both hearts agree to stand for each other no matter what comes.",
+      "cast": [
+        "Miracle Godwin"
+      ],
+      "featuredCast": [
+        "Miracle Godwin"
+      ],
+      "channelName": "OrjiTv",
+      "channelId": "UCiahLsxiMoVkuUM1bbgPg0g",
+      "channelUrl": "https://www.youtube.com/@orjitv",
+      "publishedAt": "2026-10-23T16:00:01Z",
+      "year": 2026,
+      "durationMinutes": 135,
+      "viewCount": 146769,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=M9gvhnbnHjE",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "ID159cRXPFk",
+      "title": "TOO BROKEN TO LOVE",
+      "rawTitle": "TOO BROKEN TO LOVE - VAN VICKER, CYTHIA CLARKE, MICHELLE OLUWAFEMI",
+      "synopsis": "TOO BROKEN TO LOVE is a full-length Nigerian film published by JOYON TV, featuring VAN VICKER, CYTHIA CLARKE, MICHELLE OLUWAFEMI. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "VAN VICKER",
+        "CYTHIA CLARKE",
+        "MICHELLE OLUWAFEMI"
+      ],
+      "featuredCast": [
+        "VAN VICKER",
+        "CYTHIA CLARKE",
+        "MICHELLE OLUWAFEMI"
+      ],
+      "channelName": "JOYON TV",
+      "channelId": "UCbspHTCfE0Re8Dq-HBobk8Q",
+      "channelUrl": "https://www.youtube.com/@joyontv247",
+      "publishedAt": "2026-10-23T15:35:16Z",
+      "year": 2026,
+      "durationMinutes": 113,
+      "viewCount": 824946,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=ID159cRXPFk",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "f_1n1UK6els",
+      "title": "MY VILLAGE PROSTITUTE",
+      "rawTitle": "MY VILLAGE PROSTITUTE -ONYII ALEX, CHIOMA NWOSU, MAURICE SAM Nigerian Movies 2026 Latest Full Movies",
+      "synopsis": "IFYEZE NOLLY TV @IfyEzenollytv-b7u PRODUCES BEST NOLLYWOOD MOVIES THAT ENTERTAINS AND EDUCATES ABOUT LIFE, MARRIAGE/RELATIONSHIP AND THE REAL AFRICAN CULTURE.",
+      "cast": [
+        "ONYII ALEX",
+        "CHIOMA NWOSU",
+        "MAURICE SAM"
+      ],
+      "featuredCast": [
+        "ONYII ALEX",
+        "CHIOMA NWOSU",
+        "MAURICE SAM"
+      ],
+      "channelName": "IfyEze Nolly tv",
+      "channelId": "UCFVseBemDz2KhVgh4S0-U1g",
+      "channelUrl": "https://www.youtube.com/@ifyezenollytv-b7u",
+      "publishedAt": "2026-10-23T14:00:06Z",
+      "year": 2026,
+      "durationMinutes": 132,
+      "viewCount": 47746,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=f_1n1UK6els",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "uPlR_gPsQRI",
+      "title": "SLAPPING QUEEN PT 2",
+      "rawTitle": "SLAPPING QUEEN PT 2 - Mike Godson, sonia ogene, Helen Peters - 2026 Latest Nigerian Nollywood Movie",
+      "synopsis": "Slapping Queen - New Nollywood Movie is a 2026 Nigerian film. It will have You Glue On A Chair Starring; Mike Godson, Sonia ogene, Helen Peters And More actors and actresses. -Slapping Queen (New Movie) - 2026 Latest New Nigerian Nollywood Movie",
+      "cast": [
+        "Mike Godson",
+        "Eelen Peters",
+        "Zainab Chinwe",
+        "Sonia Ogene",
+        "Karen igbinigie",
+        "Thomas Page",
+        "Onyi Blessing",
+        "Segun Success",
+        "Peter Mafia",
+        "Sunshine Erondu",
+        "Nnamdi Nwaigwe"
+      ],
+      "featuredCast": [
+        "Mike Godson",
+        "Eelen Peters",
+        "Zainab Chinwe"
+      ],
+      "channelName": "Nollywoodpicturestv",
+      "channelId": "UCi8vPG6uMxIjoZMhLLX2BkQ",
+      "channelUrl": "https://www.youtube.com/@nollywoodpicturestv",
+      "publishedAt": "2026-10-23T11:49:41Z",
+      "year": 2026,
+      "durationMinutes": 56,
+      "viewCount": 21694,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=uPlR_gPsQRI",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "tr5Z5xa1Eks",
+      "title": "Asorokele",
+      "rawTitle": "Asorokele - Latest Yoruba Movie 2026 Drama  | Anike Ami | Damilola Oni | Rai Jimoh ",
+      "synopsis": "After losing her sister, a woman as next of kin has to adopt the late sister's daughter but life spirals out of ordinary since the arrival of the new girl Deborah.",
+      "cast": [
+        "Anike Ami Olaniyi",
+        "Damilola Oni",
+        "Raihana Jimoh",
+        "Adewunmi John",
+        "Seyi Adeola",
+        "Lara Kowoti"
+      ],
+      "featuredCast": [
+        "Anike Ami Olaniyi",
+        "Damilola Oni",
+        "Raihana Jimoh"
+      ],
+      "channelName": "ANIKE AMI TV",
+      "channelId": "UCWmDPWdD8LyL-Pvc79lGGGg",
+      "channelUrl": "https://www.youtube.com/@anikeamitv",
+      "publishedAt": "2026-10-23T09:34:50Z",
+      "year": 2026,
+      "durationMinutes": 94,
+      "viewCount": 1719778,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=tr5Z5xa1Eks",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "ISWXF2wKSqs",
+      "title": "BLACK WIDOW",
+      "rawTitle": "BLACK WIDOW | She Escaped A Monster Only To Be Accused Of Murder: Full Nollywood Movie",
+      "synopsis": "Doris escaped one monster only to face another. Watch this intense Nollywood movie to see if she is a victim or a killer.",
+      "cast": [
+        "Daniel K"
+      ],
+      "featuredCast": [
+        "Daniel K"
+      ],
+      "channelName": "Reality Motion Pictures",
+      "channelId": "UCgjb2Sty9XRzwZhe0IyuU2w",
+      "channelUrl": "https://www.youtube.com/@realitymotionpictures",
+      "publishedAt": "2026-10-22T19:00:16Z",
+      "year": 2026,
+      "durationMinutes": 87,
+      "viewCount": 3066,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=ISWXF2wKSqs",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "_g694Z2FXhs",
+      "title": "STREET HUSBAND",
+      "rawTitle": "STREET HUSBAND - RUTH KADIRI, UJAM CHUKWUNONSO, QWASI BLAY, MBONG SULE, CJAY NWOKS",
+      "synopsis": "STREET HUSBAND is a full-length Nigerian film published by RuthKadiri247, featuring RUTH KADIRI, UJAM CHUKWUNONSO, QWASI BLAY. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "RUTH KADIRI",
+        "UJAM CHUKWUNONSO",
+        "QWASI BLAY",
+        "MBONG SULE",
+        "CJAY NWOKS"
+      ],
+      "featuredCast": [
+        "RUTH KADIRI",
+        "UJAM CHUKWUNONSO",
+        "QWASI BLAY"
+      ],
+      "channelName": "RuthKadiri247",
+      "channelId": "UCjcFNZE51DmSrGYBqixs0Ug",
+      "channelUrl": "https://www.youtube.com/@ruthkadiri247",
+      "publishedAt": "2026-10-22T16:51:52Z",
+      "year": 2026,
+      "durationMinutes": 128,
+      "viewCount": 2291054,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=_g694Z2FXhs",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "lg1qlCAthhg",
+      "title": "AALA (BOUNDARIES) 2026 Yoruba Movie Wumi Toriola, Femi Adekanye, Wumi Ajiboye, Jide Kosoko, Surutu",
+      "rawTitle": "AALA (BOUNDARIES) 2026 Yoruba Movie Wumi Toriola, Femi Adekanye, Wumi Ajiboye, Jide Kosoko, Surutu",
+      "synopsis": "Every person has a breaking point. How much more can she take before she finally draws a line that can never be crossed?",
+      "cast": [
+        "Wumi Toriola",
+        "Femi Adekanye",
+        "Wumi Ajiboye",
+        "Jide Kosoko",
+        "Remi Surutu"
+      ],
+      "featuredCast": [
+        "Wumi Toriola",
+        "Femi Adekanye",
+        "Wumi Ajiboye"
+      ],
+      "channelName": "Wumitoriolatv",
+      "channelId": "UCMO2p-lobPgj7e-Jt7aJsSw",
+      "channelUrl": "https://www.youtube.com/@wumitoriolatv",
+      "publishedAt": "2026-10-22T15:00:23Z",
+      "year": 2026,
+      "durationMinutes": 119,
+      "viewCount": 3363254,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=lg1qlCAthhg",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "KNjKmQMHiWI",
+      "title": "DROPS OF LOVE-ROSEMARY AFUWAPE, INEGENEBOR OSAREME, BENJAMIN EFFIONG,",
+      "rawTitle": "DROPS OF LOVE-ROSEMARY AFUWAPE, INEGENEBOR OSAREME, BENJAMIN EFFIONG, 2026 LATEST ROMANTIC MOVIE",
+      "synopsis": "DROPS OF LOVE-ROSEMARY AFUWAPE, INEGENEBOR OSAREME, BENJAMIN EFFIONG, is a full-length Nigerian film published by THREE TV, featuring Uche Montana, Omoni Oboli. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "Uche Montana",
+        "Omoni Oboli"
+      ],
+      "featuredCast": [
+        "Uche Montana",
+        "Omoni Oboli"
+      ],
+      "channelName": "THREE TV",
+      "channelId": "UCOCAyZ8JwDFDTSX2TYlWLvA",
+      "channelUrl": "https://www.youtube.com/@threetv03",
+      "publishedAt": "2026-10-21T16:00:03Z",
+      "year": 2026,
+      "durationMinutes": 125,
+      "viewCount": 562101,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=KNjKmQMHiWI",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "3qNimkYfBJM",
+      "title": "BROKE AND IN LOVE",
+      "rawTitle": "BROKE AND IN LOVE - FRANCES NWABUNIKE/CHIDI DIKE/NIGERIAN MOVIES 2026 LATEST FULL/ LOVE MOVIES",
+      "synopsis": "Please like the video and drop a comment if you find it interesting....... or not.",
+      "cast": [
+        "Frances Nwabunike",
+        "Chidi Dike https"
+      ],
+      "featuredCast": [
+        "Frances Nwabunike",
+        "Chidi Dike https"
+      ],
+      "channelName": "Divine Touch tv",
+      "channelId": "UCrIiFTecq0FVdtl81dsS2Zg",
+      "channelUrl": "https://www.youtube.com/@divinetouchtvsub_confirmation1",
+      "publishedAt": "2026-10-21T15:00:04Z",
+      "year": 2026,
+      "durationMinutes": 106,
+      "viewCount": 106853,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=3qNimkYfBJM",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "fFlsECAa0O8",
+      "title": "HOLY TEMPTATION",
+      "rawTitle": "HOLY TEMPTATION - SONIA UCHE, UCHE MONTANA, BABM OLAWUNMI Nigerian Movies 2026 Latest Full Movies",
+      "synopsis": "IFYEZE NOLLY TV @IfyEzenollytv-b7u PRODUCES BEST NOLLYWOOD MOVIES THAT ENTERTAINS AND EDUCATES ABOUT LIFE, MARRIAGE/RELATIONSHIP AND THE REAL AFRICAN CULTURE.",
+      "cast": [
+        "SONIA UCHE",
+        "UCHE MONTANA",
+        "BABM OLAWUNMI"
+      ],
+      "featuredCast": [
+        "SONIA UCHE",
+        "UCHE MONTANA",
+        "BABM OLAWUNMI"
+      ],
+      "channelName": "IfyEze Nolly tv",
+      "channelId": "UCFVseBemDz2KhVgh4S0-U1g",
+      "channelUrl": "https://www.youtube.com/@ifyezenollytv-b7u",
+      "publishedAt": "2026-10-21T14:30:28Z",
+      "year": 2026,
+      "durationMinutes": 100,
+      "viewCount": 5110,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=fFlsECAa0O8",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "E85KI4GFqP0",
+      "title": "TROUBLED SOULS PT 1",
+      "rawTitle": "TROUBLED SOULS PT 1 - Mike Godson, Stephen odimgbe, Ella Idu  - 2026 Latest Nigerian Nollywood Movie",
+      "synopsis": "Troubled Souls (The Vulture) New Nollywood Movie is a 2026 Nigerian film. It will have you glue on The Chair Mike Godson, Stephen Odimgbe, Ella Idu more actors and actresses. -Troubled Souls (New Movie) - 2026 Latest New Nigerian Nollywood Movie",
+      "cast": [
+        "Mike Godson",
+        "Stephen odimgbe",
+        "Ella Idu -"
+      ],
+      "featuredCast": [
+        "Mike Godson",
+        "Stephen odimgbe",
+        "Ella Idu -"
+      ],
+      "channelName": "Nollywoodpicturestv",
+      "channelId": "UCi8vPG6uMxIjoZMhLLX2BkQ",
+      "channelUrl": "https://www.youtube.com/@nollywoodpicturestv",
+      "publishedAt": "2026-10-21T11:02:44Z",
+      "year": 2026,
+      "durationMinutes": 58,
+      "viewCount": 87786,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=E85KI4GFqP0",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "Oec5IcZsMis",
+      "title": "LOVE ME THE SAME",
+      "rawTitle": "LOVE ME THE SAME - (NEW MOVIE) OMECHE OKO,MIWA OLORUNFEMI,BLAY QWASI 2026 NIGERIAN MOVIES",
+      "synopsis": "LOVE ME THE SAME is a full-length Nigerian film published by Chukwudubem TV, featuring OMECHE OKO, MIWA OLORUNFEMI, BLAY QWASI. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "OMECHE OKO",
+        "MIWA OLORUNFEMI",
+        "BLAY QWASI"
+      ],
+      "featuredCast": [
+        "OMECHE OKO",
+        "MIWA OLORUNFEMI",
+        "BLAY QWASI"
+      ],
+      "channelName": "Chukwudubem TV",
+      "channelId": "UCVamRTZdhUgz6kwMQOP265g",
+      "channelUrl": "https://www.youtube.com/@chukwudubetv",
+      "publishedAt": "2026-10-20T17:02:17Z",
+      "year": 2026,
+      "durationMinutes": 89,
+      "viewCount": 67671,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=Oec5IcZsMis",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "B7uA9LnSrAI",
+      "title": "HOLLOW VOWS",
+      "rawTitle": "HOLLOW VOWS - UCHE MONTANA, CHINENYE NNEBE, CHIKE DANIELS latest 2026 nigerian movie",
+      "synopsis": "HOLLOW VOWS is a full-length Nigerian film published by Uchenna Mbunabo Tv, featuring UCHE MONTANA, CHINENYE NNEBE, CHIKE DANIELS. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "UCHE MONTANA",
+        "CHINENYE NNEBE",
+        "CHIKE DANIELS",
+        "PAPAYA EX",
+        "ENOCK DARKO"
+      ],
+      "featuredCast": [
+        "UCHE MONTANA",
+        "CHINENYE NNEBE",
+        "CHIKE DANIELS"
+      ],
+      "channelName": "Uchenna Mbunabo Tv",
+      "channelId": "UCypAoMCRQuNL2RBwy-x4oQg",
+      "channelUrl": "https://www.youtube.com/@uchennambunabotv02",
+      "publishedAt": "2026-10-19T17:00:22Z",
+      "year": 2026,
+      "durationMinutes": 144,
+      "viewCount": 6843059,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=B7uA9LnSrAI",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "yN12Zlqb720",
+      "title": "LOVE ON THE 5TH FLOOR",
+      "rawTitle": "LOVE ON THE 5TH FLOOR - can you have a happy home if your husband earns lower?",
+      "synopsis": "LOVE ON THE 5TH FLOOR is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2026-10-18T16:09:07Z",
+      "year": 2026,
+      "durationMinutes": 102,
+      "viewCount": 387273,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=yN12Zlqb720",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "ncaPol5DNVE",
+      "title": "WHAT DIVIDES US Part 2",
+      "rawTitle": "WHAT DIVIDES US Part 2 ; KENNETH NWADIKE, OLUEBUBE OBIO, ANGEL, OMA, FESSA, 2026 Latest NWOOD Movie",
+      "synopsis": "WHAT DIVIDES US Part 2 is a full-length Nigerian film published by Uche Nancy Update Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "Uche Nancy Update Tv",
+      "channelId": "UCllyxqlpQNkJpXf3PHb4aWQ",
+      "channelUrl": "https://www.youtube.com/@uchenancyupdatetv",
+      "publishedAt": "2026-10-18T16:01:05Z",
+      "year": 2026,
+      "durationMinutes": 89,
+      "viewCount": 1676213,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=ncaPol5DNVE",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "HYx86T6Bty0",
+      "title": "THE MUD GAME",
+      "rawTitle": "THE MUD GAME - OGENE BOYS 4 - Brain Jotter Nigerian movies 2026 Latest Full Movies",
+      "synopsis": "THE MUD GAME is a full-length Nigerian film published by Brain Jotter. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "Brain Jotter",
+      "channelId": "UCxyb0darxVM-h7I4xYWrb4A",
+      "channelUrl": "https://www.youtube.com/@brainjottercomedian",
+      "publishedAt": "2026-10-18T16:00:18Z",
+      "year": 2026,
+      "durationMinutes": 87,
+      "viewCount": 753872,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=HYx86T6Bty0",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "NUtY3fiIeQ0",
+      "title": "A Rose For Asher",
+      "rawTitle": "A Rose For Asher - Timini Egbuson, Chizzy Alichi Mbah, Jennifer Obodo, 2026 Latest Nigerian Movie.",
+      "synopsis": "\"A ROSE FOR ASHER\" is an interesting movie to entertain you and your Family this weekend. You'll definitely love this latest entry in CHIZZYFLIX.",
+      "cast": [
+        "Chizzy Alichi Mbah",
+        "Jennifer Obodo",
+        "Aluko Olukemi Gold",
+        "Oma Nwachukwu"
+      ],
+      "featuredCast": [
+        "Chizzy Alichi Mbah",
+        "Jennifer Obodo",
+        "Aluko Olukemi Gold"
+      ],
+      "channelName": "CHIZZYFLIX",
+      "channelId": "UC1kkcxIVt0sqZeNBiv5LMMA",
+      "channelUrl": "https://www.youtube.com/@chizzyflix",
+      "publishedAt": "2026-10-18T14:00:14Z",
+      "year": 2026,
+      "durationMinutes": 169,
+      "viewCount": 4074586,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=NUtY3fiIeQ0",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "8Th1keO_XoE",
+      "title": "BEFORE FOREVER",
+      "rawTitle": "BEFORE FOREVER - New Nollywood Movie starring Daniel Etim, Ekama Etim-Inyang, Ronke Odusanya",
+      "synopsis": "BEFORE FOREVER is a full-length Nigerian film published by Uduak Isong TV, featuring Daniel Etim, Ekama Etim-Inyang, Ronke Odusanya. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "Daniel Etim",
+        "Ekama Etim-Inyang",
+        "Ronke Odusanya"
+      ],
+      "featuredCast": [
+        "Daniel Etim",
+        "Ekama Etim-Inyang",
+        "Ronke Odusanya"
+      ],
+      "channelName": "Uduak Isong TV",
+      "channelId": "UCVVs7iCZgDTBi7nPs4m4ksg",
+      "channelUrl": "https://www.youtube.com/@uduakisong",
+      "publishedAt": "2026-10-17T15:59:35Z",
+      "year": 2026,
+      "durationMinutes": 130,
+      "viewCount": 1357630,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=8Th1keO_XoE",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "2qKg-Pm2-Jk",
+      "title": "LOVE IS ENOUGH",
+      "rawTitle": "LOVE IS ENOUGH - Omeche Oko - Zuby Michael -Sylvia Madufor - 2026 latest Nigerian movies",
+      "synopsis": "Zuby michael love for Omeche got tested when he was arrested by police , what she did was unimaginable",
+      "cast": [
+        "Sylvia Madufor -"
+      ],
+      "featuredCast": [
+        "Sylvia Madufor -"
+      ],
+      "channelName": "GLOBAL CROWN TV",
+      "channelId": "UCoFEyPFU3Lc-mzDlDLTdPIA",
+      "channelUrl": "https://www.youtube.com/@globalcrowntv5294",
+      "publishedAt": "2026-10-17T15:30:09Z",
+      "year": 2026,
+      "durationMinutes": 110,
+      "viewCount": 1761672,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=2qKg-Pm2-Jk",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "CrMblpbQKyU",
+      "title": "A DROP OF LOVE-A stranger, a little girl&a secret that changes everything. Tana Adelana, Qwasi Blay",
+      "rawTitle": "A DROP OF LOVE-A stranger, a little girl&a secret that changes everything. Tana Adelana, Qwasi Blay",
+      "synopsis": "He lost everything he ever loved, but just when he was ready to give up on life, a mysterious encounter with a little girl changed his destiny forever.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "TANA ADELANA TV",
+      "channelId": "UCeJQws1GtCCM-R5ZNNlMkwA",
+      "channelUrl": "https://www.youtube.com/@tanaadelanatv",
+      "publishedAt": "2026-10-16T17:00:54Z",
+      "year": 2026,
+      "durationMinutes": 141,
+      "viewCount": 344429,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=CrMblpbQKyU",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "skz873IJcnw",
+      "title": "IN HER HANDS",
+      "rawTitle": "IN HER HANDS / Nigerian Movies 2026 Latest Full movies",
+      "synopsis": "An abusive husband receives the scare of his life. Would he change his behavior or run for his life?",
+      "cast": [
+        "Uche Jombo"
+      ],
+      "featuredCast": [
+        "Uche Jombo"
+      ],
+      "channelName": "Uche Jombo Tv",
+      "channelId": "UCb_9CAFuPYvf5xUKqXX2LUg",
+      "channelUrl": "https://www.youtube.com/@uchejombotv",
+      "publishedAt": "2026-10-16T17:00:32Z",
+      "year": 2026,
+      "durationMinutes": 96,
+      "viewCount": 2432952,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=skz873IJcnw",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "ttG3KFXvB5U",
+      "title": "THE WRONG BRIDE",
+      "rawTitle": "THE WRONG BRIDE -CHIKA IKE,DEZA THE GREAT,CHIOMA NWOSU,TONY UMEZ ,OBY TITUS- NEW 2026 NIGERIAN MOVIE",
+      "synopsis": "But is she really THE WRONG BRIDE, or is there more to the story than anyone knows?",
+      "cast": [
+        "CHIKA IKE",
+        "DEZA THE GREAT",
+        "CHIOMA NWOSU",
+        "TONY UMEZ",
+        "OBY TITUS- NEW"
+      ],
+      "featuredCast": [
+        "CHIKA IKE",
+        "DEZA THE GREAT",
+        "CHIOMA NWOSU"
+      ],
+      "channelName": "Chika Ike TV",
+      "channelId": "UCW6esd6iIQBxBKxIC6Gw8ag",
+      "channelUrl": "https://www.youtube.com/@chikaikenancy",
+      "publishedAt": "2026-10-16T17:00:13Z",
+      "year": 2026,
+      "durationMinutes": 135,
+      "viewCount": 1535161,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=ttG3KFXvB5U",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "4wulhkmFMnk",
+      "title": "THE THRILL OF YOU",
+      "rawTitle": "THE THRILL OF YOU - Nigerian movies 2026 Latest full movies",
+      "synopsis": "An unexpected attraction draws a woman into an obsession with a married stranger. As desire deepens and boundaries blur, secrets threaten to unravel their lives. How far will she go for a love that was never hers?",
+      "cast": [
+        "EFE IRELE",
+        "DEYEMI OKANLAWON",
+        "SCARLETT GOMEZ"
+      ],
+      "featuredCast": [
+        "EFE IRELE",
+        "DEYEMI OKANLAWON",
+        "SCARLETT GOMEZ"
+      ],
+      "channelName": "Efe Irele Tv",
+      "channelId": "UCQye3iJQhiDQOJrEOSlkG2w",
+      "channelUrl": "https://www.youtube.com/@theeefeireletv",
+      "publishedAt": "2026-10-16T17:00:06Z",
+      "year": 2026,
+      "durationMinutes": 110,
+      "viewCount": 2153018,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=4wulhkmFMnk",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "4M8MpKQE2OE",
+      "title": "A HURT TOO DEEP",
+      "rawTitle": "A HURT TOO DEEP - SOPHIA CHISOM (SOSO)/BRYAN OKWARA/NIGERIAN MOVIES 2026 LATEST MOVIES",
+      "synopsis": "Entitlement can make the heart lose its hold on the love it once had and felt for family.",
+      "cast": [
+        "Sophia Chisom"
+      ],
+      "featuredCast": [
+        "Sophia Chisom"
+      ],
+      "channelName": "OrjiTv",
+      "channelId": "UCiahLsxiMoVkuUM1bbgPg0g",
+      "channelUrl": "https://www.youtube.com/@orjitv",
+      "publishedAt": "2026-10-16T16:00:09Z",
+      "year": 2026,
+      "durationMinutes": 104,
+      "viewCount": 308257,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=4M8MpKQE2OE",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "f2HPVr2apPs",
+      "title": "IYE",
+      "rawTitle": "IYE - Babatunde Aderinoye, Irewole Olaniyan,Oyindamola Sanni Latest 2026 YorubaDrama Movie#trending",
+      "synopsis": "Every choice comes with a price, every desire has a cost and every secret leaves a mark. But when the price is too high, what are you willing to lose? IYE(Price) showing now on Adekaz Premium Tv Youtube.",
+      "cast": [
+        "Babatunde Aderinoye",
+        "Irewole Olaniyan",
+        "Oyindamola Sanni"
+      ],
+      "featuredCast": [
+        "Babatunde Aderinoye",
+        "Irewole Olaniyan",
+        "Oyindamola Sanni"
+      ],
+      "channelName": "ADEKAZ PREMIUM TV",
+      "channelId": "UCK2-495cMvdhaMqXcLlgmcg",
+      "channelUrl": "https://www.youtube.com/@adekazpremiumtvee",
+      "publishedAt": "2026-10-16T15:00:23Z",
+      "year": 2026,
+      "durationMinutes": 126,
+      "viewCount": 994603,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=f2HPVr2apPs",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "bhEtR7-J76s",
+      "title": "F'EMI R'EMI Part 2 Latest Yoruba Movie 2026 Kola Ajeyemi/Ibrahim Chatta/Debbie Shokoya/Lalude",
+      "rawTitle": "F'EMI R'EMI Part 2 Latest Yoruba Movie 2026 Kola Ajeyemi/Ibrahim Chatta/Debbie Shokoya/Lalude",
+      "synopsis": "*What would you do if saving the life of someone you love meant sacrificing your own?*",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "KolawoleAjeyemi Channel",
+      "channelId": "UCT7_EAKyFd6WsL8MirybSCw",
+      "channelUrl": "https://www.youtube.com/@kolawoleajeyemichannel",
+      "publishedAt": "2026-10-16T15:00:04Z",
+      "year": 2026,
+      "durationMinutes": 143,
+      "viewCount": 1450803,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=bhEtR7-J76s",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "Etj3X7j--50",
+      "title": "OUT OF TIME",
+      "rawTitle": "OUT OF TIME -FREDERICK LEONARD, SARIAN MARTIN. Latest Nigerian Movie 2026 #trending #movie #Drama",
+      "synopsis": "OUT OF TIME | FREDERICK LEONARD & SARIAN MARTIN | A FREDERICK LEONARD FILM",
+      "cast": [
+        "FREDERICK LEONARD",
+        "SARIAN MARTIN",
+        "HUMANITY COLLIDE",
+        "WHICH ONE SHOULD PREVAIL"
+      ],
+      "featuredCast": [
+        "FREDERICK LEONARD",
+        "SARIAN MARTIN",
+        "HUMANITY COLLIDE"
+      ],
+      "channelName": "Frederick Leonard TV.",
+      "channelId": "UCzeFm4h5hkGm4y6SV9zvGjA",
+      "channelUrl": "https://www.youtube.com/@frederickleonardtv.",
+      "publishedAt": "2026-10-15T18:00:13Z",
+      "year": 2026,
+      "durationMinutes": 125,
+      "viewCount": 8173419,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=Etj3X7j--50",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "FUzxc0_3pg8",
+      "title": "INVEST IN MY HEART",
+      "rawTitle": "INVEST IN MY HEART - RUTH KADIRI, VAN VICKER, UCHE JOMBO",
+      "synopsis": "INVEST IN MY HEART is a full-length Nigerian film published by RuthKadiri247, featuring RUTH KADIRI, VAN VICKER, UCHE JOMBO. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "RUTH KADIRI",
+        "VAN VICKER",
+        "UCHE JOMBO"
+      ],
+      "featuredCast": [
+        "RUTH KADIRI",
+        "VAN VICKER",
+        "UCHE JOMBO"
+      ],
+      "channelName": "RuthKadiri247",
+      "channelId": "UCjcFNZE51DmSrGYBqixs0Ug",
+      "channelUrl": "https://www.youtube.com/@ruthkadiri247",
+      "publishedAt": "2026-10-15T16:04:26Z",
+      "year": 2026,
+      "durationMinutes": 137,
+      "viewCount": 3808407,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=FUzxc0_3pg8",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "PnNzKh6dXNU",
+      "title": "WHAT DIVIDES US",
+      "rawTitle": "WHAT DIVIDES US ; KENNETH NWADIKE, OLUEBUBE OBIO, ANGEL.U, OMA.N, FESSA, 2026 Latest Nollywood Movie",
+      "synopsis": "WHAT DIVIDES US is a full-length Nigerian film published by Uche Nancy Update Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "Uche Nancy Update Tv",
+      "channelId": "UCllyxqlpQNkJpXf3PHb4aWQ",
+      "channelUrl": "https://www.youtube.com/@uchenancyupdatetv",
+      "publishedAt": "2026-10-15T16:00:39Z",
+      "year": 2026,
+      "durationMinutes": 108,
+      "viewCount": 2781239,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=PnNzKh6dXNU",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "ZxeK_Z9yh9Y",
+      "title": "UNWRITTEN VOWS",
+      "rawTitle": "UNWRITTEN VOWS - SONIA UCHE, FREDERICK LEONARD, EBELE OKARO, LATEST 2026 NIGERIAN MOVIE",
+      "synopsis": "Camilla has big dreams and a marriage that challenges them at every turn. As family tensions rise and long-buried frustrations come to light, unexpected alliances begin to question the traditions and expectations that shape love, marriage, and a woman’s place in the home.",
+      "cast": [
+        "SONIA UCHE",
+        "FREDERICK LEONARD",
+        "EBELE OKARO"
+      ],
+      "featuredCast": [
+        "SONIA UCHE",
+        "FREDERICK LEONARD",
+        "EBELE OKARO"
+      ],
+      "channelName": "Sonia Uche Tv",
+      "channelId": "UCHY9J0IWIWht6GqIBiLidBA",
+      "channelUrl": "https://www.youtube.com/@soniauchetv",
+      "publishedAt": "2026-10-14T17:00:34Z",
+      "year": 2026,
+      "durationMinutes": 142,
+      "viewCount": 4387208,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=ZxeK_Z9yh9Y",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "FUgAMzW2DXA",
+      "title": "A BABY FOR ALL",
+      "rawTitle": "A BABY FOR ALL - PAMELA OKOYE/OGE OKOYE/NIGERIAN MOVIES 2026 LATEST FULL/ LOVE MOVIES",
+      "synopsis": "As baby matters arises, so does their love for each other take a downturn.",
+      "cast": [
+        "Pamela Okoye",
+        "Oge Okoye",
+        "Daniel Abua https"
+      ],
+      "featuredCast": [
+        "Pamela Okoye",
+        "Oge Okoye",
+        "Daniel Abua https"
+      ],
+      "channelName": "Divine Touch tv",
+      "channelId": "UCrIiFTecq0FVdtl81dsS2Zg",
+      "channelUrl": "https://www.youtube.com/@divinetouchtvsub_confirmation1",
+      "publishedAt": "2026-10-14T15:00:29Z",
+      "year": 2026,
+      "durationMinutes": 121,
+      "viewCount": 77921,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=FUgAMzW2DXA",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "SJLKbe1kvv0",
+      "title": "Awolesu 3 Latest Yoruba Movie 2026 Drama",
+      "rawTitle": "Awolesu 3 Latest Yoruba Movie 2026 Drama | Ogboluke , Abeni Agbon, Baba Tee, Iya Gbonkan",
+      "synopsis": "Awolesu 3 Latest Yoruba Movie 2026 Drama is a full-length Nigerian film published by Wale Rasaq TV, featuring Ogboluke, Abeni Agbon, Baba Tee. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "Ogboluke",
+        "Abeni Agbon",
+        "Baba Tee",
+        "Iya Gbonkan"
+      ],
+      "featuredCast": [
+        "Ogboluke",
+        "Abeni Agbon",
+        "Baba Tee"
+      ],
+      "channelName": "Wale Rasaq TV",
+      "channelId": "UCguvNkpwGccivUExfiQyZFA",
+      "channelUrl": "https://www.youtube.com/@pinnacle05",
+      "publishedAt": "2026-10-14T07:05:46Z",
+      "year": 2026,
+      "durationMinutes": 109,
+      "viewCount": 881989,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=SJLKbe1kvv0",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "_9Z0EtKKNVQ",
+      "title": "LOVE AND DUTY",
+      "rawTitle": "LOVE AND DUTY - MAURICE SAM, BAMBAM OLAWUNMI, Latest 2026 Nigerian Movie",
+      "synopsis": "Love is beautiful, but what happens when the person you love must choose between following their heart and doing what is expected of them?",
+      "cast": [
+        "MAURICE SAM"
+      ],
+      "featuredCast": [
+        "MAURICE SAM"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-10-13T17:00:09Z",
+      "year": 2026,
+      "durationMinutes": 134,
+      "viewCount": 8115039,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=_9Z0EtKKNVQ",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "DeqY8bUcmFM",
+      "title": "BEFORE WE LET GO",
+      "rawTitle": "BEFORE WE LET GO - TANA ADELANA, CHUKS CHYKE, DESIRE CHUKWUDOLUE latest 2026 nigerian movies",
+      "synopsis": "BEFORE WE LET GO is a full-length Nigerian film published by One And Two Films Tv, featuring TANA ADELANA, CHUKS CHYKE, DESIRE CHUKWUDOLUE. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "TANA ADELANA",
+        "CHUKS CHYKE",
+        "DESIRE CHUKWUDOLUE",
+        "BLOSSOM OKPALEKE"
+      ],
+      "featuredCast": [
+        "TANA ADELANA",
+        "CHUKS CHYKE",
+        "DESIRE CHUKWUDOLUE"
+      ],
+      "channelName": "One And Two Films Tv",
+      "channelId": "UChKCY9X0CIYtnRgIOH_egFg",
+      "channelUrl": "https://www.youtube.com/@oneandtwofilmstv",
+      "publishedAt": "2026-10-12T16:00:16Z",
+      "year": 2026,
+      "durationMinutes": 104,
+      "viewCount": 958282,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=DeqY8bUcmFM",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "vxtz4rAZ96g",
+      "title": "THE DRUNKARD FATHER /MRLATINTV2026 COMEDY SERIES",
+      "rawTitle": "THE DRUNKARD FATHER /MRLATINTV2026 COMEDY SERIES ",
+      "synopsis": "THE DRUNKARD FATHER /MRLATINTV2026 COMEDY SERIES is a full-length Nigerian film published by MRLATINTV. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "MRLATINTV",
+      "channelId": "UCLgh90mrjuFP6ZMw09Fp2SA",
+      "channelUrl": "https://www.youtube.com/@mrlatin1510",
+      "publishedAt": "2026-10-12T11:00:09Z",
+      "year": 2026,
+      "durationMinutes": 92,
+      "viewCount": 143228,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=vxtz4rAZ96g",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "dYq7Hw8jIHs",
+      "title": "IN OUR PARADISE",
+      "rawTitle": "IN OUR PARADISE - ONYII ALEX, MAURICE SAM #INOURPARADISE #trending ",
+      "synopsis": "IN OUR PARADISE is a full-length Nigerian film published by onyiialexTV, featuring ONYII ALEX, MAURICE SAM. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "ONYII ALEX",
+        "MAURICE SAM"
+      ],
+      "featuredCast": [
+        "ONYII ALEX",
+        "MAURICE SAM"
+      ],
+      "channelName": "onyiialexTV",
+      "channelId": "UCx67PyaVTdkNTt2n6p-WIbw",
+      "channelUrl": "https://www.youtube.com/@onyiialextv",
+      "publishedAt": "2026-10-11T17:02:12Z",
+      "year": 2026,
+      "durationMinutes": 120,
+      "viewCount": 3281919,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=dYq7Hw8jIHs",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "-ahL61xAPQQ",
+      "title": "MATTERS OF THE HEART",
+      "rawTitle": "MATTERS OF THE HEART - SARIAN MARTIN, TIMINI EGBUSON, AUDREY HARRISON, Latest 2026 Nigerian Movie",
+      "synopsis": "Two hearts, different expectations, and one love story that proves relationships are never as simple as they seem.",
+      "cast": [
+        "SARIAN MARTIN",
+        "TIMINI EGBUSON",
+        "AUDREY HARRISON"
+      ],
+      "featuredCast": [
+        "SARIAN MARTIN",
+        "TIMINI EGBUSON",
+        "AUDREY HARRISON"
+      ],
+      "channelName": "Sarian Martin Tv",
+      "channelId": "UCpho61bUzmt4gFFb--Kggkw",
+      "channelUrl": "https://www.youtube.com/@sarianmartintv.",
+      "publishedAt": "2026-10-11T16:00:26Z",
+      "year": 2026,
+      "durationMinutes": 102,
+      "viewCount": 7248075,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=-ahL61xAPQQ",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "R7IACJklKfg",
+      "title": "PLAY ME ONCE",
+      "rawTitle": "PLAY ME ONCE (Full Movie) | Nollywood Movies 2026 Latest Full Movies",
+      "synopsis": "PLAY ME ONCE is a full-length Nigerian film published by Uche Nancy tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "Uche Nancy tv",
+      "channelId": "UCzKrLr1ZD1uds-7c7vaSjVA",
+      "channelUrl": "https://www.youtube.com/@uchenancytv",
+      "publishedAt": "2026-10-11T16:00:24Z",
+      "year": 2026,
+      "durationMinutes": 178,
+      "viewCount": 638020,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=R7IACJklKfg",
+      "lastChecked": "2026-10-31"
+    },
+    {
+      "videoId": "hWl9YeO6kxQ",
+      "title": "THE UNEXPECTED",
+      "rawTitle": "THE UNEXPECTED - BLESSING ONWUKWE,KENNETH NWADIKE ,ANITA NWACHI, Latest 2026 Nigerian Comedy Movie",
+      "synopsis": "THE UNEXPECTED IS COMEDY AND INSPRING MOVIE THAT WILL KEEP YOU WATCH TO THE VERY END.",
+      "cast": [
+        "BLESSING ONWUKWE",
+        "KENNETH NWADIKE",
+        "ANITA NWACHI"
+      ],
+      "featuredCast": [
+        "BLESSING ONWUKWE",
+        "KENNETH NWADIKE",
+        "ANITA NWACHI"
+      ],
+      "channelName": "Mr  Aloy  Tv",
+      "channelId": "UCoPAnHtnoM7f0p7BfApC5-g",
+      "channelUrl": "https://www.youtube.com/@mraloytv",
+      "publishedAt": "2026-10-11T11:58:44Z",
+      "year": 2026,
+      "durationMinutes": 106,
+      "viewCount": 287883,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=hWl9YeO6kxQ",
+      "lastChecked": "2026-10-31"
+    },
     {
       "videoId": "0rakGyBI1EE",
       "title": "BREAKING POINT",
@@ -1085,6 +2933,24 @@
       "durationMinutes": 107,
       "videoUrl": "https://www.youtube.com/watch?v=2Ficn2BMlI8",
       "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "XO3_GT1BKPI",
+      "title": "FOREVER YOURS",
+      "rawTitle": "FOREVER YOURS - Nigerian movies 2026/ lastest full movies/ Lastest nollywood romantic movie",
+      "synopsis": "FOREVER YOURS is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2026-09-26T16:08:13Z",
+      "year": 2026,
+      "durationMinutes": 123,
+      "viewCount": 2542853,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=XO3_GT1BKPI",
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "pG_962LtEf8",
@@ -2216,10 +4082,10 @@
       "publishedAt": "2026-09-10T17:00:06Z",
       "year": 2026,
       "durationMinutes": 71,
-      "viewCount": 12203,
+      "viewCount": 12975,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=OaNW1UMrCDw",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "0_AVXnUPp9o",
@@ -2445,6 +4311,24 @@
       "durationMinutes": 122,
       "videoUrl": "https://www.youtube.com/watch?v=ORIBBpN7YMs",
       "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "0yebCKHIlrg",
+      "title": "MY CLASS TEACHER",
+      "rawTitle": "MY CLASS TEACHER - Uzo Arukwe lastest movie/ comedy/ nollywoodcomedy",
+      "synopsis": "MY CLASS TEACHER is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2026-09-08T15:54:01Z",
+      "year": 2026,
+      "durationMinutes": 99,
+      "viewCount": 1250707,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=0yebCKHIlrg",
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "mioYr9pVk6M",
@@ -3712,7 +5596,7 @@
       "videoId": "3YIlmOqwCZs",
       "title": "LOVE IN FULL COLORS",
       "rawTitle": "LOVE IN FULL COLORS - Timini Egbuson/ Toni Tones / Sharon Rotimi/ Lastest 2026 love film",
-      "synopsis": "LOVE IN FULL COLORS is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Timini Egbuson, Toni Tones, Sharon Rotimi.",
+      "synopsis": "LOVE IN FULL COLORS is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Timini Egbuson, Toni Tones, Sharon Rotimi. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Timini Egbuson",
         "Toni Tones",
@@ -3729,8 +5613,10 @@
       "publishedAt": "2026-08-25T16:21:35Z",
       "year": 2026,
       "durationMinutes": 109,
+      "viewCount": 3708371,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=3YIlmOqwCZs",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "NCnuFa1qouA",
@@ -3940,7 +5826,7 @@
       "videoId": "f6hOMccO6fI",
       "title": "VINDICTIVE (",
       "rawTitle": "VINDICTIVE (Full Movie 2026) —Her Revenge Cost Him His Life | ESO DIKE, JENIFER ELIOGU, DEBBY FELIX",
-      "synopsis": "VINDICTIVE (Full Movie) — When a polygamous man dies just a year after marrying his second wife, the unbelievable begins to unfold...",
+      "synopsis": "A story of betrayal, inheritance, and a daughter's quiet war for revenge.",
       "cast": [
         "Eso Dike",
         "Jennifer Eliogu"
@@ -3955,10 +5841,10 @@
       "publishedAt": "2026-08-20T17:00:06Z",
       "year": 2026,
       "durationMinutes": 90,
-      "viewCount": 209526,
+      "viewCount": 214516,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=f6hOMccO6fI",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "X3HaWmJoSRU",
@@ -4620,6 +6506,24 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "9YsfW28n_WY",
+      "title": "THE EDGE BETWEEN US",
+      "rawTitle": "THE EDGE BETWEEN US - Lastest 2026 romantic drama/ lastest Nollywood movie 2026",
+      "synopsis": "THE EDGE BETWEEN US is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2026-08-09T16:56:29Z",
+      "year": 2026,
+      "durationMinutes": 105,
+      "viewCount": 1095083,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=9YsfW28n_WY",
+      "lastChecked": "2026-10-31"
+    },
+    {
       "videoId": "VyaPwFRhwM8",
       "title": "For The Love of Kene - New Nigerian Movie",
       "rawTitle": "For The Love of Kene - New Nigerian Movie starring Bimbo Ademoye, Blessing J Nze, Elijah Chukwuemeka",
@@ -4932,10 +6836,10 @@
       "publishedAt": "2026-08-06T16:00:34Z",
       "year": 2026,
       "durationMinutes": 94,
-      "viewCount": 512566,
+      "viewCount": 546786,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=09NEC7HlkyI",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "Ybjzwf_-BWw",
@@ -5335,7 +7239,7 @@
       "videoId": "s8s9I-6ay0E",
       "title": "LOVE BY NUMBERS",
       "rawTitle": "LOVE BY NUMBERS - Frederick Leonard / perpetual ukadike /frances Ben ",
-      "synopsis": "LOVE BY NUMBERS is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Frederick Leonard, frances Ben.",
+      "synopsis": "LOVE BY NUMBERS is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Frederick Leonard, frances Ben. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Frederick Leonard",
         "frances Ben"
@@ -5350,8 +7254,10 @@
       "publishedAt": "2026-07-29T16:03:08Z",
       "year": 2026,
       "durationMinutes": 130,
+      "viewCount": 1645205,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=s8s9I-6ay0E",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "S95EYbdROwU",
@@ -8820,15 +10726,14 @@
       "videoId": "E8BD3l7r4_k",
       "title": "MAMA SAYS NO",
       "rawTitle": "MAMA SAYS NO - Uche jombo / Mercy Aigbe /David eyo/ bianca ugowanne",
-      "synopsis": "MAMA SAYS NO is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Uche jombo, Mercy Aigbe, David eyo.",
+      "synopsis": "MAMA SAYS NO is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Uche jombo, Mercy Aigbe, David eyo. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Uche Jombo",
+        "Uche jombo",
         "Mercy Aigbe",
-        "David eyo",
-        "Bianca Ugowanne"
+        "David eyo"
       ],
       "featuredCast": [
-        "Uche Jombo",
+        "Uche jombo",
         "Mercy Aigbe",
         "David eyo"
       ],
@@ -8838,8 +10743,10 @@
       "publishedAt": "2026-06-11T16:02:25Z",
       "year": 2026,
       "durationMinutes": 99,
+      "viewCount": 2500780,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=E8BD3l7r4_k",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "sjxpjFvQYNY",
@@ -9017,10 +10924,10 @@
       "publishedAt": "2026-06-06T17:25:24Z",
       "year": 2026,
       "durationMinutes": 100,
-      "viewCount": 69241,
+      "viewCount": 69953,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=46wQ5h7TIOc",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "plqDecNGTtA",
@@ -10388,13 +12295,13 @@
       "videoId": "v8oV4_NCa5Q",
       "title": "My Inheritance",
       "rawTitle": "My Inheritance - Nosa Rex/ Oluebube obi in lastest comedy ",
-      "synopsis": "My Inheritance is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Nosa Rex, Oluebube obi in lastest.",
+      "synopsis": "My Inheritance is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Nosa Rex, Oluebube obi in lastest. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Nosa rex",
+        "Nosa Rex",
         "Oluebube obi in lastest"
       ],
       "featuredCast": [
-        "Nosa rex",
+        "Nosa Rex",
         "Oluebube obi in lastest"
       ],
       "channelName": "ChinneyLoveEze Tv",
@@ -10403,8 +12310,10 @@
       "publishedAt": "2026-05-18T17:06:59Z",
       "year": 2026,
       "durationMinutes": 95,
+      "viewCount": 3344666,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=v8oV4_NCa5Q",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "n1tbabB5EMo",
@@ -12013,6 +13922,24 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "xNZLTdz77aM",
+      "title": "LOVE IN OVERDRIVE",
+      "rawTitle": "LOVE IN OVERDRIVE - The best Romantic Movie of 2026",
+      "synopsis": "LOVE IN OVERDRIVE is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2026-04-19T16:14:50Z",
+      "year": 2026,
+      "durationMinutes": 88,
+      "viewCount": 3505286,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=xNZLTdz77aM",
+      "lastChecked": "2026-10-31"
+    },
+    {
       "videoId": "P-uNk_PQ5Jg",
       "title": "FOUR SISTERS",
       "rawTitle": "FOUR SISTERS - PRISMA JAMES/BRYAN/ANITA/NANCY/KRYSTAL | Nollywood Movies 2026 Latest Full Movies",
@@ -13376,6 +15303,24 @@
       "lastChecked": "2026-10-05"
     },
     {
+      "videoId": "SrZT5JXGHq8",
+      "title": "WHEN GRACE MEETS DESIRE",
+      "rawTitle": "WHEN GRACE MEETS DESIRE - Latest Nollywood movie 2026",
+      "synopsis": "WHEN GRACE MEETS DESIRE is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2026-03-29T18:10:45Z",
+      "year": 2026,
+      "durationMinutes": 91,
+      "viewCount": 2235795,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=SrZT5JXGHq8",
+      "lastChecked": "2026-10-31"
+    },
+    {
       "videoId": "ZW-v2_lrIE0",
       "title": "CROWN AND THRONE",
       "rawTitle": "CROWN AND THRONE -  SARIAN MARTIN, MICHAEL DAPPA, IK OGBONNA, Latest 2026 Nigerian Movie",
@@ -14276,13 +16221,13 @@
       "synopsis": "Lemfi is a mobile app for users in the USA, EU, UK and canada to send money to nigeria, ghana and 8 other African countries in minutes with zero transfer fees",
       "cast": [
         "Wunmi Toriola",
-        "Micheal Dappa",
-        "Bolaji Ogunmola"
+        "Micheal dappa",
+        "Bolaji ogunmola"
       ],
       "featuredCast": [
         "Wunmi Toriola",
-        "Micheal Dappa",
-        "Bolaji Ogunmola"
+        "Micheal dappa",
+        "Bolaji ogunmola"
       ],
       "channelName": "ChinneyLoveEze Tv",
       "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
@@ -14290,8 +16235,10 @@
       "publishedAt": "2026-03-14T17:04:50Z",
       "year": 2026,
       "durationMinutes": 113,
+      "viewCount": 2939195,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=0d4H6hw45KI",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "TgtlRe07u0M",
@@ -15570,12 +17517,12 @@
       "rawTitle": "CONTRACT OF THE HEART - Micheal dappa/Ekama etim inyang",
       "synopsis": "Lemfi is a mobile app for users in the us, uk, EU and canada to send money to nigeria, ghana and 8 other African countries in minutes with Zero transfer charges.",
       "cast": [
-        "Micheal Dappa",
-        "Ekama Etim Inyang"
+        "Micheal dappa",
+        "Ekama etim inyang"
       ],
       "featuredCast": [
-        "Micheal Dappa",
-        "Ekama Etim Inyang"
+        "Micheal dappa",
+        "Ekama etim inyang"
       ],
       "channelName": "ChinneyLoveEze Tv",
       "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
@@ -15583,8 +17530,10 @@
       "publishedAt": "2026-02-22T15:11:46Z",
       "year": 2026,
       "durationMinutes": 97,
+      "viewCount": 2479659,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=bhUf70_uzJE",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "LxLaTVUIYFY",
@@ -16304,7 +18253,7 @@
       "videoId": "x-gw7sI5hb4",
       "title": "HIRE A WOMAN",
       "rawTitle": "HIRE A WOMAN - Uche Montana / Nancy Isime / uzo Arukwe / Erica nlewedim ",
-      "synopsis": "HIRE A WOMAN is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Uche Montana, Nancy Isime, uzo Arukwe.",
+      "synopsis": "HIRE A WOMAN is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Uche Montana, Nancy Isime, uzo Arukwe. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Uche Montana",
         "Nancy Isime",
@@ -16322,8 +18271,10 @@
       "publishedAt": "2026-02-11T16:01:31Z",
       "year": 2026,
       "durationMinutes": 108,
+      "viewCount": 1327432,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=x-gw7sI5hb4",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "S8vdpPY0WBg",
@@ -18552,16 +20503,16 @@
       "videoId": "ClMt-cWHW9g",
       "title": "UJU'S WAR",
       "rawTitle": "UJU'S WAR - Sonia uche/Chioma nwosu/Bryan okwara",
-      "synopsis": "UJU'S WAR is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Sonia uche, Chioma nwosu, Bryan okwara.",
+      "synopsis": "UJU'S WAR is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Sonia uche, Chioma nwosu, Bryan okwara. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Sonia Uche",
-        "Chioma Nwosu",
-        "Bryan Okwara"
+        "Sonia uche",
+        "Chioma nwosu",
+        "Bryan okwara"
       ],
       "featuredCast": [
-        "Sonia Uche",
-        "Chioma Nwosu",
-        "Bryan Okwara"
+        "Sonia uche",
+        "Chioma nwosu",
+        "Bryan okwara"
       ],
       "channelName": "ChinneyLoveEze Tv",
       "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
@@ -18569,8 +20520,10 @@
       "publishedAt": "2026-01-02T16:03:05Z",
       "year": 2026,
       "durationMinutes": 127,
+      "viewCount": 4114426,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=ClMt-cWHW9g",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "957DdLrnGjs",
@@ -18711,6 +20664,24 @@
       "durationMinutes": 157,
       "videoUrl": "https://www.youtube.com/watch?v=yqirbA-Za50",
       "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "FKFE1TrXL6k",
+      "title": "GEORGE HATES CHRISTMAS",
+      "rawTitle": "GEORGE HATES CHRISTMAS - Baaj  adebule/ perpetual ukadike",
+      "synopsis": "GEORGE HATES CHRISTMAS is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2025-12-28T16:47:46Z",
+      "year": 2025,
+      "durationMinutes": 92,
+      "viewCount": 307532,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=FKFE1TrXL6k",
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "-OPEb4xy0G4",
@@ -19275,6 +21246,24 @@
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=vIHyAzSdXgw",
       "lastChecked": "2026-10-05"
+    },
+    {
+      "videoId": "kJXYe6i1Iqw",
+      "title": "THIS IS WAR",
+      "rawTitle": "THIS IS WAR - Oge okoye/uche jombo - His family must unite before he can be buried",
+      "synopsis": "THIS IS WAR is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2025-12-20T17:22:26Z",
+      "year": 2025,
+      "durationMinutes": 120,
+      "viewCount": 2353080,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=kJXYe6i1Iqw",
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "ZwK8NeyI9W4",
@@ -20756,6 +22745,24 @@
       "lastChecked": "2026-10-05"
     },
     {
+      "videoId": "L4ayft9l36w",
+      "title": "AFTER 25 - (Almost 25 Part2) Uche Jombo/ omeche oko/ steve onu",
+      "rawTitle": "AFTER 25 - (Almost 25 Part2) Uche Jombo/ omeche oko/ steve onu",
+      "synopsis": "AFTER 25 - (Almost 25 Part2) Uche Jombo/ omeche oko/ steve onu is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2025-12-03T15:57:57Z",
+      "year": 2025,
+      "durationMinutes": 103,
+      "viewCount": 1478474,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=L4ayft9l36w",
+      "lastChecked": "2026-10-31"
+    },
+    {
       "videoId": "sG402gMkfEw",
       "title": "Irin Yoruba Movie 2025 Drama Wunmi Ajiboye, Segun Ogungbe, Akin Lewis, Okele, Adeshina Garuba",
       "rawTitle": "Irin Yoruba Movie 2025 Drama Wunmi Ajiboye, Segun Ogungbe, Akin Lewis, Okele, Adeshina Garuba",
@@ -21413,6 +23420,24 @@
       "durationMinutes": 132,
       "videoUrl": "https://www.youtube.com/watch?v=nNBISa5Znc0",
       "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "gNeV9uUBH0E",
+      "title": "AKUNNE (Mothers wealth)",
+      "rawTitle": "AKUNNE (Mothers wealth) - Patience Ozokwor / stephen odimgbe / emem udonquak",
+      "synopsis": "AKUNNE (Mothers wealth) is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2025-11-22T16:22:04Z",
+      "year": 2025,
+      "durationMinutes": 144,
+      "viewCount": 1188684,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=gNeV9uUBH0E",
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "EoI0U0LA8Ww",
@@ -23288,7 +25313,7 @@
       "videoId": "xakGZ9xsCkI",
       "title": "LIKE FATHER LIKE DAUGHTER",
       "rawTitle": "LIKE FATHER LIKE DAUGHTER - Nosa rex/ Ebube obio/ LastestNollywoodcomedy/ lastestnollywoodmovie2025",
-      "synopsis": "LIKE FATHER LIKE DAUGHTER is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Nosa rex, Ebube obio, LastestNollywoodcomedy.",
+      "synopsis": "LIKE FATHER LIKE DAUGHTER is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Nosa rex, Ebube obio, LastestNollywoodcomedy. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Nosa rex",
         "Ebube obio",
@@ -23305,8 +25330,10 @@
       "publishedAt": "2025-10-27T15:02:01Z",
       "year": 2025,
       "durationMinutes": 100,
+      "viewCount": 6416825,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=xakGZ9xsCkI",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "0l858bAEI6Y",
@@ -23633,7 +25660,7 @@
       "videoId": "YA1zs0KUb88",
       "title": "TEST OF LOVE",
       "rawTitle": "TEST OF LOVE - Micheal dapper/ Enyinna nwigwe/ Oluchi amajuoye",
-      "synopsis": "TEST OF LOVE is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring t Earning https.",
+      "synopsis": "TEST OF LOVE is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring t Earning https. Watch it through the publisher's official YouTube release.",
       "cast": [
         "t Earning https"
       ],
@@ -23646,8 +25673,10 @@
       "publishedAt": "2025-10-22T16:08:45Z",
       "year": 2025,
       "durationMinutes": 96,
+      "viewCount": 586267,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=YA1zs0KUb88",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "XG09pQVPte8",
@@ -25294,7 +27323,7 @@
       "videoId": "xv7BDq29PYU",
       "title": "LOVE BEYOND THE CHARM",
       "rawTitle": "LOVE BEYOND THE CHARM - Timini Egbuson / Michelle ogbu ",
-      "synopsis": "LOVE BEYOND THE CHARM is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Timini Egbuson, Michelle ogbu.",
+      "synopsis": "LOVE BEYOND THE CHARM is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Timini Egbuson, Michelle ogbu. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Timini Egbuson",
         "Michelle ogbu"
@@ -25309,8 +27338,10 @@
       "publishedAt": "2025-09-26T16:04:02Z",
       "year": 2025,
       "durationMinutes": 98,
+      "viewCount": 3954763,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=xv7BDq29PYU",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "rcA928I_33A",
@@ -27303,14 +29334,14 @@
       "videoId": "cp235SmYc4w",
       "title": "27 LETTERS TO YOU",
       "rawTitle": "27 LETTERS TO YOU - Timini Egbuson / Ego nwosu ",
-      "synopsis": "27 LETTERS TO YOU is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Timini Egbuson, Ego nwosu.",
+      "synopsis": "27 LETTERS TO YOU is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Timini Egbuson, Ego nwosu. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Timini Egbuson",
-        "Ego Nwosu"
+        "Ego nwosu"
       ],
       "featuredCast": [
         "Timini Egbuson",
-        "Ego Nwosu"
+        "Ego nwosu"
       ],
       "channelName": "ChinneyLoveEze Tv",
       "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
@@ -27318,8 +29349,10 @@
       "publishedAt": "2025-08-26T18:56:58Z",
       "year": 2025,
       "durationMinutes": 95,
+      "viewCount": 9021718,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=cp235SmYc4w",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "VpaOmZZYy3c",
@@ -31952,16 +33985,16 @@
       "videoId": "DRHO2huhGPU",
       "title": "ALMOST 25",
       "rawTitle": "ALMOST 25 - UCHE JOMBO / OMECHE OKO / JERRY MUDIAGA",
-      "synopsis": "ALMOST 25 is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring UCHE JOMBO, OMECHE OKO, JERRY MUDIAGA.",
+      "synopsis": "ALMOST 25 is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring UCHE JOMBO, OMECHE OKO, JERRY MUDIAGA. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Uche Jombo",
-        "Omeche Oko",
-        "Jerry mudiaga"
+        "UCHE JOMBO",
+        "OMECHE OKO",
+        "JERRY MUDIAGA"
       ],
       "featuredCast": [
-        "Uche Jombo",
-        "Omeche Oko",
-        "Jerry mudiaga"
+        "UCHE JOMBO",
+        "OMECHE OKO",
+        "JERRY MUDIAGA"
       ],
       "channelName": "ChinneyLoveEze Tv",
       "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
@@ -31969,8 +34002,10 @@
       "publishedAt": "2025-06-12T16:43:06Z",
       "year": 2025,
       "durationMinutes": 109,
+      "viewCount": 3044326,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=DRHO2huhGPU",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "jenIA6qHxO4",
@@ -32788,15 +34823,15 @@
       "videoId": "uLGs41PruX4",
       "title": "HEARTBREAK AND DIAMOND",
       "rawTitle": "HEARTBREAK AND DIAMOND - TIMINI EGBUSON / EGO NWOSU / PRINCESS OBUSEH",
-      "synopsis": "HEARTBREAK AND DIAMOND is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring TIMINI EGBUSON, EGO NWOSU, PRINCESS OBUSEH.",
+      "synopsis": "HEARTBREAK AND DIAMOND is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring TIMINI EGBUSON, EGO NWOSU, PRINCESS OBUSEH. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Timini Egbuson",
-        "Ego Nwosu",
+        "TIMINI EGBUSON",
+        "EGO NWOSU",
         "PRINCESS OBUSEH"
       ],
       "featuredCast": [
-        "Timini Egbuson",
-        "Ego Nwosu",
+        "TIMINI EGBUSON",
+        "EGO NWOSU",
         "PRINCESS OBUSEH"
       ],
       "channelName": "ChinneyLoveEze Tv",
@@ -32805,8 +34840,10 @@
       "publishedAt": "2025-05-31T15:01:15Z",
       "year": 2025,
       "durationMinutes": 99,
+      "viewCount": 4289123,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=uLGs41PruX4",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "qcHq_Kd13gI",
@@ -34068,15 +36105,15 @@
       "videoId": "gPN0ory1IX4",
       "title": "THROUGH HER LENS",
       "rawTitle": "THROUGH HER LENS - DANIEL ETIM EFFIONG /KUNLE REMI / PRINCESS OBUSEH",
-      "synopsis": "THROUGH HER LENS is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring DANIEL ETIM EFFIONG, KUNLE REMI, PRINCESS OBUSEH.",
+      "synopsis": "THROUGH HER LENS is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring DANIEL ETIM EFFIONG, KUNLE REMI, PRINCESS OBUSEH. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Daniel Etim Effiong",
-        "Kunle Remi",
+        "DANIEL ETIM EFFIONG",
+        "KUNLE REMI",
         "PRINCESS OBUSEH"
       ],
       "featuredCast": [
-        "Daniel Etim Effiong",
-        "Kunle Remi",
+        "DANIEL ETIM EFFIONG",
+        "KUNLE REMI",
         "PRINCESS OBUSEH"
       ],
       "channelName": "ChinneyLoveEze Tv",
@@ -34085,8 +36122,10 @@
       "publishedAt": "2025-05-16T16:27:12Z",
       "year": 2025,
       "durationMinutes": 112,
+      "viewCount": 1551023,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=gPN0ory1IX4",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "JrqG_RBgCZQ",
@@ -35311,17 +37350,17 @@
       "videoId": "pGWa2pD3kUQ",
       "title": "Girls Like us",
       "rawTitle": "Girls Like us - Uche jombo/ Nosa rex / Bolaji ogunmola / Sharonace emeruwa",
-      "synopsis": "Girls Like us is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Uche jombo, Nosa rex, Bolaji ogunmola.",
+      "synopsis": "Girls Like us is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Uche jombo, Nosa rex, Bolaji ogunmola. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Uche Jombo",
+        "Uche jombo",
         "Nosa rex",
-        "Bolaji Ogunmola",
+        "Bolaji ogunmola",
         "Sharonace emeruwa"
       ],
       "featuredCast": [
-        "Uche Jombo",
+        "Uche jombo",
         "Nosa rex",
-        "Bolaji Ogunmola"
+        "Bolaji ogunmola"
       ],
       "channelName": "ChinneyLoveEze Tv",
       "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
@@ -35329,8 +37368,10 @@
       "publishedAt": "2025-04-24T16:06:01Z",
       "year": 2025,
       "durationMinutes": 98,
+      "viewCount": 1513896,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=pGWa2pD3kUQ",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "CnjSZF83Gsk",
@@ -37616,7 +39657,7 @@
       "videoId": "uzBqbQdk8d8",
       "title": "ALWAYS AND FOREVER",
       "rawTitle": "ALWAYS AND FOREVER - Uche Montana / Jerry mudiaga/ Lovezoe tunmise - Lastest Nollywood movie 2025",
-      "synopsis": "ALWAYS AND FOREVER is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Uche Montana, Jerry mudiaga, Lovezoe tunmise - Lastest.",
+      "synopsis": "ALWAYS AND FOREVER is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Uche Montana, Jerry mudiaga, Lovezoe tunmise - Lastest. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Uche Montana",
         "Jerry mudiaga",
@@ -37633,8 +39674,10 @@
       "publishedAt": "2025-03-14T16:31:05Z",
       "year": 2025,
       "durationMinutes": 91,
+      "viewCount": 2310373,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=uzBqbQdk8d8",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "d32ZQ881VQY",
@@ -38823,14 +40866,14 @@
       "videoId": "bMg4JC_bd8A",
       "title": "BEFORE I MET YOU",
       "rawTitle": "BEFORE I MET YOU- UCHE MONTANA / VINE OLUGU / JERRY MUDIAGA",
-      "synopsis": "BEFORE I MET YOU- UCHE MONTANA / VINE OLUGU / JERRY MUDIAGA is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Uche Montana, Jerry mudiaga.",
+      "synopsis": "BEFORE I MET YOU is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Uche Montana, Jerry Mudiaga. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Uche Montana",
-        "Jerry mudiaga"
+        "Jerry Mudiaga"
       ],
       "featuredCast": [
         "Uche Montana",
-        "Jerry mudiaga"
+        "Jerry Mudiaga"
       ],
       "channelName": "ChinneyLoveEze Tv",
       "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
@@ -38838,8 +40881,10 @@
       "publishedAt": "2025-02-16T15:54:43Z",
       "year": 2025,
       "durationMinutes": 86,
+      "viewCount": 4000228,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=bMg4JC_bd8A",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "UHCpKqMDpFg",
@@ -41971,7 +44016,7 @@
       "videoId": "blxB-L5huzM",
       "title": "IT’S OUR WEDDING",
       "rawTitle": "IT’S OUR WEDDING - Chioma Chukwuka and Uche Jombo in this hilarious Lastest movie",
-      "synopsis": "IT’S OUR WEDDING is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Chioma Chukwuka, Uche Jombo.",
+      "synopsis": "IT’S OUR WEDDING is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Chioma Chukwuka, Uche Jombo. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Chioma Chukwuka",
         "Uche Jombo"
@@ -41986,8 +44031,10 @@
       "publishedAt": "2024-12-26T15:23:00Z",
       "year": 2024,
       "durationMinutes": 101,
+      "viewCount": 4794812,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=blxB-L5huzM",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "wpHZfrWedJc",
@@ -43016,6 +45063,24 @@
       "durationMinutes": 99,
       "videoUrl": "https://www.youtube.com/watch?v=mAYUOU_CKN8",
       "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "T3MGHxAIrcY",
+      "title": "ALONG CAME YOU- Bolaji Ogunmola and Kanaga Jnr in New romance Movie",
+      "rawTitle": "ALONG CAME YOU- Bolaji Ogunmola and Kanaga Jnr in New romance Movie",
+      "synopsis": "ALONG CAME YOU- Bolaji Ogunmola and Kanaga Jnr in New romance Movie is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2024-12-12T17:08:58Z",
+      "year": 2024,
+      "durationMinutes": 83,
+      "viewCount": 1067420,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=T3MGHxAIrcY",
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "jNWpQahsw08",
@@ -44431,7 +46496,7 @@
       "videoId": "mjUH1mE3l9U",
       "title": "Mercy",
       "rawTitle": "Mercy - Chioma Chukwuka / Enyinna Nwigwe/ Sharon Rotimi / Lastest Nollywood movie 2024",
-      "synopsis": "Mercy is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Chioma Chukwuka, Enyinna Nwigwe, Sharon Rotimi.",
+      "synopsis": "Mercy is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Chioma Chukwuka, Enyinna Nwigwe, Sharon Rotimi. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Chioma Chukwuka",
         "Enyinna Nwigwe",
@@ -44448,8 +46513,10 @@
       "publishedAt": "2024-11-21T15:03:05Z",
       "year": 2024,
       "durationMinutes": 110,
+      "viewCount": 2819664,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=mjUH1mE3l9U",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "1m__xy0llYA",
@@ -46933,18 +49000,16 @@
     },
     {
       "videoId": "fNcdXAL9fUg",
-      "title": "BEND OR BREAK",
+      "title": "BEND OR BREAK- New Ruth Kadiri movie",
       "rawTitle": "BEND OR BREAK- New Ruth Kadiri movie/Detola jones/ Felix omokhodion",
-      "synopsis": "BEND OR BREAK- New Ruth Kadiri movie is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Detola jones, Felix omokhodion.",
+      "synopsis": "BEND OR BREAK- New Ruth Kadiri movie is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Detola jones, Felix omokhodion. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Detola Jones",
-        "Felix omokhodion",
-        "Ruth Kadiri"
+        "Detola jones",
+        "Felix omokhodion"
       ],
       "featuredCast": [
-        "Detola Jones",
-        "Felix omokhodion",
-        "Ruth Kadiri"
+        "Detola jones",
+        "Felix omokhodion"
       ],
       "channelName": "ChinneyLoveEze Tv",
       "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
@@ -46952,8 +49017,10 @@
       "publishedAt": "2024-10-16T16:38:15Z",
       "year": 2024,
       "durationMinutes": 98,
+      "viewCount": 1312714,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=fNcdXAL9fUg",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "qqJgb10_Gk4",
@@ -48320,16 +50387,16 @@
       "videoId": "wudCstp4MPo",
       "title": "AGAINST ALL ODDS",
       "rawTitle": "AGAINST ALL ODDS - UCHE MONTANA / VINE OLUGU / JERRY MUDIAGA",
-      "synopsis": "AGAINST ALL ODDS is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring UCHE MONTANA, VINE OLUGU, JERRY MUDIAGA.",
+      "synopsis": "AGAINST ALL ODDS is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring UCHE MONTANA, VINE OLUGU, JERRY MUDIAGA. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Uche Montana",
-        "Vine Olugu",
-        "Jerry mudiaga"
+        "UCHE MONTANA",
+        "VINE OLUGU",
+        "JERRY MUDIAGA"
       ],
       "featuredCast": [
-        "Uche Montana",
-        "Vine Olugu",
-        "Jerry mudiaga"
+        "UCHE MONTANA",
+        "VINE OLUGU",
+        "JERRY MUDIAGA"
       ],
       "channelName": "ChinneyLoveEze Tv",
       "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
@@ -48337,8 +50404,10 @@
       "publishedAt": "2024-09-22T16:12:20Z",
       "year": 2024,
       "durationMinutes": 96,
+      "viewCount": 3560402,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=wudCstp4MPo",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "CWnawtBDruo",
@@ -49414,6 +51483,24 @@
       "durationMinutes": 144,
       "videoUrl": "https://www.youtube.com/watch?v=HN-X5xCbNTw",
       "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "5nvTR6JqbVM",
+      "title": "SAINTLY AFFECTIONS",
+      "rawTitle": "SAINTLY AFFECTIONS - CLINTON JOSHUA, CHINENYE NNEBE  star in New 2024 movie",
+      "synopsis": "SAINTLY AFFECTIONS is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2024-09-04T16:09:22Z",
+      "year": 2024,
+      "durationMinutes": 116,
+      "viewCount": 4401497,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=5nvTR6JqbVM",
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "XIfL6BGUm74",
@@ -50781,13 +52868,13 @@
       "videoId": "82WThIxoeeQ",
       "title": "ALAN POSER",
       "rawTitle": "ALAN POSER - Ik ogbonna/ Bolaji Ogunmola / Lastest Nollywood 2024 movies",
-      "synopsis": "ALAN POSER is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Ik ogbonna, Bolaji Ogunmola.",
+      "synopsis": "ALAN POSER is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Ik ogbonna, Bolaji Ogunmola. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "IK Ogbonna",
+        "Ik ogbonna",
         "Bolaji Ogunmola"
       ],
       "featuredCast": [
-        "IK Ogbonna",
+        "Ik ogbonna",
         "Bolaji Ogunmola"
       ],
       "channelName": "ChinneyLoveEze Tv",
@@ -50796,8 +52883,10 @@
       "publishedAt": "2024-08-14T15:03:35Z",
       "year": 2024,
       "durationMinutes": 99,
+      "viewCount": 1560907,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=82WThIxoeeQ",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "mMhJHIU47ps",
@@ -54667,14 +56756,14 @@
       "videoId": "m5oZ_ysJD-0",
       "title": "3 WORLD APART",
       "rawTitle": "3 WORLD APART - CHINENYE NNEBE/ AMARA NNANNA / SHARONACE",
-      "synopsis": "3 WORLD APART is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring CHINENYE NNEBE, AMARA NNANNA, SHARONACE.",
+      "synopsis": "3 WORLD APART is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring CHINENYE NNEBE, AMARA NNANNA, SHARONACE. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Chinenye Nnebe",
+        "CHINENYE NNEBE",
         "AMARA NNANNA",
         "SHARONACE"
       ],
       "featuredCast": [
-        "Chinenye Nnebe",
+        "CHINENYE NNEBE",
         "AMARA NNANNA",
         "SHARONACE"
       ],
@@ -54684,8 +56773,10 @@
       "publishedAt": "2024-05-15T16:08:09Z",
       "year": 2024,
       "durationMinutes": 114,
+      "viewCount": 470141,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=m5oZ_ysJD-0",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "AbMhhLbKlEQ",
@@ -57643,6 +59734,24 @@
       "lastChecked": "2026-10-05"
     },
     {
+      "videoId": "5VRwPKtcakU",
+      "title": "OMA'S TRUTH",
+      "rawTitle": "OMA'S TRUTH - Best Nigerian comedy 2024",
+      "synopsis": "Here at Chinneylove Eze Tv all our subscribers have become family.We Love and appreciate you",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2024-02-28T15:05:47Z",
+      "year": 2024,
+      "durationMinutes": 100,
+      "viewCount": 1506038,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=5VRwPKtcakU",
+      "lastChecked": "2026-10-31"
+    },
+    {
       "videoId": "LkqQGDz40s8",
       "title": "THROUGH HIS EYES",
       "rawTitle": "THROUGH HIS EYES - CLINTON JOSHUA, CHIOMA EDAK, EBUBE EZEH latest 2024 nigerian movies",
@@ -58130,12 +60239,12 @@
       "videoId": "Hjs3K3TVX8Q",
       "title": "HIS OBSESSION",
       "rawTitle": "HIS OBSESSION - Ebube Nwagbo / Joseph Benjamin / Moët Abebe / David Eyo / Oma Iyasera",
-      "synopsis": "HIS OBSESSION is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Ebube Nwagbo, Joseph Benjamin, Moët Abebe.",
+      "synopsis": "Here at Chinneylove Eze Tv all our subscribers have become family.We Love and appreciate you",
       "cast": [
         "Ebube Nwagbo",
         "Joseph Benjamin",
         "Moët Abebe",
-        "David eyo",
+        "David Eyo",
         "Oma Iyasera"
       ],
       "featuredCast": [
@@ -58149,8 +60258,10 @@
       "publishedAt": "2024-02-15T15:15:35Z",
       "year": 2024,
       "durationMinutes": 101,
+      "viewCount": 634681,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=Hjs3K3TVX8Q",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "RbuUoEZNU_s",
@@ -58696,6 +60807,24 @@
       "durationMinutes": 85,
       "videoUrl": "https://www.youtube.com/watch?v=gXN32pGcF9k",
       "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "dR9ZviTqcsw",
+      "title": "SUGAR AND SPICE",
+      "rawTitle": "SUGAR  AND SPICE - Ini Edo & Elozonam in hot new love film",
+      "synopsis": "Here at Chinneylove Eze Tv all our subscribers have become family.We Love and appreciate you",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2024-02-01T17:41:01Z",
+      "year": 2024,
+      "durationMinutes": 85,
+      "viewCount": 1564943,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=dR9ZviTqcsw",
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "OSeSRYtBJKw",
@@ -59792,7 +61921,7 @@
       "videoId": "QmTHRNGSWrM",
       "title": "ROAD TO SALVATION",
       "rawTitle": "ROAD TO SALVATION - Maurice Sam/ Etinosa idemudia/ Lina idoko",
-      "synopsis": "ROAD TO SALVATION is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Maurice Sam, Etinosa idemudia, Lina idoko.",
+      "synopsis": "ROAD TO SALVATION is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Maurice Sam, Etinosa idemudia, Lina idoko. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Maurice Sam",
         "Etinosa idemudia",
@@ -59809,8 +61938,10 @@
       "publishedAt": "2023-12-29T15:48:27Z",
       "year": 2023,
       "durationMinutes": 109,
+      "viewCount": 1422902,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=QmTHRNGSWrM",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "jqZezGZTODQ",
@@ -61815,16 +63946,16 @@
       "videoId": "zwR1t3c_aRM",
       "title": "CITY GIRLS",
       "rawTitle": "CITY GIRLS - UCHE MONTANA/ ONYII ALEX /LINA IDOKO",
-      "synopsis": "CITY GIRLS is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring UCHE MONTANA, ONYII ALEX, LINA IDOKO.",
+      "synopsis": "CITY GIRLS is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring UCHE MONTANA, ONYII ALEX, LINA IDOKO. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Uche Montana",
-        "Onyii Alex",
-        "Lina idoko"
+        "UCHE MONTANA",
+        "ONYII ALEX",
+        "LINA IDOKO"
       ],
       "featuredCast": [
-        "Uche Montana",
-        "Onyii Alex",
-        "Lina idoko"
+        "UCHE MONTANA",
+        "ONYII ALEX",
+        "LINA IDOKO"
       ],
       "channelName": "ChinneyLoveEze Tv",
       "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
@@ -61832,8 +63963,10 @@
       "publishedAt": "2023-11-02T15:57:10Z",
       "year": 2023,
       "durationMinutes": 119,
+      "viewCount": 8646773,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=zwR1t3c_aRM",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "rUM6MhgE8bU",
@@ -62862,7 +64995,7 @@
       "videoId": "5xg4nFbLXXI",
       "title": "HALF & HALF",
       "rawTitle": "HALF & HALF - DANIEL ETIM EFFIONG And INEM KING in this hilarious Drama",
-      "synopsis": "HALF & HALF is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Daniel Etim-Effiong, Inem King -.",
+      "synopsis": "HALF & HALF is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Daniel Etim-Effiong, Inem King. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Daniel Etim-Effiong",
         "Inem King"
@@ -62877,8 +65010,10 @@
       "publishedAt": "2023-09-20T18:18:52Z",
       "year": 2023,
       "durationMinutes": 91,
+      "viewCount": 1685026,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=5xg4nFbLXXI",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "KfkLDfvZdmk",
@@ -63180,6 +65315,24 @@
       "durationMinutes": 105,
       "videoUrl": "https://www.youtube.com/watch?v=vadub48AcZA",
       "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "qWPS49t9qNg",
+      "title": "FALLING FOR YOU- Eronini osinachi/inem king/Hero Daniels",
+      "rawTitle": "FALLING FOR YOU- Eronini osinachi/inem king/Hero Daniels",
+      "synopsis": "FALLING FOR YOU- Eronini osinachi/inem king/Hero Daniels is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2023-09-06T16:03:19Z",
+      "year": 2023,
+      "durationMinutes": 87,
+      "viewCount": 1714075,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=qWPS49t9qNg",
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "IOIMipY58FA",
@@ -63923,14 +66076,14 @@
       "videoId": "jMcXsnUQs6U",
       "title": "BOSS CHIC",
       "rawTitle": "BOSS CHIC- Maurice sam/ Sophie Alakija/ Etinosa idemudia",
-      "synopsis": "BOSS CHIC- Maurice sam/ Sophie Alakija/ Etinosa idemudia is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Maurice Sam, Etinosa idemudia.",
+      "synopsis": "BOSS CHIC is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring MAURICE SAM, Etinosa Idemudia. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Maurice Sam",
-        "Etinosa idemudia"
+        "MAURICE SAM",
+        "Etinosa Idemudia"
       ],
       "featuredCast": [
-        "Maurice Sam",
-        "Etinosa idemudia"
+        "MAURICE SAM",
+        "Etinosa Idemudia"
       ],
       "channelName": "ChinneyLoveEze Tv",
       "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
@@ -63938,8 +66091,10 @@
       "publishedAt": "2023-08-04T16:01:31Z",
       "year": 2023,
       "durationMinutes": 100,
+      "viewCount": 4052934,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=jMcXsnUQs6U",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "PR0CYIP5MFU",
@@ -64085,18 +66240,16 @@
     },
     {
       "videoId": "cVTnG_emA6w",
-      "title": "FOR A BETTER TOMORROW",
+      "title": "FOR A BETTER TOMORROW/ Ruth Kadiri movies",
       "rawTitle": "FOR A BETTER TOMORROW/ Ruth Kadiri movies/ Onyii Alex/Hero Daniel’s",
-      "synopsis": "FOR A BETTER TOMORROW/ Ruth Kadiri movies is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Onyii Alex, Hero Daniel’s.",
+      "synopsis": "FOR A BETTER TOMORROW/ Ruth Kadiri movies is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Onyii Alex, Hero Daniel’s. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Onyii Alex",
-        "Hero Daniel’s",
-        "Ruth Kadiri"
+        "Hero Daniel’s"
       ],
       "featuredCast": [
         "Onyii Alex",
-        "Hero Daniel’s",
-        "Ruth Kadiri"
+        "Hero Daniel’s"
       ],
       "channelName": "ChinneyLoveEze Tv",
       "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
@@ -64104,8 +66257,10 @@
       "publishedAt": "2023-07-26T16:54:35Z",
       "year": 2023,
       "durationMinutes": 87,
+      "viewCount": 1077706,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=cVTnG_emA6w",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "ghyJ5tSsy-4",
@@ -64588,17 +66743,17 @@
       "videoId": "vPCduym5vFQ",
       "title": "Phil's Love Story",
       "rawTitle": "Phil's Love Story - Uche Montana/Daniel Etim Effiong/Inem king/Rachel Anthony",
-      "synopsis": "Phil's Love Story is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Uche Montana, Daniel Etim Effiong, Inem king.",
+      "synopsis": "Phil's Love Story is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Uche Montana, Daniel Etim Effiong, Inem king. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Uche Montana",
         "Daniel Etim Effiong",
-        "Inem King",
+        "Inem king",
         "Rachel Anthony"
       ],
       "featuredCast": [
         "Uche Montana",
         "Daniel Etim Effiong",
-        "Inem King"
+        "Inem king"
       ],
       "channelName": "ChinneyLoveEze Tv",
       "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
@@ -64606,8 +66761,10 @@
       "publishedAt": "2023-07-01T17:09:11Z",
       "year": 2023,
       "durationMinutes": 106,
+      "viewCount": 3572270,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=vPCduym5vFQ",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "dlwopxFv1Ig",
@@ -65241,6 +67398,30 @@
       "lastChecked": "2026-10-05"
     },
     {
+      "videoId": "Y7-e9GLz4iE",
+      "title": "A REASON TO LOVE",
+      "rawTitle": "A REASON TO LOVE/Maurice Sam/Emem inwang/Echelon Mbadiwe",
+      "synopsis": "A REASON TO LOVE is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring MAURICE SAM, Echelon Mbadiwe. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "MAURICE SAM",
+        "Echelon Mbadiwe"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "Echelon Mbadiwe"
+      ],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2023-06-02T15:10:29Z",
+      "year": 2023,
+      "durationMinutes": 98,
+      "viewCount": 5816034,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=Y7-e9GLz4iE",
+      "lastChecked": "2026-10-31"
+    },
+    {
       "videoId": "_imEplm-5dI",
       "title": "IN HER SHOES",
       "rawTitle": "IN HER SHOES - MAJID MICHEL, EGO NWOSU, DERA OSADEBE, FIONA GARBA, 2023 EXCLUSIVE NOLLYWOD MOVIE",
@@ -65398,6 +67579,24 @@
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=lio69XVlXzw",
       "lastChecked": "2026-10-05"
+    },
+    {
+      "videoId": "puiNIQGDsjg",
+      "title": "Two can also play- Daniel Etim Effiong and Mimi Chaka(Tumini of The Men’s Club) in a Love story",
+      "rawTitle": "Two can also play- Daniel Etim Effiong and Mimi Chaka(Tumini of The Men’s Club) in a Love story",
+      "synopsis": "Two can also play- Daniel Etim Effiong and Mimi Chaka(Tumini of The Men’s Club) in a Love story is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2023-05-21T16:16:41Z",
+      "year": 2023,
+      "durationMinutes": 90,
+      "viewCount": 2159353,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=puiNIQGDsjg",
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "fGpj2fpLkN4",
@@ -66585,13 +68784,15 @@
       "videoId": "p3ujgW5Kqrk",
       "title": "LOVE LIKE THAT",
       "rawTitle": "LOVE LIKE THAT - Maurice sam movies/sam maurice movies/lastest nollywood2023 movie/Audrey Harrison",
-      "synopsis": "LOVE LIKE THAT is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Maurice Sam, Audrey Harrison.",
+      "synopsis": "LOVE LIKE THAT is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring MAURICE SAM, SAM MAURICE, Audrey Harrison. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Maurice Sam",
+        "MAURICE SAM",
+        "SAM MAURICE",
         "Audrey Harrison"
       ],
       "featuredCast": [
-        "Maurice Sam",
+        "MAURICE SAM",
+        "SAM MAURICE",
         "Audrey Harrison"
       ],
       "channelName": "ChinneyLoveEze Tv",
@@ -66600,8 +68801,10 @@
       "publishedAt": "2023-03-09T16:39:05Z",
       "year": 2023,
       "durationMinutes": 90,
+      "viewCount": 4419960,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=p3ujgW5Kqrk",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "yV2iKDtrKb8",
@@ -67030,6 +69233,24 @@
       "durationMinutes": 113,
       "videoUrl": "https://www.youtube.com/watch?v=TvG3t5Qyigo",
       "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "Rut67GUmgho",
+      "title": "FOR THE ONE",
+      "rawTitle": "FOR THE ONE - MAURICE SAM/ SHINE ROSMAN IN NEW VALENTINE MOVIE/Maurice sam movies",
+      "synopsis": "FOR THE ONE is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2023-02-12T16:14:53Z",
+      "year": 2023,
+      "durationMinutes": 98,
+      "viewCount": 4663476,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=Rut67GUmgho",
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "vWeTkW1o_6k",
@@ -68151,7 +70372,7 @@
       "videoId": "qyTnN48ezb0",
       "title": "HER DESIRE",
       "rawTitle": "HER DESIRE - When desires turn to lust!/ Uche Montana/Maurice Sam",
-      "synopsis": "HER DESIRE is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Uche Montana, Maurice Sam.",
+      "synopsis": "HER DESIRE is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Uche Montana, Maurice Sam. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Uche Montana",
         "Maurice Sam"
@@ -68166,8 +70387,10 @@
       "publishedAt": "2022-12-01T16:11:44Z",
       "year": 2022,
       "durationMinutes": 82,
+      "viewCount": 6680596,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=qyTnN48ezb0",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "voNgwH89dbQ",
@@ -68275,6 +70498,24 @@
       "lastChecked": "2026-10-05"
     },
     {
+      "videoId": "U64A2f4O6KE",
+      "title": "VICTORIA'S SECRET",
+      "rawTitle": "VICTORIA'S SECRET - Uche Montana lastest most interesting movie",
+      "synopsis": "VICTORIA'S SECRET is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2022-11-22T16:08:56Z",
+      "year": 2022,
+      "durationMinutes": 90,
+      "viewCount": 2308312,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=U64A2f4O6KE",
+      "lastChecked": "2026-10-31"
+    },
+    {
       "videoId": "LNHwNF8Gudo",
       "title": "THE SLEEP WALKER",
       "rawTitle": "THE SLEEP WALKER (Full Movie) Ebube Obio, Eddie Watson, Ruby Orjiakor 2022 Latest Nollywood Movie",
@@ -68375,15 +70616,15 @@
       "videoId": "xnHRybwr6Eo",
       "title": "14 DAYS",
       "rawTitle": "14 DAYS - When a single mother refuses to believe in Love /Uche Jombo/ Uzo arukwe/ Anita Joseph",
-      "synopsis": "14 DAYS is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Uche Jombo, Uzo arukwe, Anita Joseph.",
+      "synopsis": "14 DAYS is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Uche Jombo, Uzo arukwe, Anita Joseph. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Uche Jombo",
-        "uzo Arukwe",
+        "Uzo arukwe",
         "Anita Joseph"
       ],
       "featuredCast": [
         "Uche Jombo",
-        "uzo Arukwe",
+        "Uzo arukwe",
         "Anita Joseph"
       ],
       "channelName": "ChinneyLoveEze Tv",
@@ -68392,8 +70633,10 @@
       "publishedAt": "2022-11-15T15:59:23Z",
       "year": 2022,
       "durationMinutes": 80,
+      "viewCount": 882296,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=xnHRybwr6Eo",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "9yrbdK2Ix5g",
@@ -68625,14 +70868,14 @@
       "videoId": "p7cnVRqug8c",
       "title": "Best Friends Forever",
       "rawTitle": "Best Friends Forever - Daniel effiong / Shine rosman /Racheal Anthony",
-      "synopsis": "Best Friends Forever is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Daniel effiong, Shine rosman, Racheal Anthony.",
+      "synopsis": "Best Friends Forever is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Daniel effiong, Shine rosman, Racheal Anthony. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Daniel Effiong",
+        "Daniel effiong",
         "Shine rosman",
         "Racheal Anthony"
       ],
       "featuredCast": [
-        "Daniel Effiong",
+        "Daniel effiong",
         "Shine rosman",
         "Racheal Anthony"
       ],
@@ -68642,8 +70885,10 @@
       "publishedAt": "2022-11-05T16:01:31Z",
       "year": 2022,
       "durationMinutes": 93,
+      "viewCount": 1913838,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=p7cnVRqug8c",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "jl3ll1k_Mf8",
@@ -68743,15 +70988,15 @@
     },
     {
       "videoId": "MyVG-UcdLU8",
-      "title": "PERFECT ASSISTANT",
+      "title": "PERFECT ASSISTANT- Watch Maurice Sam and Shine rosman in another fine romcom",
       "rawTitle": "PERFECT ASSISTANT- Watch Maurice Sam and Shine rosman in another fine romcom",
-      "synopsis": "PERFECT ASSISTANT- Watch Maurice Sam and Shine rosman in another fine romcom is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Maurice Sam, Shine rosman.",
+      "synopsis": "PERFECT ASSISTANT- Watch Maurice Sam and Shine rosman in another fine romcom is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring MAURICE SAM, Shine rosman. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Maurice Sam",
+        "MAURICE SAM",
         "Shine rosman"
       ],
       "featuredCast": [
-        "Maurice Sam",
+        "MAURICE SAM",
         "Shine rosman"
       ],
       "channelName": "ChinneyLoveEze Tv",
@@ -68760,8 +71005,10 @@
       "publishedAt": "2022-10-28T15:56:15Z",
       "year": 2022,
       "durationMinutes": 85,
+      "viewCount": 6514817,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=MyVG-UcdLU8",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "9fmTX7eNp-g",
@@ -69041,7 +71288,7 @@
       "videoId": "tFEfCqKu58o",
       "title": "KAFAYA FAYA",
       "rawTitle": "KAFAYA FAYA - Mercy Johnson and Ebube Nwagbo Battle it out in this hilarious comedy",
-      "synopsis": "KAFAYA FAYA is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Mercy Johnson, Ebube Nwagbo.",
+      "synopsis": "KAFAYA FAYA is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Mercy Johnson, Ebube Nwagbo. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Mercy Johnson",
         "Ebube Nwagbo"
@@ -69056,8 +71303,10 @@
       "publishedAt": "2022-10-18T16:00:25Z",
       "year": 2022,
       "durationMinutes": 92,
+      "viewCount": 1499398,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=tFEfCqKu58o",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "HSN-17pt3MU",
@@ -69335,13 +71584,13 @@
       "videoId": "T26hFeKHtOk",
       "title": "PRETTY THIEF",
       "rawTitle": "PRETTY THIEF - Maurice sam and shine rosman in new Love movie/Lastest nollywood movie",
-      "synopsis": "PRETTY THIEF is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Maurice Sam, Shine rosman.",
+      "synopsis": "PRETTY THIEF is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring MAURICE SAM, Shine rosman. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Maurice Sam",
+        "MAURICE SAM",
         "Shine rosman"
       ],
       "featuredCast": [
-        "Maurice Sam",
+        "MAURICE SAM",
         "Shine rosman"
       ],
       "channelName": "ChinneyLoveEze Tv",
@@ -69350,8 +71599,10 @@
       "publishedAt": "2022-09-27T14:44:06Z",
       "year": 2022,
       "durationMinutes": 99,
+      "viewCount": 4951837,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=T26hFeKHtOk",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "f-xPNxQ9ipo",
@@ -70136,13 +72387,13 @@
       "videoId": "ErD7cNM7eqo",
       "title": "Maurice Sam and Uche Montana serving it hot in this Lastest Love Story",
       "rawTitle": "Maurice Sam and Uche Montana serving it hot in this Lastest Love Story",
-      "synopsis": "Maurice Sam and Uche Montana serving it hot in this Lastest Love Story is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Maurice Sam, Uche Montana.",
+      "synopsis": "Maurice Sam and Uche Montana serving it hot in this Lastest Love Story is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring MAURICE SAM, Uche Montana. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Maurice Sam",
+        "MAURICE SAM",
         "Uche Montana"
       ],
       "featuredCast": [
-        "Maurice Sam",
+        "MAURICE SAM",
         "Uche Montana"
       ],
       "channelName": "ChinneyLoveEze Tv",
@@ -70151,8 +72402,10 @@
       "publishedAt": "2022-07-23T15:39:37Z",
       "year": 2022,
       "durationMinutes": 91,
+      "viewCount": 11528375,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=ErD7cNM7eqo",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "QjV4dahJEDI",
@@ -70780,6 +73033,24 @@
       "lastChecked": "2026-10-05"
     },
     {
+      "videoId": "QYqNXH1FCUE",
+      "title": "Ini Edo/ Ray Emodi/ Onyi Alex in Love movie like never seen before",
+      "rawTitle": "Ini Edo/ Ray Emodi/ Onyi Alex in Love movie like never seen before",
+      "synopsis": "Ini Edo/ Ray Emodi/ Onyi Alex in Love movie like never seen before is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2022-06-25T15:11:15Z",
+      "year": 2022,
+      "durationMinutes": 80,
+      "viewCount": 3711642,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=QYqNXH1FCUE",
+      "lastChecked": "2026-10-31"
+    },
+    {
       "videoId": "PSK7CvL0NTE",
       "title": "BUGA POUNDS AND DOLLARS 3",
       "rawTitle": "BUGA POUNDS AND DOLLARS 3 (New Movie) Ebube Obio/Flashboy/Sonia/Chinenye 2022 Latest Nigerian Movies",
@@ -71295,13 +73566,13 @@
       "videoId": "o2Wy3sZ1X9E",
       "title": "Its never safe to stay in an unhealthy relationship",
       "rawTitle": "Its never safe to stay in an unhealthy relationship / Maurice sam /Emem inwang and kachi Nnochiri",
-      "synopsis": "Its never safe to stay in an unhealthy relationship / Maurice sam /Emem inwang and kachi Nnochiri is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Maurice Sam, Kachi Nnochiri.",
+      "synopsis": "Its never safe to stay in an unhealthy relationship is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring MAURICE SAM, Kachi Nnochiri. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Maurice Sam",
+        "MAURICE SAM",
         "Kachi Nnochiri"
       ],
       "featuredCast": [
-        "Maurice Sam",
+        "MAURICE SAM",
         "Kachi Nnochiri"
       ],
       "channelName": "ChinneyLoveEze Tv",
@@ -71310,8 +73581,10 @@
       "publishedAt": "2022-06-01T15:01:25Z",
       "year": 2022,
       "durationMinutes": 85,
+      "viewCount": 2613421,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=o2Wy3sZ1X9E",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "YFOB7FI5ENY",
@@ -71918,13 +74191,13 @@
       "videoId": "BBbslcaJLA0",
       "title": "The boy next door is so Hot…But he has a girlfriend",
       "rawTitle": "The boy next door is so Hot…But he has a girlfriend- Maurice Sam/Emem inwang/Shine rosman",
-      "synopsis": "The boy next door is so Hot…But he has a girlfriend- Maurice Sam/Emem inwang/Shine rosman is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Maurice Sam, Shine rosman.",
+      "synopsis": "The boy next door is so Hot…But he has a girlfriend is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring MAURICE SAM, Shine rosman. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Maurice Sam",
+        "MAURICE SAM",
         "Shine rosman"
       ],
       "featuredCast": [
-        "Maurice Sam",
+        "MAURICE SAM",
         "Shine rosman"
       ],
       "channelName": "ChinneyLoveEze Tv",
@@ -71933,8 +74206,10 @@
       "publishedAt": "2022-04-17T16:43:41Z",
       "year": 2022,
       "durationMinutes": 84,
+      "viewCount": 8591887,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=BBbslcaJLA0",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "m_M2YbIEWrU",
@@ -74015,7 +76290,7 @@
       "videoId": "kWRqPSOF_-E",
       "title": "OUR DATE FOR CHRISTMAS",
       "rawTitle": "OUR DATE FOR CHRISTMAS/MERCY JOHNSON HAD TO DEAL WITH MOFE DUNCAN'S KIDS TO BE ABLE TO WIN HIS HEART",
-      "synopsis": "OUR DATE FOR CHRISTMAS/MERCY JOHNSON HAD TO DEAL WITH MOFE DUNCAN'S KIDS TO BE ABLE TO WIN HIS HEART is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Mercy Johnson, Mofe Duncan.",
+      "synopsis": "OUR DATE FOR CHRISTMAS is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Mercy Johnson, Mofe Duncan. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Mercy Johnson",
         "Mofe Duncan"
@@ -74030,8 +76305,10 @@
       "publishedAt": "2021-12-20T17:52:22Z",
       "year": 2021,
       "durationMinutes": 91,
+      "viewCount": 1841730,
+      "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=kWRqPSOF_-E",
-      "lastChecked": "2026-09-29"
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "IRoU2CcEO80",
@@ -77496,6 +79773,24 @@
       "lastChecked": "2026-10-05"
     },
     {
+      "videoId": "Ex1OZ03IqHg",
+      "title": "MY NEIGHBOUR/ MY NEIGHBOUR IS A VERY HOT GUY",
+      "rawTitle": "MY NEIGHBOUR/ MY NEIGHBOUR IS A VERY HOT GUY/LASTEST NIGERIAN MOVIE",
+      "synopsis": "MY NEIGHBOUR/ MY NEIGHBOUR IS A VERY HOT GUY is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2020-11-17T16:05:37Z",
+      "year": 2020,
+      "durationMinutes": 76,
+      "viewCount": 3898934,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=Ex1OZ03IqHg",
+      "lastChecked": "2026-10-31"
+    },
+    {
       "videoId": "Mz0kcuHxwOo",
       "title": "HOUSE OF COMMOTION (Evergreen Hit Movie)",
       "rawTitle": "HOUSE OF COMMOTION (Evergreen Hit Movie) 2020 Latest Nigerian Nollywood Movie Full HD",
@@ -77736,6 +80031,24 @@
       "durationMinutes": 66,
       "videoUrl": "https://www.youtube.com/watch?v=xmJ5AsDxz8g",
       "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "N7g3FbLY4_g",
+      "title": "WHEN LOVE FINDS YOU- I love my bestfriend but he's in love with someone else",
+      "rawTitle": "WHEN LOVE FINDS YOU- I love my bestfriend but he's in love with someone else",
+      "synopsis": "WHEN LOVE FINDS YOU- I love my bestfriend but he's in love with someone else is a full-length Nigerian film published by ChinneyLoveEze Tv. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "ChinneyLoveEze Tv",
+      "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
+      "channelUrl": "https://www.youtube.com/@chinneyloveezetv",
+      "publishedAt": "2020-08-30T12:01:57Z",
+      "year": 2020,
+      "durationMinutes": 104,
+      "viewCount": 3525367,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=N7g3FbLY4_g",
+      "lastChecked": "2026-10-31"
     },
     {
       "videoId": "Ocil4o4jbL4",
