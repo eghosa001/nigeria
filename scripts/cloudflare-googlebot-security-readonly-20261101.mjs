@@ -5,9 +5,25 @@
  * counts without Cloudflare bot verification are not evidence of genuine Googlebot.
  */
 const token=process.env.CLOUDFLARE_API_TOKEN;
-const zone=process.env.CLOUDFLARE_ZONE_ID;
-if(!token || !/^[a-f0-9]{32}$/i.test(zone||"")){
-  console.log("Historical Googlebot security diagnostic unavailable: zone/token missing.");
+let zone=process.env.CLOUDFLARE_ZONE_ID;
+if(!token){
+  console.log("Historical Googlebot security diagnostic unavailable: API token missing.");
+  process.exit(0);
+}
+if(!zone){
+  // The owner's existing Cloudflare diagnostics resolve the zone from the
+  // authorized account because CLOUDFLARE_ZONE_ID is not configured.
+  try{
+    const res=await fetch("https://api.cloudflare.com/client/v4/zones?name=mynigeriaguide.com",{
+      headers:{Authorization:"Bearer "+token},signal:AbortSignal.timeout(15000)
+    });
+    const data=await res.json();
+    const matching=(data.result||[]).filter(x=>x.name==="mynigeriaguide.com");
+    if(res.ok && matching.length===1)zone=matching[0].id;
+  }catch{}
+}
+if(!/^[a-f0-9]{32}$/i.test(zone||"")){
+  console.log("Historical Googlebot security diagnostic unavailable: authorized zone lookup failed.");
   process.exit(0);
 }
 const endpoint="https://api.cloudflare.com/client/v4/graphql";
