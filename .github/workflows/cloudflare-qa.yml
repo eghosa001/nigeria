@@ -48,6 +48,14 @@ jobs:
             changed="$(git diff --name-only HEAD^1 HEAD)"
           fi
 
+          # Shared loading boundary directly controls first-response article SEO.
+          # Run only the 3-page raw HTML and desktop/mobile browser regression.
+          if printf '%s\n' "$changed" | grep -Eq '^(app/loading\.tsx$|tests/root-loading-content-ssr-20261101\.spec\.ts$)'; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=seo-ssr" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
           # ads.txt is a public static asset: guard only this publication path.
           ads_changed="$(printf '%s\n' "$changed" | grep -E '^(public/ads\.txt$|app/ads\.txt/route\.ts$|tests/ads-txt-(guard\.test\.mjs|static\.spec\.ts)$)' || true)"
           ads_other="$(printf '%s\n' "$changed" | grep -Ev '^(public/ads\.txt$|app/ads\.txt/route\.ts$|tests/ads-txt-(guard\.test\.mjs|static\.spec\.ts)$|\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|production-monitor)\.yml$)' || true)"
@@ -244,6 +252,9 @@ jobs:
       # The full browser smoke still runs and fails on any missing library.
       - run: npx playwright install chromium
         if: steps.scope.outputs.run == 'true'
+      - name: Verify first-response guide HTML and mobile/desktop rendering
+        if: steps.scope.outputs.mode == 'seo-ssr'
+        run: npx playwright test tests/root-loading-content-ssr-20261101.spec.ts --config playwright.cloudflare.config.ts --workers=1
       - name: Verify ads.txt on the built Cloudflare runtime
         if: steps.scope.outputs.mode == 'ads-txt'
         run: npx playwright test tests/ads-txt-static.spec.ts --config playwright.cloudflare.config.ts --project=cloudflare-desktop --workers=1
@@ -269,7 +280,7 @@ jobs:
         if: steps.scope.outputs.mode == 'admin-ui'
         run: npx playwright test tests/smoke.spec.ts --config playwright.cloudflare.config.ts --project=cloudflare-desktop --project=cloudflare-mobile --workers=1 --grep "visits unlock|admin dashboard shows independent|admin Search Console connectivity|admin shows the exact|admin dashboard reflects movies"
       - run: npx playwright test tests/smoke.spec.ts --config playwright.cloudflare.config.ts --workers=1
-        if: steps.scope.outputs.run == 'true' && steps.scope.outputs.mode != 'ads-txt' && steps.scope.outputs.mode != 'quality' && steps.scope.outputs.mode != 'tour' && steps.scope.outputs.mode != 'entertainment-context' && steps.scope.outputs.mode != 'youtube-runtime' && steps.scope.outputs.mode != 'movie-data' && steps.scope.outputs.mode != 'service-route' && steps.scope.outputs.mode != 'admin-ui'
+        if: steps.scope.outputs.run == 'true' && steps.scope.outputs.mode != 'ads-txt' && steps.scope.outputs.mode != 'quality' && steps.scope.outputs.mode != 'tour' && steps.scope.outputs.mode != 'entertainment-context' && steps.scope.outputs.mode != 'youtube-runtime' && steps.scope.outputs.mode != 'movie-data' && steps.scope.outputs.mode != 'service-route' && steps.scope.outputs.mode != 'admin-ui' && steps.scope.outputs.mode != 'seo-ssr'
       - name: Upload Cloudflare Playwright report on failure
         if: failure() && steps.scope.outputs.run == 'true'
         uses: actions/upload-artifact@v4
