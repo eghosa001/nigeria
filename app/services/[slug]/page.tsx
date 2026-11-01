@@ -34,6 +34,9 @@ import { getSiteUrl } from "@/lib/site";
 import { leadAlreadyStatesFee } from "@/lib/reader-content-dedup";
 
 export const dynamic = "force-static";
+// Bound cached HTML lifetime so crawler metadata/content is regenerated after edits.
+// Browser cache headers alone do not expire vinext's shared ISR response store.
+export const revalidate = 3600;
 export const dynamicParams = false;
 
 export function generateStaticParams() {

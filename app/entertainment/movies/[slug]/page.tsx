@@ -20,6 +20,9 @@ import { getMovieEditorialProfile } from "@/lib/movie-editorial-profile-registry
 import { documentedMovieAvailabilityVerdict } from "@/lib/movie-availability-evidence-2026-10-17";
 
 export const dynamic = "force-static";
+// Bound cached HTML lifetime so crawler metadata/content is regenerated after edits.
+// Browser cache headers alone do not expire vinext's shared ISR response store.
+export const revalidate = 3600;
 export const dynamicParams = false;
 
 export function generateStaticParams() {
