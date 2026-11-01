@@ -51,7 +51,7 @@ const httpVerified=`query($zone:string!,$start:Time!,$end:Time!){
   httpRequestsAdaptiveGroups(
    filter:{datetime_geq:$start,datetime_lt:$end,requestSource:"eyeball",userAgent_like:"%Googlebot%"}
    limit:100,orderBy:[count_DESC]){
-   count dimensions{edgeResponseStatus clientAsn botManagementVerifiedBot}
+   count dimensions{edgeResponseStatus botManagementVerifiedBot}
   }
  }}
 }`;
@@ -60,7 +60,7 @@ const httpAsn=`query($zone:string!,$start:Time!,$end:Time!){
   httpRequestsAdaptiveGroups(
    filter:{datetime_geq:$start,datetime_lt:$end,requestSource:"eyeball",userAgent_like:"%Googlebot%"}
    limit:100,orderBy:[count_DESC]){
-   count dimensions{edgeResponseStatus clientAsn securityAction}
+   count dimensions{edgeResponseStatus securityAction}
   }
  }}
 }`;
@@ -69,8 +69,15 @@ const httpMinimal=`query($zone:string!,$start:Time!,$end:Time!){
   httpRequestsAdaptiveGroups(
    filter:{datetime_geq:$start,datetime_lt:$end,requestSource:"eyeball",userAgent_like:"%Googlebot%"}
    limit:100,orderBy:[count_DESC]){
-   count dimensions{edgeResponseStatus clientAsn}
+   count dimensions{edgeResponseStatus}
   }
+ }}
+}`;
+const wafAll=`query($zone:string!,$start:Time!,$end:Time!){
+ viewer{zones(filter:{zoneTag:$zone}){
+  firewallEventsAdaptive(
+   filter:{datetime_geq:$start,datetime_lt:$end}
+   limit:100,orderBy:[datetime_DESC]){action source userAgent}
  }}
 }`;
 const waf=`query($zone:string!,$start:Time!,$end:Time!){
@@ -102,6 +109,16 @@ for(const date of dates){
   if(a.error)console.log("Historical UA-matching requests "+date+" unavailable "+a.error);
   else reportHttp(date,mode,a.data.httpRequestsAdaptiveGroups||[]);
 
+  const available=await graphql(wafAll,date);
+  if(available.error){
+    console.log("Historical all-UA WAF availability "+date+" unavailable "+available.error);
+  }else{
+    const events=available.data.firewallEventsAdaptive||[];
+    console.log("Historical all-UA WAF availability "+date+
+      " sampledEvents="+events.length+
+      " googlebotUaMatches="+events.filter(x=>/Googlebot/i.test(x.userAgent||"")).length+
+      " (latest 100, not an exhaustive security-event count)");
+  }
   const w=await graphql(waf,date);
   if(w.error){
     console.log("Historical Googlebot-UA WAF events "+date+" unavailable "+w.error);
