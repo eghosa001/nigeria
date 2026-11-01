@@ -5,6 +5,7 @@ on:
     paths:
       - "scripts/check-googlebot-crawl-parity.mjs"
       - "scripts/cloudflare-googlebot-security-readonly-20261101.mjs"
+      - "scripts/check-gsc-soft404-canaries-20261101.mjs"
       - "tests/googlebot-crawl-parity.test.mjs"
       - ".github/workflows/googlebot-crawler-parity.yml"
       - ".github/workflows/production-monitor.yml"
@@ -39,6 +40,11 @@ jobs:
         run: |
           node --check scripts/cloudflare-googlebot-security-readonly-20261101.mjs
           node scripts/cloudflare-googlebot-security-readonly-20261101.mjs
+      - name: Probe Google-reported Soft 404 guides with mobile crawler-like HTML (read-only)
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'diagnostic/googlebot-cache-headers-20261030'
+        run: |
+          node --check scripts/check-gsc-soft404-canaries-20261101.mjs
+          node scripts/check-gsc-soft404-canaries-20261101.mjs
       - name: Record existing production crawler failure before patch deployment
         # Production still runs old Vinext until this PR is merged and deployed.
         # This diagnostic must not be mistaken for a test of the PR build.
