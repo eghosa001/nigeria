@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "scripts/check-googlebot-crawl-parity.mjs"
+      - "scripts/cloudflare-googlebot-security-readonly-20261101.mjs"
       - "tests/googlebot-crawl-parity.test.mjs"
       - ".github/workflows/googlebot-crawler-parity.yml"
       - ".github/workflows/production-monitor.yml"
