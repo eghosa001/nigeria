@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import test from "node:test";
 
 const read = (path) => readFileSync(new URL("../" + path, import.meta.url), "utf8");
@@ -31,12 +31,14 @@ test("every navigation destination retains its normal Link and immediate progres
   assert.match(source, /mobileNavigation\.map/);
 });
 
-test("slow server routes offer one accessible shell without changing SEO or content", () => {
-  const fallback = read("app/loading.tsx");
+test("public article HTML is no longer hidden by a global route-loading fallback", () => {
+  // Root loading.tsx created a Suspense boundary that produced only a 34-character
+  // <main> before executing streamed React DOM replacement. The live Worker
+  // SEO regression verifies the actual substantive first-response article.
+  assert.equal(existsSync(new URL("../app/loading.tsx", import.meta.url)), false);
   const stylesheet = read("app/ux-polish.css");
-  assert.match(fallback, /role="status" aria-live="polite"/);
-  assert.match(fallback, /Opening your guide/);
-  assert.doesNotMatch(fallback, /<h1|<script|meta name=|canonical/i);
+  // Header retains visible pending-navigation feedback without creating a
+  // global server content fallback; keyboard/motion accessibility is preserved.
   assert.match(stylesheet, /\.site-header\[data-navigation-pending="true"\]::after/);
   assert.match(stylesheet, /\.mobile-bottom-nav a\[data-nav-pending="true"\]/);
   assert.match(stylesheet, /prefers-reduced-motion: reduce/);
