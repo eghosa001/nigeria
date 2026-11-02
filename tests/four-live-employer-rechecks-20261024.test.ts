@@ -4,7 +4,6 @@ import { jobOpportunities } from "../lib/jobs";
 import { getEffectiveJobStatus, getJobAvailabilityNotice } from "../lib/job-runtime";
 
 const checks = [
-  ["eha-registered-nurse-yaba-lagos-2026", "https://erp.eha.ng/jobs"],
   ["eha-pharmacist-abuja-2026", "https://erp.eha.ng/jobs"],
   ["coronation-graduate-trainee-2026", "https://www.coronation.ng/coronation-academies/"],
   ["nigerian-navy-batch-39-recruitment-2026", "https://joinnigeriannavy.navy.mil.ng/"],
@@ -26,9 +25,12 @@ test("EHA nurse and pharmacist keep real original posting dates separate from Oc
   const nurse = jobOpportunities.find(x => x.slug === "eha-registered-nurse-yaba-lagos-2026");
   const pharmacist = jobOpportunities.find(x => x.slug === "eha-pharmacist-abuja-2026");
   assert.ok(nurse); assert.ok(pharmacist);
-  assert.equal(nurse.posting?.datePosted, "2026-09-27");
+  assert.equal(nurse.posting, undefined, "do not publish JobPosting for an unavailable role");
+  assert.match(nurse.sourceNotes.join(" "), /27 September 2026/);
+  assert.equal(nurse.verifiedAt, "2026-10-30");
+  assert.equal(getEffectiveJobStatus(nurse, "2026-10-30"), "unverified");
   assert.equal(pharmacist.posting?.datePosted, "2026-09-29");
-  assert.match(nurse.summary, /20 October 2026/);
+  assert.match(nurse.summary, /HTTP 404/);
   assert.match(pharmacist.sourceNotes.join(" "), /19 October 2026/);
   assert.match(pharmacist.summary, /181,440/);
   assert.match(pharmacist.qualifications.join(" "), /PCN|Pharmacists Council/i);

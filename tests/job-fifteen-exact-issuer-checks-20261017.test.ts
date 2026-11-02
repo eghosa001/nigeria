@@ -22,6 +22,15 @@ test("fifteen original issuer reviews retain their evidence without keeping a re
       assert.ok(job.sources.every(source => source.url !== checked.issuerUrl), slug);
       continue;
     }
+    if (slug === "eha-registered-nurse-yaba-lagos-2026") {
+      // 30 October issuer recheck supersedes the historical 17 October Apply control.
+      assert.equal(job.status, "unverified", slug);
+      assert.equal(job.officialUrl, "https://erp.eha.ng/jobs", slug);
+      assert.equal(job.verifiedAt, "2026-10-30", slug);
+      assert.ok(job.sources.every(source => source.url !== checked.issuerUrl), slug);
+      assert.ok(job.sourceNotes.some(note => /27 September 2026/.test(note)), slug);
+      continue;
+    }
     assert.equal(job.status, "open", slug);
     assert.equal(job.deadline, undefined, slug);
     assert.equal(job.officialUrl, checked.issuerUrl, slug);
