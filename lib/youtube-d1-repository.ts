@@ -1,3 +1,5 @@
+import { isRestrictedYouTubeVideoId, restrictedYouTubeVideoIds } from "./youtube-rights-blocklist";
+
 /**
  * Cloudflare D1 read boundary for the staged YouTube catalog.
  *
@@ -103,7 +105,7 @@ function parseRow(row: ContentRow | null, videoId: string): YouTubeD1Record | nu
  * draft or stale: the importer stages ALL source-verified movies as draft.
  */
 export async function getPublishedYouTubeD1Movie(db: YouTubeD1Database, videoId: string) {
-  if (!isValidVideoId(videoId)) return null;
+  if (!isValidVideoId(videoId) || isRestrictedYouTubeVideoId(videoId)) return null;
   const row = await db.prepare(
     `SELECT payload_json, editorial_status, canonical_path
      FROM content_items
@@ -175,7 +177,14 @@ export function youtubeD1QueryPlan(input: YouTubeD1Query, staging = false) {
   clauses.push("json_array_length(json_extract(i.payload_json, '$.cast')) > 0");
   clauses.push("json_array_length(json_extract(i.payload_json, '$.featuredCast')) > 0");
   clauses.push("COALESCE(json_extract(i.payload_json, '$.metadataStatus'), 'complete') <> 'cast-pending'");
-  if (!staging) clauses.push("i.editorial_status = 'published'");
+  if (!staging) {
+    clauses.push("i.editorial_status = 'published'");
+    // Keep takedown URLs out of both page data and its exact SQL count.
+    for (const videoId of restrictedYouTubeVideoIds) {
+      clauses.push("i.slug <> ?");
+      params.push(videoId);
+    }
+  }
   if (match) {
     clauses.push("lower(i.title || ' ' || i.summary || ' ' || i.keywords) LIKE ?");
     params.push('%' + match + '%');

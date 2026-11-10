@@ -1,6 +1,7 @@
 import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
 import { youtubeEditorialDossiers } from "@/lib/youtube-editorial-dossiers";
 import { isApprovedYouTubeMoviePublisher } from "@/lib/youtube-movie-channels";
+import { isRestrictedYouTubeVideoId } from "@/lib/youtube-rights-blocklist";
 
 export type YouTubeDetailSource = {
   videoId: string;
@@ -218,7 +219,7 @@ function addAlternateSources(movie: YouTubeDetailMovie, shardMovies: GeneratedRe
   const alternateSources: YouTubeDetailSource[] = [];
 
   for (const raw of shardMovies) {
-    if (raw.videoId === movie.videoId || movieIdentity(raw.title || raw.rawTitle) !== identity) continue;
+    if (raw.videoId === movie.videoId || isRestrictedYouTubeVideoId(raw.videoId) || movieIdentity(raw.title || raw.rawTitle) !== identity) continue;
     const other = normalizeGenerated(raw);
     const threshold = Math.min(2, movie.cast.length, other.cast.length);
     if (!threshold || sharedCastCount(movie, other) < threshold) continue;
@@ -252,6 +253,7 @@ function reviewSynopsis(candidate: ReviewCandidate) {
 }
 
 export function getCuratedMovie(videoId: string): YouTubeDetailMovie | undefined {
+  if (isRestrictedYouTubeVideoId(videoId)) return undefined;
   for (const title of entertainmentTitles) {
     const watch = title.watchLinks.find((link) => link.platform === "YouTube" && link.access === "full-movie");
     if (!watch || videoIdFromUrl(watch.href) !== videoId) continue;
@@ -280,6 +282,7 @@ export function getCuratedMovie(videoId: string): YouTubeDetailMovie | undefined
 function getReviewMovie(candidate: ReviewCandidate | undefined, reviewGeneratedAt?: string): YouTubeDetailMovie | undefined {
   if (
     !candidate ||
+    isRestrictedYouTubeVideoId(candidate.videoId) ||
     candidate.reason !== "missing-cast" ||
     Number(candidate.durationMinutes) < 55 ||
     reviewNonMovieTitle.test(candidate.rawTitle ?? candidate.title) ||
@@ -325,6 +328,7 @@ export function isIndexableYouTubeDetailMovie(movie: YouTubeDetailMovie) {
 }
 
 export async function getYouTubeDetailMovieById(videoId: string) {
+  if (isRestrictedYouTubeVideoId(videoId)) return undefined;
   const curated = getCuratedMovie(videoId);
   if (curated) return curated;
 
@@ -347,7 +351,7 @@ export async function getRelatedYouTubeDetailMovies(movie: YouTubeDetailMovie, l
   const castKeys = new Set(movie.cast.map((name) => name.trim().toLowerCase()));
 
   for (const raw of shard.movies) {
-    if (raw.videoId === movie.videoId) continue;
+    if (raw.videoId === movie.videoId || isRestrictedYouTubeVideoId(raw.videoId)) continue;
     const rawCast = Array.isArray(raw.cast) ? raw.cast : [];
     const shared = rawCast.reduce(
       (count, name) => count + (castKeys.has(String(name).trim().toLowerCase()) ? 1 : 0),

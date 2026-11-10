@@ -3,6 +3,9 @@ import path from "node:path";
 import { recordSuccessfulChannelScan } from "./youtube-scan-freshness.mjs";
 
 const root = process.cwd();
+// Persistent rights hold. Channel approval alone does not clear each video.
+const rightsRestrictions = JSON.parse(await fs.readFile(path.join(root, "data/youtube-rights-restrictions.json"), "utf8"));
+const restrictedVideoIds = new Set(rightsRestrictions.blockedVideoIds);
 // Recovery sync trigger: validated title-cast pass after validator repair.
 const sourcesPath = path.join(root, "data/youtube-movie-sources.json");
 const cachePath = path.join(root, "data/youtube-channel-cache.json");
@@ -23,7 +26,8 @@ let previousGenerated = { movies: [], pendingQualityCount: 0 };
 try { previousGenerated = JSON.parse(await fs.readFile(outputPath, "utf8")); } catch {}
 let previousReview = { candidates: [] };
 try { previousReview = JSON.parse(await fs.readFile(reviewPath, "utf8")); } catch {}
-const previousMovies = Array.isArray(previousGenerated.movies) ? previousGenerated.movies : [];
+const previousMovies = (Array.isArray(previousGenerated.movies) ? previousGenerated.movies : [])
+  .filter((movie) => !restrictedVideoIds.has(movie.videoId));
 const fullSync = process.env.YOUTUBE_FULL_SYNC === "1" || previousMovies.length === 0;
 const now = new Date();
 const checkedDate = now.toISOString().slice(0, 10);
@@ -507,6 +511,7 @@ const pendingByVideoId = new Map(
   fullSync
     ? []
     : (Array.isArray(previousReview.candidates) ? previousReview.candidates : [])
+        .filter((candidate) => !restrictedVideoIds.has(candidate.videoId))
         .map((candidate) => [candidate.videoId, candidate]),
 );
 let pendingQualityCount = fullSync ? 0 : Number(previousGenerated.pendingQualityCount ?? 0);
@@ -526,7 +531,7 @@ for (const source of registry.sources) {
     const details = await videoDetails(ids);
 
     for (const video of details) {
-    if (!isMovie(video)) continue;
+    if (restrictedVideoIds.has(video.id) || !isMovie(video)) continue;
     let cast = extractCast(video);
     if (!cast.length) cast = castFromPriorCatalogTitle(video.snippet?.title ?? "");
     const title = cleanTitle(video.snippet?.title, cast);
@@ -613,7 +618,7 @@ const approvedChannelIds = new Set(
 );
 
 const sorted = [...moviesByVideoId.values()]
-  .filter((movie) => approvedChannelIds.has(movie.channelId))
+  .filter((movie) => approvedChannelIds.has(movie.channelId) && !restrictedVideoIds.has(movie.videoId))
   .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || a.title.localeCompare(b.title));
 
 const uniqueByPublisherTitle = new Map();
