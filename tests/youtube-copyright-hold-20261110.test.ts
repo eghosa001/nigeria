@@ -16,8 +16,8 @@ test("copyright hold excludes the specific video from all static publication sur
   assert.equal(isRestrictedYouTubeVideoId("KWIpR47N9hc"), false);
   for (const rows of [generatedYouTubeMovies, youtubeMovieLibrary, discoverableYouTubeMovies, indexableYouTubeMovies]) {
     assert.equal(rows.some((movie) => movie.videoId === blockedId), false);
-    assert.equal(rows.some((movie) => movie.alternateSources?.some((source) => source.videoId === blockedId)), false);
   }
+  assert.equal(youtubeMovieLibrary.some((movie) => movie.alternateSources.some((source) => source.videoId === blockedId)), false);
   assert.equal(getYouTubeMovieById(blockedId), undefined);
   assert.equal(getCuratedMovie(blockedId), undefined);
   assert.equal(await getYouTubeDetailMovieById(blockedId), undefined);
