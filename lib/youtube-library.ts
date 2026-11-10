@@ -4,6 +4,7 @@ import packedCatalog from "@/data/youtube-runtime-catalog.generated.json";
 import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
 import { youtubeEditorialDossiers } from "@/lib/youtube-editorial-dossiers";
 import { isApprovedYouTubeMoviePublisher } from "@/lib/youtube-movie-channels";
+import { isRestrictedYouTubeVideoId } from "@/lib/youtube-rights-blocklist";
 
 export type YouTubeMovieSource = {
   videoId: string;
@@ -224,7 +225,7 @@ const curated: BaseYouTubeMovieRecord[] = entertainmentTitles.flatMap((title) =>
   const watch = title.watchLinks.find((link) => link.platform === "YouTube" && link.access === "full-movie");
   if (!watch) return [];
   const videoId = videoIdFromUrl(watch.href);
-  if (!videoId) return [];
+  if (!videoId || isRestrictedYouTubeVideoId(videoId)) return [];
   return [{
     videoId,
     title: title.title,
@@ -245,6 +246,7 @@ const curated: BaseYouTubeMovieRecord[] = entertainmentTitles.flatMap((title) =>
 });
 
 export const generatedYouTubeMovies = (generatedData.movies as GeneratedRecord[])
+  .filter((movie) => !isRestrictedYouTubeVideoId(movie.videoId))
   .map((movie) => {
     const title = cleanYouTubeDisplayTitle(movie.title || movie.rawTitle) || "Untitled Nigerian movie";
     const cast = normalizeGeneratedCast(movie.cast ?? []);
@@ -309,6 +311,7 @@ for (const row of packed.reviews) {
   const [videoId, rawTitle, title, channelName, , , durationMinutes, reason] = row;
   if (
     reason === "missing-cast" &&
+    !isRestrictedYouTubeVideoId(videoId) &&
     Number(durationMinutes) >= 55 &&
     !reviewNonMovieTitle.test(rawTitle ?? title) &&
     isApprovedYouTubeMoviePublisher(channelName)
@@ -400,7 +403,7 @@ function trendScore(movie: YouTubeMovieRecord) {
 // Reliable watch links and verified cast make a listing useful in discovery, but
 // that alone does not justify a separate indexable story page.
 export function isDiscoverableYouTubeMovie(movie: YouTubeMovieRecord) {
-  return movie.metadataStatus !== "cast-pending" && movie.cast.length > 0 && movie.featuredCast.length > 0;
+  return !isRestrictedYouTubeVideoId(movie.videoId) && movie.metadataStatus !== "cast-pending" && movie.cast.length > 0 && movie.featuredCast.length > 0;
 }
 
 export function hasSubstantiveYouTubeSynopsis(movie: Pick<YouTubeMovieRecord, "synopsis">) {
@@ -434,6 +437,7 @@ export const youtubePendingQualityCount = generatedData.pendingQualityCount ?? 0
 export const youtubeReviewVisibleCount = 0;
 
 export function getYouTubeMovieById(videoId: string) {
+  if (isRestrictedYouTubeVideoId(videoId)) return undefined;
   const published = byVideoId.get(videoId);
   if (published) return published;
   const pending = pendingReviewRows.get(videoId);
