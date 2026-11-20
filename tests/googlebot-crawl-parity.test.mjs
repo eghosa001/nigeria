@@ -14,10 +14,10 @@ test("all four editorial pillars have a production crawler canary", () => {
 });
 
 test("crawler parity includes real mobile Googlebot and empty User-Agent regeneration", () => {
-  assert.match(USER_AGENTS.googlebotMobileLike, /Googlebot\\/2\\.1/);
+  assert.ok(USER_AGENTS.googlebotMobileLike.includes("Googlebot/2.1"));
   assert.match(USER_AGENTS.googlebotMobileLike, /Mobile Safari/);
   assert.equal(USER_AGENTS.emptyUserAgent, "");
-  assert.match(USER_AGENTS.googlebotLike, /Googlebot\\/2\\.1/);
+  assert.ok(USER_AGENTS.googlebotLike.includes("Googlebot/2.1"));
   for (const agent of ["googlebotLike", "googlebotMobileLike", "emptyUserAgent"]) {
     assert.equal(validateIndexableHtml(input({ requireHeadMetadata: true })).canonical, canonical);
     const bad = good.replace("<head>", "<head><meta name=\"robots\" content=\"noindex\">");
