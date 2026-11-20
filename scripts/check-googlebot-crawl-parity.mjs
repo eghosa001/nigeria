@@ -26,9 +26,14 @@ export const CONTENT_FRESHNESS_CANARIES = [
   },
 ];
 
-const USER_AGENTS = {
+// The Vinext beta.11 metadata-cache incident involved a background request
+// without a User-Agent. Check that exact path and Google's mobile crawler too;
+// a successful desktop-only probe cannot rule out either regression.
+export const USER_AGENTS = {
   browser: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131.0.0.0 Safari/537.36",
   googlebotLike: "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+  googlebotMobileLike: "Mozilla/5.0 (Linux; Android 12; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+  emptyUserAgent: "",
 };
 
 function attr(tag, name) {
@@ -176,7 +181,9 @@ export async function auditLive(base = process.env.LIVE_BASE_URL || "https://myn
       }
       console.log(path, agent, "HTTP 200, indexable, canonical verified");
     }
-    assertSamePageIdentity(results.browser, results.googlebotLike, path + " browser vs Googlebot");
+    for (const agent of ["googlebotLike", "googlebotMobileLike", "emptyUserAgent"]) {
+      assertSamePageIdentity(results.browser, results[agent], path + " browser vs " + agent);
+    }
 
     // Compare the unmodified, possibly cached canonical URL with a fresh
     // query on the same route. Do not submit probe URLs to search engines.
