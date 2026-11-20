@@ -9,6 +9,15 @@ export const CRAWL_CANARIES = [
   "/jobs/nigerian-army-92rri-2026",
 ];
 
+// Google labelled these fully populated guides as soft 404s in October,
+// before the crawler-metadata cache repair. Keep them in the recurring live
+// probe so a skeletal HTML response or missing metadata cannot reappear.
+export const HISTORICAL_SOFT_404_CANARIES = [
+  "/services/jamb-profile-code",
+  "/services/waec-collect-certificate",
+  "/services/nysc-correct-date-of-birth",
+];
+
 // The 27 Oct Design Week regression (#726) served obsolete booking advice
 // at the normal URL while a fresh query showed an ended-event archive. Its
 // title, H1 and canonical could still match, so metadata-only checks miss it.
@@ -164,7 +173,7 @@ async function fetchWithRetry(url, userAgent) {
 
 export async function auditLive(base = process.env.LIVE_BASE_URL || "https://mynigeriaguide.com") {
   const origin = base.replace(/\/$/, "");
-  for (const path of CRAWL_CANARIES) {
+  for (const path of [...CRAWL_CANARIES, ...HISTORICAL_SOFT_404_CANARIES]) {
     const canonical = origin + path;
     const results = {};
     let responseForBot;
@@ -211,7 +220,7 @@ export async function auditLive(base = process.env.LIVE_BASE_URL || "https://myn
     assertSameArticleContent(ordinary.html, fresh.html, marker.path);
     console.log(marker.path, "ended-event canonical is accurate and article content matches fresh response");
   }
-  console.log("Four-pillar crawler and content freshness passed. This is not a Google indexing or ranking verdict.");
+  console.log("Four-pillar, historical soft-404 and content freshness crawler checks passed. This is not a Google indexing or ranking verdict.");
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

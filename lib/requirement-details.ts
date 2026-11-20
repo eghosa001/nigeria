@@ -16,6 +16,9 @@ export type RequirementDetail = {
 };
 
 function kindFor(item: string): RequirementKind {
+  // Numbers printed on a voucher/card are credentials, not a request to
+  // submit the card as a document. This matters for WAEC result lookup.
+  if (/\bserial\s+(?:number|no\.?)(?:\b|$)/i.test(item)) return "Identity / account detail";
   // Numeric fields in an online lookup are not physical passport documents.
   if (/\b(?:Application|Reference) Number\b/i.test(item)) return "Identity / account detail";
   if (/payment|receipt|transaction|remita|rrr|fee evidence/i.test(item)) return "Payment / transaction evidence";
@@ -92,7 +95,17 @@ function purposeFor(item: string, service: Service) {
   if (/email/i.test(item)) return "Used for account access and/or official communication. Use an address you can open throughout the process.";
   if (/phone|gsm|sim|mobile number/i.test(item)) return "Used for SMS, OTP, recovery or account identification where this service relies on a mobile number. Use a number you control.";
   if (/profile code/i.test(item)) return "Used by JAMB to identify the candidate profile before e-PIN purchase and registration.";
-  if (/e-?pin/i.test(item)) return "Used to authorise or continue the specific JAMB/agency transaction linked to this guide.";
+  if (/e-?pin/i.test(item)) {
+    // Do not call a WAEC result-checker credential a JAMB registration e-PIN.
+    // The same label is used by unrelated issuers for different procedures.
+    if (service.slug === "waec-check-result") {
+      return "WAEC Direct uses this result-checker PIN with the candidate's examination details and the voucher/card serial number to show the result.";
+    }
+    if (service.agencySlug === "jamb" && /registration|direct-entry|e-?pin/i.test(service.slug)) {
+      return "JAMB uses the purchased registration e-PIN at the authorised registration stage. It is separate from the candidate's profile code.";
+    }
+    return undefined; // Unsupported issuer-specific purpose: show only the sourced requirement.
+  }
   if (/examination number|exam number|examination year|exam year|examination type/i.test(item)) return "Used to locate the correct examination record before a result or certificate service can proceed.";
   if (/serial/i.test(item) && /waec|result|checker/i.test(item)) return "Used with the result-checking credential to locate and authorise access to the correct result.";
   if (/matric/i.test(item)) return "Used to match the graduate or student to the institution record submitted for this process.";
