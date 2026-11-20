@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { CRAWL_CANARIES, CONTENT_FRESHNESS_CANARIES, validateIndexableHtml, assertSamePageIdentity, getArticleText, assertSameArticleContent, assertFreshnessSignals } from "../scripts/check-googlebot-crawl-parity.mjs";
+import { CRAWL_CANARIES, CONTENT_FRESHNESS_CANARIES, USER_AGENTS, validateIndexableHtml, assertSamePageIdentity, getArticleText, assertSameArticleContent, assertFreshnessSignals } from "../scripts/check-googlebot-crawl-parity.mjs";
 
 const canonical = "https://mynigeriaguide.com/services/ican-professional-exam-registration";
 const good = '<!doctype html><html><head><title>ICAN exam registration</title><link rel="canonical" href="' + canonical + '"><meta name="robots" content="index,follow"></head><body><h1>ICAN registration</h1></body></html>';
@@ -10,6 +10,18 @@ test("all four editorial pillars have a production crawler canary", () => {
   assert.equal(CRAWL_CANARIES.length, 4);
   for (const prefix of ["/entertainment/", "/services/", "/explore/", "/jobs/"]) {
     assert.equal(CRAWL_CANARIES.filter((path) => path.startsWith(prefix)).length, 1);
+  }
+});
+
+test("crawler parity includes real mobile Googlebot and empty User-Agent regeneration", () => {
+  assert.match(USER_AGENTS.googlebotMobileLike, /Googlebot\\/2\\.1/);
+  assert.match(USER_AGENTS.googlebotMobileLike, /Mobile Safari/);
+  assert.equal(USER_AGENTS.emptyUserAgent, "");
+  assert.match(USER_AGENTS.googlebotLike, /Googlebot\\/2\\.1/);
+  for (const agent of ["googlebotLike", "googlebotMobileLike", "emptyUserAgent"]) {
+    assert.equal(validateIndexableHtml(input({ requireHeadMetadata: true })).canonical, canonical);
+    const bad = good.replace("<head>", "<head><meta name=\"robots\" content=\"noindex\">");
+    assert.throws(() => validateIndexableHtml(input({ html: bad, requireHeadMetadata: true })), /noindex/);
   }
 });
 
