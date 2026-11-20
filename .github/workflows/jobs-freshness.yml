@@ -86,6 +86,9 @@ jobs:
         with:
           node-version: 22
       - run: npm install --no-audit --no-fund
+      - name: Verify closed-job search snippets reflect live application status
+        if: github.event_name == 'pull_request'
+        run: npx tsx --test tests/job-expired-seo-metadata-20261120.test.ts
       - name: Validate Jobs content and lifecycle
         if: steps.scope.outputs.mode == 'full'
         run: npm run check:jobs && npx tsx --test tests/jobs-deadline-trends.test.ts tests/job-moniepoint-first-published-20261017.test.ts tests/jobs-hub-founder-dojo-deadline-20261028.test.mjs
