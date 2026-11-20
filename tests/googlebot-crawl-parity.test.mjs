@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { CRAWL_CANARIES, CONTENT_FRESHNESS_CANARIES, USER_AGENTS, validateIndexableHtml, assertSamePageIdentity, getArticleText, assertSameArticleContent, assertFreshnessSignals } from "../scripts/check-googlebot-crawl-parity.mjs";
+import { CRAWL_CANARIES, HISTORICAL_SOFT_404_CANARIES, CONTENT_FRESHNESS_CANARIES, USER_AGENTS, validateIndexableHtml, assertSamePageIdentity, getArticleText, assertSameArticleContent, assertFreshnessSignals } from "../scripts/check-googlebot-crawl-parity.mjs";
 
 const canonical = "https://mynigeriaguide.com/services/ican-professional-exam-registration";
 const good = '<!doctype html><html><head><title>ICAN exam registration</title><link rel="canonical" href="' + canonical + '"><meta name="robots" content="index,follow"></head><body><h1>ICAN registration</h1></body></html>';
@@ -13,6 +13,17 @@ test("all four editorial pillars have a production crawler canary", () => {
   }
 });
 
+test("live crawler probe covers all three previously soft-404 service guides", () => {
+  assert.deepEqual([...HISTORICAL_SOFT_404_CANARIES].sort(), [
+    "/services/jamb-profile-code",
+    "/services/nysc-correct-date-of-birth",
+    "/services/waec-collect-certificate",
+  ].sort());
+  for (const path of HISTORICAL_SOFT_404_CANARIES) {
+    assert.ok(path.startsWith("/services/"));
+    assert.ok(!CRAWL_CANARIES.includes(path));
+  }
+});
 test("crawler parity includes real mobile Googlebot and empty User-Agent regeneration", () => {
   assert.ok(USER_AGENTS.googlebotMobileLike.includes("Googlebot/2.1"));
   assert.match(USER_AGENTS.googlebotMobileLike, /Mobile Safari/);
