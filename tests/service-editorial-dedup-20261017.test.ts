@@ -129,3 +129,24 @@ test("NECO public timetable keeps one registration deadline warning and distinct
   );
   assert.equal(guide.lastVerified, "2026-10-17", "Deletion is not a new issuer recheck");
 });
+
+
+test("WAEC result-checker credential is not misidentified as a JAMB e-PIN", async () => {
+  const { getPublicService } = await import("../lib/data");
+  const { getRequirementDetails } = await import("../lib/requirement-details");
+  const guide = getPublicService("waec-check-result");
+  assert.ok(guide, "Published WAEC result-checker guide should remain available");
+  const requirements = getRequirementDetails(guide);
+  assert.equal(requirements.length, guide.requirements.length, "Do not hide any sourced requirement");
+  const pin = requirements.find((item) => /e-?pin/i.test(item.item));
+  assert.ok(pin, "WAEC e-PIN must remain in the checklist");
+  assert.match(pin.why ?? "", /WAEC Direct.+result-checker PIN/);
+  assert.doesNotMatch(pin.why ?? "", /JAMB|generic agency transaction/i);
+  const serial = requirements.find((item) => /serial number/i.test(item.item));
+  assert.ok(serial, "WAEC serial number remains a separate credential");
+  assert.equal(serial.kind, "Identity / account detail", "A voucher serial number is not itself a submitted physical document");
+  const nysc = getPublicService("nysc-correct-date-of-birth");
+  assert.ok(nysc);
+  const nyscPin = getRequirementDetails(nysc).find((item) => /WAEC verification PIN/i.test(item.item));
+  assert.match(nyscPin?.why ?? "", /NYSC uses this PIN/, "Keep the different NYSC verification purpose");
+});
