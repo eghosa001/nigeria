@@ -71,8 +71,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     : summary.length >= 90 ? summary
     : summary.replace(/[.!?]$/, "") + (summary ? ". " : "") + sourceContext;
 
-  const seoTitle = seoOverride?.title ?? compactJobSnippet(label, 58);
-  const seoDescription = seoOverride?.description ?? compactJobSnippet(description, 155);
+  // A dated role can close after its title override was reviewed. The live
+  // availability notice must take precedence over stale "Apply" copy in
+  // both Google's title/description and the social sharing preview.
+  const seoTitle = availabilityNotice
+    ? compactJobSnippet(label, 58)
+    : seoOverride?.title ?? compactJobSnippet(label, 58);
+  const seoDescription = availabilityNotice
+    ? compactJobSnippet(description, 155)
+    : seoOverride?.description ?? compactJobSnippet(description, 155);
   const canonical = "/jobs/" + item.slug;
   return {
     title: { absolute: seoTitle },
