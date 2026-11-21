@@ -6,6 +6,15 @@ import { getYouTubeCatalogPage } from '../lib/youtube-pagination';
 import { getYouTubeDetailMovieById, isIndexableYouTubeDetailMovie } from '../lib/youtube-detail';
 import fs from 'node:fs';
 
+test('free-tier safeguard keeps production movie pages off D1 without deleting data', () => {
+  const config = JSON.parse(fs.readFileSync('wrangler.jsonc', 'utf8'));
+  const source = fs.readFileSync('lib/youtube-server-store.ts', 'utf8');
+  assert.notEqual(config.vars?.YOUTUBE_D1_CUTOVER, 'enabled');
+  assert.ok(source.includes("export const youtubeServerStore = createYouTubeServerStore({ mode: 'static' });"));
+  assert.equal(config.d1_databases?.[0]?.binding, 'CONTENT_DB');
+  assert.equal(config.d1_databases?.[0]?.database_id, '73b4490a-5242-4c31-be8d-36ba0c327d3c');
+});
+
 test('public default preserves directory, pagination and detail metadata inputs', async () => {
   for (const input of [{}, { q: 'love' }, { q: 'ruth', page: 2 }, { channel: 'Unknown publisher' }]) {
     assert.deepEqual(await youtubeServerStore.query(input), queryYouTubeDirectory(input));

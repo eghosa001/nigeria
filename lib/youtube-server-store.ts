@@ -70,6 +70,8 @@ export function createYouTubeServerStore(options:
   };
 }
 
-// Production Workers use the exact CONTENT_DB binding only when the explicit
-// YOUTUBE_D1_CUTOVER variable is enabled. Local/test environments stay static.
-export const youtubeServerStore = createYouTubeServerStore({ mode: 'runtime' });
+// Emergency Cloudflare Free-tier continuity: serve the existing checked-in,
+// rights-filtered public catalogue without a D1 operation per page view.
+// Keep the explicit D1 adapter above intact for an evidence-based reactivation
+// after the rows-read budget and cache/indexes have been measured.
+export const youtubeServerStore = createYouTubeServerStore({ mode: 'static' });
