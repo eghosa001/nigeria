@@ -12,7 +12,7 @@
   },
   "previews": {},
   "vars": {
-    "YOUTUBE_D1_CUTOVER": "enabled"
+    "YOUTUBE_D1_CUTOVER": "disabled"
   },
   "d1_databases": [
     {
