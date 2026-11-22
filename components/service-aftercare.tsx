@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import type { Service } from "@/lib/types";
 import { getDetailedServiceGuidance, hasExplicitServiceGuidance } from "@/lib/service-guidance";
 import { getReviewedIcanGuidance } from "@/lib/ican-route-guidance-2026-10-17";

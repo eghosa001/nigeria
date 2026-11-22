@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { withStaticSocialMetadata } from "@/lib/seo-social";
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { publicServices } from "@/lib/data";
 import { universityProfiles } from "@/lib/university-profiles";
 import { queryUniversityDirectory, universitySearchSuggestions } from "@/lib/university-search";

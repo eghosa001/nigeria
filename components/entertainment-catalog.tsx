@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { canonicalGuidePath } from "@/lib/seo-routes";
 import { useEffect, useRef, useState } from "react";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";

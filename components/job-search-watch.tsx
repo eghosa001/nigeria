@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { useEffect, useState } from "react";
 import type { JobDirectoryItem, JobDirectoryResult } from "@/lib/job-query";
 import { trackEvent } from "@/lib/client-analytics";

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import type { ExplorePlaceKind } from "@/lib/explore-places";
 
 type GuideSummary = readonly [slug: string, shortTitle: string, kind: "city" | "destination" | "itinerary" | "event"];

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { withStaticSocialMetadata } from "@/lib/seo-social";
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { serviceLocationCities } from "@/data/service-locations";
 import { officeDirectories } from "@/lib/offices";
 import { OfficeFinder } from "@/components/office-finder";

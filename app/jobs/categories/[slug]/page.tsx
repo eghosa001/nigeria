@@ -1,7 +1,7 @@
 import { isEffectivelyOpen } from "@/lib/job-runtime";
 import type { Metadata } from "next";
 import { canonicalGuidePath } from "@/lib/seo-routes";
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { notFound } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";

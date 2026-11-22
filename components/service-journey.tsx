@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import type { Service } from "@/lib/types";
 import { getServiceJourney, hasReviewedServiceJourney } from "@/lib/journey";
 import { getDetailedServiceGuidance } from "@/lib/service-guidance";

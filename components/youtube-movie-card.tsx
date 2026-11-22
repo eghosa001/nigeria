@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { canonicalGuidePath } from "@/lib/seo-routes";
 import { leadMovieCast } from "@/lib/movie-cast-credits";
 import { RemoteMoviePreviewImage } from "@/components/remote-movie-preview-image";

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { withStaticSocialMetadata } from "@/lib/seo-social";
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { PageOutline } from "@/components/page-outline";
 import { redirect } from "next/navigation";
 import { ServiceDirectory } from "@/components/service-directory";

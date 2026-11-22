@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import type { Service } from "@/lib/types";
 import { getPublicService } from "@/lib/data";
 import { getServiceScenarioDossier } from "@/lib/service-scenario-dossiers-2026-10-17";

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { canonicalGuidePath } from "@/lib/seo-routes";
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ad-slot";
 import { AD_SLOTS } from "@/lib/adsense-config";

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { canonicalGuidePath } from "@/lib/seo-routes";
 import { compactSearchText } from "@/lib/search-snippet";
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { PageOutline } from "@/components/page-outline";
 import { notFound } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";

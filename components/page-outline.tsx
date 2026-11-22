@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 
 export type PageOutlineItem = { href: `#${string}`; label: string };
 

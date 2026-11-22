@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import type { CareerOpportunity } from "@/lib/jobs";
 import { getEffectiveJobStatus, getEffectiveStatusLabel } from "@/lib/job-runtime";
 

@@ -1,7 +1,7 @@
 import { getEffectiveJobStatus, getEffectiveStatusLabel } from "@/lib/job-runtime";
 import type { Metadata } from "next";
 import { withStaticSocialMetadata } from "@/lib/seo-social";
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { governmentOpportunities } from "@/lib/jobs";
 import { JobCollection } from "@/components/job-collection";
 

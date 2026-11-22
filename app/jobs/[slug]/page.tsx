@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { canonicalGuidePath } from "@/lib/seo-routes";
 import { uniqueSupportingStatements } from "@/lib/reader-content-dedup";
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { PageOutline } from "@/components/page-outline";
 import { notFound, redirect } from "next/navigation";
 import { AdSlot } from "@/components/ad-slot";

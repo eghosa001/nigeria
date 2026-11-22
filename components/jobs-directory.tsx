@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { canonicalGuidePath } from "@/lib/seo-routes";
 import type { JobDirectoryResult } from "@/lib/job-query";
 import type { JobSector, JobStatus } from "@/lib/jobs";

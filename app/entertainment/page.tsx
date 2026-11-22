@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { withStaticSocialMetadata } from "@/lib/seo-social";
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { PageOutline } from "@/components/page-outline";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
