@@ -191,7 +191,7 @@ test("plain-language search finds the right service", async ({ page }) => {
 
 test("site search crosses services travel and movies", async ({ page }) => {
   await page.goto("/search?q=passport");
-  await expect(page.locator('a[href="/services/passport-renewal"]').first()).toBeVisible();
+  await expect(page.locator('a[href="/guides/services/passport-renewal"]').first()).toBeVisible();
 
   await page.goto("/search?q=Lagos");
   await expect(page.getByRole("link", { name: /Lagos Travel Guide/i }).first()).toBeVisible();
@@ -632,7 +632,7 @@ test("official portal reference page exposes direct authorities and guide routes
   await page.goto("/official-portals");
   await expect(page.getByRole("heading", { name: "Official government and service portals" })).toBeVisible();
   await expect(page.getByRole("link", { name: "Open official website ↗" }).first()).toHaveAttribute("href", /^https:\/\//);
-  await expect(page.getByRole("link", { name: "View verified guides →" }).first()).toHaveAttribute("href", /^\/agencies\//);
+  await expect(page.getByRole("link", { name: "View verified guides →" }).first()).toHaveAttribute("href", /^\/guides\/agencies\//);
 });
 
 
