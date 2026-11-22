@@ -6,17 +6,19 @@ const read = (path: string) => readFileSync(new URL("../" + path, import.meta.ur
 
 test("Services result-card navigation stays clickable without bulk speculative detail requests", () => {
   const card = read("components/service-card.tsx");
-  assert.ok(card.includes('<Link className="service-card" href={"/services/" + service.slug} prefetch={false}>'));
+  assert.ok(card.includes('<Link className="service-card" href={canonicalGuidePath("/services/" + service.slug)} prefetch={false}>'));
   assert.ok(card.includes('<h3>{service.shortTitle}</h3>'));
 });
 
 test("Jobs result and collection cards avoid viewport-triggered detail prefetch", () => {
-  const count = (source: string) =>
-    source.split('href={"/jobs/" + item.slug} prefetch={false}>').length - 1;
+  const count = (source: string, newCanonical = false) =>
+    source.split(newCanonical
+      ? 'href={canonicalGuidePath("/jobs/" + item.slug)} prefetch={false}>'
+      : 'href={"/jobs/" + item.slug} prefetch={false}>').length - 1;
 
   const directory = read("components/jobs-directory.tsx");
   const collection = read("components/job-collection.tsx");
-  assert.equal(count(directory), 4, "titles and action links for result + recommended cards");
+  assert.equal(count(directory, true), 4, "new canonical titles and action links for result + recommended cards");
   assert.equal(count(collection), 2, "title and requirements links");
   assert.ok(directory.includes("setResult(next)"), "filter interactions still fetch dynamically");
   assert.ok(collection.includes("PAGE_SIZE"), "collection paging still works");

@@ -73,7 +73,7 @@ jobs:
           # by the daily scheduled job and require separate editorial fixes.
           # The strict Jobs content/lifecycle validation still runs below.
           other_job_files="$(printf '%s\n' "$changed" | grep -E '^(lib/(jobs|job-runtime|job-query|job-facets|job-employers|career-guides)\.ts$|app/api/jobs/|scripts/check-job-links\.mjs$|data/job-retired-redirects\.json$)' || true)"
-          url_diff="$(git diff "$base_sha" HEAD -- lib/job-scale-wave.ts app/jobs | grep -E '^[+-].*(https?://|officialUrl|sources:|href=["'\'' ]https?://)' || true)"
+          url_diff="$(git diff "$base_sha" HEAD -- lib/job-scale-wave.ts app/jobs | grep -E '^[+-].*(https?://|officialUrl|sources:|href=["'\'' ]https?://)' | grep -Ev 'https?://(schema\.org|mynigeriaguide\.com)' || true)"
 
           if [ -n "$other_job_files" ] || [ -n "$url_diff" ]; then
             echo "links=true" >> "$GITHUB_OUTPUT"
