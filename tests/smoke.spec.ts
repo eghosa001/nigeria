@@ -868,3 +868,23 @@ test("five mobile navigation destinations respond and preserve real page content
   await expect(page.locator(".mobile-header-actions a[href='/saved']")).toBeVisible();
   await expect(page.locator(".mng-route-announcer")).toHaveCount(1);
 });
+
+test("all four pillars resolve rebuilt canonical guides and retire legacy article URLs", async ({ request }) => {
+  const routes = [
+    ["/services/waec-check-result", "/guides/services/waec-check-result"],
+    ["/entertainment/movies/oversabi-aunty", "/guides/movies/oversabi-aunty"],
+    ["/explore/benin-city", "/guides/travel/benin-city"],
+    ["/jobs/nigerian-army-92rri-2026", "/guides/jobs/nigerian-army-92rri-2026"],
+  ];
+  for (const [previous, current] of routes) {
+    const oldResponse = await request.get(previous, { maxRedirects: 0 });
+    expect(oldResponse.status(), "Legacy route must redirect: " + previous).toBe(308);
+    expect(oldResponse.headers()["location"], previous).toContain(current);
+
+    const page = await request.get(current, { failOnStatusCode: false });
+    expect(page.status(), "New guide must render: " + current).toBe(200);
+    const html = await page.text();
+    expect(html, "New guide must declare itself as canonical: " + current)
+      .toContain('rel="canonical" href="https://mynigeriaguide.com' + current + '"');
+  }
+});

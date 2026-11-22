@@ -138,8 +138,11 @@ assert(verifiedJobSlugs20261016.length === 12 && new Set(verifiedJobSlugs2026101
   "October 2026 source check must cover twelve distinct vacancies.");
 for (const slug of verifiedJobSlugs20261016) {
   const record = jobOpportunities.find((item) => item.slug === slug);
-  assert(record?.kind === "vacancy" && record.status === "open" && record.verifiedAt === "2026-10-16",
-    slug + " must remain a recently checked individual vacancy.");
+  // The October 2026 evidence is historical after 14 days: a vacancy may be
+  // unverified while retaining its precise original research and URL.
+  assert(record?.kind === "vacancy" && ["open", "unverified", "closed"].includes(record.status) &&
+    record.verifiedAt === "2026-10-16",
+    slug + " must retain its source-checked individual vacancy record.");
   assert(record.sources.some((source) => source.url === record.officialUrl && source.lastChecked === "2026-10-16"),
     slug + " must cite the exact currently checked issuer URL.");
   assert(record.applicationSteps.some((step) => step.includes("own work")) &&
@@ -302,8 +305,16 @@ for (const item of jobOpportunities) {
     assert(getEffectiveJobStatus(item) !== "open", item.slug + " expired vacancy must never render as open.");
   }
   if (item.status === "open") {
-    assert(daysSinceIsoDate(item.verifiedAt) <= 14, item.slug + " is marked open but has not been verified in the last 14 days.");
-    if (item.deadline) assert(item.deadline >= new Date().toISOString().slice(0, 10), item.slug + " is stored open after its deadline.");
+    // The date ages naturally. Protect the visitor-facing state instead of
+    // failing builds for evidence that became historical overnight.
+    if (item.kind === "vacancy" && daysSinceIsoDate(item.verifiedAt) > 14) {
+      assert(getEffectiveJobStatus(item) !== "open",
+        item.slug + " has stale source evidence yet still appears open publicly.");
+    }
+    if (item.deadline && item.deadline < new Date().toISOString().slice(0, 10)) {
+      assert(getEffectiveJobStatus(item) === "closed",
+        item.slug + " has an expired deadline yet still appears open publicly.");
+    }
   }
   if (item.posting) {
     assert(item.kind === "vacancy", item.slug + " has JobPosting metadata but is not a vacancy.");
