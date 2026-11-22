@@ -84,7 +84,8 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
         // A service update does not mean that static legal or editorial pages changed.
         // Empty means "unknown": the sitemap generator omits <lastmod> instead of
         // inventing freshness. The homepage reflects updates across all four pillars.
-        lastModified: path === "" || path === "/latest" ? latestHubModified
+        lastModified: path === "" ? latestDate([latestHubModified, "2026-11-22"])
+          : path === "/latest" ? latestHubModified
           : path === "/updates" ? updateModified
           : ["/fees", "/assistant", "/official-portals", "/offices", "/locations"].includes(path) ? serviceModified
           : "",
@@ -106,7 +107,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
 
   if (section === "services") {
     return [
-      { url: base + "/services", lastModified: serviceModified },
+      { url: base + "/services", lastModified: latestDate([serviceModified, "2026-11-22"]) },
       { url: base + "/universities", lastModified: latestDate(publicServices.filter((service) => service.slug.startsWith("uniben-") || service.slug.startsWith("ui-admission-") || service.slug.startsWith("unn-") || service.slug.startsWith("unilag-") || service.slug.startsWith("lasu-")).map((service) => service.lastVerified)) },
       ...Array.from({ length: Math.max(0, getServiceDirectoryPageCount() - 1) }, (_, index) => ({
         url: base + "/services/page/" + (index + 2),
@@ -184,8 +185,8 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
 
   if (section === "movies") {
     return [
-      { url: base + "/entertainment", lastModified: movieCatalogModified },
-      { url: base + "/entertainment/movies", lastModified: movieCatalogModified },
+      { url: base + "/entertainment", lastModified: latestDate([movieCatalogModified, "2026-11-22"]) },
+      { url: base + "/entertainment/movies", lastModified: latestDate([movieCatalogModified, "2026-11-22"]) },
       { url: base + "/entertainment/trending", lastModified: "2026-10-10" },
       { url: base + "/entertainment/social-trends", lastModified: "2026-10-10" },
       { url: base + "/entertainment/lagos-life-game-2026", lastModified: "2026-10-09" },

@@ -32,6 +32,8 @@ const quickServices = [
   { label: "JAMB profile code and recovery", href: "/services/jamb-profile-code" },
   { label: "NYSC senate list checker", href: "/services/nysc-senate-list" },
   { label: "WAEC result checker", href: "/services/waec-check-result" },
+  { label: "ICAN professional exams", href: "/services/ican-professional-exam-registration" },
+  { label: "MTN SIM replacement", href: "/services/mtn-sim-swap-replacement" },
   { label: "NECO results", href: "/topics/neco" },
   { label: "NELFUND", href: "/topics/nelfund" },
   { label: "NIN services", href: "/topics/nin-corrections" },
@@ -39,6 +41,8 @@ const quickServices = [
   { label: "CAC registration", href: "/topics/cac-business" },
   { label: "ECOWAS certificate", href: "/services/ecowas-travel-certificate" },
   { label: "Passport application tracking", href: "/services/passport-application-tracking" },
+  { label: "Police character certificate", href: "/services/police-character-certificate" },
+  { label: "AEDC MAP meter refund", href: "/services/aedc-map-refund" },
   { label: "Pension & RSA", href: "/topics/pension-services-nigeria" },
   { label: "Foreign visas", href: "/categories/foreign-visas" },
 ];
@@ -189,6 +193,10 @@ export default function HomePage() {
             <Link href="/entertainment/releases">New &amp; upcoming</Link>
             <Link href="/entertainment/cinemas">Cinemas</Link>
             <Link href="/entertainment/people">Nollywood actors &amp; filmmakers</Link>
+            <Link href="/entertainment/movies/oversabi-aunty">Oversabi Aunty cast &amp; viewing</Link>
+            <Link href="/entertainment/movies/millionaire-until-morning">Millionaire Until Morning</Link>
+            <Link href="/entertainment/movies/agbara-nla-the-return">Agbara Nla: The Return</Link>
+            <Link href="/entertainment/series/afobaje-2026">Afobaje Yoruba series</Link>
           </div>
         </div>
       </section>
