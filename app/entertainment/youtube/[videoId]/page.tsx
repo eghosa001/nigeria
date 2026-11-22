@@ -1,5 +1,6 @@
 import { documentedMovieCast, leadMovieCast } from "@/lib/movie-cast-credits";
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import { cache } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -46,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
   const { videoId } = await params;
   const movie = await readPublishedVideo(videoId);
   if (!movie) return {};
-  const canonical = movie.source === "curated" ? movie.internalHref : "/entertainment/youtube/" + movie.videoId;
+  const canonical = movie.source === "curated" ? canonicalGuidePath(movie.internalHref) : canonicalGuidePath("/entertainment/youtube/" + movie.videoId);
   const image = "https://i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg";
   const cast = leadMovieCast(movie, 4);
   const indexable = isIndexableYouTubeDetailMovie(movie);
@@ -102,7 +103,7 @@ function runtimeLabel(minutes: number) {
 function personHref(name: string) {
   const normalized = name.trim().toLowerCase();
   const person = entertainmentPeople.find((item) => item.name.trim().toLowerCase() === normalized);
-  return person ? "/entertainment/people/" + person.slug : null;
+  return person ? canonicalGuidePath("/entertainment/people/" + person.slug) : null;
 }
 
 export default async function YouTubeMovieDetailPage({ params }: { params: Promise<{ videoId: string }> }) {
@@ -141,7 +142,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
     thumbnailUrl: "https:" + "//i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg",
     uploadDate: movie.publishedAt,
     embedUrl: "https://www.youtube.com/embed/" + movie.videoId,
-    url: base + "/entertainment/youtube/" + movie.videoId,
+    url: base + canonicalGuidePath("/entertainment/youtube/" + movie.videoId),
     ...(movie.durationMinutes > 0 ? { duration: "PT" + movie.durationMinutes + "M" } : {}),
     creator: {
       "@type": "Organization",
@@ -162,7 +163,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
     countryOfOrigin: { "@type": "Country", name: "Nigeria" },
     potentialAction: { "@type": "WatchAction", target: movie.videoUrl },
     sameAs: [movie.videoUrl, ...movie.alternateSources.map((source) => source.videoUrl)],
-    url: base + "/entertainment/youtube/" + movie.videoId,
+    url: base + canonicalGuidePath("/entertainment/youtube/" + movie.videoId),
   };
 
   return (

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import { uniqueSupportingStatements } from "@/lib/reader-content-dedup";
 import Link from "next/link";
 import { PageOutline } from "@/components/page-outline";
@@ -80,7 +81,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const seoDescription = availabilityNotice
     ? compactJobSnippet(description, 155)
     : seoOverride?.description ?? compactJobSnippet(description, 155);
-  const canonical = "/jobs/" + item.slug;
+  const canonical = canonicalGuidePath("/jobs/" + item.slug);
   return {
     title: { absolute: seoTitle },
     description: seoDescription,
@@ -115,7 +116,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
   const relatedTopics = getJobTopicsForOpportunity(item);
   const employerOpportunities = getEmployerOpportunities(item.organization, item.slug).slice(0, 4);
   const employer = getJobEmployer(item.organization);
-  const employerHubHref = employer && employer.opportunitySlugs.length >= 2 ? "/jobs/employers/" + employer.slug : null;
+  const employerHubHref = employer && employer.opportunitySlugs.length >= 2 ? canonicalGuidePath("/jobs/employers/" + employer.slug) : null;
   const effectiveStatus = getEffectiveJobStatus(item);
   const effectiveStatusLabel = getEffectiveStatusLabel(item);
   const availabilityNotice = isCareerPortal ? null : getJobAvailabilityNotice(item);
@@ -128,7 +129,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
         : { href: "/jobs/private", label: "Browse more private-sector opportunities" };
 
   const base = getSiteUrl();
-  const pageUrl = base + "/jobs/" + item.slug;
+  const pageUrl = base + canonicalGuidePath("/jobs/" + item.slug);
   const pageLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -164,7 +165,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
             <h1>{item.title}</h1>
             <p className="page-intro">{availabilityNotice ?? item.summary}</p>
             {availabilityNotice ? <p className="job-muted"><strong>Original listing (historical context):</strong> {item.summary}</p> : null}
-            <div className="guide-save-action"><SavePageButton href={"/jobs/" + item.slug} title={item.title} kind="job" /></div>
+            <div className="guide-save-action"><SavePageButton href={canonicalGuidePath("/jobs/" + item.slug)} title={item.title} kind="job" /></div>
             {!isIndexableJobOpportunity(item) ? (
               <p className="job-muted">
                 {isCareerPortal
@@ -263,7 +264,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
                 <p className="job-muted">Similar fields and eligibility across different employers. Confirm that applications remain open at the official source.</p>
                 <div className="related-links">
                   {similarOpenJobs.map(({ item: suggested, reason }) => (
-                    <Link key={suggested.slug} href={"/jobs/" + suggested.slug}>
+                    <Link key={suggested.slug} href={canonicalGuidePath("/jobs/" + suggested.slug)}>
                       <strong>{suggested.title}</strong> — {suggested.organization}
                       <span className="job-muted"> · {reason} · Listed open, checked {suggested.verifiedAt} →</span>
                     </Link>
@@ -305,7 +306,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
                 <strong>More from {item.organization}</strong>
                 {employerHubHref ? <p><Link href={employerHubHref}>View {item.organization} employer hub →</Link></p> : null}
                 {employerOpportunities.map((related) => (
-                  <p key={related.slug}><Link href={"/jobs/" + related.slug}>{related.title} →</Link></p>
+                  <p key={related.slug}><Link href={canonicalGuidePath("/jobs/" + related.slug)}>{related.title} →</Link></p>
                 ))}
               </div>
             ) : null}
@@ -313,7 +314,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
               <div className="job-sidebar-card">
                 <strong>Related career areas</strong>
                 {relatedTopics.map((topic) => (
-                  <p key={topic.slug}><Link href={"/jobs/categories/" + topic.slug}>{topic.shortTitle} →</Link></p>
+                  <p key={topic.slug}><Link href={canonicalGuidePath("/jobs/categories/" + topic.slug)}>{topic.shortTitle} →</Link></p>
                 ))}
               </div>
             ) : null}

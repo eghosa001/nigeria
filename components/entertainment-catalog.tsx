@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import { useEffect, useRef, useState } from "react";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import type { EntertainmentPlatform } from "@/lib/entertainment";
@@ -172,13 +173,13 @@ export function EntertainmentCatalog({
             const platformsForTitle = [...new Set(title.watchLinks.map((link) => link.platform))];
             return (
               <article className="movie-tile movie-card-clickable" key={title.slug}>
-                <Link className="movie-card-hitarea" href={"/entertainment/movies/" + title.slug} prefetch={false} aria-label={"View details for " + title.title} />
+                <Link className="movie-card-hitarea" href={canonicalGuidePath("/entertainment/movies/" + title.slug)} prefetch={false} aria-label={"View details for " + title.title} />
                 <EntertainmentArtwork title={title} />
                 <div className="movie-tile-meta">
                   <span>{title.year}</span>
                   <span>{platformsForTitle.length ? platformsForTitle.join(" · ") : "Availability unverified"}</span>
                 </div>
-                <h3><Link href={"/entertainment/movies/" + title.slug} prefetch={false}>{title.title}</Link></h3>
+                <h3><Link href={canonicalGuidePath("/entertainment/movies/" + title.slug)} prefetch={false}>{title.title}</Link></h3>
                 <p className="movie-tile-description">{title.synopsis}</p>
                 <div className="movie-tile-facts">
                   {title.runtimeMinutes ? <span>{title.runtimeMinutes} min</span> : null}
@@ -187,7 +188,7 @@ export function EntertainmentCatalog({
                 <p className="movie-card-cast"><strong>Cast:</strong> {leadMovieCast(title).join(" · ") || "Credits not yet confirmed"}</p>
                 <div className="movie-tile-footer">
                   <span>{title.genres.slice(0, 2).join(" · ")}</span>
-                  <Link href={"/entertainment/movies/" + title.slug} prefetch={false}>Details →</Link>
+                  <Link href={canonicalGuidePath("/entertainment/movies/" + title.slug)} prefetch={false}>Details →</Link>
                 </div>
               </article>
             );

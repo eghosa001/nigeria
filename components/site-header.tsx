@@ -7,14 +7,14 @@ import { BrandLogo } from "@/components/brand-logo";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const primaryNavigation = [
-  { href: "/entertainment/movies", label: "Movies", matches: ["/entertainment"] },
+  { href: "/entertainment/movies", label: "Movies", matches: ["/entertainment", "/guides/movies", "/guides/series", "/guides/videos", "/guides/people", "/guides/platforms", "/guides/youtube-channels"] },
   {
     href: "/services",
     label: "Services",
-    matches: ["/services", "/assistant", "/categories", "/topics", "/agencies", "/official-portals", "/fees", "/offices", "/locations", "/updates"],
+    matches: ["/services", "/assistant", "/categories", "/topics", "/agencies", "/official-portals", "/fees", "/offices", "/locations", "/updates", "/guides/services", "/guides/categories", "/guides/agencies", "/guides/topics", "/guides/locations"],
   },
-  { href: "/explore", label: "Tour Nigeria", matches: ["/explore"] },
-  { href: "/jobs", label: "Jobs & Careers", matches: ["/jobs"] },
+  { href: "/explore", label: "Tour Nigeria", matches: ["/explore", "/guides/travel"] },
+  { href: "/jobs", label: "Jobs & Careers", matches: ["/jobs", "/guides/jobs", "/guides/careers", "/guides/employers", "/guides/job-locations", "/guides/job-professions", "/guides/job-categories"] },
 ];
 
 const sectionNavigation = {
@@ -61,12 +61,17 @@ type IconName = "home" | "services" | "jobs" | "explore" | "movies" | "saved" | 
 
 function sectionForPath(pathname: string): SectionKey | null {
   if (
-    ["/services", "/assistant", "/categories", "/topics", "/agencies", "/official-portals", "/fees", "/offices", "/locations", "/updates"]
+    ["/services", "/assistant", "/categories", "/topics", "/agencies", "/official-portals", "/fees", "/offices", "/locations", "/updates", "/guides/services", "/guides/categories",
+      "/guides/agencies", "/guides/topics", "/guides/locations"]
       .some((prefix) => pathname === prefix || pathname.startsWith(prefix + "/"))
   ) return "services";
-  if (pathname === "/jobs" || pathname.startsWith("/jobs/")) return "jobs";
-  if (pathname === "/explore" || pathname.startsWith("/explore/")) return "explore";
-  if (pathname === "/entertainment" || pathname.startsWith("/entertainment/")) return "entertainment";
+  if (pathname === "/jobs" || pathname.startsWith("/jobs/") ||
+    ["/guides/jobs", "/guides/careers", "/guides/employers", "/guides/job-locations",
+      "/guides/job-professions", "/guides/job-categories"].some((prefix) => pathname.startsWith(prefix + "/"))) return "jobs";
+  if (pathname === "/explore" || pathname.startsWith("/explore/") || pathname.startsWith("/guides/travel/")) return "explore";
+  if (pathname === "/entertainment" || pathname.startsWith("/entertainment/") ||
+    ["/guides/movies", "/guides/series", "/guides/videos", "/guides/people",
+      "/guides/platforms", "/guides/youtube-channels"].some((prefix) => pathname.startsWith(prefix + "/"))) return "entertainment";
   return null;
 }
 

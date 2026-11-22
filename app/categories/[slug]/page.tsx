@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
@@ -32,7 +33,7 @@ export async function generateMetadata({
 
   const seoTitle = category.name + " services in Nigeria";
   const seoDescription = category.description + " Browse source-linked fees, requirements, official portals and last-checked guidance.";
-  const canonical = "/categories/" + slug;
+  const canonical = canonicalGuidePath("/categories/" + slug);
   return {
     title: seoTitle,
     description: seoDescription,
@@ -70,7 +71,7 @@ export default async function CategoryPage({
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: base },
       { "@type": "ListItem", position: 2, name: "Services", item: base + "/services" },
-      { "@type": "ListItem", position: 3, name: category.name, item: base + "/categories/" + slug },
+      { "@type": "ListItem", position: 3, name: category.name, item: base + canonicalGuidePath("/categories/" + slug) },
     ],
   };
 
@@ -79,19 +80,19 @@ export default async function CategoryPage({
     "@type": "CollectionPage",
     name: category.name + " services in Nigeria",
     description: category.description,
-    url: base + "/categories/" + slug,
+    url: base + canonicalGuidePath("/categories/" + slug),
   };
 
   const itemList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: category.name + " services and guides in Nigeria",
-    numberOfItems: services.length,
-    itemListElement: services.map((service, index) => ({
+    numberOfItems: visibleServices.length,
+    itemListElement: visibleServices.map((service, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: service.shortTitle,
-      url: base + "/services/" + service.slug,
+      url: base + canonicalGuidePath("/services/" + service.slug),
     })),
   };
 
@@ -135,7 +136,7 @@ export default async function CategoryPage({
               { label: "Common task", value: popularSearches[0]?.query ?? services[0]?.shortTitle ?? "Browse the guides below" },
             ]}
             links={[
-              ...(popularSearches[0] ? [{ href: "/services/" + popularSearches[0].serviceSlug, label: popularSearches[0].query }] : []),
+              ...(popularSearches[0] ? [{ href: canonicalGuidePath("/services/" + popularSearches[0].serviceSlug), label: popularSearches[0].query }] : []),
               { href: "/services?category=" + encodeURIComponent(category.name), label: "View all in directory", primary: true },
             ]}
           />
@@ -154,7 +155,7 @@ export default async function CategoryPage({
               <h2 id="category-topic-hubs">Start with a focused guide collection</h2>
               <div className="related-links">
                 {topicHubs.map((hub) => (
-                  <Link key={hub.slug} href={"/topics/" + hub.slug}>
+                  <Link key={hub.slug} href={canonicalGuidePath("/topics/" + hub.slug)}>
                     {hub.title} <span aria-hidden="true">→</span>
                   </Link>
                 ))}
@@ -168,7 +169,7 @@ export default async function CategoryPage({
               <h2 id="category-common-searches">Popular tasks in {category.name}</h2>
               <div className="related-links topic-searches">
                 {popularSearches.map((item) => (
-                  <Link key={item.query} href={"/services/" + item.serviceSlug}>
+                  <Link key={item.query} href={canonicalGuidePath("/services/" + item.serviceSlug)}>
                     {item.query} <span aria-hidden="true">→</span>
                   </Link>
                 ))}
@@ -185,7 +186,7 @@ export default async function CategoryPage({
               </div>
               <div className="visa-country-grid">
                 {services.map((service) => (
-                  <Link key={service.slug} href={"/services/" + service.slug}>
+                  <Link key={service.slug} href={canonicalGuidePath("/services/" + service.slug)}>
                     <strong>{service.shortTitle.replace(/ visa.*$/i, "").replace(/ visitor.*$/i, "")}</strong>
                     <span>Requirements, fees & application →</span>
                   </Link>
@@ -211,7 +212,7 @@ export default async function CategoryPage({
               <summary>Browse {moreServices.length} more {category.name.toLowerCase()} guides</summary>
               <div className="disclosure-link-grid">
                 {moreServices.map((service) => (
-                  <Link key={service.slug} href={"/services/" + service.slug}>
+                  <Link key={service.slug} href={canonicalGuidePath("/services/" + service.slug)}>
                     {service.shortTitle}
                   </Link>
                 ))}

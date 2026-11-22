@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const seoTitle = employer.name + " Jobs & Careers in Nigeria";
   const seoDescription = "Verified " + employer.name + " jobs, recruitment exercises and official career routes in Nigeria, with current status, requirements, source dates and direct application links.";
-  const canonical = "/jobs/employers/" + employer.slug;
+  const canonical = canonicalGuidePath("/jobs/employers/" + employer.slug);
   return {
     title: seoTitle,
     description: seoDescription,
@@ -41,7 +42,7 @@ export default async function JobEmployerPage({ params }: { params: Promise<{ sl
   const items = getEmployerOpportunities(employer.name);
   const openItems = items.filter((item) => getEffectiveJobStatus(item) === "open");
   const base = getSiteUrl();
-  const pageUrl = base + "/jobs/employers/" + employer.slug;
+  const pageUrl = base + canonicalGuidePath("/jobs/employers/" + employer.slug);
 
   const ld = {
     "@context": "https://schema.org",
@@ -57,7 +58,7 @@ export default async function JobEmployerPage({ params }: { params: Promise<{ sl
         "@type": "ListItem",
         position: index + 1,
         name: item.title,
-        url: base + "/jobs/" + item.slug,
+        url: base + canonicalGuidePath("/jobs/" + item.slug),
       })),
     },
   };
@@ -94,7 +95,7 @@ export default async function JobEmployerPage({ params }: { params: Promise<{ sl
               { label: "Latest source check", value: employer.latestVerified },
             ]}
             links={[
-              ...(openItems[0] ? [{ href: "/jobs/" + openItems[0].slug, label: "View open opportunity", primary: true }] : []),
+              ...(openItems[0] ? [{ href: canonicalGuidePath("/jobs/" + openItems[0].slug), label: "View open opportunity", primary: true }] : []),
               { href: "/jobs/open-now", label: "All jobs open now" },
               { href: "/jobs/employers", label: "Browse employers" },
             ]}

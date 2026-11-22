@@ -1,6 +1,7 @@
 import { documentedMovieCast, leadMovieCast } from "@/lib/movie-cast-credits";
 import { getAdditionalMovieCrewCredits, getVisibleMovieEditorial } from "@/lib/movie-editorial-presentation";
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import { compactSearchText } from "@/lib/search-snippet";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -212,12 +213,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: { absolute: seoTitle },
     description: seoDescription,
-    alternates: { canonical: "/entertainment/movies/" + title.slug },
+    alternates: { canonical: canonicalGuidePath("/entertainment/movies/" + title.slug) },
     openGraph: {
       type: "video.movie",
       title: title.title,
       description: seoDescription,
-      url: "/entertainment/movies/" + title.slug,
+      url: canonicalGuidePath("/entertainment/movies/" + title.slug),
       images: image ? [{ url: image, alt: title.title + " artwork" }] : undefined,
     },
     twitter: {
@@ -231,7 +232,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 function personHref(name: string) {
   const person = entertainmentPeople.find((item) => item.name === name);
-  return person ? "/entertainment/people/" + person.slug : null;
+  return person ? canonicalGuidePath("/entertainment/people/" + person.slug) : null;
 }
 
 function accessLabel(access: string) {
@@ -289,7 +290,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
   }
 
   const base = getSiteUrl();
-  const pageUrl = base + "/entertainment/movies/" + title.slug;
+  const pageUrl = base + canonicalGuidePath("/entertainment/movies/" + title.slug);
   const allCheckedDates = [
     ...availabilityLinks.map((link) => link.lastChecked),
     ...(title.trailer ? [title.trailer.lastChecked] : []),
@@ -410,7 +411,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               </div>
 
               <div className="movie-detail-actions">
-                <SavePageButton href={"/entertainment/movies/" + title.slug} title={title.title} kind="movie" />
+                <SavePageButton href={canonicalGuidePath("/entertainment/movies/" + title.slug)} title={title.title} kind="movie" />
                 {watchHereVideoId ? <a className="button" href="#watch-here">Watch here</a> : null}
                 {availabilityLinks.slice(0, 3).map((link) => (
                   <a className="button" href={link.href} target="_blank" rel="noreferrer" key={link.href}>
@@ -680,13 +681,13 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               <div className="movie-grid movie-related-grid">
                 {shelf.items.map((item) => (
                   <article className="movie-tile movie-card-clickable" key={item.slug}>
-                    <Link className="movie-card-hitarea" href={"/entertainment/movies/" + item.slug} aria-label={"View details for " + item.title} />
+                    <Link className="movie-card-hitarea" href={canonicalGuidePath("/entertainment/movies/" + item.slug)} aria-label={"View details for " + item.title} />
                     <EntertainmentArtwork title={item} />
                     <div className="movie-tile-meta"><span>{item.year}</span><span>{item.languages.slice(0, 1).join("")}</span></div>
-                    <h3><Link href={"/entertainment/movies/" + item.slug}>{item.title}</Link></h3>
+                    <h3><Link href={canonicalGuidePath("/entertainment/movies/" + item.slug)}>{item.title}</Link></h3>
                     <p className="movie-tile-description">{item.synopsis}</p>
                     <p className="movie-card-cast"><strong>Cast:</strong> {leadMovieCast(item).join(" · ")}</p>
-                    <div className="movie-tile-footer"><span>{item.genres.slice(0, 2).join(" · ")}</span><Link href={"/entertainment/movies/" + item.slug}>Details →</Link></div>
+                    <div className="movie-tile-footer"><span>{item.genres.slice(0, 2).join(" · ")}</span><Link href={canonicalGuidePath("/entertainment/movies/" + item.slug)}>Details →</Link></div>
                   </article>
                 ))}
               </div>

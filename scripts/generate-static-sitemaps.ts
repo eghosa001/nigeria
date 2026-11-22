@@ -7,6 +7,7 @@ import { mkdir, readdir, unlink, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { productionSiteUrl } from "../lib/site";
 import { escapeSitemapXml } from "../lib/sitemap-xml";
+import { canonicalGuideUrl } from "../lib/seo-routes";
 
 // Staging and local builds must still advertise only the canonical production host.
 process.env.NEXT_PUBLIC_SITE_URL = productionSiteUrl;
@@ -102,8 +103,8 @@ const videoXml = xmlHeader +
   'xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">' +
   videoRows.map((movie) => {
     const id = movie.videoId;
-    const url = productionSiteUrl + (movie.source === "curated"
-      ? movie.internalHref : "/entertainment/youtube/" + id);
+    const url = canonicalGuideUrl(productionSiteUrl + (movie.source === "curated"
+      ? movie.internalHref : "/entertainment/youtube/" + id));
     const seconds = Math.round(movie.durationMinutes * 60);
     return "<url><loc>" + escapeXml(url) + "</loc><video:video>" +
       "<video:thumbnail_loc>" + escapeXml("https://i.ytimg.com/vi/" + id + "/hqdefault.jpg") + "</video:thumbnail_loc>" +

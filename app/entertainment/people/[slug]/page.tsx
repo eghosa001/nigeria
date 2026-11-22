@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!person) return {};
   const seoTitle = person.name + " Movies, Cast Credits & Nigerian Film Profile";
   const seoDescription = person.summary + " See Nigerian movies featuring " + person.name + " and linked film credits.";
-  const canonical = "/entertainment/people/" + person.slug;
+  const canonical = canonicalGuidePath("/entertainment/people/" + person.slug);
   return {
     title: seoTitle,
     description: seoDescription,
@@ -60,7 +61,7 @@ export default async function EntertainmentPersonPage({ params }: { params: Prom
       .map((entry) => [entry.href, entry] as const),
   ).values()].slice(0, 12);
   const base = getSiteUrl();
-  const pageUrl = base + "/entertainment/people/" + person.slug;
+  const pageUrl = base + canonicalGuidePath("/entertainment/people/" + person.slug);
 
   const personSchema = {
     "@context": "https://schema.org",
@@ -73,7 +74,7 @@ export default async function EntertainmentPersonPage({ params }: { params: Prom
     subjectOf: credits.map((title) => ({
       "@type": "Movie",
       name: title.title,
-      url: base + "/entertainment/movies/" + title.slug,
+      url: base + canonicalGuidePath("/entertainment/movies/" + title.slug),
       dateCreated: String(title.year),
     })),
   };
@@ -97,7 +98,7 @@ export default async function EntertainmentPersonPage({ params }: { params: Prom
             { label: "Linked titles", value: String(credits.length) },
           ]}
           links={[
-            ...(credits[0] ? [{ href: "/entertainment/movies/" + credits[0].slug, label: "Open latest linked title", primary: true }] : []),
+            ...(credits[0] ? [{ href: canonicalGuidePath("/entertainment/movies/" + credits[0].slug), label: "Open latest linked title", primary: true }] : []),
             { href: "#credits", label: "See all linked credits" },
             ...(credits.length ? [{ href: "#credit-sources", label: "Credit sources" }] : []),
           ]}
@@ -153,9 +154,9 @@ export default async function EntertainmentPersonPage({ params }: { params: Prom
               return (
                 <article className="service-card" key={title.slug}>
                   <div className="card-topline"><span>{title.year}</span><span>{roles.length ? roles.join(" · ") : "Related title · role not independently confirmed"}</span></div>
-                  <h3><Link href={"/entertainment/movies/" + title.slug}>{title.title}</Link></h3>
+                  <h3><Link href={canonicalGuidePath("/entertainment/movies/" + title.slug)}>{title.title}</Link></h3>
                   <p>{title.synopsis}</p>
-                  <div className="service-meta"><strong>{[...new Set(title.watchLinks.map((link) => link.platform))].join(" · ")}</strong><Link href={"/entertainment/movies/" + title.slug}>Open title →</Link></div>
+                  <div className="service-meta"><strong>{[...new Set(title.watchLinks.map((link) => link.platform))].join(" · ")}</strong><Link href={canonicalGuidePath("/entertainment/movies/" + title.slug)}>Open title →</Link></div>
                 </article>
               );
             })}

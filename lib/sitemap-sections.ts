@@ -1,4 +1,5 @@
 import { categorySlug } from "@/lib/category";
+import { canonicalGuideUrl } from "@/lib/seo-routes";
 import { shouldIndexAgencyHub } from "@/lib/agency-indexing";
 import { myNigeriaGuideUpdates } from "@/data/updates";
 import { agencies, categories, publicServices } from "@/lib/data";
@@ -53,7 +54,7 @@ function movieModified(title: (typeof entertainmentTitles)[number]) {
   ]);
 }
 
-export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
+function getLegacySitemapEntries(section: SitemapSectionName): SitemapEntry[] {
   const base = getSiteUrl();
   const serviceModified = latestDate(publicServices.map((service) => service.lastVerified));
   const exploreModified = latestDate(exploreGuides.map((guide) => guide.lastReviewed));
@@ -235,6 +236,14 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
         lastModified: movie.lastChecked,
       })),
   ];
+}
+
+// All generated XML sitemaps use the rebuilt canonical architecture.
+export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
+  return getLegacySitemapEntries(section).map((entry) => ({
+    ...entry,
+    url: canonicalGuideUrl(entry.url),
+  }));
 }
 
 export function getSitemapShardEntries(section: SitemapSectionName, shard = 1): SitemapEntry[] {

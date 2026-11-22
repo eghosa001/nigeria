@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import type { JobDirectoryResult } from "@/lib/job-query";
 import type { JobSector, JobStatus } from "@/lib/jobs";
 import { jobLocationFacets, jobProfessionFacets } from "@/lib/job-facet-definitions";
@@ -154,7 +155,7 @@ export function JobsDirectory({ initialResult }: Props) {
             </div>
             <div className="job-card-body">
               <p className="job-organisation">{item.organization}</p>
-              <h3><Link href={"/jobs/" + item.slug} prefetch={false}>{item.title}</Link></h3>
+              <h3><Link href={canonicalGuidePath("/jobs/" + item.slug)} prefetch={false}>{item.title}</Link></h3>
               <p>{item.summary}</p>
               <div className="job-tags">
                 {item.audiences.map((tag) => <span key={tag}>{tag}</span>)}
@@ -163,7 +164,7 @@ export function JobsDirectory({ initialResult }: Props) {
             </div>
             <div className="job-card-footer">
               <span>{item.deadline ? "Deadline " + new Date(item.deadline + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" }) : "Checked " + new Date(item.verifiedAt + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}</span>
-              <Link href={"/jobs/" + item.slug} prefetch={false}>View requirements →</Link>
+              <Link href={canonicalGuidePath("/jobs/" + item.slug)} prefetch={false}>View requirements →</Link>
             </div>
           </article>
         ))}
@@ -184,10 +185,10 @@ export function JobsDirectory({ initialResult }: Props) {
                 <div className="job-card-top"><span className={"job-status job-status-" + item.effectiveStatus}>{item.effectiveStatusLabel}</span><span>{item.sector}</span></div>
                 <div className="job-card-body">
                   <p className="job-organisation">{item.organization}</p>
-                  <h3><Link href={"/jobs/" + item.slug} prefetch={false}>{item.title}</Link></h3>
+                  <h3><Link href={canonicalGuidePath("/jobs/" + item.slug)} prefetch={false}>{item.title}</Link></h3>
                   <p>{item.summary}</p>
                 </div>
-                <div className="job-card-footer"><span>Checked {item.verifiedAt}</span><Link href={"/jobs/" + item.slug} prefetch={false}>Check eligibility →</Link></div>
+                <div className="job-card-footer"><span>Checked {item.verifiedAt}</span><Link href={canonicalGuidePath("/jobs/" + item.slug)} prefetch={false}>Check eligibility →</Link></div>
               </article>
             ))}
           </div>

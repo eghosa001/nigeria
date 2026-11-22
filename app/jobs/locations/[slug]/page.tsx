@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const facet = getJobLocationFacet(slug);
   if (!facet) return {};
   const seoTitle = facet.title + ": Verified Vacancies & Career Routes";
-  const canonical = "/jobs/locations/" + facet.slug;
+  const canonical = canonicalGuidePath("/jobs/locations/" + facet.slug);
   return { title: seoTitle, description: facet.description, alternates: { canonical },
     ...pageSocialMetadata(seoTitle, facet.description, canonical) };
 }
@@ -35,14 +36,14 @@ export default async function JobLocationPage({ params }: { params: Promise<{ sl
   const base = getSiteUrl();
   return (
     <>
-      <JsonLd data={{ "@context": "https://schema.org", "@type": "CollectionPage", name: facet.title, description: facet.description, url: base + "/jobs/locations/" + facet.slug, mainEntity: { "@type": "ItemList", numberOfItems: items.length, itemListElement: items.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: item.title, url: base + "/jobs/" + item.slug })) } }} />
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "CollectionPage", name: facet.title, description: facet.description, url: base + canonicalGuidePath("/jobs/locations/" + facet.slug), mainEntity: { "@type": "ItemList", numberOfItems: items.length, itemListElement: items.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: item.title, url: base + canonicalGuidePath("/jobs/" + item.slug) })) } }} />
       <section className="section page-top jobs-section-top"><div className="container">
         <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Jobs & Careers", href: "/jobs" }, { label: facet.shortTitle }]} />
         <span className="eyebrow">Jobs by location</span><h1>{facet.title}</h1><p className="page-intro">{facet.description}</p>
         <AnswerFirst title={"What is available in " + facet.shortTitle + "?"} summary={items.length + " verified job or career pathways currently match this location, including " + open + " marked open now."} facts={[{ label: "Verified matches", value: String(items.length) }, { label: "Open now", value: String(open) }, { label: "Source rule", value: "Official employer or agency" }, { label: "Status", value: "Deadline-aware" }]} links={[{ href: "/jobs/open-now", label: "All open jobs" }, { href: "/jobs", label: "Full directory", primary: true }]} />
       </div></section>
       <section className="section"><div className="container"><JobCollection opportunities={items} /></div></section>
-      <section className="section"><div className="container"><div className="jobs-topic-links">{jobLocationFacets.filter((other) => other.slug !== facet.slug).map((other) => <Link key={other.slug} href={"/jobs/locations/" + other.slug}>{other.shortTitle}</Link>)}</div></div></section>
+      <section className="section"><div className="container"><div className="jobs-topic-links">{jobLocationFacets.filter((other) => other.slug !== facet.slug).map((other) => <Link key={other.slug} href={canonicalGuidePath("/jobs/locations/" + other.slug)}>{other.shortTitle}</Link>)}</div></div></section>
     </>
   );
 }

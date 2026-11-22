@@ -1,5 +1,6 @@
 import { isEffectivelyOpen } from "@/lib/job-runtime";
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const topic = getJobTopic(slug);
   if (!topic) return {};
   const seoTitle = topic.title + ": Verified Career Routes";
-  const canonical = "/jobs/categories/" + topic.slug;
+  const canonical = canonicalGuidePath("/jobs/categories/" + topic.slug);
   return {
     title: seoTitle,
     description: topic.description,
@@ -46,7 +47,7 @@ export default async function JobTopicPage({ params }: { params: Promise<{ slug:
     "@type": "CollectionPage",
     name: topic.title,
     description: topic.description,
-    url: base + "/jobs/categories/" + topic.slug,
+    url: base + canonicalGuidePath("/jobs/categories/" + topic.slug),
     isPartOf: { "@type": "WebSite", name: "MyNigeriaGuide", url: base },
     mainEntity: {
       "@type": "ItemList",
@@ -55,7 +56,7 @@ export default async function JobTopicPage({ params }: { params: Promise<{ slug:
         "@type": "ListItem",
         position: index + 1,
         name: item.title,
-        url: base + "/jobs/" + item.slug,
+        url: base + canonicalGuidePath("/jobs/" + item.slug),
       })),
     },
   };
@@ -113,7 +114,7 @@ export default async function JobTopicPage({ params }: { params: Promise<{ slug:
           <div className="jobs-topic-links">
             {topic.relatedSlugs.map((relatedSlug) => {
               const related = getJobTopic(relatedSlug);
-              return related ? <Link href={"/jobs/categories/" + related.slug} key={related.slug}>{related.shortTitle}</Link> : null;
+              return related ? <Link href={canonicalGuidePath("/jobs/categories/" + related.slug)} key={related.slug}>{related.shortTitle}</Link> : null;
             })}
             <Link href="/jobs">All Jobs & Careers</Link>
           </div>

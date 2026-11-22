@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import { notFound } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const guideCount = getServicesByAgency(slug).length;
   const seoTitle = agency.slug === "npc" ? "NPC Birth Registration & Attestation Services 2026" : agency.shortName + " services";
   const seoDescription = agency.slug === "npc" ? "NPC Nigeria services for birth registration, birth attestation and status checks, with verified requirements, official links and current guidance." : agency.description;
-  const canonical = "/agencies/" + agency.slug;
+  const canonical = canonicalGuidePath("/agencies/" + agency.slug);
   return {
     title: seoTitle,
     description: seoDescription,
@@ -44,7 +45,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
   const visibleServices = agencyServices.slice(0, 24);
   const moreServices = agencyServices.slice(24);
   const base = getSiteUrl();
-  const pageUrl = base + "/agencies/" + agency.slug;
+  const pageUrl = base + canonicalGuidePath("/agencies/" + agency.slug);
 
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -70,12 +71,12 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
     },
     mainEntity: {
       "@type": "ItemList",
-      numberOfItems: agencyServices.length,
-      itemListElement: agencyServices.map((service, index) => ({
+      numberOfItems: visibleServices.length,
+      itemListElement: visibleServices.map((service, index) => ({
         "@type": "ListItem",
         position: index + 1,
         name: service.shortTitle,
-        url: base + "/services/" + service.slug,
+        url: base + canonicalGuidePath("/services/" + service.slug),
       })),
     },
   };
@@ -100,7 +101,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
               { label: "Best next step", value: agencyServices[0]?.shortTitle ?? "Open the official website" },
             ]}
             links={[
-              ...(agencyServices[0] ? [{ href: "/services/" + agencyServices[0].slug, label: "Open a verified guide" }] : []),
+              ...(agencyServices[0] ? [{ href: canonicalGuidePath("/services/" + agencyServices[0].slug), label: "Open a verified guide" }] : []),
               { href: agency.website, label: "Visit official website", external: true, primary: true },
             ]}
             note="Choose a guide when you need steps, fees or requirements; use the official website for live transactions."
@@ -128,7 +129,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
               <summary>Browse {moreServices.length} more {agency.shortName} guides</summary>
               <div className="disclosure-link-grid">
                 {moreServices.map((service) => (
-                  <a href={"/services/" + service.slug} key={service.slug}>{service.shortTitle}</a>
+                  <a href={canonicalGuidePath("/services/" + service.slug)} key={service.slug}>{service.shortTitle}</a>
                 ))}
               </div>
             </details>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
@@ -26,12 +27,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: { absolute: hub.title },
     description: hub.description,
-    alternates: { canonical: "/topics/" + hub.slug },
+    alternates: { canonical: canonicalGuidePath("/topics/" + hub.slug) },
     openGraph: {
       title: hub.title,
       description: hub.description,
       type: "website",
-      url: "/topics/" + hub.slug,
+      url: canonicalGuidePath("/topics/" + hub.slug),
     },
     twitter: {
       card: "summary_large_image",
@@ -55,7 +56,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
     .filter((service) => service !== undefined);
   const taskLinks = getDistinctTopicTaskLinks(hub.searches, searchServices);
   const base = getSiteUrl();
-  const pageUrl = base + "/topics/" + hub.slug;
+  const pageUrl = base + canonicalGuidePath("/topics/" + hub.slug);
 
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -80,7 +81,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
         "@type": "ListItem",
         position: index + 1,
         name: service.shortTitle,
-        url: base + "/services/" + service.slug,
+        url: base + canonicalGuidePath("/services/" + service.slug),
       })),
     },
   };
@@ -100,7 +101,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
             summary={hub.intro[0] ?? hub.description}
             facts={[]}
             links={[
-              ...(taskLinks[0] ? [{ href: "/services/" + taskLinks[0].slug, label: taskLinks[0].label }] : []),
+              ...(taskLinks[0] ? [{ href: canonicalGuidePath("/services/" + taskLinks[0].slug), label: taskLinks[0].label }] : []),
               { href: "#task-choices", label: "Compare the available tasks", primary: true },
             ]}
           />
@@ -124,7 +125,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
               <span className="eyebrow">Different services, different steps</span>
               <h2 id="topic-task-heading">Choose what you need to do</h2>
               <nav className="related-links topic-searches" aria-label="Distinct service tasks">
-                {taskLinks.map((task) => <Link key={task.slug} href={"/services/" + task.slug}>{task.label} <span aria-hidden="true">→</span></Link>)}
+                {taskLinks.map((task) => <Link key={task.slug} href={canonicalGuidePath("/services/" + task.slug)}>{task.label} <span aria-hidden="true">→</span></Link>)}
               </nav>
             </section>
           ) : null}

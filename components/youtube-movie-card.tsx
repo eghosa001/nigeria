@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import { leadMovieCast } from "@/lib/movie-cast-credits";
 import { RemoteMoviePreviewImage } from "@/components/remote-movie-preview-image";
 import type { YouTubeMovieRecord } from "@/lib/youtube-library";
@@ -20,10 +21,10 @@ export function YouTubeMovieCard({
   const cast = leadMovieCast(movie);
   return (
     <article className="youtube-movie-card movie-card-clickable">
-      <Link className="movie-card-hitarea" href={movie.internalHref} prefetch={false} aria-label={"View details for " + movie.title} />
+      <Link className="movie-card-hitarea" href={canonicalGuidePath(movie.internalHref)} prefetch={false} aria-label={"View details for " + movie.title} />
       <Link
         className="youtube-movie-thumbnail"
-        href={movie.internalHref}
+        href={canonicalGuidePath(movie.internalHref)}
         prefetch={false}
       >
         <RemoteMoviePreviewImage
@@ -40,7 +41,7 @@ export function YouTubeMovieCard({
           <span>YouTube · {movie.year}</span>
           <span>{runtimeLabel(movie.durationMinutes)}</span>
         </div>
-        <h3><Link href={movie.internalHref} prefetch={false}>{movie.title}</Link></h3>
+        <h3><Link href={canonicalGuidePath(movie.internalHref)} prefetch={false}>{movie.title}</Link></h3>
         <p className="youtube-movie-description">{movie.synopsis}</p>
         <p className="youtube-movie-cast">
           {cast.length ? "Cast: " + cast.join(" · ") : "Cast credits not yet confirmed"}
@@ -49,7 +50,7 @@ export function YouTubeMovieCard({
           <span className="youtube-movie-publisher">
             {movie.channelName}{movie.alternateSources.length ? " · " + (movie.alternateSources.length + 1) + " official sources" : ""}
           </span>
-          <Link href={movie.internalHref} prefetch={false}>Details →</Link>
+          <Link href={canonicalGuidePath(movie.internalHref)} prefetch={false}>Details →</Link>
         </div>
       </div>
     </article>

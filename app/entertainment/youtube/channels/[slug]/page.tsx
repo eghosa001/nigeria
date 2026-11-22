@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const seoTitle = hub.channel.name + " Movies on YouTube — Full Nigerian Movies";
   const seoDescription = "Browse " + hub.movieCount + " full Nigerian movie guides from " + hub.channel.name +
     ", with cast, runtime, release year and verified YouTube source links.";
-  const canonical = "/entertainment/youtube/channels/" + hub.channel.slug;
+  const canonical = canonicalGuidePath("/entertainment/youtube/channels/" + hub.channel.slug);
   return {
     title: seoTitle,
     description: seoDescription,
@@ -43,7 +44,7 @@ export default async function YouTubeChannelPage({ params }: { params: Promise<{
 
   const recent = hub.movies.slice(0, 48);
   const base = getSiteUrl();
-  const pageUrl = base + "/entertainment/youtube/channels/" + hub.channel.slug;
+  const pageUrl = base + canonicalGuidePath("/entertainment/youtube/channels/" + hub.channel.slug);
   const schema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",

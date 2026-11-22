@@ -1,3 +1,5 @@
+import { canonicalGuidePath } from "@/lib/seo-routes";
+
 /** Shared, browser-only personal library storage contract. No React/UI dependency. */
 export type Kind = "movie" | "travel" | "job";
 export type Entry = { href: string; title: string; kind: Kind; visitedAt: number };
@@ -6,7 +8,7 @@ export const recentKey = "mynigeriaguide:recent-pages:v1";
 export const changed = "mynigeriaguide:personal-library-changed";
 
 export function validHref(href: unknown): href is string {
-  return typeof href === "string" && /^\/(?:entertainment\/movies|explore|jobs)\/[a-z0-9][a-z0-9-]*$/.test(href);
+  return typeof href === "string" && /^\/(?:entertainment\/movies|explore|jobs|guides\/(?:movies|travel|jobs))\/[a-z0-9][a-z0-9-]*$/.test(href);
 }
 
 export function read(key: string): Entry[] {
@@ -14,7 +16,11 @@ export function read(key: string): Entry[] {
     const value: unknown = JSON.parse(localStorage.getItem(key) ?? "[]");
     if (!Array.isArray(value)) return [];
     const seen = new Set<string>();
-    return value.filter((item): item is Entry => {
+    return value.map((item) => {
+      if (!item || typeof item !== "object") return item;
+      const record = item as Partial<Entry>;
+      return { ...record, href: typeof record.href === "string" ? canonicalGuidePath(record.href) : record.href };
+    }).filter((item): item is Entry => {
       if (!item || typeof item !== "object") return false;
       const record = item as Partial<Entry>;
       if (!validHref(record.href) || typeof record.title !== "string" || !record.title.trim() ||
@@ -37,9 +43,9 @@ export function write(key: string, values: Entry[]) {
 }
 
 export function kindFor(path: string): Kind | null {
-  if (/^\/entertainment\/movies\/[a-z0-9-]+$/.test(path)) return "movie";
-  if (/^\/explore\/[a-z0-9-]+$/.test(path)) return "travel";
-  if (/^\/jobs\/[a-z0-9-]+$/.test(path)) return "job";
+  if (/^\/(?:entertainment\/movies|guides\/movies)\/[a-z0-9-]+$/.test(path)) return "movie";
+  if (/^\/(?:explore|guides\/travel)\/[a-z0-9-]+$/.test(path)) return "travel";
+  if (/^\/(?:jobs|guides\/jobs)\/[a-z0-9-]+$/.test(path)) return "job";
   return null;
 }
 
