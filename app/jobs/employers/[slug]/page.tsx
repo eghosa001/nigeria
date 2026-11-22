@@ -95,7 +95,7 @@ export default async function JobEmployerPage({ params }: { params: Promise<{ sl
               { label: "Latest source check", value: employer.latestVerified },
             ]}
             links={[
-              ...(openItems[0] ? [{ href: canonicalGuidePath("/jobs/" + openItems)[0].slug, label: "View open opportunity", primary: true }] : []),
+              ...(openItems[0] ? [{ href: canonicalGuidePath("/jobs/" + openItems[0].slug), label: "View open opportunity", primary: true }] : []),
               { href: "/jobs/open-now", label: "All jobs open now" },
               { href: "/jobs/employers", label: "Browse employers" },
             ]}

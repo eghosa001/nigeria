@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
   const { videoId } = await params;
   const movie = await readPublishedVideo(videoId);
   if (!movie) return {};
-  const canonical = movie.source === "curated" ? movie.internalHref : canonicalGuidePath("/entertainment/youtube/" + movie.videoId);
+  const canonical = movie.source === "curated" ? canonicalGuidePath(movie.internalHref) : canonicalGuidePath("/entertainment/youtube/" + movie.videoId);
   const image = "https://i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg";
   const cast = leadMovieCast(movie, 4);
   const indexable = isIndexableYouTubeDetailMovie(movie);

@@ -136,7 +136,7 @@ export default async function CategoryPage({
               { label: "Common task", value: popularSearches[0]?.query ?? services[0]?.shortTitle ?? "Browse the guides below" },
             ]}
             links={[
-              ...(popularSearches[0] ? [{ href: canonicalGuidePath("/services/" + popularSearches)[0].serviceSlug, label: popularSearches[0].query }] : []),
+              ...(popularSearches[0] ? [{ href: canonicalGuidePath("/services/" + popularSearches[0].serviceSlug), label: popularSearches[0].query }] : []),
               { href: "/services?category=" + encodeURIComponent(category.name), label: "View all in directory", primary: true },
             ]}
           />

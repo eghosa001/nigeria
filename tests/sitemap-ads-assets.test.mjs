@@ -16,9 +16,9 @@ test("canonical static sitemap index and shards are generated before build", () 
   assert.doesNotMatch(a, /workers\.dev|localhost/);
 
   const serviceSitemap = read("sitemaps/services.xml");
-  assert.ok(serviceSitemap.includes("<loc>https://mynigeriaguide.com/agencies/nis</loc>"));
-  assert.ok(!serviceSitemap.includes("<loc>https://mynigeriaguide.com/agencies/sec</loc>"));
-  assert.ok(!serviceSitemap.includes("<loc>https://mynigeriaguide.com/agencies/nibss</loc>"));
+  assert.ok(serviceSitemap.includes("<loc>https://mynigeriaguide.com/guides/agencies/nis</loc>"));
+  assert.ok(!serviceSitemap.includes("<loc>https://mynigeriaguide.com/guides/agencies/sec</loc>"));
+  assert.ok(!serviceSitemap.includes("<loc>https://mynigeriaguide.com/guides/agencies/nibss</loc>"));
 
   const core = read("sitemaps/core.xml");
   assert.ok(core.includes("<url><loc>https://mynigeriaguide.com/privacy</loc></url>"));
@@ -59,7 +59,7 @@ test("video sitemap only advertises verified YouTube movie detail pages", () => 
   assert.equal(count, (xml.match(/<video:player_loc>/g) ?? []).length);
   assert.equal(count, (xml.match(/<video:thumbnail_loc>/g) ?? []).length);
   assert.equal(count, (xml.match(/<video:description>/g) ?? []).length);
-  assert.match(xml, /https:\/\/mynigeriaguide\.com\/entertainment\/movies\//);
-  assert.ok(xml.includes("<loc>https://mynigeriaguide.com/entertainment/movies/love-looks-good-on-you-2026</loc>"), "Verified complete movie should use the researched film canonical.");
+  assert.match(xml, /https:\/\/mynigeriaguide\.com\/guides\/movies\//);
+  assert.ok(xml.includes("<loc>https://mynigeriaguide.com/guides/movies/love-looks-good-on-you-2026</loc>"), "Verified complete movie should use the researched film canonical.");
   assert.doesNotMatch(xml, /workers\.dev|localhost|<\/?video:content_loc>/);
 });

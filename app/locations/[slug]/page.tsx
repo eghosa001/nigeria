@@ -109,7 +109,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             ]}
             links={[
               { href: "#offices", label: "See service points", primary: true },
-              ...(relatedServices[0] ? [{ href: canonicalGuidePath("/services/" + relatedServices)[0].slug, label: "Open a service guide" }] : []),
+              ...(relatedServices[0] ? [{ href: canonicalGuidePath("/services/" + relatedServices[0].slug), label: "Open a service guide" }] : []),
             ]}
             note="Check the exact service guide before travelling; appointment and centre arrangements can change."
           />

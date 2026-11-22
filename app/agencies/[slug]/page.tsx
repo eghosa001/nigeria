@@ -101,7 +101,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
               { label: "Best next step", value: agencyServices[0]?.shortTitle ?? "Open the official website" },
             ]}
             links={[
-              ...(agencyServices[0] ? [{ href: canonicalGuidePath("/services/" + agencyServices)[0].slug, label: "Open a verified guide" }] : []),
+              ...(agencyServices[0] ? [{ href: canonicalGuidePath("/services/" + agencyServices[0].slug), label: "Open a verified guide" }] : []),
               { href: agency.website, label: "Visit official website", external: true, primary: true },
             ]}
             note="Choose a guide when you need steps, fees or requirements; use the official website for live transactions."

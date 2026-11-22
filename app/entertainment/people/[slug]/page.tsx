@@ -98,7 +98,7 @@ export default async function EntertainmentPersonPage({ params }: { params: Prom
             { label: "Linked titles", value: String(credits.length) },
           ]}
           links={[
-            ...(credits[0] ? [{ href: canonicalGuidePath("/entertainment/movies/" + credits)[0].slug, label: "Open latest linked title", primary: true }] : []),
+            ...(credits[0] ? [{ href: canonicalGuidePath("/entertainment/movies/" + credits[0].slug), label: "Open latest linked title", primary: true }] : []),
             { href: "#credits", label: "See all linked credits" },
             ...(credits.length ? [{ href: "#credit-sources", label: "Credit sources" }] : []),
           ]}

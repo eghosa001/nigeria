@@ -152,7 +152,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const searchAnswers = getServiceSearchAnswers(service).slice(5);
   const base = getSiteUrl();
   const pageUrl = base + canonicalGuidePath("/services/" + service.slug);
-  const categoryHref = canonicalGuidePath("/categories/" + categorySlug)(service.category);
+  const categoryHref = canonicalGuidePath("/categories/" + categorySlug(service.category));
   const breadcrumbs = [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
