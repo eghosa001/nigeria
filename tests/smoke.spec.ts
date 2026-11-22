@@ -197,7 +197,7 @@ test("site search crosses services travel and movies", async ({ page }) => {
   await expect(page.getByRole("link", { name: /Lagos Travel Guide/i }).first()).toBeVisible();
 
   await page.goto("/search?q=Anikulapo");
-  await expect(page.locator('a[href="/entertainment/movies/anikulapo"]').first()).toBeVisible();
+  await expect(page.locator('a[href="/guides/movies/anikulapo"]').first()).toBeVisible();
 });
 
 test("directory supports deep-linked category filters", async ({ page }) => {
