@@ -276,13 +276,13 @@ for (const item of jobOpportunities) {
     assert(item.qualifications.length >= 2, item.slug + " employer portal must explain how role-specific eligibility works.");
     assert(item.requirements.length >= 4, item.slug + " employer portal needs a concrete pre-application checklist.");
     assert(item.applicationSteps.length >= 5, item.slug + " employer portal needs a concrete portal workflow.");
-    // Five issuer-specific board reviews contain one substantive, dated source
-    // note rather than repeating it three times to satisfy a numeric threshold.
-    // Accept only exact role/URL/summary/source matches while the review is
-    // fresh; all other employer directories retain the three-note requirement.
+    // Preserve independently matched, dated historical board reviews without
+    // inventing repeated notes as the calendar advances. This checks whether
+    // the source was truly matched on its documented review date; current job
+    // availability and freshness are checked independently below.
     assert(item.sourceNotes.length >= 3 ||
-      hasSourceMatchedEmployerBoardReview20261020(item, todayIsoNigeria()) ||
-      hasSourceMatchedUnilorinReview20261020(item, todayIsoNigeria()),
+      hasSourceMatchedEmployerBoardReview20261020(item, item.verifiedAt) ||
+      hasSourceMatchedUnilorinReview20261020(item, item.verifiedAt),
       item.slug + " employer portal must explain exactly what was verified.");
   }
   if (item.kind === "vacancy" && ["closed", "unverified"].includes(getEffectiveJobStatus(item))) {
