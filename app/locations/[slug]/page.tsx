@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
@@ -23,12 +24,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: { absolute: city.title + " | MyNigeriaGuide" },
     description: city.description,
-    alternates: { canonical: "/locations/" + city.slug },
+    alternates: { canonical: canonicalGuidePath("/locations/" + city.slug) },
     openGraph: {
       title: city.title,
       description: city.description,
       type: "website",
-      url: "/locations/" + city.slug,
+      url: canonicalGuidePath("/locations/" + city.slug),
     },
     twitter: {
       card: "summary_large_image",
@@ -44,7 +45,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
   if (!city) notFound();
 
   const base = getSiteUrl();
-  const pageUrl = base + "/locations/" + city.slug;
+  const pageUrl = base + canonicalGuidePath("/locations/" + city.slug);
   const relatedSlugs = [...new Set(city.entries.flatMap((entry) => entry.relatedServiceSlugs))];
   const relatedServices = relatedSlugs
     .map(getPublicService)
@@ -108,7 +109,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             ]}
             links={[
               { href: "#offices", label: "See service points", primary: true },
-              ...(relatedServices[0] ? [{ href: "/services/" + relatedServices[0].slug, label: "Open a service guide" }] : []),
+              ...(relatedServices[0] ? [{ href: canonicalGuidePath("/services/" + relatedServices)[0].slug, label: "Open a service guide" }] : []),
             ]}
             note="Check the exact service guide before travelling; appointment and centre arrangements can change."
           />
@@ -134,7 +135,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               <h2 id="location-related-guides">Open the exact service guide first</h2>
               <div className="related-links">
                 {relatedServices.map((service) => (
-                  <Link key={service.slug} href={"/services/" + service.slug}>
+                  <Link key={service.slug} href={canonicalGuidePath("/services/" + service.slug)}>
                     {service.shortTitle} <span aria-hidden="true">→</span>
                   </Link>
                 ))}

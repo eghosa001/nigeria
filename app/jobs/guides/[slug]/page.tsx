@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import { compactSearchText } from "@/lib/search-snippet";
 import Link from "next/link";
 import { PageOutline } from "@/components/page-outline";
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!guide) return {};
   const seoTitle = compactSearchText(guide.metaTitle, 60);
   const seoDescription = compactSearchText(guide.description, 155);
-  const canonical = "/jobs/guides/" + guide.slug;
+  const canonical = canonicalGuidePath("/jobs/guides/" + guide.slug);
   return {
     title: { absolute: seoTitle },
     description: seoDescription,
@@ -46,7 +47,7 @@ export default async function CareerGuidePage({ params }: { params: Promise<{ sl
     headline: guide.title,
     description: guide.description,
     dateModified: guide.reviewedAt,
-    mainEntityOfPage: base + "/jobs/guides/" + guide.slug,
+    mainEntityOfPage: base + canonicalGuidePath("/jobs/guides/" + guide.slug),
     publisher: { "@type": "Organization", name: "MyNigeriaGuide", url: base },
     isPartOf: { "@type": "WebSite", name: "MyNigeriaGuide", url: base },
   };

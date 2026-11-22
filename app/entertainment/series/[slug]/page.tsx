@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import { compactSearchText } from "@/lib/search-snippet";
 import Link from "next/link";
 import { PageOutline } from "@/components/page-outline";
@@ -43,8 +44,8 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   return {
     title:{ absolute: seoTitle },
     description,
-    alternates:{canonical:"/entertainment/series/"+item.slug},
-    openGraph:{title:item.title,description,type:"video.tv_show",url:"/entertainment/series/"+item.slug},
+    alternates:{canonical:canonicalGuidePath("/entertainment/series/" + item.slug)},
+    openGraph:{title:item.title,description,type:"video.tv_show",url:canonicalGuidePath("/entertainment/series/" + item.slug)},
     twitter:{card:"summary",title:item.title,description}
   };
 }
@@ -54,7 +55,7 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
   const item=getSeriesTitle(slug);
   if(!item) notFound();
   const base=getSiteUrl();
-  const pageUrl=base+"/entertainment/series/"+item.slug;
+  const pageUrl=base+canonicalGuidePath("/entertainment/series/" + item.slug);
   const checked=seriesLastChecked(item);
   const editorial=reviewedSeriesEditorial20261016[item.slug];
   const readerDecision=seriesReaderDecisions20261017[item.slug];
@@ -209,7 +210,7 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
               <span className="eyebrow">Related series</span>
               <h2>Continue watching Nigerian series</h2>
               <div className="related-links">
-                {related.map((candidate)=><Link href={"/entertainment/series/"+candidate.slug} key={candidate.slug}>{candidate.title} →</Link>)}
+                {related.map((candidate)=><Link href={canonicalGuidePath("/entertainment/series/" + candidate.slug)} key={candidate.slug}>{candidate.title} →</Link>)}
               </div>
             </section>
 

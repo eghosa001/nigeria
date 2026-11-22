@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ad-slot";
@@ -102,12 +103,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: { absolute: title },
     description,
-    alternates: { canonical: "/services/" + service.slug },
+    alternates: { canonical: canonicalGuidePath("/services/" + service.slug) },
     openGraph: {
       title,
       description,
       type: "article",
-      url: "/services/" + service.slug,
+      url: canonicalGuidePath("/services/" + service.slug),
     },
     twitter: {
       card: "summary_large_image",
@@ -150,8 +151,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   // generic fee/steps/requirements already have complete sections above.
   const searchAnswers = getServiceSearchAnswers(service).slice(5);
   const base = getSiteUrl();
-  const pageUrl = base + "/services/" + service.slug;
-  const categoryHref = "/categories/" + categorySlug(service.category);
+  const pageUrl = base + canonicalGuidePath("/services/" + service.slug);
+  const categoryHref = canonicalGuidePath("/categories/" + categorySlug)(service.category);
   const breadcrumbs = [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
@@ -343,7 +344,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div className="sidebar-card sidebar-agency">
               <span>Responsible organisation</span>
               <strong>{agency?.name}</strong>
-              {agency ? <Link href={"/agencies/" + agency.slug}>View agency guides →</Link> : null}
+              {agency ? <Link href={canonicalGuidePath("/agencies/" + agency.slug)}>View agency guides →</Link> : null}
             </div>
             <div className="sidebar-card">
               <span>Compare fees</span>
@@ -375,7 +376,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <span className="eyebrow">Explore the full topic</span>
               <div className="related-links">
                 {topicHubs.map((hub) => (
-                  <Link key={hub.slug} href={"/topics/" + hub.slug}>
+                  <Link key={hub.slug} href={canonicalGuidePath("/topics/" + hub.slug)}>
                     {hub.title} <span aria-hidden="true">→</span>
                   </Link>
                 ))}
@@ -387,7 +388,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <span className="eyebrow">Other helpful questions</span>
               <div className="related-links">
                 {topicSearches.map((item) => (
-                  <Link key={item.query} href={"/services/" + item.serviceSlug}>
+                  <Link key={item.query} href={canonicalGuidePath("/services/" + item.serviceSlug)}>
                     {item.query} <span aria-hidden="true">→</span>
                   </Link>
                 ))}
@@ -399,7 +400,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <span className="eyebrow">Next steps &amp; alternatives</span>
               <h2>Services related to {service.shortTitle}</h2>
               <div className="related-links">
-                {related.map((item) => <Link key={item.slug} href={"/services/" + item.slug}><strong>{item.shortTitle}</strong> · {getRelatedServiceReason(service, item)} <span aria-hidden="true">→</span></Link>)}
+                {related.map((item) => <Link key={item.slug} href={canonicalGuidePath("/services/" + item.slug)}><strong>{item.shortTitle}</strong> · {getRelatedServiceReason(service, item)} <span aria-hidden="true">→</span></Link>)}
               </div>
             </>
           ) : null}

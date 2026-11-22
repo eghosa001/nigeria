@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { guideRedirects, guideRewrites } from "./lib/seo-routes";
 import retiredJobRoutes from "./data/job-retired-redirects.json" with { type: "json" };
 
 const contentSecurityPolicy = [
@@ -106,6 +107,9 @@ const nextConfig: NextConfig = {
       { source: "/(.*)", headers: securityHeaders },
     ];
   },
+  async rewrites() {
+    return guideRewrites();
+  },
   async redirects() {
     return [
       ...retiredJobRoutes.map(({ sourceSlug, destinationPath }) => ({
@@ -177,6 +181,9 @@ const nextConfig: NextConfig = {
         destination: "/entertainment/series/once-upon-a-village",
         permanent: true,
       },
+      // Specific retired and consolidated URLs take precedence over generic
+      // public-page migrations, avoiding redirect chains and collisions.
+      ...guideRedirects(),
       {
         source: "/:path*",
         has: [{ type: "header", key: "x-forwarded-proto", value: "http" }],

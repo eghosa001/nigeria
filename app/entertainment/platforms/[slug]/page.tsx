@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -35,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return withStaticSocialMetadata({
     title: "Nigerian Movies on " + hub.name + " — Popular Titles & Where to Watch",
     description: "Browse " + titles.length + " Nigerian movie guides linked to " + hub.name + ", with cast, story, runtime where verified and current official source links.",
-    alternates: { canonical: "/entertainment/platforms/" + hub.slug },
+    alternates: { canonical: canonicalGuidePath("/entertainment/platforms/" + hub.slug) },
   });
 }
 
@@ -52,7 +53,7 @@ export default async function EntertainmentPlatformPage({ params }: { params: Pr
   const popularSlugs = new Set(popular.map((title) => title.slug));
   const moreTitles = titles.filter((title) => !popularSlugs.has(title.slug)).slice(0, 24);
   const base = getSiteUrl();
-  const pageUrl = base + "/entertainment/platforms/" + hub.slug;
+  const pageUrl = base + canonicalGuidePath("/entertainment/platforms/" + hub.slug);
 
   const ld = {
     "@context": "https://schema.org",
@@ -66,7 +67,7 @@ export default async function EntertainmentPlatformPage({ params }: { params: Pr
         "@type": "ListItem",
         position: index + 1,
         name: title.title,
-        url: base + "/entertainment/movies/" + title.slug,
+        url: base + canonicalGuidePath("/entertainment/movies/" + title.slug),
       })),
     },
   };
@@ -115,13 +116,13 @@ export default async function EntertainmentPlatformPage({ params }: { params: Pr
           <div className="movie-grid movie-related-grid">
             {popular.map((title) => (
               <article className="movie-tile movie-card-clickable" key={title.slug}>
-                <Link className="movie-card-hitarea" href={"/entertainment/movies/" + title.slug} aria-label={"View details for " + title.title} />
+                <Link className="movie-card-hitarea" href={canonicalGuidePath("/entertainment/movies/" + title.slug)} aria-label={"View details for " + title.title} />
                 <EntertainmentArtwork title={title} />
                 <div className="movie-tile-meta"><span>{title.year}</span><span>{title.languages[0]}</span></div>
-                <h3><Link href={"/entertainment/movies/" + title.slug}>{title.title}</Link></h3>
+                <h3><Link href={canonicalGuidePath("/entertainment/movies/" + title.slug)}>{title.title}</Link></h3>
                 <p className="movie-tile-description">{title.synopsis}</p>
                 <p className="movie-card-cast"><strong>Featuring:</strong> {getFeaturedCast(title).join(" · ")}</p>
-                <div className="movie-tile-footer"><span>{title.genres.slice(0, 2).join(" · ")}</span><Link href={"/entertainment/movies/" + title.slug}>Details →</Link></div>
+                <div className="movie-tile-footer"><span>{title.genres.slice(0, 2).join(" · ")}</span><Link href={canonicalGuidePath("/entertainment/movies/" + title.slug)}>Details →</Link></div>
               </article>
             ))}
           </div>
@@ -139,11 +140,11 @@ export default async function EntertainmentPlatformPage({ params }: { params: Pr
                 {moreTitles.map((title) => (
                   <article className="service-card" key={title.slug}>
                     <div className="card-topline"><span>{title.year}</span><span>{title.genres.slice(0, 2).join(" · ")}</span></div>
-                    <h3><Link href={"/entertainment/movies/" + title.slug}>{title.title}</Link></h3>
+                    <h3><Link href={canonicalGuidePath("/entertainment/movies/" + title.slug)}>{title.title}</Link></h3>
                     <p>{title.synopsis}</p>
                     <div className="service-meta">
                       <strong>{getFeaturedCast(title).slice(0, 2).join(" · ")}</strong>
-                      <Link href={"/entertainment/movies/" + title.slug}>Movie guide →</Link>
+                      <Link href={canonicalGuidePath("/entertainment/movies/" + title.slug)}>Movie guide →</Link>
                     </div>
                   </article>
                 ))}

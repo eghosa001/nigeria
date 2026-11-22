@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import { uniqueIntroParagraphs } from "@/lib/reader-content-dedup";
 import Link from "next/link";
 import { PageOutline } from "@/components/page-outline";
@@ -145,12 +146,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: { absolute: title },
     description,
-    alternates: { canonical: "/explore/" + guide.slug },
+    alternates: { canonical: canonicalGuidePath("/explore/" + guide.slug) },
     openGraph: {
       title,
       description,
       type: "website",
-      url: "/explore/" + guide.slug,
+      url: canonicalGuidePath("/explore/" + guide.slug),
     },
     twitter: {
       card: "summary_large_image",
@@ -166,7 +167,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
   if (!guide) notFound();
 
   const base = getSiteUrl();
-  const pageUrl = base + "/explore/" + guide.slug;
+  const pageUrl = base + canonicalGuidePath("/explore/" + guide.slug);
   const related = getRelatedExploreGuides(guide);
   const places = getExplorePlacesForGuide(guide.slug);
   const questions = getExploreQuestions(guide);
@@ -277,7 +278,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
           <span className="eyebrow">{guide.region}</span>
           <h1>{guide.title}</h1>
           <p className="page-intro">{guide.summary}</p>
-          <div className="guide-save-action"><SavePageButton href={"/explore/" + guide.slug} title={guide.shortTitle} kind="travel" /></div>
+          <div className="guide-save-action"><SavePageButton href={canonicalGuidePath("/explore/" + guide.slug)} title={guide.shortTitle} kind="travel" /></div>
           {!hasDoNotTravelAdvisory ? <p className="minimal-inline-links"><Link href="/explore/trip-planner">Build your own Nigeria trip plan →</Link></p> : null}
           {destinationPhoto ? (
             <figure className="tour-guide-photo">
@@ -493,7 +494,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
             <span className="eyebrow">Keep exploring</span>
             <h2>Other places and experiences worth exploring</h2>
             <div className="related-links">
-              {related.map(({ guide: item, reason }) => <Link href={"/explore/" + item.slug} key={item.slug}><strong>{item.shortTitle}</strong> · {reason} →</Link>)}
+              {related.map(({ guide: item, reason }) => <Link href={canonicalGuidePath("/explore/" + item.slug)} key={item.slug}><strong>{item.shortTitle}</strong> · {reason} →</Link>)}
               <Link href="/explore">All Explore Nigeria guides →</Link>
             </div>
           </div>

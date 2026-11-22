@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import { withStaticSocialMetadata } from "@/lib/seo-social";
 import Link from "next/link";
 import { PageOutline } from "@/components/page-outline";
@@ -48,12 +49,12 @@ export default function JobsPage() {
     isPartOf: { "@type": "WebSite", name: "MyNigeriaGuide", url: base },
     mainEntity: {
       "@type": "ItemList",
-      numberOfItems: jobOpportunities.length,
+      numberOfItems: Math.min(jobOpportunities.length, 24),
       itemListElement: jobOpportunities.slice(0, 24).map((item, index) => ({
         "@type": "ListItem",
         position: index + 1,
         name: item.title,
-        url: base + "/jobs/" + item.slug
+        url: base + canonicalGuidePath("/jobs/" + item.slug)
       }))
     }
   };
@@ -125,12 +126,12 @@ export default function JobsPage() {
                   </div>
                   <div className="job-card-body">
                     <p className="job-organisation">{item.organization}</p>
-                    <h3><Link href={"/jobs/" + item.slug}>{item.title}</Link></h3>
+                    <h3><Link href={canonicalGuidePath("/jobs/" + item.slug)}>{item.title}</Link></h3>
                     {item.deadline ? <p className="job-deadline"><strong>Deadline:</strong> {new Date(item.deadline + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}</p> : null}
                   </div>
                   <div className="job-card-footer">
                     <span>Official source checked {item.verifiedAt}</span>
-                    <Link href={"/jobs/" + item.slug}>Requirements & apply →</Link>
+                    <Link href={canonicalGuidePath("/jobs/" + item.slug)}>Requirements & apply →</Link>
                   </div>
                 </article>
               ))}
@@ -209,7 +210,7 @@ export default function JobsPage() {
           </div>
           <div className="jobs-topic-links" aria-label="Browse jobs by employer">
             {indexableJobEmployers.slice(0, 18).map((employer) => (
-              <Link href={"/jobs/employers/" + employer.slug} key={employer.slug}>{employer.name}</Link>
+              <Link href={canonicalGuidePath("/jobs/employers/" + employer.slug)} key={employer.slug}>{employer.name}</Link>
             ))}
             <Link href="/jobs/employers">All employer hubs</Link>
           </div>
@@ -223,7 +224,7 @@ export default function JobsPage() {
           </div>
           <div className="jobs-topic-links" aria-label="Browse jobs by industry">
             {jobTopics.map((topic) => (
-              <Link href={"/jobs/categories/" + topic.slug} key={topic.slug}>{topic.shortTitle}</Link>
+              <Link href={canonicalGuidePath("/jobs/categories/" + topic.slug)} key={topic.slug}>{topic.shortTitle}</Link>
             ))}
           </div>
 
@@ -236,7 +237,7 @@ export default function JobsPage() {
           </div>
           <div className="jobs-topic-links" aria-label="Browse jobs by location">
             {jobLocationFacets.map((facet) => (
-              <Link href={"/jobs/locations/" + facet.slug} key={facet.slug}>{facet.shortTitle}</Link>
+              <Link href={canonicalGuidePath("/jobs/locations/" + facet.slug)} key={facet.slug}>{facet.shortTitle}</Link>
             ))}
           </div>
 
@@ -249,7 +250,7 @@ export default function JobsPage() {
           </div>
           <div className="jobs-topic-links" aria-label="Browse jobs by profession">
             {jobProfessionFacets.map((facet) => (
-              <Link href={"/jobs/professions/" + facet.slug} key={facet.slug}>{facet.shortTitle}</Link>
+              <Link href={canonicalGuidePath("/jobs/professions/" + facet.slug)} key={facet.slug}>{facet.shortTitle}</Link>
             ))}
           </div>
 
@@ -262,7 +263,7 @@ export default function JobsPage() {
           </div>
           <div className="jobs-topic-links" aria-label="Career application guides">
             {careerGuides.map((guide) => (
-              <Link href={"/jobs/guides/" + guide.slug} key={guide.slug}>{guide.title}</Link>
+              <Link href={canonicalGuidePath("/jobs/guides/" + guide.slug)} key={guide.slug}>{guide.title}</Link>
             ))}
           </div>
 
@@ -289,7 +290,7 @@ export default function JobsPage() {
 
           <div className="jobs-status-row">
             {governmentOpportunities.slice(0, 3).map((item) => (
-              <Link key={item.slug} href={"/jobs/" + item.slug} className="jobs-status-card">
+              <Link key={item.slug} href={canonicalGuidePath("/jobs/" + item.slug)} className="jobs-status-card">
                 <span className={"job-status job-status-" + getEffectiveJobStatus(item)}>{getEffectiveStatusLabel(item)}</span>
                 <strong>{item.organization}</strong>
                 <small>{item.nextMilestone || item.summary}</small>
