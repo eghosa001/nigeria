@@ -160,6 +160,7 @@ export default async function MoviesPage({
               <div className="movie-discovery-links">
                 <Link href="/entertainment/movies/jagun-jagun">Jagun Jagun <span aria-hidden="true">↗</span></Link>
                 <Link href="/entertainment/movies/anikulapo">Aníkúlápó <span aria-hidden="true">↗</span></Link>
+                <Link href="/entertainment/movies/agbara-nla-the-return">Agbara Nla: The Return <span aria-hidden="true">↗</span></Link>
               </div>
             </article>
             <article className="movie-discovery-card">
@@ -169,6 +170,7 @@ export default async function MoviesPage({
                 <Link href="/entertainment/movies/the-man-i-never-knew">The Man I Never Knew <span aria-hidden="true">↗</span></Link>
                 <Link href="/entertainment/movies/monica">Monica <span aria-hidden="true">↗</span></Link>
                 <Link href="/entertainment/movies/what-love-is">What Love Is <span aria-hidden="true">↗</span></Link>
+                <Link href="/entertainment/movies/millionaire-until-morning">Millionaire Until Morning <span aria-hidden="true">↗</span></Link>
               </div>
             </article>
             <article className="movie-discovery-card">

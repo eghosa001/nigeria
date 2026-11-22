@@ -29,12 +29,28 @@ const popularMovieSearchLinks = [
   { label: "Jagun Jagun", href: "/entertainment/movies/jagun-jagun" },
   { label: "Citation", href: "/entertainment/movies/citation" },
   { label: "A Tribe Called Judah", href: "/entertainment/movies/a-tribe-called-judah" },
+  { label: "Oversabi Aunty", href: "/entertainment/movies/oversabi-aunty" },
+  { label: "Millionaire Until Morning", href: "/entertainment/movies/millionaire-until-morning" },
+  { label: "Agbara Nla: The Return", href: "/entertainment/movies/agbara-nla-the-return" },
 ];
 
 export default function EntertainmentPage() {
   const featured = selectRecentHomeMovies(entertainmentTitles, releaseItems);
   const fresh = trendingYouTubeMovies.slice(0, 6);
   const base = getSiteUrl();
+  // Describe the film links visible on this hub, not the entire catalogue.
+  // An invisible, catalogue-wide ItemList bloats crawler HTML and misstates
+  // what this single landing page actually presents to readers.
+  const visibleMovieLinks = [
+    ...featured.map((title) => ({
+      name: title.title,
+      url: base + "/entertainment/movies/" + title.slug,
+    })),
+    ...popularMovieSearchLinks.map((item) => ({
+      name: item.label,
+      url: base + item.href,
+    })),
+  ].filter((item, index, items) => items.findIndex((candidate) => candidate.url === item.url) === index);
 
   const collectionLd = {
     "@context": "https://schema.org",
@@ -45,12 +61,12 @@ export default function EntertainmentPage() {
     isPartOf: { "@type": "WebSite", name: "MyNigeriaGuide", url: base },
     mainEntity: {
       "@type": "ItemList",
-      numberOfItems: entertainmentTitles.length,
-      itemListElement: entertainmentTitles.map((title, index) => ({
+      numberOfItems: visibleMovieLinks.length,
+      itemListElement: visibleMovieLinks.map((item, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        name: title.title,
-        url: base + "/entertainment/movies/" + title.slug,
+        name: item.name,
+        url: item.url,
       })),
     },
   };
@@ -82,6 +98,7 @@ export default function EntertainmentPage() {
             <Link href="/entertainment/people">Actors &amp; filmmakers</Link>
             <Link href="/entertainment/platforms">Streaming platforms</Link>
             <Link href="/entertainment/series">Series</Link>
+            <Link href="/entertainment/series/afobaje-2026">Afobaje Yoruba series</Link>
             <Link href="/entertainment/trending">Trending movies</Link>
             <Link href="/entertainment/social-trends">YouTube &amp; social trends</Link>
           </div>
