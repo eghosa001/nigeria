@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import { CategoryIcon } from "@/components/category-icon";
 import { getAgency } from "@/lib/agency-directory";
 import type { PublicServiceListing } from "@/lib/data";
@@ -11,7 +12,7 @@ export function ServiceCard({ service }: { service: CardService }) {
   const agency = getAgency(service.agencySlug);
 
   return (
-    <Link className="service-card" href={"/services/" + service.slug} prefetch={false}>
+    <Link className="service-card" href={canonicalGuidePath("/services/" + service.slug)} prefetch={false}>
       <div className="card-topline">
         <span className="service-card-category">
           <span className="service-card-icon"><CategoryIcon category={service.category} /></span>

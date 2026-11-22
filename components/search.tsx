@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import { useEffect, useState } from "react";
 import { trackEvent } from "@/lib/client-analytics";
 
@@ -63,7 +64,7 @@ export function ServiceSearch() {
             failed ? <div className="search-empty">
               Search is temporarily unavailable. <Link href={"/services?q=" + encodeURIComponent(query.trim())}>Search the full directory →</Link>
             </div> : results.length ? results.map((service) => (
-              <Link key={service.slug} href={"/services/" + service.slug}
+              <Link key={service.slug} href={canonicalGuidePath("/services/" + service.slug)}
                 onClick={() => trackEvent("service_search_click", { service_slug: service.slug, search_term: query.trim().slice(0, 80) })}>
                 <span><strong>{service.shortTitle}</strong><small>{service.category} · {service.status === "conflict" ? "official-source conflict" : "verified"}</small></span>
                 <span aria-hidden="true">→</span>

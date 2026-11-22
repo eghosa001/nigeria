@@ -219,10 +219,10 @@ test("assistant stays lightweight and retired JAMB URL resolves", async ({ page 
   await page.goto("/services/jamb-direct-entry");
   await expect(page).toHaveURL(/\/services\/jamb-direct-entry-2026$/);
 
-  await page.goto("/services/jamb-direct-entry-2026");
+  await page.goto("/guides/services/jamb-direct-entry-2026");
   const description = await page.locator('meta[name="description"]').getAttribute("content");
   expect(description?.length ?? 0).toBeGreaterThan(80);
-  await page.goto("/services/jamb-caps");
+  await page.goto("/guides/services/jamb-caps");
   expect((await page.title()).length).toBeGreaterThanOrEqual(30);
 });
 
@@ -475,11 +475,11 @@ test("NIBSS transfer and Nigeria visa guides are discoverable", async ({ page })
 test("guide anchors do not trap browser Back after starting a process", async ({ page }) => {
   await page.goto("/services?category=Banking");
   await page.getByRole("heading", { name: /BVN enrolment/i }).first().click();
-  await expect(page).toHaveURL(/\/services\/bvn-enrolment/);
+  await expect(page).toHaveURL(/\/guides\/services\/bvn-enrolment/);
 
   await page.getByRole("button", { name: /Start this process/i }).click();
   await page.getByRole("navigation", { name: "On this page" }).getByRole("link", { name: "Steps" }).click();
-  await expect(page).toHaveURL(/\/services\/bvn-enrolment#steps$/);
+  await expect(page).toHaveURL(/\/guides\/services\/bvn-enrolment#steps$/);
 
   await page.goBack();
   await expect(page).toHaveURL(/\/services\?category=Banking$/);
@@ -575,7 +575,7 @@ test("admin login rate limit blocks repeated bad passwords", async ({ request },
 
 
 test("service metadata descriptions are meaningful", async ({ page }) => {
-  await page.goto("/services/jamb-direct-entry-2026");
+  await page.goto("/guides/services/jamb-direct-entry-2026");
   const description = await page.locator('meta[name="description"]').getAttribute("content");
   expect(description?.length ?? 0).toBeGreaterThan(80);
   expect(description).toContain("2026 JAMB training manual");
@@ -621,10 +621,10 @@ test("topic task links identify distinct canonical services without keyword repe
   const tasks = page.locator(".topic-searches");
   const directEntry = tasks.getByRole("link", { name: "2026 JAMB Direct Entry", exact: true });
   const caps = tasks.getByRole("link", { name: "JAMB CAPS", exact: true });
-  await expect(directEntry).toHaveAttribute("href", "/services/jamb-direct-entry-2026");
-  await expect(caps).toHaveAttribute("href", "/services/jamb-caps");
-  await expect(tasks.locator('a[href="/services/jamb-direct-entry-2026"]')).toHaveCount(1);
-  await expect(tasks.locator('a[href="/services/jamb-caps"]')).toHaveCount(1);
+  await expect(directEntry).toHaveAttribute("href", "/guides/services/jamb-direct-entry-2026");
+  await expect(caps).toHaveAttribute("href", "/guides/services/jamb-caps");
+  await expect(tasks.locator('a[href="/guides/services/jamb-direct-entry-2026"]')).toHaveCount(1);
+  await expect(tasks.locator('a[href="/guides/services/jamb-caps"]')).toHaveCount(1);
 });
 
 
@@ -706,7 +706,7 @@ test("editorial light and dark themes fit representative routes on phones and de
   // while the visitor has selected the Ivory & Ink light theme.
   for (const { route, selector } of [
     { route: "/", selector: ".home-job-feature" },
-    { route: "/services/jamb-direct-entry-2026", selector: ".fee-card" },
+    { route: "/guides/services/jamb-direct-entry-2026", selector: ".fee-card" },
     { route: "/jobs/nigerian-army-92rri-2026", selector: ".job-apply-card" },
   ]) {
     await page.goto(route, { waitUntil: "domcontentloaded" });
@@ -830,7 +830,7 @@ test("editorial light and dark themes fit representative routes on phones and de
   // dark mode persisted, a readable page title and no horizontal spill.
   const routes = [
     "/services", "/explore", "/jobs", "/entertainment/movies",
-    "/services/jamb-caps",
+    "/guides/services/jamb-caps",
     "/explore/design-week-lagos-2026",
     "/jobs/nigerian-army-92rri-2026",
     "/entertainment/movies/tele-x-zikora-2026",

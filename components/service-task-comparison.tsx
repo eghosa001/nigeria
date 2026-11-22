@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { canonicalGuidePath } from "@/lib/seo-routes";
 import type { Service } from "@/lib/types";
 import { selectServiceTaskComparisons } from "@/lib/service-task-comparison";
 import styles from "./service-task-comparison.module.css";
@@ -25,7 +26,7 @@ export function ServiceTaskComparison({
           return (
             <article className={styles.card} key={service.slug}>
               <div className={styles.cardHead}>
-                <h3><Link href={"/services/" + service.slug}>{service.shortTitle}</Link></h3>
+                <h3><Link href={canonicalGuidePath("/services/" + service.slug)}>{service.shortTitle}</Link></h3>
                 {service.status !== "verified" ? (
                   <span className={styles.caution}>
                     {service.status === "conflict" ? "Conflicting sources" : "Source review pending"}
@@ -38,7 +39,7 @@ export function ServiceTaskComparison({
                 <div><dt>First action</dt><dd>{service.steps[0]}</dd></div>
               </dl>
               <div className={styles.actions}>
-                <Link href={"/services/" + service.slug} className={styles.read}>
+                <Link href={canonicalGuidePath("/services/" + service.slug)} className={styles.read}>
                   Read requirements and full steps <span aria-hidden="true">→</span>
                 </Link>
                 {source ? (
