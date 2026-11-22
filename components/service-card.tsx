@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { canonicalGuidePath } from "@/lib/seo-routes";
 import { CategoryIcon } from "@/components/category-icon";
 import { getAgency } from "@/lib/agency-directory";

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { useEffect, useState } from "react";
 import { trackEvent } from "@/lib/client-analytics";
 import { changed, read, savedKey, recentKey, validHref, write, type Kind, type Entry } from "@/lib/personal-library-storage";

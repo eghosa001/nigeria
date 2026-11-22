@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { searchGlobalCatalog } from "@/lib/global-search";
 import { SearchResultsAnalytics } from "@/components/search-results-analytics";
 import { GlobalSearchForm } from "@/components/global-search-form";

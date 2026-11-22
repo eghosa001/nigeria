@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { withStaticSocialMetadata } from "@/lib/seo-social";
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 
 export const metadata: Metadata = withStaticSocialMetadata({
   alternates: { canonical: "/about" },

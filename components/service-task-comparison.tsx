@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { canonicalGuidePath } from "@/lib/seo-routes";
 import type { Service } from "@/lib/types";
 import { selectServiceTaskComparisons } from "@/lib/service-task-comparison";

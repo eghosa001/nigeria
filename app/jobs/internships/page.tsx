@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { withStaticSocialMetadata } from "@/lib/seo-social";
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { JobCollection } from "@/components/job-collection";
 import { jobOpportunities } from "@/lib/jobs";
 import { isCurrentInternshipOpportunity } from "@/lib/job-internships";

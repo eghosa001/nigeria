@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { FormEvent, useState } from "react";
 import type { PublicServiceListing } from "@/lib/data";
 

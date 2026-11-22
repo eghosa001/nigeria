@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { useEffect, useState } from "react";
 import { watchEvent } from "@/components/share-watch";
 import { StatusBadge } from "@/components/status-badge";

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 
 export type AnswerFirstFact = {
   label: string;

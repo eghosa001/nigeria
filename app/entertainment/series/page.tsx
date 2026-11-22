@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { withStaticSocialMetadata } from "@/lib/seo-social";
-import Link from "next/link";
+import Link from "@/components/canonical-link";
 import { JsonLd } from "@/components/json-ld";
 import { seriesTitles } from "@/lib/series";
 import { getSiteUrl } from "@/lib/site";
